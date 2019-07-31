@@ -11,95 +11,95 @@
    :prefix: intro-4-
    :start: 1
 
-Special Ways to Execute Python in this Book
--------------------------------------------
+Formas especiales de ejecutar Python en este libro
+--------------------------------------------------
 
-This book provides two additional ways to execute Python programs.  Both techniques are designed to assist you as you
-learn the Python programming language.  They will help you increase your understanding of how Python programs work.
+Este libro proporciona dos formas adicionales de ejecutar programas Python. Ambas técnicas están diseñadas para ayudarlo mientras usted
+Aprende el lenguaje de programación Python. Le ayudarán a comprender mejor cómo funcionan los programas Python.
 
 
-First, you can write, modify, and execute programs using a unique **activecode** interpreter that allows you to execute Python code right
-in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
-environment for learning a programming language like Python since you can experiment with the language as you are reading.
+Primero, puede escribir, modificar y ejecutar programas utilizando un exclusivo intérprete ** activecode ** que le permite ejecutar código Python correctamente
+en el texto mismo (directamente desde el navegador web). Aunque esta no es la forma en que se escriben los programas reales, proporciona una excelente
+entorno para aprender un lenguaje de programación como Python ya que puedes experimentar con el lenguaje mientras lees.
 
-Take a look at the activecode interpreter in action. Try pressing the *Save & Run* button below. (If you are not logged
-in, it will just say *Run*.)
+Eche un vistazo al intérprete de código activo en acción. Intente presionar el botón *Guardar y ejecutar* a continuación. (Si no estás conectado
+en, solo dirá *Ejecutar*.)
 
 .. activecode:: ac1_4_1
 
-   print("My first program adds two numbers, 2 and 3:")
-   print(2 + 3)
+    print("Mi primer programa agrega dos números, 2 y 3:")
+    print (2 + 3)
 
-Now try modifying the program shown above.  First, modify the string in the
-first print statement by changing the word *adds* to the word *multiplies*.  Now press 
-*Save & Run* again.  You can see that the result of the program has changed.  However, it still prints
-"5" as the answer.  Modify the second print statement by changing the addition symbol, the 
-``+``, to the multiplication symbol, ``*``.  Press *Save & Run* again to see the new results.
+Ahora intente modificar el programa que se muestra arriba. Primero, modifique la cadena en el
+primera declaración de impresión cambiando la palabra *agrega* a la palabra *multiplica*. Ahora presiona
+*Guardar y ejecutar* nuevamente. Puede ver que el resultado del programa ha cambiado. Sin embargo, todavía imprime
+"5" como respuesta. Modifique la segunda declaración de impresión cambiando el símbolo de suma, el
+``+``, al símbolo de multiplicación, ``*``. Presione *Guardar y ejecutar* nuevamente para ver los nuevos resultados.
 
-As the name suggests, *Save & Run* also *saves* your latest version of the code,
-and you can recover it even in later sessions when *logged in*. If *not* logged in,
-*Run* saves versions *only until your browser leaves the current web page*,
-and then you lose all modifications.
+Como su nombre indica, *Guardar y ejecutar* también *guarda* su última versión del código,
+y puede recuperarlo incluso en sesiones posteriores cuando *inició sesión*. Si *no* inició sesión,
+*Ejecutar* guarda versiones *solo hasta que su navegador abandone la página web actual*,
+y luego pierdes todas las modificaciones.
 
-If you are logged in, when a page first loads, each activecode window will have a *Load History* button, to the
-right of the *Save & Run* button.
-If you click on it, or if you run any code, that button turns into a slider.
-If you click on the slider location box, you can use your left and right arrow 
-buttons to switch to other versions you ran. 
-Alternately you can drag the box on the slider. 
-Now move the slider to see a previously saved version of your code. You can edit or run any version.
+Si ha iniciado sesión, cuando se carga una página por primera vez, cada ventana de código activo tendrá un botón *Cargar historial*,
+a la derecha del botón *Guardar y ejecutar*.
+Si hace clic en él o si ejecuta algún código, ese botón se convierte en un control deslizante.
+Si hace clic en el cuadro de ubicación del control deslizante, puede usar su flecha izquierda y derecha
+botones para cambiar a otras versiones que ejecutó.
+Alternativamente, puede arrastrar el cuadro en el control deslizante.
+Ahora mueva el control deslizante para ver una versión previamente guardada de su código. Puede editar o ejecutar cualquier versión.
 
-In addition to activecode, you can also execute Python code with the assistance of a unique 
-visualization tool. This tool, known as **codelens**, allows you to control the step by 
-step execution of a program. It also lets you see the values of all variables as they are 
-created and modified. In activecode, the source code executes from beginning to end and you 
-can see the final result. In codelens you can see and control the step by step progress. 
-Note that the red arrow always points to the next line of code that is going to be executed. 
-The light green arrow points to the line that was just executed. Click on the "Show in 
-Codelens" button to make the codelens window show up, and then click on the Forward button 
-a few times to step through the execution.  
+Además del código activo, también puede ejecutar código Python con la ayuda de un único
+herramienta de visualización. Esta herramienta, conocida como **codelens**, le permite controlar el paso por
+paso de ejecución de un programa. También le permite ver los valores de todas las variables tal como están
+creado y modificado. En activecode, el código fuente se ejecuta de principio a fin y usted
+Puede ver el resultado final. En codelens puede ver y controlar el progreso paso a paso.
+Tenga en cuenta que la flecha roja siempre apunta a la siguiente línea de código que se va a ejecutar.
+La flecha verde clara apunta a la línea que se acaba de ejecutar. Haga clic en "Mostrar en
+Codelens"para que aparezca la ventana de codelens, y luego haga clic en el botón Reenviar
+unas pocas veces para pasar por la ejecución.
 
-Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.
-When we do, think of it as an encouragement to use the codelens features to step through the 
-execution of the program.
+A veces, presentaremos ejemplos de código explícitamente en una ventana de codelens en el libro de texto, como se muestra a continuación.
+Cuando lo hagamos, piense en ello como un estímulo para usar las funciones de codelens para avanzar
+ejecución del programa.
 
 .. codelens:: clens1_4_1
     :python: py3
     :showoutput:
 
-    print("My first program adds two numbers, 2 and 3:")
+    print("Mi primer programa agrega dos números, 2 y 3:")
     print(2 + 3)
 
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question1_4_1
-   :multiple_answers:
-   :answer_a: save programs and reload saved programs.
-   :answer_b: type in Python source code.
-   :answer_c: execute Python code right in the text itself within the web browser.
-   :answer_d: receive a yes/no answer about whether your code is correct or not.
-   :correct: a,b,c
-   :feedback_a: You can (and should) save the contents of the activecode window.
-   :feedback_b: You are not limited to running the examples that are already there.  Try adding to them and creating your own.
-   :feedback_c: The activecode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.
-   :feedback_d: Although you can (and should) verify that your code is correct by examining its output, activecode will not directly tell you whether you have correctly implemented your program.
+    :multiple_answers:
+    :answer_a: guardar programas y volver a cargar programas guardados.
+    :answer_b: escriba el código fuente de Python.
+    :answer_c: ejecuta el código Python directamente en el texto dentro del navegador web.
+    :answer_d: recibe una respuesta sí / no sobre si tu código es correcto o no.
+    :correct: a,b,c
+    :feedback_a: puede (y debe) guardar el contenido de la ventana de código activo.
+    :feedback_b: No está limitado a ejecutar los ejemplos que ya están allí. Intenta agregarles y crear el tuyo propio.
+    :feedback_c: El intérprete de código activo le permitirá escribir código Python en el cuadro de texto y luego podrá verlo ejecutar mientras el intérprete interpreta y ejecuta el código fuente.
+    :feedback_d: Aunque puede (y debe) verificar que su código sea correcto al examinar su salida, activecode no le dirá directamente si ha implementado correctamente su programa.
 
-   The activecode interpreter allows you to (select all that apply):
+   El intérprete de código activo le permite (seleccionar todo lo que corresponda):
 
 .. mchoice:: question1_4_2
-   :multiple_answers:
-   :answer_a: measure the speed of a program’s execution.
-   :answer_b: control the step by step execution of a program.
-   :answer_c: write and execute your own Python code.
-   :answer_d: execute the Python code that is in codelens.
-   :correct: b,d
-   :feedback_a: In fact, codelens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.
-   :feedback_b: By using codelens, you can control the execution of a program step by step. You can even go backwards!
-   :feedback_c: Codelens works only for the pre-programmed examples.
-   :feedback_d: By stepping forward through the Python code in codelens, you are executing the Python program.
+    :multiple_answers:
+    :answer_a: mide la velocidad de ejecución de un programa.
+    :answer_b: controla la ejecución paso a paso de un programa.
+    :answer_c: escribe y ejecuta tu propio código Python.
+    :answer_d: ejecuta el código Python que está en codelens.
+    :correct: b,d
+    :feedback_a: De hecho, los pasos de codelens a través de cada línea uno por uno a medida que haces clic, que es MUCHO más lento que el intérprete de Python.
+    :feedback_b: Al usar codelens, puede controlar la ejecución de un programa paso a paso. ¡Incluso puedes ir hacia atrás!
+    :feedback_c: Codelens funciona solo para los ejemplos preprogramados.
+    :feedback_d: Al avanzar por el código de Python en codelens, está ejecutando el programa Python.
 
-   Codelens allows you to (select all that apply):
+    Codelens le permite (seleccionar todas las opciones que correspondan):
 
-.. index:: program, algorithm
+.. index:: programa, algoritmo
 
