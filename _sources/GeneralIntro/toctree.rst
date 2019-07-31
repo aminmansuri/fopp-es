@@ -1,8 +1,8 @@
-General Introduction
+Introducción General
 ::::::::::::::::::::
 
 .. toctree::
-   :caption: General Introduction
+   :caption: Introducción General
    :maxdepth: 2
 
    intro-TheWayoftheProgram.rst
