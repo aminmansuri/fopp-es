@@ -10,38 +10,26 @@
 .. index:: programming language, portable, high-level language,
            low-level language, compile, interpret
 
-Introduction: The Way of the Program
+Introducción: El Camino del Programa
 ====================================
 
-The goal of this book is to teach you to understand and create computer programs in Python. 
-At the beginning of each chapter, we will outline for you the learning goals and objectives
-that should be accomplished once you have gone through the chapter.
+El objetivo de este libro es enseñarte a entender y crear programas de computadora en Python. Al comienzo de cada capítulo, le detallaremos las metas y objetivos de aprendizaje que se deben lograr una vez que haya pasado por el capítulo.
 
-Understanding computer programs requires algorithmic, mechanistic thinking.
-Programs specify mechanistic sequences of actions to perform; when executed,
-they transform input data into output data. They execute very reliably, and 
-very fast, but not creatively. Computers do what you tell them to do, not what you
-mean for them to do. Thus, understanding computer code
-involves a lot of mental simulation of what will actually happen, not what you
-wish would happen.
- 
-Writing computer programs requires not only mechanistic thinking but creative
-problem solving. Problem solving means the ability to formulate problems, think
-creatively about solutions, and express a solution clearly and accurately. As
-it turns out, the process of learning to program is an excellent opportunity to
-practice problem solving skills.
+Comprender los programas de computadora requiere un pensamiento algorítmico y mecanicista. Los programas especifican secuencias mecanicistas de acciones a realizar; cuando se ejecutan, transforman los datos de entrada en datos de salida. Se ejecutan de manera muy confiable y muy rápida, pero no de forma creativa. Las computadoras hacen lo que les dices que hagan, no lo que quieres que hagan. Por lo tanto, comprender el código de computadora implica una gran cantidad de simulación mental de lo que realmente sucederá, no de lo que desearía que sucediera.
 
-Learning Goals
-~~~~~~~~~~~~~~
+Escribir programas de computadora requiere no solo pensamiento mecanicista sino también resolución creativa de problemas. La resolución de problemas significa la capacidad de formular problemas, pensar creativamente sobre soluciones y expresar una solución de manera clara y precisa. Como resultado, el proceso de aprender a programar es una excelente oportunidad para practicar las habilidades de resolución de problemas.
 
-* Introduce terminology used in computer science
-* Introduce the features of this book
-* Describe the purpose of programming languages
-* Distinguish between formal & natural languages 
+Metas de aprendizaje
+~~~~~~~~~~~~~~~~~~~~
 
-Objectives
-~~~~~~~~~~
+* Introducir terminología utilizada en informática
+* Presenta las características de este libro
+* Describa el propósito de los lenguajes de programación.
+* Distinguir entre lenguajes formales y naturales.
 
-* To be able to use the activecode component and multiple choice questions in textbook
-* To be able to use and interpret the Codelens component
-* To be able to describe what a comment is
+Objetivos
+~~~~~~~~~
+
+* Para poder utilizar el componente de código activo y las preguntas de opción múltiple en el libro de texto
+* Para poder usar e interpretar el componente Codelens
+* Poder describir qué es un comentario

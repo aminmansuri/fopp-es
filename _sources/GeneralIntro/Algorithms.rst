@@ -11,27 +11,27 @@
    :prefix: intro-2-
    :start: 1
 
-Algorithms
+Algoritmos
 ----------
 
-An **algorithm** is a step by step list of instructions that if followed exactly will solve the problem under consideration.
+Un **algoritmo** es una lista paso a paso de instrucciones que, si se siguen exactamente, resolverán el problema
+en consideración.
 
-Our goal in programming is to take a problem and develop an algorithm that can 
-serve as a general solution. Once we have such a solution, we can express
-it as a program and use our computer to automate the execution. 
-These programs are written in **programming languages**.
+Nuestro objetivo en la programación es tomar un problema y desarrollar un algoritmo que pueda
+Servir como una solución general. Una vez que tengamos tal solución, podemos expresar como programa y usamos nuestra
+computadora para automatizar la ejecución. Estos programas están escritos en **lenguajes de programación**.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question1_2_2
-   :answer_a: A solution to a problem that can be solved by a computer.
-   :answer_b: A step by step sequence of instructions that if followed exactly will solve the problem under consideration.
-   :answer_c: A series of instructions implemented in a programming language.
-   :answer_d: A special kind of notation used by programmers.
-   :correct: b
-   :feedback_a: While it is true that algorithms often do solve problems, this is not the best answer.  An algorithm is more than just the solution to the problem for a computer.  An algorithm can be used to solve all sorts of problems, including those that have nothing to do with computers.
-   :feedback_b: Algorithms are like recipes:  they must be followed exactly, they must be clear and unambiguous, and they must end.
-   :feedback_c: Programming languages are used to express algorithms, but an algorithm does not have to be expressed in terms of a programming language.
-   :feedback_d: Programmers sometimes use a special notation to illustrate or document an algorithm, but this is not the definition of an algorithm.
+    :answer_a: Una solución a un problema que puede ser resuelto por una computadora.
+    :answer_b: Una secuencia paso a paso de instrucciones que, si se siguen exactamente, resolverán el problema en consideración.
+    :answer_c: Una serie de instrucciones implementadas en un lenguaje de programación.
+    :answer_d: Un tipo especial de notación utilizada por los programadores.
+    :correct: b
+    :feedback_a: Si bien es cierto que los algoritmos a menudo resuelven problemas, esta no es la mejor respuesta. Un algoritmo es más que solo la solución al problema para una computadora. Se puede usar un algoritmo para resolver todo tipo de problemas, incluidos los que no tienen nada que ver con las computadoras.
+    :feedback_b: Los algoritmos son como recetas: deben seguirse exactamente, deben ser claros e inequívocos, y deben terminar.
+    :feedback_c: Los lenguajes de programación se usan para expresar algoritmos, pero un algoritmo no tiene que expresarse en términos de un lenguaje de programación.
+    :feedback_d: Los programadores a veces usan una notación especial para ilustrar o documentar un algoritmo, pero esta no es la definición de un algoritmo.
 
-   An algorithm is:
+    Un algoritmo es:
