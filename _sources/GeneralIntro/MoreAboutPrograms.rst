@@ -11,61 +11,61 @@
    :prefix: intro-5-
    :start: 1
 
-.. index:: formal language, natural language, parse, token
+.. index:: lenguaje formal, lenguaje natural, análisis, token
 
-More About Programs
--------------------
+Más acerca de los programas
+---------------------------
 
-A **program** is a sequence of instructions that specifies how to perform a
-computation. The computation might be something as complex as rendering an html page in a web browser
-or encoding a video and streaming it across the network.  It can also be a
-symbolic computation, such as searching for and replacing text in a document or
-(strangely enough) compiling a program.
+Un **programa** es una secuencia de instrucciones que especifica cómo realizar un
+cálculo. El cálculo puede ser algo tan complejo como representar una página html en un navegador web
+o codificar un video y transmitirlo a través de la red. También puede ser un
+cálculo simbólico, como buscar y reemplazar texto en un documento o
+(curiosamente) compilando un programa.
 
-The details look different in different languages, but a few basic instructions
-appear in just about every language.
+Los detalles se ven diferentes en diferentes idiomas, pero algunas instrucciones básicas
+aparecer en casi todos los idiomas.
 
-input
-    Get data from the keyboard, a file, or some other device.
+entrada
+    Obtenga datos del teclado, un archivo u otro dispositivo.
 
-output
-    Display data on the screen or send data to a file or other device.
+salida
+    Mostrar datos en la pantalla o enviar datos a un archivo u otro dispositivo.
 
-math and logic
-    Perform basic mathematical operations like addition and multiplication
-    and logical operations like ``and``, ``or``, and ``not``.
+matemática y lógica
+    Realizar operaciones matemáticas básicas como la suma y la multiplicación.
+    y operaciones lógicas como ``y``, ``o`` y ``no``.
 
-conditional execution
-    Check for certain conditions and execute the appropriate sequence of
-    statements.
+ejecución condicional
+    Verifique ciertas condiciones y ejecute la secuencia apropiada de
+    declaraciones.
 
-repetition
-    Perform some action repeatedly, usually with some variation.
+repetición
+    Realice alguna acción repetidamente, generalmente con alguna variación.
 
-Believe it or not, that's pretty much all there is to it. Every program you've
-ever used, no matter how complicated, is made up of instructions that look more
-or less like these. Thus, we can describe programming as the process of
-breaking a large, complex task into smaller and smaller subtasks until the
-subtasks are simple enough to be performed with sequences of these basic
-instructions.
+Lo creas o no, eso es todo lo que hay que hacer. Cada programa que tienes
+alguna vez utilizado, no importa cuán complicado, se compone de instrucciones que se ven más
+o menos como estos. Por lo tanto, podemos describir la programación como el proceso de
+dividir una tarea grande y compleja en subtareas cada vez más pequeñas hasta que
+Las subtareas son lo suficientemente simples como para realizarse con secuencias de estos elementos básicos.
+instrucciones.
 
-Preview of Control Structures
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Vista previa de estructuras de control
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We won't get too much into python control structures yet, but it is good to mention them early to give you a taste for what you can do with the language! 
-If these make sense to you now, that's great! 
-However, we don't expect you to understand these yet - understanding will come later. 
+Todavía no profundizaremos en las estructuras de control de Python, ¡pero es bueno mencionarlas temprano para darle una idea de lo que puede hacer con el lenguaje!
+Si esto tiene sentido para usted ahora, ¡eso es genial!
+Sin embargo, no esperamos que entienda esto todavía; la comprensión vendrá más tarde.
 
-First we have structures that allow us to iterate over something. 
-We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop.
+Primero tenemos estructuras que nos permiten iterar sobre algo.
+Podemos mirar las cadenas carácter por carácter o las listas elemento por elemento hasta que hayamos llegado al final de ellas utilizando algo llamado bucle `` for ''.
 
 .. activecode:: ac1_5_1
 
    for character in "Cool string":
        print(character)
 
-We can also iterate without a definite stopping point with ``while`` loops. 
-You might use this if you want to receive input from the user of your program but you don't know how long it'll take for them to be done with your code.
+También podemos iterar sin un punto de detención definido con bucles ``while``.
+Puede usar esto si desea recibir información del usuario de su programa, pero no sabe cuánto tiempo tardará en hacerlo con su código.
 
 .. activecode:: ac1_5_2
 
@@ -74,9 +74,9 @@ You might use this if you want to receive input from the user of your program bu
        grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
        print(grocery_item)
 
-Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found. 
-Conditionals, as they're called, allow us to do that. 
-Check out how adding conditionals to our code can change what we can write about regarding grocery shopping.
+Otras estructuras nos permitirán ejecutar solo partes de nuestros programas o solo realizar alguna tarea si se encuentra un cierto conjunto de condiciones.
+Los condicionales, como se los llama, nos permiten hacer eso.
+Vea cómo agregar condicionales a nuestro código puede cambiar lo que podemos escribir sobre las compras de comestibles.
 
 .. activecode:: ac1_5_3
 
@@ -92,17 +92,17 @@ Check out how adding conditionals to our code can change what we can write about
    print("Here is our grocery list:")
    print(grocery_list)
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question1_5_1
-   :answer_a: a sequence of instructions that specifies how to perform a computation.
-   :answer_b: something you follow along at a play or concert.
-   :answer_c: a computation, even a symbolic computation.
-   :answer_d: the same thing as an algorithm.
+   :answer_a: una secuencia de instrucciones que especifica cómo realizar un cálculo.
+   :answer_b: algo que sigues en una obra de teatro o concierto.
+   :answer_c: un cálculo, incluso un cálculo simbólico.
+   :answer_d: lo mismo que un algoritmo.
    :correct: a
-   :feedback_a: It is just step-by-step instructions that the computer can understand and execute.  Programs often implement algorithms, but note that algorithms are typically less precise than programs and do not have to be written in a programming language.
-   :feedback_b: True, but not in this context.  We mean a program as related to a computer.
-   :feedback_c: A program can perform a computation, but by itself it is not one.
-   :feedback_d: Programs often implement algorithms, but they are not the same thing.  An algorithm is a step by step list of instructions, but those instructions are not necessarily precise enough for a computer to follow.  A program must be written in a programming language that the computer knows how to interpret.
+   :feedback_a: son solo instrucciones paso a paso que la computadora puede entender y ejecutar. Los programas a menudo implementan algoritmos, pero tenga en cuenta que los algoritmos suelen ser menos precisos que los programas y no tienen que estar escritos en un lenguaje de programación.
+   :feedback_b: Verdadero, pero no en este contexto. Nos referimos a un programa relacionado con una computadora.
+   :feedback_c: Un programa puede realizar un cálculo, pero por sí solo no es uno.
+   :feedback_d: Los programas a menudo implementan algoritmos, pero no son lo mismo. Un algoritmo es una lista de instrucciones paso a paso, pero esas instrucciones no son necesariamente lo suficientemente precisas para que una computadora las siga. Un programa debe estar escrito en un lenguaje de programación que la computadora sepa interpretar.
 
-   A program is:
+   Un programa es:
