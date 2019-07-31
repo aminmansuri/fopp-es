@@ -85,7 +85,7 @@ ejecución del programa.
     :feedback_c: El intérprete de código activo le permitirá escribir código Python en el cuadro de texto y luego podrá verlo ejecutar mientras el intérprete interpreta y ejecuta el código fuente.
     :feedback_d: Aunque puede (y debe) verificar que su código sea correcto al examinar su salida, activecode no le dirá directamente si ha implementado correctamente su programa.
 
-   El intérprete de código activo le permite (seleccionar todo lo que corresponda):
+    El intérprete de código activo le permite (seleccionar todo lo que corresponda):
 
 .. mchoice:: question1_4_2
     :multiple_answers:
@@ -99,7 +99,7 @@ ejecución del programa.
     :feedback_c: Codelens funciona solo para los ejemplos preprogramados.
     :feedback_d: Al avanzar por el código de Python en codelens, está ejecutando el programa Python.
 
-    Codelens le permite (seleccionar todas las opciones que correspondan):
+    Codelens le permite (seleccionar todas las opciones que correspondan):
 
 .. index:: programa, algoritmo
 
