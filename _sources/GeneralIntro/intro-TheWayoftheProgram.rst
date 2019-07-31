@@ -7,8 +7,8 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. index:: programming language, portable, high-level language,
-           low-level language, compile, interpret
+.. index:: lenguaje de programación, lenguaje portátil de alto nivel,
+           lenguaje de bajo nivel, compilar, interpretar
 
 Introducción: El Camino del Programa
 ====================================
