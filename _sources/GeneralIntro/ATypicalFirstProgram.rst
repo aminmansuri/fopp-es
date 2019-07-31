@@ -11,50 +11,50 @@
    :prefix: intro-7-
    :start: 1
 
-.. index:: debugging, bug
+.. index:: depuración, error
 
-A Typical First Program
------------------------
+Un primer programa típico
+-------------------------
 
-Traditionally, the first program written in a new language is called *Hello,
-World!* because all it does is display the words, Hello, World!  In Python, the source code
-looks like this.
+Tradicionalmente, el primer programa escrito en un nuevo idioma se llama *Hola,
+Mundo!* Porque todo lo que hace es mostrar las palabras, ¡Hola Mundo! En Python, el código fuente
+Se ve como esto.
 
 .. sourcecode:: python
 
-    print("Hello, World!")
+    print("¡Hola, mundo!")
 
-This is an example of using the **print function**, which doesn't actually
-print anything on paper. It displays a value on the screen. In this case, the result is the phrase:
+Este es un ejemplo del uso de la **función print**, que en realidad no
+imprimir cualquier cosa en papel. Muestra un valor en la pantalla. En este caso, el resultado es la frase:
 
 ::
 
-    Hello, World!
+    ¡Hola Mundo!
 
-Here is the example in an activecode window, where you can run it and modify it.
+Aquí está el ejemplo en una ventana de código activo, donde puede ejecutarlo y modificarlo.
 
 .. activecode:: ac1_7_1
 
-    print("Hello, World!")
+    print("¡Hola, mundo!")
 
-The quotation marks in the program mark the beginning and end of the value.
-They don't appear in the result. You'll learn more about why in the next chapter.
+Las comillas en el programa marcan el principio y el final del valor.
+No aparecen en el resultado. Aprenderá más sobre por qué en el próximo capítulo.
 
-Some people judge the quality of a programming language by the simplicity of
-the Hello, World! program. By this standard, Python does about as well as
-possible.
+Algunas personas juzgan la calidad de un lenguaje de programación por la simplicidad de
+el hola mundo! programa. Según este estándar, Python funciona tan bien como
+posible.
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question1_7_1
-   :answer_a: sends information to the printer to be printed on paper.
-   :answer_b: displays a value on the screen.
-   :answer_c: tells the computer to put the information in print, rather than cursive, format.
-   :answer_d: tells the computer to speak the information.
+   :answer_a: envía información a la impresora para que se imprima en papel.
+   :answer_b: muestra un valor en la pantalla.
+   :answer_c: le dice a la computadora que ponga la información en formato impreso, en lugar de cursiva.
+   :answer_d: le dice a la computadora que diga la información.
    :correct: b
-   :feedback_a: Within the Python programming language, the print statement has nothing to do with the printer.
-   :feedback_b: Yes, the print statement is used to display the value of the thing being printed.
-   :feedback_c: The format of the information is called its font and has nothing to do with the print statement.
-   :feedback_d: That would be nice! But no...
+   :feedback_a: Dentro del lenguaje de programación Python, la declaración de impresión no tiene nada que ver con la impresora.
+   :feedback_b: Sí, la declaración de impresión se usa para mostrar el valor de la cosa que se está imprimiendo.
+   :feedback_c: El formato de la información se llama su fuente y no tiene nada que ver con la declaración de impresión.
+   :feedback_d: ¡Eso sería bueno! Pero no...
 
-   The print function:
+    La función de impresión:
