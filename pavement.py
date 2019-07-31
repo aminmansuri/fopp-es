@@ -19,19 +19,19 @@ else:
     master_url = 'http://127.0.0.1:8000'
 
 master_app = 'runestone'
-serving_dir = "./build/fopp"
+serving_dir = "./build/fopp-es"
 dest = "../../static"
 
 options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/fopp",
+        builddir="./build/fopp-es",
         sourcedir="_sources",
-        outdir="./build/fopp",
+        outdir="./build/fopp-es",
         confdir=".",
-        project_name = "fopp",
-        template_args={'course_id': 'fopp',
+        project_name = "fopp-es",
+        template_args={'course_id': 'fopp-es',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
