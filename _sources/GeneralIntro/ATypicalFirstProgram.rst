@@ -57,4 +57,4 @@ posible.
    :feedback_c: El formato de la información se llama su fuente y no tiene nada que ver con la declaración de impresión.
    :feedback_d: ¡Eso sería bueno! Pero no...
 
-    La función de impresión:
+    La función print:
