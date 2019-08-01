@@ -11,23 +11,23 @@
    :prefix: modules-1-
    :start: 1
 
-Introduction to Python Modules
-------------------------------
+Introducción a los módulos de Python
+------------------------------------
 
-One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to some of the amazing packages that allow you to solve real world problems without starting from scratch.
+Una de las mejores cosas del lenguaje de programación Python es el ecosistema que lo rodea. Este capítulo le presenta algunos de los increíbles paquetes que le permiten resolver problemas del mundo real sin comenzar desde cero.
 
 .. image:: https://imgs.xkcd.com/comics/python.png
 
-As you may have gathered, Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules you still need to know the python basics in order to glue everything together.  We will start by looking at a module used to generate random numbers to learn how to make use of other modules in your programs.
+Como se habrá reunido, Python nos brinda la capacidad de utilizar módulos para hacer todo, desde enviar correos electrónicos hasta el procesamiento de imágenes y el aprendizaje automático complejo. Pero, a pesar de que Python nos brinda una enorme cantidad de energía de estos módulos, aún necesita conocer los conceptos básicos de Python para unir todo. Comenzaremos observando un módulo utilizado para generar números aleatorios para aprender a utilizar otros módulos en sus programas.
 
-Learning Goals
-==============
+Metas de aprendizaje
+====================
 
-* Understand that Python is extensible through modules
+* Comprender que Python es extensible a través de módulos
 
-Objectives
+Objetivos
 ==========
 
-* To import an entire module
-* To import a single function from a module
-* To import a module giving it an alias
+* Para importar un módulo completo
+* Para importar una sola función desde un módulo
+* Para importar un módulo dándole un alias

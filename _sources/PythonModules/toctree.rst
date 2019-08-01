@@ -1,8 +1,9 @@
-Python Modules
-::::::::::::::
+
+Módulos en Python
+:::::::::::::::::
 
 .. toctree::
-   :caption: Python Modules
+   :caption: Módulos en Python
    :maxdepth: 2
 
    intro-PythonModules.rst
@@ -11,4 +12,3 @@ Python Modules
    Glossary.rst
    Exercises.rst
 ..   ChapterAssessment.rst
-   
