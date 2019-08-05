@@ -11,8 +11,8 @@
    :prefix: modules-2-
    :start: 1
 
-The ``random`` module
----------------------
+El Módulo ``Random``
+--------------------
 
 
 .. video:: randmodvid
@@ -24,18 +24,18 @@ The ``random`` module
 
 
 
-We often want to use **random numbers** in programs.  Here are a few typical uses:
+A menudo queremos usar **números aleatorios** en los programas. Aquí hay algunos usos típicos:
 
-* To play a game of chance where the computer needs to throw some dice, pick a
-  number, or flip a coin,
-* To shuffle a deck of playing cards randomly,
-* To randomly allow a new enemy spaceship to appear and shoot at you,
-* To simulate possible rainfall when we make a computerized model for
-  estimating the environmental impact of building a dam,
-* For encrypting your banking session on the Internet.
+* Para jugar un juego de azar donde la computadora necesita lanzar algunos dados, elige un
+  número o lanzar una moneda,
+* Para barajar una baraja de cartas al azar,
+* Para permitir que una nueva nave espacial enemiga aparezca y te dispare al azar,
+* Para simular posibles lluvias cuando hacemos un modelo computarizado para
+  estimar el impacto ambiental de construir una presa,
+* Para encriptar su sesión bancaria en Internet.
 
-Python provides a module ``random`` that helps with tasks like this. You can take a look at it in the documentation. 
-Here are the key things we can do with it.
+Python proporciona un módulo ``aleatorio`` que ayuda con tareas como esta. Puedes echarle un vistazo en la documentación.
+Aquí están las cosas clave que podemos hacer con él.
 
 .. activecode:: ac13_2_1
 
@@ -44,24 +44,24 @@ Here are the key things we can do with it.
     prob = random.random()
     print(prob)
 
-    diceThrow = random.randrange(1,7)       # return an int, one of 1,2,3,4,5,6
+    diceThrow = random.randrange(1,7) # devuelve un int, uno de 1,2,3,4,5,6
     print(diceThrow)
 
-Press the run button a number of times.  Note that the values change each time. These are random numbers.
+Presione el boton Ejecutar varias veces. Tenga en cuenta que los valores cambian cada vez. Estos son números aleatorios.
 
 
-The ``randrange`` function generates an integer between its lower and upper argument where the lower bound is included, but the upper bound is excluded. So, ``randrange(1,7)`` will include numbers from 1-6.  If you omit the first parameter it is assumed to be 0 so ``randrange(10)`` will give you numbers from 0-9.  All the values have an equal probability 
-of occurring (i.e. the results are *uniformly* distributed).
+La función "randrange" genera un número entero entre su argumento inferior y superior donde se incluye el límite inferior, pero se excluye el límite superior. Entonces, "randrange(1,7)" incluirá numeros del 1 al 6. Si omite el primer parametro, se supone que es 0, por lo que "randrange(10)" le dara números del 0-9. Todos los valores tienen la misma probabilidad.
+de ocurrir (es decir, los resultados estan *uniformemente* distribuidos).
 
-The ``random()`` function returns a floating point number in the range [0.0, 1.0) --- the square bracket means "closed 
-interval on the left" and the round parenthesis means "open interval on the right".  In other words, 0.0 is possible, 
-but all returned numbers will be strictly less than 1.0.  It is usual to *scale* the results after calling this method, 
-to get them into a range suitable for your application.
+La función ``random()`` devuelve un número de coma flotante en el rango [0.0, 1.0) --- el corchete significa "intervalo
+cerrado a la izquierda "y el paréntesis redondo significa" intervalo abierto a la derecha ". En otras palabras, 0.0 es posible,
+pero todos los números devueltos serán estrictamente inferiores a 1.0. Es habitual *escalar* los resultados después de llamar a este método,
+para ponerlos en un rango adecuado para su aplicación.
 
-In the case shown below, we've converted the result of the method call to a number in the range [0.0, 5.0).  Once more, 
-these are uniformly distributed numbers --- numbers close to 0 are just as likely to occur as numbers close to 3, or 
-numbers close to 5. If you continue to press the run button you will see random values between 0.0 and up to but not 
-including 5.0.
+En el caso que se muestra a continuación, hemos convertido el resultado de la llamada al método en un número en el rango [0.0, 5.0). Una vez más,
+estos son números distribuidos uniformemente --- los números cercanos a 0 tienen la misma probabilidad de ocurrir que los números cercanos a 3, o
+números cercanos a 5. Si continúa presionando el botón de ejecución, verá valores aleatorios entre 0.0 y hasta, pero no
+incluyendo 5.0.
 
 
 .. activecode:: ac13_2_2
@@ -72,16 +72,16 @@ including 5.0.
     result = prob * 5
     print(result)
 
-.. index:: deterministic algorithm,  algorithm; deterministic, unit tests
+.. index:: algoritmo determinista, algoritmo; determinista, pruebas unitarias
 
-It is important to note that random number generators are based on a **deterministic** algorithm --- repeatable and 
-predictable. So they're called **pseudo-random** generators --- they are not genuinely random. They start with a *seed* 
-value. Each time you ask for another random number, you'll get one based on the current seed attribute, and the state 
-of the seed (which is one of the attributes of the generator) will be updated.  The good news is that each time you run 
-your program, the seed value is likely to be different meaning that even though the random numbers are being created 
-algorithmically, you will likely get random behavior each time you execute.
+Es importante tener en cuenta que los generadores de números aleatorios se basan en un algoritmo **determinista** --- repetible y
+previsible. Entonces se llaman generadores **pseudoaleatorios**, no son realmente aleatorios. Comienzan con una *semilla*
+valor. Cada vez que solicite otro número aleatorio, obtendrá uno basado en el atributo semilla actual y el estado
+de la semilla (que es uno de los atributos del generador) se actualizará. La buena noticia es que cada vez que corres
+en su programa, es probable que el valor inicial sea diferente, lo que significa que a pesar de que se están creando los números aleatorios
+algorítmicamente, es probable que obtenga un comportamiento aleatorio cada vez que ejecute.
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question13_2_1
    :answer_a: prob = random.randrange(1, 101)
@@ -89,24 +89,24 @@ algorithmically, you will likely get random behavior each time you execute.
    :answer_c: prob = random.randrange(0, 101)
    :answer_d: prob = random.randrange(0, 100)
    :correct: a
-   :feedback_a: This will generate a number between 1 and 101, but does not include 101.
-   :feedback_b: This will generate a number between 1 and 100, but does not include 100.  The highest value generated will be 99.
-   :feedback_c: This will generate a number between 0 and 100.  The lowest value generated is 0.  The highest value generated will be 100.
-   :feedback_d: This will generate a number between 0 and 100, but does not include 100.  The lowest value generated is 0 and the highest value generated will be 99.
+   :feedback_a: Esto generará un número entre 1 y 101, pero no incluye 101.
+   :feedback_b: Esto generará un número entre 1 y 100, pero no incluye 100. El valor más alto generado será 99.
+   :feedback_c: Esto generará un número entre 0 y 100. El valor más bajo generado es 0. El valor más alto generado será 100.
+   :feedback_d: Esto generará un número entre 0 y 100, pero no incluye 100. El valor más bajo generado es 0 y el valor más alto generado será 99.
    :practice: T
 
-   The correct code to generate a random number between 1 and 100 (inclusive) is:
+   El código correcto para generar un número aleatorio entre 1 y 100 (inclusive) es:
 
 .. mchoice:: question13_2_2
-   :answer_a: There is no computer on the stage for the drawing.
-   :answer_b: Because computers don’t really generate random numbers, they generate pseudo-random numbers.
-   :answer_c: They would just generate the same numbers over and over again.
-   :answer_d: The computer can’t tell what values were already selected, so it might generate all 5’s instead of 5 unique numbers.
+   :answer_a: No hay computadora en el escenario para el dibujo.
+   :answer_b: Debido a que las computadoras realmente no generan números aleatorios, generan números pseudoaleatorios.
+   :answer_c: Simplemente generarían los mismos números una y otra vez.
+   :answer_d: La computadora no puede decir qué valores ya se seleccionaron, por lo que podría generar los 5 números en lugar de 5 números únicos.
    :correct: b
-   :feedback_a: They could easily put one there.
-   :feedback_b: Computers generate random numbers using a deterministic algorithm.  This means that if anyone ever found out the algorithm they could accurately predict the next value to be generated and would always win the lottery.
-   :feedback_c: This might happen if the same seed value was used over and over again, but they could make sure this was not the case.
-   :feedback_d: While a programmer would need to ensure the computer did not select the same number more than once, it is easy to ensure this.
+   :feedback_a: Podrían poner fácilmente uno allí.
+   :feedback_b: Las computadoras generan números aleatorios usando un algoritmo determinista. Esto significa que si alguien alguna vez descubriera el algoritmo, podría predecir con precisión el siguiente valor a generar y siempre ganaría la lotería.
+   :feedback_c: Esto podría suceder si se usara el mismo valor inicial una y otra vez, pero podrían asegurarse de que este no fuera el caso.
+   :feedback_d: Si bien un programador necesitaría asegurarse de que la computadora no seleccionó el mismo número más de una vez, es fácil asegurarlo.
 
-   One reason that lotteries don’t use computers to generate random numbers is:
+   Una razón por la cual las loterías no usan computadoras para generar números aleatorios es:
 
