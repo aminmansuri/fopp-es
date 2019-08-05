@@ -13,36 +13,36 @@
    :prefix: modules-5-
    :start: 1
 
-Exercises
----------
+Ejercicios
+----------
 
 #.  .. tabbed:: q1
 
-        .. tab:: Question
-           
+        .. tab:: Pregunta
+
            .. actex:: ac13_5_1
 
-              Use a ``for`` statement to print 10 random numbers.
+              Use una declaración ``for`` para imprimir 10 números aleatorios.
               ~~~~
 
-        .. tab:: Answer
-            
+        .. tab:: Respuesta
+
             .. activecode:: answer_ac13_5_1
-            
+
                import random
-            
-               howmany = 10 
+
+               howmany = 10
                for counter in range(howmany):
-                   arandom = random.random() 
+                   arandom = random.random()
                    print(arandom)
 
 
 #.  .. tabbed:: q2
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: ac13_5_2
 
-               Repeat the above exercise but this time print 10 random numbers between 25 and 35.
+               Repita el ejercicio anterior pero esta vez imprima 10 números aleatorios entre 25 y 35.
                ~~~~
 
