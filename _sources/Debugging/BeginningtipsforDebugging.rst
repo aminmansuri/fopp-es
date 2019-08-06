@@ -11,23 +11,23 @@
    :prefix: debug-2-
    :start: 1
 
-👩‍💻 Beginning tips for Debugging
-----------------------------------
+👩‍💻 Consejos iniciales para la depuración
+------------------------------------------------
 
-Debugging a program is a different way of thinking than writing a program.  The process of debugging is much more like being a detective.  Here are a few rules to get you thinking about debugging.
+La depuración de un programa es una forma diferente de pensar qué escribir en un programa. El proceso de depuración es como ser un detective. Aquí hay algunas reglas para que pienses en la depuración.
 
-#. Everyone is a suspect (Except Python)!  It's common for beginner programmers to blame Python, but that should be your last resort.  Remember that Python has been used to solve CS1 level problems millions of times by millions of other programmers.  So, Python is probably not the problem.
+#. ¡Todos son sospechosos (excepto Python)! Es común que los programadores principiantes culpen a Python, pero ese debería ser su último recurso. Recuerde que Python ha sido utilizado para resolver problemas de nivel CS1 millones de veces por millones de otros programadores. Entonces, Python probablemente no sea el problema.
 
-#. Check your assumptions.  At this point in your career you are still developing your mental model of how Python does its work.  Its natural to think that your code is correct, but with debugging you need to make your code the primary suspect.  Even if you think it is right, you should verify that it really is by liberally using print statements to verify that the values of variables really are what you think they should be.  You'll be surprised how often they are not.
+#. Comprueba tus suposiciones. En este punto de su carrera, todavía está desarrollando su modelo mental de cómo Python hace su trabajo. Es natural pensar que su código es correcto, pero con la depuración debe hacer que su código sea el principal sospechoso. Incluso si cree que es correcto, debe verificar que realmente lo es utilizando generosamente declaraciones de impresión para verificar que los valores de las variables realmente son lo que cree que deberían ser. Te sorprenderás con qué frecuencia no lo son.
 
-#. Find clues.  This is the biggest job of the detective and right now there are two important kinds of clues for you to understand.
+#. Encuentra pistas. Este es el trabajo más importante del detective y en este momento hay dos tipos importantes de pistas para que entiendas.
 
-   * Error Messages
+   * Mensajes de Error
 
-   * Print Statements
+   * Impresión de Declaraciones
 
-Three kinds of errors can occur in a program: `syntax errors
+Estos son Tres tipos de errores que pueden ocurrir en un programa: `syntax errors
 <http://en.wikipedia.org/wiki/Syntax_error>`__, `runtime errors
-<http://en.wikipedia.org/wiki/Runtime_error>`__, and `semantic errors
-<http://en.wikipedia.org/wiki/Logic_error>`__.  It is useful to distinguish
-between them in order to track them down more quickly.
+<http://en.wikipedia.org/wiki/Runtime_error>`__, y `semantic errors
+<http://en.wikipedia.org/wiki/Logic_error>`__.  Es útil distinguir
+entre ellos para rastrearlos más rápidamente.
