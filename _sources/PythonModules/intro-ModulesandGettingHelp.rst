@@ -24,121 +24,121 @@ Modules
     http://media.interactivepython.org/thinkcsVideos/modules.mov
     http://media.interactivepython.org/thinkcsVideos/modules.webm
 
-A **module** is a file containing Python definitions and statements intended for
-use in other Python programs. There are many Python modules that come with
-Python as part of the **standard library**. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.  
+Un **módulo** es un archivo que contiene definiciones y declaraciones de Python destinadas a
+usar en otros programas de Python. Hay muchos módulos de Python que vienen con
+Python como parte de la **biblioteca estándar**. Proporcionar funcionalidad adicional a través de módulos le permite usar solo la funcionalidad que necesita cuando la necesita, y mantiene su código más limpio.
 
-Functions imported as part of a module live in their own **namespace**.  A namespace is simply a space within which all names are distinct from each other. The same name can be reused in different namespaces but two objects can't have the same name within a single namespace. One example of a namespace is the set of street names within a single city. Many cities have a street called "Main Street", but it's very confusing if two streets in the same city have that name! Another example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the  folder it's in; each folder has its own namespace for files. Note that human names are not part of a namespace that enforces uniqueness; that's why governments have invented unique identifiers to assign to people, like passport numbers.  
+Las funciones importadas como parte de un módulo viven en su propio **espacio de nombres**. Un espacio de nombres es simplemente un espacio dentro del cual todos los nombres son distintos entre sí. El mismo nombre se puede reutilizar en diferentes espacios de nombres, pero dos objetos no pueden tener el mismo nombre dentro de un solo espacio de nombres. Un ejemplo de un espacio de nombres es el conjunto de nombres de calles dentro de una sola ciudad. Muchas ciudades tienen una calle llamada "Calle principal", ¡pero es muy confuso si dos calles de la misma ciudad tienen ese nombre! Otro ejemplo es la organización de carpetas de los sistemas de archivos. Puede tener un archivo llamado todo en su carpeta de trabajo, así como en su carpeta personal, pero sabe cuál es cuál debido a la carpeta en la que se encuentra; cada carpeta tiene su propio espacio de nombres para archivos. Tenga en cuenta que los nombres humanos no son parte de un espacio de nombres que impone la unicidad; Es por eso que los gobiernos han inventado identificadores únicos para asignar a las personas, como los números de pasaporte.
 
-The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
-3.6 is an extremely useful reference for all aspects of Python. The site
-contains a listing of all the standard modules that are available with Python
-(see `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). You
-will also see that there is a
+El  `Python Documentation <https://docs.python.org/3.6/>`_ sitio para la versión de Python
+3.6 es una referencia extremadamente útil para todos los aspectos de Python. El sitio
+contiene una lista de todos los módulos estándar que están disponibles con Python
+(mire `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). También
+verá que hay un
 `Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
-and a
-`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ as well as
-installation instructions, how-tos, and frequently asked questions.  We
-encourage you to become familiar with this site and to use it often.
+y un
+`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ tanto como
+instrucciones de instalación, instrucciones y preguntas frecuentes. Nosotros
+le recomendamos que se familiarice con este sitio y que lo use con frecuencia.
 
-If you have not done so already, take a look at the Global Module Index.  Here
-you will see an alphabetical listing of all the modules that are available as
-part of the standard library.  Find the turtle module.
+Si aún no lo ha hecho, eche un vistazo al Índice del módulo global. aquí
+verá una lista alfabética de todos los módulos que están disponibles como
+parte de la biblioteca estándar. Encuentre el módulo de tortuga.
 
-Importing Modules
------------------
+Importando Módulos
+------------------
 
-In order to use Python modules, you have to **import** them into a Python program. That happens with an import 
-statement: the word ``import``, and then the *name* of the module. The name is case-sensitive. Roughly translated to 
-English, an import statement says "there's some code in another file; please make its functions and variables 
-available in this file." More technically, an import statement causes all the code in another file to be executed. Any 
-variables that are bound during that execution (including functions that are defined) may then be referred in some way 
-(to be discussed) in the current file.
+Para usar los módulos de Python, debe **importarlos** a un programa de Python. Eso pasa con una importación
+declaración: la palabra ``importar`` y luego el *nombre* del módulo. El nombre distingue entre mayúsculas y minúsculas. En palabras más sencillas,
+una declaración de importación dice "hay algún código en otro archivo; por favor haga sus funciones y variables
+disponible en este archivo ". Más técnicamente, una declaración de importación hace que se ejecute todo el código en otro archivo. Cualquiera
+de las variables que están vinculadas durante esa ejecución (incluidas las funciones que están definidas) pueden referirse de alguna manera
+(para ser discutido) en el archivo actual.
 
-By convention, all ``import`` commands are put at the very top of your file. They can be put elsewhere, but that can 
-lead to some confusions, so it's best to follow the convention.
+Por convención, todos los comandos de `` importación '' se colocan en la parte superior de su archivo. Se pueden poner en otro lugar, pero eso puede
+conducir a algunas confusiones, por lo que es mejor seguir la convención.
 
-Where do these other files that you can import come from? It could be a code file that you wrote yourself, or it could 
-be code that someone else wrote and you copied on to your computer.
+¿De dónde vienen estos otros archivos que puede importar? Podría ser un archivo de código que usted mismo escribió, o podría
+sea el código que alguien más escribió y que copió en su computadora.
 
-For example, if you have a file ``myprog.py`` in directory ``~/Desktop/mycode/``, and myprog.py contains a line of 
-code ``import morecode``, then the python interpreter will look for a file called ``morecode.py``, excecute its code, 
-and make its object bindings available for reference in the rest of the code in myprog.py. 
+Por ejemplo, si tiene un archivo ``myprog.py`` en el directorio ``~/Desktop/mycode/``, y myprog.py contiene una línea de
+código ``import morecode``, entonces el intérprete de Python buscará un archivo llamado ``morecode.py``, ejecutará su código,
+y haga que sus enlaces de objetos estén disponibles para referencia en el resto del código en myprog.py.
 
-Note that it is ``import morecode``, not ``import morecode.py``, but the other file has to be called ``morecode.py``.
+Tenga en cuenta que es ``import morecode``, no ``import morecode.py``, pero el otro archivo debe llamarse ``morecode.py``.
 
-The tests you see in your problem sets are also using a Python module that's in the standard library, called 
-``unittest``. Right now, you can't see the code that causes those tests to run, because we have hidden it from you, 
-but later in the course, you will learn how to write your own Unit Tests for code, and to do so, you will need to 
-write an import statement at the beginning of your programs. Even before you learn how to write your own tests, you 
-will see code for Unit Tests in your problem set files.
+Las pruebas que ve en sus conjuntos de problemas también utilizan un módulo Python que se encuentra en la biblioteca estándar, llamado
+``unittest``. En este momento, no puede ver el código que hace que se ejecuten esas pruebas, porque se lo hemos ocultado,
+pero más adelante en el curso, aprenderá cómo escribir sus propias Pruebas de Unidad para el código, y para hacerlo, necesitará
+escribir una declaración de importación al comienzo de sus programas. Incluso antes de aprender a escribir sus propios exámenes, usted
+verá el código para las Pruebas unitarias en los archivos de conjunto de problemas.
 
-.. admonition:: Don't overwrite standard library modules!
+.. admonition:: ¡No sobrescriba los módulos de biblioteca estándar!
 
-    Given the order of search for external Python modules that is described in the list above, it is possible to 
-    overwrite a standard library. For example, if you create a file ``random.py`` in the same directory where 
-    ``myprog.py`` lives, and then myprog.py invokes ``import random``, it will import *your* file rather than the 
-    standard library module. That's not usually what you want, so be careful about how you name your python files! 
+    Dado el orden de búsqueda de módulos externos de Python que se describe en la lista anterior, es posible
+    sobrescribir una biblioteca estándar. Por ejemplo, si crea un archivo ``random.py`` en el mismo directorio donde
+    ``myprog.py`` vive, y luego myprog.py invoca ``import random``, importará *su* archivo en lugar de
+    Módulo de biblioteca estándar. Por lo general, eso no es lo que quieres, ¡así que ten cuidado con cómo nombras tus archivos de Python!
 
 
-Syntax for Importing Modules and Functionality
+Sintaxis para Importar Módulos y Funcionalidad
 ----------------------------------------------
 
-When you see imported modules in a Python program, there are a few variations that have slightly different consequences.
+Cuando ve módulos importados en un programa Python, hay algunas variaciones que tienen consecuencias ligeramente diferentes.
 
-1. The most common is ``import morecode``. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write ``morecode.f1()``. Note that you have to explicitly mention morecode again, to specify that you want the f1 function from the morecode namespace. If you just write ``f1()``, python will look for an f1 that was defined in the current file, rather than in morecode.py.
+1. El más común es ``import morecode``. Eso importa todo en morecode.py. Para invocar una función f1 que se define en morecode.py, escribiría ``morecode.f1()``. Tenga en cuenta que debe mencionar explícitamente morecode nuevamente, para especificar que desea la función f1 del espacio de nombres morecode. Si solo escribe ``f1()``, python buscará un f1 que se definió en el archivo actual, en lugar de en morecode.py.
 
-2. You can also give the imported module an alias (a different name, just for when you use it in your program). For example, after executing ``import morecode as mc``, you would invoke ``f1`` as ``mc.f1()``. You have now given the ``morecode`` module the alias ``mc``. Programmers often do this to make code easier to type.
+2. También puede asignar un alias al módulo importado (un nombre diferente, solo para cuando lo usa en su programa). Por ejemplo, después de ejecutar ``import morecode as mc``, invocaría ``f1`` como ``mc.f1()``. Ahora le ha dado al módulo ``morecode`` el alias ``mc``. Los programadores a menudo hacen esto para hacer que el código sea más fácil de escribir.
 
-3. A third possibility for importing occurs when you only want to import SOME of the functionality from a module, and you want to make those objects be part of the current module's namespace. For example, you could write ``from morecode import f1``. Then you could invoke f1 without referencing morecode again: ``f1()``.
+3. Una tercera posibilidad de importación se produce cuando solo desea importar ALGUNAS de las funciones de un módulo y desea que esos objetos formen parte del espacio de nombres del módulo actual. Por ejemplo, podría escribir ``from morecode import f1``. Entonces podría invocar f1 sin hacer referencia a morecode nuevamente: ``f1()``.
 
 
-.. admonition:: Note: Python modules and limitations with activecode
+.. admonition:: Nota: módulos de Python y limitaciones con código activo
 
-   Throughout the chapters of this book, activecode windows allow you to practice the Python that you are learning.
-   We mentioned in the first chapter that programming is normally done using some type of development
-   environment and that the
-   activecode used here was strictly to help us learn.  It is not the way we write production programs.
+   A lo largo de los capítulos de este libro, las ventanas de código activo le permiten practicar el Python que está aprendiendo.
+   Mencionamos en el primer capítulo que la programación normalmente se realiza utilizando algún tipo de desarrollo.
+   medio ambiente y que el
+   El código activo utilizado aquí fue estrictamente para ayudarnos a aprender. No es la forma en que escribimos programas de producción.
 
-   To that end, it is necessary to mention that many of the  modules available in standard Python
-   will **not** work in the activecode environment.  In fact, only ``turtle``, ``math``, ``random``, and a couple others have been
-   ported at this point.  If you wish to explore any
-   additional modules, you will need to run from the native python interpreter on your computer.
+   Para ello, es necesario mencionar que muchos de los módulos disponibles en Python estándar
+   **no** funcionaran en el entorno de código activo. De hecho, solo ``tortuga``, ``matemáticas``, ``aleatorio`` y un par más han sido
+   portado en este punto. Si desea explorar algunos
+   módulos adicionales, deberá ejecutar desde el intérprete de python nativo en su computadora.
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question13_1_1
-   :answer_a: A file containing Python definitions and statements intended for use in other Python programs.
-   :answer_b: A separate block of code within a program.
-   :answer_c: One line of code in a program.
-   :answer_d: A file that contains documentation about functions in Python.
+   :answer_a: Un archivo que contiene definiciones y declaraciones de Python destinadas a su uso en otros programas de Python.
+   :answer_b: Un bloque de código separado dentro de un programa.
+   :answer_c: Una línea de código en un programa.
+   :answer_d: un archivo que contiene documentación sobre funciones en Python.
    :correct: a
-   :feedback_a: A module can be reused in different programs.
-   :feedback_b: While a module is separate block of code, it is separate from a program.
-   :feedback_c: The call to a feature within a module may be one line of code, but modules are usually multiple lines of code separate from the program.
-   :feedback_d: Each module has its own documentation, but the module itself is more than just documentation.
+   :feedback_a: un módulo se puede reutilizar en diferentes programas.
+   :feedback_b: Si bien un módulo es un bloque de código separado, está separado de un programa.
+   :feedback_c: la llamada a una función dentro de un módulo puede ser una línea de código, pero los módulos suelen ser varias líneas de código separadas del programa.
+   :feedback_d: cada módulo tiene su propia documentación, pero el módulo en sí es más que solo documentación.
 
    In Python a module is:
 
 .. mchoice:: question13_1_2
-   :answer_a: Go to the Python Documentation site.
-   :answer_b: Look at the import statements of the program you are working with or writing.
-   :answer_c: Ask the professor.
-   :answer_d: Look in this textbook.
+   :answer_a: Ir al sitio de documentación de Python.
+   :answer_b: Mirar las declaraciones de importación del programa con el que está trabajando o escribiendo.
+   :answer_c: Preguntar al Profesor.
+   :answer_d: Mirar en este libro.
    :correct: a
-   :feedback_a: The site contains a listing of all the standard modules that are available with Python.
-   :feedback_b: The import statements only tell you what modules are currently being used in the program, not how to use them or what they contain.
-   :feedback_c: While the professor knows a subset of the modules available in Python, chances are the professor will have to look up the available modules just like you would.
-   :feedback_d: This book only explains a portion of the modules available.  For a full listing you should look elsewhere.
+   :feedback_a: El sitio contiene una lista de todos los módulos estándar que están disponibles con Python.
+   :feedback_b: Las declaraciones de importación solo le dicen qué módulos se están utilizando actualmente en el programa, no cómo usarlos o qué contienen.
+   :feedback_c: Si bien el profesor conoce un subconjunto de los módulos disponibles en Python, es probable que el profesor tenga que buscar los módulos disponibles como lo haría usted.
+   :feedback_d: Este libro solo explica una parte de los módulos disponibles. Para obtener una lista completa, debe buscar en otro lado.
 
-   To find out information on the standard modules available with Python you should:
+   Para obtener información sobre los módulos estándar disponibles con Python, debe:
 
 .. mchoice:: question13_1_3
-   :answer_a: True
-   :answer_b: False
+   :answer_a: Verdadero
+   :answer_b: Falso
    :correct: b
-   :feedback_a: Only a few modules have been ported to work in activecode at this time.
-   :feedback_b: Only a few modules have been ported to work in activecode at this time.
+   :feedback_a: Solo algunos módulos se han portado para trabajar en código activo en este momento.
+   :feedback_b: Solo algunos módulos se han portado para trabajar en código activo en este momento.
 
-   True / False:  All standard Python modules will work in activecode.
+   Verdadero / Falso: Todos los módulos Python estándar funcionarán en código activo.
 
