@@ -11,30 +11,30 @@
    :prefix: debug-1-
    :start: 1
 
-Introduction to Debugging
-=========================
+Introducción a la Depuración
+============================
 
 .. rst-class:: blockquote
 
-    “The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.”  — Andrew Singer
+    "El arte de la depuración es descubrir lo que realmente le dijo a su programa que hiciera en lugar de lo que creía que le dijo que hiciera". - Andrew Singer
 
 
-This chapter will spend some time talking about what happens when errors occur as well as how to fix 
-the errors that you will inevitably come across.
+Este capítulo pasará un tiempo hablando de lo que sucede cuando se producen errores y de cómo solucionarlo.
+Los errores que inevitablemente encontrarás.
 
-Before computers became digital, debugging could mean looking for insects impeding the functioning of physical relays as in this somewhat `apocryphal tale <https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html>`_ about `Admiral Grace Hopper <https://en.wikipedia.org/wiki/Admiral_Grace_Hopper>`_, a pioneer of computer programming.
+Antes de que las computadoras se vuelvan digitales, la depuración podría significar buscar insectos que impidan el funcionamiento de los relés físicos como en este caso `apocryphal tale <https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html>`_ acerca de `Admiral Grace Hopper <https://en.wikipedia.org/wiki/Admiral_Grace_Hopper>`_, un pionero de la programación.
 
-Nowadays, debugging doesn't involve bug guts all over your computer but it can still be just as frustrating. To cope with this frustration, this chapter will present some strategies to help you understand why the program you wrote does not behave as intended. 
+Hoy en día, la depuración no implica la eliminación de errores en toda la computadora, pero aún puede ser igual de frustrante. Para hacer frente a esta frustración, este capítulo presentará algunas estrategias para ayudarlo a comprender por qué el programa que escribió no se comporta según lo previsto.
 
-Learning Goals
---------------
+Metas de Aprendizaje
+--------------------
 
-* To understand good programming strategies to avoid errors
-* To understand common kinds of exceptions and their likely causes
+* Entender buenas estrategias de programación para evitar errores.
+* Comprender tipos comunes de excepciones y sus posibles causas.
 
 
-Objectives
-----------
+Objetivos
+---------
 
-* Given a piece of code identify the Syntax errors based on error messages
-* Given a piece of code find the (ValueError, TypeError, SyntaxError, ParseError, NameError)
+* Dado un código, identifique los errores de sintaxis basados ​​en mensajes de error
+* Dado un fragmento de código, encuentre el (ValueError, TypeError, SyntaxError, ParseError, NameError)
