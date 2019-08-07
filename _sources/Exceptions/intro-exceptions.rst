@@ -146,7 +146,7 @@ Hay otra característica útil. El código de excepción puede acceder a una var
    print("continuing")
 
 
-**Check your understanding**
+**Verifica tu entendimiento**
 
 .. mchoice:: exceptions_mc_1
    :answer_a: De  sintaxis
