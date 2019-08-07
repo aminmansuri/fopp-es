@@ -13,54 +13,54 @@
 
 .. index:: syntax error, error; syntax; runtime error, exception, safe language
 
-Syntax errors
+Errores de Sintaxis
 -------------
 
-Python can only execute a program if the program is syntactically correct;
-otherwise, the process fails and returns an error message.  **Syntax** refers
-to the structure of a program and the rules about that structure. For example,
-in English, a sentence must begin with a capital letter and end with a period.
-this sentence contains a **syntax error**. So does this one
+Python solo puede ejecutar un programa si el programa es sintácticamente correcto;
+de lo contrario, el proceso falla y devuelve un mensaje de error. **Sintaxis** se refiere
+a la estructura de un programa y las reglas sobre esa estructura. Por ejemplo,
+en inglés, una oración debe comenzar con una letra mayúscula y terminar con un punto.
+Esta oración contiene un **error de sintaxis**. Este también
 
-For most readers, a few syntax errors are not a significant problem, which is
-why we can read the poetry of e. e. cummings without problems.
-Python is not so forgiving. If there is a single syntax error anywhere in your
-program, Python will display an error message and quit.  You will not be able
-to complete the execution of your program. During the first few weeks of your programming career, you
-will probably spend a lot of time tracking down syntax errors. However, as you gain
-experience, you will make fewer errors and you will also be able to find your errors faster.
+Para la mayoría de los lectores, algunos errores de sintaxis no son un problema significativo, que es la razón
+por la que podemos leer la poesía de e. e. cummings sin problemas.
+Python no es tan indulgente. Si hay un solo error de sintaxis en cualquier lugar de su
+programa, Python mostrará un mensaje de error y se cerrará. No serás capaz
+de completar la ejecución de tu programa. Durante las primeras semanas de su carrera de programación, usted
+probablemente pasará mucho tiempo rastreando errores de sintaxis. Sin embargo, a medida que gana
+experiencia, cometerá menos errores y también podrá encontrar sus errores más rápido.
 
-Can you spot the syntax error in the code below?
+¿Puedes detectar el error de sintaxis en el código a continuación?
 
 .. activecode:: ac4_4_1
 
    print("Hello World!"
 
-**Check your understanding**
+**Verifica tu Trabajo**
 
 .. mchoice:: question4_4_1
-   :answer_a: Attempting to divide by 0.
-   :answer_b: Forgetting a colon at the end of a statement where one is required.
-   :answer_c: Forgetting to divide by 100 when printing a percentage amount.
+   :answer_a: Intentar dividir por 0.
+   :answer_b: Olvidar los dos puntos al final de una declaración donde se requiere uno.
+   :answer_c: Olvidar dividir entre 100 al imprimir una cantidad porcentual.
    :correct: b
-   :feedback_a: A syntax error is an error in the structure of the python code that can be detected before the program is executed. Python cannot usually tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value—you cannot know what value the user will enter before you run the program).
-   :feedback_b: This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.
-   :feedback_c: This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.
+   :feedback_a: Un error de sintaxis es un error en la estructura del código de Python que se puede detectar antes de ejecutar el programa. Python generalmente no puede decir si está tratando de dividir entre 0 hasta que esté ejecutando su programa (por ejemplo, podría estar pidiéndole un valor al usuario y luego dividirlo por ese valor; no puede saber qué valor ingresará el usuario antes de ejecutar el programa programa).
+   :feedback_b: Este es un problema con la estructura formal del programa. Python sabe dónde se requieren dos puntos y puede detectar cuándo falta uno simplemente mirando el código sin ejecutarlo.
+   :feedback_c: Esto producirá la respuesta incorrecta, pero Python no lo considerará un error en absoluto. El programador es el que entiende que la respuesta producida es incorrecta.
    :practice: T
 
-   Which of the following is a syntax error?
+   ¿Cuál de los siguientes es un error de sintaxis?
 
 .. mchoice:: question4_4_2
-   :answer_a: The programmer.
-   :answer_b: The compiler / interpreter.
-   :answer_c: The computer.
-   :answer_d: The teacher / instructor.
+   : respuesta_a: El programador.
+   :answer_b: El compilador / intérprete.
+   :answer_c: La computadora.
+   :answer_d: El profesor / instructor.
    :correct: b
-   :feedback_a: Programmers rarely find all the syntax errors, there is a computer program that will do it for us.
-   :feedback_b: The compiler and / or interpreter is a computer program that determines if your program is written in a way that can be translated into machine language for execution.
-   :feedback_c: Well, sort of.  But it is a special thing in the computer that does it.  The stand alone computer without this additional piece can not do it.
-   :feedback_d: Your teacher and instructor may be able to find most of your syntax errors, but only because they have experience looking at code and possibly writing code.  With experience syntax errors are easier to find.  But we also have an automated way of finding these types of errors.
+   :feedback_a: Los programadores rara vez encuentran todos los errores de sintaxis, hay un programa de computadora que lo hará por nosotros.
+   :feedback_b: El compilador y / o intérprete es un programa de computadora que determina si su programa está escrito de manera que pueda traducirse al lenguaje de máquina para su ejecución.
+   :feedback_c: Bueno, más o menos. Pero es una cosa especial en la computadora que lo hace. La computadora independiente sin esta pieza adicional no puede hacerlo.
+   :feedback_d: es posible que su maestro e instructor puedan encontrar la mayoría de sus errores de sintaxis, pero solo porque tienen experiencia en mirar código y posiblemente escribir código. Con la experiencia, los errores de sintaxis son más fáciles de encontrar. Pero también tenemos una forma automatizada de encontrar este tipo de errores.
    :practice: T
 
-   Who or what typically finds syntax errors?
+    ¿Quién o qué suele encontrar errores de sintaxis?
 
