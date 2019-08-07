@@ -80,8 +80,8 @@ El código de abajo causa un error del tipo IndexError al intentar acceder al te
 
    items = ['a', 'b']
    third = items[2]
-   
-   
+
+
 El código de abajo causa un error del tipo ZeroDivisionError, o el menos específico ArithmeticError.
 
 .. activecode:: exceptions_2
@@ -94,47 +94,47 @@ Veamos qué pasa si atrapamos algo de este código problemático en una sentenci
 
 .. activecode:: exceptions_3
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except Exception:
        print("got an error")
-   
+
    print("continuing")
 
- 
+
 Si solo manejamos IndexEror y tenemos un error de división por cero, El programa detendrá su ejecución.
-   
+
 .. activecode:: exceptions_4
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except IndexError:
        print("error 1")
-      
+
    print("continuing")
-   
+
    try:
        x = 5
        y = x/0
        print("This won't print, either")
    except IndexError:
        print("error 2")
-       
-       
+
+
    print("continuing again")
-   
-   
+
+
 Hay otra característica útil. El código de excepción puede acceder a una variable que contiene información sobre exactamente cuál fue el error. Así, por ejemplo, en la cláusula except podría imprimir la información que normalmente se imprimiría como un mensaje de error pero continuaría con la ejecución del resto del programa. Para hacerlo, especifique un nombre de variable después de la clase de excepción que se está manejando. El código de la cláusula de excepción puede referirse a ese nombre de variable.
 
 .. activecode:: exceptions_5
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
@@ -142,7 +142,7 @@ Hay otra característica útil. El código de excepción puede acceder a una var
    except Exception, e:
        print("got an error")
        print(e)
-   
+
    print("continuing")
 
 
@@ -156,9 +156,9 @@ Hay otra característica útil. El código de excepción puede acceder a una var
    :feedback_b: Los errores de ejecución como index out of bounds pueden ser atrapados y manejados con try/except.
    :feedback_c: Si su programa se ejecuta hasta su finalización pero hace algo incorrecto, try/except no te ayudará.
    :correct: b
-   
+
    ¿Qué tipo de error puede ser advertido y manejado usando try/except?
-   
+
 .. mchoice:: exceptions_mc_2
    :answer_a: Verdaddero
    :answer_b: Falso
@@ -183,7 +183,7 @@ Hay otra característica útil. El código de excepción puede acceder a una var
    :answer_b: 1
    :answer_c: 3
    :answer_d: 4
-   :answer_e: 5  
+   :answer_e: 5
    :feedback_a: Try i = 0; Eso debería imprimir .3333
    :feedback_b: Sigue intentando.
    :feedback_c: Cuando i=3, ya no podrá imprimir 1.0/ (3-i), pero seguirá impimiendo una o más líneas en la cláusula except.
@@ -193,9 +193,9 @@ Hay otra característica útil. El código de excepción puede acceder a una var
    :practice: T
 
    ¿Cuántas líneas se imprimirán cuando se ejecute el siguiente código?
-   
+
    .. sourcecode:: python
-   
+
       try:
           for i in range(5):
               print(1.0 / (3-i))
@@ -240,7 +240,7 @@ Hay otra característica útil. El código de excepción puede acceder a una var
 
    plus_four = []
 
-   for num in nums: 
+   for num in nums:
        plus_four.append(num+4)
 
 
