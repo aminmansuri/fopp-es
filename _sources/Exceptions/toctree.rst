@@ -1,8 +1,8 @@
-Exceptions
-::::::::::
+Excepciones
+:::::::::::
 
 .. toctree::
-   :caption: Exceptions
+   :caption: Excepciones
    :maxdepth: 1
 
    intro-exceptions.rst
