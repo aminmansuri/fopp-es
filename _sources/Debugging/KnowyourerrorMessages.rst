@@ -263,7 +263,7 @@ y corregir el error.
     s = x % 24
     print (h, s)
     a = a + s
-    print ('godzina teraz', a) 
+    print ('godzina teraz', a)
 
 
 
@@ -430,7 +430,7 @@ Y un último bit de código para arreglar.
 .. present_time = int(input("Enter the present time(hhmm):"))
 .. print type(present_time)
 
-.. min = _ * 60 
+.. min = _ * 60
 .. tot_min = min + [2, 4]
 .. print(tot_min)
 .. set_hrs = int(input("Enter the hours (hhmm):"))
