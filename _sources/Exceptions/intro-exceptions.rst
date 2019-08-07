@@ -13,57 +13,56 @@
 .. _exceptions_chap:
 
 
-What is an exception?
-=====================
+¿Qué es una excepción?
+======================
 
-An *exception* is a signal that a condition has occurred that can't be easily
-handled using the normal flow-of-control of a Python program. *Exceptions*
-are often defined as being "errors" but this is not always the case. All
-errors in Python are dealt with using *exceptions*, but not all
-*exceptions* are errors.
+Una *excepción* es una señal de que ha ocurrido una condición que no puede ser fácilmente
+manejada usando el flujo de control normal de un programa en Python. Las *excepciones*
+son usualmente definidas como "errores" pero no siempre es el caso. Todos los errores en
+Python son tratados usando *excepciones*, pero no todas las *excepciones* son errores.
 
-Exception Handling Flow-of-control
-==================================
+Manejo de excepciones: Control de flujo
+=======================================
 
-To explain what an *exception* does, let's review the normal "flow of control"
-in a Python program. In normal operation Python executes statements sequentially,
-one after the other. For three constructs, if-statements, loops and function
-invocations, this sequential execution is interrupted.
+Para explicar lo que hace una *excepción*, repasemos el "flujo de control" normal
+en un programa en Python. Funcionando normalmente Python ejecuta sentencias secuencialmente,
+una tras otra, pero para las tres estructuras: sentencias if, bucles y llamadas a funciones, esta
+ejecución secuencial es interrumpida.
 
-* For *if-statements*, only one of several statement blocks is executed and
-  then flow-of-control jumps to the first statement after the if-statement.
-* For *loops*, when the end of the loop is reached, flow-of-control jumps back
-  to the start of the loop and a test is used to determine if the loop needs
-  to execute again. If the loop is finished, flow-of-control jumps to the
-  first statement after the loop.
-* For *function invocations*, flow-of-control jumps to the first statement in
-  the called function, the function is executed, and the flow-of-control
-  jumps back to the next statement after the function call.
+* En las *sentencias if*, solo se ejecuta uno de varios bloques de instrucciones
+  y luego el flujo de control salta a la primera setencia después de la sentecia if.
+* Para los *bucles*, cuando el final de un bucle  es alcanzado, el flujo de control
+  vuelve al inicio del bucle y hace una prueba para determinar si el bucle necesita
+  ejecutarse de nuevo. Si el ciclo ha finalizado, el flujo de control salta a la
+  primera declaración después del bucle.
+* Para las *llamadas a funciones*, el flujo de control salta a la primera sentencia
+  en la función llamada, la función se ejecuta, y el flujo de control
+  salta a la siguiente declaración después de la llamada a la función.
 
-Do you see the pattern? If the flow-of-control is not purely sequential, it
-always executes the first statement immediately following the altered
-flow-of-control. That is why we can say that Python flow-of-control is
-sequential. But there are cases where this sequential flow-of-control does
-not work well.
+¿Ves el patrón? Si el flujo de control no es puramente secuencial,
+siempre ejecuta la primera instrucción inmediatamente después del flujo de
+control alterado. Es por eso que podemos decir que el flujo de control de
+Python es secuencial. Pero hay casos en los que este flujo de control secuencial
+No funciona bien.
 
-Exceptions provide us with way way to have a non-sequential point where we can handle something out of the ordinary (exceptional).
+Las excepciones nos brindan una manera de tener un punto no secuencial donde podemos manejar algo fuera de lo común (excepcional).
 
-Raising and Catching Errors
----------------------------
+Levantando y atrapando errores
+------------------------------
 
 .. index:: try, except, Exception
 
-The try/except control structure provides a way to process a run-time error and continue on with program execution. Until now, any run-time error, such asking for the 8th item in a list with only 3 items, or dividing by 0, has caused the program execution to stop. In the browser ActiveCode windows, you get an error message in a box below. When you are executing python programs from the command-line, you also get an error message saying something about what went wrong and what line it occurred on. After the run-time error is encountered, the python interpreter does not try to execute the rest of the code. You have to make some change in your code and rerun the whole program.
+La estructura de control try/except proporciona una forma de procesar un error en tiempo de ejecución y continuar con la ejecución del programa. Hasta ahora, cualquier error en tiempo de ejecución, como solicitar el octavo elemento de una lista con solo 3 elementos, o dividirlo por 0, ha provocado que la ejecución del programa se detenga. En las ventanas ActiveCode del navegador, aparece un mensaje de error en un cuadro en la parte de abajo. Cuando ejecuta programas de Python desde la línea de comandos, también recibe un mensaje de error que dice algo sobre lo que salió mal y en qué línea se produjo. Después de que se encuentra el error en tiempo de ejecución, el intérprete de Python no intenta ejecutar el resto del código. Debe hacer algún cambio en su código y volver a ejecutar todo el programa.
 
-With try/except, you tell the python interpreter:
+Con try/except, le dices al intérprete de python :
 
-* Try to execute a block of code, the "try" clause.
-   * If the whole block of code executes without any run-time errors, just carry on with the rest of the program after the try/except statement.
+* Intenta ejecutar un bloque de códgio, sentencia "try".
+   * Si todo el bloque de código se ejecuta sin errores de tiempo de ejecución, simplemente continúa con el resto del programa después de la declaración try/except.
 
-* If a run-time error does occur during execution of the block of code:
-   * skip the rest of that block of code (but don't exit the whole program)
-   * execute a block of code in the "except" clause
-   * then carry on with the rest of the program after the try/except statement
+* Si un error de tiempo de ejecución ocurre durante la ejecución de un bloque de código:
+   * Omita el resto de ese bloque de código (pero no salga de todo el programa)
+   * Ejecuta el bloque de código en la sentencia "except"
+   * Luego continúe con el resto del programa después de la declaración try/except
 
 .. sourcecode:: python
 
@@ -72,18 +71,18 @@ With try/except, you tell the python interpreter:
    except <ErrorType>:
       <exception handler code block>
 
-The syntax is fairly straightforward. The only tricky part is that after the word except, there can optionally be a specification of the kinds of errors that will be handled. The catchall is the class Exception. If you write ``except Exception:`` all runtime errors will be handled. If you specify a more restricted class of errors, only those errors will be handled; any other kind of error will still cause the program to stop running and an error message to be printed.
+La sintaxis es bastante sencilla. La única parte difícil es que después de la palabra, excepto, opcionalmente puede haber una especificación de los tipos de errores que se manejarán. Quien los maneja es la clase Exception. Si escribes ``except Exception:`` se manejarán todos los errores de tiempo de ejecución. Si especifica una clase de errores más restringida, solo se manejarán esos errores; cualquier otro tipo de error hará que el programa deje de ejecutarse y se imprima un mensaje de error.
 
-The code below causes an error of type IndexError, by trying to access the third element of a two-element list.
+El código de abajo causa un error del tipo IndexError al intentar acceder al tercer elemento de una lista de dos elementos.
 
 .. activecode:: exceptions_1
    :nocanvas:
 
    items = ['a', 'b']
    third = items[2]
-   
-   
-The code below causes an error of type ZeroDivisionError, or less specifically ArithmeticError.
+
+
+El código de abajo causa un error del tipo ZeroDivisionError, o el menos específico ArithmeticError.
 
 .. activecode:: exceptions_2
    :nocanvas:
@@ -91,51 +90,51 @@ The code below causes an error of type ZeroDivisionError, or less specifically A
    x = 5
    y = x/0
 
-Let's see what happens if we wrap some of this problematic code in a try/except statement. Note that ``this won't print`` doesn't print: when the error is encountered, the rest of the try block is skipped and the exception block is executed. When the except block is done, it continues on with the next line of code that's outdented to the same level as the try: ``continuing`` is printed.
+Veamos qué pasa si atrapamos algo de este código problemático en una sentencia try/except. Nota que ``this won't print`` no se imprime: cuando se encuentra un error, se omite el resto del bloque try y se ejecuta el bloque de excepción. Cuando ell bloque de excepción termina, continúa con la siguiente línea de código que está identada al mismo nivel que la sentencia try entonces: ``continuing`` es impreso.
 
 .. activecode:: exceptions_3
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except Exception:
        print("got an error")
-   
+
    print("continuing")
 
- 
-If we catch only IndexEror, and we actually have a divide by zero error, the program does stop executing.   
-   
+
+Si solo manejamos IndexEror y tenemos un error de división por cero, El programa detendrá su ejecución.
+
 .. activecode:: exceptions_4
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
        print("This won't print")
    except IndexError:
        print("error 1")
-      
+
    print("continuing")
-   
+
    try:
        x = 5
        y = x/0
        print("This won't print, either")
    except IndexError:
        print("error 2")
-       
-       
+
+
    print("continuing again")
-   
-   
-There's one other useful feature. The exception code can access a variable that contains information about exactly what the error was. Thus, for example, in the except clause you could print out the information that would normally be printed as an error message but continue on with execution of the rest of the program. To do that, you specify a variable name after the exception class that's being handled. The exception clause code can refer to that variable name.
+
+
+Hay otra característica útil. El código de excepción puede acceder a una variable que contiene información sobre exactamente cuál fue el error. Así, por ejemplo, en la cláusula except podría imprimir la información que normalmente se imprimiría como un mensaje de error pero continuaría con la ejecución del resto del programa. Para hacerlo, especifique un nombre de variable después de la clase de excepción que se está manejando. El código de la cláusula de excepción puede referirse a ese nombre de variable.
 
 .. activecode:: exceptions_5
    :nocanvas:
-   
+
    try:
        items = ['a', 'b']
        third = items[2]
@@ -143,40 +142,40 @@ There's one other useful feature. The exception code can access a variable that 
    except Exception, e:
        print("got an error")
        print(e)
-   
+
    print("continuing")
 
 
-**Check your understanding**
+**Verifica tu entendimiento**
 
 .. mchoice:: exceptions_mc_1
-   :answer_a: syntax
-   :answer_b: run-time
-   :answer_c: semantic
-   :feedback_a: Syntax errors are things like missing colons or strings that are not terminated. Try/except will not help with those. The program still will not run.
-   :feedback_b: Run-time errors like index out of bounds can be caught and handled gracefully with try/except.
-   :feedback_c: If your program runs to completion but does the wrong thing, try/except won't help you.
+   :answer_a: De  sintaxis
+   :answer_b: De tiempo de ejecución
+   :answer_c: De semántica
+   :feedback_a: Los errores de sintaxis son cosas como dos puntos o cadenas que no están terminados. Try/except no siempre ayudan con esto. El programa seguirá sin funcionar.
+   :feedback_b: Los errores de ejecución como index out of bounds pueden ser atrapados y manejados con try/except.
+   :feedback_c: Si su programa se ejecuta hasta su finalización pero hace algo incorrecto, try/except no te ayudará.
    :correct: b
-   
-   Which type of error can be noticed and handled using try/except?
-   
+
+   ¿Qué tipo de error puede ser advertido y manejado usando try/except?
+
 .. mchoice:: exceptions_mc_2
-   :answer_a: True
-   :answer_b: False
-   :feedback_a: If your code is only catching IndexError errors, then the exception will not be handled, and execution will terminate.
-   :feedback_b: If your code is only catching IndexError errors, then the exception will not be handled, and execution will terminate.
+   :answer_a: Verdaddero
+   :answer_b: Falso
+   :feedback_a: Si su código solo detecta errores de IndexError, la excepción no se manejará y la ejecución finalizará.
+   :feedback_b: Si su código solo detecta errores de IndexError, la excepción no se manejará y la ejecución finalizará.
    :correct: a
 
-   When a run-time exception of type ZeroDivisionError occurs, and you have a statement ``except IndexError``, the program will stop executing completely.
+   Cuando una excepción de tipo de tiempo de ejecución  ZeroDivisionError ocurre y tienes una sentencia ``except IndexError``, el programa dejará de ejecurtarse por completo:
 
 .. mchoice:: exceptions_mc_3
-   :answer_a: True
-   :answer_b: False
-   :feedback_a: The rest of the code after the whole try/except statement will execute, but not the rest of the code in the try block.
-   :feedback_b: The rest of the code after the whole try/except statement will execute, but not the rest of the code in the try block.
+   :answer_a: Verdadero
+   :answer_b: Falso
+   :feedback_a: Se ejecutará el resto del código después de toda la instrucción try/except, pero no el resto del código en el bloque try.
+   :feedback_b: Se ejecutará el resto del código después de toda la instrucción try/except, pero no el resto del código en el bloque try.
    :correct: b
 
-   After a run-time exception is handled by an except clause, the rest of the code in the try clause will be executed.
+   Después de que una excepción excepto maneje una excepción en tiempo de ejecución, se ejecutará el resto del código en la cláusula try.
 
 
 .. mchoice:: exceptions_mc_4
@@ -184,19 +183,19 @@ There's one other useful feature. The exception code can access a variable that 
    :answer_b: 1
    :answer_c: 3
    :answer_d: 4
-   :answer_e: 5  
-   :feedback_a: Try i = 0; that should print out .3333
-   :feedback_b: Keep trying.
-   :feedback_c: When i=3, it will no longer be able to pring 1.0/ (3-i), but it will still print one more line in the except clause.
-   :feedback_d: It will print the fraction for three values of i, and then one error message.
-   :feedback_e: When i=3, it will get a run-time error, and execution stops after that.
+   :answer_e: 5
+   :feedback_a: Try i = 0; Eso debería imprimir .3333
+   :feedback_b: Sigue intentando.
+   :feedback_c: Cuando i=3, ya no podrá imprimir 1.0/ (3-i), pero seguirá impimiendo una o más líneas en la cláusula except.
+   :feedback_d: Imprimirá la fracción para tres valores de i, y luego un mensaje de error.
+   :feedback_e: When i=3, dará un error de tiempo de ejecución, y la ejecución se detiene después de eso.
    :correct: d
    :practice: T
 
-   How many lines will print out when the following code is executed?
-   
+   ¿Cuántas líneas se imprimirán cuando se ejecute el siguiente código?
+
    .. sourcecode:: python
-   
+
       try:
           for i in range(5):
               print(1.0 / (3-i))
@@ -207,7 +206,7 @@ There's one other useful feature. The exception code can access a variable that 
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
 
-   5. Below, we have provided a list of tuples that consist of student names, final exam scores, and whether or not they will pass the class. For some students, the tuple does not have a third element because it is unknown whether or not they will pass. Currently, the for loop does not work. Add a try/except clause so the code runs without an error - if there is no third element in the tuple, no changes should be made to the dictionary.
+   5. A continuación, proporcionamos una lista de tuplas que consisten en nombres de estudiantes, puntajes de exámenes finales y si aprobarán o no la clase. Para algunos estudiantes, la tupla no tiene un tercer elemento porque no se sabe si pasarán o no. Actualmente, el bucle for no funciona. Agregue una cláusula try/except para que el código se ejecute sin errores: si no hay un tercer elemento en la tupla, no se deben realizar cambios en el diccionario.
    ~~~~
 
    students = [('Timmy', 95, 'Will pass'), ('Martha', 70), ('Betty', 82, 'Will pass'), ('Stewart', 50, 'Will not pass'), ('Ashley', 68), ('Natalie', 99, 'Will pass'), ('Archie', 71), ('Carl', 45, 'Will not pass')]
@@ -234,14 +233,14 @@ There's one other useful feature. The exception code can access a variable that 
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
 
-   6. Below, we have provided code that does not run. Add a try/except clause so the code runs without errors. If an element is not able to undergo the addition operation, the string 'Error' should be appended to plus_four. 
+   6. A continuación, hemos proporcionado un código que no se ejecuta. Agregue una cláusula try/except para que el código se ejecute sin errores. Si un elemento no puede someterse a la operación de adición, la cadena 'Error' debe agregarse a plus_four.
    ~~~~
 
    nums = [5, 9, '4', 3, 2, 1, 6, 5, '7', 4, 3, 2, 6, 7, 8, '0', 3, 4, 0, 6, 5, '3', 5, 6, 7, 8, '3', '1', 5, 6, 7, 9, 3, 2, 5, 6, '9', 2, 3, 4, 5, 1]
 
    plus_four = []
 
-   for num in nums: 
+   for num in nums:
        plus_four.append(num+4)
 
 
