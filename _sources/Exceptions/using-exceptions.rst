@@ -7,14 +7,14 @@
     License".
 
 
-👩‍💻 When to use try/except
+👩‍💻 Cuándo usar try/except
 ----------------------------
 
-The reason to use try/except is when you have a code block to execute that will sometimes run correctly and sometimes not, depending on conditions you can't foresee at the time you're writing the code.
+Debe usar try/except cuando tiene un bloque de código para ejecutar que a veces se ejecutará correctamente y otras no, dependiendo de las condiciones que no puede prever en el momento en que escribe el código.
 
-For example, when you are running code that fetches data from a website, you may run the code when you don't have a network connection or when the external website is temporarily not responding. If your program can still do something useful in those situations, you would like to handle the exception and have the rest of your code execute.
+Por ejemplo, cuando ejecuta código que obtiene datos de un sitio web, puede ejecutar el código cuando no tiene una conexión de red o cuando el sitio web externo no responde temporalmente. Si su programa aún puede hacer algo útil en esas situaciones, le gustaría manejar la excepción y ejecutar el resto de su código.
 
-As another example, suppose you have fetched some nested data from a website into a dictionary d. When you try to extract specific elements, some may be missing: d may not include a particular key, for example. If you anticipate a particular key potentially not being present, you could write an if..else check to take care of it.
+Como otro ejemplo, supongamos que ha obtenido algunos datos anidados de un sitio web en un diccionario d. Cuando intenta extraer elementos específicos, pueden faltar algunos: d puede no incluir una clave en particular, por ejemplo. Si anticipa que una clave en particular podría no estar presente, puede escribir un cheque if..else para encargarse de ello.
 
 .. sourcecode:: python
 
@@ -24,7 +24,7 @@ As another example, suppose you have fetched some nested data from a website int
     else:
         skip_this_one(d)
 
-However, if you're extracting lots of different data, it can get tedious to check for all of them. You can wrap all the data extraction in a try/except.
+Sin embargo, si extrae muchos datos diferentes, puede ser tedioso verificarlos todos. Puede atrapar toda la extracción de datos en un try/except
 
 .. sourcecode:: python
 
@@ -33,7 +33,7 @@ However, if you're extracting lots of different data, it can get tedious to chec
     except:
         skip_this_one(d)
 
-It's considered poor practice to catch all exceptions this way. Instead, python provides a mechanism to specify just certain kinds of exceptions that you'll catch (for example, just catching exceptions of type KeyError, which happens when a key is missing from a dictionary.
+Se considera una mala práctica atrapar todas las excepciones de esta manera. En cambio, python proporciona un mecanismo para especificar solo ciertos tipos de excepciones que detectará (por ejemplo, solo capturando excepciones de tipo KeyError, que ocurre cuando falta una clave en un diccionario.
 
 .. sourcecode:: python
 
@@ -42,4 +42,4 @@ It's considered poor practice to catch all exceptions this way. Instead, python 
     except KeyError:
         skip_this_one(d)
 
-We won't go into more details of exception handling in this introductory course. Check out the official `python tutorial section on error handling <https://docs.python.org/3/tutorial/errors.html>`_ if you're interested.
+No entraremos en más detalles sobre el manejo de excepciones en este curso introductorio. Mira la sección `tutorial de Python sobre manejo de errores <https://docs.python.org/3/tutorial/errors.html>`_ en el sitio oficial  si te interesa saber más.
