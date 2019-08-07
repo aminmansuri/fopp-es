@@ -13,95 +13,93 @@
 
 .. index:: exception, flow-of-control, raise, try: except:
 
-Standard Exceptions
-===================
+Excepciones estándar
+====================
 
-Most of the standard *exceptions* built into Python are listed below.
-They are organized into related groups based on the types of issues they deal with.
+La mayoría de las *excepciones* estándar integradas en Python se enumeran a continuación.
+Se organizan en grupos relacionados en función de los tipos de problemas que tratan.
 
-=====================  ================================================
-Language Exceptions    Description
-=====================  ================================================
-StandardError          Base class for all built-in exceptions except
-                       StopIteration and SystemExit.
-ImportError	           Raised when an import statement fails.
-SyntaxError            Raised when there is an error in Python syntax.
-IndentationError       Raised when indentation is not specified properly.
-NameError              Raised when an identifier is not found in the local
-                       or global namespace.
-UnboundLocalError      Raised when trying to access a local variable in a
-                       function or method but no value has been assigned to it.
-TypeError              Raised when an operation or function is attempted that
-                       is invalid for the specified data type.
-LookupError            Base class for all lookup errors.
-IndexError             Raised when an index is not found in a sequence.
-KeyError               Raised when the specified key is not found in the dictionary.
-ValueError             Raised when the built-in function for a data type has
-                       the valid type of arguments, but the arguments have
-                       invalid values specified.
-RuntimeError	         Raised when a generated error does not fall into any category.
-MemoryError            Raised when a operation runs out of memory.
-RecursionError         Raised when the maximum recursion depth has been exceeded.
-SystemError            Raised when the interpreter finds an internal problem,
-                       but when this error is encountered the Python interpreter
-                       does not exit.
-=====================  ================================================
+========================  =============================================
+Excepciones del lenguaje  Descripción
+========================  =============================================
+Clase StandardError       Clase base para todas las excepciones integradas excepto
+                          StopIteration y SystemExit.
+ImportError               Se genera cuando falla una declaración de importación.
+SyntaxError               Se genera cuando hay un error en la sintaxis de Python.
+IndentationError          Se genera cuando la identación no se especifica correctamente.
+NameError                 Se genera cuando no se encuentra un identificador en el
+                          namespace local o global.
+UnboundLocalError         Se genera al intentar acceder a una variable local en un
+                          función o método pero no se le ha asignado ningún valor.
+TypeError                 Se genera cuando se intenta una operación o función que
+                          no es válida para el tipo de dato especificado.
+LookupError               Clase base para todos los errores de búsqueda.
+IndexError                Se genera cuando no se encuentra un índice en una secuencia.
+KeyError                  Se genera cuando la clave especificada no se encuentra en el diccionario.
+ValueError                Se genera cuando la función integrada para un tipo de datos tiene
+                          el tipo válido de argumentos, pero los argumentos tienen
+                          valores no válidos especificados
+RuntimeError              Se genera cuando un error generado no cae en ninguna categoría.
+MemoryError               Se genera cuando una operación se queda sin memoria.
+RecursionError            Se genera cuando se excede la profundidad máxima de recursión.
+SystemError               Se genera cuando el intérprete encuentra un problema interno,
+                          pero cuando se encuentra este error el intérprete de Python
+                          no se detiene.
+========================  =============================================
 
-=====================  ================================================
-Math Exceptions        Description
-=====================  ================================================
-ArithmeticError	       Base class for all errors that occur for numeric calculation.
-                       You know a math error occurred, but you don't know the
-                       specific error.
-OverflowError          Raised when a calculation exceeds maximum limit for a
-                       numeric type.
-FloatingPointError     Raised when a floating point calculation fails.
-ZeroDivisonError       Raised when division or modulo by zero takes place for
-                       all numeric types.
-=====================  ================================================
+============================  ================================================
+Excepciones de la clase Math  Descripción
+============================  ================================================
+ArithmeticError	              Clase base para todos los errores que ocurren para el cálculo numérico.
+                              Sabes que ocurrió un error matemático, pero no cuál es el error específico
+OverflowError                 Se genera cuando un cálculo excede el límite máximo para un tipo numérico
+FloatingPointError            Se genera cuando falla un cálculo de coma flotante.
+ZeroDivisonError              Se genera cuando la división o módulo por cero tiene lugar para
+                              todos los tipos numéricos.
+============================  ================================================
 
 =====================  ================================================
-I/O Exceptions         Description
+Excepciones de E/S     Descripción
 =====================  ================================================
-FileNotFoundError      Raised when a file or directory is requested but doesn’t exist.
-IOError                Raised when an input/ output operation fails, such as
-                       the print statement or the open() function when trying
-                       to open a file that does not exist. Also raised for
-                       operating system-related errors.
-PermissionError        Raised when trying to run an operation without the
-                       adequate access rights.
-EOFError               Raised when there is no input from either the raw_input()
-                       or input() function and the end of file is reached.
-KeyboardInterrupt      Raised when the user interrupts program execution,
-                       usually by pressing Ctrl+c.
+FileNotFoundError      Se genera cuando se solicita un archivo o directorio que no existe.
+IOError                Se genera cuando falla una operación de entrada/salida, como
+                       la instrucción print o la función open() al intentar
+                       abrir un archivo que no existe. También generado por
+                       errores relacionados con el sistema operativo.
+PermissionError        Se genera al intentar ejecutar una operación sin los
+                       derechos de acceso adecuados.
+EOFError               Se genera cuando no hay entrada desde raw_input ()
+                       o input () y se alcanza el final del archivo.
+KeyboardInterrupt      Se genera cuando el usuario interrumpe la ejecución del programa,
+                       generalmente presionando Ctrl+c.
 =====================  ================================================
 
 =====================  ================================================
-Other Exceptions       Description
+Otras Excepciones       Descripción
 =====================  ================================================
-Exception              Base class for all exceptions. This catches most
-                       exception messages.
-StopIteration          Raised when the next() method of an iterator
-                       does not point to any object.
-AssertionError	       Raised in case of failure of the Assert statement.
-SystemExit             Raised when Python interpreter is quit by using the
-                       sys.exit() function. If not handled in the code, it
-                       causes the interpreter to exit.
-OSError                Raises for operating system related errors.
-EnvironmentError       Base class for all exceptions that occur outside the
-                       Python environment.
-AttributeError	       Raised in case of failure of an attribute reference
-                       or assignment.
-NotImplementedError    Raised when an abstract method that needs to be
-                       implemented in an inherited class is not actually implemented.
+Exception              Clase base para todas las excepciones. Esto atrapa más
+                       mensajes de excepción
+StopIteration          Se genera cuando el método next() de un iterador
+                       no apunta a ningún objeto.
+AssertionError         Se genera en caso de falla de la declaración Assert.
+SystemExit             Se genera cuando se cierra el intérprete de Python utilizando
+                       la función sys.exit (). Si no se maneja en el código,
+                       hace que el intérprete detenga.
+OSError                Se genera por errores relacionados con el sistema operativo.
+EnvironmentError       Clase base  para todas las excepciones que se producen fuera de
+                       entorno de Python.
+AttributeError         Se genera en caso de falla de una referencia de atributo
+                       o asignación
+NotImplementedError    Se genera cuando no se implementa un método abstracto en una clase
+                       heredada
+
 =====================  ================================================
 
-All exceptions are objects. The classes that define the objects are organized
-in a hierarchy, which is shown below. This is important because the parent
-class of a set of related exceptions will catch all exception messages for
-itself and its child exceptions. For example, an ``ArithmeticError``
-exception will catch itself and all ``FloatingPointError``, ``OverflowError``,
-and ``ZeroDivisionError`` exceptions.
+Todas las excepciones son objetos.
+Las clases que definen los objetos están organizadas en una jerarquía que se muestra a continuación. Esto es importante porque la clase padre
+de un conjunto de excepciones relacionadas capturará todos los mensajes de excepción para
+sí mismo y su hijo. Por ejemplo, un ``ArithmeticError``, la excepción se atrapará a sí misma
+y todos las excepciones ``FloatingPointError``, ``OverflowError``, y ``ZeroDivisionError``.
 
 .. code-block:: Python
 
