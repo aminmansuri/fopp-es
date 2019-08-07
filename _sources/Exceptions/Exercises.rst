@@ -9,20 +9,20 @@
 
 :skipreading:`True`
 
-Exercises
-=========
+Ejercicios
+==========
 
 #.
 
     .. tabbed:: q1
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: assess_ac23_5_1
                :practice: T
                :topics: Exceptions/intro-exceptions
 
-               Below, we have provided buggy code. Add a try/except clause so the code runs without errors. If a blog post didn't get any likes, a 'Likes' key should be added to that dictionary with a value of 0.
+               A continuación, hemos proporcionado un código con errores. Agregue una cláusula try / except para que el código se ejecute sin errores. Si una publicación de blog no obtuvo Me gusta, se debe agregar una clave 'Me gusta' a ese diccionario con un valor de 0.
 
                ~~~~
 
@@ -54,13 +54,13 @@ Exercises
 
     .. tabbed:: q2
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: assess_ac23_5_2
                :practice: T
                :topics: Exceptions/intro-exceptions
 
-               The code below assigns the 5th letter of each word in ``food`` to the new list ``fifth``. However, the code currently produces errors. Insert a try/except clause that will allow the code to run and produce of list of the 5th letter in each word. If the word is not long enough, it should not print anything out. Note: The pass statement is a null operation; nothing will happen when it executes.
+               El siguiente código asigna la quinta letra de cada palabra en ``comida`` a la nueva lista ``quinta``. Sin embargo, el código actualmente produce errores. Inserte una cláusula tryNo entraremos en más detalles sobre el manejo de excepciones en este curso introductorio. Mira el oficial/except que permitirá que el código se ejecute y produzca una lista de la quinta letra en cada palabra. Si la palabra no es lo suficientemente larga, no debe imprimir nada. Nota: La sentencia pass es una operación nula; nada sucederá cuando se ejecute.
                ~~~~
 
                food = ["chocolate", "chicken", "corn", "sandwich", "soup", "potatoes", "beef", "lox", "lemonade"]

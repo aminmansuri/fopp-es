@@ -8,15 +8,15 @@
     License".
 
 
-Chapter Assessment
-==================
+Evaluación del capítulo
+=======================
 
 .. activecode:: ac_exceptions_01
    :tags: Exceptions/intro-exceptions.rst
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   The code below takes the list of country, ``country``, and searches to see if it is in the dictionary ``gold`` which shows some countries who won gold during the Olympics. However, this code currently does not work. Correctly add try/except clause in the code so that it will correctly populate the list, ``country_gold``, with either the number of golds won or the string "Did not get gold".
+   El siguiente código toma la lista de país, ``país``, y busca para ver si está en el diccionario ``oro`` que muestra algunos países que ganaron oro durante los Juegos Olímpicos. Sin embargo, este código actualmente no funciona. Agregue correctamente la cláusula try/except en el código para que llene correctamente la lista, ``country_gold``, con el número de oros ganados o la cadena "No obtuvo oro".
    ~~~~
 
    gold = {"US":46, "Fiji":1, "Great Britain":27, "Cuba":5, "Thailand":2, "China":26, "France":10}
@@ -42,7 +42,7 @@ Chapter Assessment
 .. activecode:: ac_exceptions_011
    :tags: Exceptions/intro-exceptions.rst
 
-   Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes.
+   Se proporciona un bucle con errores que intenta acumular algunos valores de algunos diccionarios. Inserte un try/except para que funcione el código.
    ~~~~
 
    di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
@@ -68,7 +68,7 @@ Chapter Assessment
 .. activecode:: ac_exceptions_02
    :tags:Exceptions/intro-exceptions.rst
 
-   The list, ``numb``, contains integers. Write code that populates the list ``remainder`` with the remainder of 36 divided by each number in ``numb``. For example, the first element should be 0, because 36/6 has no remainder. If there is an error, have the string "Error" appear in the ``remainder``.
+   La lista, ``numb``, contiene enteros. escribe un código que llene la lista ``remainder`` con el resto de 36 dividido por cada número en ``numb``. Por ejemplo, el primer elemento debe ser 0, porque 36/6 no tiene resto. Si hay un error, haga que la cadena "Error" aparezca en el ``resto``.
    ~~~~
 
    numb = [6, 0, 36, 8, 2, 36, 0, 12, 60, 0, 45, 0, 3, 23]
@@ -91,7 +91,7 @@ Chapter Assessment
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   Provided is buggy code, insert a try/except so that the code passes.
+   Este código tiene errores, inserte un try/except para que el código funcione.
    ~~~~
 
    lst = [2,4,10,42,12,0,4,7,21,4,83,8,5,6,8,234,5,6,523,42,34,0,234,1,435,465,56,7,3,43,23]
@@ -120,7 +120,7 @@ Chapter Assessment
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   Write code so that the buggy code provided works using a try/except. When the codes does not work in the try, have it append to the list ``attempt`` the string "Error".
+   Escribe código que haga funcionar al código proveído con errores usando try/except. Cuando los códigos no funcionan en el try, agrega la cadena "Error" a la lista ``attempt``.
    ~~~~
 
    full_lst = ["ab", 'cde', 'fgh', 'i', 'jkml', 'nop', 'qr', 's', 'tv', 'wxy', 'z']
@@ -146,7 +146,7 @@ Chapter Assessment
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   The following code tries to append the third element of each list in ``conts`` to the new list ``third_countries``. Currently, the code does not work. Add a try/except clause so the code runs without errors, and the string 'Continent does not have 3 countries' is appended to ``countries`` instead of producing an error.
+   El siguiente código intenta agregar el tercer elemento de cada lista en ``conts`` a la nueva lista ``third_countries``. Actualmente, el código no funciona. Agregue una cláusula try/except para que el código se ejecute sin errores, y la cadena 'Continent no tiene 3 países' se agrega a ``países`` en lugar de producir un error.
    ~~~~
 
    conts = [['Spain', 'France', 'Greece', 'Portugal', 'Romania', 'Germany'], ['USA', 'Mexico', 'Canada'], ['Japan', 'China', 'Korea', 'Vietnam', 'Cambodia'], ['Argentina', 'Chile', 'Brazil', 'Ecuador', 'Uruguay', 'Venezuela'], ['Australia'], ['Zimbabwe', 'Morocco', 'Kenya', 'Ethiopa', 'South Africa'], ['Antarctica']]
@@ -174,7 +174,7 @@ Chapter Assessment
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   The buggy code below prints out the value of the sport in the list ``sport``. Use try/except so that the code will run properly. If the sport is not in the dictionary, ``ppl_play``, add it in with the value of 1.
+   El siguiente código con errores imprime el valor del deporte en la lista ``deporte``. Use try/except para que el código se ejecute correctamente. Si el deporte no está en el diccionario, ``ppl_play``, agréguelo con el valor de 1.
    ~~~~
 
    sport = ["hockey", "basketball", "soccer", "tennis", "football", "baseball"]
@@ -202,7 +202,7 @@ Chapter Assessment
    :practice: T
    :topics: Exceptions/intro-exceptions.rst
 
-   Provided is a buggy for loop that tries to accumulate some values out of some dictionaries. Insert a try/except so that the code passes. If the key is not there, initialize it in the dictionary and set the value to zero.
+   Se proporciona un bucle con errores que intenta acumular algunos valores de algunos diccionarios. Inserte un try/except para que pase el código. Si la clave no está allí, inicialícela en el diccionario y establezca el valor en cero.
    ~~~~
 
    di = [{"Puppies": 17, 'Kittens': 9, "Birds": 23, 'Fish': 90, "Hamsters": 49}, {"Puppies": 23, "Birds": 29, "Fish": 20, "Mice": 20, "Snakes": 7}, {"Fish": 203, "Hamsters": 93, "Snakes": 25, "Kittens": 89}, {"Birds": 20, "Puppies": 90, "Snakes": 21, "Fish": 10, "Kittens": 67}]
