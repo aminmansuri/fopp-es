@@ -14,7 +14,7 @@
 .. index:: syntax error, error; syntax; runtime error, exception, safe language
 
 Errores de Sintaxis
--------------
+----------------------
 
 Python solo puede ejecutar un programa si el programa es sintácticamente correcto;
 de lo contrario, el proceso falla y devuelve un mensaje de error. **Sintaxis** se refiere
