@@ -11,17 +11,17 @@
    :prefix: debug-7-
    :start: 1
 
-👩‍💻 Know Your Error Messages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+👩‍💻 Conozca sus mensajes de error
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many problems in your program will lead to an error message. For example as I was 
-writing and testing this chapter of the book I wrote the following version of the 
-example program in the previous section.
+Muchos problemas en su programa conducirán a un mensaje de error. Por ejemplo como estaba
+escribiendo y probando este capítulo del libro escribí la siguiente versión del
+programa de ejemplo en la sección anterior.
 
 .. sourcecode:: python
 
-   current_time_str = input("What is the current time (in hours 0-23)?")
-   wait_time_str = input("How many hours do you want to wait")
+   current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+   wait_time_str = input("Cuántas horas quiere esperar")
 
    current_time_int = int(current_time_str)
    wait_time_int = int(wait_time_int)
@@ -29,17 +29,17 @@ example program in the previous section.
    final_time_int = current_time_int + wait_time_int
    print(final_time_int)
 
-Can you see what is wrong, just by looking at the code? Maybe, maybe not. Our brain 
-tends to see what we think is there, so sometimes it is very hard to find the problem 
-just by looking at the code.  Especially when it is our own code and we are sure that 
-we have done everything right!
+¿Puedes ver lo que está mal simplemente mirando el código? Tal vez tal vez no. Nuestro cerebro
+tiende a ver lo que creemos que hay, así que a veces es muy difícil encontrar el problema
+solo mirando el código. Especialmente cuando es nuestro propio código y estamos seguros de que
+¡Hemos hecho todo bien!
 
-Let's try the program again, but this time in an activecode:
+Intentemos el programa nuevamente, pero esta vez en un activecode:
 
 .. activecode:: ac4_7_1
 
-   current_time_str = input("What is the current time (in hours 0-23)?")
-   wait_time_str = input("How many hours do you want to wait")
+   current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+   wait_time_str = input("Cuántas horas quiere esperar")
 
    current_time_int = int(current_time_str)
    wait_time_int = int(wait_time_int)
@@ -48,36 +48,36 @@ Let's try the program again, but this time in an activecode:
    print(final_time_int)
 
 
-Aha! Now we have an error message that might be useful. The name error tells us 
-that ``wait_time_int`` is not defined. It also tells us that the error is on line 5. 
-That's **really** useful information. Now look at line five and you will see that 
-``wait_time_int`` is used on both the left and the right hand side of the assignment 
-statement. 
+¡Ajá! Ahora tenemos un mensaje de error que podría ser útil. El error de nombre nos dice
+que ``wait_time_int`` no está definido. También nos dice que el error está en la línea 5.
+Esa es **realmente** información útil. Ahora mira la línea cinco y verás que
+``wait_time_int`` se usa tanto en el lado izquierdo como en el derecho de la tarea
+declaración.
 
 .. note::
-   The error descriptions you see in activecode may be different (and more understandable!) than in a regular 
-   Python interpreter. The interpreter in activecode is limited in many ways, but it is intended for beginners, 
-   including the wording chosen to describe errors.
+   Las descripciones de error que ve en el código activo pueden ser diferentes (¡y más comprensibles!) que en un código regular
+   con el Intérprete de Python. El intérprete en activecode está limitado de muchas maneras, pero está destinado a principiantes,
+   incluyendo la redacción elegida para describir los errores.
 
 .. mchoice:: question4_7_1
-   :answer_a: You cannot use a variable on both the left and right hand sides of an assignment statement.
-   :answer_b: wait_time_int does not have a value so it cannot be used on the right hand side.
-   :answer_c: This is not really an error, Python is broken.
+   :answer_a: No puede usar una variable en los lados izquierdo y derecho de una declaración de asignación.
+   :answer_b: wait_time_int no tiene un valor, por lo que no se puede usar en el lado derecho.
+   :answer_c: Esto no es realmente un error, Python no funciona.
    :correct: b
-   :feedback_a: No, You can, as long as all the variables on the right hand side already have values.
-   :feedback_b: Yes.  Variables must already have values in order to be used on the right hand side.
+   :feedback_a: No, puede, siempre y cuando todas las variables en el lado derecho ya tengan valores.
+   :feedback_b: Sí. Las variables ya deben tener valores para poder usarse en el lado derecho.
    :feedback_c: No, No, No!
    :practice: T
 
-   Which of the following explains why ``wait_time_int = int(wait_time_int)`` is an error?
+   ¿Cuál de las siguientes explica por qué ``wait_time_int = int(wait_time_int)`` es un error?
 
 
-In writing and using this book over the last few years we have collected a lot of 
-statistics about the programs in this book. Here are some statistics about error 
-messages for the exercise we have been looking at.
+Al escribir y utilizar este libro en los últimos años, hemos recopilado muchos datos
+estadísticos sobre los programas en este libro. Aquí hay algunas estadísticas sobre mensajes
+de error para el ejercicio que hemos estado viendo.
 
 =================== ======= =======
-Message             Number  Percent
+Mensaje             Número  Porcentaje
 =================== ======= =======
 ParseError:         4999    54.74%
 TypeError:          1305    14.29%
@@ -93,41 +93,41 @@ ImportError:        16      0.18%
 IndexError:         6       0.07%
 =================== ======= =======
 
-Nearly 90% of the error messages encountered for this problem are ParseError, 
-TypeError, NameError, or ValueError. We will look at these errors in three stages:
+Casi el 90% de los mensajes de error encontrados para este problema son ParseError,
+TypeError, NameError o ValueError. Veremos estos errores en tres etapas:
 
-* First we will define what these four error messages mean.
-* Then, we will look at some examples that cause these errors to occur.
-* Finally we will look at ways to help uncover the root cause of these messages.
+* Primero definiremos qué significan estos cuatro mensajes de error.
+* Luego, veremos algunos ejemplos que causan estos errores.
+* Finalmente, veremos formas de ayudar a descubrir la causa de estos mensajes.
 
 
 ParseError
 ^^^^^^^^^^
 
-Parse errors happen when you make an error in the syntax of your program. Syntax 
-errors are like making grammatical errors in writing. If you don't use periods and 
-commas in your writing then you are making it hard for other readers to figure out 
-what you are trying to say. Similarly Python has certain grammatical rules that must 
-be followed or else Python can't figure out what you are trying to say.
+Los errores de análisis ocurren cuando comete un error en la sintaxis de su programa.
+Los errores son como cometer errores gramaticales por escrito. Si no usas puntos y
+comas en tu escritura, entonces estás dificultando que otros lectores se den cuenta
+lo que intentas decir. Del mismo modo, Python tiene ciertas reglas gramaticales que deben
+ser seguidas o Python no puede entender lo que estás tratando de decir.
 
-Usually ParseErrors can be traced back to missing punctuation characters, such as 
-parentheses, quotation marks, or commas. Remember that in Python commas are used to 
-separate parameters to functions. Paretheses must be balanced, or else Python thinks 
-that you are trying to include everything that follows as a parameter to some function.
+Por lo general, ParseErrors se remonta a los caracteres de puntuación faltantes, como
+paréntesis, comillas o comas. Recuerda que en Python las comas están acostumbradas a
+parámetros separados a las funciones. Los paréntesis deben estar equilibrados, o Python piensa
+que intenta incluir todo lo que sigue como parámetro para alguna función.
 
-Here are a couple examples of Parse errors in the example program we have been using. 
-See if you can figure out what caused them.
+Aquí hay un par de ejemplos de ParseError en el programa de ejemplo que hemos estado usando.
+Vea si puede descubrir qué los causó.
 
 .. tabbed:: db_tabs1
 
-    .. tab:: Question
+    .. tab:: Pregunta
 
-        Find and fix the error in the following code.
+        Encuentra y corrige el error en el siguiente código.
 
         .. activecode:: ac4_7_2
 
-           current_time_str = input("What is the current time (in hours 0-23)?")
-           wait_time_str = input("How many hours do you want to wait"
+           current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+           wait_time_str = input("¿Cuántas horas quieres esperar?"
 
            current_time_int = int(current_time_str)
            wait_time_int = int(wait_time_str)
@@ -135,12 +135,12 @@ See if you can figure out what caused them.
            final_time_int = current_time_int + wait_time_int
            print(final_time_int)
 
-    .. tab:: Answer
+    .. tab:: Respuesta
 
         .. sourcecode:: python
 
-           current_time_str = input("What is the current time (in hours 0-23)?")
-           wait_time_str = input("How many hours do you want to wait"
+           current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+           wait_time_str = input("¿Cuántas horas quieres esperar?"
 
            current_time_int = int(current_time_str)
            wait_time_int = int(wait_time_str)
@@ -148,42 +148,42 @@ See if you can figure out what caused them.
            final_time_int = current_time_int + wait_time_int
            print(final_time_int)
 
-        Since the error message points us to line 4 this might be a bit confusing. If 
-        you look at line four carefully you will see that there is no problem with the 
-        syntax. So, in this case the next step should be to back up and look at the 
-        previous line. In this case if you look at line 2 carefully you will see that 
-        there is a missing right parenthesis at the end of the line. Remember that 
-        parenthses must be balanced. Since Python allows statements to continue over 
-        multiple lines inside parentheses python will continue to scan subsequent 
-        lines looking for the balancing right parenthesis. However in this case it 
-        finds the name ``current_time_int`` and it will want to interpret that as 
-        another parameter to the input function. But, there is not a comma to 
-        separate the previous string from the variable so as far as Python is 
-        concerned the error here is a missing comma. From your perspective its a 
-        missing parenthesis.
+        Dado que el mensaje de error nos señala la línea 4, esto puede ser un poco confuso. Si
+        mira la línea cuatro con cuidado, verá que no hay ningún problema con la
+        sintaxis. Entonces, en este caso, el siguiente paso debería ser retroceder y mirar la
+        línea anterior. En este caso, si observa cuidadosamente la línea 2, verá que
+        falta un paréntesis derecho al final de la línea. Recuérdalo,
+        los paréntesis deben estar equilibrados. Dado que Python permite que las declaraciones continúen
+        varias líneas dentro de paréntesis, python continuará escaneando posteriormente
+        líneas que buscan el paréntesis de equilibrio correcto. Sin embargo en este caso
+        encuentra el nombre ``current_time_int`` y querrá interpretarlo como
+        otro parámetro para la función de entrada. Pero, no hay una coma para
+        separe la cadena anterior de la variable ,en lo que respecta a Python
+        el error aquí es una coma que falta. Desde tu perspectiva es un
+        falta paréntesis.
 
-**Finding Clues** How can you help yourself find these problems? One trick that can be 
-very valuable in this situation is to simply start by commenting out the line number 
-that is flagged as having the error. If you comment out line four, the error message 
-now changes to point to line 5. Now you ask yourself, am I really that bad that I 
-have two lines in a row that have errors on them? Maybe, so taken to the extreme, you 
-could comment out all of the remaining lines in the program. Now the error message 
-changes to ``TokenError: EOF in multi-line statement`` This is a very technical way 
-of saying that Python got to the end of file (EOF) while it was still looking for 
-something. In this case a right parenthesis.
+**Encontrar pistas** ¿Cómo puedes ayudarte a encontrar estos problemas? Un truco que puede ser
+muy valioso en esta situación es simplemente comenzar comentando el número de línea
+que está marcado que contiene el error. Si se comenta la línea cuatro, el mensaje de error
+ahora cambia a punto a la línea 5. Ahora te preguntas, ¿estoy realmente tan mal que ya
+tiene dos líneas seguidas que tienen errores? Tal vez, podrías llevado al extremo,
+podrías comentar todas las líneas restantes en el programa. Ahora el mensaje de error
+cambia a ``TokenError: EOF en declaración de varias líneas`` Esta es una forma muy técnica
+de decir que Python llegó al final del archivo (EOF) mientras todavía estaba buscando
+alguna cosa. En este caso un paréntesis derecho.
 
 
 
 .. tabbed:: db_tabs2
 
-    .. tab:: Question
+    .. tab:: Pregunta
 
-        Find and fix the error in the following code.
+        Encuentra y corrige el error en el siguiente código.
 
         .. activecode:: ac4_7_3
 
-           current_time_str = input("What is the "current time" (in hours 0-23)?")
-           wait_time_str = input("How many hours do you want to wait")
+           current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+           wait_time_str = input("¿Cuántas horas quieres esperar?")
 
            current_time_int = int(current_time_str)
            wait_time_int = int(wait_time_str)
@@ -191,12 +191,12 @@ something. In this case a right parenthesis.
            final_time_int = current_time_int + wait_time_int
            print(final_time_int)
 
-    .. tab:: Answer
+    .. tab:: Respuesta
 
         .. sourcecode:: python
 
-           current_time_str = input("What is the "current time" (in hours 0-23)?")
-           wait_time_str = input("How many hours do you want to wait")
+           current_time_str = input("¿Cuál es la" hora actual "(en horas 0-23)?")
+           wait_time_str = input("¿Cuántas horas quieres esperar?")
 
            current_time_int = int(current_time_str)
            wait_time_int = int(wait_time_str)
@@ -204,54 +204,54 @@ something. In this case a right parenthesis.
            final_time_int = current_time_int + wait_time_int
            print(final_time_int)
 
-        The error message points you to line 1 and in this case that is exactly where 
-        the error occurs. In this case your biggest clue is to notice the difference 
-        in  highlighting on the line. Notice that the words "current time" are a 
-        different color than those around them. Why is this? Because "current time" 
-        is in double quotes inside another pair of double quotes Python thinks that 
-        you are finishing off one string, then you have some other names and finally 
-        another string. But you haven't separated these names or strings by commas, 
-        and you haven't added them together with the concatenation operator (+). So, 
-        there are several corrections you could make. First you could make the 
-        argument to input be as follows: ``"What is the 'current time' (in hours 0-23)
-        "`` Notice that here we have correctly used single quotes inside double quotes
-        . Another option is to simply remove the extra double quotes. Why were you 
-        quoting "current time" anyway? ``"What is the current time (in hours 0-23)"``
+        El mensaje de error lo señala a la línea 1 y en este caso es exactamente donde
+        se produce el error. En este caso, su mayor pista es notar la diferencia
+        en resaltar en la línea. Observe que las palabras "hora actual" son un
+        color diferente a los que los rodean. ¿Por qué es esto? Porque "hora actual"
+        está entre comillas dobles dentro de otro par de comillas dobles. Python piensa que
+        estás terminando una cadena, luego tienes otros nombres y finalmente
+        otra cuerda. Pero no ha separado estos nombres o cadenas por comas,
+        y no los ha agregado junto con el operador de concatenación (+). Asi que,
+        hay varias correcciones que puede hacer. Primero podrías hacer que el
+        argumento para ingresar sea el siguiente: ``"¿Cuál es la 'hora actual' (en horas 0-23)?
+        "``Tenga en cuenta que aquí hemos utilizado correctamente comillas simples dentro de comillas dobles
+        . Otra opción es simplemente eliminar las comillas dobles adicionales. Porque estabas
+        citando "hora actual" de todos modos? ``"¿Cuál es la hora actual (en horas 0-23)"``
 
 
-**Finding Clues**  If you follow the same advice as for the last problem, comment out 
-line one, you will immediately get a different error message. Here's where you need 
-to be very careful and not panic. The error message you get now is: ``NameError: name 
-'current_time_str' is not defined on line 4``. You might be very tempted to think 
-that this is somehow related to the earlier problem and immediately conclude that 
-there is something wrong with the variable name ``current_time_str`` but if you 
-reflect for a minute you will see that by commenting out line one you have caused a 
-new and unrelated error. That is you have commented out the creation of the name 
-``current_time_str``. So of course when you want to convert it to an ``int`` you will 
-get the NameError. Yes, this can be confusing, but it will become much easier with 
-experience. It's also important to keep calm, and evaluate each new clue carefully so 
-you don't waste time chasing problems that are not really there. 
+**Encontrar pistas** Si sigue los mismos consejos para el último problema, comente la
+línea uno, inmediatamente recibirá un mensaje de error diferente. Aquí es donde necesitas
+tener mucho cuidado y no entrar en pánico. El mensaje de error que obtienes ahora es: ``NameError: name
+'current_time_str' is not defined on line 4``. Puedes estar muy tentado a pensar
+que esto está relacionado de alguna manera con el problema anterior e inmediatamente concluir que
+hay algo mal con el nombre de la variable ``current_time_str`` pero si usted
+reflexiona por un minuto, verá que al comentar la línea 1 ha causado un
+error nuevo y no relacionado. Es decir, has comentado la creación del nombre.
+``current_time_str``. Entonces, por supuesto, cuando desee convertirlo a un ``int``, lo hará
+obtener el NameError. Sí, esto puede ser confuso, pero será mucho más fácil con
+experiencia. También es importante mantener la calma y evaluar cada nueva pista cuidadosamente,
+no pierdas el tiempo persiguiendo problemas que realmente no existen.
 
 
-Uncomment line 1 and you are back to the ParseError. Another track is to eliminate a 
-possible source of error. Rather than commenting out the entire line you might just 
-try to assign ``current_time_str`` to a constant value. For example you might make 
-line one look like this:  ``current_time_str = "10"  #input("What is the "current 
-time" (in hours 0-23)?")``. Now you have assigned ``current_time_str`` to the string 
-10, and commented out the input statement. And now the program works! So you 
-conclude that the problem must have something to do with the input function.
+Elimine el comentario de la línea 1 y volverá al ParseError. Otra pista es eliminar una
+posible fuente de error. En lugar de comentar toda la línea, podrías
+intentar asignar ``current_time_str`` a un valor constante. Por ejemplo, podrías hacer que
+la línea uno se vea así: ``current_time_str = "10"  #input("¿Cuál es el"hora
+actual "(en horas 0-23)?")``. Ahora ha asignado ``current_time_str`` a la cadena
+10, y comentó la declaración de entrada. ¡Y ahora el programa funciona! Puede llegar a la
+conclusión de que el problema debe tener algo que ver con la función de entrada.
 
 
 TypeError
 ^^^^^^^^^
 
-TypeErrors occur when you you try to combine two objects that are not compatible. For 
-example you try to add together an integer and a string. Usually type errors can be 
-isolated to lines that are using mathematical operators, and usually the line number 
-given by the error message is an accurate indication of the line.
+Los errores de tipo se producen cuando intenta combinar dos objetos que no son compatibles. Por
+ejemplo, intenta sumar un número entero y una cadena. Por lo general, los errores de tipo pueden ser
+aislado a líneas que usan operadores matemáticos, y generalmente el número de línea
+dado por el mensaje de error es una indicación precisa de la línea.
 
-Here's an example of a type error created by a Polish learner.  See if you can find 
-and fix the error.
+Aquí hay un ejemplo de un error de tipo creado por un alumno . A ver si puedes encontrar
+y corregir el error.
 
 .. activecode:: ac4_7_4
 
@@ -263,73 +263,73 @@ and fix the error.
     s = x % 24
     print (h, s)
     a = a + s
-    print ('godzina teraz', a) 
+    print ('godzina teraz', a)
 
 
 
 .. reveal:: dbex4_rev
-    :showtitle: Show me the Solution
-    :hidetitle: Hide
+    :showtitle: Muéstrame la solución
+    :hidetitle: Esconder
 
-    .. admonition:: Solution
+    .. admonition:: Solución
 
-        In finding this error there are few lessons to think about. First, you may 
-        find it very disconcerting that you cannot understand the whole program. 
-        Unless you speak Polish then this won't be an issue. But, learning what you 
-        can ignore, and what you need to focus on is a very important part of the 
-        debugging process. Second, types and good variable names are important and 
-        can be very helpful. In this case a and x are not particularly helpful names, 
-        and in particular they do not help you think about the types of your 
-        variables, which as the error message implies is the root of the problem here.
-        The rest of the lessons we will get back to in a minute.
+        Al encontrar este error, hay pocas lecciones en las que pensar. Primero, puedes
+        sentir que es muy desconcertante que no puedas entender todo el programa.
+        A menos que hable el alumno, esto no será un problema. Pero, aprendiendo lo que tu
+        puedes ignorar, y lo que se necesita para centrarse es una parte muy importante del
+        proceso de depuración. Segundo, los tipos y los buenos nombres de variables son importantes y
+        pueden ser muy útiles. En este caso, a y x no son nombres particularmente útiles,
+        y en particular no te ayudan a pensar en los tipos de tu
+        variables, que como el mensaje de error implica, es la raíz del problema aquí.
+        Al resto de las lecciones regresaremos en un minuto.
 
-        The error message provided to you gives you a pretty big hint. 
-        ``TypeError: unsupported operand type(s) for FloorDiv: 'str' and 'number' on line: 5``
-        On line five we are trying to use integer division on x and 24. The error 
-        message tells you that you are tyring to divide a string by a number. In this 
-        case you know that 24 is a number so x must be a string. But how? You can 
-        see the function call on line 3 where you are converting x to an integer.  
-        ``int(x)`` or so you think. This is lesson three and is one of the most 
-        common errors we see in introductory programming. What is the difference 
-        between ``int(x)`` and ``x = int(x)``
+        El mensaje de error proporcionado le da una pista bastante grande.
+        ``TypeError: tipos de operando no admitidos para FloorDiv: 'str' y 'number' en línea: 5``
+        En la línea cinco estamos tratando de usar la división de enteros en x y 24. El error
+        El mensaje le indica que está tratando de dividir una cadena por un número. En esto
+        en caso de que sepa que 24 es un número, entonces x debe ser una cadena. ¿Pero cómo? Usted puede
+        vea la llamada a la función en la línea 3 donde está convirtiendo x en un entero.
+        ``int(x)`` o eso crees. Esta es la lección tres y es una de las más
+        Errores comunes que vemos en la programación introductoria. Cuál es la diferencia
+        entre ``int(x)`` y ``x = int(x)``
 
-        * The expression ``int(x)`` converts the string referenced by x to an integer but it does not store it anywhere.  It is very common to assume that ``int(x)`` somehow changes x itself, as that is what you are intending!  The thing that makes this very tricky is that ``int(x)`` is a valid expression, so it doesn't cause any kind of error, but rather the error happens later on in the program.
+        * La expresión ``int(x)`` convierte la cadena referenciada por x en un número entero pero no la almacena en ningún lado. Es muy común suponer que ``int(x)`` de alguna manera cambia a x, ¡ya que eso es lo que pretendes!. Lo que hace que esto sea muy complicado es que ``int(x)`` es una expresión válida, por lo que no causa ningún tipo de error, sino que el error ocurre más adelante en el programa.
 
-        * The assignment statement  ``x = int(x)`` is very different.  Again, the ``int(x)`` expression converts the string referenced by x to an integer, but this time it also changes what x references so that x now refers to the integer value returned by the ``int`` function.  
+        * La declaración de asignación ``x = int(x)`` es muy diferente. Nuevamente, la expresión ``int(x)`` convierte la cadena referenciada por x en un número entero, pero esta vez también cambia lo que x hace referencia para que x ahora se refiera al valor entero devuelto por la función ``int``.
 
-        So, the solution to this problem is to change lines 3 and 4 so they are 
-        assignment statements.
+        Entonces, la solución a este problema es cambiar las líneas 3 y 4 para que sean
+        declaraciones de asignación.
 
 
-**Finding Clues**  One thing that can help you in this situation is to print out the 
-values and the types of the variables involved in the statement that is causing the 
-error. You might try adding a print statement after line 4 ``print(x, type(x))`` You 
-will see that at least we have confirmed that x is of type string. Now you need to 
-start to work backward through the program. You need to ask yourself, where is x used 
-in the program? x is used on lines 2, 3, and of course 5 and 6 (where we are getting 
-an error). So maybe you move the print statement to be after line 2 and again after 3. 
-Line 3 is where you expect the value of x to be changed to an integer. Could line 4 
-be mysteriously changing x back to a string? Not very likely. So the value and type 
-of x is just what you would expect it to be after line 2, but not after line 3. This 
-helps you isolate the problem to line 3. In fact if you employ one of our earlier 
-techniques of commenting out line 3 you will see that this has no impact on the error, 
-and is a big clue that line 3 as it is currently written is useless.
+**Encontrar pistas** Una cosa que puede ayudarlo en esta situación es imprimir los
+valores y los tipos de las variables involucradas en la declaración que está causando el
+error. Puede intentar agregar una declaración de impresión después de la línea 4 ``print(x, type(x))``
+veremos que al menos hemos confirmado que x es de tipo cadena. Ahora necesitas
+Comenzarás a trabajar hacia atrás a través del programa. Tienes que preguntarte, ¿dónde se usa x?
+¿en el programa? x se usa en las líneas 2, 3 y, por supuesto, 5 y 6 (donde estamos obteniendo
+un error). Entonces, tal vez mueva la declaración de impresión para que esté después de la línea 2 y nuevamente después de 3.
+La línea 3 es donde espera que el valor de x se cambie a un entero. Podría la línea 4
+estar misteriosamente cambiando x de nuevo a una cadena? No es muy probable. Entonces el valor y el tipo
+de x es justo lo que esperarías después de la línea 2, pero no después de la línea 3. Esto
+le ayuda a aislar el problema en la línea 3. De hecho, si emplea uno de nuestras anteriores
+técnicas de comentar la línea 3, verá que esto no tiene impacto en el error,
+y es una gran pista de que la línea 3 tal como está escrita actualmente es inútil.
 
 
 NameError
 ^^^^^^^^^
 
-Name errors almost always mean that you have used a variable before it has a value. 
-Often NameErrors are simply caused by typos in your code. They can be hard to spot if 
-you don't have a good eye for catching spelling mistakes. Other times you may simply 
-mis-remember the name of a variable or even a function you want to call. You have 
-seen one example of a NameError at the beginning of this section. Here is another one. 
-See if you can get this program to run successfully:
+Los errores de nombre casi siempre significan que ha utilizado una variable antes de que tenga un valor.
+A menudo, NameErrors son simplemente causados por errores tipográficos en su código. Pueden ser difíciles de detectar si
+no tienes buen ojo para detectar errores ortográficos. Otras veces puedes simplemente
+recordar mal el nombre de una variable o incluso una función a la que quieres llamar. Tienes
+visto un ejemplo de un NameError al comienzo de esta sección. Aquí hay otro.
+Vea si puede hacer que este programa se ejecute correctamente:
 
 .. activecode:: ac4_7_5
 
-    str_time = input("What time is it now?")
-    str_wait_time = input("What is the number of hours to wait?")
+    str_time = input("Cuál es la hora actual?")
+    str_wait_time = input("Cuál es el número de horas que desea esperar?")
     time = int(str_time)
     wai_time = int(str_wait_time)
 
@@ -337,92 +337,92 @@ See if you can get this program to run successfully:
     print(time_when_alarm_go_off)
 
 .. reveal:: db_ex5_reveal
-    :showtitle: Show me the Solution
+    :showtitle: Muéstrame la solución
 
-    .. admonition:: Solution
+    .. admonition:: Solución
 
-        In this example, the student seems to be a fairly bad speller, as there are a 
-        number of typos to fix. The first one is identified as wait_time is not 
-        defined on line 6. Now in this example you can see that there is 
-        ``str_wait_time`` on line 2, and  ``wai_time`` on line 4 and ``wait_time`` on 
-        line 6. If you do not have very sharp eyes its easy to miss that there is a 
-        typo on line 4.
+        En este ejemplo, el estudiante parece ser un deletreador bastante malo, ya que hay un buen
+        número de errores tipográficos para corregir. El primero se identifica como wait_time no es
+        definido en la línea 6. Ahora, en este ejemplo, puede ver que hay
+        ``str_wait_time`` en la línea 2, y ``wai_time`` en la línea 4 y ``wait_time`` en la
+        línea 6. Si no tiene ojos muy agudos, es fácil pasar por alto que hay un
+        error tipográfico en la línea 4.
 
-**Finding Clues**  With name errors one of the best things you can do is use the 
-editor, or browser search function. Quite often if you search for the exact word in the 
-error message one of two things will happen:
+**Encontrar pistas** Con errores de nombre, una de las mejores cosas que puede hacer es usar el
+editor o función de búsqueda del navegador. Muy a menudo si busca la palabra exacta en el
+mensaje de error ocurrirá una de dos cosas:
 
-1.  The word you are searching for will appear only once in your code, it's also likely 
-that it will be on the right hand side of an assignment statement, or as a parameter to 
-a function. That should confirm for you that you have a typo somewhere. If the name in 
-question **is** what you thought it should be then you probably have a typo on the left 
-hand side of an assignment statement on a line before your error message occurs. Start 
-looking backward at your assignment statements. In some cases it's really nice to 
-leave all the highlighted strings from the search function visible as they will help 
-you very quickly find a line where you might have expected your variable to be 
-highlighted.
+1. La palabra que está buscando aparecerá solo una vez en su código, también es probable
+que estará en el lado derecho de una declaración de asignación, o como un parámetro para
+una función. Eso debería confirmar que tienes un error tipográfico en alguna parte. Si el nombre en
+la pregunta **es** lo que pensaste que debería ser, entonces probablemente tengas un error tipográfico a la izquierda
+lado de una declaración de asignación en una línea antes de que aparezca su mensaje de error. comienzo
+mirando hacia atrás en sus declaraciones de asignación. En algunos casos es realmente agradable
+dejar visibles todas las cadenas resaltadas de la función de búsqueda, ya que ayudarán
+a encpntrar muy rápidamente una línea donde podría haber esperado que su variable fuera
+resaltada.
 
-2.  The second thing that may happen is that you will be looking directly at a line 
-where you expected the search to find the string in question, but it will not be 
-highlighted. Most often that will be the typo right there.
+2. Lo segundo que puede pasar es que mirarás directamente a una línea
+donde esperaba que la búsqueda encontrara la cadena en cuestión, pero no será
+resaltado. Muy a menudo ese será el error tipográfico allí mismo.
 
 
 Here is another one for you to try:
 
 .. activecode:: ac4_7_6
 
-    n = input("What time is it now (in hours)?")
+    n = input("¿Qué hora es ahora (en horas)?")
     n = imt(n)
-    m = input("How many hours do you want to wait?")
+    m = input("¿Cuántas horas quieres esperar?")
     m = int(m)
     q = m % 12
-    print("The time is now", q)
+    print("Ahora la hora es", q)
 
 
 .. reveal:: db_ex6_reveal
-    :showtitle:  Show me the Solution
+    :showtitle:  Muéstrame la Solución
 
-    .. admonition:: Solution    
+    .. admonition:: Solución
 
-        This one is once again a typo, but the typo is not in a variable name, but 
-        rather, the name of a function. The search strategy would help you with this 
-        one easily, but there is another clue for you as well. The editor in the 
-        textbook, as well as almost all Python editors in the world provide you with 
-        color clues. Notice that on line 2 the function ``imt`` is not highlighted 
-        blue like the word ``int`` on line 4.
+        Este es una vez más un error tipográfico, pero el error tipográfico no está en un nombre variable, pero
+        más bien, el nombre de una función. La estrategia de búsqueda te ayudaría con esto
+        fácilmente, pero también hay otra pista para ti. El editor en el
+        libro de texto, así como casi todos los editores de Python en el mundo le proporcionan
+        pistas de color. Observe que en la línea 2 la función ``imt`` no está resaltada
+         azul como la palabra ``int`` en la línea 4.
 
 
-And one last bit of code to fix.
+Y un último bit de código para arreglar.
 
 .. activecode:: ac4_7_7
 
-    present_time = input("Enter the present timein hours:")
-    set_alarm = input("Set the hours for alarm:")
+    present_time = input("Ingrese la hora actual en horas:")
+    set_alarm = input("Establecer las horas de alarma:")
     int (present_time, set_time, alarm_time)
     alarm_time = present_time + set_alarm
     print(alarm_time)
 
 .. reveal:: db_ex7_reveal
-    :showtitle: Show me the Solution
+    :showtitle: Muéstrame la Solución
 
-    .. admonition:: Solution
+    .. admonition:: Solución
 
-        In this example the error message is about ``set_time`` not defined on line 3. 
-        In this case the undefined name is not used in an assignment statement, but is 
-        used as a parameter (incorrectly) to a function call. A search on ``set_time`` 
-        reveals that in fact it is only used once in the program. Did the author mean 
-        ``set_alarm``? If we make that assumption we immediately get another error 
-        ``NameError: name 'alarm_time' is not defined on line: 3``. The variable 
-        ``alarm_time`` is defined on line 4, but that does not help us on line 3.  
-        Furthermore we now have to ask the question is this function call 
-        ``int(present_time, set_alarm, alarm_time)`` even the correct use of the 
-        ``int`` function? The answer to that is a resounding no. Let's list all of the 
-        things wrong with line 3:
+        En este ejemplo, el mensaje de error se trata de ``set_time`` no definido en la línea 3.
+        En este caso, el nombre indefinido no se usa en una declaración de asignación, pero es
+        usado como parámetro (incorrectamente) para una llamada a la función. Una búsqueda en ``set_time``
+        revela que, de hecho, solo se usa una vez en el programa. ¿Quiso decir el autor?
+        ``set_alarm``? Si hacemos esa suposición, obtenemos inmediatamente otro error
+        ``NameError: el nombre 'alarm_time' no está definido en la línea: 3``. La variable
+        ``alarm_time`` se define en la línea 4, pero eso no nos ayuda en la línea 3.
+        Además, ahora tenemos que hacer la pregunta: ¿es esta función llamada
+        ``int(present_time, set_alarm, alarm_time)`` incluso el uso correcto de la
+        función ``int``? La respuesta a eso es un rotundo no. Hagamos una lista de todos las
+        cosas mal con la línea 3:
 
-        1.  ``set_time`` is not defined and never used, the author probably meant ``set_alarm``.
-        2.  ``alarm_time`` cannot be used as a parameter before it is defined, even on the next line!
-        3.  ``int`` can only convert one string to an integer at a time.
-        4.  Finally, ``int`` should be used in an assignment statement.  Even if ``int`` was called with the correct number of parameters it would have no real effect.
+        1.  ``set_time`` no está definido y nunca se usa, el autor probablemente quiso decir ``set_alarm``.
+        2.  ``alarm_time`` no se puede usar como parámetro antes de que se defina, ¡incluso en la siguiente línea!
+        3.  ``int`` solo puede convertir una cadena en un entero a la vez.
+        4.  Finalmente, ``int`` debe usarse en una declaración de asignación. Incluso si se llamara `` int`` con el número correcto de parámetros, no tendría ningún efecto real.
 
 
 .. advanced topic!
@@ -430,7 +430,7 @@ And one last bit of code to fix.
 .. present_time = int(input("Enter the present time(hhmm):"))
 .. print type(present_time)
 
-.. min = _ * 60 
+.. min = _ * 60
 .. tot_min = min + [2, 4]
 .. print(tot_min)
 .. set_hrs = int(input("Enter the hours (hhmm):"))
@@ -441,34 +441,34 @@ And one last bit of code to fix.
 ValueError
 ^^^^^^^^^^
 
-Value errors occur when you pass a parameter to a function and the function is 
-expecting a certain limitations on the values, and the value passed is not compatible. 
-We can illustrate that with this particular program in two different ways.
+Se producen errores de valor cuando pasa un parámetro a una función y la función está
+esperando ciertas limitaciones en los valores, y el valor pasado no es compatible.
+Podemos ilustrar eso con este programa en particular de dos maneras diferentes.
 
-.. activecode:: ac4_7_8
+.. código activo :: ac4_7_8
 
-   current_time_str = input("What is the current time (in hours 0-23)?")
+   current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
    current_time_int = int(current_time_str)
 
-   wait_time_str = input("How many hours do you want to wait")
+   wait_time_str = input("¿Cuántas horas quieres esperar?")
    wait_time_int = int(wait_time_int)
 
    final_time_int = current_time_int + wait_time_int
    print(final_time_int)
 
 
-Run the program but instead of typing in anything to the dialog box just click OK. You 
-should see the following error message:  ``ValueError: invalid literal for int() with 
-base 10: '' on line: 4`` This error is not because you have made a mistake in your 
-program. Although sometimes we do want to check the user input to make sure its valid,
-but we don't have all the tools we need for that yet. The error happens because the 
-user did not give us something we can convert to an integer, instead we gave it an 
-empty string. Try running the program again. Now this time enter "ten" instead of 
-the number 10. You will get a similar error message.
+Ejecute el programa, pero en lugar de escribir algo en el cuadro de diálogo, simplemente haga clic en Aceptar. Le
+debería aparecer el siguiente mensaje de error:  ``ValueError: invalid literal for int() with
+base 10: '' on line: 4`` Este error no se debe a que haya cometido un error en su
+programa. Aunque a veces queremos verificar la entrada del usuario para asegurarnos de que sea válida,
+pero todavía no tenemos todas las herramientas que necesitamos para eso. El error ocurre porque el
+el usuario no nos dio algo que podamos convertir a un entero, en su lugar le dimos un
+string vacío. Intenta ejecutar el programa nuevamente. Ahora esta vez ingrese "diez" en lugar de
+el número 10. Recibirá un mensaje de error similar.
 
-ValueErrors are not always caused by user input error, but in this program that is the 
-case. We'll look again at ValueErrors again when we get to more complicated programs. 
-For now it is worth repeating that you need to keep track of the restrictions needed 
-for your variables, and understand what your function is expecting. You can do this by 
-writing comments in your code, or by naming your variables in a way that reminds you of 
-their proper form.
+Los ValueErrors no siempre son causados por un error de entrada del usuario, pero en este programa ese es el
+caso. Volveremos a ver ValueErrors nuevamente cuando lleguemos a programas más complicados.
+Por ahora vale la pena repetir que debe realizar un seguimiento de las restricciones necesarias
+para sus variables, y entienda qué espera su función. Puede hacer esto
+escribindo comentarios en su código, o nombrar sus variables de una manera en que le recuerden
+su forma correcta
