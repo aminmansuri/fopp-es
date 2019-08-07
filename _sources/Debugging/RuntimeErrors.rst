@@ -13,41 +13,41 @@
 
 .. index:: error;runtime, runtime error
 
-Runtime Errors
---------------
+Errores de tiempo de ejecución
+---------------------------------
 
-The second type of error is a runtime error, so called because the error does
-not appear until you run the program. These errors are also called
-**exceptions** because they usually indicate that something exceptional (and
-bad) has happened.
+El segundo tipo de error es un error de tiempo de ejecución, llamado así porque el error
+no aparecerá hasta que ejecute el programa. Estos errores también se llaman
+**excepciones** porque generalmente indican que algo excepcional (y
+mal) ha sucedido.
 
-Runtime errors are rare in the simple programs you will see in the first few
-chapters, so it might be a while before you encounter one.
+Los errores de tiempo de ejecución son raros en los programas simples que verá en los primeros
+capítulos, por lo que puede pasar un tiempo antes de que encuentre uno.
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question4_5_1
-   :answer_a: Attempting to divide by 0.
-   :answer_b: Forgetting a colon at the end of a statement where one is required.
-   :answer_c: Forgetting to divide by 100 when printing a percentage amount.
+   :answer_a: Intentar dividir por 0.
+   :answer_b: Olvidar los dos puntos al final de una declaración donde se requieren.
+   :answer_c: Olvidarse de dividir entre 100 al imprimir una cantidad porcentual.
    :correct: a
-   :feedback_a: Python cannot reliably tell if you are trying to divide by 0 until it is executing your program (e.g., you might be asking the user for a value and then dividing by that value—you cannot know what value the user will enter before you run the program).
-   :feedback_b: This is a problem with the formal structure of the program.  Python knows where colons are required and can detect when one is missing simply by looking at the code without running it.
-   :feedback_c: This will produce the wrong answer, but Python will not consider it an error at all.  The programmer is the one who understands that the answer produced is wrong.
+   :feedback_a: Python no puede determinar de manera confiable si está tratando de dividir entre 0 hasta que esté ejecutando su programa (por ejemplo, podría estar pidiéndole un valor al usuario y luego dividirlo por ese valor; no puede saber qué valor ingresará el usuario antes de ejecutar el programa).
+   :feedback_b: Este es un problema con la estructura formal del programa. Python sabe dónde se requieren dos puntos y puede detectar cuándo falta uno simplemente mirando el código sin ejecutarlo.
+   :feedback_c: Esto producirá una respuesta incorrecta, pero Python no lo considerará un error en absoluto. El programador es el que entiende que la respuesta producida es incorrecta.
    :practice: T
 
-   Which of the following is a run-time error?
+   ¿Cuál de los siguientes es un error en tiempo de ejecución?
 
 .. mchoice:: question4_5_2
-   :answer_a: The programmer.
-   :answer_b: The interpreter.
-   :answer_c: The computer.
-   :answer_d: The teacher / instructor.
+   :answer_a: El Programador.
+   :answer_b: El Intérprete.
+   :answer_c: La Computadora.
+   :answer_d: El Profesor / Instructor.
    :correct: b
-   :feedback_a: Programmers rarely find all the runtime errors, there is a computer program that will do it for us.
-   :feedback_b: If an instruction is illegal to perform at that point in the execution, the interpreter will stop with a message describing the exception.
-   :feedback_c: Well, sort of.  But it is a special thing in the computer that does it.  The stand alone computer without this additional piece can not do it.
-   :feedback_d: Your teacher and instructor may be able to find most of your runtime errors, but only because they have experience looking at code and possibly writing code.  With experience runtime errors are easier to find.  But we also have an automated way of finding these types of errors.
+   :feedback_a: Los programadores rara vez encuentramos todos los errores de tiempo de ejecución, hay un programa informático que lo hará por nosotros.
+   :feedback_b: Si es ilegal realizar una instrucción en ese punto de la ejecución, el intérprete se detendrá con un mensaje que describa la excepción.
+   :feedback_c: Algo así. Pero es una cosa especial en la computadora que lo hace. La computadora independiente sin esta pieza adicional no puede hacerlo.
+   :feedback_d: Su profesor o instructor puede encontrar la mayoría de sus errores de tiempo de ejecución, pero solo porque tienen experiencia mirando código y posiblemente escribiendo código. Con experiencia, los errores de tiempo de ejecución son más fáciles de encontrar. Pero también tenemos una forma automatizada de encontrar este tipo de errores.
    :practice: T
 
-   Who or what typically finds runtime errors?
+   ¿Quién o qué suele encontrar errores de tiempo de ejecución?

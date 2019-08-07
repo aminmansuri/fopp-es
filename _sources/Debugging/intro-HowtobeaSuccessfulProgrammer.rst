@@ -13,92 +13,92 @@
 
 .. index:: boundary conditions, testing, debugging
 
-👩‍💻 Debugging
-===============
+👩‍💻 Depuración
+===================
 
-Programming is a complex process.  Since it is done by human beings, errors may often occur.
-Programming errors are called **bugs** and the process
-of tracking them down and correcting them is called **debugging**.  Some claim
-that in 1945, a dead moth caused a problem on relay number 70, panel F, of one
-of the first computers at Harvard, and the term **bug** has remained in use
-since. For more about this historic event, see `first bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
+La programación es un proceso complejo. Como lo hacen los seres humanos, a menudo pueden ocurrir errores.
+Los errores de programación se denominan **bugs** y el proceso
+de rastrearlos y corregirlos se llama **debuggin**. Hubo reclamos de
+que en 1945, una polilla muerta causó un problema en el relé número 70, panel F, de una
+de las primeras computadoras en Harvard, y el término **bug** (insecto) se ha mantenido en uso.
+Para más información sobre este evento histórico, vea `first bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
 
-One of the most important skills you need to acquire to complete this book successfully is the 
-ability to debug your programs. Debugging might be the most under-appreciated, and 
-under-taught, skill in introductory computer science. For that reason we are introducing a 
-series of "debugging interludes." Debugging is a skill that you need to master over time, and 
-some of the tips and tricks are specific to different aspects of Python programming. So look 
-for additional Way of the Programmer interludes throughout the rest of this book.
-
-
-Programming is an odd thing in a way. Here is why. As programmers we spend 99% of our time 
-trying to get our program to work. We struggle, we stress, we spend hours deep in frustration 
-trying to get our program to execute correctly. Then when we do get it going we celebrate, hand 
-it in, and move on to the next homework assignment or programming task. But here is the secret, 
-when you are successful, you are happy, your brain releases a bit of chemical that makes you 
-feel good. You need to organize your programming so that you have lots of little successess. It 
-turns out your brain doesn't care all that much if you have successfully written hello world, 
-or a fast fourier transform (trust me its hard) you still get that little release that makes 
-you happy. When you are happy you want to go on and solve the next little problem. Essentially 
-I'm telling you once again, start small, get something small working, and then add to it.
-
-How to Avoid Debugging
-----------------------
-
-Perhaps the most important lesson in debugging is that it is **largely avoidable** -- 
-if you work carefully.
-
-1.  **Start Small**  This is probably the single biggest piece of advice for programmers at 
-every level. Of course it's tempting to sit down and crank out an entire program at once. But, 
-when the program -- inevitably -- does not work then you have a myriad of options for things 
-that might be wrong. Where to start? Where to look first? How to figure out what went wrong? 
-I'll get to that in the next section. So, start with something really small. Maybe just two 
-lines and then make sure that runs ok. Hitting the run button is quick and easy, and gives you 
-immediate feedback about whether what you have just done is ok or not. Another immediate 
-benefit of having something small working is that you have something to turn in. Turning in a 
-small, incomplete program, is almost always better than nothing.
+Una de las habilidades más importantes que necesitas adquirir para completar este libro con éxito es la
+capacidad de depurar tus programas. La depuración puede ser la menos apreciada y
+poco enseñada habilidad en informática introductoria. Por esa razón estamos introduciendo una
+serie de "interludios de depuración". La depuración es una habilidad que debes dominar con el tiempo, y
+algunos de los consejos y trucos son específicos de diferentes aspectos de la programación de Python. Entonces busca
+interludios adicionales de Way of the Programmer en el resto de este libro.
 
 
-2.  **Keep it working**  Once you have a small part of your program working the next step is 
-to figure out something small to add to it. If you keep adding small pieces of the program one 
-at a time, it is much easier to figure out what went wrong, as it is most likely that the 
-problem is going to be in the new code you have just added. Less new code means its easier to 
-figure out where the problem is.
+La programación es algo extraño en cierto sentido. Aquí está el por qué. Como programadores, pasamos el 99% de nuestro tiempo
+tratando de hacer que nuestro programa funcione. Luchamos, nos estresamos, pasamos horas profundamente frustrados
+tratando de hacer que nuestro programa se ejecute correctamente. Luego, cuando lo ponemos en marcha, celebramos
+y pasamos a la siguiente tarea de programación. Pero aquí está el secreto,
+cuando tienes éxito, eres feliz, tu cerebro libera un poco de químico que te hace
+sentir bien. Necesitas organizar tu forma de programar para que tenga muchos pequeños éxitos. Eso
+resulta en que a tu cerebro no le importe mucho si has escrito con éxito hola mundo,
+o una rápida transformación de Fourier (confía en mí es difícil) todavía obtienes esa pequeña versión que te hace
+feliz. Cuando eres feliz, quieres continuar y resolver el siguiente pequeño problema. Esencialmente,
+te digo lo una vez más, comienza con algo pequeño, haz que algo pequeño funcione y luego agrégalo.
 
-This notion of **Get something working and keep it working** is a mantra that you can repeat 
-throughout your career as a programmer. It's a great way to avoid the frustrations mentioned 
-above. Think of it this way. Every time you have a little success, your brain releases a tiny 
-bit of chemical that makes you happy. So, you can keep yourself happy and make programming 
-more enjoyable by creating lots of small victories for yourself.
+Cómo evitar la depuración
+-------------------------
 
-Ok, lets look at an example. Lets solve the problem posed in question 3 at the end of the 
-Simple Python Data chapter. Ask the user for the time now (in hours 0 -- 23), and ask for the 
-number of hours to wait. Your program should output what the time will be on the clock when 
-the alarm goes off.
+Quizás la lección más importante en la depuración es que es **en gran medida evitable** --
+si trabajas con cuidado.
 
-So, where to start? The problem requires two pieces of input from the user, so lets start 
-there and make sure we can get the data we need.
+1. **Comience pequeño** Este es probablemente el consejo más importante para los programadores en
+todos los niveles. Por supuesto, es tentador sentarse y poner en marcha un programa completo a la vez. Pero,
+cuando el programa, inevitablemente, no funciona, entonces tienes una gran cantidad de opciones para las cosas
+que podrían estar mal. ¿Donde empezar? ¿Dónde mirar primero? ¿Cómo averiguar qué salió mal?
+Llegaré a eso en la siguiente sección. Entonces, comience con algo realmente pequeño. Tal vez solo dos
+líneas y luego asegúrese de que funciona bien. Pulsar el botón de correr es rápido y fácil, y te da
+información inmediata sobre si lo que acabas de hacer está bien o no. Otro inmediato es
+el beneficio de tener algo pequeño que funciona es que tiene algo que entregar.
+Un programa pequeño e incompleto, casi siempre, es mejor que nada.
+
+
+2. **Manténgalo funcionando** Una vez que tenga una pequeña parte de su programa trabajando, el siguiente paso es
+deicidir algo pequeño para agregarle. Si sigues agregando pequeñas piezas del programa uno
+a la vez, es mucho más fácil descubrir qué salió mal, ya que lo más probable es que
+el problema va a estar en el nuevo código que acaba de agregar. Menos código nuevo significa que es más fácil
+averiguar dónde está el problema.
+
+Esta noción de **Hacer que algo funcione y mantenerlo funcionando** es un mantra que puedes repetir
+a lo largo de tu carrera como programador. Es una excelente manera de evitar las frustraciones mencionadas
+encima. Piénsalo de esta manera. Cada vez que tienes un poco de éxito, tu cerebro libera
+un poco de químico que te hace feliz. Entonces, puedes mantenerte feliz y hacer la programación
+más agradable creando muchas pequeñas victorias para ti.
+
+Ok, veamos un ejemplo. Vamos a resolver el problema planteado en la pregunta 3 al final del
+capítulo simple de datos de Python. Pregunte al usuario por el tiempo ahora (en horas 0 -- 23), y solicite la
+cantidad de horas para esperar. Su programa debería mostrar qué hora será en el reloj cuando
+la alarma se apaga.
+
+Entonces, ¿por dónde empezar? El problema requiere dos entradas del usuario, así que comencemos
+allí y asegúrese de que podamos obtener los datos que necesitamos.
 
 .. activecode:: db_ex3_1
 
-   current_time = input("what is the current time (in hours)?")
-   wait_time = input("How many hours do you want to wait")
+   current_time = input("¿Cuál es la hora actual (en horas)?")
+   wait_time = input("¿Cuántas horas quieres esperar?")
 
    print(current_time)
    print(wait_time)
 
 
-If you haven't yet, click Run: get in the habit of checking whether small things are working 
-before you go on. 
+Si aún no lo ha hecho, haga clic en Ejecutar: acostúmbrese a verificar si las cosas pequeñas funcionan
+antes de continuar
 
-So far so good. Now lets take the next step. We need to figure out what the time will be after 
-waiting ``wait_time`` number of hours. A good first approximation to that is to simply add 
-``wait_time`` to ``current_time`` and print out the result. So lets try that.
+Hasta ahora vamos bien. Ahora demos el siguiente paso. Tenemos que averiguar cuánto será el tiempo
+esperando ``wait_time`` en número de horas. Una buena primera aproximación a eso es simplemente agregar
+``wait_time`` a ``current_time`` e imprima el resultado. Entonces intentemos eso.
 
 .. activecode:: db_ex3_2
 
-   current_time = input("what is the current time (in hours 0--23)?")
-   wait_time = input("How many hours do you want to wait")
+   current_time = input("¿Cuál es la hora actual (en horas 0--23)?")
+   wait_time = input("¿Cuántas horas quieres esperar?")
 
    print(current_time)
    print(wait_time)
@@ -106,31 +106,31 @@ waiting ``wait_time`` number of hours. A good first approximation to that is to 
    final_time = current_time + wait_time
    print(final_time)
 
-Hmm, when you run that example you see that something funny has happened.
+Hmm, cuando ejecutas ese ejemplo, ves que algo extraño ha sucedido.
 
 .. mchoice:: db_q_ex3_1
-   :answer_a: Python is stupid and does not know how to add properly.
-   :answer_b: There is nothing wrong here.
-   :answer_c: Python is doing string concatenation, not integer addition.
-   :feedback_a: No, Python is probabaly not broken.
-   :feedback_b: No, try adding the two numbers together yourself, you will definitely get a different result.
-   :feedback_c: Yes!  Remember that input returns a string.  Now we will need to convert the string to an integer
+   :answer_a: Python es estúpido y no sabe cómo sumar correctamente.
+   :answer_b: No hay nada malo aquí.
+   :answer_c: Python está haciendo la concatenación de cadenas, no la suma de enteros.
+   :feedback_a: No, Python probablemente no está equivocado.
+   :feedback_b: No, intente sumar los dos números juntos, definitivamente obtendrá un resultado diferente.
+   :feedback_c: ¡Sí! Recuerde que la entrada devuelve una cadena. Ahora necesitaremos convertir la cadena a un entero
    :correct: c
 
-   Which of the following best describes what is wrong with the previous example?
+   ¿Cuál de las siguientes opciones describe mejor lo que está mal en el ejemplo anterior?
 
-This error was probably pretty simple to spot, because we printed out the value of 
-``final_time`` and it is easy to see that the numbers were just concatenated together rather 
-than added. So what do we do about the problem? We will need to convert both ``current_time`` 
-and ``wait_time`` to ``int``. At this stage of your programming development, it can be a good 
-idea to include the type of the variable in the variable name itself. So lets look at another 
-iteration of the program that does that, and the conversion to integer.
+Este error fue probablemente bastante simple de detectar, porque imprimimos el valor de
+``final_time`` y es fácil ver que los números simplemente se concatenaron juntos.
+Entonces, ¿qué hacemos con el problema? Necesitaremos convertir tanto ``current_time``
+y ``wait_time`` a ``int``. En esta etapa de su desarrollo de programación, puede ser una buena
+idea el incluir el tipo de la variable en el nombre de la variable en sí. Así que echemos un vistazo a otra
+iteración del programa que hace eso, y la conversión a entero.
 
 
 .. activecode:: db_ex3_3
 
-   current_time_str = input("what is the current time (in hours 0-23)?")
-   wait_time_str = input("How many hours do you want to wait")
+   current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+   wait_time_str = input("¿Cuántas horas quieres esperar?")
 
    current_time_int = int(current_time_str)
    wait_time_int = int(wait_time_str)
@@ -139,23 +139,23 @@ iteration of the program that does that, and the conversion to integer.
    print(final_time_int)
 
 
-Now, that's a lot better, and in fact depending on the hours you chose, it may be exactly right. 
-If you entered 8 for the current time and 5 for the wait time then 13 is correct. But if you 
-entered 17 (5pm) for the hours and 9 for the wait time then the result of 26 is not correct. 
-This illustrates an important aspect of **testing**, which is that it is important to test your 
-code on a range of inputs. It is especially important to test your code on **boundary conditions**. 
-In this case you would want to test your program for hours including 0, 23, and some in between. 
-You would want to test your wait times for 0, and some really large numbers. What about 
-negative numbers? Negative numbers don't make sense, but since we don't really have the tools 
-to deal with telling the user when something is wrong we will not worry about that just yet.  
+Eso es mucho mejor, y de hecho, dependiendo de las horas que elija, puede ser exactamente correcto.
+Si ingresó 8 para la hora actual y 5 para el tiempo de espera, entonces 13 es correcto. Pero si
+ingresó 17 (5pm) para las horas y 9 para el tiempo de espera, entonces el resultado de 26 no es correcto.
+Esto ilustra un aspecto importante de **prueba**, que es importante probar su
+código en un rango de entradas. Es especialmente importante probar su código en **condiciones de contorno**.
+En este caso, debería probar su programa durante horas, incluidos 0, 23 y algunas en el medio.
+Debería probar sus tiempos de espera para 0, y algunos números realmente grandes. Qué pasa con los
+¿números negativos? Los números negativos no tienen sentido, pero dado que realmente no tenemos las herramientas
+para tratar de decirle al usuario cuando algo está mal, no nos preocuparemos por eso todavía.
 
-So finally we need to account for those numbers that are bigger than 23. For this we will need 
-one final step, using the modulo operator.
+Finalmente, tenemos que tener en cuenta esos números que son mayores que 23. Para esto necesitaremos
+un último paso, utilizando el operador de módulo.
 
 .. activecode:: db_ex3_4
 
-   current_time_str = input("what is the current time (in hours 0-23)?")
-   wait_time_str = input("How many hours do you want to wait")
+   current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+   wait_time_str = input("¿Cuántas horas quieres esperar?")
 
    current_time_int = int(current_time_str)
    wait_time_int = int(wait_time_str)
@@ -164,23 +164,23 @@ one final step, using the modulo operator.
    
    final_answer = final_time_int % 24
 
-   print("The time after waiting is: ", final_answer)
+   print("La hora después de esperar es:", final_answer)
 
-Of course even in this simple progression, there are other ways you could have gone astray. 
-We'll look at some of those and how you track them down in the next section.
+Por supuesto, incluso en esta simple progresión, hay otras formas en que podría haberse confundido.
+Veremos algunos de ellos y cómo los rastreará en la siguiente sección.
 
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question4_1_1
-   :answer_a: tracking down programming errors and correcting them.
-   :answer_b: removing all the bugs from your house.
-   :answer_c: finding all the bugs in the program.
-   :answer_d: fixing the bugs in the program.
+   :answer_a: Rastrear errores de programación y corregirlos.
+   :answer_b: Eliminar todos los errores de tu programa.
+   :answer_c: Encontrar todos los errores en el programa.
+   :answer_d: Arreglar los errores en el programa.
    :correct: a
-   :feedback_a: Programming errors are called bugs and the process of finding and removing them from a program is called debugging.
-   :feedback_b: Maybe, but that is not what we are talking about in this context.
-   :feedback_c: This is partially correct.  But, debugging is more than just finding the bugs.  What do you need to do once you find them?
-   :feedback_d: This is partially correct.  But, debugging is more than just fixing the bugs. What do you need to do before you can fix them?
+   :feedback_a: Los errores de programación se denominan bugs y el proceso de encontrarlos y eliminarlos de un programa se denomina debuggin.
+   :feedback_b: Tal vez, pero eso no es de lo que estamos hablando en este contexto.
+   :feedback_c: Esto es parcialmente correcto. Pero, la depuración es más que solo encontrar los errores. ¿Qué necesitas hacer una vez que los encuentres?
+   :feedback_d: Esto es parcialmente correcto. Pero, la depuración es más que solo solucionar los errores. ¿Qué necesita hacer antes de poder solucionarlos?
 
-   Debugging is:
+   La depuración es:

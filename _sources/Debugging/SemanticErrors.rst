@@ -16,43 +16,43 @@
     single: Doyle, Arthur Conan
     single: Linux
 
-Semantic Errors
----------------
+Errores Semánticos
+--------------------
 
-The third type of error is the **semantic error**. If there is a semantic error
-in your program, it will run successfully in the sense that the computer will
-not generate any error messages.  However, your program will not do the right thing. It will do
-something else. Specifically, it will do what you told it to do.
+El tercer tipo de error es el **error semántico**. Si hay un error semántico
+en su programa, se ejecutará con éxito en el sentido de que la computadora
+no generará ningún mensaje de error. Sin embargo, su programa no hará lo correcto. Va a hacer
+algo más. Específicamente, hará lo que usted le dijo que hiciera.
 
-The problem is that the program you wrote is not the program you wanted to
-write. The meaning of the program (its semantics) is wrong.  Identifying
-semantic errors can be tricky because it requires you to work backward by
-looking at the output of the program and trying to figure out what it is doing.
+El problema es que el programa que escribió no es el programa que deseaba
+escribir. El significado del programa (su semántica) es incorrecto. Identificar
+los errores semánticos puede ser complicado porque requieren que trabajes hacia atrás
+mirando la salida del programa e intentando descubrir qué está haciendo.
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: question4_6_1
-   :answer_a: Attempting to divide by 0.
-   :answer_b: Forgetting a semi-colon at the end of a statement where one is required.
-   :answer_c: Forgetting to divide by 100 when printing a percentage amount.
+   :answer_a: Intentar dividir por 0.
+   :answer_b: Olvidar un punto y coma al final de una declaración donde se requiere uno.
+   :answer_c: Olvidar dividir entre 100 al imprimir una cantidad porcentual.
    :correct: c
-   :feedback_a: A semantic error is an error in logic. In this case the program does not produce the correct output because the problem is not solved correctly. This would be considered a run-time error.
-   :feedback_b: A semantic error is an error in logic. In this case the program does not produce the correct output because the code can not be processed by the compiler or interpreter. This would be considered a syntax error.
-   :feedback_c: This will produce the wrong answer because the programmer implemented the solution incorrectly.  This is a semantic error.
+   :feedback_a: Un error semántico es un error en la lógica. En este caso, el programa no produce la salida correcta porque el problema no se resuelve correctamente. Esto se consideraría un error en tiempo de ejecución.
+   :feedback_b: Un error semántico es un error en la lógica. En este caso, el programa no produce la salida correcta porque el compilador o el intérprete no pueden procesar el código. Esto se consideraría un error de sintaxis.
+   :feedback_c: Esto producirá la respuesta incorrecta porque el programador implementó la solución incorrectamente. Este es un error semántico.
    :practice: T
 
-   Which of the following is a semantic error?
+   ¿Cuál de los siguientes es un error semántico?
 
 .. mchoice:: question4_6_2
-   :answer_a: The programmer.
-   :answer_b: The compiler / interpreter.
-   :answer_c: The computer.
-   :answer_d: The teacher / instructor.
+   :answer_a: El Programador.
+   :answer_b: El Compilador / intérprete.
+   :answer_c: La Computadora.
+   :answer_d: El Profesor / Instructor.
    :correct: a
-   :feedback_a: You must fully understand the problem so the you can tell if your program properly solves it.
-   :feedback_b: The compiler and / or interpreter will only do what you instruct it to do. It does not understand what the problem is that you want to solve.
-   :feedback_c: The computer does not understand your problem. It just executes the instructions that it is given.
-   :feedback_d: Your teacher and instructor may be able to find most of your semantic errors, but only because they have experience solving problems.  However it is your responsibility to understand the problem so you can develop a correct solution.
+   :feedback_a: Debe comprender completamente el problema para poder saber si su programa lo resuelve correctamente.
+   :feedback_b: El compilador y / o el intérprete solo harán lo que usted le indique. No entiende cuál es el problema que desea resolver.
+   :feedback_c: La computadora no entiende su problema. Simplemente ejecuta las instrucciones que se le dan.
+   :feedback_d: Su maestro / instructor puede encontrar la mayoría de sus errores semánticos, pero solo porque tiene experiencia en la resolución de problemas. Sin embargo, es su responsabilidad comprender el problema para poder desarrollar una solución correcta.
    :practice: T
 
-   Who or what typically finds semantic errors?
+   ¿Quién o qué suele encontrar errores semánticos?
