@@ -15,10 +15,10 @@
 Map
 ---
 
-You previously were introduced to accumulating a list by transforming each of the elements. Here we revisit that pattern.
+Anteriormente se le introdujo a acumular una lista transformando cada uno de los elementos. Aquí revisamos ese patrón.
 
-The following function produces a new list with each item in the original list doubled. It is an example of a mapping, 
-from the original list to a new list of the same length, where each element is doubled.
+La siguiente función produce una nueva lista con cada elemento en la lista original duplicado. Es un ejemplo de mapeo,
+desde la lista original a una nueva lista de la misma longitud, donde cada elemento se duplica.
 
 .. activecode:: ac21_2_1
     
@@ -35,10 +35,10 @@ from the original list to a new list of the same length, where each element is d
     things = doubleStuff(things)
     print(things)
 
-The doubleStuff function is an example of the accumulator pattern, in particular the mapping pattern. On line 3, 
-``new_list`` is initialized. On line 5, the doubled value for the current item is produced and on line 6 it is appended to 
-the list we're accumulating. Line 7 executes after we've processed all the items in the original list: it returns the 
-``new_list``. Once again, codelens helps us to see the actual references and objects as they are passed and returned.
+La función doubleStuff es un ejemplo de accumulator pattern, en particular el patrón de mapeo.
+En la línea 3, ``new_list`` se inicializa. En la línea 5, se produce el valor duplicado para el artículo actual y en la línea 6 se agrega a
+la lista que estamos acumulando. La línea 7 se ejecuta después de haber procesado todos los elementos de la lista original y devuelve
+``new_list``. Una vez más, codelens nos ayuda a ver las referencias y objetos reales a medida que se pasan y devuelven.
 
 .. codelens:: clens21_2_1
     :python: py3
@@ -54,20 +54,20 @@ the list we're accumulating. Line 7 executes after we've processed all the items
     things = [2, 5, 9]
     things = doubleStuff(things)
 
-This pattern of computation is so common that python offers a more general way to do mappings, the ``map`` function, that 
-makes it more clear what the overall structure of the computation is. ``map`` takes two arguments, a function and a 
-sequence. The function is the mapper that transforms items. It is automatically applied to each item in the sequence. You 
-don't have to initialize an accumulator or iterate with a for loop at all.
+Este patrón de cálculo es tan común que Python ofrece una forma más general de hacer *mapeos* mappings, la función ``map``, que
+deja más claro cuál es la estructura general del cálculo. ``map`` toma dos argumentos, una función y una secuencia.
+La función es el mapeador que transforma elementos. Se aplica automáticamente a cada elemento de la secuencia, usted
+no tiene que inicializar un acumulador o iterar con un ciclo for en absoluto.
 
 .. note::
 
-    Technically, in a proper Python 3 interpreter, the ``map`` function produces an "iterator", which is like a list but
-    produces the items as they are needed. Most places in Python where you can use a list (e.g., in a for loop) you can
-    use an "iterator" as if it was actually a list. So you probably won't ever notice the difference. If you ever really
-    need a list, you can explicitly turn the output of map into a list: ``list(map(...))``. In the runestone environment, ``map`` actually returns a real list, but to make this code compatible with a full python environment, we always convert it to a list.
+    Técnicamente, en un intérprete adecuado de Python 3, la función ``map`` produce un "iterador", que es como una lista pero
+    produce los elementos a medida que se necesitan. En la mayoría de los lugares en Python donde puede usar una lista (por ejemplo, en un bucle for) puede
+    usar un "iterador" como si en realidad fuera una lista. Así que probablemente nunca notarás la diferencia. Si alguna vez realmente
+    necesita una lista, puede convertir explícitamente la salida del mapa en una lista: ``list(map(...))``. En el entorno de runestone, ``mapa`` en realidad devuelve una lista real, pero para hacer que este código sea compatible con un entorno completo de Python, siempre lo convertimos en una lista.
 
-As we did when passing a function as a parameter to the ``sorted`` function, we can specify a function to pass to ``map`` 
-either by referring to a function by name, or by providing a lambda expression.
+Como lo hicimos al pasar una función como parámetro a la función ``sorted``, podemos especificar una función para pasar a ``mapa``
+ya sea refiriéndose a una función por su nombre o proporcionando una expresión lambda.
 
 .. activecode:: ac21_2_2
 
@@ -88,8 +88,8 @@ either by referring to a function by name, or by providing a lambda expression.
    things4 = quadrupleStuff(things)
    print(things4)
 
-Of course, once we get used to using the ``map`` function, it's no longer necessary to define functions like 
-``tripleStuff`` and ``quadrupleStuff``.
+Una vez que nos acostumbremos a usar la función ``map``, ya no es necesario definir funciones como
+``tripleStuff`` y ``quadrupleStuff``.
 
 .. activecode:: ac21_2_3
 
@@ -98,11 +98,11 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
    things4 = map((lambda value: 4*value), things)
    print(list(things4))
    
-   # or all on one line
+   # O todo en una línea
    print(list(map((lambda value: 5*value), [1, 2, 3])))
 
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac21_2_4
    :language: python
@@ -110,7 +110,7 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
    :chatcodes:
    :practice: T
 
-   **1.** Using map, create a list assigned to the variable ``greeting_doubled`` that doubles each element in the list ``lst``.
+   **1.** Usando map, crear una lista asignada a la variable ``greeting_doubled`` que doble a cada elemento en la lista ``lst``.
    ~~~~
 
    lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
@@ -137,7 +137,7 @@ Of course, once we get used to using the ``map`` function, it's no longer necess
    :chatcodes:
    :practice: T
 
-   **2.** Below, we have provided a list of strings called ``abbrevs``. Use map to produce a new list called ``abbrevs_upper`` that contains all the same strings in upper case.
+   **2.** A continuación, proporcionamos una lista de cadenas llamada ``abbrevs``. Use map para producir una nueva lista llamada ``abbrevs_upper`` que contiene las mismas cadenas en mayúsculas.
    ~~~~
 
    abbrevs = ["usa", "esp", "chn", "jpn", "mex", "can", "rus", "rsa", "jam"]

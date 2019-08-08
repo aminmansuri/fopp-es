@@ -11,8 +11,8 @@
    :prefix: AdAccum-7-
    :start: 1
 
-Chapter Assessment
-==================
+Evaluación del capítulo
+=======================
 
 .. activecode:: ac21_7_1
    :language: python
@@ -21,7 +21,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/map
 
-   Write code to assign to the variable ``map_testing`` all the elements in lst_check while adding the string "Fruit: " to the beginning of each element using mapping.
+   Escribie código para asignar a la variable ``map_testing`` todos los elementos en lst_check mientras agregas la cadena "Fruit: " al comienzo de cada elemento usando mapeo.
    ~~~~
 
    lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
@@ -49,7 +49,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/filter
 
-   Below, we have provided a list of strings called ``countries``. Use filter to produce a list called ``b_countries`` that only contains the strings from ``countries`` that begin with B.
+   A continuación, proporcionamos una lista de cadenas llamada ``countries``. Use el filtro para producir una lista llamada ``b_countries`` que solo contiene las cadenas de ``countries`` que comienzan con B.
    ~~~~
 
    countries = ['Canada', 'Mexico', 'Brazil', 'Chile', 'Denmark', 'Botswana', 'Spain', 'Britain', 'Portugal', 'Russia', 'Thailand', 'Bangladesh', 'Nigeria', 'Argentina', 'Belarus', 'Laos', 'Australia', 'Panama', 'Egypt', 'Morocco', 'Switzerland', 'Belgium']
@@ -77,7 +77,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/listcomp
 
-   Below, we have provided a list of tuples that contain the names of Game of Thrones characters. Using list comprehension, create a list of strings called ``first_names`` that contains only the first names of everyone in the original list.
+   A continuación, proporcionamos una lista de tuplas que contienen los nombres de los personajes de Game of Thrones. Usando list comprehension, cree una lista de cadenas llamada ``first_names`` que contenga solo los nombres de todos en la lista original.
    ~~~~
 
    people = [('Snow', 'Jon'), ('Lannister', 'Cersei'), ('Stark', 'Arya'), ('Stark', 'Robb'), ('Lannister', 'Jamie'), ('Targaryen', 'Daenerys'), ('Stark', 'Sansa'), ('Tyrell', 'Margaery'), ('Stark', 'Eddard'), ('Lannister', 'Tyrion'), ('Baratheon', 'Joffrey'), ('Bolton', 'Ramsey'), ('Baelish', 'Peter')]
@@ -105,7 +105,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/listcomp
 
-   Use list comprehension to create a list called ``lst2`` that doubles each element in the list, ``lst``.
+   Use list comprehension para crear una lista llamada ``lst2`` que duplica cada elemento en la lista, ``lst``.
    ~~~~
 
    lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
@@ -132,7 +132,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/listcomp
 
-   Below, we have provided a list of tuples that contain students' names and their final grades in PYTHON 101. Using list comprehension, create a new list ``passed`` that contains the names of students who passed the class (had a final grade of 70 or greater).
+   A continuación, proporcionamos una lista de tuplas que contienen los nombres de los estudiantes y sus calificaciones finales en PYTHON 101. Utilizando list comprehension, cree una nueva lista ``aprobada`` que contenga los nombres de los estudiantes que aprobaron la clase (obtuvieron una calificación final de 70 o más).
    ~~~~
 
    students = [('Tommy', 95), ('Linda', 63), ('Carl', 70), ('Bob', 100), ('Raymond', 50), ('Sue', 75)]
@@ -159,7 +159,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/zip
 
-   Write code using zip and filter so that these lists (l1 and l2) are combined into one big list and assigned to the variable ``opposites`` if they are both longer than 3 characters each.
+   Escribe código usando zip y filter para que estas listas (l1 y l2) se combinen en una gran lista y se asignen a la variable ``opuestos`` si ambos tienen más de 3 caracteres cada uno.
    ~~~~
    
    l1 = ['left', 'up', 'front']
@@ -188,7 +188,7 @@ Chapter Assessment
    :practice: T
    :topics: AdvancedAccumulation/zip
 
-   Below, we have provided a ``species`` list and a ``population`` list. Use zip to combine these lists into one list of tuples called ``pop_info``. From this list, create a new list called ``endangered`` that contains the names of species whose populations are below 2500.
+   A continuación, proporcionamos una lista ``species`` y una lista ``population``. Use zip para combinar estas listas en una lista de tuplas llamada ``pop_info``. A partir de esta lista, cree una nueva lista llamada ``endangered`` que contenga los nombres de las especies cuyas poblaciones están por debajo de 2500.
    ~~~~
 
    species = ['golden retriever', 'white tailed deer', 'black rhino', 'brown squirrel', 'field mouse', 'orangutan', 'sumatran elephant', 'rainbow trout', 'black bear', 'blue whale', 'water moccasin', 'giant panda', 'green turtle', 'blue jay', 'japanese beetle']

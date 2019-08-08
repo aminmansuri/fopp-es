@@ -12,8 +12,8 @@
    :prefix: AdAccum-6-
    :start: 1 
 
-Exercises
----------
+Ejercicios
+----------
 
 
 .. question:: q21_6_1
@@ -24,7 +24,7 @@ Exercises
 
            .. actex:: ac21_6_1
 
-              Write equivalent code using map instead of the manual accumulation below and assign it to the variable ``test``.
+              Escriba un código equivalente usando map en lugar de manual accumulation a continuación y asígnelo a la variable ``test``.
               ~~~~
 
               things = [3, 5, -4, 7]
@@ -54,7 +54,7 @@ Exercises
 
            .. actex:: ac21_6_2
 
-              Use manual accumulation to define the lengths function below.
+              Use manual accumulation para definir la función lengths a continuación.
               ~~~~
 
               def lengths(strings):
@@ -83,7 +83,7 @@ Exercises
 
            .. actex:: ac21_6_3
 
-              Now define lengths using map instead.
+              Ahora define lengths usando map.
               ~~~~
               def lengths(strings):
                   """lengths takes a list of strings as input and returns a list of numbers that are the lengths
@@ -111,7 +111,7 @@ Exercises
 
            .. actex:: ac21_6_4
 
-              Now define lengths using a list comprehension instead.
+              Ahora define lengths usando list comprehension.
               ~~~~ 
 
               def lengths(strings):
@@ -140,7 +140,7 @@ Exercises
 
            .. actex:: ac21_6_5
 
-              Write a function called positives_Acc that receives list of numbers as the input (like [3, -1, 5, 7]) and returns a list of only the positive numbers, [3, 5, 7], via manual accumulation.
+              Escriba una función llamada positives_Acc que reciba una lista de números como entrada (como [3, -1, 5, 7]) y devuelva una lista de solo los números positivos, [3, 5, 7], mediante manual accumulation.
               ~~~~ 
 
               things = [3, 5, -4, 7]
@@ -166,7 +166,7 @@ Exercises
 
            .. actex:: ac21_6_6
 
-              Write a function called positives_Fil that receives list of things as the input and returns a list of only the positive things, [3, 5, 7], using the filter function.
+              Escribe una función llamada positives_Fil que recibe una lista de cosas como entrada y devuelve una lista que contiene solo las cosas positivas, [3, 5, 7], utilizando la función filter.
               ~~~~ 
 
               things = [3, 5, -4, 7]
@@ -192,7 +192,7 @@ Exercises
 
            .. actex:: ac21_6_7
 
-              Write a function called positives_Li_Com that receives list of things as the input and returns a list of only the positive things, [3, 5, 7], using the list comprehension.
+              Escriba una función llamada positives_Li_Com que reciba una lista de cosas como entrada y devuelva una lista de solo las cosas positivas, [3, 5, 7], usando list comprehension.
               ~~~~ 
 
               things = [3, 5, -4, 7]
@@ -218,7 +218,7 @@ Exercises
 
            .. actex:: ac21_6_8
 
-              Define longwords using manual accumulation.
+              Define longwords usando manual accumulation.
               ~~~~ 
 
               def longwords(strings):
@@ -246,7 +246,7 @@ Exercises
 
            .. actex:: ac21_6_9
 
-              Define longwords using filter.
+              Define longwords usando filter.
               ~~~~ 
 
               def longwords_Fil(strings):
@@ -274,7 +274,7 @@ Exercises
 
            .. actex:: ac21_6_10
 
-              Define longwords using a list comprehension.
+              Define longwords usando list comprehension.
               ~~~~ 
 
               def longwords_Li_Comp(strings):
@@ -302,7 +302,7 @@ Exercises
 
            .. actex:: ac21_6_11
 
-              Write a function called ``longlengths`` that returns the lengths of those strings that have at least 4 characters. Try it with a list comprehension.
+              Escribe una función llamada ``longlengths`` que devuelve las longitudes de las cadenas que tienen al menos 4 caracteres. Inténtalo usando list comprehension.
               ~~~~ 
 
               def longlengths(strings):
@@ -329,7 +329,7 @@ Exercises
 
            .. actex:: ac21_6_12
 
-              Write a function called ``longlengths`` that returns the lengths of those strings that have at least 4 characters. Try it using map and filter.
+              Escribe una función llamada ``longlengths`` que devuelve las longitudes de esas cadenas que tienen al menos 4 caracteres. Inténtalo usando map and filter.
               ~~~~ 
 
               def longlengths(strings):
@@ -356,7 +356,7 @@ Exercises
 
            .. actex:: ac21_6_13
 
-              Write a function that takes a list of numbers and returns the sum of the squares of all the numbers. Try it using an accumulator pattern.
+              Escribe una función que tome una lista de números y devuelva la suma de los cuadrados de todos los números. Inténtalo usando un accumulator pattern.
               ~~~~ 
 
               def sumSquares(L):
@@ -386,7 +386,7 @@ Exercises
 
            .. actex:: ac21_6_14
 
-              Write a function that takes a list of numbers and returns the sum of the squares of all the numbers. Try it using map and sum.
+              Escribe una función que tome una lista de números y devuelva la suma de los cuadrados de todos los números. Inténtalo usando map y sum.
               ~~~~ 
 
               def sumSquares(L):
@@ -416,7 +416,7 @@ Exercises
 
            .. actex:: ac21_6_15
 
-              Use the zip function to take the lists below and turn them into a list of tuples, with all the first items in the first tuple, etc.
+              Use la función zip para tomar las listas a continuación y convertirlas en una lista de tuplas, con todos los primeros elementos en la primera tupla, etc.
               ~~~~ 
 
               L1 = [1, 2, 3, 4]
@@ -448,7 +448,7 @@ Exercises
 
            .. actex:: ac21_6_16
 
-              Use zip and map or a list comprehension to make a list consisting the maximum value for each position. For L1, L2, and L3, you would end up with a list [4, 5, 3, 5].
+              Use zip y map o list comprehension para hacer una lista que consista en el valor máximo para cada posición. Para L1, L2 y L3, terminaría con una lista [4, 5, 3, 5].
               ~~~~ 
 
               L1 = [1, 2, 3, 4]
@@ -476,7 +476,7 @@ Exercises
 
            .. actex:: ac21_6_17
 
-              Write code to assign to the variable ``compri_sample`` all the values of the key name in the dictionary ``tester`` if they are Juniors. Do this using list comprehension.
+              Escribe código para asignar a la variable ``compri_sample`` Todos los valores de la clave en el diccionario ``tester`` si son Juniors. Hazlo usando list comprehension.
               ~~~~ 
 
               tester = {'info': [{"name": "Lauren", 'class standing': 'Junior', 'major': "Information Science"},{'name': 'Ayo', 'class standing': "Bachelor's", 'major': 'Information Science'}, {'name': 'Kathryn', 'class standing': 'Senior', 'major': 'Sociology'}, {'name': 'Nick', 'class standing': 'Junior', 'major': 'Computer Science'}, {'name': 'Gladys', 'class standing': 'Sophomore', 'major': 'History'}, {'name': 'Adam', 'major': 'Violin Performance', 'class standing': 'Senior'}]}
@@ -504,7 +504,7 @@ Exercises
 
            .. actex:: ac21_6_18
 
-              **Challenge** The nested for loop given takes in a list of lists and combines the elements into a single list. Do the same thing using a list comprehension for the list ``L``. Assign it to the variable ``result2``.
+              **Desafío** El bucle for anidado incluye una lista de listas y combina los elementos en una sola lista. Haga lo mismo usando list comprehension para la lista ``L``. Asignarlo a la variable ``result2``.
               ~~~~ 
 
               def onelist(lst):
@@ -539,7 +539,7 @@ Exercises
 
            .. actex:: ac21_6_19
 
-              **Challenge:** Write code to assign to the variable ``class_sched`` all the values of the key ``important classes``. Do this using list comprehension.
+              **Desafío:** Escribir código para asignar a la variable ``class_sched`` todos los valores de la clave ``important classes``. Hazlo usando list comprehension.
               ~~~~ 
 
               tester = {'info': [
@@ -574,7 +574,7 @@ Exercises
 
            .. actex:: ac21_6_20
 
-              **Challenge:** Below, we have provided a list of lists that contain numbers. Using list comprehension, create a new list ``threes`` that contains all the numbers from the original list that are divisible by 3. This can be accomplished in one line of code.
+              **Desafío:** A continuación, proporcionamos una lista de listas que contienen números. Utilizando list comprehension, cree una nueva lista ``threes`` que contenga todos los números de la lista original que sean divisibles por 3. Esto se puede lograr en una línea de código.
               ~~~~ 
 
               nums = [[4, 3, 12, 10], [8, 7, 6], [5, 18, 15, 7, 11], [9, 4], [24, 20, 17], [3, 5]]

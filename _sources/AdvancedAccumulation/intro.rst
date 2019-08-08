@@ -13,23 +13,22 @@
 
 .. _list_comp_chap:
 
-Introduction: Map, Filter, List Comprehensions, and Zip
-=======================================================
+Introducción: Map, Filter, List Comprehensions y Zip
+====================================================
 
-Let's revisit the :ref:`accumulator pattern <accum_pattern>`. We have frequently taken a list and produced another list 
-from it that contains either a subset of the items or a transformed version of each item. When each item is transformed we 
-say that the operation is a **mapping, or just a map** of the original list. When some items are omitted, we call it a 
-**filter**. 
+Revisemos el :ref:`accumulator pattern <accum_pattern>`. Con frecuencia tomamos una lista y producimos otra lista
+a partir de ella que contiene un subconjunto de los elementos o una versión transformada de cada elemento. Cuando cada elemento se transforma, nosotros
+decimos que la operación es un **mapping** *mapeo*, o **map** *mapa* de la lista original. Cuando se omiten algunos elementos, lo llamamos **filter** *filtrar*.
 
-Python provides built-in functions ``map`` and ``filter``. Python also provides a new syntax, called 
-**list comprehensions**, that lets you express a mapping and/or filtering operation. Just as with named functions and 
-lambda expressions, some students seem to find it easier to think in terms of the map and filter functions, while other 
-students find it easier to read and write list comprehensions. You'll learn both ways; one may even help you understand 
-the other. Most python programmers use list comprehensions, so make sure you learn to read those. In this course, you can 
-choose to learn to write list comprehensions or to use map and filter, whichever you prefer. You should learn to read both 
-list comprehensions and map/filter.
+Python proporciona funciones integradas ``map`` y ``filter``. Python también proporciona una nueva sintaxis, llamada
+**list comprehensions**, que le permite expresar una operación de mapeo y/o filtrado. Al igual que con las funciones con nombre y
+expresiones lambda, a algunos estudiantes les parece más fácil pensar en términos de las funciones de map y filter, mientras que otros
+estudiantes les resulta más fácil leer y escribir list comprehensions. Aprenderás ambas formas; uno puede incluso ayudarte a entender
+el otro. La mayoría de los programadores de Python usan list comprehensions, así que asegúrese de aprender a leerlas. En este curso, puedes
+elegir aprender a escribir list comprehensions o usar map y filter, lo que prefieras  pero deberías aprender a leer ambos
+list comprehensions y map/filter.
 
-Other common accumulator patterns on lists aggregate all the values into a single value.
+Otros patrones de acumuladores comunes en las listas agregan todos los valores en un solo valor.
 
-Map, and filter are commands that you would use in high-performance computing on big datasets. 
-See `MapReduce on Wikipedia <http://en.wikipedia.org/wiki/MapReduce>`_. 
+Map y filter son comandos que usaría en la informática de alto rendimiento en grandes conjuntos de datos.
+Consulte `MapReduce en Wikipedia <http://en.wikipedia.org/wiki/MapReduce>`_.
