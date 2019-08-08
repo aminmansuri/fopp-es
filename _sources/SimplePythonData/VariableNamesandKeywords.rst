@@ -11,43 +11,43 @@
    :prefix: data-8-
    :start: 1
 
-Variable Names and Keywords
----------------------------
+Nombres de variables y palabras clave
+-----------------------------------------
 
-**Variable names** can be arbitrarily long. They can contain both letters and
-digits, but they have to begin with a letter or an underscore. Although it is
-legal to use uppercase letters, by convention we don't. If you do, remember
-that case matters. ``Bruce`` and ``bruce`` are different variables.
+**Los nombres de variables** pueden ser arbitrariamente largos. Pueden contener tanto letras como
+dígitos, pero tienen que comenzar con una letra o un guión bajo. Aunque es
+legal usar letras mayúsculas, por convención no lo hacemos. Si lo haces, recuerda que
+ese caso importa. ``Bruce`` y ``bruce`` son variables diferentes.
 
 .. caution::
 
-   Variable names can never contain spaces.
+    Los nombres de las variables nunca pueden contener espacios.
 
-The underscore character ( ``_``) can also appear in a name. It is often used in
-names with multiple words, such as ``my_name`` or ``price_of_tea_in_china``.
-There are some situations in which names beginning with an underscore have
-special meaning, so a safe rule for beginners is to start all names with a
-letter.
+El carácter de subrayado ( ``_``) también puede aparecer en un nombre. A menudo se usa en
+nombres con varias palabras, como ``mi_nombre`` o ``precio_del_te_en_china``.
+Hay algunas situaciones en las que los nombres que comienzan con un guión bajo tienen un
+significado especial, por lo que una regla segura para principiantes es comenzar todos los nombres con una
+letra.
 
-If you give a variable an illegal name, you get a syntax error.  In the example below, each
-of the variable names is illegal.
+Si le da un nombre ilegal a una variable, obtendrá un error de sintaxis. En el siguiente ejemplo, cada uno
+de los nombres de variables es ilegal.
 
 ::
 
-    76trombones = "big parade"
+    76trombones = "gran desfile"
     more$ = 1000000
-    class = "Computer Science 101"
+    class = "Informática 101"
 
 
-``76trombones`` is illegal because it does not begin with a letter.  ``more$``
-is illegal because it contains an illegal character, the dollar sign. But
-what's wrong with ``class``?
+``76trombones`` es ilegal porque no comienza con una letra.  ``more$``
+es ilegal porque contiene un carácter ilegal, el signo de dólar. Pero,
+¿qué tiene de malo ``class``?
 
-It turns out that ``class`` is one of the Python **keywords**. Keywords define
-the language's syntax rules and structure, and they cannot be used as variable
-names.
-Python has thirty-something keywords (and every now and again improvements to
-Python introduce or eliminate one or two):
+Resulta que ``class`` es una de las **palabras clave** de Python . Las palabras clave definen
+las reglas y la estructura de la sintaxis del lenguaje, y no se pueden usar como nombres de
+variables.
+Python tiene treinta palabras clave (y de vez en cuando con las actualizaciones,
+Python introduce o elimina uno o dos):
 
 ======== ======== ======== ======== ======== ========
 and      as       assert   break    class    continue
@@ -58,17 +58,17 @@ pass     raise    return   try      while    with
 yield    True     False    None
 ======== ======== ======== ======== ======== ========
 
-You might want to keep this list handy. If the interpreter complains about one
-of your variable names and you don't know why, see if it is on this list.
+Es posible que desee tener esta lista a mano. Si el intérprete se queja de uno
+de sus nombres de variables y no sabe por qué, vea si está en esta lista.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_8_1
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: -  The + character is not allowed in variable names.
-   :feedback_b: -  The + character is not allowed in variable names (everything else in this name is fine).
+   :feedback_a: - El carácter + no está permitido en nombres de variables.
+   :feedback_b: - El carácter + no está permitido en nombres de variables (todo lo demás en este nombre está bien).
    :practice: T
 
-   True or False:  the following is a legal variable name in Python:   A_good_grade_is_A+
+   Verdadero o falso: el siguiente es un nombre de variable legal en Python: A_good_grade_is_A +
