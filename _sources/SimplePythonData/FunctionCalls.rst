@@ -11,32 +11,32 @@
    :prefix: data-4-
    :start: 1
 
-Function Calls
---------------
+Llamadas a funciones
+------------------------
 
-The Python interpreter can compute new values with function calls. You are familiar with the idea of functions from high school algebra. There you might define a function ``f`` by specifying how it transforms an input into an output, ``f(x) = 3x + 2``. Then, you might write ``f(5)`` and expect to get the value 17.
+El intérprete de Python puede calcular nuevos valores con llamadas a funciones. Si estás familiarizado con la idea de las funciones del álgebra de la escuela secundaria, allí puedes definir una función ``f`` especificando cómo transforma una entrada en una salida, ``f(x) = 3x + 2``. Luego, puedes escribir ``f(5)`` y esperar obtener el valor 17.
 
-Python adopts a similar syntax for invoking functions. If there is a named function ``foo`` that takes a single input, we can invoke foo on the value 5 by writing ``foo(5)``.
+Python adopta una sintaxis similar para invocar funciones. Si hay una función con nombre ``foo`` que toma una sola entrada, podemos invocar foo en el valor 5 escribiendo ``foo(5)``.
 
-There are many built-in functions available in Python. You'll be seeing some in this chapter and the next couple of chapters.
+Hay muchas funciones integradas disponibles en Python. Verá algunos en este capítulo y en los próximos capítulos.
 
-Functions are like factories that take in some material, do some operation, and then send out the resulting object.
+Las funciones son como las fábricas que toman algo de material, realizan algunas operaciones y luego envían el objeto resultante.
 
 .. image:: Figures/function_object.png
-   :alt: Icon that represents a function. Appears simliar to a factory with three places on top for inputs to come in and a place on the bottom for the output/return value to come out.
+   :alt: Ícono que representa una función. Parece similar a una fábrica con tres lugares en la parte superior para que entre el valor y un lugar en la parte inferior para que salga el valor de salida / retorno.
 
-In this case, we refer to the materials as arguments or inputs and the resulting object is refered to as output or return value. This process of taking input, doing something, and then sending back the output is demonstrated in the gif below.
+En este caso, nos referimos a los materiales como argumentos o entradas y el objeto resultante se conoce como salida o valor de retorno. Este proceso de tomar entrada, hacer algo y luego enviar la salida se demuestra en el siguiente gif.
 
 .. image:: Figures/function_calls.gif
-   :alt: Animated gif that deomnstrates using the visual representation of a factory as used above. Shows three arrows coming into the function to represent that input or arguments that a function can require. It then shows the function object shaking, representing an action being completed by the function. Then it shows annother arrow leaving the function image, which represents a return value or output coming from the factory.
+   :alt: El Gif animado se muestra utilizando la representación visual de una fábrica como se usó anteriormente. Muestra tres flechas que entran en la función para representar esa entrada o argumentos que una función puede requerir. Luego muestra el temblor del objeto de función, que representa una acción que está completando la función. Luego muestra otra flecha que sale de la imagen de la función, que representa un valor de retorno o salida que viene de fábrica.
 
 .. note::
 
-    Don't confuse the "output value" of a function with the output window. The output of a function is a Python value and we can never really see the internal representation of a value. But we can draw pictures to help us imagine what values are, or we can print them to see an external representation in the output window.
+    No confunda el "valor de salida" de una función con la ventana de salida. La salida de una función es un valor de Python y nunca podemos ver realmente la representación interna de un valor. Pero podemos dibujar imágenes para ayudarnos a imaginar qué son los valores, o podemos imprimirlos para ver una representación externa en la ventana de salida.
 
-    To confuse things even more, ``print`` is actually a function. All functions produce output values. Only the ``print`` function causes things to appear in the output window.
+    Para confundir aún más las cosas, ``print`` es en realidad una función. Todas las funciones producen valores de salida. Solo la función ``print`` hace que aparezcan cosas en la ventana de salida.
 
-It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.
+También es posible que los programadores definan nuevas funciones en sus programas. Aprenderá cómo hacerlo más adelante en el curso. Por ahora, solo necesita aprender cómo invocar o llamar a una función y comprender que la ejecución de la función devuelve un valor calculado.
 
 .. activecode:: ac2_4_1
    :nocanvas:
@@ -48,14 +48,14 @@ It is also possible for programmers to define new functions in their programs. Y
    def sub(x, y):
       return x - y
 
-We've defined two functions above. The code is hidden so as not to bother you (yet) with how functions are defined. 
-``square`` takes a single input parameter, and returns that input multiplied by itself. ``sub`` takes two input 
-parameters and returns the result of subtracting the second from the first. Obviously, these functions are not 
-particularly useful, since we have the operators ``*`` and ``-`` available. But they illustrate how functions work. 
-The visual below illustrates how the ``square`` function works.
+Hemos definido dos funciones arriba. El código está oculto para no molestarlo (todavía) con la forma en que se definen las funciones.
+``square`` toma un solo parámetro de entrada y devuelve esa entrada multiplicada por sí misma. ``sub`` toma dos entradas
+(parámetros) y devuelve el resultado de restar el segundo del primero. Obviamente, estas funciones no son
+particularmente útiles, ya que tenemos los operadores ``*`` y ``-`` disponibles. Pero ilustran cómo funcionan las funciones.
+La siguiente imagen ilustra cómo funciona la función ``square``.
 
 .. image:: Figures/square_function.gif
-   :alt: a visual of the square function. Four is provided as the input, the function object shakes, and then sixteen comes out from the bottom of the function object.
+   :alt: una visual de la función cuadrada. Se proporciona cuatro como entrada, el objeto de función se sacude y luego dieciséis sale de la parte inferior del objeto de función.
 
 .. activecode:: ac2_4_2
    :include: ac2_4_1
@@ -68,21 +68,21 @@ The visual below illustrates how the ``square`` function works.
    print(sub(5, 9))
 
 
-Notice that when a function takes more than one input parameter, the inputs are separated by a comma. Also notice 
-that the order of the inputs matters. The value before the comma is treated as the first input, the value after it 
-as the second input.
+Observe que cuando una función toma más de un parámetro de entrada, las entradas están separadas por una coma. También
+el orden de las entradas importa. El valor antes de la coma se trata como la primera entrada, el valor después de ella
+como la segunda entrada.
 
-Again, remember that when Python performs computations, the results are only shown in the output window if there's a 
-print statement that says to do that. In the activcode window above, ``square(5)`` produces the value 25 but we never 
-get to see that in the output window, because it is not printed.
+Nuevamente, recuerde que cuando Python realiza cálculos, los resultados solo se muestran en la ventana de salida si hay una
+declaración de impresión que dice hacer eso. En la ventana de activcode arriba, ``square(5)`` produce el valor 25 pero nunca
+se ve eso en la ventana de salida, porque no está impreso.
 
-Function calls as part of complex expressions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Llamadas a funciones como parte de expresiones complejas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anywhere in an expression that you can write a literal like a number, you can also write a function invocation that 
-produces a number.
+En cualquier lugar de una expresión se puede escribir un literal como un número, también puede escribir una invocación de función que
+produce un número
 
-For example:
+Por ejemplo:
 
 .. activecode:: ac2_4_3
    :include: ac2_4_1
@@ -93,12 +93,12 @@ For example:
    print(sub(square(3), square(1+1)))
 
 
-Let's take a look at how that last execution unfolds.
+Echemos un vistazo a cómo se desarrolla esa última ejecución.
 
 .. showeval:: se_ac2_4_1a
    :trace_mode: true
 
-   Notice that we always have to resolve the expression inside the innermost parentheses first, in order to determine what input to provide when calling the functions.
+   Tenga en cuenta que siempre tenemos que resolver primero la expresión dentro de los paréntesis más internos, para determinar qué entrada proporcionar al llamar a las funciones.
    ~~~~
    print(sub({{square(3)}}{{9}}, square(1+1)))
    print(sub(9, square({{1+1}}{{2}})))
@@ -106,15 +106,15 @@ Let's take a look at how that last execution unfolds.
    print({{sub(9, 4)}}{{5}})
 
 
-Functions are objects; parentheses invoke functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Las funciones son objetos; los paréntesis invocan funciones
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Remember the earlier mention that some kinds of Python objects don't have a nice printed representation? Functions are 
-themselves just objects. If you tell Python to print the function object, rather than printing the results of invoking 
-the function object, you'll get one of those not-so-nice printed representations.
+¿Recuerdas la mención anterior de que algunos tipos de objetos Python no tienen una buena representación impresa? Las funciones son
+esos mismos solo objetos. Si le dices a Python que imprima el objeto de función, en lugar de imprimir los resultados de la invocación de
+el objeto de función, obtendrá una de esas representaciones impresas no tan bonitas.
 
-Just typing the name of the function refers to the function as an object. Typing the name of the function followed by 
-parentheses ``()`` invokes the function.
+Simplemente al escribir el nombre de la función se refiere a la función como un objeto. Escribir el nombre de la función seguido de
+el paréntesis ``()`` invoca la función.
 
 .. activecode:: ac2_4_4
    :include: ac2_4_1
