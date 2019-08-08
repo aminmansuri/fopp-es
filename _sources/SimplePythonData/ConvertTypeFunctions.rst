@@ -11,38 +11,38 @@
    :prefix: data-6-
    :start: 1
 
-Type conversion functions
--------------------------
+Funciones de conversión de tipos
+-----------------------------------
 
-Sometimes it is necessary to convert values from one type to another.  Python provides
-a few simple functions that will allow us to do that.  The functions ``int``, ``float`` and ``str``
-will (attempt to) convert their arguments into types ``int``, ``float`` and ``str``
-respectively.  We call these **type conversion** functions.
+A veces es necesario convertir valores de un tipo a otro. Python proporciona
+algunas funciones simples que nos permitirán hacer eso. Las funciones ``int``, ``float`` y ``str``
+(intentarán) convertir sus argumentos en los tipos ``int``, ``float`` y ``str``
+respectivamente. Llamamos a estas funciones **conversión de tipo**.
 
-The ``int`` function can take a floating point number or a string, and turn it
-into an int. For floating point numbers, it *discards* the decimal portion of
-the number - a process we call *truncation towards zero* on the number line.
-Let us see this in action:
+La función ``int`` puede tomar un número de coma flotante o una cadena, y convertirlo
+en un int. Para números de coma flotante, *descarta* la porción decimal de
+el número: un proceso que llamamos *truncamiento hacia cero* en la recta numérica.
+Veamos esto en acción:
 
 .. activecode:: ac2_6_1
     :nocanvas:
 
     print(3.14, int(3.14))
-    print(3.9999, int(3.9999))       # This doesn't round to the closest int!
+    print(3.9999, int(3.9999))       # ¡Esto no se redondea al int más cercano!
     print(3.0, int(3.0))
-    print(-3.999, int(-3.999))        # Note that the result is closer to zero
+    print(-3.999, int(-3.999))        # Tenga en cuenta que el resultado está más cerca de cero
 
-    print("2345", int("2345"))        # parse a string to produce an int
-    print(17, int(17))                # int even works on integers
+    print("2345", int("2345"))        # analiza una cadena para producir un int
+    print(17, int(17))                # int incluso funciona en enteros
     print(int("23bottles"))
 
 
-The last case shows that a string has to be a syntactically legal number,
-otherwise you'll get one of those pesky runtime errors.  Modify the example by deleting the
-``bottles`` and rerun the program.  You should see the integer ``23``.
+El último caso muestra que una cadena debe ser un número sintácticamente legal,
+de lo contrario, obtendrá uno de esos molestos errores de tiempo de ejecución. Modifique el ejemplo eliminando el
+``bottles`` y vuelva a ejecutar el programa. Debería ver el número entero ``23``.
 
-The type converter ``float`` can turn an integer, a float, or a syntactically
-legal string into a float.
+El convertidor de tipo ``float`` puede convertir un entero, un flotante o una
+cadena en un float.
 
 .. activecode:: ac2_6_2
     :nocanvas:
@@ -51,8 +51,8 @@ legal string into a float.
     print(type(float("123.45")))
 
 
-The type converter ``str`` turns its argument into a string.  Remember that when we print a string, the
-quotes are removed in the output window.  However, if we print the type, we can see that it is definitely ``str``.
+El convertidor de tipos ``str`` convierte su argumento en una cadena. Recuerde que cuando imprimimos una cadena,
+las comillas se eliminan en la ventana de salida. Sin embargo, si imprimimos el tipo, podemos ver que definitivamente es ``str``.
 
 .. activecode:: ac2_6_3
     :nocanvas:
@@ -61,26 +61,26 @@ quotes are removed in the output window.  However, if we print the type, we can 
     print(str(123.45))
     print(type(str(123.45)))
 
-One common operation where you might need to do a type conversion is when you are concatenating several strings together but want to include a numeric value as part of the final string. Because we can't concatenate a string with an integer or floating point number, we will often have to convert numbers to strings before concatenating them.
+Una operación común en la que es posible que se deba realizar una conversión de tipo es cuando se concatenan varias cadenas juntas pero se desea incluir un valor numérico como parte de la cadena final. Como no podemos concatenar una cadena con un número entero o de coma flotante, a menudo tendremos que convertir números en cadenas antes de concatenarlos.
 
 .. image:: Figures/type_cast.gif
-   :alt: a variable stores the value 55. a print statement tries to print "the value is" concatenated with the integer, but a runtime error occurs. Solution is to convert the integer into a string so that it can be concatenated.
+   :alt: una variable almacena el valor 55. Una declaración de impresión intenta imprimir "el valor es" concatenado con el entero, pero se produce un error de tiempo de ejecución. La solución es convertir el entero en una cadena para que se pueda concatenar.
 
-**Check your understanding**
+**Revisa tus conocimientos**
 
 .. mchoice:: question2_6_1
-   :answer_a: Nothing is printed. It generates a runtime error.
+   :answer_a: No se imprime nada. Genera un error de tiempo de ejecución.
    :answer_b: 53
    :answer_c: 54
    :answer_d: 53.785
    :correct: b
-   :feedback_a: The statement is valid Python code.  It calls the int function on 53.785 and then prints the value that is returned.
-   :feedback_b: The int function truncates all values after the decimal and prints the integer value.
-   :feedback_c: When converting to an integer, the int function does not round.
-   :feedback_d: The int function removes the fractional part of 53.785 and returns an integer, which is then printed.
+   :feedback_a: La declaración es un código Python válido. Llama a la función int en 53.785 y luego imprime el valor que se devuelve.
+   :feedback_b: La función int trunca todos los valores después del decimal e imprime el valor entero.
+   :feedback_c: Al convertir a un entero, la función int no se redondea.
+   :feedback_d: La función int elimina la parte fraccional de 53.785 y devuelve un número entero, que luego se imprime.
    :practice: T
 
-   What value is printed when the following statement executes?
+   ¿Qué valor se imprime cuando se ejecuta la siguiente instrucción?
 
    .. code-block:: python
 
