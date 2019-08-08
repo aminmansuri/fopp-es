@@ -11,56 +11,55 @@
    :prefix: data-2-
    :start: 1
 
-Values and Data Types
----------------------
+Valores y tipos de datos
+---------------------------
 
-A **value** is one of the fundamental things --- like a word or a number --- that a program manipulates. 
-Some values are ``5`` (the result when we add ``2 + 3``), and ``"Hello, World!"``. These objects are classified into 
-different classes, or data types: 4 is an integer, and "Hello, World!" is a string, so-called because it contains a 
-string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation
-marks.
+Un **valor** es una de las cosas fundamentales --- como una palabra o un número --- que manipula un programa.
+Algunos valores son ``5`` (el resultado cuando agregamos ``2 + 3``) y ``"¡Hola, mundo!"``. Estos objetos se clasifican en
+diferentes clases o tipos de datos: 4 es un número entero y "¡Hola, mundo!" es una cadena, llamada así porque contiene una
+cadena o secuencia de letras. Usted (y el intérprete) pueden identificar cadenas porque están entre comillas.
 
-We can specify values directly in the programs we write. For example we can specify a number as a **literal** just by (literally) typing it directly into the program (e.g., ``5`` or ``4.32``). In a program, we specify a word, or more generally a string of characters, by enclosing the characters inside quotation marks (e.g., ``"Hello, World!"``).
+Podemos especificar valores directamente en los programas que escribimos. Por ejemplo, podemos especificar un número como **literal** simplemente (literalmente) escribiéndolo directamente en el programa (por ejemplo, ``5`` o ``4.32``). En un programa, especificamos una palabra, o más generalmente una cadena de caracteres, encerrando los caracteres entre comillas (por ejemplo, ``"¡Hola, Mundo!"``).
 
-During execution of a program, the Python interpreter creates an internal representation of literals that are specified in a program. It can then manipulate them, for examply by multiplying two numbers. We call the internal representations **objects** or just **values**.
+Durante la ejecución de un programa, el intérprete de Python crea una representación interna de literales que se especifican en un programa. Luego puede manipularlos, por ejemplo, multiplicando dos números. Llamamos a las representaciones internas **objetos** o simplemente **valores**.
 
-You can't directly see the internal representations of values. You can, however, use the ``print`` function to see a printed representation in the output window.
+No se pueden ver directamente las representaciones internas de los valores. Sin embargo, puede usar la función ``print`` para ver una representación impresa en la ventana de salida.
 
-The printed representation of a number uses the familiar decimal representation (reading `Roman Numerals <http://en.wikipedia.org/wiki/Roman_numerals>`_ is a fun challenge in museums, but thank goodness the Python interpreter doesn't present the number 2014 as MMXIV in the output window). Thus, the printed representation of a number shown in the output window is the same as the literal that you specify in a program.
+La representación impresa de un número utiliza la representación decimal familiar (leer `Roman Numerals <http://en.wikipedia.org/wiki/Roman_numerals>`__ es un desafío divertido en los museos, pero gracias a Dios que el intérprete de Python no presenta el número 2014 como MMXIV en la ventana de resultados). Por lo tanto, la representación impresa de un número que se muestra en la ventana de salida es la misma que el literal que especifica en un programa.
 
-The printed representation of a character string, however, is not exactly the same as the literal used to specify the string in a program. For the literal in a program, you enclose the string in quotation marks. The printed representation, in the output window, omits the quotation marks.
+Sin embargo, la representación impresa de una cadena de caracteres no es exactamente la misma que el literal utiliza para especificar la cadena en un programa. Para el literal en un programa, encierra la cadena entre comillas. La representación impresa, en la ventana de salida, omite las comillas.
 
 .. activecode:: ac2_2_1
     :nocanvas:
 
     print(3.2)
-    print("Hello, World!")
+    print("Hola, Mundo!")
 
 .. note::
-   **Literals** appear in programs. The Python interpreter turns literals into **values**, which have internal representations that people never get to see directly.  **Outputs** are external representations of values that appear in the output window. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external representations as values.
+   Los **Literal** aparecen en los programas. El intérprete de Python convierte los literales en **valores**, que tienen representaciones internas que las personas nunca pueden ver directamente. **Outputs** son representaciones externas de valores que aparecen en la ventana de salida. Cuando tengamos cuidado, usaremos los términos de esta manera. A veces, sin embargo, nos volveremos un poco descuidados y nos referiremos a literales o representaciones externas como valores.
 
-Numbers with a decimal point belong to a class
-called **float**, because these numbers are represented in a format called
-*floating-point*.  At this stage, you can treat the words *class* and *type*
-interchangeably.  We'll come back to a deeper understanding of what a class
-is in later chapters.
+Los números con un punto decimal pertenecen a una clase
+llamada **float**, porque estos números se representan en un formato llamado
+*punto flotante*. En esta etapa, puede tratar las palabras *class* y *type*
+indistintamente. Volveremos a una comprensión más profunda de lo que es una clase
+está en capítulos posteriores.
 
-You will soon encounter other types of objects as well, such as lists and dictionaries. Each of these has its own special representation for specifying an object as a literal in a program, and for displaying an object when you print it. For example, list contents are enclosed in square brackets ``[ ]``. You will also encounter some more complicated objects that do not have very nice printed representations: printing those won't be very useful.
+Pronto encontrará también otros tipos de objetos, como listas y diccionarios. Cada uno de estos tiene su propia representación especial para especificar un objeto como literal en un programa y para mostrar un objeto cuando lo imprime. Por ejemplo, el contenido de la lista está encerrado entre corchetes ``[]``. También encontrará que algunos objetos más complicados no tienen representaciones impresas muy bonitas: imprimirlos no será muy útil.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_2_1
-   :answer_a: Nothing is printed. It generates a runtime error.
-   :answer_b: "Hello World!"
-   :answer_c: Hello World!
+   :answer_a: No se imprime nada. Genera un error de tiempo de ejecución.
+   :answer_b: "¡Hola Mundo!"
+   :answer_c: ¡Hola Mundo!
    :correct: c
-   :feedback_a: "Hello World!" has a printed representation, so there will not be an error.
-   :feedback_b: The literal in the program includes the quote marks, but the printed representation omits them.
-   :feedback_c: The printed representation omits the quote marks that are included in the string literal.
+   :feedback_a: "¡Hola Mundo!" tiene una representación impresa, por lo que no habrá un error.
+   :feedback_b: El literal en el programa incluye las comillas, pero la representación impresa las omite.
+   :feedback_c: La representación impresa omite las comillas que se incluyen en la cadena literal.
    :practice: T
 
-   What appears in the output window when the following statement executes?
+   ¿Qué aparece en la ventana de salida cuando se ejecuta la siguiente instrucción?
 
    .. code-block:: python
 
-      print("Hello World!")
+      print("¡Hola Mundo!")
