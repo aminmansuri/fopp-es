@@ -11,47 +11,45 @@
    :prefix: intro-10-
    :start: 1
 
-Comments
---------
+Comentarios
+-----------
 
-As programs get bigger and more complicated, they get more difficult to read.
-Formal languages are dense, and it is often difficult to look at a piece of
-code and figure out what it is doing, or why.
-For this reason, it is a good idea to add notes to your programs to explain in
-natural language what the program is doing.  These notes are called comments.
+A medida que los programas se hacen más grandes y más complicados, se vuelven más difíciles de leer.
+Los lenguajes formales son densos y, a menudo, es difícil observar un fragmento de
+código y descifrar lo que está haciendo o por qué.
+Por esta razón, es una buena idea agregar notas a sus programas para explicar en
+lenguaje natural lo que está haciendo el programa. Estas notas se llaman comentarios.
 
-A **comment** in a computer program is text that is intended only for the human
-reader - it is completely ignored by the interpreter.
-In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
-Here is a new version of *Hello, World!*.
+Un **comentario** en un programa de computadora es texto que está destinado solo para lectores humanos: el intérprete lo ignora por completo.
+En Python, el símbolo ``#`` comienza un comentario. El resto de la línea se ignora.
+Aquí hay una nueva versión de *Hello, World!*.
 
 .. activecode:: ac1_8_1
 
-    #---------------------------------------------------
-    # This demo program shows off how elegant Python is!
+    #---------------------------------------------------------
+    # Este programa de prueba muestra cuán elegante es Python!
     # Written by Joe Soap, December 2010.
     # Anyone may freely copy or modify this program.
-    #---------------------------------------------------
+    #---------------------------------------------------------
 
-    print("Hello, World!")     # Isn't this easy!
+    print("Hello, World!")     # No es facil!
 
-Notice that when you run this program, it still only prints the phrase Hello, World!  None of the comments appear.
-You'll also notice that we've left a blank line in the program.  Blank lines
-are also ignored by the interpreter, but comments and blank lines can make your
-programs much easier for humans to parse.  Use them liberally!
+Tenga en cuenta que cuando ejecuta este programa, solo imprime la frase Hello, World! Ninguno de los comentarios aparece.
+También notará que hemos dejado una línea en blanco en el programa. Las líneas en blanco también son ignorados por el intérprete,
+pero los comentarios y las líneas en blanco pueden hacer que sus programas mucho más fáciles de analizar para los humanos. ¡Úsalos generosamente!
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question1_8_1
-   :answer_a: To tell the computer what you mean in your program.
-   :answer_b: For the people who are reading your code to know, in natural language, what the program is doing.
-   :answer_c: Nothing, they are extraneous information that is not needed.
-   :answer_d: Nothing in a short program.  They are only needed for really large programs.
+   :answer_a: Para decirle a la computadora lo que quiere decir en su programa.
+   :answer_b: Para que las personas que leen su código sepan, en lenguaje natural, qué está haciendo el programa.
+   :answer_c: Nada, son información extraña que no es necesaria.
+   :answer_d: Nada en un programa corto. Solo son necesarios para programas realmente grandes.
    :correct: b
-   :feedback_a: Comments are ignored by the computer.
-   :feedback_b: The computer ignores comments.  It’s for the humans that will “consume” your program.
-   :feedback_c: Comments can provide much needed information for anyone reading the program.
-   :feedback_d: Even small programs benefit from comments.
+   :feedback_a: La computadora ignora los comentarios.
+   :feedback_b: la computadora ignora los comentarios. Es para los humanos que "consumirán" su programa.
+   :feedback_c: Los comentarios pueden proporcionar información muy necesaria para cualquiera que lea el programa.
+   :feedback_d: Incluso los programas pequeños se benefician de los comentarios.
 
-   What are comments for?
+   ¿Para qué son los comentarios?
 
