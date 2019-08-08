@@ -13,22 +13,22 @@
 
 .. index:: type converter functions, int, float, str, truncation
 
-Data Types
-----------
-If you are not sure what class (data type) a value falls into, Python has a function called
-**type** which can tell you.
+Tipos de datos
+-----------------
+Si no está seguro de en qué clase (tipo de dato) cae un valor, Python tiene una función llamada
+**type** que puede decirte.
 
 .. activecode:: ac2_5_1
     :nocanvas:
 
-    print(type("Hello, World!"))
+    print(type("¡Hola Mundo!"))
     print(type(17))
-    print("Hello, World")
+    print("Hola, Mundo")
     print(type(3.2))
 
 
-What about values like ``"17"`` and ``"3.2"``? They look like numbers, but they
-are in quotation marks like strings.
+¿Qué pasa con valores como ``"17"`` y ``"3.2"``? Parecen números, pero
+están entre comillas como cadenas.
 
 .. activecode:: ac2_5_2
     :nocanvas:
@@ -36,59 +36,59 @@ are in quotation marks like strings.
     print(type("17"))
     print(type("3.2"))
 
-They're strings!
+¡Son cadenas  de caracteres (Srings)!
 
-Strings in Python can be enclosed in either single quotes (``'``) or double
-quotes (``"``), or three of each (``'''`` or ``"""``)
+Las cadenas en Python se pueden incluir entre comillas simples (``'``) o dobles
+comillas (``"``), o tres de cada (``'''`` o ``"""``)
 
 .. activecode:: ac2_5_3
     :nocanvas:
 
-    print(type('This is a string.'))
-    print(type("And so is this."))
-    print(type("""and this."""))
-    print(type('''and even this...'''))
+    print(type('Esta es una cadena.'))
+    print(type("Y así es esto."))
+    print(type("""y esto."""))
+    print(type('''e incluso esto...'''))
 
 
-Double quoted strings can contain single quotes inside them, as in ``"Bruce's
-beard"``, and single quoted strings can have double quotes inside them, as in
-``'The knights who say "Ni!"'``.
-Strings enclosed with three occurrences of either quote symbol are called
-triple quoted strings.  They can contain either single or double quotes:
+Las cadenas con comillas dobles pueden contener comillas simples dentro de ellas, como en ``"La barba de
+Bruce"``, y las cadenas entre comillas simples pueden tener comillas dobles dentro de ellas, como en
+``'Los caballeros que dicen "¡Ni!"'``.
+Las cadenas encerradas con tres ocurrencias de cualquier símbolo de comilla se llaman
+cuerdas triples citadas. Pueden contener comillas simples o dobles:
 
 .. activecode:: ac2_5_4
     :nocanvas:
 
-    print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
+    print('''"Oh no", exclamó," ¡La bicicleta de Ben está rota!"''')
 
 
-Triple quoted strings can even span multiple lines:
+Las cadenas entre comillas triples pueden incluso abarcar varias líneas:
 
 .. activecode:: ac2_5_5
     :nocanvas:
 
-    print("""This message will span
-    several lines
-    of the text.""")
+    print("""Este mensaje tendrá
+    varias líneas
+    de texto.""")
 
-Python doesn't care whether you use single or double quotes or the
-three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
-your program or command, the way it stores the value is identical in all cases,
-and the surrounding quotes are not part of the value.
+A Python no le importa si usa comillas simples o dobles o
+citas únicas para rodear tus cuerdas. Una vez que ha analizado el texto de
+su programa o comando, la forma en que almacena el valor es idéntica en todos los casos,
+y las comillas circundantes no son parte del valor.
 
 .. activecode:: ac2_5_6
     :nocanvas:
 
-    print('This is a string.')
-    print("""And so is this.""")
+    print('Esto es una string.')
+    print("""Y así es esto.""")
 
-So the Python language designers usually chose to surround their strings by
-single quotes.  What do you think would happen if the string already contained
-single quotes?
+Entonces, los diseñadores de lenguaje Python generalmente eligen rodear sus cadenas
+con comillas simples. ¿Qué crees que pasaría si la cadena ya contuviera
+comillas simples?
 
-When you type a large integer, you might be tempted to use commas between
-groups of three digits, as in ``42,000``. This is not a legal integer in
-Python, but it does mean something else, which is legal:
+Cuando escribe un número entero grande, puede sentirse tentado a usar comas entre
+grupos de tres dígitos, como en ``42,000``. Este no es un entero legal en
+Python, pero significa algo más, que es legal:
 
 .. activecode:: ac2_5_7
     :nocanvas:
@@ -97,39 +97,39 @@ Python, but it does mean something else, which is legal:
     print(42,500)
 
 
-Well, that's not what we expected at all! Because of the comma, Python chose to
-treat this as a *pair* of values. In fact, a print statement can print any number of values as long
-as you separate them by commas. Notice that the values are separated by spaces when they are displayed.
+¡Bueno, eso no es lo que esperábamos! Debido a la coma, Python eligió
+trata esto como un *par* de valores. De hecho, una declaración de impresión puede imprimir cualquier cantidad de valores siempre
+a medida que los separas por comas. Observe que los valores están separados por espacios cuando se muestran.
 
 .. activecode:: ac2_5_8
     :nocanvas:
 
     print(42, 17, 56, 34, 11, 4.35, 32)
-    print(3.4, "hello", 45)
+    print(3.4, "Hola", 45)
 
-Remember not to put commas or spaces in your integers, no
-matter how big they are. Also revisit what we said in the previous chapter:
-formal languages are strict, the notation is concise, and even the smallest
-change might mean something quite different from what you intended.
+Recuerde no poner comas o espacios en sus enteros, no
+importa cuán grandes sean. También revise lo que dijimos en el capítulo anterior:
+los lenguajes formales son estrictos, la notación es concisa e incluso el más pequeño
+cambio puede significar algo muy diferente de lo que pretendía.
 
 .. note::
-   The examples in this online text describe how print works in Python 3. If you install Python 2.7 on your machine, it will work slightly differently. One difference is that print is not called as a function, so there are no parentheses around the values to be printed.
+   Los ejemplos en este texto describen cómo funciona la impresión en Python 3. Si instala Python 2.7 en su máquina, funcionará de manera ligeramente diferente. Una diferencia es que imprimir no se llama como una función, por lo que no hay paréntesis alrededor de los valores que se imprimirán.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_5_1
-   :answer_a: Print out the value and determine the data type based on the value printed.
-   :answer_b: Use the type function.
-   :answer_c: Use it in a known equation and print the result.
-   :answer_d: Look at the declaration of the variable.
+   :answer_a: Imprimiendo el valor y determinando el tipo de datos en función del valor impreso.
+   :answer_b: Usando la función type.
+   :answer_c: Usandolo en una ecuación conocida e imprimiendo el resultado.
+   :answer_d: Mirando la declaración de la variable.
    :correct: b
-   :feedback_a: You may be able to determine the data type based on the printed value, but it may also be  deceptive, like when a string prints, there are no quotes around it.
-   :feedback_b: The type function will tell you the class the value belongs to.
-   :feedback_c: Only numeric values can be used in equations.
-   :feedback_d: In Python variables are not declared. Values, not variables, have types in Python. A variable can even take on values with different types during a program's execution.
+   :feedback_a: Es posible que pueda determinar el tipo de datos en función del valor impreso, pero también puede ser engañoso, como cuando se imprime una cadena, no hay comillas a su alrededor.
+   :feedback_b: La función type le dirá a la clase a la que pertenece el valor.
+   :feedback_c: Solo se pueden usar valores numéricos en las ecuaciones.
+   :feedback_d: En Python las variables no se declaran. Los valores, no las variables, tienen tipos en Python. Una variable puede incluso tomar valores con diferentes tipos durante la ejecución de un programa.
    :practice: T
 
-   How can you determine the type of a variable?
+   ¿Cómo puedes determinar el tipo de una variable?
 
 .. mchoice:: question2_5_2
    :answer_a: Character
@@ -137,10 +137,10 @@ change might mean something quite different from what you intended.
    :answer_c: Float
    :answer_d: String
    :correct: d
-   :feedback_a: It is not a single character.
-   :feedback_b: The data is not numeric.
-   :feedback_c: The value is not numeric with a decimal point.
-   :feedback_d: Strings can be enclosed in single quotes.
+   :feedback_a: No es un solo character
+   :feedback_b: El valor no es numérico.
+   :feedback_c: El valor no es numérico con un punto decimal.
+   :feedback_d: String se puede encerrar entre comillas simples.
    :practice: T
 
-   What is the data type of 'this is what kind of data'?
+   ¿Cuál es el tipo de datos de 'qué tipo de datos son estos'?
