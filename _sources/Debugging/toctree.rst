@@ -1,7 +1,7 @@
-Debugging
-:::::::::
+Depuración
+:::::::::::::
 .. toctree::
-   :caption: Debugging
+   :caption: Depuración
    :maxdepth: 2
 
    intro-DebuggingGeneral.rst
