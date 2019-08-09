@@ -21,8 +21,8 @@
 
 .. _turtles_chap:
 
-Hello Little Turtles!
-=====================
+¡Hola pequeñas tortugas!
+========================
 
 .. video:: turtleintrovid
     :controls:
@@ -31,39 +31,37 @@ Hello Little Turtles!
     http://media.interactivepython.org/thinkcsVideos/turtleintro.mov
     http://media.interactivepython.org/thinkcsVideos/turtleintro.webm
 
-There are many *modules* in Python that provide very powerful features that we can use in our own programs. 
-Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations.
-In this chapter we will introduce a module that allows us to create a data object called a **turtle** that can be used 
-to draw pictures.
+Hay muchos *módulos* en Python que proporcionan características muy potentes que podemos usar en nuestros propios programas.
+Algunos de estos pueden enviar correos electrónicos o buscar páginas web. Otros nos permiten realizar cálculos matemáticos complejos.
+En este capítulo presentaremos un módulo que nos permite crear un objeto llamado **tortuga** que puede usarse para hacer dibujos
 
 .. turtles and get them
 .. turn left, etc.  Your turtle's tail is also endowed with the ability to leave
 .. to draw shapes and patterns.
 
-Turtle graphics, as it is known, is based on a very simple metaphor. Imagine that you have a turtle that 
-understands English. You can tell your turtle to do simple commands such as go forward and turn right. As the turtle
-moves around, if its tail is down touching the ground, it will draw a line (leave a trail behind) as it moves. If you 
-tell your turtle to lift up its tail it can still move around but will not leave a trail. As you will see, you can make
-some pretty amazing drawings with this simple capability.
+Los gráficos con **turtle**, como se le conoce, se basan en una metáfora muy simple. Imagina que tienes una tortuga que
+entiende inglés Puedes decirle a tu tortuga que haga comandos simples como avanzar y girar a la derecha. A medida que la tortuga
+se mueve, si su cola está hacia abajo tocando el suelo, dibujará una línea (dejará un rastro) mientras se mueve. Si le  dice
+a su tortuga que levante la cola, todavía puede moverse pero no dejará rastro. Como verás, puedes hacer algunos dibujos bastante sorprendentes con esta capacidad simple.
 
 .. note::
 
-    The turtles are fun because they allow us to visualize what our code is doing, but the real purpose of the chapter is to teach ourselves a little more Python and to develop our theme of computational thinking. You’ll first draw simple geometric shapes with the turtles, and then we’ll summarize the concepts and syntax you’ve learned, in particular, classes, instances, and method invocations. These concepts are the building blocks of object-oriented programming, a paradigm for structuring a program that is widespread in every modern programming language.
+    Las tortugas son divertidas porque nos permiten visualizar lo que está haciendo nuestro código, pero el verdadero propósito del capítulo es enseñarnos un poco más de Python y desarrollar nuestro tema de pensamiento computacional. Primero dibujarás formas geométricas simples con las tortugas, y luego resumiremos los conceptos y la sintaxis que has aprendido, en particular, las clases, las instancias y las invocaciones de métodos. Estos conceptos son los componentes básicos de la programación orientada a objetos, un paradigma para estructurar un programa que está muy extendido en todos los lenguajes de programación modernos.
 
-Learning Goals
---------------
+Metas de aprendizaje
+--------------------
 
-* To understand the use of loops as a way of repeating actions
-* To understand flow control and iteration through the for loop
-* To understand the idea of sequence (or list) of numbers
-* To introduce the idea of looking for patterns when problem solving
-* To distinguish between instances, attributes, and methods
+* Comprender el uso de bucles como una forma de repetir acciones
+* Comprender el control de flujo y la iteración a través del ciclo for
+* Comprender la idea de secuencia (o lista) de números
+* Introducir la idea de buscar patrones al resolver problemas
+* Distinguir entre instancias, atributos y métodos.
 
-Objectives
+Objectivos
 -----------
 
-* Write a multi-line program (using the turtle framework)
-* Invoke methods & set attributes using dot notation
-* Use the range function to create the correct sequence of numbers
-* Use the for loop to draw common geometric shapes with the turtle
+* Escribir un programa multilínea (usando el framework de turtle)
+* Invocar métodos y establecer atributos usando la notación de puntos
+* Use la función de rango para crear la secuencia correcta de números
+* Use el bucle for para dibujar formas geométricas comunes con la tortuga
 
