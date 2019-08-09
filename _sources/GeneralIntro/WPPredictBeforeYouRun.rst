@@ -11,18 +11,18 @@
    :prefix: intro-8-
    :start: 1
 
-👩‍💻 Predict Before You Run!
-=============================
+👩‍💻 ¡Predice antes de ejecutar!
+=================================
 
-You've run your first program! You'll be doing that a lot in this book and the programs will become increasingly 
-complicated. One way to help understand what is happening and learn programming is predicting the effect of running a 
-snippet of code before actually running the program. Later on in your development, you may make predictions about large 
-snippets of code, but for now you will typically be predicting the effect of executing a single line of code. A prediction 
-will either be about what gets printed out, or about the value of a variable, or that an error will occur.
+¡Has ejecutado tu primer programa! Lo harás mucho en este libro y los programas serán cada vez más complejos.
+Una forma de ayudar a comprender lo que está sucediendo y aprender a programar es predecir el efecto de ejecutar un
+fragmento de código antes de ejecutar realmente el programa. Más adelante en su desarrollo, puede hacer predicciones sobre grandes
+fragmentos de código, pero por ahora normalmente predecirá el efecto de ejecutar una sola línea de código. Una predicción
+será sobre lo que se imprime, o sobre el valor de una variable, o que se producirá un error.
 
-A prediction is not a random guess. It is based on some explanation you have about what the current state of 
-variables is and about what you think certain commands in python do.
+Una predicción no es una suposición aleatoria. Se basa en alguna explicación que tenga sobre cuál es el estado actual de
+variables y sobre lo que crees que hacen ciertos comandos en python.
 
-While you read the textbook you'll see chapters, pages, or snippets of text that begin with "WP:". This denotes sections 
-that talk about the Way of the Programmer: advice or information that will help you to be a better programmer and make 
-better programs. Be on the lookout for other WP pages!
+Mientras lee el libro de texto, verá capítulos, páginas o fragmentos de texto que comienzan con "WP:". Esto denota secciones
+que hablan sobre el Camino del Programador: consejos o información que te ayudarán a ser un mejor programador y a hacer
+mejores programas ¡Esté atento a otras páginas de WP!

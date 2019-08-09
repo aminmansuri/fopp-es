@@ -11,27 +11,23 @@
    :prefix: intro-9-
    :start: 1
 
-👩‍💻 To Understand a Program, Change It!
-=========================================
+👩‍💻 Para comprender un programa, ¡Modifíquelo!
+=================================================
 
-To check your understanding or your predictions, you will run a program. 
+Para verificar su comprensión o sus predicciones, va a ejecutar un programa.
 
-To check your understanding about the state of variables before your code snippet runs, add diagnostic print 
-statements that print out the types and values of variables. Add these print statements just *before* the code 
-snippet you are trying to understand.
+Para verificar su comprensión sobre el estado de las variables antes de que se ejecute su fragmento de código, agregue impresión de diagnóstico
+declaraciones que imprimen los tipos y valores de variables. Agregue estas declaraciones de impresión justo *antes* del fragmento de código
+que estás tratando de entender.
 
-If you made a prediction about the output that will be generated when the code snippet runs, then you can just run 
-the program. If, however, you made a prediction about a change that occurs in the value of a variable, you will 
-need to add an extra diagnostic print statement right after the line of code that you think should be changing that 
-variable. 
+Si realizó una predicción sobre el resultado que se generará cuando se ejecute el fragmento de código, entonces puede ejecutar
+el programa. Sin embargo, si hizo una predicción sobre un cambio que ocurre en el valor de una variable, necesitará agregar una
+declaración de impresión de diagnóstico adicional justo después de la línea de código que cree que debería cambiar esa variable.
 
-The diagnostic print statements are temporary. Once you have verified that a program is doing what you think it’s 
-doing, you will remove these extra print statements.
+Las declaraciones de impresión de diagnóstico son temporales. Una vez que haya verificado que un programa está haciendo lo que cree que está
+haciendo, eliminará estas declaraciones de impresión adicionales.
 
-Even if you feel that you have a good grasp on the program though, we advise changing it at least a few times to see if you understand how it behaves in different situations. Sometimes you'll surprise yourself!
-
-If you get any surprises, then you will want to revise your understanding or your predictions. If you were wrong 
-about the values or types of variables before the code snippet was run, you may want to revisit your understanding of 
-the previous code. Once you understand how that result came to be, you should make some changes to the program to make sure your new understanding is accurate.
-
-
+Sin embargo, incluso si cree que tiene un buen conocimiento del programa, le recomendamos cambiarlo al menos algunas veces para ver si comprende cómo se comporta en diferentes situaciones. ¡A veces te sorprenderás!
+Si tiene alguna sorpresa, entonces querrá revisar su comprensión o sus predicciones. Si estabas equivocado
+sobre los valores o tipos de variables antes de que se ejecutara el fragmento de código, es posible que desee revisar su comprensión del
+código anterior. Una vez que comprenda cómo surgió ese resultado, debe hacer algunos cambios en el programa para asegurarse de que su nueva comprensión sea precisa.

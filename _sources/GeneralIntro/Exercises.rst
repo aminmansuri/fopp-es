@@ -13,31 +13,31 @@
    :prefix: intro-12-
    :start: 1
 
-Chapter Assessment
-------------------
+Evaluación del capítulo
+-----------------------
 
-**Check your understanding**
+**Revisa tu conocimiento**
 
 .. mchoice:: assess_question1_1_1
-   :answer_a: Because computers are better at solving problems.
-   :answer_b: So that you don't have to solve the problem yourself. 
-   :answer_c: So that you have a general solution to a problem.
-   :answer_d: Because you need a set of instructions to follow.
-   :feedback_a: Computers aren't necessarily better at solving problems, though often they can be quicker than humans. Additionally, algorithms can be used to solve non-computer related problems.
-   :feedback_b: While it is beneficial to have a set of instructions that others can follow, this isn't the best answer. By creating the algorithm, you solve a problem for yourself and others.
-   :feedback_c: Yes, by creating a general solution you can then express it as a program if you choose, and then use a computer to automate the execution.
-   :feedback_d: While it is beneficial to have a set of instructions as that is what an algorithm **is**, it is not **why** we would want to create one.
+   :answer_a: Porque las computadoras son mejores resolviendo problemas.
+   :answer_b: Para no tener que resolver el problema tú mismo.
+   :answer_c: Para tener una solución general a un problema.
+   :answer_d: Porque necesitas un conjunto de instrucciones para seguir.
+   :feedback_a: Las computadoras no son necesariamente mejores para resolver problemas, aunque a menudo pueden ser más rápidas que los humanos. Además, los algoritmos se pueden usar para resolver problemas no relacionados con la computadora.
+   :feedback_b: Si bien es beneficioso tener un conjunto de instrucciones que otros puedan seguir, esta no es la mejor respuesta. Al crear el algoritmo, resuelve un problema para usted y para los demás.
+   :feedback_c: Sí, al crear una solución general, puede expresarla como un programa si lo desea, y luego usar una computadora para automatizar la ejecución.
+   :feedback_d: Si bien es beneficioso tener un conjunto de instrucciones, ya que eso es lo que un algoritmo **es**, no es el **por qué** querríamos crear uno.
    :correct: c
    :practice: T
    :topics: GeneralIntro/Algorithms
 
-   Why create an algorithm?
+   ¿Por qué crear un algoritmo?
 
 .. activecode:: assess_question1_1_2
     :language: python
     :autograde: unittest
 
-    Write code to print out the phrase "Hello World".
+    Escriba el código para imprimir la frase "Hola mundo".
     ~~~~
 
     =====

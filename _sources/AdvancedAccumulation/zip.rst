@@ -13,11 +13,11 @@
 Zip
 ---
  
-One more common pattern with lists, besides accumulation, is to step through a pair of lists (or several lists), doing 
-something with all of the first items, then something with all of the second items, and so on. For example, given two 
-lists of numbers, you might like to add them up pairwise, taking [3, 4, 5] and [1, 2, 3] to yield [4, 6, 8].
+Otro patrón común con listas, además de accumulation, es recorrer un par de listas (o varias listas), haciendo
+algo con todos los primeros elementos, luego algo con todos los segundos elementos, y así sucesivamente. Por ejemplo, dados dos
+listas de números, puede sumarlos por pares, tomando [3, 4, 5] y [1, 2, 3] para obtener [4, 6, 8].
 
-One way to do that with a for loop is to loop through the possible index values. 
+Una forma de hacerlo con un bucle for es recorrer los posibles valores de índice.
 
 .. activecode:: ac21_5_1
 
@@ -30,17 +30,16 @@ One way to do that with a for loop is to loop through the possible index values.
    
    print(L3)
       
-You have seen this idea previously for iterating through the items in a single list. In many other programming languages 
-that's really the only way to iterate through the items in a list. In Python, however, we have gotten used to the for loop 
-where the iteration variable is bound successively to each item in the list, rather than just to a number that's used as a 
-position or index into the list. 
+Ya has visto esta idea anteriormente para recorrer los elementos en una sola lista. En muchos otros lenguajes de programación.
+esa es realmente la única forma de recorrer los elementos de una lista. En Python, sin embargo, nos hemos acostumbrado al ciclo for
+donde la variable de iteración está vinculada sucesivamente a cada elemento de la lista, en lugar de solo a un número que se utiliza como
+posición o índice en la lista.
 
-Can't we do something similar with pairs of lists? It turns out we can.
+¿No podemos hacer algo similar con pares de listas? Resulta que sí podemos.
 
-The ``zip`` function takes multiple lists and turns them into a list of tuples (actually, an iterator, but they work like 
-lists for most practical purposes), pairing up all the first items as one tuple, all the second items as a tuple, and so 
-on. Then we can iterate through those tuples, and perform some operation on all the first items, all the second items, and 
-so on.
+La función ``zip`` toma varias listas y las convierte en una lista de tuplas (en realidad, un iterador, pero funcionan como
+listas para los propósitos más prácticos), emparejar todos los primeros elementos como una tupla, todos los segundos elementos como otra tupla, y así.
+Luego podemos iterar a través de esas tuplas y realizar alguna operación en todos los primeros elementos, todos los segundos, etc.
 
 .. activecode:: ac21_5_2
 
@@ -49,7 +48,7 @@ so on.
    L4 = list(zip(L1, L2))
    print(L4)
 
-Here's what happens when you loop through the tuples.
+Esto es lo que sucede cuando recorres las tuplas.
    
 .. activecode:: ac21_5_3
 
@@ -63,7 +62,7 @@ Here's what happens when you loop through the tuples.
    
    print(L3)
 
-Or, simplifying and using a list comprehension:
+O, simplificando y usando list comprehension:
 
 .. activecode:: ac21_5_4
 
@@ -72,7 +71,7 @@ Or, simplifying and using a list comprehension:
    L3 = [x1 + x2 for (x1, x2) in list(zip(L1, L2))]
    print(L3)
    
-Or, using ``map`` and not unpacking the tuple (our online environment has trouble with unpacking the tuple in a lambda expression):
+O, usando ``map`` y no desempacando la tupla (nuestro entorno en línea tiene problemas para desempacar la tupla en una expresión lambda):
 
 .. activecode:: ac21_5_5
 
@@ -81,9 +80,9 @@ Or, using ``map`` and not unpacking the tuple (our online environment has troubl
    L3 = map(lambda x: x[0] + x[1], zip(L1, L2))
    print(L3)
 
-Consider a function called possible, which determines whether a word is still possible to play in a game of hangman, given the guesses that have been made and the current state of the blanked word.
+Considere una función llamada possible, que determina si una palabra aún es posible jugar en un juego de ahorcado, dadas las conjeturas que se han hecho y el estado actual de la palabra en blanco.
 
-Below we provide function that fulfills that purpose.
+A continuación ofrecemos una función que cumple ese propósito.
 
 .. activecode:: ac21_5_6
 
@@ -115,7 +114,7 @@ Below we provide function that fulfills that purpose.
 
    myTests().main()
 
-However, we can rewrite that using ``zip``, to be a little more comprehensible.
+Sin embargo, podemos reescribir eso usando ``zip``, para hacerlo un poco más comprensible.
 
 .. activecode:: ac21_5_7
 
@@ -145,7 +144,7 @@ However, we can rewrite that using ``zip``, to be a little more comprehensible.
 
    myTests().main()        
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac21_5_8
    :language: python
@@ -153,7 +152,7 @@ However, we can rewrite that using ``zip``, to be a little more comprehensible.
    :chatcodes:
    :practice: T
    
-   **1.** Below we have provided two lists of numbers, ``L1`` and ``L2``. Using zip and list comprehension, create a new list, ``L3``, that sums the two numbers if the number from ``L1`` is greater than 10 and the number from ``L2`` is less than 5. This can be accomplished in one line of code.
+   **1.** Hemos proporcionado dos listas de números, ``L1`` y ``L2``. Utilizando zip y list comprehension, cree una nueva lista, ``L3``, que sume los dos números si el número de ``L1`` es mayor que 10 y el número de ``L2`` es menor que 5. Esto se puede lograr en una línea de código.
    ~~~~
 
    L1 = [1, 5, 2, 16, 32, 3, 54, 8, 100]

@@ -389,7 +389,7 @@ Here is another one for you to try:
         fácilmente, pero también hay otra pista para ti. El editor en el
         libro de texto, así como casi todos los editores de Python en el mundo le proporcionan
         pistas de color. Observe que en la línea 2 la función ``imt`` no está resaltada
-         azul como la palabra ``int`` en la línea 4.
+        azul como la palabra ``int`` en la línea 4.
 
 
 Y un último bit de código para arreglar.

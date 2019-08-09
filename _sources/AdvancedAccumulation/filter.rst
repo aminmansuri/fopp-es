@@ -11,10 +11,10 @@
    :start: 1
 
 Filter
-------
+-------
 
-Now consider another common pattern: going through a list and keeping only those items that meet certain criteria. 
-This is called a filter.
+Ahora considere otro patrón común: revisar una lista y conservar solo aquellos elementos que cumplan ciertos criterios.
+Esto se llama filtro.
 
 .. activecode:: ac21_3_1
 
@@ -27,10 +27,9 @@ This is called a filter.
       
    print(keep_evens([3, 4, 6, 7, 0, 1]))
 
-Again, this pattern of computation is so common that Python offers a more compact and general way to do it, the ``filter`` 
-function. ``filter`` takes two arguments, a function and a sequence. The function takes one item and return True if the 
-item should. It is automatically called for each item in the sequence. You don't have to initialize an accumulator or 
-iterate with a for loop.
+Nuevamente, este patrón es tan común que Python ofrece una forma más compacta y general de hacerlo, la función ``filter``.
+``filter`` toma dos argumentos, una función condicional y una secuencia. La función toma un elemento y devuelve True si el elemento cumple la condición.
+Es llamado automáticamente para cada elemento de la secuencia. No tiene que inicializar un acumulador o iterar con un bucle for.
 
 .. activecode:: ac21_3_2
 
@@ -40,7 +39,7 @@ iterate with a for loop.
       
    print(keep_evens([3, 4, 6, 7, 0, 1]))
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac21_3_3
    :language: python
@@ -48,7 +47,7 @@ iterate with a for loop.
    :chatcodes:
    :practice: T
 
-   **1.** Write code to assign to the variable ``filter_testing`` all the elements in lst_check that have a w in them using filter.
+   **1.** Escribe código para asignar a la variable ``filter_testing`` todos los elementos en lst_check que contienen una w usando filter.
    ~~~~
 
    lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries', 'blueberries', 'peaches', 'apples', 'mangos', 'papaya']
@@ -75,7 +74,7 @@ iterate with a for loop.
    :chatcodes:
    :practice: T
 
-   **2.** Using filter, filter ``lst`` so that it only contains words containing the letter "o". Assign to variable ``lst2``. Do not hardcode this.
+   **2.** Usando filter, filtra ``lst`` para que solo contenga palabras que tengan la letra "o". Asignarlo a la variable ``lst2``. No hagas *hardcode* aquí.
    ~~~~
 
    lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
