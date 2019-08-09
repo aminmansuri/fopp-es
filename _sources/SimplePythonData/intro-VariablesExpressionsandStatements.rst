@@ -13,7 +13,7 @@
    :prefix: data-1-
    :start: 1
 
-Introduction
+Introducción
 ============
 
 .. index:: value, data type, string, integer, int, float, class, literal, output
@@ -28,34 +28,34 @@ Introduction
     http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.mov
     http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.webm
 
-This chapter introduces several basic building blocks of Python programs:
+Este capítulo presenta varios componentes básicos de los programas Python:
 
-- literals, like numbers and character strings
-- operators, like ``+`` and ``*``
-- function calls, which take values as inputs and compute new values
-- variables, which save values so they can be used later in the program
+- Literales, como números y cadenas de caracteres
+- Operadores, como ``+`` y ``*``
+- Llamadas a funciones, que toman valores como entradas y calculan nuevos valores
+- Variables, que guardan valores para que puedan usarse más adelante en el programa
 
-These are the basic building blocks that are assembled to create programs that you interact with everyday—from the software running on your smartwatch, to the infrastructure behind the largest websites, and every app running on your phone.
+Estos son los componentes básicos que se ensamblan para crear programas con los que interactúa todos los días, desde el software que se ejecuta en su reloj inteligente, hasta la infraestructura detrás de los sitios web más grandes y cada aplicación que se ejecuta en su teléfono.
 
-Learning Goals
---------------
+Metas de Aprendizaje
+------------------------
 
-* To understand Python's storage model
-* To solve problems using the 'accumulator pattern'
-* To understand operator precedence
-* To distinguish between expressions, values, and printed representations
-* To recogonize & explain hard coding
+* Para comprender el modelo de almacenamiento de Python
+* Para resolver problemas usando el 'patrón acumulador'
+* Para comprender la precedencia del operador
+* Distinguir entre expresiones, valores y representaciones impresas.
+* Para reconocer y explicar la codificación rígida
 
 
-Objectives
+Objeyivos
 ----------
 
-* Given some sample code identify variables that reference an object of a particular type
-* Given a variable of one type convert it to another
-* Simulate evaluation of an expression and assignment statement
-* Use reassignment to increment a variable (accumulator pattern)
-* Get input from a user and convert the input to the appropriate type
-* Identify the following types of values: strings, integers, floats, functions
-* Recognize valid vs. invalid variable names
-* Write an assignment statement
-* Update a reference diagram after reassignment
+* Dado un código de muestra, identifique las variables que hacen referencia a un objeto de un tipo particular
+* Dada una variable de un tipo, conviértala en otra
+* Simular evaluación de una expresión y declaración de asignación
+* Utilice la reasignación para incrementar una variable (patrón acumulador)
+* Obtenga la entrada de un usuario y convierta la entrada al tipo apropiado
+* Identifique los siguientes tipos de valores: cadenas, enteros, flotantes, funciones
+* Reconocer nombres de variables válidos vs inválidos
+* Escribe una declaración de asignación
+* Actualizar un diagrama de referencia después de la reasignación
