@@ -14,7 +14,7 @@
 .. index:: documentation online, Global Module Index
    module; standard, namespace
 
-Modules
+Módulos
 =======
 
 .. video:: inputvid
