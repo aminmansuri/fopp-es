@@ -13,81 +13,79 @@
 
 .. index:: instance
 
-Our First Turtle Program
-------------------------
+Nuestro Primer Programa con Turtle
+-----------------------------------
 
-Let's try a couple of lines of Python code to create a new turtle and
-start drawing a simple figure like a rectangle.
-We will refer to our first turtle using the variable name alex, but remember that you can
-choose any name you wish as long as you follow the naming rules from the previous chapter.
+Probemos un par de líneas de código Python para crear una nueva tortuga y
+comienza a dibujar una figura simple como un rectángulo.
+Nos referiremos a nuestra primera tortuga usando el nombre de la variable alex, pero recuerda que puede
+elegir cualquier nombre que desee siempre y cuando siga las reglas de nomenclatura del capítulo anterior.
 
-The program as shown will only draw the first two sides of the rectangle.
-After line 4 you will have a straight line going from the center of the
-drawing canvas towards the right. After line 6, you will have a canvas with a
-turtle and a half drawn rectangle. Press the run button to try it and see.
+El programa como se muestra solo dibujará los dos primeros lados del rectángulo.
+Después de la línea 4, tendrá una línea recta que va desde el centro de la
+dibujando lienzo hacia la derecha. Después de la línea 6, tendrá un lienzo con un
+tortuga y medio rectángulo dibujado. Presione el botón Ejecutar para probarlo.
 
 .. activecode:: ac3_2_1
     :tour_1: "Overall Tour"; 1-6: Example01_Tour01_Line01; 3: Example01_Tour01_Line02; 4: Example01_Tour01_Line03; 5: Example01_Tour01_Line04; 6: Example01_Tour01_Line05;
     :tour_2: "Line by Line Tour"; 1: Example01_Tour02_Line01; 2: Example01_Tour02_Line02; 3: Example01_Tour02_Line03; 4: Example01_Tour02_Line04; 5: Example01_Tour02_Line05; 6: Example01_Tour02_Line06;
     :nocodelens:
 
-    import turtle             # allows us to use the turtles library
-    wn = turtle.Screen()      # creates a graphics window
-    alex = turtle.Turtle()    # create a turtle named alex
-    alex.forward(150)         # tell alex to move forward by 150 units
-    alex.left(90)             # turn by 90 degrees
-    alex.forward(75)          # complete the second side of a rectangle
+    import turtle             # Nos permite usar la biblioteca de turtle
+    wn = turtle.Screen()      # crea la vntana de graficos
+    alex = turtle.Turtle()    # crea una tortuga llamada alex
+    alex.forward(150)         # le dice a alex que se mueva 150 unidades hacia adelante
+    alex.left(90)             # gira 90 grados
+    alex.forward(75)          # completa el segundo lado del rectángulo
 
 
 
 
-Here are a couple of things you'll need to understand about this program.
+Aquí hay un par de cosas que necesitará comprender sobre este programa.
 
-The first line tells Python to load a **module** named ``turtle``. That module
-brings us two new types that we can use: the ``Turtle`` type, and the
-``Screen`` type.  The dot notation ``turtle.Turtle`` means *"The Turtle type
-that is defined within the turtle module"*. (Remember that Python is case
-sensitive, so the module name, ``turtle``, with a lowercase ``t``, is different from the
-type ``Turtle`` because of the uppercase ``T``.)
+La primera línea le dice a Python que cargue un **módulo** llamado ``tortuga``. Ese módulo
+nos trae dos tipos nuevos que podemos usar: el tipo ``Tortuga`` y el tipo ``pantalla``.
+La notación de punto ``tortuga.Tortuga`` significa *"El tipo de tortuga que se define dentro del módulo de tortuga"*.
+(Recuerde que Python es sensible a mayúsculas y minúsculas), por lo que el nombre del módulo, ``tortuga``, con una ``t`` minúscula, es diferente
+a ``Tortuga`` debido a la mayúscula ``T``.)
 
-We then create and open what the turtle module calls a screen (we would
-prefer to call it a window, or in the case of this web version of Python
-simply a canvas), which we assign to variable ``wn``. Every window
-contains a **canvas**, which is the area inside the window on which we can draw.
+Luego creamos y abrimos lo que el módulo de tortuga llama una *pantalla* (habríamos
+preferido llamarlo una ventana, o en el caso de esta versión web de Python
+simplemente un lienzo), que asignamos a la variable ``wn``. Cada ventana
+contiene un **lienzo**, que es el área dentro de la ventana, en la que podemos dibujar.
 
-In line 3 we create a turtle. The variable ``alex`` is made to refer to this
-turtle. These first three lines set us up so that we are ready to do some drawing.
+En la línea 3 creamos una tortuga. La variable ``alex`` está hecha para referirse a esta
+Tortuga. Estas tres primeras líneas nos preparan para que estemos listos para dibujar.
 
-In lines 4-6, we instruct the **object** alex to move and to turn. We do this
-by **invoking** or activating alex's **methods** --- these are the instructions that all
-turtles know how to respond to.
+En las líneas 4-6, le indicamos al **objeto** alex que se mueva y gire. Nosotros hacemos esto
+**invocando** o activando **los métodos de alex** --- estas son las instrucciones que todas
+las tortugas saben cómo responder.
 
 
-.. admonition:: Complete the rectangle ...
+.. admonition:: Completa el retángulo ...
 
-    Modify the program by adding the commands necessary to have *alex* complete the
-    rectangle.
+   Modifique el programa agregando los comandos necesarios para que *alex* complete el rectángulo.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question3_2_1
-   :answer_a: North
-   :answer_b: South
-   :answer_c: East
-   :answer_d: West
+   :answer_a: Norte
+   :answer_b: Sur
+   :answer_c: Este
+   :answer_d: Oeste
    :correct: c
-   :feedback_a: Some turtle systems start with the turtle facing north, but not this one.
-   :feedback_b: No, look at the first example with a turtle.  Which direction does the turtle move?
-   :feedback_c: Yes, the turtle starts out facing east.
-   :feedback_d: No, look at the first example with a turtle.  Which direction does the turtle move?
+   :feedback_a: Algunos sistemas de tortugas comienzan con la tortuga mirando hacia el norte, pero este no.
+   :feedback_b: No, mira el primer ejemplo con una tortuga. ¿En qué dirección se mueve la tortuga?
+   :feedback_c: Sí, la tortuga comienza mirando hacia el este.
+   :feedback_d: No, mira el primer ejemplo con una tortuga. ¿En qué dirección se mueve la tortuga?
 
-   Which direction does the Turtle face when it is created?
+   ¿En qué dirección mira la tortuga cuando se crea?
 
-**Mixed up programs**
+**Programas mezclados**
 
 .. parsonsprob:: pp3_2_1
 
-   The following program uses a turtle to draw a capital L as shown in the picture to the left of this text, <img src="../_static/TurtleL4.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a letter L which is drawn by Turtle"/> but the lines are mixed up. The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle. Remember that the turtle starts off facing east when it is created. The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long. We have added a compass to the picture to indicate the directions north, south, west, and east. <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa usa una tortuga para dibujar una L mayúscula como se muestra en la imagen a la izquierda de este texto, <img src="../_static/TurtleL4.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a letter L which is drawn by Turtle"/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria: importar el módulo de tortuga, obtener la ventana para dibujar y crear la tortuga. Recuerde que la tortuga comienza mirando hacia el este cuando se crea. La tortuga debe girar hacia el sur y dibujar una línea de 150 píxeles de largo y luego girar hacia el este y dibujar una línea de 75 píxeles de largo. Hemos agregado una brújula a la imagen para indicar las direcciones norte, sur, oeste y este. <br /><br /><p>Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tienes razón. Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    window = turtle.Screen()
@@ -101,7 +99,7 @@ turtles know how to respond to.
 
 .. parsonsprob:: pp3_2_2
 
-   The following program uses a turtle to draw a checkmark as shown to the left, <img src="../_static/TurtleCheckmark4.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a checkmark which is drawn by Turtle."/> but the lines are mixed up. The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle. The turtle should turn to face southeast, draw a line that is 75 pixels long, then turn to face northeast, and draw a line that is 150 pixels long. We have added a compass to the picture to indicate the directions north, south, west, and east. Northeast is between north and east. Southeast is between south and east. <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa usa una tortuga para dibujar una marca de verificación como se muestra a la izquierda, <img src="../_static/TurtleCheckmark4.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a checkmark which is drawn by Turtle."/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria: importar el módulo de tortuga, obtener la ventana para dibujar y crear la tortuga. La tortuga debe girar hacia el sudeste, dibujar una línea de 75 píxeles de largo, luego girar hacia el noreste y dibujar una línea de 150 píxeles de largo. Hemos agregado una brújula a la imagen para indicar las direcciones norte, sur, oeste y este. El noreste está entre el norte y el este. El sudeste está entre el sur y el este <br /><br /><p>Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tienes razón. Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    =====
@@ -117,7 +115,7 @@ turtles know how to respond to.
 
 .. parsonsprob:: pp3_2_3
 
-   The following program uses a turtle to draw a single line to the west as shown to the left, <img src="../_static/TurtleLineToWest.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line moving in west direction drawn by Turtle. Turtle uses following steps: left turn of 180 degrees, and 75 pixels long line"/> but the program lines are mixed up. The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle.  The turtle should then turn to face west and draw a line that is 75 pixels long. <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+  El siguiente programa usa una tortuga para dibujar una sola línea hacia el oeste como se muestra a la izquierda, <img src="../_static/TurtleLineToWest.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line moving in west direction drawn by Turtle. Turtle uses following steps: left turn of 180 degrees, and 75 pixels long line"/> pero las líneas del programa están mezcladas. El programa debe hacer toda la configuración necesaria: importar el módulo de tortuga, obtener la ventana para dibujar y crear la tortuga. La tortuga debe girar hacia el oeste y dibujar una línea de 75 píxeles de largo. <br /><br /><p>Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tienes razón Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    window = turtle.Screen()
@@ -126,19 +124,18 @@ turtles know how to respond to.
    jamal.forward(75)
 
 
-An object can have various methods --- things it can do --- and it can also
-have **attributes** --- (sometimes called *properties*). For example, each
-turtle has a *color* attribute. The method invocation  ``alex.color("red")``
-will make alex red and the line that it draws will be red too.
+Un objeto puede tener varios métodos, cosas que puede hacer, y también puede
+tener **atributos** ---a veces llamados *propiedades*).Por ejemplo, cada tortuga tiene un atributo *color*.
+La invocación del método ``alex.color("rojo")`` hará que alex se ponga roja y la línea que dibuja también será roja.
 
-The color of the turtle, the width of its pen(tail), the position of the turtle
-within the window, which way it is facing, and so on are all part of its
-current **state**. Similarly, the window object has a background color which is part of its state.
+El color de la tortuga, el ancho de su pluma (cola), la posición de la tortuga
+dentro de la ventana, en qué dirección está mirando, y así sucesivamente son parte de su
+**estado** actual. Del mismo modo, el objeto de la ventana tiene un color de fondo que forma parte de su estado.
 
-Quite a number of methods exist that allow us to modify the turtle and
-window objects. In the example below, we show just show a couple and have only commented
-those lines that are different from the previous example. Note also that we have decided
-to call our turtle object *tess*.
+Existen numerosos métodos que nos permiten modificar la tortuga y
+objetos de ventana En el ejemplo a continuación, mostramos solo mostrar una pareja y solo hemos comentado
+aquellas líneas que son diferentes del ejemplo anterior. Tenga en cuenta también que hemos decidido
+llamar a nuestro objeto tortuga *tess*.
 
 .. activecode:: ac3_2_2
     :tour_1: "Overall Tour"; 1-10: Example02_Tour01_Line01; 4: Example02_Tour01_Line02; 6: Example02_Tour01_Line03; 7: Example02_Tour01_Line04; 8: Example02_Tour01_Line05; 10: Example02_Tour01_Line06; 11: Example02_Tour01_Line07; 12: Example02_Tour01_Line08; 14: Example02_Tour01_Line09;
@@ -148,57 +145,54 @@ to call our turtle object *tess*.
     import turtle
 
     wn = turtle.Screen()
-    wn.bgcolor("lightgreen")        # set the window background color
+    wn.bgcolor("lightgreen")        # Establece el color de fondo de la ventana
 
     tess = turtle.Turtle()
-    tess.color("blue")              # make tess blue
-    tess.pensize(3)                 # set the width of her pen
+    tess.color("blue")              # Hacer azul a tess
+    tess.pensize(3)                 # Establece el ancho del pincel
 
     tess.forward(50)
     tess.left(120)
     tess.forward(50)
 
-    wn.exitonclick()                # wait for a user click on the canvas
+    wn.exitonclick()                # espera un clic del usuario en el lienzo
 
 
-The last line plays a very important role. The wn variable refers to the window shown
-above. When we invoke its ``exitonclick`` method, the program pauses execution and waits for the user to click the mouse somewhere in the window.
-When this click event occurs, the response is to close the turtle window and
-exit (stop execution of) the Python program.
+La última línea juega un papel muy importante. La variable wn se refiere a la ventana mostrada
+encima. Cuando invocamos su método ``exitonclick``, el programa detiene la ejecución y espera a que el usuario haga clic con el mouse en algún lugar de la ventana.
+Cuando se produce este evento de clic, la respuesta es cerrar la ventana de la tortuga y
+salir (detener la ejecución) del programa Python.
 
-Each time we run this program, a new drawing window pops up, and will remain on the
-screen until we click on it.
+Cada vez que ejecutamos este programa, aparece una nueva ventana de dibujo y permanecerá en el
+pantalla hasta que hagamos clic en él.
 
-.. admonition:: Extend this program ...
+.. admonition:: Amplíe este programa ...
 
-    #. Modify this program so that before it creates the window, it prompts
-       the user to enter the desired background color.It should store the
-       user's responses in a variable, and modify the color of the window
-       according to the user's wishes.
-       (Hint: you can find a list of permitted color names at
-       https://www.w3schools.com/colors/colors_names.asp. It includes some quite
-       unusual ones, like "PeachPuff"  and "HotPink".)
-    #. Do similar changes to allow the user, at runtime, to set tess' color.
-    #. Do the same for the width of tess' pen. *Hint:* your dialog with the
-       user will return a string, but tess' ``pensize`` method
-       expects its argument to be an ``int``. That means you need to convert
-       the string to an int before you pass it to ``pensize``.
+    #. Modifique este programa para que antes de crear la ventana, se le solicite el usuario debe ingresar
+    el color de fondo deseado. Debe almacenar la respuestas del usuario en una variable, y modificar el color
+    de la ventana según los deseos del usuario. (Sugerencia: puede encontrar una lista de nombres de colores
+    permitidos en https://www.w3schools.com/colors/colors_names.asp. Incluye algunos bastante
+    inusuales, como "PeachPuff" y "HotPink".)
+    #. Realice cambios similares para permitir al usuario, en tiempo de ejecución, establecer el color de tess.
+    #. Haga lo mismo para el ancho de la pluma de Tess. *Sugerencia:* su diálogo con el usuario devolverá una
+    cadena, pero el método ``pensize`` de tess espera que su argumento sea un ``int``. Eso significa que necesitas
+    convertir la cadena a un int antes de pasarla a ``pensize``.
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question3_2_2
-   :answer_a: It creates a new turtle object that can be used for drawing.
-   :answer_b: It defines the module turtle which will allow you to create a Turtle object and draw with it.
-   :answer_c: It makes the turtle draw half of a rectangle on the screen.
-   :answer_d: Nothing, it is unnecessary.
+   :answer_a: Crea un nuevo objeto tortuga que se puede usar para dibujar.
+   :answer_b: Define el módulo tortuga que le permitirá crear un objeto Tortuga y dibujar con él.
+   :answer_c: Hace que la tortuga dibuje la mitad de un rectángulo en la pantalla.
+   :answer_d: Nada, es innecesario.
    :correct: b
-   :feedback_a: The line &quotalex = turtle.Turtle()&quot is what actually creates the turtle object.
-   :feedback_b: This line imports the module called turtle, which has all the built in functions for drawing on the screen with the Turtle object.
-   :feedback_c: This functionality is performed with the lines: &quotalex.forward(150)&quot, &quotlex.left(90)&quot, and &quotalex.forward(75)&quot
-   :feedback_d: If we leave it out, Python will give an error saying that it does not know about the name &quotturtle&quot when it reaches the line &quotwn = turtle.Screen()&quot
+   :feedback_a: La línea &quotalex = turtle.Turtle()&quot es lo que realmente crea el objeto tortuga.
+   :feedback_b: Tsu línea importa el módulo llamado tortuga, que tiene todas las funciones integradas para dibujar en la pantalla con el objeto Tortuga.
+   :feedback_c: Esta funcionalidad se realiza con las líneas: &quotalex.forward(150)&quot, &quotlex.left(90)&quot, and &quotalex.forward(75)&quot
+   :feedback_d: Si lo dejamos afuera, Python dará un error diciendo que no conoce el nombre &quotturtle&quot cuando llega a la línea &quotwn = turtle.Screen()&quot
 
-   Consider the following code:
+   Considera el siguiente código:
 
    .. code-block:: python
 
@@ -209,27 +203,27 @@ screen until we click on it.
      alex.left(90)
      alex.forward(75)
 
-   What does the line "import turtle" do?
+   ¿Qué hace la línea "importar tortuga"?
 
 .. mchoice:: question3_2_3
-   :answer_a: This is simply for clarity.  It would also work to just type "Turtle()" instead of "turtle.Turtle()".
-   :answer_b: The period (.) is what tells Python that we want to invoke a new object.
-   :answer_c: The first "turtle" (before the period) tells Python that we are referring to the turtle module, which is where the object "Turtle" is found.
+   :answer_a: Testo es simplemente por claridad. También funcionaría simplemente escribiendo "Turtle()" en lugar de "turtle.Turtle()".
+   :answer_b: El punto (.) Es lo que le dice a Python que queremos invocar un nuevo objeto.
+   :answer_c: La primera "tortuga" (antes del punto) le dice a Python que nos estamos refiriendo al módulo de tortuga, que es donde se encuentra el objeto "Tortuga".
    :correct: c
-   :feedback_a: We must specify the name of the module where Python can find the Turtle object.
-   :feedback_b: The period separates the module name from the object name.  The parentheses at the end are what tell Python to invoke a new object.
-   :feedback_c: Yes, the Turtle type is defined in the module turtle.  Remember that Python is case sensitive and Turtle is different from turtle.
+   :feedback_a: Debemos especificar el nombre del módulo donde Python puede encontrar el objeto Turtle.
+   :feedback_b: El punto separa el nombre del módulo del nombre del objeto. Los paréntesis al final son los que le dicen a Python que invoque un nuevo objeto.
+   :feedback_c: Sí, el tipo de tortuga se define en el módulo tortuga. Recuerde que Python distingue entre mayúsculas y minúsculas y Turtle es diferente de la tortuga.
 
-   Why do we type ``turtle.Turtle()`` to get a new Turtle object?
+   ¿Por qué escribimos ``turtle.Turtle()`` para obtener un nuevo objeto Turtle?
 
 .. mchoice:: question3_2_4
-   :answer_a: True
-   :answer_b: False
+   :answer_a: Verdadero
+   :answer_b: Falso
    :correct: a
-   :feedback_a: In this chapter you saw one named alex and one named tess, but any legal variable name is allowed.
-   :feedback_b: A variable, including one referring to a Turtle object, can have whatever name you choose as long as it follows the naming conventions from Chapter 2.
+   :feedback_a: En este capítulo viste uno llamado alex y otro llamado tess, pero se permite cualquier nombre de variable legal.
+   :feedback_b: Una variable, incluida una que se refiere Turtle, puede tener el nombre que elija siempre y cuando siga las convenciones de nomenclatura del Capítulo 2.
 
-   True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.
+   Verdadero o Falso: Un objeto Turtle puede tener cualquier nombre que siga las reglas de nomenclatura del Capítulo 2.
 
 .. mchoice:: question3_2_5
    :answer_a: <img src="../_static/test1Alt1.png" alt="right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long">
@@ -238,22 +232,22 @@ screen until we click on it.
    :answer_d: <img src="../_static/test1Alt4v2.png" alt="right turn of 270 degrees before drawing, draw a line 150 pixels long, turn right 90, and draw a line 75 pixels long">
    :answer_e: <img src="../_static/test1correct.png" alt="left turn of 90 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long">
    :correct: e
-   :feedback_a: This code would turn the turtle to the south before drawing
-   :feedback_b: This code would turn the turtle to the west before drawing
-   :feedback_c: This code would turn the turtle to the south before drawing
-   :feedback_d: This code is almost correct, but the short end would be facing east instead of west.
-   :feedback_e: Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.
+   :feedback_a: Este código giraría la tortuga hacia el sur antes de dibujar
+   :feedback_b: Este código giraría la tortuga hacia el oeste antes de dibujar
+   :feedback_c: Este código giraría la tortuga hacia el sur antes de dibujar
+   :feedback_d: Este código es casi correcto, pero el extremo corto estaría orientado hacia el este en lugar de hacia el oeste.
+   :feedback_e: Sí, la tortuga comienza a mirar hacia el este, por lo que para girarla hacia el norte puede girar a la izquierda 90 o derecha 270 grados.
 
-   Which of the following code would produce the following image?
+   ¿Cuál de los siguientes códigos produciría la siguiente imagen?
 
    .. image:: Figures/turtleTest1.png
       :alt: long line to north with shorter line to west on top
 
-**Mixed up programs**
+**Programas mezclados**
 
 .. parsonsprob:: pp3_3_4
 
-   The following program uses a turtle to draw a capital L in white on a blue background as shown to the left, <img src="../_static/BlueTurtleL.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a letter L drawn by Turtle."/> but the lines are mixed up. The program should do all necessary set-up and create the turtle and set the pen size to 10. The turtle should then turn to face south, draw a line that is 150 pixels long, turn to face east, and draw a line that is 75 pixels long. Finally, set the window to close when the user clicks in it. <br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa usa una tortuga para dibujar una L mayúscula en blanco sobre un fondo azul como se muestra a la izquierda, <img src="../_static/BlueTurtleL.png" width="150" align="left" hspace="10" vspace="5" alt="image of a navigational compass and a letter L drawn by Turtle."/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria y crear la tortuga y establecer el tamaño del corral en 10. La tortuga debe girar hacia el sur, dibujar una línea de 150 píxeles de largo, girar hacia el este y dibujar una línea que sea 75 píxeles de largo. Finalmente, configure la ventana para que se cierre cuando el usuario haga clic en ella.<br /><br /><p>Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tienes razón Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    wn = turtle.Screen()
@@ -273,7 +267,7 @@ screen until we click on it.
 
 .. parsonsprob:: pp3_2_5
 
-   The following program uses a turtle to draw a capital T in white on a green background as shown to the left, <img src="../_static/TurtleT.png" width="150" align="left" hspace="10" vspace="5" alt="image of a letter T drawn by Turtle."/> but the lines are mixed up. The program should do all necessary set-up, create the turtle, and set the pen size to 10. After that the turtle should turn to face north, draw a line that is 150 pixels long, turn to face west, and draw a line that is 50 pixels long. Next, the turtle should turn 180 degrees and draw a line that is 100 pixels long. Finally, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa usa una tortuga para dibujar una T mayúscula en blanco sobre un fondo verde como se muestra a la izquierda, <img src="../_static/TurtleT.png" width="150" align="left" hspace="10" vspace="5" alt="image of a letter T drawn by Turtle."/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria, crear la tortuga y establecer el tamaño de la pluma en 10. Después de eso, la tortuga debe girar hacia el norte, dibujar una línea de 150 píxeles de largo, girar hacia el oeste y dibujar una línea eso es 50 píxeles de largo. Luego, la tortuga debe girar 180 grados y dibujar una línea de 100 píxeles de largo. Finalmente, configure la ventana para que se cierre cuando el usuario haga clic en ella.<br /><br /><p>Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tienes razón Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    wn = turtle.Screen()
