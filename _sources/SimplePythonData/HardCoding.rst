@@ -14,26 +14,26 @@
 👩‍💻 Hard-Coding
 -----------------
 
-As you begin programming, you'll see that there are many ways to solve problems. You'll also find that one of the thrills 
-of programming is how easily you can do things correctly that humans could easily make errors on. For example, you'll 
-learn how to write just a very small bit of code to find the 1047th character in a sentence that might be thousands of 
-letters long, and you'll learn how to do the exact same computation on many different pieces of data.
+Cuando comience a programar, verá que hay muchas formas de resolver problemas. También encontrará que una de las emociones
+de programación es la facilidad con la que puedes hacer cosas correctamente en las que cualquiera podría cometer errores fácilmente. Por ejemplo,
+crear un código muy pequeño para encontrar el carácter 1047 en una oración que podría ser miles de
+letras, aprenderá cómo hacer exactamente el mismo cálculo con muchos datos diferentes.
 
-We'll often tell you in this textbook *not to hard-code* answers. What does that mean?
+A menudo le diremos en este libro de texto *no implemente hard-code* para las respuestas. Qué significa eso?
 
-Some things in programming you can only do by typing them out. As you've seen, when you have to assign a value to a 
-variable, you simply type something like ``xyz = 6``. No other way.
+Algunas cosas en la programación solo se pueden hacer escribiéndolas. Como has visto, cuando tienes que asignar un valor a una
+variable, simplemente escribe algo como ``xyz = 6``. Ninguna otra manera.
 
-But in most cases, it's best not to do computation in your head or write complete answers to programming problems out by 
-hand. That's where **hard-coding** comes in. "Don't hard code" basically means, you should rely on your code, your logic, 
-your program, and you should *not* write things out by hand or do computation in your head -- even if you can do so easily.
+Pero en la mayoría de los casos, es mejor no hacer cálculos en su cabeza o escribir respuestas completas a los problemas de programación a
+mano. Ahí es donde entra **Hard Coding**. "No codificar" básicamente significa que debe confiar en su código, su lógica,
+su programa, y usted *no* debería escribir las cosas a mano o hacer cálculos en su cabeza, incluso si puede hacerlo fácilmente.
 
-When you are writing code or working on the answer to a programming exericse, you should ask yourself: *Would my answer be 
-correct even if the provided variables had different values?* If the answer to that question is no, you're probably hard-
-coding, which you should avoid -- and there's probably at least a slightly more concise way to construct your answer! 
+Cuando esté escribiendo código o trabajando en la respuesta a un ejercicio de programación, debe preguntarse: *¿Mi respuesta sería
+correcta incluso si las variables proporcionadas tienen valores diferentes?* Si la respuesta a esa pregunta es no, probablemente sea
+Hard Coding, que debe evitar, ¡y probablemente haya al menos una forma un poco más concisa de construir su respuesta!
 
-For example, in this following code, if you're asked in an exercise to create a variable ``zx`` and assign it the value of 
-the sum of the value of ``y`` and the value of ``x``, writing ``zx = 55`` is *hard-coding*. 
+Por ejemplo, en este código siguiente, si se le pide en un ejercicio que cree una variable ``zx`` y le asigne el valor de
+la suma del valor de ``y`` y el valor de ``x``, escribiendo ``zx = 55`` es *hard-coding*.
 
 .. actex:: hard_coding_example
    
@@ -41,17 +41,17 @@ the sum of the value of ``y`` and the value of ``x``, writing ``zx = 55`` is *ha
    y = 35
    abc = 62
 
-The operation ``20 + 35`` may be easy math to do in your head or with a calculator, but when you learn to program, you 
-want to train yourself to notice useful patterns of how to solve problems, which will make your life easier (perhaps 
-beyond programming, even).
+La operación ``20 + 35`` puede ser matemática fácil de hacer en su cabeza o con una calculadora, pero cuando aprende a programar, usted
+debe capacitarse para notar patrones útiles de cómo resolver problemas que le facilitarán la vida (quizás
+más allá de la programación, incluso).
 
-The correct way to answer that sort of exercise would be to write: ``zx = y + x`` (or ``zx = x + y``, as you were just 
-reminded of the order of operations). That is not hard-coding, and it will be correct no matter what the values of ``x`` 
-and ``y`` are.
+La forma correcta de responder a ese tipo de ejercicio sería escribir: ``zx = y + x`` (o ``zx = x + y``, ya que simplemente
+recordó el orden de las operaciones). Eso no es  hard-coding, y será correcto sin importar que valores de ``x``
+e ``y`` sean.
 
-In the code above, if the value of ``x`` were ``40``, ``55`` would not be the correct value for ``zx`` to have. But 
-``zx = y + x`` would still be absolutely correct. 
+En el código anterior, si el valor de ``x`` fuera ``40``, ``55`` no sería el valor correcto para ``zx``. Pero
+``zx = y + x`` aún sería absolutamente correcto.
 
-Try as much as you can not to rely on your brilliant but fallible human brain to do *computation* when you program -- use 
-your brain to determine how to write the correct code to solve the problem for you! That's why we require you to avoid hard
--coding for most exercises in this book.
+Intente todo lo que pueda para no confiar en su brillante pero falible cerebro humano para hacer *código* cuando programe -- use
+¡su cerebro para determinar cómo escribir el código correcto para resolver el problema por ti! Es por eso que le pedimos que evite
+el hard-coding para la mayoría de los ejercicios en este libro.
