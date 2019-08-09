@@ -11,124 +11,117 @@
    :prefix: intro-11-
    :start: 1
 
-Glossary
+Glosario
 --------
 
 .. glossary::
 
     activecode
-        A unique interpreter environment that allows Python to be executed from within a web browser.
+        Un entorno de intérprete único que permite que Python se ejecute desde un navegador web..
 
-    algorithm
-        A general step by step process for solving a problem.
+    algoritmo
+        Un proceso general paso a paso para resolver un problema.
 
     bug
-        An error in a program.
+        Un error en un programa.
 
     byte code
-        An intermediate language between source code and object code. Many
-        modern languages first compile source code into byte code and then
-        interpret the byte code with a program called a *virtual machine*.
+        Un lenguaje intermedio entre el código fuente y el código objeto. Muchos de los
+        lenguajes modernos primero compilan el código fuente en byte code y luego
+        interpreta el byte code con un programa llamado *máquina virtual*.
 
     codelens
-        An interactive environment that allows the user to control the step by step execution of a Python program
+        Un entorno interactivo que permite al usuario controlar la ejecución paso a paso de un programa Python
 
-    comment
-        Information in a program that is meant for other programmers (or anyone
-        reading the source code) and has no effect on the execution of the
-        program.
+    comentario
+        Información en un programa destinado a otros programadores (o cualquier persona
+        que lea el código fuente) y no tiene ningún efecto en la ejecución del programa.
 
-    compile
-        To translate a program written in a high-level language into a
-        low-level language all at once, in preparation for later execution.
+    compilar
+        Traducir un programa escrito en un lenguaje de alto nivel a un
+        lenguaje de bajo nivel de una vez, en preparación para su posterior ejecución.
 
-    debugging
-        The process of finding and removing any of the three kinds of
-        programming errors.
+    depuración
+        El proceso de encontrar y eliminar cualquiera de los tres tipos de
+        errores de programación
 
-    exception
-        Another name for a runtime error.
+    excepción
+        Otro nombre para un error de tiempo de ejecución.
 
-    executable
-        Another name for object code that is ready to be executed.
+    ejecutable
+        Otro nombre para el código objeto que está listo para ejecutarse.
 
-    formal language
-        Any one of the languages that people have designed for specific
-        purposes, such as representing mathematical ideas or computer programs;
-        all programming languages are formal languages.
+    lenguaje formal
+        Cualquiera de los idiomas que las personas han diseñado para
+        propósitos, tales como representar ideas matemáticas o programas de computadora;
+        Todos los lenguajes de programación son lenguajes formales.
 
-    high-level language
-        A programming language like Python that is designed to be easy for
-        humans to read and write.
+    Lenguaje de alto nivel
+        Un lenguaje de programación como Python que está diseñado para ser fácil para
+        humanos para leer y escribir.
 
-    interpret
-        To execute a program in a high-level language by translating it one
-        line at a time.
+    interpretar
+        Para ejecutar un programa en un lenguaje de alto nivel traduciéndolo
+        línea a la vez.
 
-    low-level language
-        A programming language that is designed to be easy for a computer to
-        execute; also called machine language or assembly language.
+    lenguaje de bajo nivel
+        Un lenguaje de programación diseñado para que sea fácil de ejecutar para una computadora;
+        también llamado lenguaje de máquina o lenguaje ensamblador.
 
-    natural language
-        Any one of the languages that people speak that evolved naturally.
+    lenguaje natural
+        Cualquiera de los idiomas que habla la gente que evolucionó naturalmente.
 
     object code
-        The output of the compiler after it translates the program.
+        La salida del compilador después de traducir el programa.
 
     parse
-        To examine a program and analyze the syntactic structure.
+        Examinar un programa y analizar la estructura sintáctica.
 
-    portability
-        A property of a program that can run on more than one kind of computer.
+    portabilidad
+        Una propiedad de un programa que hace que pueda ejecutarse en más de un tipo de computadora.
 
-    print function
-        A function used in a program or script that causes the Python
-        interpreter to display a value on its output device.
+    función print
+        Una función utilizada en un programa o script que hace que el intérprete de Python
+        muestre un valor en su dispositivo de salida.
 
-    problem solving
-        The process of formulating a problem, finding a solution, and
-        expressing the solution.
+    resolución de problemas
+        El proceso de formular un problema, encontrar una solución y expresando la solución.
 
-    program
-        A sequence of instructions that specifies to a computer actions and
-        computations to be performed.
+    programa
+        Una secuencia de instrucciones que especifica las acciones de una computadora y Cálculos a realizar.
 
-    programming language
-        A formal notation for representing solutions.
+    lenguaje de programación
+        Una notación formal para representar soluciones.
 
     Python shell
-        An interactive user interface to the Python interpreter. The user of a
-        Python shell types commands at the prompt (>>>), and presses the return
-        key to send these commands immediately to the interpreter for
-        processing.
+        Una interfaz de usuario interactiva para el intérprete de Python. El usuario de un
+        Python shell escribe comandos en el indicador (>>>) y presiona el botón de retorno
+        *bontón enter* para enviar estos comandos inmediatamente al intérprete para su tratamiento.
 
-    runtime error
-        An error that does not occur until the program has started to execute
-        but that prevents the program from continuing.
+    Error de tiempo de ejecución
+        Un error que no ocurre hasta que el programa ha comenzado a ejecutarse
+        pero eso evita que el programa continúe.
 
-    semantic error
-        An error in a program that makes it do something other than what the
-        programmer intended.
+    error semántico
+        Un error en un programa que hace que haga algo diferente a lo que el programador previó.
 
-    semantics
-        The meaning of a program.
+    semántica
+        El significado de un programa.
 
     shell mode
-        A style of using Python where we type expressions at the command
-        prompt, and the results are shown immediately.  Contrast with
-        **source code**, and see the entry under **Python shell**.
+        Un estilo de usar Python donde escribimos expresiones en la consola de comandos
+        y los resultados se muestran de inmediato.
+        Contrastar con **código fuente**, y vea la entrada en **Python shell**.
 
-    source code
-        A program, stored in a file, in a high-level language before being compiled or interpreted.
+    código fuente
+        Un programa, almacenado en un archivo, en un lenguaje de alto nivel antes de ser compilado o interpretado.
 
-    syntax
-        The structure of a program.
+    sintaxis
+        La estructura de un programa.
 
-    syntax error
-        An error in a program that makes it impossible to parse --- and
-        therefore impossible to interpret.
+    error de sintaxis
+        Un error en un programa que lo hace imposible de analizar --- y por lo tanto imposible de interpretar.
 
     token
-        One of the basic elements of the syntactic structure of a program,
-        analogous to a word in a natural language.
-
+        Uno de los elementos básicos de la estructura sintáctica de un programa,
+        análogo a una palabra en un lenguaje natural.
