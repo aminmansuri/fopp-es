@@ -11,157 +11,154 @@
    :prefix: data-17-
    :start: 1
 
-Glossary
---------
+Glosario
+---------
 
 .. glossary::
 
-    assignment statement
-        A statement that assigns a value to a name (variable). To the left of
-        the assignment operator, ``=``, is a name. To the right of the
-        assignment token is an expression which is evaluated by the Python
-        interpreter and then assigned to the name. The difference between the
-        left and right hand sides of the assignment statement is often
-        confusing to new programmers. In the following assignment:
+    sentencia de asignación
+        Una declaración que asigna un valor a un nombre (variable). A la izquierda de
+        el operador de asignación, ``=``, es un nombre, a la derecha del
+        token de asignación es una expresión que es evaluada porel intérprete de
+        Python y luego asignado al nombre. Las diferencias entre
+        los lados izquierdo y derecho de la declaración de asignación son a menudo
+        confuso para los nuevos programadores. En la siguiente tarea:
 
         .. sourcecode:: python
 
              n = n + 1
 
-        ``n`` plays a very different role on each side of the ``=``. On the
-        right it is a *value* and makes up part of the *expression* which will
-        be evaluated by the Python interpreter before assigning it to the name
-        on the left.
+        ``n`` juega un papel muy diferente en cada lado del ``=``. En el
+        lado derecho es un *valor* y forma parte de la *expresión* que
+        será evaluada por el intérprete de Python antes de asignarlo al nombre
+        a la izquierda.
 
-    assignment token
-        ``=`` is Python's assignment token, which should not be confused
-        with the mathematical comparison operator using the same symbol.
+    símbolo de asignación
+        ``=`` es el token *ficha* de asignación de Python, que no debe confundirse
+        con el operador de comparación matemática usando el mismo símbolo.
 
-    boolean expression
-        An expression that is either true or false.
+    expresión booleana
+        Una expresión que es verdadera o falsa.
 
-    boolean value
-        There are exactly two boolean values: ``True`` and ``False``. Boolean
-        values result when a boolean expression is evaluated by the Python
-        interepreter.  They have type ``bool``.
+    valor booleano
+        Hay exactamente dos valores booleanos: ``Verdadero`` y ``Falso``.
+        Los valores  Booleanos resultan cuando el intérprete de Python
+        evalúa una expresión booleana. Tienen el tipo ``bool``.
 
-    class
-        see **data type** below
+    clase
+        ver **tipo de dato** a continuación
 
-    comment
-        Information in a program that is meant for other programmers (or anyone
-        reading the source code) and has no effect on the execution of the
-        program.
+    comentarios
+        Información en un programa destinado a otros programadores (o cualquier persona
+        leer el código fuente) y no tiene ningún efecto en la ejecución del
+        programa.
 
-    data type
-        A set of values. The type of a value determines how it can be used in
-        expressions. So far, the types you have seen are integers (``int``),
-        floating-point numbers (``float``), and strings (``str``).
+    Tipo de dato
+        Un conjunto de valores. El tipo de un valor determina cómo se puede usar en
+        expresiones. Hasta ahora, los tipos que hemos visto son enteros (``int``),
+        números de punto flotante (``float``) y cadenas (``str``).
 
-    decrement
-        Decrease by 1.
+    decremento
+        Disminuir en 1.
 
-    evaluate
-        To simplify an expression by performing the operations in order to
-        yield a single value.
+    evaluar
+        Para simplificar una expresión realizando las operaciones para
+        rendir un solo valor.
 
-    expression
-        A combination of operators and operands (variables and values) that represents a
-        single result value.  Expressions are evaluated to give that result.
+    expresión
+        Una combinación de operadores y operandos (variables y valores) que representa un
+        valor de resultado único. Las expresiones se evalúan para dar ese resultado.
 
     float
-        A Python data type which stores *floating-point* numbers.
-        Floating-point numbers are stored internally in two parts: a *base* and
-        an *exponent*. When printed in the standard format, they look like
-        decimal numbers. Beware of rounding errors when you use ``float``\ s,
-        and remember that they are only approximate values.
+        Un tipo de datos de Python que almacena números *de punto flotante*.
+        Los números de coma flotante se almacenan internamente en dos partes: una *base* y
+        un *exponente*. Cuando se imprimen en el formato estándar, se ven como
+        numeros decimales. Tenga cuidado con los errores de redondeo cuando usa ``float``,
+        y recuerda que son solo valores aproximados.
 
-    increment
-        Both as a noun and as a verb, increment means to increase by 1.
+    incrementar
+        Tanto como sustantivo como como verbo, incremento significa aumentar en 1.
 
-    initialization (of a variable)
-        To initialize a variable is to give it an initial value.
-        Since in Python variables don't exist
-        until they are assigned values, they are initialized when they are
-        created.  In other programming languages this is not the case, and
-        variables can be created without being initialized, in which case they
-        have either default or *garbage* values.
+    inicialización (of a variable)
+        Inicializar una variable es darle un valor inicial.
+        Dado que en Python las variables no existen
+        hasta que se les asignen valores, se inicializan cuando son
+        creados. En otros lenguajes de programación este no es el caso, y
+        las variables se pueden crear sin inicializarse, en cuyo caso
+        tener valores predeterminados o *basura*.
 
     int
-        A Python data type that holds positive and negative **whole** numbers.
+        Un tipo de datos de Python que contiene números positivos y negativos **enteros**.
 
-    integer division
-        An operation that divides one integer by another and yields an integer.
-        Integer division yields only the whole number of times that the
-        numerator is divisible by the denominator and discards any remainder.
+    división entera
+        Una operación que divide un número entero por otro y produce un número entero.
+        La división entera produce solo el número entero de veces que
+        el numerador es divisible por el denominador y descarta cualquier resto.
 
-    keyword
-        A reserved word that is used by the compiler to parse program; you
-        cannot use keywords like ``if``, ``def``, and ``while`` as variable
-        names.
+    palabra clave
+        Una palabra reservada que utiliza el compilador para analizar el programa; tú
+        no puedes usar palabras clave como ``if``, ``def`` y ``while`` como nombres de
+        variables
 
     literal
-        A number or string that is written directly in a program. Sometimes these are also referred to as literal values, or just values, but be careful not to confuse a literal value as written in a program with an internal value maintained by the Python interpreter during execution of a program.
+        Un número o cadena que se escribe directamente en un programa. A veces, estos también se conocen como valores literales, o simplemente valores, pero tenga cuidado de no confundir un valor literal como está escrito en un programa con un valor interno mantenido por el intérprete de Python durante la ejecución de un programa.
         
-    logical operator
-        One of the operators that combines boolean expressions: ``and``,
-        ``or``, and ``not``.
+    operador lógico
+        Uno de los operadores que combina expresiones booleanas: ``and``,
+        ``or``, y ``not``.
 
-    modulus operator
-        An operator, denoted with a percent sign ( ``%``), that works on
-        integers and yields the remainder when one number is divided by
-        another.
+    operador módulo
+        Un operador, denotado con un signo de porcentaje (``%``), que funciona en
+        enteros y produce el resto cuando un número se divide por otro.
 
-    object
-        Also known as a data object (or data value).  The fundamental things that programs are designed to
-        manipulate (or that programmers ask to do things for them).
+    objeto
+        También conocido como un objeto de datos (o valor de datos). Las cosas fundamentales que los programas están diseñados para
+        manipular (o que los programadores pidan hacer cosas por ellos).
 
-    operand
-        One of the values on which an operator operates.
+    operando
+        Uno de los valores en los que opera un operador.
 
-    operator
-        A special symbol that represents a simple computation like addition,
-        multiplication, or string concatenation.
+    operador
+        Un símbolo especial que representa un cálculo simple como la suma,
+        multiplicación o concatenación de cuerdas.
 
     prompt string
-        Used during interactive input to provide the use with hints as to what type of value to enter.
+        Se usa durante la entrada interactiva para proporcionar al uso pistas sobre qué tipo de valor ingresar.
 
-    reference diagram
-        A picture showing a variable with an arrow pointing to the value (object) that the variable refers to. See also **state snapshot**.
+    diagrama de referencia
+        Una imagen que muestra una variable con una flecha apuntando al valor (objeto) al que se refiere la variable. Ver también **instantánea de estado**.
 
-    rules of precedence
-        The set of rules governing the order in which expressions involving
-        multiple operators and operands are evaluated.
+    reglas de precedencia
+        El conjunto de reglas que rigen el orden en que las expresiones que involucran
+        Se evalúan múltiples operadores y operandos.
 
-    state snapshot
-        A graphical representation of a set of variables and the values to
-        which they refer, taken at a particular instant during the program's
-        execution.
+    instantánea del estado
+        Una representación gráfica de un conjunto de variables y los valores para
+        que refieren, tomadas en un instante particular durante el programaejecución.
 
-    statement
-        An instruction that the Python interpreter can execute.  So far we have
-        only seen the assignment statement, but we will soon meet the
-        ``import`` statement and the ``for`` statement.
+    declaración
+        Una instrucción que el intérprete de Python puede ejecutar. Hasta ahora tenemos
+        solo vi la declaración de asignación, pero pronto conoceremos el
+        declaración ``import`` y la declaración ``for``.
 
     str
-        A Python data type that holds a string of characters.
+        Un tipo de datos de Python que contiene una cadena de caracteres.
 
-    type conversion function
-        A function that can convert a data value from one type to another.
+    función de conversión de tipo
+        Una función que puede convertir un valor de datos de un tipo a otro.
 
-    value
-        A number or string (or other things to be named later) that can be
-        stored in a variable or computed in an expression.
+    valor
+        Un número o cadena (u otras cosas que se nombrarán más adelante) que pueden ser
+        almacenado en una variable o calculado en una expresión.
 
     variable
-        A name that refers to a value.
+        Un nombre que se refiere a un valor.
 
-    variable name
-        A name given to a variable. Variable names in Python consist of a
-        sequence of letters (a..z, A..Z, and _) and digits (0..9) that begins
-        with a letter.  In best programming practice, variable names should be
-        chosen so that they describe their use in the program, making the
-        program *self documenting*.
+    nombre de variable
+        Un nombre dado a una variable. Los nombres de variables en Python consisten en un
+        secuencia de letras (a..z, A..Z y _) y dígitos (0..9) que comienza
+        con una carta en la mejor práctica de programación, los nombres de las variables deben ser
+        elegidos para que describan su uso en el programa, haciendo que el programa esté *autodocumentado*.
 
 
 
