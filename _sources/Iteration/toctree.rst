@@ -1,8 +1,8 @@
-Iteration
+Iteración
 :::::::::
 
 .. toctree::
-   :caption: Iteration
+   :caption: Iteración
    :maxdepth: 2
 
    intro-Iteration.rst

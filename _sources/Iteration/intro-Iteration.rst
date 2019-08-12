@@ -11,24 +11,33 @@
    :prefix: iter-1-
    :start: 1
 
-Introduction: Iteration
+Introdución: Iteración
 =======================
 
-A basic building block of all programs is to be able to repeat some code
-over and over again.  Whether it is updating the bank balances of millions of customers each night, or sending email messages to thousands of people programming involves instructing the computer to do many repetitive actions. In computing, we refer to this repetitive execution as **iteration**.  In this section, we will explore some mechanisms for basic iteration.
+Un componente básico de todos los programas es poder repetir algún código una y otra vez.
+Si está actualizando los saldos bancarios de millones de clientes cada noche, o enviando mensajes
+de correo electrónico a miles de personas, la programación implica instruir a la computadora para
+que realice muchas acciones repetitivas. En informática, nos referimos a esta ejecución repetitiva
+como **iteración**. En esta sección, exploraremos algunos mecanismos para la iteración básica.
 
-With collections (lists and strings), a lot of computations involve processing one item at a time. For strings, this means that we would like to process one character at a time. Often we start at the beginning, select each character in turn, do something to it, and continue until the end. For example, we could take each character and substitute for the character 13 characters away in the alphabet to create a coded message. 
+Con las colecciones (listas y cadenas), muchos cálculos implican procesar un elemento a la vez.
+Para las cadenas, esto significa que nos gustaría procesar un carácter a la vez. A menudo comenzamos
+desde el principio, seleccionamos cada personaje por turno, hacemos algo y continuamos hasta el final.
+Por ejemplo, podríamos quitar cada carácter y sustituir el carácter a 13 caracteres del alfabeto para
+crear un mensaje codificado.
 
-This pattern of processing is called a traversal, or iteration over the characters. Similarly, we can process each of the items in a list, one at a time, iterating over the items in the list. This has applications in every piece of software you can imagine:
+Este patrón de procesamiento se denomina recorrido o iteración sobre los caracteres. Del mismo modo,
+podemos procesar cada uno de los elementos de una lista, uno a la vez, iterando sobre los elementos de
+la lista. Esto tiene aplicaciones en cada pieza de software que puedas imaginar:
 
-* Displaying a list of friends on SnapChat
-* Updating the position of every character on the screen of a video game
-* Displaying the locations that Doctors Without Borders operates in 
-
-
-.. Iteration Simplifies our Turtle Program
-.. Add “here’s what we can do with turtle now, if we use iteration”; borrow from thinkcspy
+* Visualización de una lista de amigos en SnapChat
+* Actualización de la posición de cada personaje en la pantalla de un videojuego
+* Visualización de las ubicaciones en las que opera Médicos sin Fronteras
 
 
-.. To draw a square we’d like to do the same thing four times — move the turtle forward some distance and turn 90 degrees. We previously used 8 lines of Python code to have alex draw the four sides of a square. This next program does exactly the same thing but, with the help of the for statement, uses just three lines (not including the setup code). Remember that the for statement will repeat the forward and left four times, one time for each value in the list.
+.. La iteración Simplifica nuestro programa en Turtle
+.. Agrega “Esto es lo que podemos hacer con la tortuga ahora, si usamos iteración”; prestado de thinkcspy
+
+
+.. Para dibujar un cuadrado, nos gustaría hacer lo mismo cuatro veces: mover la tortuga hacia delante un poco y girar 90 grados. Anteriormente utilizamos 8 líneas de código Python para que alex dibujara los cuatro lados de un cuadrado. El siguiente programa hace exactamente lo mismo pero, con la ayuda de la instrucción for, usa solo tres líneas (sin incluir el código de configuración). Recuerde que la instrucción for repetirá el reenvío y la izquierda cuatro veces, una vez para cada valor de la lista.
 

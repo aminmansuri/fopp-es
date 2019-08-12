@@ -14,7 +14,7 @@
 .. index:: for loop, iteration, body 
    loop; for
 
-The **for** Loop
+El bucle **for**
 ----------------
 
 .. video:: forloopvid
@@ -25,18 +25,18 @@ The **for** Loop
    http://media.interactivepython.org/thinkcsVideos/for_loop.webm
 
 
-Back when we drew the images with turtle it could be quite tedious. If we wanted to draw a square 
-then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon, 
-or an octagon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.
+Cuando dibujamos las imágenes con tortuga, podría ser bastante tedioso. Si quisiéramos dibujar un cuadrado
+luego tuvimos que movernos, girar, mover, girar, etc., etc. cuatro veces. Si estuviéramos dibujando un hexágono,
+o un octágono, o un polígono con 42 lados, habría sido una pesadilla duplicar todo ese código.
 
-A basic building block of all programs is to be able to repeat some code over and over again. We 
-refer to this repetitive idea as **iteration**. In this section, we will explore some mechanisms for 
-basic iteration.
+Un componente básico de todos los programas es poder repetir un código una y otra vez. Nosotros
+refiérase a esta idea repetitiva como **iteración**. En esta sección, exploraremos algunos mecanismos para
+iteración básica
 
-In Python, the **for** statement allows us to write programs that implement iteration. As a simple 
-example, let's say we have some friends, and we'd like to send them each an email inviting them to 
-our party. We don't quite know how to send email yet, so for the moment we'll just print a message 
-for each friend.
+En Python, la declaración **for** nos permite escribir programas que implementan iteración. Como un simple
+ejemplo, digamos que tenemos algunos amigos, y nos gustaría enviarles un correo electrónico invitándolos a
+nuestra fiesta. Todavía no sabemos cómo enviar un correo electrónico, así que por el momento solo imprimiremos un mensaje
+para cada amigo
 
 .. activecode:: ac6_2_1
     :nocanvas:
@@ -46,29 +46,28 @@ for each friend.
         print("Hi", name, "Please come to my party on Saturday!")
 
 
-Take a look at the output produced when you press the ``run`` button. There is one line printed for 
-each friend. Here's how it works:
+Eche un vistazo a la salida producida cuando presiona el botón ``run``. Hay una línea impresa para
+cada amigo Así es como funciona:
 
 
-* **name** in this ``for`` statement is called the **loop variable** or, alternatively, the **iterator variable**.
-* The list of names in the square brackets is the sequence over which we will iterate.
-* Line 2  is the **loop body**.  The loop body is always
-  indented. The indentation determines exactly what statements are "in the
-  loop".  The loop body is performed one time for each name in the list.
-* On each *iteration* or *pass* of the loop, first a check is done to see if
-  there are still more items to be processed.  If there are none left (this is
-  called the **terminating condition** of the loop), the loop has finished.
-  Program execution continues at the next statement after the loop body.
-* If there are items still to be processed, the loop variable is updated to
-  refer to the next item in the list.  This means, in this case, that the loop
-  body is executed here 7 times, and each time ``name`` will refer to a different
-  friend.
-* At the end of each execution of the body of the loop, Python returns
-  to the ``for`` statement, to see if there are more items to be handled.
+* **name** en esta declaración ``for`` se llama **variable de bucle** o, como alternativa, **variable iteradora**.
+* La lista de nombres entre corchetes es la secuencia sobre la cual iteraremos.
+* La línea 2 es el **cuerpo del bucle**. El cuerpo del bucle siempre está
+  identado. La identación determina exactamente qué declaraciones están "dentro del bucle". El cuerpo del loop
+  se realiza una vez para cada nombre en la lista.
+  * En cada *iteración* o *vuelta* del bucle, primero se realiza una comprobación para ver si
+  Todavía hay más elementos para procesar. Si no queda ninguno (esto es
+  llamada la **condición de terminación** del bucle), el bucle ha terminado.
+  La ejecución del programa continúa en la siguiente declaración después del cuerpo del bucle.
+* Si todavía hay elementos por procesar, la variable de bucle se actualiza a
+  consulte el siguiente elemento de la lista. Esto significa, en este caso, que el bucle
+  El cuerpo se ejecuta aquí 7 veces, y cada vez que ``nombre`` se referirá a un nombre diferente amigo.
+* Al final de cada ejecución del cuerpo del bucle, Python regresa
+  a la declaración ``para``, para ver si hay más elementos para manejar.
 
 
-The overall syntax is ``for <loop_var_name> in <sequence>:``
+La sintaxis general es ``for <variable_iteradora> in <secuencia>:``
 
-* Between the words for and in, there must be a variable name for the loop variable. You can't put a whole expression there.
-* A colon is required at the end of the line
-* After the word in and before the colon is an expression that must evaluate to a sequence (e.g, a string or a list or a tuple). It could be a literal, or a variable name, or a more complex expression.
+* Entre las palabras for y in, debe haber un nombre de variable para la variable de bucle. No puedes poner una expresión completa allí.
+* Se requieren dos puntos al final de la línea
+* Después de la palabra dentro y antes de los dos puntos es una expresión que debe evaluarse en una secuencia (por ejemplo, una cadena o una lista o una tupla). Podría ser un literal, o un nombre de variable, o una expresión más compleja.
