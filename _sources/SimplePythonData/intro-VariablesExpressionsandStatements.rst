@@ -47,7 +47,7 @@ Metas de Aprendizaje
 * Para reconocer y explicar la codificación rígida
 
 
-Objeyivos
+Objetivos
 ----------
 
 * Dado un código de muestra, identifique las variables que hacen referencia a un objeto de un tipo particular
