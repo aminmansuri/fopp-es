@@ -13,10 +13,10 @@
 
 .. Week 1 Assessment 2
 
-Chapter Assessment
-------------------
+Evaluación de capítulos
+-----------------------
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: assess_ps_01_01
     :include: assess_addl_functions
@@ -24,7 +24,7 @@ Chapter Assessment
     :autograde: unittest
     :topics: SimplePythonData/FunctionCalls
 
-    There is a function we are providing in for you in this problem called ``square``. It takes one integer and returns the square of that integer value. Write code to assign a variable called ``xyz`` the value ``5*5`` (five squared). Use the square function, rather than just multiplying with ``*``.
+    Hay una función que le brindamos en este problema llamada ``square``. Toma un entero y devuelve el cuadrado de ese valor entero. Escriba el código para asignar una variable llamada ``xyz`` al valor ``5*5`` (cinco al cuadrado). Use la función square, en lugar de simplemente multiplicar con ``*``.
     ~~~~
     xyz = ""
 
@@ -35,9 +35,9 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
         def testOne(self):
-            self.assertEqual(type(xyz), type(3), "Checking type of xyz")
-            self.assertEqual(xyz, 25, "Checking if xyz is 25")
-            self.assertIn('square', self.getEditorText(), "Testing that 'square' is in your code. (Don't worry about Actual and Expected Values.)")
+            self.assertEqual(type(xyz), type(3), "Comprobando el tipo de xyz")
+            self.assertEqual(xyz, 25, "Comprobando si xyz es 25")
+            self.assertIn('square', self.getEditorText(), "Probar 'square' está en su código. (No se preocupe por los valores reales y esperados.)")
 
     myTests().main()
 
@@ -47,16 +47,16 @@ Chapter Assessment
     :practice: T
     :topics: SimplePythonData/StatementsandExpressions
 
-    Write code to assign the number of *characters* in the string ``rv`` to a variable ``num_chars``.
+    Escriba el código para asignar el número de *caracteres* en la cadena ``rv`` a una variable ``num_chars``.
     ~~~~
-    rv = """Once upon a midnight dreary, while I pondered, weak and weary,
-        Over many a quaint and curious volume of forgotten lore,
-        While I nodded, nearly napping, suddenly there came a tapping,
-        As of some one gently rapping, rapping at my chamber door.
-        'Tis some visitor, I muttered, tapping at my chamber door;
-        Only this and nothing more."""
+    rv = """Había una vez una triste media noche, mientras reflexionaba, débil y cansado,
+        Sobre muchos volúmenes pintorescos y curiosos de tradiciones olvidadas,
+        Mientras asentía, casi durmiendo la siesta, de repente se escuchó un golpeteo,
+        Como alguien golpeando suavemente, golpeando la puerta de mi habitación.
+        'Soy un visitante, murmuré, tocando la puerta de mi habitación;
+        Solo esto y nada más."""
 
-    # Write your code here!
+    # ¡Escribe tu código aquí!
 
     =====
 
@@ -65,40 +65,40 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
         def testOne(self):
-           self.assertEqual(num_chars, len(rv), "Testing that num_chars has been set to the length of rv")
+           self.assertEqual(num_chars, len(rv), "Prueba de que num_chars se ha establecido en la longitud de rv")
 
     myTests().main()
 
 
 .. mchoice:: assess_question1_1_1_3
    :multiple_answers:
-   :answer_a: a = len("hello worldwelcome!")
+   :answer_a: a = len("hola bienvenido")
    :answer_b: a = 11 + 8
    :answer_c: a = len(z) + len(y)
-   :answer_d: a = len("hello world") + len("welcome!")
-   :answer_e: none of the above are hardcoding.
-   :feedback_a: Though we are using the len function here, we are hardcoding what len should return the length of. We are not referencing z or y.
-   :feedback_b: This is hardcoding, we are writing in the value without referencing z or y.
-   :feedback_c: This is not considered hard coding. We are using the function len to determine the length of what is stored in z and y, which is a correct way to approach this problem.
-   :feedback_d: Though we are using the len function here, we are hardcoding what len should return the length of each time we call len. We are not referencing z or y.
-   :feedback_e: At least one of these solutions is considered hardcoding. Take another look.
+   :answer_d: a = len("hola mundo") + len("bienvenido!")
+   :answer_e: ninguno de los anteriores es hardcoding.
+   :feedback_a: Aunque estamos usando la función len aquí, estamos codificando que len debería devolver la longitud. No estamos haciendo referencia a z o y.
+   :feedback_b: Esto es hardcoding, estamos escribiendo el valor sin hacer referencia a z o y.
+   :feedback_c: Esto no se considera hard coding. Estamos utilizando la función len para determinar la longitud de lo que está almacenado en z e y, que es una forma correcta de abordar este problema.
+   :feedback_d: Aunque estamos usando la función len aquí, estamos codificando qué len debería devolver la longitud de cada vez que llamamos len. No estamos haciendo referencia a z o y.
+   :feedback_e: Al menos una de estas soluciones se considera hardcoding. Echa otro vistazo.
    :correct: a,b,d
    :practice: T
    :topics: SimplePythonData/StatementsandExpressions
 
-   The code below initializes two variables, ``z`` and ``y``. We want to assign the total number of characters in ``z`` and in ``y`` to the variable ``a``. Which of the following solutions, if any, would be considered hard coding?
+   El siguiente código inicializa dos variables, ``z`` e ``y``. Queremos asignar el número total de caracteres en ``z`` y en ``y`` a la variable ``a``. ¿Cuál de las siguientes soluciones, si hay alguna, se consideraría hard coding?
 
    .. sourcecode:: python
 
-    z = "hello world"
-    y = "welcome!"
+    z = "Hola Mundo"
+    y = "Bienvenido!"
 
 .. activecode:: assess_addl_functions
     :language: python
     :nopre:
     :hidecode:
 
-    (This is not an assessment question) The code below defines functions used by one of the questions above. Do not modify the code, but feel free to take a look.
+    (Esta no es una pregunta de evaluación) El siguiente código define las funciones utilizadas por una de las preguntas anteriores. No modifique el código, pero no dude en echar un vistazo.
 
     ~~~~
 
