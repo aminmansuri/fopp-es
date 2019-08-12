@@ -11,32 +11,32 @@
    :prefix: turtle-6-
    :start: 1
 
-Summary of Turtle Methods
--------------------------
+Resumen de los métodos de turtle
+---------------------------------
 
 ==========  ==========  =========================
-Method      Parameters  Description
+Método      Parametros  Descripción
 ==========  ==========  =========================
-Turtle      None          Creates and returns a new turtle object
-forward     distance      Moves the turtle forward
-backward    distance      Moves the turle backward
-right       angle         Turns the turtle clockwise
-left        angle         Turns the turtle counter clockwise
-up          None          Picks up the turtles tail
-down        None          Puts down the turtles tail
-color       color name    Changes the color of the turtle's tail
-fillcolor   color name    Changes the color of the turtle will use to fill a polygon
-heading     None          Returns the current heading
-position    None          Returns the current position
-goto        x,y           Move the turtle to position x,y
-begin_fill  None          Remember the starting point for a filled polygon
-end_fill    None          Close the polygon and fill with the current fill color
-dot         None          Leave a dot at the current position
-stamp       None          Leaves an impression of a turtle shape at the current location
-shape       shapename     Should be 'arrow', 'triangle', 'classic', 'turtle', 'circle', or 'square'
-speed       integer       0 = no animation, fastest; 1 = slowest; 10 = very fast
+Turtle      Ninguno       Crea y devuelve un nuevo objeto tortuga
+forward     distancia     Mueve la tortuga hacia adelante
+backward    distancia     Mueve la tortuga hacia atrás
+right       ángulo        Gira la tortuga en sentido horario
+left        ángulo        Gira la tortuga en sentido antihorario
+up          Ninguno       Levanta la cola de las tortugas
+down        Ninguno       Baja la cola de las tortugas
+color       color         Cambia el color de la cola de la tortuga
+fillcolor   color         Cambia el color de la tortuga que usará para llenar un polígono
+heading     Ninguno       Devuelve la orientación actual en grados
+position    Ninguno       Devuelve la posición actual
+goto        x,y           Mueve la tortuga a la posición x, y
+begin_fill  Ninguno       Recuerde el punto de partida para un polígono relleno
+end_fill    Ninguno       Cierre el polígono y rellene con el color de relleno actual.
+dot         Ninguno       Deja un punto en la posición actual
+stamp       Ninguno       Deja una impresión de la forma de una tortuga en la ubicación actual
+shape       Figura        Debe ser 'arrow', 'triangle', 'classic', 'turtle', 'circle', o 'square'
+speed       integer       0 = sin animation, más rápido; 1 = más despacio; 10 = muy rápido
 ==========  ==========  =========================
 
-Once you are comfortable with the basics of turtle graphics you can read about even
-more options on the `Python Docs Website <http://docs.python.org/dev/py3k/library/turtle.html>`_.  Note that we
-will describe Python Docs in more detail in the next chapter.
+Una vez que se sienta cómodo con los conceptos básicos de los gráficos de tortugas, puede leer incluso
+más opciones en `Python Docs Website <http://docs.python.org/dev/py3k/library/turtle.html>`_.  note que
+vamos a describir Python Docs con más detalle en el siguiente capítulo.
