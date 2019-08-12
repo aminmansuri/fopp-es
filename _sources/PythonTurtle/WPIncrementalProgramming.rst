@@ -11,39 +11,38 @@
    :prefix: turtle-8-
    :start: 1
 
-👩‍💻  Incremental Programming
+👩‍💻  Programación Incremental
 ===============================
 
-By now you've likely come across occasions where your code will be long or complex. If you 
-approach problems like this by writing out all the code and *then* running it, you'll likely
-find yourself frustrated by the debugging process. There are ways to make programming easier
-though!
+A estas alturas, es probable que haya encontrado ocasiones en las que su código será largo o complejo. Si tu
+aborde problemas como este escribiendo todo el código y *luego* ejecutándolo, probablemente
+se siente frustrado por el proceso de depuración. ¡Hay maneras de facilitar la programación!.
 
-1.  **Start Small**  This is probably the single biggest piece of advice for programmers at 
-every level. Of course it's tempting to sit down and crank out an entire program at once. But, 
-when the program -- inevitably -- does not work then you have a myriad of options for things 
-that might be wrong. Where to start? Where to look first? How to figure out what went wrong? 
-I'll get to that in the next section. So, start with something really small. Maybe just two 
-lines and then make sure that runs ok. Hitting the run button is quick and easy, and gives you 
-immediate feedback about whether what you have just done is ok or not. Another immediate 
-benefit of having something small working is that you have something to turn in. Turning in a 
-small, incomplete program, is almost always better than nothing.
+1. **Comience pequeño** Este es probablemente el consejo más importante para los programadores en
+todos los niveles. Por supuesto, es tentador sentarse y poner en marcha un programa completo a la vez. Pero,
+cuando el programa, inevitablemente, no funciona, entonces tienes una gran cantidad de opciones para las cosas
+eso podría estar mal. ¿Donde empezar? ¿Dónde mirar primero? ¿Cómo averiguar qué salió mal?
+Llegaré a eso en la siguiente sección. Entonces, comience con algo realmente pequeño. Tal vez solo dos
+líneas y luego asegúrese de que funciona bien. Pulsar el botón de correr es rápido y fácil, y te da
+retroalimentación inmediata sobre si lo que acaba de hacer está bien o no. Otro inmediato
+El beneficio de tener algo pequeño que funciona es que tiene algo que entregar.
+programa pequeño e incompleto, casi siempre es mejor que nada.
 
-2.  **Keep it working**  Once you have a small part of your program working the next step is 
-to figure out something small to add to it. If you keep adding small pieces of the program one 
-at a time, it is much easier to figure out what went wrong, as it is most likely that the 
-problem is going to be in the new code you have just added. Less new code means its easier to 
-figure out where the problem is.
+2. **Manténgalo funcionando** Una vez que tenga una pequeña parte de su programa trabajando, el siguiente paso es
+para descubrir algo pequeño para agregarle. Si sigues agregando pequeñas piezas del programa uno
+a la vez, es mucho más fácil descubrir qué salió mal, ya que lo más probable es que
+El problema va a estar en el nuevo código que acaba de agregar. Menos código nuevo significa que es más fácil
+averiguar dónde está el problema.
 
-This notion of **Get something working and keep it working** is a mantra that you can repeat 
-throughout your career as a programmer. It's a great way to avoid the frustrations mentioned 
-above. Think of it this way. Every time you have a little success, your brain releases a tiny 
-bit of chemical that makes you happy. So, you can keep yourself happy and make programming 
-more enjoyable by creating lots of small victories for yourself.
+Esta noción de **Hacer que algo funcione y mantenerlo funcionando** es un mantra que puedes repetir
+a lo largo de tu carrera como programador. Es una excelente manera de evitar las frustraciones mencionadas
+encima. Piénsalo de esta manera. Cada vez que tienes un poco de éxito, tu cerebro libera un pequeño
+Un poco de químico que te hace feliz. Entonces, puedes mantenerte feliz y hacer programación
+más agradable creando muchas pequeñas victorias para ti.
 
-Below we have already started to build a house. To practice incremental programming, try drawing 
-the rest of the house. Each time you draw something new on the screen, run the program to see if 
-it executed in the way that you expected!
+A continuación ya hemos comenzado a construir una casa. Para practicar la programación incremental, intente dibujar
+El resto de la casa. Cada vez que dibuje algo nuevo en la pantalla, ejecute el programa para ver si
+se ejecutó de la manera que esperabas!
 
 .. activecode:: ac3_100_1
 
@@ -55,6 +54,6 @@ it executed in the way that you expected!
     bob.left(90)
     bob.forward(50)
 
-    # Add your code below!
+    # ¡Agrega tu código debajo!
 
 
