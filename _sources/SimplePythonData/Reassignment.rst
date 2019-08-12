@@ -11,7 +11,7 @@
    :prefix: data-13-
    :start: 1
 
-Reassignment
+Reasignación
 ------------
 
 .. video:: reassignmentvid
@@ -22,9 +22,9 @@ Reassignment
     http://media.interactivepython.org/thinkcsVideos/reassignment.webm
 
 
-As we have mentioned previously, it is legal to make more than one assignment to the
-same variable. A new assignment makes an existing variable refer to a new value
-(and stop referring to the old value).
+Como hemos mencionado anteriormente, es legal realizar más de una asignación a
+misma variable Una nueva asignación hace que una variable existente se refiera a un nuevo valor
+(y deja de referirte al antiguo valor).
 
 .. activecode:: ac2_13_1
 
@@ -34,36 +34,36 @@ same variable. A new assignment makes an existing variable refer to a new value
     print(bruce)
 
 
-The first time ``bruce`` is
-printed, its value is 5, and the second time, its value is 7.  The assignment statement changes
-the value (the object) that ``bruce`` refers to.
+La primera vez que ``bruce`` es
+impreso, su valor es 5 y la segunda vez, su valor es 7. La instrucción de asignación cambia
+el valor (el objeto) al que se refiere ``bruce``.
 
-Here is what **reassignment** looks like in a reference diagram:
+Así es como se ve **la reasignación** en un diagrama de referencia:
 
 .. image:: Figures/reassign1.png
    :alt: reassignment
 
-It is important to note that in mathematics, a statement of equality is always true.  If ``a is equal to b``
-now, then ``a will always equal to b``. In Python, an assignment statement can make
-two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
-they don't have to stay that way:
+Es importante tener en cuenta que en matemáticas, una declaración de igualdad siempre es cierta. Si ``a es igual a b``
+ahora, entonces ``a siempre será igual a b``. En Python, una declaración de asignación puede hacer
+dos variables se refieren al mismo objeto y, por lo tanto, tienen el mismo valor. Parecen ser iguales. Sin embargo, debido a la posibilidad de reasignación,
+no tienen que quedarse así:
 
 .. activecode:: ac2_13_2
 
     a = 5
-    b = a    # after executing this line, a and b are now equal
+    b = a    # después de ejecutar esta línea, ayb ahora son iguales
     print(a,b)
-    a = 3    # after executing this line, a and b are no longer equal
+    a = 3    # después de ejecutar esta línea, ayb ya no son iguales
     print(a,b)
 
-Line 4 changes the value of ``a`` but does not change the value of
-``b``, so they are no longer equal. We will have much more to say about equality in a later chapter.
+La línea 4 cambia el valor de ``a`` pero no cambia el valor de
+``b``, por lo que ya no son iguales. Tendremos mucho más que decir sobre la igualdad en un capítulo posterior.
 
 
-Developing your mental model of How Python Evaluates
+Desarrollando el modelo mental de cómo Python evalúa
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Its important to start to develop a good mental model of the steps the Python interpreter takes when evaluating an assignment statement.  In an assignment statement, the interpreter first evaluates the code on the right hand side of the assignment operator.  It then gives a name to whatever that is.  The (very short) visualization below shows what is happening.
+Es importante comenzar a desarrollar un buen modelo mental de los pasos que toma el intérprete de Python al evaluar una declaración de asignación. En una declaración de asignación, el intérprete primero evalúa el código en el lado derecho del operador de asignación. Luego le da un nombre a lo que sea que sea. La visualización (muy corta) a continuación muestra lo que está sucediendo.
 
 .. showeval:: se_ac2_13_1a
     :trace_mode: true
@@ -74,43 +74,43 @@ Its important to start to develop a good mental model of the steps the Python in
     a = {{5}}{{5}}
     b = {{a}}{{5}}
 
-In the first statement ``a = 5`` the literal number 5 evaluates to 5, and is given the name ``a``.  In the second statement, the variable ``a`` evaluates to 5 and so 5 now ends up with a second name ``b``.
+En la primera declaración ``a = 5``, el número literal 5 se evalúa como 5 y recibe el nombre ``a``. En la segunda declaración, la variable ``a`` se evalúa a 5 y 5 ahora termina con un segundo nombre ``b``.
 
-You can step through the code and see how the variable assignments change below.
+Puede recorrer el código y ver cómo cambian las asignaciones de variables a continuación.
 
 .. codelens:: clens2_13_1
     :python: py3
 
     a = 5
-    b = a    # after executing this line, a and b are now equal
+    b = a    # después de ejecutar esta línea, a y b ahora son iguales
     print(a,b)
-    a = 3    # after executing this line, a and b are no longer equal
+    a = 3    # después de ejecutar esta línea, a y b ya no son iguales
     print(a,b)
 
 .. note::
 
-   In some programming languages, a different
-   symbol is used for assignment, such as ``<-`` or ``:=``.  The intent is
-   that this will help to avoid confusion.  Python
-   chose to use the tokens ``=`` for assignment, and ``==`` for equality.  This is a popular
-   choice also found in languages like C, C++, Java, and C#.
+   En algunos lenguajes de programación, un diferente
+   símbolo se utiliza para la asignación, como ``<-`` or ``:=``. La intención es
+   que esto ayudará a evitar confusiones. Python
+   eligió usar los tokens ``=`` para la asignación y ``==`` para la igualdad. Este es una popular
+   opción que también se encuentra en lenguajes como C, C++, Java y C#.
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_13_1
-   :answer_a: x is 15 and y is 15
-   :answer_b: x is 22 and y is 22
-   :answer_c: x is 15 and y is 22
-   :answer_d: x is 22 and y is 15
+   :answer_a: "x" es 15 y "y" es 15
+   :answer_b: "x" es 22 y "y" is 22
+   :answer_c: "x" es 15 y "y" is 22
+   :answer_d: "x" es 22 y "y" is 15
    :correct: d
-   :feedback_a: Look at the last assignment statement which gives x a different value.
-   :feedback_b: No, x and y are two separate variables.  Just because x changes in the last assignment statement, it does not change the value that was copied into y in the second statement.
-   :feedback_c: Look at the last assignment statement, which reassigns x, and not y.
-   :feedback_d: Yes, x has the value 22 and y the value 15.
+   :feedback_a: Mira la última declaración de asignación que le da a x un valor diferente.
+   :feedback_b: No, x e y son dos variables separadas. Solo porque x cambia en la última declaración de asignación, no cambia el valor que se copió en y en la segunda declaración.
+   :feedback_c: Mira la última declaración de asignación, que reasigna x, y no y.
+   :feedback_d: Sí, x tiene el valor 22 e y el valor 15.
    :practice: T
 
-   After the following statements, what are the values of x and y?
+   Después de las siguientes afirmaciones, ¿cuáles son los valores de x e y?
 
    .. code-block:: python
 
