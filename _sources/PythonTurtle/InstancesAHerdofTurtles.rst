@@ -13,15 +13,15 @@
 
 .. index:: for loop
 
-Instances: A Herd of Turtles
-----------------------------
+Instancias: una manada de tortugas
+----------------------------------
 
-Just like we can have many different integers in a program, we can have many
-turtles. Each of them is an independent object and we call each one an **instance** of the
-Turtle type (class). Each instance has its own attributes and methods --- so alex might
-draw with a thin pink pen and be at some position, while tess might be going in her own
-direction with a fat black pen. So here is what happens when alex completes a square and
-tess completes her triangle:
+Al igual que podemos tener muchos enteros diferentes en un programa, podemos tener muchos
+tortugas. Cada uno de ellos es un objeto independiente y llamamos a cada uno una **instancia** del
+Tipo tortuga (clase). Cada instancia tiene sus propios atributos y métodos --- por lo que Alex podría
+dibuja con un bolígrafo rosado delgado y ponte en alguna posición, mientras que Tess podría ir sola
+dirección con una pluma negra gorda. Entonces, esto es lo que sucede cuando Alex completa un cuadrado y
+Tess completa su triángulo:
 
 .. activecode:: ac3_3_1
    :tour_1: "Overall Tour"; 1-31: Example03_Tour01_Line01; 1-3: Example03_Tour01_Line02; 6-8: Example03_Tour01_Line03; 10: Example03_Tour01_Line04; 6,10: Example03_Tour01_Line05; 12-17: Example03_Tour01_Line06; 19-20: Example03_Tour01_Line07; 22-29: Example03_Tour01_Line08; 31: Example03_Tour01_Line09;
@@ -29,27 +29,27 @@ tess completes her triangle:
    :nocodelens:
 
    import turtle
-   wn = turtle.Screen()             # Set up the window and its attributes
+   wn = turtle.Screen()             # Configurar la ventana y sus atributos.
    wn.bgcolor("lightgreen")
 
 
-   tess = turtle.Turtle()           # create tess and set his pen width
+   tess = turtle.Turtle()           # crear tess y establecer el ancho de su bolígrafo
    tess.pensize(5)
 
-   alex = turtle.Turtle()           # create alex
-   alex.color("hotpink")            # set his color
+   alex = turtle.Turtle()           # crear a alex
+   alex.color("hotpink")            # establecer su color
 
-   tess.forward(80)                 # Let tess draw an equilateral triangle
+   tess.forward(80)                 # Deje que tess dibuje un triángulo equilátero
    tess.left(120)
    tess.forward(80)
    tess.left(120)
    tess.forward(80)
-   tess.left(120)                   # complete the triangle
+   tess.left(120)                   # completa el triángulo
 
-   tess.right(180)                  # turn tess around
-   tess.forward(80)                 # move her away from the origin so we can see alex
+   tess.right(180)                  # girar a Tess
+   tess.forward(80)                 # moverla del origen para que podamos ver a Alex
 
-   alex.forward(50)                 # make alex draw a square
+   alex.forward(50)                 # haz que alex dibuje un cuadrado
    alex.left(90)
    alex.forward(50)
    alex.left(90)
@@ -61,46 +61,46 @@ tess completes her triangle:
    wn.exitonclick()
 
 
-Here are some *How to think like a computer scientist* observations:
+Aquí hay algunas observaciones *Cómo pensar como un científico de la computación*:
 
-* There are 360 degrees in a full circle. If you add up all the turns that a
-  turtle makes, *no matter what steps occurred between the turns*, you can
-  easily figure out if they add up to some multiple of 360. This should
-  convince you that alex is facing in exactly the same direction as he was when
-  he was first created. (Geometry conventions have 0 degrees facing East and
-  that is the case here too!)
-* We could have left out the last turn for alex, but that would not have been
-  as satisfying. If you're asked to draw a closed shape like a square or a
-  rectangle, it is a good idea to complete all the turns and to leave the
-  turtle back where it started, facing the same direction as it started in.
-  This makes reasoning about the program and composing chunks of code into
-  bigger programs easier for us humans!
-* We did the same with tess: she drew her triangle and turned through a full
-  360 degress. Then we turned her around and moved her aside.  Even the blank
-  line 18 is a hint about how the programmer's *mental chunking* is working: in
-  big terms, tess' movements were chunked as "draw the triangle" (lines 12-17)
-  and then "move away from the origin" (lines 19 and 20).
-* One of the key uses for comments is to record your mental chunking, and big
-  ideas. They're not always explicit in the code.
-* And, uh-huh, two turtles may not be enough for a herd, but you get the idea!
+* Hay 360 grados en un círculo completo. Si sumas todos los turnos que un
+  tortuga hace, *no importa qué pasos ocurrieron entre los turnos*, puedes
+  averiguar fácilmente si suman un múltiplo de 360. Esto debería
+  convencerte de que Alex está mirando exactamente en la misma dirección que él cuando
+  Fue creado por primera vez. (Las convenciones de geometría tienen 0 grados hacia el este y
+  ¡Ese es el caso aquí también!)
+* Podríamos haber dejado fuera el último turno para Alex, pero eso no habría sido
+  tan satisfactorio Si se le pide que dibuje una forma cerrada como un cuadrado o un
+  rectángulo, es una buena idea completar todos los giros y dejar el
+  tortuga de regreso donde comenzó, mirando en la misma dirección en que comenzó.
+  Esto hace que el razonamiento sobre el programa y la composición de fragmentos de código en
+  ¡Programas más grandes más fáciles para nosotros los humanos!
+* Hicimos lo mismo con Tess: dibujó su triángulo y dio vuelta
+  360 degress. Luego la dimos la vuelta y la apartamos. Incluso el blanco
+  la línea 18 es una pista sobre cómo está funcionando el *fragmentado mental* del programador: en
+  En términos generales, los movimientos de Tess se fragmentaron como "dibujar el triángulo" (líneas 12-17)
+  y luego "alejarse del origen" (líneas 19 y 20).
+* Uno de los usos clave para los comentarios es registrar su fragmentación mental y
+  ideas No siempre son explícitos en el código.
+* Y, uh-huh, dos tortugas pueden no ser suficientes para un rebaño, ¡pero se entiende la idea!
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question3_3_1
-   :answer_a: True
-   :answer_b: False
+   :answer_a: Verdadero
+   :answer_b: Falso
    :correct: b
-   :feedback_a: You can create and use as many turtles as you like. As long as they have different names, you can operate them independently, and make them move in any order you like. To convince yourself this is true, try interleaving the instructions for alex and tess in ActiveCode box 3.
-   :feedback_b: You can create and use as many turtles as you like. As long as they have different names, you can operate them independently, and make them move in any order you like. If you are not totally convinced, try interleaving the instructions for alex and tess in ActiveCode box 3.
+   :feedback_a: Puedes crear y usar tantas tortugas como quieras. Siempre que tengan nombres diferentes, puede operarlos de forma independiente y hacer que se muevan en el orden que desee. Para convencerse de que esto es cierto, intente entrelazar las instrucciones para Alex y Tess en el cuadro ActiveCode 3.
+   :feedback_b: Puedes crear y usar tantas tortugas como quieras. Siempre que tengan nombres diferentes, puede operarlos de forma independiente y hacer que se muevan en el orden que desee. Si no está totalmente convencido, intente entrelazar las instrucciones para Alex y Tess en el cuadro ActiveCode 3.
 
-   True or False: You can only have one active turtle at a time. If you create a second one, you will no longer be able to access or use the first.
+   Verdadero o Falso: Solo puedes tener una tortuga activa a la vez. Si crea una segunda, ya no podrá acceder o usar la primera.
 
-**Mixed up programs**
+**Programas mixtos**
 
 .. parsonsprob:: pp3_3_1
 
-   The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left, <img src="../_static/TwoTurtles1.png" width="150" align="left" hspace="10" vspace="5" alt="image of a capital letter L in blue color drawn by one Turtle and a line to the west in orange color drawn by another Turtle. Both the Turtles have same starting point."/>. The program should do all set-up, have "jamal" draw the L, and then have "tina" draw the line. Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa tiene una tortuga, "jamal", dibuja una L mayúscula en azul y luego otra, "tina", dibuja una línea hacia el oeste en naranja como se muestra a la izquierda, <img src="../_static/TwoTurtles1.png" width="150" align="left" hspace="10" vspace="5" alt="image of a capital letter L in blue color drawn by one Turtle and a line to the west in orange color drawn by another Turtle. Both the Turtles have same starting point."/>. El programa debe hacer toda la configuración, hacer que "jamal" dibuje la L y luego que "tina" dibuje la línea. Finalmente, debe configurar la ventana para que se cierre cuando el usuario haga clic en ella.<br/><br/><p> Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i>para ver si tiene razón. Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    wn = turtle.Screen()
@@ -124,7 +124,7 @@ Here are some *How to think like a computer scientist* observations:
 
 .. parsonsprob:: pp3_3_2
 
-   The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, <img src="../_static/TwoTurtlesL.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line to the north in blue color drawn by one Turtle and a line to the east in orange drawn by another Turtle. Both the Turtles have a same starting point."/>. The program should import the turtle module, get the window to draw on, create the turtle "jamal", have it draw a line to the north, then create the turtle "tina", and have it draw a line to the east. Finally, it should set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+   El siguiente programa tiene una tortuga, "jamal", dibuja una línea hacia el norte en azul y luego otra, "tina", dibuja una línea hacia el este en naranja como se muestra a la izquierda, <img src="../_static/TwoTurtlesL.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line to the north in blue color drawn by one Turtle and a line to the east in orange drawn by another Turtle. Both the Turtles have a same starting point."/>. El programa debe importar el módulo de tortuga, obtener la ventana para dibujar, crear la tortuga "jamal", hacer que dibuje una línea hacia el norte, luego crear la tortuga "tina" y hacer que dibuje una línea hacia el este. Finalmente, debe configurar la ventana para que se cierre cuando el usuario haga clic en ella.<br/><br /><p> Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto. Luego haga clic en <i>Check Me</i> para ver si tiene razón. Se le informará si alguna de las líneas está en el orden incorrecto.</p>
    -----
    import turtle
    =====
