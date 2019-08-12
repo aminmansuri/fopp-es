@@ -13,9 +13,8 @@
    :prefix: turtle-10-
    :start: 1
 
-Exercises
----------
-
+Ejercicios
+----------
 
 .. question:: turtle_ex_1
    :number: 1
@@ -26,7 +25,7 @@ Exercises
 
            .. actex:: ac3_8_1
 
-              Write a program that prints ``We like Python's turtles!`` 100 times.
+              Escribe un programa que imprima ``Nos gustan las tortugas de Python's!`` 100 veces.
               ~~~~
 
         .. tab:: Answer
@@ -48,7 +47,7 @@ Exercises
 
    .. shortanswer:: turtle_reflect
 
-      Turtle objects have methods and attributes. For example, a turtle has a position and when you move the turtle forward, the position changes. Think about the other methods shown in the Summary of Turtle Methods page. Which attibutes, if any, does each method relate to?  Does the method change the attribute?
+      Los objetos de tortuga tienen métodos y atributos. Por ejemplo, una tortuga tiene una posición y cuando mueve la tortuga hacia adelante, la posición cambia. Piense en los otros métodos que se muestran en la página Resumen de métodos de tortuga. ¿A qué atributos, si corresponde, se relaciona cada método? ¿El método cambia el atributo?
 
 .. question:: turtle_ex_3
 
@@ -59,13 +58,13 @@ Exercises
            .. actex:: ac3_8_3
               :nocodelens:
 
-              Use ``for`` loops to make a turtle draw these regular polygons
-              (regular means all sides the same lengths, all angles the same):
+              Use bucles ``for`` para hacer que una tortuga dibuje estos polígonos regulares
+              (regular significa que todos los lados tienen la misma longitud, todos los ángulos iguales):
 
-              * An equilateral triangle
-              * A square
-              * A hexagon (six sides)
-              * An octagon (eight sides)
+              * Un triángulo equilatero
+              * Un cuadrado
+              * Un hexágono (seis lados)
+              * Un octágono (ocho lados)
               ~~~~
 
         .. tab:: Answer
@@ -81,15 +80,15 @@ Exercises
                 for i in range(3):
                     norvig.forward(100)
 
-                    # the angle of each vertice of a regular polygon
-                    # is 360 divided by the number of sides
+                    # el ángulo de cada vértice de un polígono regular
+                    # es 360 dividido por el número de lados
                     norvig.left(360/3)
 
                 wn.exitonclick()
 
             .. sourcecode:: python
 
-                # draw a square
+                # dibuja un cuadrado
                 import turtle
 
                 wn = turtle.Screen()
@@ -103,7 +102,7 @@ Exercises
 
             .. sourcecode:: python
 
-                # draw a hexagon
+                # dibuja un hexágono
                 import turtle
 
                 wn = turtle.Screen()
@@ -117,7 +116,7 @@ Exercises
 
             .. sourcecode:: python
 
-                # draw an octogon
+                # dibujar un octágono
                 import turtle
 
                 wn = turtle.Screen()
@@ -144,7 +143,7 @@ Exercises
            .. actex:: ac3_8_4
               :nocodelens:
 
-              Write a program to draw a shape like this:
+              Escribe un programa para dibujar una forma como esta:
 
               .. image:: Figures/star.png
               ~~~~
@@ -174,7 +173,7 @@ Exercises
    .. actex:: ac3_8_5
       :nocodelens:
 
-      Write a program to draw a face of a clock that looks something like this:
+      Escriba un programa para dibujar la esfera de un reloj que se parece a esto:
 
       .. image:: Figures/tess_clock1.png
       ~~~~
@@ -188,8 +187,8 @@ Exercises
            .. actex:: ac3_8_6
               :nocodelens:
 
-              Write a program to draw some kind of picture.  Be creative and experiment
-              with the turtle methods.
+              Escribe un programa para dibujar algún tipo de imagen. Se creativo y experimenta
+              con los métodos de tortuga.
               ~~~~
 
         .. tab:: Answer
@@ -219,5 +218,5 @@ Exercises
    .. actex:: ac3_8_7
       :nocodelens:
 
-      Create a turtle and assign it to a variable.  When you print its type, what do you get?
+      Crea una tortuga y asígnela a una variable. Cuando imprime su tipo, ¿qué obtiene?
       ~~~~
