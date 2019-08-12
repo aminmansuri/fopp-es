@@ -13,10 +13,10 @@
 
 .. Week 1 Assessment 3
 
-Chapter Assessment - Turtle and Object Mechanics
-------------------------------------------------
+Evaluación del capítulo - Mecánica de tortugas y objetos
+---------------------------------------------------------
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: assess_question1_3_1_1_1
    :multiple_answers:
@@ -26,15 +26,15 @@ Chapter Assessment - Turtle and Object Mechanics
    :answer_d: forward(20).Tex
    :answer_e: Tex.forward(10 + 10)
    :correct: a,e
-   :feedback_a: This is a correct way to move a turtle forward.
-   :feedback_b: This does not use the turtle method necessary to move a turtle forward. Additionally, how would the program know what turtle should be moving?
-   :feedback_c: This does not use the turtle method necessary to move a turtle forward. Additionally, how would the program know what turtle should be moving?
-   :feedback_d: This is not the correct structure to execute the task.
-   :feedback_e: You are allowed to write expressions inside of methods, so this is correctly written.
+   :feedback_a: Esta es una forma correcta de mover una tortuga hacia adelante.
+   :feedback_b: Esto no utiliza el método de tortuga necesario para mover una tortuga hacia adelante. Además, ¿cómo sabría el programa qué tortuga debería moverse?
+   :feedback_c: Esto no utiliza el método de tortuga necesario para mover una tortuga hacia adelante. Además, ¿cómo sabría el programa qué tortuga debería moverse?
+   :feedback_d: Esta no es la estructura correcta para ejecutar la tarea.
+   :feedback_e: Se le permite escribir expresiones dentro de los métodos, por lo que esto se escribe correctamente.
    :practice: T
    :topics: PythonTurtle/InstancesAHerdofTurtles
 
-   What are correct ways to tell a turtle named Tex to move forward 20 pixels? Select as many as apply.
+   ¿Cuáles son las formas correctas de decirle a una tortuga llamada Tex que avance 20 píxeles? Selecciona todas las que apliquen.
 
 .. mchoice:: assess_question1_3_1_1_2
    :answer_a: turtle(Turtle)
@@ -42,46 +42,46 @@ Chapter Assessment - Turtle and Object Mechanics
    :answer_c: Turtle.turtle()
    :answer_d: Turtle(turtle)
    :correct: b
-   :feedback_a: When making a new instace of the turtle class, you need to use dot notation.
-   :feedback_b: Yes, this is the correct way.
-   :feedback_c: turtle represents the class and should be first.
-   :feedback_d: When making a new instace of the turtle class, you need to use dot notation.
+   :feedback_a: Al hacer una nueva instancia de la clase de tortuga, debe usar la notación de puntos.
+   :feedback_b: Sí, esta es la forma correcta.
+   :feedback_c: tortuga representa la clase y debe ser el primero.
+   :feedback_d: Al hacer una nueva instancia de la clase de tortuga, debe usar la notación de puntos.
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   Which is the correct way to make a new instance of the Turtle class?
+   ¿Cuál es la forma correcta de hacer una nueva instancia de la clase Turtle?
 
 .. mchoice:: assess_question1_3_1_1_3
-   :answer_a: The turtle class.
-   :answer_b: The same turtle that is used in each drawing your programs make.
-   :answer_c: A unique 'turtle' that you can use to draw.
+   :answer_a: La clase Turtle
+   :answer_b: La misma tortuga que se usa en cada dibujo que hacen sus programas.
+   :answer_c: Una 'tortuga' única que puedes usar para dibujar.
    :correct: c
-   :feedback_a: Though each instance does use the turtle class, this is not the best answer.
-   :feedback_b: Each instance that is made using the turtle class is unique. Remember how you can have multiple 'turtles' in a single drawing? Each of those are different turtles but they are all instances of the turtle class.
-   :feedback_c: Yes, an instance of the turtle class represents a unique turtle. The turtle class is like a stencil or mold that can be used to make as many turtles as you would like.
+   :feedback_a: Aunque cada instancia usa la clase de tortuga, esta no es la mejor respuesta.
+   :feedback_b: Cada instancia que se realiza utilizando la clase tortuga es única. ¿Recuerdas cómo puedes tener múltiples 'tortugas' en un solo dibujo? Cada una de ellas son tortugas diferentes, pero todas son instancias de la clase de tortuga.
+   :feedback_c: Sí, una instancia de la clase tortuga representa una tortuga única. La clase de tortuga es como una plantilla o molde que se puede utilizar para hacer tantas tortugas como desee.
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   What does each instance of the Turtle class represent?
+   ¿Qué representa cada instancia de la clase Turtle?
 
 
 .. mchoice:: assess_question1_3_1_1_5
    :multiple_answers:
-   :answer_a: Change the value of an attribute.
-   :answer_b: Return values.
-   :answer_c: Create new attributes of an instance and set their values.
-   :answer_d: Delete object instances.
-   :answer_e: None of the above.
+   :answer_a: Cambiar el valor de un atributo.
+   :answer_b: Retorna valores.
+   :answer_c: Cree nuevos atributos de una instancia y establezca sus valores.
+   :answer_d: Eliminar instancias de objetos.
+   :answer_e: Ninguna de las anteriores.
    :correct: a,b,c
-   :feedback_a: Methods can change the value that is associated with an attribute. 
-   :feedback_b: Methods can return values.
-   :feedback_c: Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.
-   :feedback_d: You do not explicitly delete object instances; when there are no variables or other references to them, so that they can't be accessed, they are automatically deleted.
-   :feedback_e: Methods can do at least one of the above. Take another look.
+   :feedback_a: Los métodos pueden cambiar el valor asociado con un atributo.
+   :feedback_b: Los métodos pueden devolver valores.
+   :feedback_c: Los atributos no necesitan ser declarados previamente; cualquier código puede agregar un nuevo atributo a una instancia simplemente asignándole un valor.
+   :feedback_d: No elimina explícitamente instancias de objetos; cuando no hay variables u otras referencias a ellas, de modo que no se pueda acceder a ellas, se eliminan automáticamente.
+   :feedback_e: Los métodos pueden hacer al menos uno de los anteriores. Echa otro vistazo.
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   Select all of the following things that methods can do:
+   Seleccione todas las siguientes cosas que pueden hacer los métodos:
 
 
 .. mchoice:: assess_question1_3_1_1_6
@@ -91,21 +91,21 @@ Chapter Assessment - Turtle and Object Mechanics
    :answer_d: student(title)
    :answer_e: student.title
    :correct: e
-   :feedback_a: This accesses the attribute but then tries to invoke it as a method, which will fail if title is not a method.
-   :feedback_b: student is the object, so it goes before the period; the attribute goes after.
-   :feedback_c: student is the object, so it goes before the period; the attribute goes after.
-   :feedback_d: This would be the syntax for a function named student being called on a variable named title.
-   :feedback_e: Yes, this is the correct syntax to use.
+   :feedback_a: Esto accede al atributo pero luego intenta invocarlo como un método, que fallará si el título no es un método.
+   :feedback_b: student es el objeto, entonces va antes del punto; el atributo va después.
+   :feedback_c: student es el objeto, entonces va antes del punto; el atributo va después.
+   :feedback_d: Esta sería la sintaxis para una función de nombre student que se llama en una variable de nombre título.
+   :feedback_e: Sí, esta es la sintaxis correcta para usar.
    :practice: T 
    :topics: PythonTurtle/ObjectInstances
 
-   For an instance of a class that is assigned to the variable ``student``, what is the proper way to refer to the ``title`` attribute/instance variable?
+   Para una instancia de una clase que se asigna a la variable ``student``, ¿cuál es la forma correcta de referirse a la variable de atributo/instancia de ``título``?
 
 .. fillintheblank:: assess_question1_3_1_1_7
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   What is the name of jane's attribute (not method) that is referred to in the following code?
+   ¿Cuál es el nombre del atributo de jane (no método) al que se hace referencia en el siguiente código?
 
    .. sourcecode:: python
 
@@ -118,17 +118,17 @@ Chapter Assessment - Turtle and Object Mechanics
    The attribute is
 
    -  :x: Good work!
-      :jane: jane is an instance, not an attribute.
-      :forward: forward is a method.
-      :turtle: turtle is the class, not an attribute.
-      :Turtle: Turtle is a method, not an attribute
-      :.*: Incorrect, try again.
+      :jane: Jane es una instancia, no un atributo.
+      :forward: forward es un método.
+      :turtle: tortuga es la clase, no un atributo.
+      :Turtle: Turtle es un método, no un atributo
+      :.*: Incorrecto. Inténtelo de nuevo.
 
 .. fillintheblank:: assess_question1_3_1_1_8
    :practice: T
    :topics: PythonTurtle/ObjectInstances
 
-   What are the names of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them.
+   ¿Cuáles son los nombres de las instancias en el siguiente código? Ponga una instancia por espacio en blanco e ingréselos en el orden en que la computadora los leería.
 
    .. sourcecode:: python
 
@@ -143,27 +143,27 @@ Chapter Assessment - Turtle and Object Mechanics
     pop.forward(76)
 
 
-   -  :wn: Good work!
-      :jazz: Try a different location
-      :pop: Try a different location
-      :.*: Incorrect, try again.
-   -  :jazz: Good work!
-      :wn: Try a different location
-      :pop: Try a different location
-      :.*: Incorrect, try again.
-   -  :pop: Good work!
-      :wn: Try a different location
-      :jazz: Try a different location
-      :.*: Incorrect, try again.
+   -  :wn: ¡Buen trabajo!
+      :jazz: Prueba una ubicación diferente
+      :pop: Prueba una ubicación diferente
+      :.*: Incorrecto. Inténtelo de nuevo.
+   -  :jazz: ¡Buen trabajo!
+      :wn: Prueba una ubicación diferente
+      :pop: Prueba una ubicación diferente
+      :.*: Incorrecto. Inténtelo de nuevo.
+   -  :pop: ¡Buen trabajo!
+      :wn: Prueba una ubicación diferente
+      :jazz: Prueba una ubicación diferente
+      :.*: Incorrecto. Inténtelo de nuevo.
 
 
-Chapter Assessment - Drawing with Turtle
-----------------------------------------
+Evaluación del capítulo: dibujar con tortuga
+---------------------------------------------
 
 .. activecode:: assess_ps_01_09a
     :language: python
 
-    Write code to draw a regular pentagon (a five-sided figure with all sides the same length).
+    Escriba el código para dibujar un pentágono regular (una figura de cinco lados con todos los lados de la misma longitud).
 
     ~~~~
     import turtle
@@ -173,7 +173,7 @@ Chapter Assessment - Drawing with Turtle
 .. activecode:: assess_ps_01_09
     :language: python
 
-    Write a program that uses the turtle module to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting ``.speed(10)`` for the turtle to draw fast, or ``.speed(0)`` for it to draw super fast with no animation.)
+    Escribe un programa que use el módulo de tortuga para dibujar algo. No tiene que ser complicado, pero dibuja algo diferente de lo que hemos hecho en el pasado. (Sugerencia: si está dibujando algo complicado, podría ser tedioso verlo dibujar una y otra vez. Intente configurar ``.speed(10)`` para que la tortuga dibuje rápido, o ``.speed(0)`` para que dibuje súper rápido sin animación).
     ~~~~
     import turtle
 
