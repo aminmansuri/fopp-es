@@ -11,25 +11,24 @@
    :prefix: turtle-4-
    :start: 1
 
-Object Oriented Concepts
-========================
+Conceptos orientados a objetos
+===============================
 
-It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully.
+Ha sido divertido dibujar cosas con las tortugas. En el proceso, hemos introducido algunos conceptos y términos nuevos. Vamos a sacarlos y examinarlos un poco más cuidadosamente.
 
-User-defined Classes
---------------------
-First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and much later, new classes of objects. For now, you just need to understand how to use them.
+Clases definidas por el usuario
+--------------------------------
+Primero, al igual que Python proporciona una forma de definir nuevas funciones en sus programas, también proporciona una forma de definir nuevas clases de objetos. Más adelante en el libro aprenderá cómo definir funciones, y mucho más tarde, nuevas clases de objetos. Por ahora, solo necesita comprender cómo usarlos.
 
-Instances
----------
-
-Given a class like ``Turtle`` or ``Screen``, we create a new instance with a syntax that looks like a function call, ``Turtle()``. The Python interpreter figures out that Turtle is a class rather than a function, and so it creates a new instance of the class and returns it. Since the Turtle class was defined in a separate module, (confusingly, also named turtle), we had to refer to the class as turtle.Turtle. Thus, in the programs we wrote ``turtle.Turtle()`` to make a new turtle. We could also write ``turtle.Screen()`` to make a new window for our turtles to paint in.
-
-
-Attributes
+Instancias
 ----------
 
-Each instance can have attributes, sometimes called **instance variables**. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.
+Dada una clase como ``Turtle`` o ``Screen``, creamos una nueva instancia con una sintaxis que se parece a una llamada de función, ``Turtle()``. El intérprete de Python descubre que Turtle es una clase en lugar de una función, por lo que crea una nueva instancia de la clase y la devuelve. Como la clase Turtle se definió en un módulo separado (confusamente, también llamado tortuga), tuvimos que referirnos a la clase como turtle.Turtle. Por lo tanto, en los programas escribimos ``turtle.Turtle()`` para hacer una nueva tortuga. También podríamos escribir ``turtle.Screen()`` para hacer una nueva ventana para que nuestras tortugas puedan pintar.
+
+Atributos
+----------
+
+Dada una clase como ``Turtle`` o ``Screen``, creamos una nueva instancia con una sintaxis que se parece a una llamada de función, ``Turtle()``. El intérprete de Python descubre que Turtle es una clase en lugar de una función, por lo que crea una nueva instancia de la clase y la devuelve. Como la clase Turtle se definió en un módulo separado (confusamente, también llamado tortuga), tuvimos que referirnos a la clase como turtle.Turtle. Por lo tanto, en los programas escribimos ``turtle.Turtle()`` para hacer una nueva tortuga. También podríamos escribir ``turtle.Screen()`` para hacer una nueva ventana para que nuestras tortugas puedan pintar.
 
 .. sourcecode:: python
 
@@ -38,14 +37,13 @@ Each instance can have attributes, sometimes called **instance variables**. Thes
    print(alex.price + tess.price)
 
 
-Methods
+Métodos
 -------
 
-Classes have associated **methods**, which are just a special kind of function.  Consider the expression ``alex.forward(50)`` The interpreter first looks up alex and finds that it is an instance of the class Turtle. Then it looks up the attribute forward and finds that it is a method. Since there is a left parenthesis directly following, the interpreter invokes the method, passing 50 as a parameter.
+Las clases tienen **métodos** asociados, que son solo un tipo especial de función. Considere la expresión ``alex.forward(50)`` El intérprete primero busca a alex y descubre que es una instancia de la clase Turtle. Luego busca el atributo hacia adelante y descubre que es un método. Como hay un paréntesis izquierdo directamente a continuación, el intérprete invoca el método, pasando 50 como parámetro.
 
-The only difference between a method invocation and other function calls is that the object instance itself is also passed as a parameter. Thus ``alex.forward(50)`` moves alex, while ``tess.forward(50)`` moves tess. 
+La única diferencia entre la invocación de un método y otras llamadas a funciones es que la instancia del objeto en sí también se pasa como un parámetro. Así, ``alex.forward(50)`` mueve a alex, mientras que ``tess.forward(50)`` mueve a tess.
 
-Some of the methods of the Turtle class set attributes that affect the actions of other methods. For example, the method pensize changes the width of the drawing pen, and the color method changes the pen's color.
+Algunos de los métodos de la clase Turtle establecen atributos que afectan las acciones de otros métodos. Por ejemplo, el método de cambio de tamaño cambia el ancho del lápiz de dibujo y el método de color cambia el color del lápiz.
 
-Methods return values, just as functions do. However, none of the methods of the Turtle class that you have used return useful values the way the ``len`` function does. Thus, it would not make sense to build a complex expression like ``tess.forward(50) + 75``. It could make sense, however to put a complex expression inside the parentheses: ``tess.forward(x + y)``
-
+Los métodos devuelven valores, tal como lo hacen las funciones. Sin embargo, ninguno de los métodos de la clase Turtle que ha utilizado devuelve valores útiles como lo hace la función ``len``. Por lo tanto, no tendría sentido construir una expresión compleja como ``tess.forward(50)+75``. Sin embargo, podría tener sentido poner una expresión compleja dentro de los paréntesis: ``tess.forward (x + y)``
