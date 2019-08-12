@@ -11,47 +11,47 @@
    :prefix: turtle-5-
    :start: 1
 
-Repetition with a For Loop
---------------------------
+Repetición con un bucle for
+----------------------------
 
-Some of the programs we've seen so far are a bit tedious to type. If we want to make a 
-repetitive pattern in our drawings, then it can take many lines of code. Thankfully, Python 
-has a few ways for making this kind of task easier. For now you'll get a brief preview of a helpful control structure and function in Python which you will learn about later.
+Algunos de los programas que hemos visto hasta ahora son un poco tediosos de escribir. Si queremos hacer un
+patrón repetitivo en nuestros dibujos, entonces puede tomar muchas líneas de código. Afortunadamente, Python
+tiene algunas maneras de facilitar este tipo de tarea. Por ahora obtendrá una breve vista previa de una estructura y función de control útil en Python que aprenderá más adelante.
 
-The control structure is called a for loop. If you've learned other programming languages 
-then you may be familiar with what it does but the structure may be new. A for loop allows 
-Python to execute a program in a non-linear fashion. Instead of evaluating the code line by line until it reaches the end, once the program reaches a for loop, it will tell the program to execute a set of lines for n number of times. Once the program has executed the code insde of the for loop n number of times, the program will then continue to evaluate and execute whatever is below the for loop. 
+La estructura de control se llama un bucle for. Si has aprendido otros lenguajes de programación
+entonces puede estar familiarizado con lo que hace, pero la estructura puede ser nueva. Un bucle for permite
+Python para ejecutar un programa de forma no lineal. En lugar de evaluar el código línea por línea hasta que llegue al final, una vez que el programa llegue a un ciclo for, le indicará al programa que ejecute un conjunto de líneas durante n número de veces. Una vez que el programa ha ejecutado el código en lugar del bucle for n veces, el programa continuará evaluando y ejecutando lo que esté debajo del bucle for.
 
-This is where the ``range`` function comes into play. Using the ``range`` function, you can 
-specify how many times the contents inside of the for loop will execute. Here is a simple 
-demonstration below of how this will work.
+Aquí es donde entra en juego la función ``rango``. Usando la función ``rango``, puede
+especificar cuántas veces se ejecutará el contenido dentro del bucle for. Aquí hay una simple
+demostración a continuación de cómo funcionará esto.
 
 .. activecode:: ac3_5_1
 
-   print("This will execute first")
+   print("Esta línea se ejecutará primero")
 
    for _ in range(3):
-       print("This line will execute three times")
-       print("This line will also execute three times")
+       print("Esta línea se ejecutará tres veces")
+       print("Esta línea también se ejecutará tres veces")
 
-   print("Now we are outside of the for loop!")
+   print("¡Ahora estamos fuera del bucle!")
 
-There are a few things to notice here for when you use this later on. First, is that the two print statements on line 4 and 5 are executed three times, but we don't print line 4 
-three times and then print line 5 three times. Instead, we print line 4, then line 5. Once 
-that is done the for loop iterates, or brings the program back to the beginning of the for 
-loop, and continues to print out lines 4 and 5 again until it has printed them both a total 
-of three times. 
+Hay algunas cosas a tener en cuenta aquí para cuando use esto más adelante. Primero, es que las dos declaraciones de impresión en la línea 4 y 5 se ejecutan tres veces, pero no imprimimos la línea 4
+tres veces y luego imprima la línea 5 tres veces. En su lugar, imprimimos la línea 4, luego la línea 5. Una vez
+esto se realiza iteraciones del bucle for o devuelve el programa al comienzo de for
+bucle, y continúa imprimiendo las líneas 4 y 5 nuevamente hasta que las haya impreso un total
+de tres veces
 
-Second, these lines were printed the same number as is inside the ``range`` function. If we 
-wanted to print them more or fewer times, then we would just need to change the number 
-inside of the parentheses on line 3. 
+En segundo lugar, estas líneas se imprimieron con el mismo número que está dentro de la función ``Rango``.
+Si nosotros queríamos imprimirlos más o menos veces, entonces solo tendríamos que cambiar el número
+dentro de los paréntesis en la línea 3.
 
-Finally, the whitespace is important here. All of the statements that were printed out 
-multiple times were indented under the for loop. Once we stopped indenting those lines, 
-then the program was outside of the for loop and it would continue to execute linearly. If 
-you'd like to watch the execution, checkout the code above in codelens!
+Finalmente, el espacio en blanco es importante aquí. Todas las declaraciones que fueron impresas
+varias veces se sangraron bajo el bucle for. Una vez que dejamos de sangrar esas líneas,
+entonces el programa estaba fuera del ciclo for y continuaría ejecutándose linealmente. Si
+te gustaría ver la ejecución, ¡mira el código de arriba en codelens!
 
-Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.
+Ahora es el momento de combinar esto con el módulo Turtle. ¡Podemos hacer muchas cosas geniales si combinamos estas dos cosas! A continuación hay un código para hacer precisamente eso. Intente predecir lo que hará el programa antes de ejecutarlo.
 
 .. activecode:: ac3_5_2
 
@@ -68,7 +68,7 @@ Now it's time to combine this with the Turtle module. We can do a lot of cool st
 
 .. note::
 
-    Try it out yourself in the space below. What can you make?
+    Pruébelo usted mismo en el espacio a continuación. ¿Qué puedes hacer?
 
     .. activecode:: ac3_5_3
 
