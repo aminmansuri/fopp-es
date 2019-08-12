@@ -11,19 +11,19 @@
    :prefix: data-18-
    :start: 1
 
-Exercises
----------
+Ejercicios
+-------------
 .. question:: spd_ex_1
    :number: 1
 
    .. tabbed:: q1
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. activecode:: ch02_ex1
 
-               Evaluate the following numerical expressions in your head, then use
-               the active code window to check your results:
+               Evalúa las siguientes expresiones numéricas en tu cabeza, luego usa
+               la ventana de código activo para verificar sus resultados:
 
                #. ``5 ** 2``
                #. ``9 * 5``
@@ -41,7 +41,7 @@ Exercises
 
                print(5**2)
         
-        .. tab:: Answer
+        .. tab:: Respuesta
 
             #. ``5 ** 2  = 25``
             #. ``9 * 5 = 45``
@@ -56,7 +56,7 @@ Exercises
             #. ``6 % 6 = 0``
             #. ``0 % 7 = 0``
 
-        .. tab:: Discussion
+        .. tab:: Debate
 
             .. disqus::
                 :shortname: interactivepython
@@ -66,7 +66,7 @@ Exercises
 
    .. actex:: ex_2_2
 
-      What is the order of the arithmetic operations in the following expression.  Evaluate the expression by hand and then check your work.
+      ¿Cuál es el orden de las operaciones aritméticas en la siguiente expresión? Evalúa la expresión a mano y luego verifica tu trabajo.
       ~~~~
       2 + (3 - 1) * 10 / 5 * (2 + 3)
 
@@ -74,18 +74,18 @@ Exercises
 
     .. tabbed:: q5
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: ex_2_5
         
-               Optional. Many people keep time using a 24 hour clock (11 is 11am and 23 is 11pm, 0 is midnight).
-               If it is currently 13 and you set your alarm to go off in 50 hours, it will be 15 (3pm).
-               Write a Python program to solve the general version of the above problem.
-               Ask the user for the time now (in hours), and then ask for the number of hours to wait for the alarm.
-               Your program should output what the time will be on the clock when the alarm goes off.
+               Opcional. Muchas personas pasan la hora usando un reloj de 24 horas (11 son las 11 a.m. y 23 son las 11 p.m., 0 es medianoche).
+               Si actualmente son las 13 y configuras la alarma para que suene en 50 horas, serán las 15 (3pm).
+               Escriba un programa de Python para resolver la versión general del problema anterior.
+               Solicite al usuario el tiempo ahora (en horas) y luego solicite la cantidad de horas que esperará la alarma.
+               Su programa debería mostrar la hora del reloj cuando suena la alarma.
                ~~~~
 
-        .. tab:: Answer
+        .. tab:: Respuesta
             
             .. activecode:: spd_q5_answer
                 :nocanvas:
@@ -108,11 +108,11 @@ Exercises
 
    .. actex:: ex_2_6
 
-       It is possible to name the days 0 thru 6 where day 0 is Sunday and day 6 is Saturday.
-       If you go on a wonderful holiday leaving on day number 3 (a Wednesday) and you return 
-       home after 10 nights you would return home on a Saturday (day 6). Write a general 
-       version of the program which asks for the starting day number, and the length of your 
-       stay, and it will tell you the number of day of the week you will return on.
+      Es posible nombrar los días 0 a 6, donde el día 0 es domingo y el día 6 es sábado.
+      Si te vas de maravillosas vacaciones saliendo el día número 3 (un miércoles) y regresas
+      después de 10 noches en casa, regresarías a casa un sábado (día 6). Escriba un versión
+      general del programa que solicita el número del día de inicio y la duración de su
+      estadía y le indicará la cantidad de días de la semana en que volverá.
        ~~~~
 
 
@@ -120,42 +120,46 @@ Exercises
 
     .. tabbed:: q7
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
-            Optional. Take the sentence: *All work and no play makes Jack a dull boy.*
-            Store each word in a separate variable, then print out the sentence on
-            one line using ``print``.
+            Opcional. Tome la oración: *Todo el trabajo y nada de juego hacen que Jack sea un niño aburrido.*
+            Almacene cada palabra en una variable separada, luego imprima la oración en
+            una línea usando ``print``.
 
             .. actex:: ex_2_7
 
-        .. tab:: Answer
+        .. tab:: Respuesta
 
             .. activecode:: spd_q7_answer    
                 :nocanvas:
 
-                ## question 7 solution ##
+                ## Solución a la pregunta 7 ##
 
-                word1 = "All"
-                word2 = "work"
-                word3 = "and"
-                word4 = "no"
-                word5 = "play"
-                word6 = "makes"
-                word7 = "Jack"
-                word8 = "a"
-                word9 = "dull"
-                word10 = "boy."
+                word1 = "Todo"
+                word2 = "el"
+                word3 = "trabajo"
+                word4 = "y"
+                word5 = "nada"
+                word6 = "de"
+                word7 = "juegos"
+                word8 = "hacen"
+                word9 = "que"
+                word10 = "Jack"
+                word11 = "sea"
+                word12 = "un"
+                word13 = "niño"
+                word14 = "aburrido"
 
-                print(word1 + ' ' +  word2 + ' ' + word3 + ' ' +  word4 + ' ' +  word5 + ' ' +  word6 + ' ' +  word7 + ' ' +  word8 + ' ' +  word9 + ' ' +  word10)
+                print(word1 + ' ' +  word2 + ' ' + word3 + ' ' +  word4 + ' ' +  word5 + ' ' +  word6 + ' ' +  word7 + ' ' +  word8 + ' ' +  word9 + ' ' +  word10+ ' ' +  word11 + ' ' +  word12+ ' ' +  word13 + ' ' +  word14)
 
 
 .. question:: spd_ex_8
 
    .. actex:: ex_2_8
 
-      Add parentheses to the expression ``6 * 1 - 2`` to change its value from 4 to -6.
+      Agregue paréntesis a la expresión ``6 * 1 - 2`` para cambiar su valor de 4 a -6.
       ~~~~
-      
+
       print(6 * 1 -2)
 
   
@@ -163,21 +167,21 @@ Exercises
 
     .. tabbed:: q9
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: ex_2_9
 
-                Optional. The formula for computing the final amount if one is earning
-                compound interest is given on Wikipedia as
+                Opcional. La fórmula para calcular la cantidad final si se gana
+                el interés compuesto se da en Wikipedia como
 
                 .. image:: Figures/compoundInterest.png
                    :alt: formula for compound interest
 
-                Write a Python program that assigns the principal amount of 10000 to
-                variable ``P``, assign to ``n`` the value 12, and assign to ``r`` the interest
-                rate of 8% (0.08).  Then have the program prompt the user for the number of years,
-                ``t``, that the money will be compounded for.  Calculate and print the final
-                amount after ``t`` years.
+                Escriba un programa de Python que asigne la cantidad principal de 10000 a
+                variable ``P``, asigne a ``n`` el valor 12 y asigne a ``r`` el interés
+                tasa del 8% (0.08). Luego haga que el programa solicite al usuario la cantidad de años,
+                ``t``, que el dinero se agravará. Calcule e imprima el final
+                cantidad después de ``t`` años.
                 ~~~~
             
                 P = 10000
@@ -186,29 +190,29 @@ Exercises
 
                 t = ??
                 
-        .. tab:: Answer
+        .. tab:: Respuesta
 
             .. activecode:: spd_q9_answer
                 :nocanvas:
 
-                ## question 9 solution ##
+                ## solución a la pregunta 9 ##
 
                 P = 10000
                 n = 12
                 r = 0.08
 
-                t = int(input("Compound for how many years? "))
+                t = int(input("Por cuántos años está compuesto? "))
 
                 final = P * ( ((1 + (r/n)) ** (n * t)) )
 
-                print("The final amount after", t, "years is", final)
+                print("La cantidad final después de ", t, " años es", final)
 
     
 .. question:: spd_ex_10
 
    .. actex:: ex_2_10
 
-      Write a program that will compute the area of a circle. Prompt the user to enter the radius and print a nice message back to the user with the answer.
+      Escribe un programa que calcule el área de un círculo. Solicite al usuario que ingrese el radio e imprima un mensaje agradable al usuario con la respuesta.
       ~~~~
 
   
@@ -216,35 +220,35 @@ Exercises
 
     .. tabbed:: q11
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: ex_2_11
 
-               Optional. Write a program that will compute the area of a rectangle.  Prompt the user to enter the width and height of the rectangle.
-               Print a nice message with the answer.
+               Opcional. Escribe un programa que calcule el área de un rectángulo. Solicite al usuario que ingrese el ancho y la altura del rectángulo.
+               Imprime un bonito mensaje con la respuesta.
                ~~~~
         
-        .. tab:: Answer
+        .. tab:: Respuesta
 
             .. activecode:: spd_q11_answer
                 :nocanvas:        
 
-                ## question 11 solution
+                ## Solución el ejercicio 9
 
-                width = int(input("Width? "))
-                height = int(input("Height? "))
+                width = int(input("Ancho? "))
+                height = int(input("Altot? "))
 
                 area = width * height
 
-                print("The area of the rectangle is", area)
+                print("El área del rectángulo es", area)
 
 
 .. question:: spd_ex_12
 
    .. actex:: ex_2_12
 
-      Write a program that will compute MPG for a car. Prompt the user to enter the number of 
-      miles driven and the number of gallons used. Print a nice message with the answer.
+      Escriba un programa que calcule MPG para un automóvil. Solicitar al usuario que ingrese el número de
+      millas recorridas y la cantidad de galones utilizados. Imprime un bonito mensaje con la respuesta.
       ~~~~
 
   
@@ -252,28 +256,28 @@ Exercises
 
     .. tabbed:: q13
 
-        .. tab:: Question
+        .. tab:: Pregunta
 
             .. actex:: ex_2_13
 
-               Optional. Write a program that will convert degrees celsius to degrees fahrenheit.
+               Opcional. Escriba un programa que convierta grados centígrados a grados fahrenheit.
                ~~~~
         
-        .. tab:: Answer
+        .. tab:: Respuesta
 
             .. activecode:: spd_q13_answer
                 :nocanvas:
 
-                ## question 13 solution ##
+                ## solución al ejercicio 13 ##
 
-                deg_c = int(input("What is the temperature in Celsius? "))
+                deg_c = int(input("¿Cuál es la temperatura en grados Celsius? "))
 
                 # formula to convert C to F is: (degrees Celcius) times (9/5) plus (32)
                 deg_f = deg_c * (9 / 5) + 32
 
-                print(deg_c, " degrees Celsius is", deg_f, " degrees Farenheit.")
+                print(deg_c, " en grados Celsius es ", deg_f, ", grados Fahrenheit.")
 
-        .. tab:: Discussion
+        .. tab:: Proceso
 
             .. disqus::
                 :shortname: interactivepython
@@ -283,7 +287,7 @@ Exercises
 
    .. actex:: ex_2_14
 
-      Optional. Write a program that will convert degrees fahrenheit to degrees celsius.
+      Opcional. Escriba un programa que convierta grados Fahrenheit a grados Celsius.
       ~~~~
 
 .. question:: spd_ex_15
@@ -291,11 +295,11 @@ Exercises
    .. parsonsprob:: pp_2_15
       :noindent:
 
-      Piece together the code so that a user is asked for two numbers, and then the sum of those two numbers is printed out.
+      Reúna el código para que se le pidan dos números a un usuario, y luego se imprima la suma de esos dos números.
       -----
-      num_one = input("Please enter your first number: ")
+      num_one = input("Por favor ingrese su primer número: ")
       =====
-      num_two = input("Please enter your second number: ")
+      num_two = input("Por favor ingrese su segundo número: ")
       =====
       sum_of_input = int(num_one) + int(num_two)
       =====
@@ -306,15 +310,15 @@ Exercises
    .. parsonsprob:: pp_2_16
       :noindent:
 
-      Write a program that will convert gallons to liters. This program will also need to get input from a user to see how many gallons should be converted and the result should be printed to the user.
+      Escriba un programa que convierta galones a litros. Este programa también necesitará recibir información de un usuario para ver cuántos galones se deben convertir y el resultado se debe imprimir al usuario.
       -----
-      user_gallons = input("How many gallons should be converted?: ")
+      user_gallons = input("¿Cuántos galones se deben convertir ?: ")
       =====
       num_gallons = int(user_gallons)
       =====
       liters = num_gallons * 3.785
       =====
-      print("Number of liters: " + str(liters))
+      print("Numero de litros: " + str(liters))
 
 
 .. question:: spd_ex_17
@@ -322,10 +326,10 @@ Exercises
    .. parsonsprob:: pp_2_17
       :noindent:
 
-      Write a program that will convert table spoons to teaspons. This program will also need to get input from a user to see how many tablespoons should be converted and the result should be printed to the user.
+      Escriba un programa que convierta las cucharadas de mesa en cucharaditas. Este programa también necesitará la entrada de un usuario para ver cuántas cucharadas se deben convertir y el resultado se debe imprimir al usuario.
       -----
-      user_tablespoons = float(input("How many tablespoons should be converted?: "))
+      user_tablespoons = float(input("¿Cuántas cucharadas se deben convertir?: "))
       =====
       teaspoons = user_tablespoons * 3
       =====
-      print("Number of teaspoons: " + str(teaspoons))
+      print("Número de cucharaditas: " + str(teaspoons))
