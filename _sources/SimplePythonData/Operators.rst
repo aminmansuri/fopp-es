@@ -21,27 +21,27 @@
     multiplication
     operators and operands
 
-Operators and Operands
+Operadores y Operandos
 ----------------------
 
-You can build complex expressions out of simpler ones using **operators**. Operators are special tokens that represent computations like addition,
-multiplication and division. The values the operator works on are called
-**operands**.
+Puede construir expresiones complejas a partir de las más simples utilizando **operadores**. Los operadores son tokens especiales que representan cálculos como la suma,
+multiplicación y división. Los valores en los que trabaja el operador se denominan
+**operandos**.
 
-The following are all legal Python expressions whose meaning is more or less
-clear::
+Las siguientes son todas las expresiones legales de Python cuyo significado es más o menos
+claro::
 
     20 + 32
     5 ** 2
     (5 + 9) * (15 - 7)
 
-The tokens ``+``, ``-``, and ``*``, and the use of parentheses for grouping,
-mean in Python what they mean in mathematics. The asterisk (``*``) is the
-token for multiplication, and ``**`` is the token for exponentiation.
-Addition, subtraction, multiplication, and exponentiation all do what you
-expect.
+Los tokens ``+``, ``-`` y ``*``, y el uso de paréntesis para la agrupación,
+significan en Python lo que significan en matemáticas. El asterisco (``*``) es el
+token para multiplicación, y ``**`` es el token para exponenciación.
+La suma, la resta, la multiplicación y la exponenciación hacen todo lo que usted
+esperar.
 
-Remember that if we want to see the results of the computation, the program needs to specify that with the word ``print``. The first three computations occur, but their results are not printed out.
+Recuerde que si queremos ver los resultados del cálculo, el programa debe especificarlo con la palabra ``print``. Se producen los primeros tres cálculos, pero sus resultados no se imprimen.
 
 .. activecode:: ac2_3_1
     :nocanvas:
@@ -51,7 +51,7 @@ Remember that if we want to see the results of the computation, the program need
     (5 + 9) * (15 - 7)
     print(7 + 5)
 
-In Python 3, which we will be using, the division operator ``/`` produces a floating point result (even if the result is an integer; ``4/2`` is ``2.0``). If you want truncated division, which ignores the remainder, you can use the ``//`` operator (for example, ``5//2`` is ``2``).
+En Python 3, que usaremos, el operador de división ``/`` produce un resultado de coma flotante (incluso si el resultado es un entero; ``4/2`` es ``2.0``). Si desea una división truncada, que ignora el resto, puede usar el operador ``//`` (por ejemplo, ``5//2`` es ``2``).
 
 .. activecode:: ac2_3_2
     :nocanvas:
@@ -60,9 +60,9 @@ In Python 3, which we will be using, the division operator ``/`` produces a floa
     print(5 / 9)
     print(9 // 5)
 
-Pay particular attention to the examples above. Note that ``9//5`` truncates rather than rounding, so it produces the value 1 rather 2.
+Presta especial atención a los ejemplos anteriores. Tenga en cuenta que ``9//5`` se trunca en lugar de redondear, por lo que produce el valor 1 en lugar de 2.
 
-The truncated division operator, ``//``, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus ``7.0 // 3.0`` is ``2.0``.
+El operador de división truncado, ``//``, también funciona en números de coma flotante. Se trunca al número entero más cercano, pero aún produce un resultado de coma flotante. Por lo tanto, ``7.0 // 3.0`` es ``2.0``.
 
 .. activecode:: ac2_3_3
    :nocanvas:
@@ -74,28 +74,28 @@ The truncated division operator, ``//``, also works on floating point numbers. I
     single: %
     remainder
 
-The **modulus operator**, sometimes also called the **remainder operator** or **integer remainder operator** works on integers (and integer expressions) and yields
-the remainder when the first operand is divided by the second. In Python, the
-modulus operator is a percent sign (``%``). The syntax is the same as for other
-operators.
+El **operador de módulo**, a veces también llamado **operador restante** o **operador resto entero** funciona en enteros (y expresiones enteras) y produce
+el resto cuando el primer operando se divide por el segundo. En Python, el
+operador de módulo es un signo de porcentaje (``%``). La sintaxis es la misma que para otros
+operadores
 
 .. activecode:: ac2_3_4
     :nocanvas:
 
-    print(7 // 3)    # This is the integer division operator
-    print(7 % 3)     # This is the remainder or modulus operator
+    print(7 // 3)    # Este es el operador de división entera
+    print(7 % 3)     # Este es el operador restante o módulo
 
-In the above example, 7 divided by 3 is 2 when we use integer division and there is a remainder of 1.
+En el ejemplo anterior, 7 dividido por 3 es 2 cuando usamos división entera y hay un resto de 1.
 
-The modulus operator turns out to be surprisingly useful. For example, you can
-check whether one number is divisible by another---if ``x % y`` is zero, then
-``x`` is divisible by ``y``.
-Also, you can extract the right-most digit or digits from a number.  For
-example, ``x % 10`` yields the right-most digit of ``x`` (in base 10).
-Similarly ``x % 100`` yields the last two digits.
+El operador de módulo resulta ser sorprendentemente útil. Por ejemplo, puedes
+compruebe si un número es divisible por otro --- si ``x % y`` es cero, entonces
+``x`` es divisible por ``y``.
+Además, puede extraer el dígito o dígitos más a la derecha de un número.
+Por ejemplo, ``x % 10`` produce el dígito más a la derecha de ``x`` (en la base 10).
+Del mismo modo, ``x % 100`` produce los dos últimos dígitos.
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_3_1
    :answer_a: 4.5
@@ -104,14 +104,14 @@ Similarly ``x % 100`` yields the last two digits.
    :answer_d: 4.0
    :answer_e: 2
    :correct: a
-   :feedback_a: Because the result is not an integer, a floating point answer is produced.
-   :feedback_b: Even if // were used, it would still truncate, not round
-   :feedback_c: Perhaps you are thinking of the integer division operator, //
-   :feedback_d: / performs exact division, without truncation
-   :feedback_e: / does division. Perhaps you were thinking of %, which computes the remainder?
+   :feedback_a: Como el resultado no es un entero, se produce una respuesta de coma flotante.
+   :feedback_b: Incluso si "//" se usara, aún se truncaría, no redondearía
+   :feedback_c: Quizás esté pensando en el operador de división entera, //
+   :feedback_d: / realiza una división exacta, sin truncamiento
+   :feedback_e: / hace división. Tal vez estabas pensando en%, que calcula el resto?
    :practice: T
 
-   What value is printed when the following statement executes?
+   ¿Qué valor se imprime cuando se ejecuta la siguiente instrucción?
 
    .. code-block:: python
 
@@ -124,14 +124,14 @@ Similarly ``x % 100`` yields the last two digits.
    :answer_d: 4.0
    :answer_e: 2
    :correct: d
-   :feedback_a: - // does truncated division.
-   :feedback_b: - Neither / nor // leads to rounding up
-   :feedback_c: - Even though it truncates, it produces a floating point result
-   :feedback_d: - Yes, even though it truncates, it produces a floating point result because 18.0 is a float
-   :feedback_e: - / does division. Perhaps you were thinking of %, which computes the remainder?
+   :feedback_a: - // realiza una división truncada.
+   :feedback_b: - Ni "/" ni "//" conduce al redondeo
+   :feedback_c: - Aunque se trunca, produce un resultado de coma flotante
+   :feedback_d: - Sí, aunque se trunca, produce un resultado de coma flotante porque 18.0 es flotante
+   :feedback_e: - / hace división. Tal vez estabas pensando en %, que calcula el resto?
    :practice: T
 
-   What value is printed when the following statement executes?
+   ¿Qué valor se imprime cuando se ejecuta la siguiente instrucción?
 
    .. code-block:: python
 
@@ -144,13 +144,13 @@ Similarly ``x % 100`` yields the last two digits.
    :answer_c: 4
    :answer_d: 2
    :correct: d
-   :feedback_a: The % operator returns the remainder after division.
-   :feedback_b: The % operator returns the remainder after division.
-   :feedback_c: The % operator returns the remainder after division.
-   :feedback_d: The % operator returns the remainder after division.
+   :feedback_a: El operador % devuelve el resto después de la división.
+   :feedback_b: El operador % devuelve el resto después de la división.
+   :feedback_c: El operador % devuelve el resto después de la división.
+   :feedback_d: El operador % devuelve el resto después de la división.
    :practice: T
 
-   What value is printed when the following statement executes?
+   ¿Qué valor se imprime cuando se ejecuta la siguiente instrucción?
 
    .. code-block:: python
 
