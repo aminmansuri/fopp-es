@@ -11,27 +11,27 @@
    :prefix: turtle-7-
    :start: 1
 
-A Few More ``turtle`` Methods and Observations
-----------------------------------------------
+Un poco más de ``turtle`` Métodos y Observaciones
+---------------------------------------------------
 
-Here are a few more things that you might find useful as you write programs that use turtles.
+Aquí hay algunas cosas más que pueden resultarle útiles a medida que escribe programas que usan turtle.
 
-* Turtle methods can use negative angles or distances. So ``tess.forward(-100)`` will move
-  tess backwards, and ``tess.left(-30)`` turns her to the right. Additionally, because there
-  are 360 degrees in a circle, turning 30 to the left will leave you facing in the same
-  direction as turning 330 to the right! (The on-screen animation will differ, though
-  --- you will be able to tell if tess is turning clockwise or counter-clockwise!)
+* Los métodos de tortuga pueden usar ángulos negativos o distancias. Entonces ``Tess.forward(-100)`` moverá
+  a Tess hacia atrás, y ``tess.left(-30)`` la gira hacia la derecha. Además, porque hay
+  360 grados en un círculo, girando 30 a la izquierda te dejará mirando en la mismo
+  dirección como girar 330 a la derecha! (La animación en pantalla será diferente, aunque
+  --- ¡podrás saber si tess está girando en sentido horario o antihorario!)
 
-  This suggests that we don't need both a left and a right turn method --- we could be
-  minimalists, and just have one method. There is also a *backward* method. (If you are
-  very nerdy, you might enjoy saying ``alex.backward(-100)`` to move alex forward!)
+  Esto sugiere que no necesitamos un método de giro a la izquierda y a la derecha --- podríamos ser
+  minimalistas, y solo tengo un método. También hay un método *backward*. (Si usted es
+  muy nerd, puede que disfrutes diciendo ``alex.backward(-100)`` para mover a alex hacia adelante)
 
-  Reviewing a few basic facts about geometry and number lines, like we've done here is a
-  good start if we're going to play with turtles.
+  Revisar algunos hechos básicos sobre geometría y rectas numéricas, como lo hemos hecho aquí, es un
+  Buen comienzo si vamos a jugar con turtle.
 
-* A turtle's pen can be picked up or put down. This allows us to move a turtle
-  to a different place without drawing a line. The methods are ``up`` and ``down``.
-  Note that the methods ``penup`` and ``pendown`` do the same thing.
+* El bolígrafo de una tortuga se puede levantar o bajar. Esto nos permite mover una tortuga
+  a un lugar diferente sin dibujar una línea. Los métodos son ``up`` y ``down``.
+  Tenga en cuenta que los métodos ``penup`` y ``pendown`` hacen lo mismo.
 
   .. sourcecode:: python
 
@@ -39,8 +39,8 @@ Here are a few more things that you might find useful as you write programs that
      alex.forward(100)     # this moves alex, but no line is drawn
      alex.down()
 
-* Every turtle can have its own shape. The ones available "out of the box" are ``arrow``,
-  ``blank``, ``circle``, ``classic``, ``square``, ``triangle``, ``turtle``.
+* Cada tortuga puede tener su propia forma. Los disponibles "listos para usar" son ``flecha``,
+  ``en blanco``, ``círculo``, ``clásico``, ``cuadrado``, ``triángulo``, ``tortuga``.
 
   .. sourcecode:: python
 
@@ -49,19 +49,19 @@ Here are a few more things that you might find useful as you write programs that
      ...
 
 
-* You can speed up or slow down the turtle's animation speed. (Animation
-  controls how quickly the turtle turns and moves forward). Speed settings can
-  be set between 1 (slowest) to 10 (fastest). But if you set the speed to 0,
-  it has a special meaning --- turn off animation and go as fast as possible.
+* Puedes acelerar o ralentizar la velocidad de animación de la tortuga. (La animación
+  controla qué tan rápido la tortuga gira y avanza). La configuración de velocidad puede
+  establecerse entre 1 (el más lento) a 10 (el más rápido). Pero si configura la velocidad a 0,
+  tiene un significado especial --- apaga la animación y ve lo más rápido posible.
 
   .. sourcecode:: python
 
      alex.speed(10)
 
-* A turtle can "stamp" its footprint onto the canvas, and this will remain after
-  the turtle has moved somewhere else. Stamping works even when the pen is up.
+* Una tortuga puede "estampar" su huella en el lienzo, y esto permanecerá después de
+  la tortuga se ha mudado a otro lugar. El estampado funciona incluso cuando la pluma está arriba.
 
-Let's do an example that shows off some of these new features.
+Hagamos un ejemplo que muestre algunas de estas nuevas características.
 
 .. activecode:: ac3_7_1
     :nocodelens:
@@ -83,19 +83,19 @@ Let's do an example that shows off some of these new features.
     wn.exitonclick()
 
 
-If you are curious about how far the turtle is traveling each time the for loop iterates, you can add a print
-statement inside of the for loop to print out the value of ``dist``.
+Si tiene curiosidad acerca de qué tan lejos viaja la tortuga cada vez que el ciclo for itera, puede agregar una impresión
+declaración dentro del bucle for para imprimir el valor de ``dist``.
 
-One more thing to be careful about. All except one of the shapes you see on the screen here are
-footprints created by ``stamp``. But the program still only has *one* turtle instance --- can you
-figure out which one is the real tess? (Hint: if you're not sure, write a new line of code after the
-``for`` loop to change tess' color, or to put her pen down and draw a line, or to change her shape, etc.)
+Una cosa más para tener cuidado. Todas menos una de las formas que ves en la pantalla aquí son
+huellas creadas por ``sello``. Pero el programa todavía solo tiene *una* instancia de tortuga --- ¿puedes
+averiguar cuál es la verdadera Tess? (Sugerencia: si no está seguro, escriba una nueva línea de código después del
+bucle ``for`` para cambiar el color de Tess, o para dejar su pluma y dibujar una línea, o para cambiar su forma, etc.)
 
-**Mixed up program**
+**Programas mixtos**
 
 .. parsonsprob:: pp3_7_1
 
-   The following program uses the stamp method to create a circle of turtle shapes as shown to the left, <img src="../_static/TurtleCircle.png" width="150" align="left" hspace="10" vspace="5" alt="image of a circle of turtle shapes"/> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following ten times: go forward 50 pixels, leave a copy of the turtle at the current position, reverse for 50 pixels, and then turn right 36 degrees.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
+   El siguiente programa usa el método de estampar para crear un círculo de formas de tortuga como se muestra a la izquierda, <img src="../_static/TurtleCircle.png" width="150" align="left" hspace="10" vspace="5" alt="image of a circle of turtle shapes"/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria, crear la tortuga, establecer la forma en "tortuga" y levantar la pluma. Luego, la tortuga debe repetir las siguientes diez veces: avanzar 50 píxeles, dejar una copia de la tortuga en la posición actual, retroceder 50 píxeles y luego girar a la derecha 36 grados. Después del ciclo, configure la ventana para que se cierre cuando el usuario haga clic en ella.<br /><br /><p>Arrastre los bloques de declaraciones desde la columna izquierda a la columna derecha y colóquelos en el orden correcto con la sangría correcta. Haga clic en <i>Check Me</i> para ver si tiene razón. Se le informará si alguna de las líneas está en el orden incorrecto o tiene una sangría incorrecta.</p>
    -----
    import turtle
    wn = turtle.Screen()
@@ -115,11 +115,11 @@ figure out which one is the real tess? (Hint: if you're not sure, write a new li
    =====
    wn.exitonclick()
 
-**Mixed up program**
+**Programas Mixtos**
 
 .. parsonsprob:: pp3_7_2
 
-   The following program uses the stamp method to create a line of turtle shapes as shown to the left, <img src="../_static/Turtle3Stamp.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line of turtle shapes"/> but the lines are mixed up.  The program should do all necessary set-up, create the turtle, set the shape to "turtle", and pick up the pen.  Then the turtle should repeat the following three times: go forward 50 pixels and leave a copy of the turtle at the current position.  After the loop, set the window to close when the user clicks in it.<br /><br /><p>Drag the blocks of statements from the left column to the right column and put them in the right order with the correct indention.  Click on <i>Check Me</i> to see if you are right. You will be told if any of the lines are in the wrong order or are incorrectly indented.</p>
+   El siguiente programa usa el método de estampar para crear una línea de formas de tortuga como se muestra a la izquierda, <img src="../_static/Turtle3Stamp.png" width="150" align="left" hspace="10" vspace="5" alt="image of a line of turtle shapes"/> Pero las líneas están mezcladas. El programa debe hacer toda la configuración necesaria, crear la tortuga, establecer la forma en "turtle" y levantar la pluma. Luego, la tortuga debe repetir las siguientes tres veces: avanzar 50 píxeles y dejar una copia de la tortuga en la posición actual. Después del ciclo, configure la ventana para que se cierre cuando el usuario haga clic en ella.<br/><br/><p> Arrastre los bloques de declaraciones de la columna izquierda a la columna derecha y colóquelos en el orden correcto con el correcto sangría Haga clic en <i>Check Me</i> para ver si tiene razón. Se le informará si alguna de las líneas está en el orden incorrecto o tiene sangría incorrecta.</p>
    -----
    import turtle
    wn = turtle.Screen()
