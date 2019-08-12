@@ -1,8 +1,8 @@
-Variables, Statements, and Expressions
+Variables, declaraciones y expresiones
 ::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Variables, Statements, and Expressions
+   :caption: Variables, declaraciones y expresiones
    :maxdepth: 2
 
    intro-VariablesExpressionsandStatements.rst
