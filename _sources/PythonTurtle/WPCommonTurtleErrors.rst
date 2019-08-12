@@ -11,13 +11,13 @@
    :prefix: turtle-9-
    :start: 1
 
-👩‍💻 Common ``turtle`` Errors
-==============================
+👩‍💻 Errores comunes de ``turtle``
+===================================
 
-Below we'll describe common errors that beginning programmers encounter when writing turtle code. 
-Some of these errors can be applied to other instances as well!
+A continuación describiremos los errores comunes que los programadores principiantes encuentran al escribir el código de tortuga.
+¡Algunos de estos errores también pueden aplicarse a otras instancias!
 
-1. Forgetting a Parenthesis
+1. Olvidando un paréntesis
 
 .. activecode:: ac3_9_1
 
@@ -28,21 +28,20 @@ Some of these errors can be applied to other instances as well!
    alex.forward(50
    alex.right(90)
 
-When you run the example above you'll see how an error occurs. This is because we accidentally left off the ")" when we 
-tell alex to move forward. This is a common error for programmers of any skill level - it's easy to miss one and not 
-notice! If you get a syntax error like this or - expecially in this textbook - one that says there was bad syntax on a 
-line that isn't visible to you then likely you're missing a parenthesis, quotation, or bracket.
+Cuando ejecute el ejemplo anterior, verá cómo se produce un error. Esto se debe a que accidentalmente dejamos el ")" cuando
+dile a alex que siga adelante. Este es un error común para los programadores de cualquier nivel de habilidad: es fácil perderse uno y no
+¡aviso! Si obtiene un error de sintaxis como este o -especialmente en este libro de texto- uno que dice que hubo una mala sintaxis en un
+línea que no es visible para usted, entonces es probable que le falte un paréntesis, una cita o un corchete.
 
-2. Issues with Variable Names
+2. Problemas con nombres de variables
 
-Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or swiching 
-letters around. Other times we accidentally refer to the wrong variable name. Checkout the code below for some examples.
-
+A veces escribimos mal un nombre de variable, ya sea poniéndolo en mayúscula cuando no estaba previamente en mayúscula o cambiando
+letras alrededor. Otras veces nos referimos accidentalmente al nombre de variable incorrecto. Verifique el código a continuación para ver algunos ejemplos.
 .. activecode:: ac3_9_2
 
    import turtle
    wn = turtle.Screen()
-   alex = Turtle.turtle()      #switched turtle and Turtle
+   alex = Turtle.turtle()      #'Tortuga' y 'tortuga' intercambiados
 
    alex.forward(50)
    alex.right(90)
@@ -54,7 +53,7 @@ letters around. Other times we accidentally refer to the wrong variable name. Ch
    june = turtle.Turtle()      
 
    june.forward(50)
-   right.june(90)             #switched the variable for jane with the direction to turn in
+   right.june(90)             #cambió la variable para Jane con la dirección para girar
 
 .. activecode:: ac3_9_4
 
@@ -63,12 +62,12 @@ letters around. Other times we accidentally refer to the wrong variable name. Ch
    june = turtle.Turtle()      
 
    june.forward(50)
-   June.right(90)            #capitalized the variable June even though all others were lowercase
+   June.right(90)            #capitalizó la variable junio a pesar de que todas las demás estaban en minúsculas
 
-3. Incorrect Arguments
+3. Argumentos incorrectos
 
-We can also incorrectly provide arguments to a method or function. When that happens, you'll see an error message like the 
-one below.
+También podemos proporcionar argumentos incorrectos a un método o función. Cuando eso suceda, verá un mensaje de error como el
+uno abajo.
 
 .. activecode:: ac3_9_5
 
@@ -81,8 +80,8 @@ one below.
        june.forward("50")
        june.right(90)
 
-We wanted to iterate and draw a square, but we forgot to specify how many times we should iterate over the for loop. As a 
-result, we ran into an error because the range function requires at least one argument. Try fixing this so that the code 
-builds a square. Do you think you'll run into other problems? Predict what will happen and then try it out!
+Queríamos iterar y dibujar un cuadrado, pero olvidamos especificar cuántas veces deberíamos iterar sobre el ciclo for. Como un
+resultado, nos encontramos con un error porque la función de rango requiere al menos un argumento. Intenta arreglar esto para que el código
+Construye un cuadrado. ¿Crees que te encontrarás con otros problemas? ¡Predice lo que sucederá y luego pruébalo!
 
 
