@@ -28,10 +28,10 @@ imprimir (el nombre de la) fruta.
 
 ¿Recuerdas los dibujos de tortugas que hicimos antes? ¡Para bucles y listas se pueden aplicar allí también!
 
-La iteración simplifica nuestro programa de tortugas
------------------------------------------------------
+La iteración simplifica nuestro programa en Turtle
+---------------------------------------------------
 
-Para dibujar un cuadrado, nos gustaría hacer lo mismo cuatro veces: --- mover la tortuga hacia adelante
+Para dibujar un cuadrado, nos gustaría hacer lo mismo cuatro veces: mover la tortuga hacia adelante
 distancia y girar 90 grados. Anteriormente utilizamos 8 líneas de código Python para que alex dibujara los cuatro
 lados de un cuadrado. El siguiente programa hace exactamente lo mismo pero, con la ayuda de un bucle for,
 usa solo tres líneas (sin incluir el código de configuración). Recuerde que la declaración for

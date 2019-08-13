@@ -11,11 +11,11 @@
    :prefix: iter-4-
    :start: 1
 
-Strings and ``for`` loops
+Strings y bucles ``for``
 -------------------------
 
-Since a string is simply a sequence of characters, the ``for`` loop iterates over each character 
-automatically. (As always, try to predict what the output will be from this code before your run it.)
+Como una cadena es simplemente una secuencia de caracteres, el ciclo ``for`` itera sobre cada carácter
+automáticamente. (Como siempre, intente predecir cuál será la salida de este código antes de ejecutarlo).
 
 .. activecode:: ac6_4_1
     :nocanvas:
@@ -23,25 +23,25 @@ automatically. (As always, try to predict what the output will be from this code
     for achar in "Go Spot Go":
         print(achar)
 
-The loop variable ``achar`` is automatically reassigned each character in the string "Go Spot Go".
-We will refer to this type of sequence iteration as **iteration by item**. Note that the for loop 
-processes the characters in a string or items in a sequence one at a time from left to right.
+La variable de iteración ``achar`` se reasigna automáticamente a cada carácter en la cadena "Go Spot Go".
+Nos referiremos a este tipo de iteración de secuencia como **iteración por elemento**. Tenga en cuenta que el bucle for
+procesa los caracteres en una cadena o elementos en una secuencia uno a la vez de izquierda a derecha.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question6_4_1
    :answer_a: 10
    :answer_b: 11
    :answer_c: 12
-   :answer_d: Error, the for statement needs to use the range function.
+   :answer_d: Error, la sentencia for necesita usar la función range.
    :correct: c
-   :feedback_a: Iteration by item will process once for each item in the sequence.
-   :feedback_b: The blank is part of the sequence.
-   :feedback_c: Yes, there are 12 characters, including the blank.
-   :feedback_d: The for statement can iterate over a sequence item by item.
+   :feedback_a: La iteración por elemento se procesará una vez para cada elemento de la secuencia.
+   :feedback_b: El espacio en blanco es parte de la secuencia.
+   :feedback_c: Sí, hay 12 caracteres, incluido el espacio en blanco.
+   :feedback_d: La instrucción for puede iterar sobre una secuencia elemento por elemento.
    :practice: T
 
-   How many times is the word HELLO printed by the following statements?
+   ¿Cuántas veces se imprime la palabra HOLA con las siguientes afirmaciones?
    
    .. code-block:: python
 
@@ -53,15 +53,15 @@ processes the characters in a string or items in a sequence one at a time from l
    :answer_a: 4
    :answer_b: 5
    :answer_c: 6
-   :answer_d: Error, the for statement cannot use slice.
+   :answer_d: Error, la sentencia for no puede usar slice.
    :correct: b
-   :feedback_a: Slice returns a sequence that can be iterated over.
-   :feedback_b: Yes, The blank is part of the sequence returned by slice.
-   :feedback_c: Check the result of s[3:8]. It does not include the item at index 8.
-   :feedback_d: Slice returns a sequence.
+   :feedback_a: Slice retorna una secuencia que puede ser iterada.
+   :feedback_b: Sí, el espacio en blanco es parte de la secuencia devuelta por slice.
+   :feedback_c: Revisa el resultado s[3:8]. No incluye el artículo en el índice 8.
+   :feedback_d: Slice devuelve una secuencia.
    :practice: T
 
-   How many times is the word HELLO printed by the following statements?
+   ¿Cuántas veces se imprime la palabra HOLA con las siguientes afirmaciones?
    
    .. code-block:: python
 
