@@ -11,34 +11,34 @@
    :prefix: sequences-4-
    :start: 1
 
-Disabmiguating []: creation vs indexing
-=======================================
+Disambiguating []: creación vs indexación
+=========================================
 
-Square brackets ``[]`` are used in quite a few ways in python. When you're first learning how to use them it may be 
-confusing, but with practice and repetition they'll be easy to incorporate!
+Los corchetes ``[]`` se usan de muchas maneras en Python. Cuando esté aprendiendo cómo usarlos, puede ser
+confuso, pero con práctica y repetición serán fáciles de incorporar.
 
-You have currently encountered two instances where we have used square brakets. The first is creating lists and the second 
-is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing 
-an already created list while simply creating a list does not.
+Actualmente ha encontrado dos instancias en las que hemos utilizado corchetes cuadrados. Lo primero es crear listas y lo segundo
+es si está indexando. A primera vista, crear e indexar son difíciles de distinguir. Sin embargo, la indexación requiere referencia
+una lista ya creada mientras que simplemente crear una lista no lo hace.
 
 .. activecode:: ac5_4_1
 
    new_lst = []
 
-In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.
+En el código anterior, se crea una nueva lista utilizando los corchetes vacíos. Sin embargo, como no hay nada en él, no podemos indexarlo.
 
 .. activecode:: ac5_4_2
 
    new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
    part_of_new_lst = new_lst[0]
 
-In the code above, you'll see how, now that we have elements inside of ``new_lst``, we can index into it. 
-In order to extract an element of the list, we do use ``[]``, but we first have to specify which list we are indexing. 
-Imagine if there was another list in the activecode. 
-How would python know which list we want to index into if we don't tell it? 
-Additionally, we have to specify what element we want to extract. This belongs inside of the brakets. 
+En el código anterior, verá cómo, ahora que tenemos elementos dentro de ``new_lst``, podemos indexarlo.
+Para extraer un elemento de la lista, usamos ``[]``, pero primero tenemos que especificar qué lista estamos indexando.
+Imagine si hubiera otra lista en el código activo.
+¿Cómo sabría Python en qué lista queremos indexar si no lo decimos?
+Además, tenemos que especificar qué elemento queremos extraer. Esto va dentro de los corchetes.
 
-Though it may be easier to distinguish in this above activecode, below may be a bit more difficult.
+Aunque puede ser más fácil distinguir en este código activo anterior, a continuación puede ser un poco más difícil.
 
 .. activecode:: ac5_4_3
 
@@ -48,10 +48,10 @@ Though it may be easier to distinguish in this above activecode, below may be a 
    print(lst)
    print(n_lst)
 
-Here, we see a list called ``lst`` being assigned to a list with one element, zero. Then, we see how ``n_lst`` is assigned 
-the value associated with the first element of lst. Dispite the variable names, only one of the above variables is 
-assigned to a list. Note that in this example, what sets creating appart from indexing is the reference to the list to let 
-python know that you are extracting an element from another list.
+Aquí, vemos una lista llamada ``lst`` que se asigna a una lista con un elemento, cero. Luego, vemos cómo se asigna ``n_lst``
+El valor asociado con el primer elemento de lst. A pesar de los nombres de las variables, solo una de las variables anteriores es
+asignada a una lista. Tenga en cuenta que en este ejemplo, lo que establece la creación aparte de la indexación es la referencia a la lista para permitir a
+Python saber que se está extrayendo un elemento de otra lista.
 
 .. mchoice:: question5_4_1
    :multiple_answers:
@@ -59,11 +59,11 @@ python know that you are extracting an element from another list.
    :answer_b: y = a[]
    :answer_c: x = [8]
    :answer_d: t = a[0]
-   :feedback_a: No, due to the way the code was written it creates a list. This list would have one element which is the value assigned to the variable a.
-   :feedback_b: Though this tries to use indexing, it does not specify what element should be taken from a.
-   :feedback_c: No, this is an example of creating a list.
-   :feedback_d: Yes, this will using indexing to get the value of the first element of a.
+   :feedback_a: No, debido a la forma en que se escribió el código, crea una lista. Esta lista tendría un elemento que es el valor asignado a la variable a.
+   :feedback_b: Aunque esto intenta usar la indexación, no especifica qué elemento debe tomarse de a.
+   :feedback_c: No, este es un ejemplo de creación de una lista.
+   :feedback_d: Sí, esto usará la indexación para obtener el valor del primer elemento de a.
    :correct: d
    :practice: T
 
-   Which of the following correctly uses indexing? Assume that ``a`` is a list or string. Select as many as apply.
+   ¿Cuál de los siguientes usa correctamente la indexación? Suponga que ``a`` es una lista o cadena. Selecciona todas las que apliquen.
