@@ -13,40 +13,40 @@
    :prefix: seq-11-
    :start: 1
 
-Exercises
----------
+Ejercicios
+----------
 
 #.
 
    .. parsonsprob:: pp5_11_1
 
-      Write a program that will print out the length of each item in the list as well as the first and last characters of the item.
+      Escriba un programa que imprima la longitud de cada elemento de la lista, así como el primer y último carácter del elemento.
       -----
       weather = ["sunny", "cloudy", "partially sunny", 
                  "rainy", "storming", "windy", "foggy", 
                  "snowy", "hailing"]
       =====
-      for condition in weather:
+      por condición climática:
       =====
-          print("The word is", len(condition), "characters")
+          print("La palabra es", len(condition), "characters")
       =====
           first_char = condition[0]
           last_char = condition[-1]
       =====
-          print("The first character is: " + first_char)
-          print("The last character is: " + last_char)
+          print("El primer caracter es: " + first_char)
+          print("El último caracter es: " + last_char)
 
 #.
 
    .. parsonsprob:: pp5_11_2
 
-      Write code to determine how many t's are in the following sentences.
+      Escriba el código para determinar cuántas t hay en las siguientes oraciones.
       -----
       phrases = ["My, what a lovely day today is!", 
       "Have you mastered cooking yet? A tasty treat could be in your future.", 
       "Have you ever seen the leaves change color?"]
       =====
-      for sentence in phrases:
+      para las oración en frases:
       =====
           print(sentence.count("t"))
 
