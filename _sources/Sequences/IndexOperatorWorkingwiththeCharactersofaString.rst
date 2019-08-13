@@ -16,19 +16,19 @@
    index; string
    string; index
 
-Index Operator: Working with the Characters of a String
--------------------------------------------------------
+Operador Index: trabajar con los caracteres de una cadena
+--------------------------------------------------------------
 
-The **indexing operator** (Python uses square brackets to enclose the index) 
-selects a single character from a string.  The characters are accessed by their position or 
-index value.  For example, in the string shown below, the 14 characters are indexed left to right 
-from postion 0 to position 13.  
+El **operador de indexación** (Python usa corchetes para encerrar el índice)
+selecciona un solo carácter de una cadena. Se accede a los caracteres por su posición o
+valor del índice. Por ejemplo, en la cadena que se muestra a continuación, los 14 caracteres están indexados de izquierda a derecha
+de la posición 0 a la posición 13.
 
 .. image:: Figures/indexvalues.png
    :alt: index values
 
-It is also the case that the positions are named from right to left using negative numbers where -1 is 
-the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.
+También se da el caso de que las posiciones se nombran de derecha a izquierda usando números negativos donde -1 es
+el índice más a la derecha y así sucesivamente. Tenga en cuenta que el carácter en el índice 6 (o -8) es el carácter en blanco.
 
 .. activecode:: ac5_3_1
     
@@ -39,38 +39,38 @@ the rightmost index and so on. Note that the character at index 6 (or -8) is the
     lastchar = school[-1]
     print(lastchar)
 
-The expression ``school[2]`` selects the character at index 2 from ``school``, and creates a new
-string containing just this one character. The variable ``m`` refers to the result. 
+La expresión ``school[2]`` selecciona el carácter en el índice 2 de ``school`` y crea una nueva
+cadena que contiene solo este carácter. La variable ``m`` se refiere al resultado.
 
-The letter at index zero of ``"Luther College"`` is ``L``.  So at
-position ``[2]`` we have the letter ``t``.
+La letra en el índice cero de ``"Luther College"`` es ``L``. Entonces en
+posición ``[2]`` tenemos la letra ``t``.
 
-If you want the zero-eth letter of a string, you just put 0, or any expression
-with the value 0, in the brackets.  Give it a try.
+Si desea la letra cero-eth de una cadena, simplemente ponga 0 o cualquier expresión
+con el valor 0, entre paréntesis. Puede darle una oportunidad
 
-The expression in brackets is called an **index**. An index specifies a member
-of an ordered collection.  In this case the collection of characters in the string. The index
-*indicates* which character you want. It can be any integer
-expression so long as it evaluates to a valid index value.
+La expresión entre paréntesis se llama **index**. Un índice especifica un miembro
+de una colección ordenada. En este caso, la colección de caracteres en la cadena. El índice
+*indica* qué caracter quieres. Puede ser cualquier número entero o
+expresión, siempre que se evalúe como un valor de índice válido.
 
-Note that indexing returns a *string* --- Python has no special type for a single character.
-It is just a string of length 1.
+Tenga en cuenta que la indexación devuelve una *cadena* --- Python no tiene ningún tipo especial para un solo carácter.
+Es solo una cadena de longitud 1.
 
-Index Operator: Accessing Elements of a List or Tuple
-=====================================================
+Operador de índice: acceso a elementos de una lista o tupla
+===========================================================
 
-The syntax for accessing the elements of a list or tuple is the same as the syntax for
-accessing the characters of a string.  We use the index operator ( ``[]`` -- not to
-be confused with an empty list). The expression inside the brackets specifies
-the index. Remember that the indices start at 0. Any integer expression can be used
-as an index and as with strings, negative index values will locate items from the right instead
-of from the left.
+La sintaxis para acceder a los elementos de una lista o tupla es la misma que la sintaxis para
+accediendo a los caracteres de una cadena. Usamos el operador de índice (``[]`` --no para
+confundirse con una lista vacía). La expresión dentro de los corchetes especifica
+el índice. Recuerde que los índices comienzan en 0. Se puede usar cualquier expresión entera
+como índice y al igual que con las cadenas, los valores de índice negativos localizarán elementos de la derecha en su lugar
+de desde la izquierda.
 
-When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean!
+Cuando decimos el primer, tercer o enésimo carácter de una secuencia, generalmente queremos decir contar de la manera habitual, comenzando con 1. El enésimo carácter y el carácter AT INDEX n son diferentes entonces: el enésimo carácter está en el índice n-1. ¡Asegúrate de tener claro lo que quieres decir!
 
-Try to predict what will be printed out by the following code, and then run it to check your
-prediction. (Actually, it's a good idea to always do that with the code examples. You 
-will learn much more if you force yourself to make a prediction before you see the output.)
+Intente predecir lo que se imprimirá con el siguiente código y luego ejecútelo para verificar su
+predicción. (En realidad, es una buena idea hacerlo siempre con los ejemplos de código.
+aprenderá mucho más si se obliga a hacer una predicción antes de ver la salida)
 
 .. activecode:: ac5_3_2
     
@@ -87,21 +87,21 @@ will learn much more if you force yourself to make a prediction before you see t
     print(prices[-1])
     print(prices[3-5])
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question5_3_1
    :answer_a: t
    :answer_b: h
    :answer_c: c
-   :answer_d: Error, you cannot use the [ ] operator with a string.
+   :answer_d: Error, no puede usar el operador [ ] con una cadena.
    :correct: b
-   :feedback_a: Index locations do not start with 1, they start with 0.
-   :feedback_b: Yes, index locations start with 0.
-   :feedback_c: s[-3] would return c, counting from right to left.
-   :feedback_d: [ ] is the index operator.
+   :feedback_a: Las ubicaciones de índice no comienzan con 1, comienzan con 0.
+   :feedback_b: Sí, las ubicaciones de índice comienzan con 0.
+   :feedback_c: s[-3] devolvería c, contando de derecha a izquierda.
+   :feedback_d: [ ] es el operador de índice.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
       
    .. code-block:: python
    
@@ -113,16 +113,16 @@ will learn much more if you force yourself to make a prediction before you see t
    :answer_b: to
    :answer_c: ps
    :answer_d: nn
-   :answer_e: Error, you cannot use the [ ] operator with the + operator.
+   :answer_e: Error, no puede usar el operador [ ] con el operador +.
    :correct: b
-   :feedback_a: Almost, t is at postion 2, counting left to right starting from 0; but r is at -5, counting right to left starting from -1.
-   :feedback_b: For -4 you count from right to left, starting with -1.
-   :feedback_c: p is at location 0, not 2.
-   :feedback_d: n is at location 5, not 2.
-   :feedback_e: [ ] operator returns a string that can be concatenated with another string.
+   :feedback_a: Casi, t está en la posición 2, contando de izquierda a derecha a partir de 0; pero r está en -5, contando de derecha a izquierda a partir de -1.
+   :feedback_b: Para -4 cuentas de derecha a izquierda, comenzando con -1.
+   :feedback_c: p está en la ubicación 0, no en 2.
+   :feedback_d: n está en la ubicación 5, no en la 2.
+   :feedback_e: El operador [ ] devuelve una cadena que se puede concatenar con otra cadena.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -135,13 +135,13 @@ will learn much more if you force yourself to make a prediction before you see t
    :answer_c: False
    :answer_d: "dog"
    :correct: b
-   :feedback_a: The empty list is at index 4.
-   :feedback_b: Yes, 3.14 is at index 5 since we start counting at 0 and sublists count as one item.
-   :feedback_c: False is at index 6.
-   :feedback_d: Look again, the element at index 3 is a list. This list only counts as one element.
+   :feedback_a: La lista vacía está en el índice 4.
+   :feedback_b: Sí, 3.14 está en el índice 5 ya que comenzamos a contar en 0 y las sublistas cuentan como un elemento.
+   :feedback_c: Falso está en el índice 6.
+   :feedback_d: Mire nuevamente, el elemento en el índice 3 es una lista. Esta lista solo cuenta como un elemento.
    :practice: T
    
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
@@ -153,7 +153,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :autograde: unittest
    :practice: T
 
-   Assign the value of the 34th element of ``lst`` to the variable ``output``.
+   Asigne el valor del elemento 34 de ``lst`` a la variable ``output``.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
    
@@ -173,7 +173,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :autograde: unittest
    :practice: T
    
-   Assign the value of the 23rd element of ``l`` to the variable ``checking``.
+   Asigne el valor del elemento 23 de ``l`` a la variable ``checking``.
    ~~~~
    l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
 
@@ -193,7 +193,7 @@ will learn much more if you force yourself to make a prediction before you see t
    :autograde: unittest
    :practice: T
 
-   Assign the value of the last chacter of ``lst`` to the variable ``output``. Do this so that the length of lst doesn't matter.
+   Asigne el valor del último carácter de ``lst`` a la variable ``output``. Haga esto para que la longitud de lst no importe.
    ~~~~
    lst = "Every chess or checkers game begins from the same position and has a finite number of moves that can be played. While the number of possible scenarios and moves is quite large, it is still possible for computers to calculate that number and even be programmed to respond well against a human player..."
    
@@ -209,9 +209,9 @@ will learn much more if you force yourself to make a prediction before you see t
    myTests().main()
 
 .. note::
-   Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
-   has a long history in computer science having to do with some low-level implementation details that we won't
-   go into. For indexing from right to left, it might seem natural to do the analgous thing
-   and start at -0. Unfortunately, -0 is the same as 0, so s[-0] can't be the last item. Remember we
-   said that programming languages are formal languages where details matter and
-   everything is taken literally?
+   ¿Por qué el conteo comienza en 0 yendo de izquierda a derecha, pero en -1 yendo de derecha a izquierda? Bueno, la indexación que comienza en 0
+   tiene una larga historia en ciencias de la computación que tiene que ver con algunos detalles de implementación de bajo nivel que no veremos.
+   Para indexar de derecha a izquierda, puede parecer natural hacer lo análogo
+   y comenzar en -0. Desafortunadamente, -0 es lo mismo que 0, por lo que s[-0] no puede ser el último elemento. Recuerda, ¿nosotros
+   dijimos que los lenguajes de programación son lenguajes formales donde los detalles importan y
+   todo se toma literalmente?
