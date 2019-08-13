@@ -21,7 +21,7 @@
 Length
 ======
 
-The ``len`` function, when applied to a string, returns the number of characters in a string.
+La función ``len``, cuando se aplica a una cadena, devuelve el número de caracteres en una cadena.
 
 .. activecode:: ac5_5_1
     
@@ -29,8 +29,8 @@ The ``len`` function, when applied to a string, returns the number of characters
     print(len(fruit))
     
 
-To get the last letter of a string, you might be tempted to try something like
-this:
+Para obtener la última letra de una cadena, puede tener la tentación de intentar algo como
+esto:
 
 .. activecode:: ac5_5_2
     
@@ -39,10 +39,10 @@ this:
     last = fruit[sz]       # ERROR!
     print(last)
 
-That won't work. It causes the runtime error ``IndexError: string index out of range``. The reason is 
-that there is no letter at index position 6 in ``"Banana"``. Since we started counting at zero, the 
-six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length. 
-Give it a try in the example above.
+Eso no funcionará. Provoca el error de tiempo de ejecución ``IndexError: string index out of range``. La razón es
+que no hay letra en la posición de índice 6 en ``"Banana"``. Desde que comenzamos a contar en cero, al
+seis, los índices están numerados del 0 al 5. Para obtener el último carácter, tenemos que restar 1 de la longitud.
+Pruébalo en el ejemplo anterior.
 
 .. activecode:: ac5_5_3
     
@@ -51,20 +51,20 @@ Give it a try in the example above.
     lastch = fruit[sz-1]
     print(lastch)
 
-.. Alternatively, in Python we can use **negative indices**, which count backward from the
-.. end of the string. The expression ``fruit[-1]`` yields the last letter,
-.. ``fruit[-2]`` yields the second to last, and so on.  Try it!
+.. Alternativamente, en Python podemos usar ** índices negativos **, que cuentan hacia atrás desde el
+.. final de la cadena. La expresión `` fruta [-1]`` produce la última letra,
+.. ``fruit[-2]`` produce el penúltimo, y así sucesivamente. ¡Intentalo!
 
-Typically, a Python programmer will access the last character by combining the
-two lines of code from above.
+Normalmente, un programador de Python accederá al último caracter combinando
+dos líneas de código desde arriba.
 
 .. sourcecode:: python
     
     lastch = fruit[len(fruit)-1]
 
-As with strings, the function ``len`` returns the length of a list (the number
-of items in the list).  However, since lists can have items which are themselves sequences (e.g., strings), 
-it important to note that ``len`` only returns the top-most length.
+Al igual que con las cadenas, la función ``len`` devuelve la longitud de una lista (el número
+de artículos en la lista). Sin embargo, como las listas pueden tener elementos que son secuencias (p. Ej., strings),
+es importante tener en cuenta que ``len`` solo devuelve la longitud más alta.
 
 .. activecode:: ac5_5_4
 
@@ -72,19 +72,19 @@ it important to note that ``len`` only returns the top-most length.
     print(len(alist))
     print(len(alist[0]))
 
-Note that ``alist[0]`` is the string ``"hello"``, which has length 5. 
+Tenga en cuenta que ``alist[0]`` es la cadena ``"hello"``, que tiene una longitud 5.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question5_5_1
    :answer_a: 11
    :answer_b: 12
    :correct: b
-   :feedback_a: The blank space counts as a character.
-   :feedback_b: Yes, there are 12 characters in the string.
+   :feedback_a: El espacio en blanco cuenta como un caracter.
+   :feedback_b: Sí, hay 12 caracteres en el string.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -95,11 +95,11 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    :answer_a: 4
    :answer_b: 5
    :correct: b
-   :feedback_a: len returns the actual number of items in the list, not the maximum index value.
-   :feedback_b: Yes, there are 5 items in this list.
+   :feedback_a: len devuelve el número real de elementos en la lista, no el valor de índice máximo.
+   :feedback_b: Sí, hay 5 artículos en esta lista.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
@@ -112,13 +112,13 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    :answer_c: 4
    :answer_d: 5
    :correct: b
-   :feedback_a: The list begins with the second item of L and includes everything up to but not including the last item.
-   :feedback_b: Yes, there are 3 items in this list.
-   :feedback_c: The list begins with the second item of L and includes everything up to but not including the last item.
-   :feedback_d: The list begins with the second item of L and includes everything up to but not including the last item.
+   :feedback_a: La lista comienza con el segundo elemento de L e incluye todo hasta el último elemento, pero sin incluirlo.
+   :feedback_b: Sí, hay 3 artículos en esta lista.
+   :feedback_c: La lista comienza con el segundo elemento de L e incluye todo hasta el último elemento, pero sin incluirlo.
+   :feedback_d: La lista comienza con el segundo elemento de L e incluye todo hasta el último elemento, pero sin incluirlo.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
@@ -130,7 +130,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
    :autograde: unittest
    :practice: T
 
-   Assign the number of elements in ``lst`` to the variable ``output``.
+   Asigne el número de elementos en ``lst`` a la variable ``output``.
    ~~~~
    lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
    
