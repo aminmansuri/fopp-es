@@ -11,42 +11,40 @@
    :prefix: moreiter-7-
    :start: 1
 
-Nested Iteration: Image Processing
-----------------------------------
+Iteración anidada: procesamiento de imágenes
+---------------------------------------------
 
-Two dimensional tables have both rows and columns. You have probably seen many tables like this if you have used a
-spreadsheet program. Another object that is organized in rows and columns is a digital image. In this section we will
-explore how iteration allows us to manipulate these images.
+Las tablas bidimensionales tienen tanto filas como columnas. Probablemente haya visto muchas tablas como esta si ha utilizado un
+hoja de cálculo. Otro objeto que está organizado en filas y columnas es una imagen digital. En esta sección lo haremos
+Explore cómo la iteración nos permite manipular estas imágenes.
 
-A **digital image** is a finite collection of small, discrete picture elements called **pixels**. These pixels are
-organized in a two-dimensional grid. Each pixel represents the smallest amount of picture information that is
-available. Sometimes these pixels appear as small "dots".
+Una **imagen digital** es una colección finita de elementos de imagen pequeños y discretos llamados **píxeles**. Estos píxeles son
+organizado en una cuadrícula bidimensional. Cada píxel representa la cantidad más pequeña de información de imagen que es
+disponible. Algunas veces estos píxeles aparecen como pequeños "puntos".
 
-Each image (grid of pixels) has its own width and its own height. The width is the number of columns and the height is
-the number of rows. We can name the pixels in the grid by using the column number and row number. However, it is very
-important to remember that computer scientists like to start counting with 0! This means that if there are 20 rows, they
-will be named 0,1,2, and so on through 19. This will be very useful later when we iterate using range.
+Cada imagen (cuadrícula de píxeles) tiene su propio ancho y su propia altura. El ancho es el número de columnas y el alto es
+El número de filas. Podemos nombrar los píxeles en la cuadrícula utilizando el número de columna y el número de fila. Sin embargo, es muy
+Es importante recordar que a los informáticos les gusta comenzar a contar con 0. Esto significa que si hay 20 filas,
+se llamará 0,1,2, y así hasta el 19. Esto será muy útil más adelante cuando iteremos usando el rango.
 
 
-In the figure below, the pixel of interest is found at column **c** and row **r**.
-
+En la figura siguiente, el píxel de interés se encuentra en la columna **c** y la fila **r**.
 .. image:: Figures/image.png
 
-The RGB Color Model
-^^^^^^^^^^^^^^^^^^^
+El modelo de color RGB
+^^^^^^^^^^^^^^^^^^^^^^^
 
-Each pixel of the image will represent a single color.  The specific color depends on a formula that mixes various amounts
-of three basic colors: red, green, and blue.  This technique for creating color is known as the **RGB Color Model**.
-The amount of each color, sometimes called the **intensity** of the color, allows us to have very fine control over the
-resulting color.
+Cada píxel de la imagen representará un solo color. El color específico depende de una fórmula que mezcle varias cantidades.
+de tres colores básicos: rojo, verde y azul. Esta técnica para crear color se conoce como **Modelo de color RGB**.
+La cantidad de cada color, a veces llamada **intensidad** del color, nos permite tener un control muy fino sobre el
+color resultante
 
-The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the
-pixel. The maximum intensity is 255. This means that there are actually 256 different amounts of intensity for each basic
-color. Since there are three basic colors, that means that you can create 256\ :sup:`3` distinct colors using the RGB
-Color Model.
+El valor de intensidad mínimo para un color básico es 0. Por ejemplo, si la intensidad del rojo es 0, entonces no hay rojo en el
+píxel La intensidad máxima es 255. Esto significa que en realidad hay 256 cantidades diferentes de intensidad para cada base
+color. Como hay tres colores básicos, eso significa que puede crear 256\ :sup:`3` colores distintos usando el modelo de color RGB.
 
-Here are the red, green and blue intensities for some common colors. Note that "Black" is represented by a pixel having
-no basic color. On the other hand, "White" has maximum values for all three basic color components.
+Aquí están las intensidades de rojo, verde y azul para algunos colores comunes. Tenga en cuenta que "Negro" está representado por
+un píxel que no tiene color básico. Por otro lado, "Blanco" tiene valores máximos para los tres componentes básicos de color.
 
  	 =======  =======  =======  =======
 	 Color    Red      Green    Blue
@@ -60,31 +58,31 @@ no basic color. On the other hand, "White" has maximum values for all three basi
 	 Magenta  255      0        255
 	 =======  =======  =======  =======
 
-In order to manipulate an image, we need to be able to access individual pixels. This capability is provided by a module
-called **image**, provided in ActiveCode [1]_.  The image module defines two classes: ``Image`` and ``Pixel``.
+Para manipular una imagen, necesitamos poder acceder a píxeles individuales. Esta capacidad es proporcionada por un módulo
+llamado **image**, proporcionado en ActiveCode [1]_. El módulo de image define dos clases: ``Image`` y ``Pixel``.
 
-.. [1] If you want to explore image processing on your own outside of the browser you can install the cImage module from http://pypi.org.
+.. [1] Si desea explorar el procesamiento de imágenes por su cuenta fuera del navegador, puede instalar el módulo cImage desde http://pypi.org.
 
-Each Pixel object has three attributes: the red intensity, the green intensity, and the blue intensity. A pixel provides
-three methods that allow us to ask for the intensity values. They are called ``getRed``, ``getGreen``, and ``getBlue``.
-In addition, we can ask a pixel to change an intensity value using its ``setRed``, ``setGreen``, and ``setBlue`` methods.
+Cada objeto Pixel tiene tres atributos: la intensidad roja, la intensidad verde y la intensidad azul. Un píxel proporciona
+tres métodos que nos permiten preguntar por los valores de intensidad. Se llaman ``getRed``, ``getGreen`` y ``getBlue``.
+Además, podemos pedirle a un píxel que cambie un valor de intensidad usando sus métodos ``setRed``, ``setGreen`` y ``setBlue``.
 
 
-    ============  ================            ===============================================
-    Method Name   Example                     Explanation
-    ============  ================            ===============================================
-    Pixel(r,g,b)  Pixel(20,100,50)            Create a new pixel with 20 red, 100 green, and 50 blue.
-    getRed()      r = p.getRed()              Return the red component intensity.
-    getGreen()    r = p.getGreen()            Return the green component intensity.
-    getBlue()     r = p.getBlue()             Return the blue component intensity.
-    setRed()      p.setRed(100)               Set the red component intensity to 100.
-    setGreen()    p.setGreen(45)              Set the green component intensity to 45.
-    setBlue()     p.setBlue(156)              Set the blue component intensity to 156.
-    ============  ================            ===============================================
+    =================  ================            =========================================================
+    Nombre del método  Example                     Explanation
+    =================  ================            =========================================================
+    Pixel(r,g,b)       Pixel(20,100,50)                 Cree un nuevo píxel con 20 rojos, 100 verdes y 50 azules.
+    getRed()           r = p.getRed()                   Devuelve la intensidad del componente rojo.
+    getGreen()         r = p.getGreen()                 Devuelve la intensidad del componente verde.
+    getBlue()          r = p.getBlue()                  Devuelve la intensidad del componente azul.
+    setRed()           p.setRed(100)                    Establezca la intensidad del componente rojo en 100.
+    setGreen()         p.setGreen(45)                   Establezca la intensidad del componente verde en 45.
+    setBlue()          p.setBlue(156)                   Establezca la intensidad del componente azul en 156.
+    =================  ================            =========================================================
 
-In the example below, we first create a pixel with 45 units of red, 76 units of green, and 200 units of blue.
-We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
-the same as the current amount of green.
+En el siguiente ejemplo, primero creamos un píxel con 45 unidades de rojo, 76 unidades de verde y 200 unidades de azul.
+Luego imprimimos la cantidad actual de rojo, cambiamos la cantidad de rojo y, finalmente, establecemos la cantidad de azul para que sea
+lo mismo que la cantidad actual de verde.
 
 .. activecode::  ac14_7_1
     :nocodelens:
@@ -98,54 +96,52 @@ the same as the current amount of green.
     p.setBlue(p.getGreen())
     print(p.getGreen(), p.getBlue())
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question14_7_1
-   :answer_a: Dark red
-   :answer_b: Light red
-   :answer_c: Dark green
-   :answer_d: Light green
+   :answer_a: Rojo oscuro
+   :answer_b: Rojo claro
+   :answer_c: Verde oscuro
+   :answer_d: Verde claro
    :correct: a
-   :feedback_a: Because all three values are close to 0, the color will be dark.  But because the red value is higher than the other two, the color will appear red.
-   :feedback_b: The closer the values are to 0, the darker the color will appear.
-   :feedback_c: The first value in RGB is the red value.  The second is the green.  This color has no green in it.
-   :feedback_d: The first value in RGB is the red value.  The second is the green.  This color has no green in it.
+   :feedback_a: Como los tres valores están cerca de 0, el color será oscuro. Pero debido a que el valor rojo es más alto que los otros dos, el color aparecerá rojo.
+   :feedback_b: Cuanto más cerca estén los valores de 0, más oscuro aparecerá el color.
+   :feedback_c: El primer valor en RGB es el valor rojo. El segundo es el verde. Este color no tiene verde.
+   :feedback_d: El primer valor en RGB es el valor rojo. El segundo es el verde. Este color no tiene verde.
 
-   If you have a pixel whose RGB value is (50, 0, 0), what color will this pixel appear to be?
+   Si tiene un píxel cuyo valor RGB es (50, 0, 0), ¿de qué color será este píxel?
 
-Image Objects
-^^^^^^^^^^^^^
+Objetos Image
+^^^^^^^^^^^^^^
 
-To access the pixels in a real image, we need to first create an ``Image`` object. Image objects can be created in two
-ways. First, an Image object can be made from the files that store digital images. The image object has an attribute
-corresponding to the width, the height, and the collection of pixels in the image.
+Para acceder a los píxeles en una imagen real, primero debemos crear un objeto ``Imagen``. Los objetos de imagen se pueden crear en dos
+formas. Primero, se puede hacer un objeto Imagen a partir de los archivos que almacenan imágenes digitales. El objeto de imagen tiene un atributo
+correspondiente al ancho, la altura y la colección de píxeles en la imagen.
 
-It is also possible to create an Image object that is "empty". An ``EmptyImage`` has a width and a height. However, the
-pixel collection consists of only "White" pixels.
+También es posible crear un objeto de imagen que esté "vacío". Una ``Imagen vacía`` tiene un ancho y una altura. sin embargo, el
+La colección de píxeles consta solo de píxeles "blancos".
 
-We can ask an image object to return its size using the ``getWidth`` and ``getHeight`` methods. We can also get a pixel
-from a particular location in the image using ``getPixel`` and change the pixel at a particular location using
-``setPixel``.
+Podemos pedirle a un objeto de imagen que devuelva su tamaño utilizando los métodos ``getWidth`` y ``getHeight``. También podemos obtener un píxel
+desde una ubicación particular en la imagen usando ``getPixel`` y cambie el píxel en una ubicación particular usando ``setPixel``.
 
 
-The Image class is shown below. Note that the first two entries show how to create image objects. The parameters are
-different depending on whether you are using an image file or creating an empty image.
+La clase de imagen se muestra a continuación. Tenga en cuenta que las dos primeras entradas muestran cómo crear objetos de imagen. Los parámetros son
+diferente dependiendo de si está utilizando un archivo de imagen o está creando una imagen vacía.
 
-   =================== =============================== ==================================================
-   Method Name         Example                         Explanation
-   =================== =============================== ==================================================
-   Image(filename)     img = image.Image("cy.png")     Create an Image object from the file cy.png.
-   EmptyImage()        img = image.EmptyImage(100,200) Create an Image object that has all "White" pixels
-   getWidth()          w = img.getWidth()              Return the width of the image in pixels.
-   getHeight()         h = img.getHeight()             Return the height of the image in pixels.
-   getPixel(col,row)   p = img.getPixel(35,86)         Return the pixel at column 35, row 86.
-   setPixel(col,row,p) img.setPixel(100,50,mp)         Set the pixel at column 100, row 50 to be mp.
-   =================== =============================== ==================================================
+   ===================  ===============================  ==================================================
+   Nombre del método    Example                          Explanation
+   ===================  ===============================  ==================================================
+   Image(filename)      img = image.Image("cy.png")      Create an Image object from the file cy.png.
+   EmptyImage()         img = image.EmptyImage(100,200)  Create an Image object that has all "White" pixels
+   getWidth()           w = img.getWidth()               Return the width of the image in pixels.
+   getHeight()          h = img.getHeight()              Return the height of the image in pixels.
+   getPixel(col,row)    p = img.getPixel(35,86)          Return the pixel at column 35, row 86.
+   setPixel(col,row,p)  img.setPixel(100,50,mp)          Set the pixel at column 100, row 50 to be mp.
+   ===================  ===============================  ==================================================
 
-Consider the image shown below. Assume that the image is stored in a file called "luther.jpg". Line 2 opens the file and
-uses the contents to create an image object that is referred to by ``img``. Once we have an image object, we can use the
-methods described above to access information about the image or to get a specific pixel and check on its basic color
-intensities.
+Considere la imagen que se muestra a continuación. Suponga que la imagen se almacena en un archivo llamado "luther.jpg". La línea 2 abre el archivo y
+usa el contenido para crear un objeto de imagen al que se refiere ``img``. Una vez que tenemos un objeto de imagen, podemos usar el
+métodos previamente mencionados para acceder a información sobre la imagen o para obtener un píxel específico y verificar su color básico intensidades
 
 
 
@@ -168,10 +164,10 @@ intensities.
     print(p.getRed(), p.getGreen(), p.getBlue())
 
 
-When you run the program you can see that the image has a width of 400 pixels and a height of 244 pixels.  Also, the
-pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few other pixel locations by changing the ``getPixel`` arguments and rerunning the program.
+Cuando ejecuta el programa, puede ver que la imagen tiene un ancho de 400 píxeles y una altura de 244 píxeles. También el
+píxel en la columna 45, fila 55, tiene valores RGB de 165, 161 y 158. Pruebe algunas otras ubicaciones de píxel cambiando los argumentos ``getPixel`` y ejecutando nuevamente el programa.
 
-**Check your understanding**
+**Verifica tu entendimiento**
 
 .. mchoice:: question14_7_2
    :answer_a: 149 132 122
@@ -179,31 +175,32 @@ pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few othe
    :answer_c: 165 161 158
    :answer_d: 201 104 115
    :correct: b
-   :feedback_a: These are the values for the pixel at row 30, column 100.  Get the values for row 100 and column 30 with p = img.getPixel(30, 100). (Note that the first argument to getPixel is the column, not the row.)
-   :feedback_b: Yes, the RGB values are 183 179 170 at row 100 and column 30.
-   :feedback_c: These are the values from the original example (row 45, column 55). Get the values for row 100 and column 30 with p = img.getPixel(30, 100).
-   :feedback_d: These are simply made-up values that may or may not appear in the image.  Get the values for row 100 and column 30 with p = img.getPixel(30, 100).
+   :feedback_a: Estos son los valores para el píxel en la fila 30, columna 100.  Obtenga los valores para la fila 100 y la columna 30 con p = img.getPixel(30, 100). (Tenga en cuenta que el primer argumento para getPixel es la columna, no la fila.)
+   :feedback_b: Sí, los valores RGB son 183 179 170 en la fila 100 y la columna 30.
+   :feedback_c: Estos son los valores del ejemplo original (fila 45, columna 55). Obtenga los valores para la fila 100 y la columna 30 con p = img.getPixel(30, 100).
+   :feedback_d: Estos son simplemente valores inventados que pueden o no aparecer en la imagen. Obtenga los valores para la fila 100 y la columna 30 con p = img.getPixel(30, 100).
 
-   Using the previous ActiveCode example, select the answer that is closest to the RGB values of the pixel at row 100, column 30?  The values may be off by one or two due to differences in browsers.
+   Usando el ejemplo anterior de ActiveCode, seleccione la respuesta más cercana a los valores RGB del píxel en la fila 100, columna 30? Los valores pueden estar desactivados en uno o dos debido a las diferencias en los navegadores.
 
 
-Image Processing and Nested Iteration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Procesamiento de imágenes e iteración anidada
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Image processing** refers to the ability to manipulate the individual pixels in a digital image. In order to process
-all of the pixels, we need to be able to systematically visit all of the rows and columns in the image. The best way
-to do this is to use **nested iteration**.
+**Procesamiento de imagen** se refiere a la capacidad de manipular los píxeles individuales en una imagen digital. Para procesar
+todos los píxeles, necesitamos poder visitar sistemáticamente todas las filas y columnas de la imagen. La mejor manera
+hacer esto es usar **iteración anidada**.
 
-Nested iteration simply means that we will place one iteration construct inside of another. We will call these two
-iterations the **outer iteration** and the **inner iteration**. To see how this works, consider the iteration below.
+La iteración anidada simplemente significa que colocaremos una construcción de iteración dentro de otra. Llamaremos a estos dos
+iteraciones la **iteración externa** y la **iteración interna**. Para ver cómo funciona esto, considere la siguiente iteración.
 
 .. sourcecode:: python
 
     for i in range(5):
         print(i)
 
-We have seen this enough times to know that the value of ``i`` will be 0, then 1, then 2, and so on up to 4. The
-``print`` will be performed once for each pass. However, the body of the loop can contain any statements including another iteration (another ``for`` statement). For example,
+Hemos visto esto suficientes veces para saber que el valor de ``i`` será 0, luego 1, luego 2, y así sucesivamente hasta 4. El
+La ``impresión`` se realizará una vez por cada pase. Sin embargo, el cuerpo del bucle puede contener cualquier declaración,
+incluida otra iteración (otra declaración ``para``). Por ejemplo,
 
 .. sourcecode:: python
 
@@ -211,12 +208,12 @@ We have seen this enough times to know that the value of ``i`` will be 0, then 1
         for j in range(3):
             print(i, j)
 
-The ``for i`` iteration is the `outer iteration` and the ``for j`` iteration is the `inner iteration`. Each pass through
-the outer iteration will result in the complete processing of the inner iteration from beginning to end. This means that
-the output from this nested iteration will show that for each value of ``i``, all values of ``j`` will occur.
+La iteración ``para i`` es la `iteración externa` y la iteración ``para j`` es la `iteración interna`. Cada paso a través
+la iteración externa dará como resultado el procesamiento completo de la iteración interna de principio a fin. Esto significa que
+la salida de esta iteración anidada mostrará que para cada valor de ``i``, se producirán todos los valores de ``j``.
 
-Here is the same example in activecode. Try it. Note that the value of ``i`` stays the same while the value of ``j``
-changes. The inner iteration, in effect, is moving faster than the outer iteration.
+Aquí está el mismo ejemplo en activecode. Intentalo. Tenga en cuenta que el valor de ``i`` permanece igual mientras que el
+valor de ``j`` cambios La iteración interna, en efecto, se mueve más rápido que la iteración externa.
 
 .. activecode:: ac14_7_3
 
@@ -224,21 +221,20 @@ changes. The inner iteration, in effect, is moving faster than the outer iterati
         for j in range(3):
             print(i, j)
 
-Another way to see this in more detail is to examine the behavior with codelens. Step through the iterations to see the
-flow of control as it occurs with the nested iteration. Again, for every value of ``i``, all of the values of ``j`` will occur. You can see that the inner iteration completes before going on to the next pass of the outer iteration.
-
+Otra forma de ver esto con más detalle es examinar el comportamiento con codelens. Recorre las iteraciones para ver el
+flujo de control como ocurre con la iteración anidada. Nuevamente, para cada valor de ``i``, se producirán todos los valores de ``j``.Puede ver que la iteración interna se completa antes de pasar al siguiente paso de la iteración externa.
 .. codelens:: clens14_7_1
 
     for i in range(5):
         for j in range(3):
             print(i, j)
 
-Our goal with image processing is to visit each pixel. We will use an iteration to process each `row`. Within that
-iteration, we will use a nested iteration to process each `column`. The result is a nested iteration, similar to the one
-seen above, where the outer ``for`` loop processes the rows, from 0 up to but not including the height of the image.
-The inner ``for`` loop will process each column of a row, again from 0 up to but not including the width of the image.
+Nuestro objetivo con el procesamiento de imágenes es visitar cada píxel. Usaremos una iteración para procesar cada `fila`. Dentro de eso
+iteración, utilizaremos una iteración anidada para procesar cada `columna`. El resultado es una iteración anidada, similar a la
+visto arriba, donde el bucle externo ``for`` procesa las filas, desde 0 hasta, pero sin incluir la altura de la imagen.
+El bucle ``for`` interno procesará cada columna de una fila, nuevamente desde 0 hasta, pero sin incluir el ancho de la imagen.
 
-The resulting code will look like the following. We are now free to do anything we wish to each pixel in the image.
+El código resultante tendrá el siguiente aspecto. Ahora somos libres de hacer lo que queramos con cada píxel en la imagen.
 
 .. sourcecode:: python
 
@@ -246,17 +242,17 @@ The resulting code will look like the following. We are now free to do anything 
 	    for col in range(img.getWidth()):
 	        # do something with the pixel at position (col,row)
 
-One of the easiest image processing algorithms will create what is known as a **negative** image. A negative image simply
-means that each pixel will be the `opposite` of what it was originally. But what does opposite mean?
+Uno de los algoritmos de procesamiento de imágenes más fáciles creará lo que se conoce como una imagen **negativa**. Una imagen negativa simplemente
+significa que cada píxel será el "opuesto" de lo que era originalmente. ¿Pero qué significa lo contrario?
 
-In the RGB color model, we can consider the opposite of the red component as the difference between the original red
-and 255. For example, if the original red component was 50, then the opposite, or negative red value would be ``255-50``
-or 205. In other words, pixels with a lot of red will have negatives with little red and pixels with little red will have
-negatives with a lot. We do the same for the blue and green as well.
+En el modelo de color RGB, podemos considerar lo contrario del componente rojo como la diferencia entre el rojo original
+y 255. Por ejemplo, si el componente rojo original era 50, entonces el valor rojo opuesto o negativo sería ``255-50``
+o 205. En otras palabras, los píxeles con mucho rojo tendrán negativos con poco rojo y los píxeles con poco rojo tendrán
+negativos con mucho. Hacemos lo mismo para el azul y el verde también.
 
-The program below implements this algorithm using the previous image (luther.jpg). Run it to see the resulting negative
-image. Note that there is a lot of processing taking place and this may take a few seconds to complete. In addition, here
-are two other images that you can use (cy.png and goldygopher.png).
+El siguiente programa implementa este algoritmo utilizando la imagen anterior (luther.jpg). Ejecútelo para ver el negativo resultante
+imagen. Tenga en cuenta que se está produciendo una gran cantidad de procesamiento y esto puede tardar unos segundos en completarse. Además, aquí
+Hay otras dos imágenes que puede usar (cy.png y goldygopher.png).
 
 
 .. raw:: html
@@ -270,9 +266,9 @@ are two other images that you can use (cy.png and goldygopher.png).
     <h4 style="text-align: center;">goldygopher.png</h4>
 
 
-Change the name of the file in the ``image.Image()`` call to see how these images look as negatives. Also, note that
-there is an ``exitonclick`` method call at the very end which will close the window when you click on it. This will allow
-you to "clear the screen" before drawing the next negative.
+Cambie el nombre del archivo en la llamada ``image.Image()`` para ver cómo se ven estas imágenes como negativas. Además, tenga en cuenta que
+hay una llamada al método `` exitonclick`` al final que cerrará la ventana cuando haga clic en ella. Esto permitira
+para "borrar la pantalla" antes de dibujar el siguiente negativo.
 
 
 .. activecode::  ac14_7_4
@@ -300,47 +296,47 @@ you to "clear the screen" before drawing the next negative.
     img.draw(win)
     win.exitonclick()
 
-Let's take a closer look at the code. After importing the image module, we create an image object called ``img`` that
-represents a typical digital photo. We will update each pixel in this image from top to bottom, left to right, which you
-should be able to observe. You can change the values in ``setDelay`` to make the program progress faster or slower.
+Echemos un vistazo más de cerca al código. Después de importar el módulo de imagen, creamos un objeto de imagen llamado ``img`` que
+representa una foto digital típica. Actualizaremos cada píxel en esta imagen de arriba a abajo, de izquierda a derecha, que usted
+debería poder observar. Puede cambiar los valores en ``setDelay`` para hacer que el programa avance más rápido o más lento.
 
-Lines 8 and 9 create the nested iteration that we discussed earlier. This allows us to process each pixel in the image.
-Line 10 gets an individual pixel.
+Las líneas 8 y 9 crean la iteración anidada que discutimos anteriormente. Esto nos permite procesar cada píxel en la imagen.
+La línea 10 obtiene un píxel individual.
 
-Lines 12-14 create the negative intensity values by extracting the original intensity from the pixel and subtracting it
-from 255. Once we have the ``newred``, ``newgreen``, and ``newblue`` values, we can create a new pixel (Line 15).
+Las líneas 12-14 crean los valores de intensidad negativos al extraer la intensidad original del píxel y restarla
+desde 255. Una vez que tenemos los valores ``newred``, ``newgreen`` y ``newblue``, podemos crear un nuevo píxel (Línea 15).
 
-Finally, we need to replace the old pixel with the new pixel in our image. It is important to put the new pixel into the
-same location as the original pixel that it came from in the digital photo.
+Finalmente, necesitamos reemplazar el viejo píxel con el nuevo píxel en nuestra imagen. Es importante colocar el nuevo píxel en el
+misma ubicación que el píxel original del que vino en la foto digital.
 
-Try to change the program above so that the outer loop iterates over the columns and the inner loop iterates over the
-rows. We still create a negative image, but you can see that the pixels update in a very different order.
+Intente cambiar el programa anterior para que el bucle externo itere sobre las columnas y el bucle interno itere sobre el
+filas Todavía creamos una imagen negativa, pero puede ver que los píxeles se actualizan en un orden muy diferente.
 
-.. admonition:: Other pixel manipulation
+.. admonition:: Otra manipulación de píxeles
 
-	There are a number of different image processing algorithms that follow the same pattern as shown above. Namely, take the original pixel, extract the red, green, and blue intensities, and then create a new pixel from them. The new pixel is inserted into an empty image at the same location as the original.
+	Hay varios algoritmos de procesamiento de imágenes diferentes que siguen el mismo patrón que se muestra arriba. Es decir, tome el píxel original, extraiga las intensidades roja, verde y azul, y luego cree un nuevo píxel a partir de ellas. El nuevo píxel se inserta en una imagen vacía en la misma ubicación que el original.
 
-	For example, you can create a **gray scale** pixel by averaging the red, green and blue intensities and then using that value for all intensities.
+    Por ejemplo, puede crear un píxel **escala de grises** promediando las intensidades roja, verde y azul y luego usando ese valor para todas las intensidades.
 
-	From the gray scale you can create **black white** by setting a threshold and selecting to either insert a white pixel for a black pixel into the empty image.
+    A partir de la escala de grises, puede crear **blanco negro** estableciendo un umbral y seleccionando insertar un píxel blanco para un píxel negro en la imagen vacía.
 
-	You can also do some complex arithmetic and create interesting effects, such as
-	`Sepia Tone <http://en.wikipedia.org/wiki/Sepia_tone#Sepia_toning>`_
+    También puede hacer algunas operaciones aritméticas complejas y crear efectos interesantes, como
+	`Tono sepia <http://en.wikipedia.org/wiki/Sepia_tone#Sepia_toning>`_
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question14_7_3
-   :answer_a: Output a
-   :answer_b: Output b
-   :answer_c: Output c
-   :answer_d: Output d
+   :answer_a: Salida a
+   :answer_b: Salida b
+   :answer_c: Salida c
+   :answer_d: Salida d
    :correct: a
-   :feedback_a: i will start with a value of 0 and then j will iterate from 0 to 1. Next, i will be 1 and j will iterate from 0 to 1.  Finally, i will be 2 and j will iterate from 0 to 1.
-   :feedback_b: The inner for-loop controls the second digit (j). The inner for-loop must complete before the outer for-loop advances.
-   :feedback_c: The inner for-loop controls the second digit (j). Notice that the inner for-loop is over the list [0, 1].
-   :feedback_d: The outer for-loop runs 3 times (0, 1, 2) and the inner for-loop runs twice for each time the outer for-loop runs, so this code prints exactly 6 lines.
+   :feedback_a: Comenzaré con un valor de 0 y luego j iterará de 0 a 1. A continuación, seré 1 y j iterará de 0 a 1. Finalmente, seré 2 y j iterará de 0 a 1.
+   :feedback_b: El bucle for interno controla el segundo dígito (j). El bucle for interno debe completarse antes de que avance el bucle for externo.
+   :feedback_c: El bucle for interno controla el segundo dígito (j). Observe que el bucle for interno está sobre la lista [0, 1].
+   :feedback_d: El for-loop externo se ejecuta 3 veces (0, 1, 2) y el for-loop interno se ejecuta dos veces cada vez que se ejecuta el for-loop externo, por lo que este código imprime exactamente 6 líneas.
 
-   What will the following nested for-loop print? (Note, if you are having trouble with this question, review CodeLens 3).
+   ¿Qué imprimirá el siguiente bucle for anidado? (Tenga en cuenta que si tiene problemas con esta pregunta, revise CodeLens 3).
 
    .. code-block:: python
 
@@ -385,17 +381,17 @@ rows. We still create a negative image, but you can see that the pixels update i
 
 
 .. mchoice:: question14_7_4
-   :answer_a: It would look like a red-washed version of the bell image
-   :answer_b: It would be a solid red rectangle the same size as the original image
-   :answer_c: It would look the same as the original image
-   :answer_d: It would look the same as the negative image in the example code
+   :answer_a: Se vería como una versión roja de la imagen de la campana
+   :answer_b: Sería un rectángulo rojo sólido del mismo tamaño que la imagen original
+   :answer_c: Se vería igual que la imagen original
+   :answer_d: Se vería igual que la imagen negativa en el código de ejemplo
    :correct: a
-   :feedback_a: Because we are removing the green and the blue values, but keeping the variation of the red the same, you will get the same image, but it will look like it has been bathed in red.
-   :feedback_b: Because the red value varies from pixel to pixel, this will not look like a solid red rectangle. For it to look like a solid red rectangle each pixel would have to have exactly the same red value.
-   :feedback_c: If you remove the blue and green values from the pixels, the image will look different, even though there does not appear to be any blue or green in the original image (remember that other colors are made of combinations of red, green and blue).
-   :feedback_d: Because we have changed the value of the pixels from what they were in the original ActiveCode box code, the image will not be the same.
+   :feedback_a: Debido a que estamos eliminando los valores verde y azul, pero manteniendo la variación del rojo igual, obtendrá la misma imagen, pero parecerá que se ha bañado en rojo.
+   :feedback_b: Debido a que el valor rojo varía de píxel a píxel, esto no se verá como un rectángulo rojo sólido. Para que se vea como un rectángulo rojo sólido, cada píxel debería tener exactamente el mismo valor rojo.
+   :feedback_c: Si elimina los valores azul y verde de los píxeles, la imagen se verá diferente, aunque no parezca azul o verde en la imagen original (recuerde que otros colores están hechos de combinaciones de rojo, verde y azul).
+   :feedback_d: Debido a que hemos cambiado el valor de los píxeles de lo que eran en el código del cuadro ActiveCode original, la imagen no será la misma.
 
-   What would the image produced from ActiveCode box 16 look like if you replaced the lines:
+   ¿Cómo se vería la imagen producida desde el cuadro 16 de ActiveCode si reemplazara las líneas?
 
    .. code-block:: python
 
@@ -403,7 +399,7 @@ rows. We still create a negative image, but you can see that the pixels update i
       newgreen = 255 - p.getGreen()
       newblue = 255 - p.getBlue()
 
-   with the lines:
+   con las lineas:
 
    .. code-block:: python
 

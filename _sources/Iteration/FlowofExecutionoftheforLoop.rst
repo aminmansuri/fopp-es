@@ -13,22 +13,22 @@
 
 .. index:: control flow, flow of execution
 
-Flow of Execution of the for Loop
+Flujo de ejecución del bucle for
 ---------------------------------
 
-As a program executes, the interpreter always keeps track of which statement is
-about to be executed.  We call this the **control flow**, or the **flow of
-execution** of the program.  When humans execute programs, they often use their
-finger to point to each statement in turn.  So you could think of control flow
-as "Python's moving finger".
+A medida que se ejecuta un programa, el intérprete siempre realiza un seguimiento de qué enunciado es
+a punto de ser ejecutado. Llamamos a esto el **flujo de control**, o el **flujo de
+ejecución** del programa. Cuando los humanos ejecutan programas, a menudo usan su
+dedo para señalar cada declaración a su vez. Entonces podrías pensar en el flujo de control
+como "dedo en movimiento de Python".
 
-Control flow until now has been strictly top to bottom, one statement at a
-time.  We call this type of control **sequential**.  
-Sequential flow of control is always assumed to be the default behavior for a computer program. 
-The ``for`` statement changes this.
+El flujo de control hasta ahora ha sido estrictamente de arriba a abajo, una declaración a la vez
+hora. Llamamos a este tipo de control **secuencial**.
+Se supone siempre que el flujo secuencial de control es el comportamiento predeterminado para un programa
+de computadora. La declaración ``for`` cambia esto.
 
-Flow of control is often easy to visualize and understand if we draw a flowchart.
-This flowchart shows the exact steps and logic of how the ``for`` statement executes.
+El flujo de control a menudo es fácil de visualizar y comprender si dibujamos un diagrama de flujo.
+Este diagrama de flujo muestra los pasos exactos y la lógica de cómo se ejecuta la instrucción ``for``.
 
 .. image:: Figures/new_flowchart_for.png
       :width: 300px
@@ -36,13 +36,12 @@ This flowchart shows the exact steps and logic of how the ``for`` statement exec
 
 .. note::
 
-    Not sure what a flowchart is? Check out this funny take on it, in `XKCD <http://xkcd.com/518/>`_. `And this one <http://xkcd.com/1195/>`_.
+    ¿No está seguro de qué es un diagrama de flujo? Mira esta versión divertida, en `XKCD <http://xkcd.com/518/>`_. `Y esta otra <http://xkcd.com/1195/>`_.
 
 
-A codelens demonstration is a good way to help you visualize exactly how the flow of control
-works with the for loop.  Try stepping forward and backward through the program by pressing
-the buttons.  You can see the value of ``name`` change as the loop iterates through the list of 
-friends.
+Una demostración en codelens es una buena manera de ayudarlo a visualizar exactamente cómo fluye el control
+funciona con el bucle for. Intente avanzar y retroceder por el programa presionando los botones. Puede ver
+el cambio del valor de ``nombre`` a medida que el ciclo recorre la lista de amigos.
 
 .. codelens:: vtest
     :python: py3
@@ -51,9 +50,9 @@ friends.
         print("Hi ", name, "  Please come to my party on Saturday!")
 
 
-While loops may not seem to be necessary when you're iterating over a few items, it is extremely helpful when 
-iterating over lots of items. Imagine if you needed to change what happened in the code block. On the left, when you use 
-iteration, this is easy. On the right, when you have hard coded the process, this is more difficult.
+Si bien puede parecer que los bucles no son necesarios cuando está iterando sobre algunos elementos, es extremadamente útil cuando
+iterando sobre muchos artículos. Imagínese si necesita cambiar lo que sucedió en el bloque de código. A la izquierda, cuando usas
+iteración, esto es fácil. A la derecha, cuando ha codificado el proceso, esto es más difícil.
  
 .. image:: Figures/iteration_vs_hardcoding.png
    :alt: Demonstration of using iteration over hard coding the iteration.

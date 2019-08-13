@@ -12,10 +12,10 @@
    :prefix: iter-9-
    :start: 1
 
-The Gory Details: Iterables
----------------------------
+Los detalles sangrientos: Iterables
+-----------------------------------
 
-The general syntax of a for loop is:
+La sintasix general de un bucle es:
 
 
 
@@ -26,33 +26,34 @@ The general syntax of a for loop is:
         # code block line 2
         # ...
 
-After the word ``in``, there can be any Python expression that evaluates to a sequence. You have already seen iteration 
-over strings and lists. A string is a sequence whose items are single characters. A list is a sequence whose items can be 
-any kind of Python object.
+Después de la palabra ``in``, puede haber cualquier expresión de Python que se evalúe como una secuencia. Ya has visto iteración
+sobre cadenas y listas. Una cadena es una secuencia cuyos elementos son caracteres individuales. Una lista es una secuencia cuyos
+elementos pueden ser cualquier tipo de objeto Python.
 
-Actually, the for loop is a little more general. It can iterate not just over strings and lists, but any kind of Python 
-object that acts like a sequence. So far, strings and lists are all we have seen. But a little later in the course we will 
-see tuples, which are another kind of sequence.
+En realidad, el bucle for es un poco más general. Puede iterar no solo sobre cadenas y listas, sino sobre cualquier tipo de
+objeto en Python que actúa como una secuencia. Hasta ahora, las cadenas y las listas son todo lo que hemos visto. Pero un
+poco más tarde en el curso lo haremos ver tuplas, que son otro tipo de secuencia.
 
-We will also see some Python objects that act like sequences for the purposes of iteration with a for loop. These include 
-file objects, views, and iterators.
+También veremos algunos objetos de Python que actúan como secuencias con el propósito de iterar con un bucle for.
+Éstos incluyen objetos de archivo, vistas e iteradores.
 
-In fact, we have actually already seen one of these without noticing, because it hardly matters. Technically, the 
-``range`` function doesn't actually return a list. That is, ``range(3)`` doesn't actually create the list ``[0, 1, 2]``. 
-It returns an object that acts just like the list ``[0, 1, 2]``, when used in a for loop. The difference is that the 
-numbers 0, 1, and 2 are produced as they are needed rather than all created in advance. This hardly matters when there are 
-only three items. For ``range(10000000)`` it makes a little difference for how fast the program runs and how much memory 
-is used. That's why the items are produced as needed rather than all produced in advance.
+De hecho, ya hemos visto uno de estos sin darnos cuenta, porque casi no importa. Técnicamente, el
+La función ``rango`` en realidad no devuelve una lista. Es decir, ``rango (3)`` en realidad no crea la lista
+``[0, 1, 2]``. Devuelve un objeto que actúa igual que la lista ``[0, 1, 2]``, cuando se usa en un bucle for.
+La diferencia es que los números 0, 1 y 2 se producen cuando se necesitan en lugar de todos creados de antemano.
+Esto apenas importa cuando hay Solo tres artículos. Para ``rango (10000000)``, hace una pequeña diferencia en la velocidad
+de ejecución del programa y la cantidad de memoria se utiliza es por eso que los artículos se producen según sea necesario
+en lugar de todos producidos por adelantado.
 
-For the purposes of this book, however, the difference does not matter. You will be safe to think of the range function as 
-if it returns a list object. Indeed, the Python interpreter that's built into the textbook cheats a little bit and makes 
-the range function actually produce a list. When you run a native Python interpreter on your computer it won't cheat in 
-that way. Still, when you run code of the form, ``for x in range(y)`` you will do just fine to think of range(y) returning 
-a list.
+Para los propósitos de este libro, sin embargo, la diferencia no importa. Podrá pensar en la función de rango como
+si devuelve un objeto de lista. De hecho, el intérprete de Python que está integrado en el libro de texto engaña un poco y
+hace la función de rango en realidad produce una lista. Cuando ejecuta un intérprete de Python nativo en su computadora,
+no engañará de esa manera. Aún así, cuando ejecutas el código de la forma, ``para x en el rango (y)`` harás bien en pensar
+en el rango (y) que regresa una lista.
 
-Don't worry about understanding these details right now. The important point is that in the activecode window above, 
-instead of ``some_seq`` you can have any Python expression that evaluates to a string, a list, or certain other Python 
-objects that act like sequences for the purposes of use in for loops. It's just something to keep in mind for later, when 
-we see some of those other Python objects that act like sequences but aren't quite.
+No se preocupe por comprender estos detalles ahora mismo. El punto importante es que en la ventana de código activo anterior,
+en lugar de ``some_seq`` puede tener cualquier expresión de Python que se evalúe como una cadena, una lista u otro objeto de Python
+determinada objetos que actúan como secuencias con el propósito de usar en bucles for. Es algo a tener en cuenta para más
+adelante, cuando vemos algunos de esos otros objetos de Python que actúan como secuencias pero no del todo.
 
 .. todo:  Add some questions to check understanding of the type of the loop variable given an iteration over a -- string, a list, a range

@@ -11,10 +11,10 @@
    :prefix: iter-5-
    :start: 1
 
-Lists and ``for`` loops
+Listas y bucles ``for``
 =======================
 
-It is also possible to perform **list traversal** using iteration by item. A list is a sequence of items, so the ``for`` loop iterates over each item in the list automatically. 
+También es posible realizar **recorrer una lista** usando la iteración por elemento. Una lista es una secuencia de elementos, por lo que el ciclo ``for`` itera sobre cada elemento de la lista automáticamente.
 
 .. activecode:: ac6_5_1
 
@@ -23,28 +23,28 @@ It is also possible to perform **list traversal** using iteration by item. A lis
     for afruit in fruits:     # by item
         print(afruit)
 
-It almost reads like natural language: For (every) fruit in (the list of) fruits,
-print (the name of the) fruit.
+Casi se lee como lenguaje natural: para (cada) fruta en (la lista de) frutas,
+imprimir (el nombre de la) fruta.
 
-Remember the turtle drawings we made earlier? For loops and lists can be applied there as well!
+¿Recuerdas los dibujos de tortugas que hicimos antes? ¡Para bucles y listas se pueden aplicar allí también!
 
-Iteration Simplifies our Turtle Program
----------------------------------------
+La iteración simplifica nuestro programa de tortugas
+-----------------------------------------------------
 
-To draw a square we'd like to do the same thing four times --- move the turtle forward some 
-distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four 
-sides of a square.  This next program does exactly the same thing but, with the help of the for 
-statement, uses just three lines (not including the setup code).  Remember that the for statement 
-will repeat the `forward` and `left` four times, one time for each value in the list.
+Para dibujar un cuadrado, nos gustaría hacer lo mismo cuatro veces: --- mover la tortuga hacia adelante
+distancia y girar 90 grados. Anteriormente utilizamos 8 líneas de código Python para que alex dibujara los cuatro
+lados de un cuadrado. El siguiente programa hace exactamente lo mismo pero, con la ayuda de un bucle for,
+usa solo tres líneas (sin incluir el código de configuración). Recuerde que la declaración for
+repetirá `adelante` e `izquierda` cuatro veces, una vez para cada valor en la lista.
 
 .. activecode:: ac6_5_2
    :nocodelens:
 
-   import turtle            # set up alex
+   import turtle            # preparar a alex
    wn = turtle.Screen()
    alex = turtle.Turtle()
 
-   for i in [0, 1, 2, 3]:      # repeat four times
+   for i in [0, 1, 2, 3]:      # repetir cuatro veces
        alex.forward(50)
        alex.left(90)
 
@@ -52,36 +52,36 @@ will repeat the `forward` and `left` four times, one time for each value in the 
 
 
 
-While "saving some lines of code" might be convenient, it is not the big
-deal here.  What is much more important is that we've found a "repeating
-pattern" of statements, and we reorganized our program to repeat the pattern.
+Si bien "guardar algunas líneas de código" podría ser conveniente, no es la gran cosa aquí.
+Lo que es mucho más importante es que hemos encontrado un "patrón repetitivo" de declaraciones,
+y reorganizamos nuestro programa para repetir el patrón.
 
-The values [0,1,2,3] were provided to make the loop body execute 4 times.
-We could have used any four values.  For example, consider the following program.
+Los valores [0,1,2,3] se proporcionaron para hacer que el cuerpo del bucle se ejecute 4 veces.
+Podríamos haber usado cuatro valores cualquiera. Por ejemplo, considere el siguiente programa.
 
 
 .. activecode:: ac6_5_3
    :nocodelens:
 
-   import turtle            # set up alex
+   import turtle            # preparar a alex
    wn = turtle.Screen()
    alex = turtle.Turtle()
 
-   for aColor in ["yellow", "red", "purple", "blue"]:      # repeat four times
+   for aColor in ["yellow", "red", "purple", "blue"]:      # repetir cuatro veces
        alex.forward(50)
        alex.left(90)
 
    wn.exitonclick()
 
-In the previous example, there were four integers in the list.  This time there are four strings. 
-Since there are four items in the list, the iteration will still occur four times.  ``aColor`` will 
-take on each color in the list.  We can even take this one step further and use the value of 
-``aColor`` as part of the computation.
+En el ejemplo anterior, había cuatro enteros en la lista. Esta vez hay cuatro Strings.
+Como hay cuatro elementos en la lista, la iteración seguirá ocurriendo cuatro veces.
+``aColor`` va a tomar cada color en la lista. Incluso podemos ir un paso más allá y usar el valor de
+``aColor`` como parte del cálculo.
 
 .. activecode:: ac6_5_4
     :nocodelens:
 
-    import turtle            # set up alex
+    import turtle            # preparar a alex
     wn = turtle.Screen()
     alex = turtle.Turtle()
 
@@ -92,31 +92,30 @@ take on each color in the list.  We can even take this one step further and use 
 
     wn.exitonclick()
 
-In this case, the value of ``aColor`` is used to change the color attribute of ``alex``. Each 
-iteration causes ``aColor`` to change to the next value in the list.
+En este caso, el valor de ``aColor`` se usa para cambiar el atributo de color de ``alex``. Cada
+la iteración hace que ``aColor`` cambie al siguiente valor en la lista.
 
-The for-loop is our first example of a **compound statement**. Syntactically a compound statement 
-is a statement. The level of indentation of a (whole) compound statement is the indentation of its 
-heading. In the example above there are five statements with the same indentation, executed 
-sequentially: the import, 2 assignments, the *whole* for-loop, and ``wn.exitonclick()``. The 
-for-loop compound statement is executed completely before going on to the next sequential 
-statement, ``wn.exitonclick()``.
+El ciclo for es nuestro primer ejemplo de una **declaración compuesta**. Sintácticamente una declaración compuesta
+Es una declaración. El nivel de tabulación de una declaración compuesta (completa) es la sangría de su título.
+En el ejemplo anterior hay cinco declaraciones con la misma sangría, ejecutadas secuencialmente: la importación,
+2 tareas, el *for* loop completo y ``wn.exitonclick()``. los la declaración compuesta for-loop se ejecuta
+completamente antes de pasar a la siguiente secuencial declaración, ``wn.exitonclick()``.
 
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question6_5_1
    :answer_a: 8
    :answer_b: 9
    :answer_c: 15
-   :answer_d: Error, the for statement needs to use the range function.
+   :answer_d: Error, la sentencia for necesita usar la función range.
    :correct: b
-   :feedback_a: Iteration by item will process once for each item in the sequence, even the empty list.
-   :feedback_b: Yes, there are nine elements in the list so the for loop will iterate nine times.
-   :feedback_c: Iteration by item will process once for each item in the sequence. Each string is viewed as a single item, even if you are able to iterate over a string itself.
-   :feedback_d: The for statement can iterate over a sequence item by item.
+   :feedback_a: La iteración por elemento se procesará una vez para cada elemento de la secuencia, incluso la lista vacía.
+   :feedback_b: Sí, hay nueve elementos en la lista, por lo que el bucle for iterará nueve veces.
+   :feedback_c: La iteración por elemento se procesará una vez para cada elemento de la secuencia. Cada cadena se ve como un solo elemento, incluso si puede iterar sobre una cadena.
+   :feedback_d: La instrucción for puede iterar sobre una secuencia elemento por elemento.
    :practice: T
 
-   How many times will the for loop iterate in the following statements?
+   ¿Cuántas veces iterará el ciclo for en las siguientes afirmaciones?
    
    .. code-block:: python
 
@@ -125,26 +124,26 @@ statement, ``wn.exitonclick()``.
          print(ch)
 
 .. mchoice:: question6_5_2
-   :answer_a: They are indented to the same degree from the loop header.
-   :answer_b: There is always exactly one line in the loop body.
-   :answer_c: The loop body ends with a semi-colon (;) which is not shown in the code above.
+   :answer_a: Están sangrados en el mismo grado desde el encabezado del bucle.
+   :answer_b: Siempre hay exactamente una línea en el cuerpo del bucle.
+   :answer_c: El cuerpo del bucle termina con un punto y coma (;) que no se muestra en el código anterior.
    :correct: a
-   :feedback_a: The loop body can have any number of lines, all indented from the loop header.
-   :feedback_b: The loop body may have more than one line.
-   :feedback_c: Python does not need semi-colons in its syntax, but relies mainly on indentation.
+   :feedback_a: El cuerpo del bucle puede tener cualquier número de líneas, todas sangradas desde el encabezado del bucle.
+   :feedback_b: El cuerpo del bucle puede tener más de una línea.
+   :feedback_c: Python no necesita punto y coma en su sintaxis, se basa principalmente en la sangría.
 
-   How does python know what statements are contained in the loop body?
+   ¿Cómo sabe Python qué declaraciones están contenidas en el cuerpo del bucle?
 
 .. mchoice:: question6_5_3
-      :answer_a: Draw a square using the same color for each side.
-      :answer_b: Draw a square using a different color for each side.
-      :answer_c: Draw one side of a square.
+      :answer_a: Dibuja un cuadrado usando el mismo color para cada lado.
+      :answer_b: Dibuja un cuadrado usando diferentes colores para cada lado.
+      :answer_c: Dibuja un lado de un cuadrado.
       :correct: c
-      :feedback_a: The question is not asking you to describe the outcome of the entire loop, the question is asking you about the outcome of a **single iteration** of the loop.
-      :feedback_b: Notice that aColor is never actually used inside the loop.
-      :feedback_c: The body of the loop only draws one side of the square.  It will be repeated once for each item in the list.  However, the color of the turtle never changes.
+      :feedback_a: La pregunta no es pedirle que describa el resultado del ciclo completo, la pregunta es preguntarle sobre el resultado de una **iteración única** del ciclo.
+      :feedback_b: Tenga en cuenta que aColor nunca se usa realmente dentro del bucle.
+      :feedback_c: El cuerpo del bucle solo dibuja un lado del cuadrado. Se repetirá una vez para cada elemento de la lista. Sin embargo, el color de la tortuga nunca cambia.
 
-      Consider the following code:
+      Considera el siguiente code:
 
       .. code-block:: python
 
@@ -152,4 +151,4 @@ statement, ``wn.exitonclick()``.
            alex.forward(50)
            alex.left(90)
 
-      What does each iteration through the loop do?
+      ¿Qué hace cada iteración a través del bucle?
