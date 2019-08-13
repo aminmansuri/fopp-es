@@ -1,8 +1,8 @@
-Sequences
-:::::::::
+Secuencias
+::::::::::
 
 .. toctree::
-   :caption: Sequences
+   :caption: Secuencias
    :maxdepth: 2
 
    intro-Sequences.rst
