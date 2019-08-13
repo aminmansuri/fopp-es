@@ -13,19 +13,19 @@
 
 .. _accum_pattern:
       
-The Accumulator Pattern
-=======================
+El Patrón de Accumulator
+==========================
 
-One common programming "pattern" is to traverse a sequence, **accumulating** a value as we go, 
-such as the sum-so-far or the maximum-so-far. That way, at the end of the traversal we have 
-accumulated a single value, such as the sum total of all the items or the largest item.
+Un "patrón" de programación común es atravesar una secuencia, **acumulando** un valor a medida que avanzamos,
+como la suma hasta el momento o el máximo hasta el momento. De esa manera, al final del recorrido tenemos
+acumulado un solo valor, como la suma total de todos los artículos o el artículo más grande.
 
-The anatomy of the accumulation pattern includes:
-   - **initializing** an "accumulator" variable to an initial value (such as 0 if accumulating a sum)
-   - **iterating** (e.g., traversing the items in a sequence)
-   - **updating** the accumulator variable on each iteration (i.e., when processing each item in the sequence)
-   
-For example, consider the following code, which computes the sum of the numbers in a list.
+La anatomía del patrón de acumulación incluye:
+    - **inicializando** una variable de "acumulador" a un valor inicial (como 0 si se acumula una suma)
+    - **iterando** (por ejemplo, atravesando los elementos en una secuencia)
+    - **actualizando** la variable acumuladora en cada iteración (es decir, al procesar cada elemento en la secuencia)
+
+Por ejemplo, considere el siguiente código, que calcula la suma de los números en una lista.
 
 .. activecode:: ac6_6_1
 
@@ -35,19 +35,19 @@ For example, consider the following code, which computes the sum of the numbers 
        accum = accum + w
    print(accum)
 
-In the program above, notice that the variable ``accum`` starts out with a value of 0.  
-Next, the iteration is performed 10 times.  Inside the for loop, the update occurs. 
-``w`` has the value of current item (1 the first time, then 2, then 3, etc.). 
-``accum`` is reassigned a new value which is the old value plus the current value of ``w``.
+En el programa anterior, observe que la variable ``acumular`` comienza con un valor de 0.
+A continuación, la iteración se realiza 10 veces. Dentro del bucle for, se produce la actualización.
+``w`` tiene el valor del elemento actual (1 la primera vez, luego 2, luego 3, etc.).
+A ``acumular`` se le reasigna un nuevo valor que es el valor anterior más el valor actual de ``w``.
 
-This pattern of iterating the updating of a variable is commonly referred to as the 
-**accumulator pattern**. We refer to the variable as the **accumulator**. This pattern will come up 
-over and over again. Remember that the key to making it work successfully is to be sure to 
-initialize the variable before you start the iteration. Once inside the iteration, it is required 
-that you update the accumulator.
+Este patrón de iterar la actualización de una variable se conoce comúnmente como
+**accumulator pattern**. Nos referimos a la variable como el **accumulator**. Este patrón aparecerá
+una y otra vez. Recuerde que la clave para que funcione correctamente es asegurarse de
+inicialice la variable antes de comenzar la iteración. Una vez dentro de la iteración, se requiere
+que actualizas el acumulador.
 
-Here is the same program in codelens.  Step through the function and watch the "running total" 
-accumulate the result.
+Aquí está el mismo programa en codelens. Vaya paso a paso a través de la función y vea el "total acumulado"
+como resultado.
 
 .. codelens:: clens6_6_1
    :python: py3
@@ -61,13 +61,13 @@ accumulate the result.
 
 .. note::
 
-    What would happen if we indented the print accum statement? Not sure? Make a prediction, then try it and find out.
+    ¿Qué pasaría si sangramos el extracto acumulado de impresión? ¿No es seguro? Haz una predicción, luego pruébalo y descúbrelo.
 
-We can utilize the range function in this situation as well. Previously, you've seen it used when we wanted to draw in 
-turtle. There we used it to iterate a certain number of times. We can do more than that though. The ``range`` function 
-takes at least one input - which should be an integer - and returns a list as long as your input. While you can provide 
-two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but 
-not include - the input. Here are the examples: 
+También podemos utilizar la función de rango en esta situación. Anteriormente, lo has visto utilizado cuando queríamos dibujar
+Tortuga. Allí lo usamos para iterar un cierto número de veces. Sin embargo, podemos hacer más que eso. La función ``rango``
+toma al menos una entrada, que debería ser un número entero, y devuelve una lista siempre que sea su entrada. Si bien puedes proporcionar
+dos entradas, nos enfocaremos en usar el rango con solo una entrada. Con una entrada, el rango comenzará en cero y subirá a, pero
+no incluye - la entrada. Aquí están los ejemplos:
 
 .. activecode:: ac6_8_10
 
@@ -90,9 +90,9 @@ not include - the input. Here are the examples:
 
 
 
-One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we 
-have to cast it as a list using ``list()``. Inside the textbook you'll notice that ``range`` works with or without 
-casting it as a list but it is best for you to try and get into the habit of casting it as a list. Here's how you could use the range function in the previous problem.
+Una cosa importante que debe saber sobre la función de rango en python3 es que si queremos usarla fuera de la iteración,
+tiene que lanzarlo como una lista usando ``list ()``. Dentro del libro de texto notarás que ``rango`` funciona con o sin
+lanzarlo como una lista, pero es mejor que intentes acostumbrarte a lanzarlo como una lista. Así es como podría usar la función de rango en el problema anterior.
 
 .. activecode:: ac6_6_2
 
@@ -108,11 +108,11 @@ casting it as a list but it is best for you to try and get into the habit of cas
        sec_accum = sec_accum + w
    print(sec_accum)
 
-Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
+Debido a que la función de rango es exclusiva del número final, tenemos que usar 11 como entrada de la función.
 
-We can use the accumulation pattern is count the number of something or to sum up a total. The 
-above examples only covered how to get the sum for a list, but we can also count how many items are 
-in the list if we wanted to.
+Podemos usar el patrón de acumulación para contar el número de algo o para resumir un total. los
+los ejemplos anteriores solo cubren cómo obtener la suma de una lista, pero también podemos contar cuántos elementos hay
+en la lista si quisiéramos.
 
 .. activecode:: ac6_6_3
 
@@ -122,25 +122,25 @@ in the list if we wanted to.
        count = count + 1
    print(count)
 
-In this example we don't make use of ``w`` even though the iterator variable (loop variable) is a necessary part of
-constructing a for loop. Instead of adding the value of ``w`` to ``count`` we add a 1 to it, 
-because we're incrementing the value of count when we iterate each time through the loop. Though in 
-this scenario we could have used the ``len`` function, there are other cases later on where len 
-won't be useful but we will still need to count.
+En este ejemplo, no utilizamos ``w`` a pesar de que la variable iteradora (variable de bucle) es una parte necesaria de
+construyendo un bucle for. En lugar de agregar el valor de ``w`` a ``contar``, le agregamos un 1,
+porque estamos incrementando el valor de contar cuando iteramos cada vez a través del ciclo. Aunque en
+En este escenario podríamos haber utilizado la función ``len``, hay otros casos más adelante donde len
+no será útil pero aún tendremos que contar.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question6_6_1
-   :answer_a: It will print out 10 instead of 55
-   :answer_b: It will cause a run-time error
-   :answer_c: It will print out 0 instead of 55
+   :answer_a: Imprimirá 10 en lugar de 55
+   :answer_b: Causará un error de tiempo de ejecución
+   :answer_c: Imprimirá 0 en lugar de 55
    :correct: a
-   :feedback_a: The variable accum will be reset to 0 each time through the loop. Then it will add the current item. Only the last item will count.  
-   :feedback_b: Assignment statements are perfectly legal inside loops and will not cause an error.
-   :feedback_c: Good thought: the variable accum will be reset to 0 each time through the loop. But then it adds the current item.
+   :feedback_a: La variable acum se restablecerá a 0 cada vez a través del bucle. Luego agregará el elemento actual. Solo contará el último artículo.
+   :feedback_b: Las declaraciones de asignación son perfectamente legales dentro de los bucles y no causarán un error.
+   :feedback_c: Buen pensamiento: la variable acum se restablecerá a 0 cada vez a través del bucle. Pero luego agrega el elemento actual.
    :practice: T
 
-   Consider the following code:
+   Considere el siguiente código:
 
    .. code-block:: python
 
@@ -150,12 +150,11 @@ won't be useful but we will still need to count.
          accum = accum + w
       print(accum)
    
-   What happens if you put the initialization of accum inside the for loop as the first
-   instruction in the loop?
+   ¿Qué sucede si pones la inicialización de acum dentro del ciclo for como la primera instrucción en el bucle?
 
 .. parsonsprob:: pp6_6_1
 
-   Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.
+   Reorganice las instrucciones de código para que el programa sume los primeros n números impares donde el usuario proporciona n.
    -----
    n = int(input('How many odd numbers would you like to add together?'))
    thesum = 0
@@ -173,7 +172,7 @@ won't be useful but we will still need to count.
    :autograde: unittest
    :practice: T
 
-   Write code to create a list of integers from 0 through 52 and assign that list to the variable ``numbers``. You should use a special Python function -- do not type out the whole list yourself. HINT: You can do this in one line of code!
+   Escriba código para crear una lista de enteros del 0 al 52 y asigne esa lista a la variable ``números``. Debería usar una función especial de Python: no escriba la lista completa usted mismo. SUGERENCIA: ¡Puedes hacer esto en una línea de código!
    ~~~~
 
    =====
@@ -192,7 +191,7 @@ won't be useful but we will still need to count.
    :autograde: unittest
    :practice: T
 
-   Count the number of characters in string ``str1``. Do not use ``len()``. Save the number in variable ``numbs``.
+   Cuente el número de caracteres en la cadena ``str1``. No use ``len()``. Guarde el número en la variable ``numb``.
    ~~~~
    str1 = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living."
 
@@ -213,7 +212,7 @@ won't be useful but we will still need to count.
    :autograde: unittest
    :practice: T
 
-   Create a list of numbers 0 through 40 and assign this list to the variable ``numbers``. Then, accumulate the total of the list's values and assign that sum to the variable ``sum1``.
+   Cree una lista de números del 0 al 40 y asigne esta lista a la variable ``números``. Luego, acumule el total de los valores de la lista y asigne esa suma a la variable ``sum1``.
    ~~~~
 
    =====
