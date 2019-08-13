@@ -11,36 +11,36 @@
    :prefix: sequences-8-
    :start: 1
 
-Count and Index
+Count e Index
 ===============
 
-As you create more complex programs, you will find that some tasks are commonly done. Python has some 
-built-in functions and methods to help you with these tasks. This page will cover two helpful methods 
-for both strings and lists: count and index.
+A medida que crea programas más complejos, encontrará que algunas tareas se realizan comúnmente. Python tiene algunas
+funciones y métodos integrados para ayudarlo con estas tareas. Esta página cubrirá dos métodos útiles,
+tanto para cadenas como para listas: count e index.
 
-You've learned about methods before when drawing with the turtle module. There, you used 
-``.forward(50)`` and ``.color("purple")`` to complete actions. We refer to forward and color as methods 
-of the turtle class. Objects like strings and lists also have methods that we can use.
+Aprendiste sobre métodos antes cuando dibujaste con el módulo de tortuga. Ahí solías usar
+``.forward(50)`` y ``.color("purple")`` para completar acciones. Nos referimos al avance y al color como métodos
+de la clase de tortuga. Los objetos como cadenas y listas también tienen métodos que podemos usar.
 
 Count
 -----
 
-The first method we'll talk about is called ``count``. It requires that you provide one argument, which 
-is what you would like to count. The method then returns the number of times that the argument occured 
-in the string/list the method was used on. There are some differences between count for strings and 
-count for lists. When you use count on a string, the argument can only be a string. You can't count how 
-many times the integer 2 appears in a string, though you can count how many times the string "2" appears 
-in a string. For lists, the argument is not restricted to just strings.
+El primer método del que hablaremos se llama ``count``. Requiere que proporciones un argumento, que
+es lo que te gustaría contar. El método luego devuelve el número de veces que ocurrió el argumento
+en la cadena/lista en la que se utilizó el método. Hay algunas diferencias entre el recuento de cadenas y
+cuenta para las listas. Cuando usa count en una cadena, el argumento solo puede ser una cadena. No puedes contar cómo
+muchas veces el entero 2 aparece en una cadena, aunque puede contar cuántas veces aparece la cadena "2"
+en una cuerda para las listas, el argumento no se limita a solo cadenas.
 
 .. activecode:: ac5_8_1
    
-   a = "I have had an apple on my desk before!"
+   a = "¡He tenido una manzana en mi escritorio antes!"
    print(a.count("e"))
    print(a.count("ha"))
 
-The activecode window above demonstrates the use of count on a string. Just like with the turtle module 
-when we had to specify which turtle was changing color or moving, we have to specify which string we are 
-using count on.
+La ventana de código activo anterior muestra el uso de count en una cadena. Al igual que con el módulo de tortuga
+cuando tuvimos que especificar qué tortuga estaba cambiando de color o moviéndose, tenemos que especificar de qué cadena somos
+usando count.
 
 .. activecode:: ac5_8_2
    
@@ -50,20 +50,20 @@ using count on.
    print(z.count("a"))
    print(z.count("electron"))
 
-When you run the activecode window above, you'll see how count with a list works. Notice how "4" has a 
-count of zero but 4 has a count of three? This is because the list ``z`` only contains the integer 4. 
-There are never any strings that are 4. Additionally, when we check the count of "a", we see that the 
-program returns zero. Though some of the words in the list contain the letter "a", the program is 
-looking for items in the list that are *just* the letter "a". 
+Cuando ejecute la ventana de código activo anterior, verá cómo funciona contar con una lista. Observe cómo "4" tiene un
+cuenta de cero pero 4 tiene una cuenta de tres? Esto se debe a que la lista ``z`` solo contiene el número entero 4.
+Nunca hay cadenas que sean 4. Además, cuando verificamos el recuento de "a", vemos que el
+programa devuelve cero. Aunque algunas de las palabras en la lista contienen la letra "a", el programa es
+buscando elementos en la lista que son *solo* la letra "a".
 
 Index
 -----
 
-The other method that can be helpful for both strings and lists is the ``index`` method. The ``index`` 
-method requires one argument, and, like the ``count`` method, it takes only strings when index is used 
-on strings, and any type when it is used on lists. For both strings and lists, ``index`` returns the 
-leftmost index where the argument is found. If it is unable to find the argument in the string or list, 
-then an error will occur.
+El otro método que puede ser útil tanto para las cadenas como para las listas es el método ``index``. El ``index``
+es un que método requiere un argumento y, al igual que el método ``count``, solo toma cadenas cuando se usa el índice
+en cadenas y cualquier tipo cuando se usa en listas. Para ambas cadenas y listas, ``index`` devuelve el
+índice más a la izquierda donde se encuentra el argumento. Si no puede encontrar el argumento en la cadena o lista,
+entonces se producirá un error.
 
 .. activecode:: ac5_8_3
 
@@ -77,11 +77,11 @@ then an error will occur.
    print(bio.index([]))
    print(bio.index(43))
 
-All of the above examples work, but were you surprised by any of the return values? Remember that 
-``index`` will return the left most index of the argument. Even though "Metatarsal" occurs many times 
-in ``bio``, the method will only return the location of one of them.
+Todos los ejemplos anteriores funcionan, pero ¿te sorprendió alguno de los valores de retorno? Recuérdalo
+``index`` devolverá el índice más a la izquierda del argumento. A pesar de que "Metatarsal" ocurre muchas veces
+en ``bio``, el método solo devolverá la ubicación de uno de ellos.
 
-Here's another example.
+Aquí hay otro ejemplo.
 
 .. activecode:: ac5_8_4
 
@@ -89,27 +89,27 @@ Here's another example.
 
    print(seasons.index("autumn"))  #Error! 
 
-In the activecode window above, we're trying to see where "autumn" is in the list seasons. However, 
-there is no string called autumn (though there is string called "fall" which is likely what the program 
-is looking for). Remember that an error occurs if the argument is not in the string or list.
+En la ventana de código activo de arriba, estamos tratando de ver dónde está "otoño" en la lista de estaciones. Sin embargo,
+no hay una cadena llamada otoño (aunque hay una cadena llamada "otoño", que probablemente sea lo que el programa
+está buscando). Recuerde que se produce un error si el argumento no está en la cadena o lista.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question5_8_1
    :answer_a: 5
    :answer_b: 6
    :answer_c: 13
    :answer_d: 14
-   :answer_e: There is an error.
+   :answer_e: Hay un error.
    :correct: a
-   :feedback_a: Yes, when we get the index of a string that is longer than one character, we get the index for the first character in the string.
-   :feedback_b: When we get the index of a string that is longer than one character, we get the index for the first character in the string.
-   :feedback_c: Remember that index returns the left most occurance of the argument.
-   :feedback_d: Remember that index returns the left most occurance of the argument.
-   :feedback_e: There is at least one 'we' in the string assigned to qu.
+   :feedback_a: Sí, cuando obtenemos el índice de una cadena que tiene más de un carácter, obtenemos el índice del primer carácter de la cadena.
+   :feedback_b: Cuando obtenemos el índice de una cadena que tiene más de un carácter, obtenemos el índice del primer carácter de la cadena.
+   :feedback_c: Recuerde que el índice devuelve la ocurrencia más a la izquierda del argumento.
+   :feedback_d: Recuerde que el índice devuelve la ocurrencia más a la izquierda del argumento.
+   :feedback_e: Hay al menos un 'nosotros' en la cadena asignada a qu.
    :practice: T
 
-   What will be stored in the variable ty below?
+   ¿Qué se almacenará en la variable ty a continuación?
 
    .. sourcecode:: python
 
@@ -120,15 +120,15 @@ is looking for). Remember that an error occurs if the argument is not in the str
    :answer_a: 0
    :answer_b: 2
    :answer_c: 3
-   :answer_d: There is an error.
+   :answer_d: Hay un error.
    :correct: b
-   :feedback_a: No, there is at least one e in the string.
-   :feedback_b: Yes, there is a difference between "we" and "We" which means there are only two in the string.
-   :feedback_c: there is a difference between "we" and "We".
-   :feedback_d: There is no error in the code.
+   :feedback_a: No, hay al menos una e en la cadena.
+   :feedback_b: Sí, hay una diferencia entre "nosotros" y "Nosotros", lo que significa que solo hay dos en la cadena.
+   :feedback_c: Hay una diferencia entre "nosotros" y "nosotros".
+   :feedback_d: No hay error en el código.
    :practice: T
 
-   What will be stored in the variable ty below?
+   ¿Qué se almacenará en la variable ty a continuación?
 
    .. sourcecode:: python
 
@@ -138,14 +138,14 @@ is looking for). Remember that an error occurs if the argument is not in the str
 .. mchoice:: question5_8_3
    :answer_a: 0
    :answer_b: -1
-   :answer_c: There is an error.
+   :answer_c: Hay un error.
    :correct: c
-   :feedback_a: No, the first element is 'bathroom', not 'garden'.
-   :feedback_b: Though there is no 'garden' in the list, we do not get back -1 when we use index. Instead, we get an error.
-   :feedback_c: Yes, there is no 'garden' in the list, so we get back an error.
+   :feedback_a: No, el primer elemento es 'baño', no 'jardín'.
+   :feedback_b: Aunque no hay un 'jardín' en la lista, no recuperamos -1 cuando usamos index. En cambio, recibimos un error.
+   :feedback_c: Sí, no hay 'jardín' en la lista, por lo que recibimos un error.
    :practice: T
 
-   What will be stored in the variable ht below?
+   ¿Qué se almacenará en la variable ht a continuación?
 
    .. sourcecode:: python
 
