@@ -11,25 +11,25 @@
    :prefix: data-9-
    :start: 1
 
-👩‍💻 Choosing the Right Variable Name
-=======================================
+👩‍💻 Elegir el nombre de variable correcto
+===============================================
 
-Programmers generally choose names for their variables that are meaningful to
-the human readers of the program --- they help the programmer document, or
-remember, what the variable is used for.  Beginning programmers sometimes think it is funny to use strange or obscene names for their variables.  This is not good practice and will not amuse your professor.  Get in the habit of using meaningful names right away.
+Los programadores generalmente eligen nombres para sus variables que son significativos para
+los lectores humanos del programa --- ayudan al programador a documentar, o
+recuerde, para qué se usa la variable. Los programadores principiantes a veces piensan que es divertido usar nombres extraños u obscenos para sus variables. Esta no es una buena práctica y no divertirá a su profesor. Acostúmbrese a usar nombres significativos de inmediato.
 
 .. caution::
 
-    Beginners sometimes confuse "meaningful to the human readers" with
-    "meaningful to the computer".  So they'll wrongly think that because
-    they've called some variable ``average`` or ``pi``, it will somehow
-    automagically calculate an average, or automagically associate the variable
-    ``pi`` with the value 3.14159.  No! The computer doesn't attach semantic
-    meaning to your variable names.
+    Los principiantes a veces confunden "significativo para los lectores humanos" con
+    "significativo para la computadora". Entonces pensarán erróneamente eso porque
+    han llamado a alguna variable ``promedio`` o ``pi``, de alguna manera
+    calcular automáticamente un promedio, o asociar automáticamente la variable
+    ``pi`` con el valor 3.14159. ¡No! La computadora no conecta semántica con
+    significado para sus nombres de variables.
 
-    So you'll find some instructors who deliberately don't choose meaningful
-    names when they teach beginners --- not because they don't think it is a
-    good habit, but because they're trying to reinforce the message that you,
-    the programmer, have to write some program code to calculate the average,
-    or you must write an assignment statement to give a variable the value you
-    want it to have.
+    Entonces encontrarás algunos instructores que deliberadamente no eligen algo significativo para
+    los nombres cuando enseñan a principiantes --- no porque no piensen que es un
+    buen hábito, pero porque están tratando de reforzar el mensaje de que tú,
+    el programador, tiene que escribir un código de programa para calcular el promedio,
+    o debe escribir una declaración de asignación para dar a una variable el valor que
+    quiero que tenga
