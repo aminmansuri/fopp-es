@@ -13,20 +13,19 @@
    :prefix: iter-11-
    :start: 1
 
-Exercises
-=========
+Ejercicios
+==========
 
 
 .. question:: q6_11_1
 
     .. actex:: ex6_11_1
 
-        In Robert McCloskey's
-        book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack,
-        Mack, Nack, Ouack, Pack, and Quack.  This loop tries to output these names in order.
+        En el libro de Robert McCloskey's *Abran paso a los patitos*, los nombres de los patitos
+        son Jack, Kack, Lack, Mack, Nack, Ouack, Pack y Quack. Este bucle intenta generar estos nombres en orden.
 
-        Of course, that's not quite right because Ouack and Quack are misspelled.
-        Can you fix it?
+        Por supuesto, eso no está del todo bien porque Ouack y Quack están mal escritos.
+        ¿Puedes arreglarlo?
         ~~~~
 
         prefixes = "JKLMNOPQ"
@@ -40,7 +39,7 @@ Exercises
 
     .. actex:: ex6_11_2
 
-        Get the user to enter some text and print it out in reverse order.
+        Haga que el usuario ingrese texto e imprímalo en orden inverso.
         ~~~~
 
 .. question:: iter_ex_3
@@ -52,10 +51,10 @@ Exercises
 
            .. actex:: ex_3_3
 
-              Write a program that uses a for loop to print
-                 |  ``One of the months of the year is January``
-                 |  ``One of the months of the year is February``
-                 |  ``One of the months of the year is March``
+              Escriba un programa que use un bucle for para imprimir
+                 |  ``Uno de los meses del año es Enero``
+                 |  ``Uno de los meses del año es Febrero``
+                 |  ``Uno de los meses del año es Marzo``
                  |  etc ...
               ~~~~
 
@@ -79,10 +78,10 @@ Exercises
 
    .. actex:: ex_3_4
 
-      Assume you have a list of numbers ``12, 10, 32, 3, 66, 17, 42, 99, 20``
+      Suponga que tiene una lista de números ``12, 10, 32, 3, 66, 17, 42, 99, 20``
 
-      a. Write a loop that prints each of the numbers on a new line.
-      b. Write a loop that prints each number and its square on a new line.
+      a. Escriba un bucle que imprima cada uno de los números en una nueva línea.
+      b. Escriba un bucle que imprima cada número y su cuadrado en una nueva línea.
       ~~~~
 
 .. question:: iter_ex_6
@@ -90,8 +89,8 @@ Exercises
    .. actex:: ex_3_6
       :nocodelens:
 
-      Write a program that asks the user for the number of sides, the length of the side, the color, and the fill color of a
-      regular polygon.  The program should draw the polygon and then fill it in.
+      Escriba un programa que le solicite al usuario la cantidad de lados, la longitud del lado, el color y el color de relleno de un
+      polígono regular. El programa debe dibujar el polígono y luego completarlo.
       ~~~~
 
 
@@ -104,7 +103,7 @@ Exercises
             .. actex:: ex_3_7
                :nocodelens:
 
-               A drunk pirate makes a random turn and then takes 100 steps forward, makes another random turn, takes another 100 steps, turns another random amount, etc.  A social science student records the angle of each turn before the next 100 steps are taken.  Her experimental data is ``160, -43, 270, -97, -43, 200, -940, 17, -86``. (Positive angles are counter-clockwise.)  Use a turtle to draw the path taken by our drunk friend.  After the pirate is done walking, print the current heading.  Assume that the turtle originally has a heading of 0 and accumulate the changes in heading to print out the final.  Your solution should work for any sequence of experimental data.
+               Un pirata borracho hace un giro al azar y luego da 100 pasos hacia adelante, da otro giro al azar, da otros 100 pasos, da otro giro al azar, etc. Un estudiante de ciencias sociales registra el ángulo de cada turno antes de dar los siguientes 100 pasos. Sus datos experimentales son ``160, -43, 270, -97, -43, 200, -940, 17, -86``. (Los ángulos positivos son en sentido antihorario). Usa una tortuga para dibujar el camino tomado por nuestro amigo borracho. Después de que el pirata termine de caminar, imprima el encabezado actual. Suponga que la tortuga originalmente tiene un encabezado de 0 y acumule los cambios en el encabezado para imprimir el final. Su solución debería funcionar para cualquier secuencia de datos experimentales.
                ~~~~
 
        .. tab:: Answer
@@ -147,7 +146,7 @@ Exercises
 
    .. parsonsprob:: pp_3_8
 
-      Write a program that will go through a list of temperatures and print them out to the user.
+      Escriba un programa que revise una lista de temperaturas e imprímalas al usuario.
       -----
       temperatures = [-3, 78, 95, 28, 56, 42, 56, 81, -10, -]
       =====
@@ -159,7 +158,7 @@ Exercises
 
    .. parsonsprob:: pp_3_9
 
-      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted.
+      Escriba un programa que imprima un saludo a cada estudiante en la lista. Esta lista también debe hacer un seguimiento de cuántos estudiantes han sido recibidos y tener en cuenta que cada vez que un nuevo estudiante ha sido recibido.
       -----
       students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
       =====
