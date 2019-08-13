@@ -11,11 +11,11 @@
    :prefix: sequences-9-
    :start: 1
 
-Splitting and Joining Strings
-=============================
+División y unión de Cadena de caracteres
+========================================
 
-Two of the most useful methods on strings involve lists of strings. The ``split`` method breaks a string into a list 
-of words. By default, any number of whitespace characters is considered a word boundary.
+Dos de los métodos más útiles en cadenas incluyen listas de cadenas. El método ``split`` divide una cadena en una lista
+de palabras. Por defecto, cualquier número de caracteres de espacio en blanco se considera un límite de palabra.
 
 .. image:: Figures/split_default.gif
    :alt: shows the phrase "leaders and best" being split on spaces
@@ -26,24 +26,24 @@ of words. By default, any number of whitespace characters is considered a word b
     wds = song.split()
     print(wds) 
 
-An optional argument called a **delimiter** can be used to specify which characters to use as word boundaries. 
+Se puede usar un argumento opcional llamado **delimiter** para especificar qué caracteres usar como límites de palabras.
 
 .. image:: Figures/split_on_e.jpeg
    :alt: shows example of splitting "leaders and best" on "e"
 
-The following example uses the string ``ai`` as the delimiter:
+El siguiente ejemplo usa la cadena ``ai`` como delimitador:
 
 .. activecode:: ac5_9_2
-    
+
     song = "The rain in Spain..."
     wds = song.split('ai')
     print(wds)
 
-Notice that the delimiter doesn't appear in the result.
+Observe que el delimitador no aparece en el resultado.
 
-The inverse of the ``split`` method is ``join``.  You choose a
-desired **separator** string, (often called the *glue*) 
-and join the list with the glue between each of the elements.
+La inversa del método de ``split`` es ``join``. Tu eliges una
+cadena **separator** deseada, (a menudo llamada *glue*)
+y únete a la lista con el glue *pegamento* entre cada uno de los elementos.
 
 .. image:: Figures/join.gif
    :alt: shows process of a "/" separating the words "leaders", "and", "best"
@@ -60,17 +60,17 @@ and join the list with the glue between each of the elements.
     print("".join(wds))
 
 
-The list that you glue together (``wds`` in this example) is not modified.  Also, 
-you can use empty glue or multi-character strings as glue.
+La lista que pega (``wds`` en este ejemplo) no se modifica. También,
+puede usar pegamento vacío o cadenas de caracteres múltiples como pegamento.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac5_9_4
    :language: python
    :autograde: unittest
    :practice: T
 
-   Create a new list of the 6th through 13th elements of ``lst`` (eight items in all) and assign it to the variable ``output``.
+   Cree una nueva lista de los elementos 6º a 13º de ``lst`` (ocho elementos en total) y asígnela a la variable ``output``.
    ~~~~
    lst = ["swimming", 2, "water bottle", 44, "lollipop", "shine", "marsh", "winter", "donkey", "rain", ["Rio", "Beijing", "London"], [1,2,3], "gold", "bronze", "silver", "mathematician", "scientist", "actor", "actress", "win", "cell phone", "leg", "running", "horse", "socket", "plug", ["Phelps", "le Clos", "Lochte"], "drink", 22, "happyfeet", "penguins"]
 
@@ -90,7 +90,7 @@ you can use empty glue or multi-character strings as glue.
    :autograde: unittest
    :practice: T
 
-   Create a variable ``output`` and assign it to a list whose elements are the words in the string ``str1``.
+   Cree una variable ``output`` y asígnela a una lista cuyos elementos son las palabras en la cadena ``str1``.
    ~~~~
    str1 = "OH THE PLACES YOU'LL GO"
 
