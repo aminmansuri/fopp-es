@@ -13,27 +13,27 @@
 
 .. Week 2 Assessment 1
 
-Chapter Assessment
-------------------
+Evaluación de capítulos
+-----------------------
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: assess_question2_1_1_1
    :answer_a: zpzpzpzpzp
    :answer_b: zzzzzppppp
    :answer_c: pzpzpzpzpz
    :answer_d: pppppzzzzz
-   :answer_e: None of the above, an error will occur.
+   :answer_e: Ninguno de los anteriores, se producirá un error.
    :correct: c
-   :feedback_a: The order of concatenation matters.
-   :feedback_b: Think about the order that the program is executed in, what occurs first?
-   :feedback_c: Yes, because let_two was put before let, c has "pz" and then that is repeated five times.
-   :feedback_d: Think about the order that the program is executed in, what occurs first?
-   :feedback_e: This is correct syntax and no errors will occur.
+   :feedback_a: El orden de concatenación importa.
+   :feedback_b: Piense en el orden en que se ejecuta el programa, ¿qué ocurre primero?
+   :feedback_c: Sí, porque let_two se puso antes de let, c tiene "pz" y luego se repite cinco veces.
+   :feedback_d: Piense en el orden en que se ejecuta el programa, ¿qué ocurre primero?
+   :feedback_e: Esta es la sintaxis correcta y no se producirán errores.
    :practice: T
    :topics: Sequences/ConcatenationandRepetition
 
-   What will the output be for the following code?
+   ¿Cuál será la salida para el siguiente código?
   
    .. sourcecode:: python
 
@@ -49,7 +49,7 @@ Chapter Assessment
     :practice: T
     :topics: Sequences/TheSliceOperator
 
-    Write a program that extracts the last three items in the list ``sports`` and assigns it to the variable ``last``. Make sure to write your code so that it works no matter how many items are in the list.
+    Escriba un programa que extraiga los últimos tres elementos de la lista``sports`` y lo asigne a la variable ``last``. Asegúrese de escribir su código para que funcione sin importar cuántos elementos haya en la lista.
     ~~~~
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
@@ -73,7 +73,7 @@ Chapter Assessment
     :practice: T
     :topics: Sequences/ConcatenationandRepetition
 
-    Write code that combines the following variables so that the sentence "You are doing a great job, keep it up!" is assigned to the variable ``message``. Do not edit the values assigned to ``by``, ``az``, ``io``, or ``qy``.
+    Escriba un código que combine las siguientes variables para que la oración "You are doing a great job, keep it up!" se asigne a la variable ``message``. No edite los valores asignados a ``by``, ``az``, ``io`` o ``qy``.
     ~~~~
     by = "You are"
     az = "doing a great "
@@ -104,14 +104,14 @@ Chapter Assessment
    :answer_c: ['travel', 'lights']
    :answer_d: ['world', 'travel']
    :correct: c 
-   :feedback_a: When we take a slice of something, it includes the item at the first index and excludes the item at the second index.
-   :feedback_b: When we take a slice of something, it includes the item at the first index and excludes the item at the second index. Additionally, Python is a zero-index based language.
-   :feedback_c: Yes, python is a zero-index based language and slices are inclusive of the first index and exclusive of the second.
-   :feedback_d: Python is a zero-index based language.
+   :feedback_a: Cuando tomamos una porción de algo, incluye el elemento en el primer índice y excluye el elemento en el segundo índice.
+   :feedback_b: Cuando tomamos una porción de algo, incluye el elemento en el primer índice y excluye el elemento en el segundo índice. Además, Python es un lenguaje basado en índice cero.
+   :feedback_c: Sí, python es un lenguaje basado en índice cero y los segmentos incluyen el primer índice y excluyen el segundo.
+   :feedback_d: Python es un lenguaje basado en índice cero.
    :practice: T
    :topics: Sequences/TheSliceOperator
 
-   What will the output be for the following code?
+   ¿Cuál será la salida para el siguiente código?
    
    .. sourcecode:: python
    
@@ -125,14 +125,14 @@ Chapter Assessment
    :answer_c: float
    :answer_d: list
    :correct: d
-   :feedback_a: Not quite, is it slicing or accessing an element?
-   :feedback_b: What is happening in the assignment statement for m?
-   :feedback_c: What is happening in the assignment statement for m?
-   :feedback_d: Yes, a slice returns a list no matter how large the slice.
+   :feedback_a: No del todo, ¿está cortando o accediendo a un elemento?
+   :feedback_b: ¿Qué está sucediendo en la declaración de asignación para m?
+   :feedback_c: ¿Qué está sucediendo en la declaración de asignación para m?
+   :feedback_d: Sí, un slice devuelve una lista sin importar el tamaño del slice.
    :practice: T
    :topics: Sequences/TheSliceOperator
 
-   What is the type of ``m``?
+   ¿Cuál es el tipo de dato de ``m``?
    
    .. sourcecode:: python
 
@@ -145,14 +145,14 @@ Chapter Assessment
    :answer_c: float
    :answer_d: list
    :correct: a
-   :feedback_a: Yes, the quotes around the number mean that this is a string.
-   :feedback_b: Not quite, look again at what is being extracted.
-   :feedback_c: Not quite, look again at what is being extracted.
-   :feedback_d: Not quite, is it slicing or accessing an element?
+   :feedback_a: Sí, las comillas alrededor del número significan que se trata de una cadena.
+   :feedback_b: No del todo, mira de nuevo lo que se extrae.
+   :feedback_c: No del todo, mira de nuevo lo que se extrae.
+   :feedback_d: No del todo, ¿está cortando o accediendo a un elemento?
    :practice: T
    :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
 
-   What is the type of ``m``?
+   ¿Cuál es el tipo de dato de ``m``?
    
    .. sourcecode:: python
 
@@ -165,14 +165,14 @@ Chapter Assessment
    :answer_c: float
    :answer_d: list
    :correct: d
-   :feedback_a: Not quite; .split() returns a list, each of whose elements is a string.
-   :feedback_b: Not quite, look again at what types are present and what the result of .split() is.
-   :feedback_c: Not quite, look again at what types are present and what the result of .split() is.
-   :feedback_d: Yes, the .split() method returns a list.
+   :feedback_a: No exactamente; .split() devuelve una lista, cada uno de cuyos elementos es una cadena.
+   :feedback_b: No del todo, mira de nuevo qué tipos están presentes y cuál es el resultado de .split().
+   :feedback_c: No del todo, mira de nuevo qué tipos están presentes y cuál es el resultado de .split().
+   :feedback_d: Sí, el método .split() devuelve una lista.
    :practice: T
    :topics: Sequences/SplitandJoin
 
-   What is the type of ``x``?
+   ¿Cuál es el tipo de dato de ``x``?
    
    .. sourcecode:: python
 
@@ -185,14 +185,14 @@ Chapter Assessment
    :answer_c: float
    :answer_d: list
    :correct: a
-   :feedback_a: Yes, the string is split into a list, then joined back into a string, then split again, and finally joined back into a string.
-   :feedback_b: Not quite, look again at what types are present and what the result of .split() is.
-   :feedback_c: Not quite, look again at what types are present and what the result of .split() is.
-   :feedback_d: Not quite, think about what .split() and .join() return.
+   :feedback_a: Sí, la cadena se divide en una lista, luego se vuelve a unir en una cadena, luego se vuelve a dividir y finalmente se vuelve a unir en una cadena.
+   :feedback_b: No del todo, mira de nuevo qué tipos están presentes y cuál es el resultado de .split().
+   :feedback_c: No del todo, mira de nuevo qué tipos están presentes y cuál es el resultado de .split().
+   :feedback_d: No del todo, piensa en lo que devuelven .split() y .join().
    :practice: T
    :topics: Sequences/SplitandJoin
 
-   What is the type of ``a``?
+   ¿Cuál es el tipo de dato de ``a``?
    
    .. sourcecode:: python
 
@@ -208,7 +208,7 @@ Chapter Assessment
     :practice: T
     :topics: Sequences/CountandIndex
 
-    Write code to determine how many 9's are in the list ``nums`` and assign that value to the variable ``how_many``. Do not use a for loop to do this.
+    Escriba el código para determinar cuántos 9 hay en la lista ``nums`` y asigne ese valor a la variable ``how_many``. No use un bucle for para hacer esto.
     ~~~~
     nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
@@ -231,7 +231,7 @@ Chapter Assessment
     :practice: T
     :topics: Sequences/CountandIndex
 
-    Write code that uses slicing to get rid of the the second 8 so that here are only two 8's in the list bound to the variable `nums`.
+    Escriba el código que utiliza el corte para deshacerse del segundo 8, de modo que aquí solo hayan dos 8 en la lista vinculados a la variable `nums`.
     ~~~~
     nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
 
@@ -253,7 +253,7 @@ Chapter Assessment
    :practice: T
    :topics: Sequences/IndexOperatorWorkingwiththeCharactersofaString
    
-   Assign the last element of ``lst`` to the variable ``end_elem``. Do this so that it works no matter how long lst is.
+   Asigne el último elemento de ``lst`` a la variable ``end_elem``. Haga esto para que funcione sin importar cuánto dure.
    ~~~~
    lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
 
@@ -274,7 +274,7 @@ Chapter Assessment
    :practice: T
    :topics: Sequences/Length
    
-   Assign the number of elements in ``lst`` to the variable ``num_lst``.
+   Asigne el número de elementos en ``lst`` a la variable ``num_lst``.
    ~~~~
    lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
 
@@ -295,7 +295,7 @@ Chapter Assessment
    :practice: T
    :topics: Sequences/SplitandJoin
 
-   Create a variable called ``wrds`` and assign to it a list whose elements are the words in the string ``sent``. Do not worry about punctuation.
+   Cree una variable llamada ``wrds`` y asígnele una lista cuyos elementos sean las palabras en la cadena ``sent``. No te preocupes por la puntuación.
    ~~~~
    sent = "The bicentennial for our university was in 2017"
 
