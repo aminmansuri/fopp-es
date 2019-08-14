@@ -7,41 +7,41 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Summary
-=======
+Glosario
+=========
 
 .. glossary::
 
-    for loop traversal (``for``)
-        *Traversing* a string or a list means accessing each character in the string or item in the list, one
-        at a time.  For example, the following for loop:
+    recorrido de bucles for (``for``)
+        *Recorrer* un string o una lista significa acceder a cada carácter de la cadena o elemento de la lista, uno
+        a la vez Por ejemplo, el siguiente bucle for:
 
         .. sourcecode:: python
 
             for ix in 'Example':
                 ...
 
-        executes the body of the loop 7 times with different values of ``ix`` each time.
+        ejecuta el cuerpo del bucle 7 veces con diferentes valores de ``ix`` cada vez.
         
     range
-        A function that produces a list of numbers. For example, ``range(5)``, produces a list of five
-        numbers, starting with 0, ``[0, 1, 2, 3, 4]``.
+        Es una función que produce una lista de números. Por ejemplo, ``rango (5)``, produce una lista de cinco
+        números, comenzando con 0, ``[0, 1, 2, 3, 4]``.
 
     pattern
-        A sequence of statements, or a style of coding something that has
-        general applicability in a number of different situations.  Part of
-        becoming a mature programmer is to learn and establish the
-        patterns and algorithms that form your toolkit.   
+        Una secuencia de declaraciones o un estilo de codificación de algo que tiene
+        Aplicabilidad general en diferentes situaciones. Parte de
+        convertirse en un programador maduro es aprender y establecer los
+        patrones y algoritmos que forman su kit de herramientas.
 
     index
-        A variable or value used to select a member of an ordered collection, such as
-        a character from a string, or an element from a list.
+        Una variable o valor utilizado para seleccionar un miembro de una colección ordenada, como
+        un caracter de una cadena, o un elemento de una lista.
 
-    traverse
-        To iterate through the elements of a collection, performing a similar
-        operation on each.
+    Recorrer
+        Iterar a través de los elementos de una colección, realizando una operación similar
+        en cada uno.
 
     accumulator pattern
-         A pattern where the program initializes an accumulator variable and then changes it
-         during each iteration, accumulating a final result.
+         Un patrón donde el programa inicializa una variable acumuladora y luego la cambia
+         durante cada iteración, acumulando un resultado final.
 
