@@ -11,11 +11,11 @@
    :prefix: seqmut-4-
    :start: 1
 
-Aliasing
---------
+Creando Alias
+--------------
 
-Since variables refer to objects, if we assign one variable to another, both
-variables refer to the same object:
+Como las variables se refieren a objetos, si asignamos una variable a otra, ambas
+variables se refieren al mismo objeto:
 
 .. activecode:: ac8_4_1
     
@@ -23,14 +23,14 @@ variables refer to the same object:
     b = a
     print(a is b)
     
-In this case, the reference diagram looks like this:
+En este caso, el diagrama de referencia se ve así:
 
 .. image:: Figures/refdiag4.png
    :alt: State snapshot for multiple references (aliases) to a list 
 
-Because the same list has two different names, ``a`` and ``b``, we say that it
-is **aliased**. Changes made with one alias affect the other.  In the codelens example below, you can see that ``a`` and ``b`` refer
-to the same list after executing the assignment statement ``b = a``.
+Debido a que la misma lista tiene dos nombres diferentes, ``a`` y ``b``, decimos que
+tiene **alias**. Los cambios realizados con un alias afectan al otro. En el ejemplo de codelens
+a continuación, puede ver que ``a`` y ``b`` se refieren a la misma lista después de ejecutar la instrucción de asignación ``b = a``.
 
 
 .. activecode:: ac8_4_2
@@ -48,13 +48,13 @@ to the same list after executing the assignment statement ``b = a``.
 
 
 
-Although this behavior can be useful, it is sometimes unexpected or
-undesirable. In general, it is safer to avoid aliasing when you are working
-with mutable objects. Of course, for immutable objects, there's no problem.
-That's why Python is free to alias strings and integers when it sees an opportunity to
-economize.
+Aunque este comportamiento puede ser útil, a veces es inesperado o
+indeseable. En general, es más seguro evitar el alias cuando estás trabajando
+con objetos mutables. Por supuesto, para objetos inmutables, no hay problema.
+Es por eso que Python se siente libre para crear alias de cadenas y enteros cuando ve la oportunidad de
+economizar.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 
 .. mchoice:: question8_1_3
@@ -63,13 +63,13 @@ economize.
    :answer_c: ['celebration', 'Jamboree', 'get-together', 'party']
    :answer_d: ['Jamboree', 'get-together', 'party', 'celebration']
    :correct: a
-   :feedback_a: Yes, the value of y has been reassigned to the value of w.
-   :feedback_b: No, that was the inital value of y, but y has changed.
-   :feedback_c: No, when we assign a list to another list it does not concatenate the lists together.
-   :feedback_d: No, when we assign a list to another list it does not concatenate the lists together.
+   :feedback_a: Sí, el valor de *y* se ha reasignado al valor de w.
+   :feedback_b: No, ese era el valor inicial de y, pero y ha cambiado.
+   :feedback_c: No, cuando asignamos una lista a otra lista, no concatena las listas juntas.
+   :feedback_d: No, cuando asignamos una lista a otra lista, no concatena las listas juntas.
    :practice: T
 
-   What is the value of y after the following code has been evaluated:
+   ¿Cuál es el valor de *y* después de que se haya evaluado el siguiente código?
 
    .. code-block:: python
 
@@ -83,11 +83,11 @@ economize.
    :answer_a: [4,2,8,6,5]
    :answer_b: [4,2,8,999,5]
    :correct: b
-   :feedback_a: blist is not a copy of alist, it is a reference to the list alist refers to.
-   :feedback_b: Yes, since alist and blist both reference the same list, changes to one also change the other.
+   :feedback_a: blist no es una copia de alist, es una referencia a la lista a la que se refiere alist.
+   :feedback_b: Sí, ya que alist y blist ambos hacen referencia a la misma lista, los cambios a uno también cambian al otro.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
