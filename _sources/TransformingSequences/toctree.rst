@@ -1,8 +1,8 @@
-Transforming Sequences
-::::::::::::::::::::::
+Secuencias de Transformación
+:::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Transforming Sequences
+   :caption: Secuencias de Transformación
    :maxdepth: 2
 
    intro-SequenceMutation.rst

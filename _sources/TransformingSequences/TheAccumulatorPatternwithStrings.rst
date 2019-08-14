@@ -11,11 +11,11 @@
    :prefix: seqmut-10-
    :start: 1
 
-The Accumulator Pattern with Strings
-------------------------------------
+Patrón de acumulación con Strings
+----------------------------------
 
-We can also accumulate strings rather than accumulating numbers, as you've seen before. The following program isn't 
-particularly useful for data processing, but we will see more useful things later that accumulate strings.
+También podemos acumular cadenas en lugar de acumular números, como has visto antes. El siguiente programa no es
+particularmente útil para el procesamiento de datos, pero más adelante veremos cosas más útiles que acumulan cadenas.
 
 .. activecode:: ac8_10_1
     
@@ -26,28 +26,28 @@ particularly useful for data processing, but we will see more useful things late
        
    print(ac)
  
-Look carefully at line 4 in the above program (``ac = ac + c + "-" + c + "-"``). In words, it says that the 
-new value of ``ac`` will be the old value of ``ac`` concatenated with the current character, a dash, then the 
-current character and a dash again. We are building the result string character by character. 
+Mire cuidadosamente la línea 4 en el programa anterior (``ac = ac + c + "-" + c + "-"``). En palabras, dice que el
+El nuevo valor de ``ac`` será el valor anterior de ``ac`` concatenado con el carácter actual, un guión, luego el
+personaje actual y una carrera de nuevo. Estamos construyendo la cadena de resultados carácter por carácter.
 
-Take a close look also at the initialization of ``ac``.  We start with an empty string and then begin adding
-new characters to the end. Also note that I have given it a different name this time, ``ac`` instead of 
-``accum``. There's nothing magical about these names. You could use any valid variable and it would work the 
-same (try substituting x for ac everywhere in the above code).
+Observe de cerca también la inicialización de ``ac``. Comenzamos con una cadena vacía y luego comenzamos a agregar
+nuevos personajes hasta el final. También tenga en cuenta que esta vez le he dado un nombre diferente, ``ac`` en lugar de
+``acumular``. No hay nada mágico en estos nombres. Podrías usar cualquier variable válida y funcionaría
+mismo (intente sustituir x por ac en todas partes en el código anterior).
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_10_1
    :answer_a: Ball
    :answer_b: BALL
    :answer_c: LLAB
    :correct: c
-   :feedback_a: Each item is converted to upper case before concatenation.
-   :feedback_b: Each character is converted to upper case but the order is wrong.
-   :feedback_c: Yes, the order is reversed due to the order of the concatenation.
+   :feedback_a: Cada elemento se convierte a mayúsculas antes de la concatenación.
+   :feedback_b: Cada carácter se convierte a mayúsculas pero el orden es incorrecto.
+   :feedback_c: Sí, el orden se invierte debido al orden de la concatenación.
    :practice: T
 
-   What is printed by the following statements:
+   Lo que se imprime en las siguientes declaraciones:
    
    .. code-block:: python
 
@@ -62,10 +62,10 @@ same (try substituting x for ac everywhere in the above code).
    :autograde: unittest
    :practice: T
 
-   1. For each character in the string already saved in the variable ``str1``, add each character to a list called ``chars``.
+   1. Para cada carácter de la cadena ya guardado en la variable ``str1``, agregue cada carácter a una lista llamada ``caracteres``.
    ~~~~
    str1 = "I love python"
-   # HINT: what's the accumulator? That should go here.
+   # SUGERENCIA: ¿cuál es el acumulador? Eso debería ir aquí.
       
    =====
 
@@ -84,7 +84,7 @@ same (try substituting x for ac everywhere in the above code).
    :autograde: unittest
    :practice: T
 
-   Assign an empty string to the variable ``output``. Using the ``range`` function, write code to make it so that the variable ``output`` has 35 ``a`` s inside it (like ``"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"``). Hint: use the accumulation pattern!
+   Asigne una cadena vacía a la variable ``output``. Usando la función ``range``, escriba el código para que la variable ``output`` tenga 35 ``a`` dentro (como ``"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"``). Pista: ¡usa accumulation pattern!
    ~~~~
 
    =====

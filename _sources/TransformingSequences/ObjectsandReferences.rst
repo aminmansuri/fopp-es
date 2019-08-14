@@ -13,35 +13,35 @@
 
 .. index:: aliases
 
-Objects and References
-----------------------
+Objectos y Referencias
+-----------------------
 
-If we execute these assignment statements,
+Si ejecutamos estas declaraciones de asignación,
 
 .. sourcecode:: python
     
     a = "banana"
     b = "banana"
 
-we know that ``a`` and ``b`` will refer to a string with the letters
-``"banana"``. But we don't know yet whether they point to the *same* string.
+sabemos que ``a`` y ``b`` se referirán a una cadena con las letras
+``"banana"``. Pero aún no sabemos si apuntan a la *misma* cadena.
 
-There are two possible ways the Python interpreter could arrange its internal states:
+Hay dos formas posibles en que el intérprete de Python podría organizar sus estados internos:
 
 .. image:: Figures/refdiag1.png
    :alt: List illustration 
 
-or
+o
 
 .. image:: Figures/refdiag2.png
    :alt: List illustration
 
-In one case, ``a`` and ``b`` refer to two different string objects that have the same
-value. In the second case, they refer to the same object. Remember that an object is something a variable can
-refer to.
+En un caso, ``a`` y ``b`` se refieren a dos objetos strings diferentes que tienen el mismo
+valor. En el segundo caso, se refieren al mismo objeto. Recuerde que un objeto es algo a lo que una variable puede
+referirse.
 
-We can test whether two names refer to the same object using the *is*
-operator.  The *is* operator will return true if the two references are to the same object.  In other words, the references are the same.  Try our example from above.
+Podemos probar si dos nombres se refieren al mismo objeto usando *is*
+operador. El operador *is* devolverá verdadero si las dos referencias son al mismo objeto. En otras palabras, las referencias son las mismas. Pruebe nuestro ejemplo de arriba.
 
 .. activecode:: ac8_3_1
 
@@ -50,9 +50,9 @@ operator.  The *is* operator will return true if the two references are to the s
 
     print(a is b)
 
-The answer is ``True``. This tells us that both ``a`` and ``b`` refer to the same object, and that it is the second 
-of the two reference diagrams that describes the relationship. Python assigns every object a unique id and when we 
-ask ``a is b`` what python is really doing is checking to see if id(a) == id(b).
+La respuesta es ``True``. Esto nos dice que tanto ``a`` como ``b`` se refieren al mismo objeto, y que es el segundo
+de los dos diagramas de referencia que describen la relación. Python asigna a cada objeto una identificación única y cuando
+pregunte ``a is b`` lo que realmente está haciendo Python es verificar si se cumple que id(a) == id(b).
 
 .. activecode:: ac8_3_2
 
@@ -62,11 +62,11 @@ ask ``a is b`` what python is really doing is checking to see if id(a) == id(b).
     print(id(a))
     print(id(b))
 
-Since strings are *immutable*, the Python interpreter often optimizes resources by making two names that refer to the same string value
-refer to the same object. You shouldn't count on this (that is, use ``==`` to compare strings, not ``is``), but don't be surprised if you find that two variables,each bound to the string "banana", have the same id..
+Como las cadenas son *inmutables*, el intérprete de Python a menudo optimiza los recursos al hacer que dos nombres que se refieren al mismo valor de String
+se referiran al mismo objeto. No debe contar con esto (es decir, use ``==`` para comparar cadenas, no ``is``), pero no se sorprenda si encuentra que dos variables, cada una unida a la cadena "banana", tiene la misma identificación ..
 
-This is not the case with lists, which never share an id just because they have the same contents. Consider the following example. Here, ``a`` and ``b`` refer to two different lists,
-each of which happens to have the same element values. They need to have different ids so that mutations of list ``a`` do not affect list ``b``.
+Este no es el caso con las listas, que nunca comparten una identificación solo porque tienen el mismo contenido. Considere el siguiente ejemplo. Aquí, ``a`` y ``b`` se refieren a dos listas diferentes,
+cada uno de los cuales tiene los mismos valores de elementos. Necesitan tener identificadores diferentes para que las mutaciones de la lista ``a`` no afecten a la lista ``b``.
 
 .. activecode:: ac8_3_3
     
@@ -80,10 +80,9 @@ each of which happens to have the same element values. They need to have differe
     print(id(a))
     print(id(b))
 
-The reference diagram for this example looks like this:
+El diagrama de referencia para este ejemplo se ve así:
 
 .. image:: Figures/refdiag3.png
    :alt: Reference diagram for equal different lists 
 
-``a`` and ``b`` have equivalent values but do not refer to the same object. Because their contents are equivalent, `a==b` evaluates to True; because they are not the same object, `a is b` evaluates to False.
-
+``a`` y ``b`` tienen valores equivalentes pero no se refieren al mismo objeto. Como sus contenidos son equivalentes, `a==b` se evalúa como Verdadero; porque no son el mismo objeto, `a es b` se evalúa como Falso.

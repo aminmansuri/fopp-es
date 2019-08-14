@@ -10,10 +10,10 @@
    :prefix: seqmut-12-
    :start: 1
 
-👩‍💻  Don’t Mutate A List That You Are Iterating Through
+👩‍💻  No mutes una lista por la que estás iterando
 =========================================================
 
-So far we've shown you how to iterate through a list:
+Hasta ahora te hemos mostrado cómo recorrer una lista:
 
 .. activecode:: ac8_12_1
 
@@ -22,7 +22,7 @@ So far we've shown you how to iterate through a list:
     for color in colors:
         print(color)
 
-As well as accumulate a list by appending or deleting items!
+¡Además de acumular una lista agregando o eliminando elementos!
 
 .. activecode:: ac8_12_2
 
@@ -34,8 +34,8 @@ As well as accumulate a list by appending or deleting items!
 
     print(initials)
 
-You may be tempted now to iterate through a list and accumulate some data into it or delete data from it, however that 
-often becomes very confusing. In the following code we will filter out all words that begin with P, B, or T.
+Ahora puede tener la tentación de recorrer una lista y acumular algunos datos en ella o eliminar datos de ella, sin embargo eso
+a menudo se vuelve muy confuso. En el siguiente código, filtraremos todas las palabras que comienzan con P, B o T.
 
 .. activecode:: ac8_12_3
 
@@ -49,11 +49,11 @@ often becomes very confusing. In the following code we will filter out all words
 
     print(colors)
 
-In the code above, we iterated through ``range(len(colors))`` because it made it easier to locate the position of the 
-item in the list and delete it. However, we run into a problem because as we delete content from the list, the list 
-becomes shorter. Not only do we have an issue indexing on line 4 after a certain point, but we also skip over some strings because they've been moved around. To see this more easily, try walking through this code in codelens. Note that each time we iterate through the list python does not reevaluate the iterator variable.
+En el código anterior, iteramos a través de ``range(len(colors))`` porque facilitó la localización de la posición del
+elemento de la lista y elimínelo. Sin embargo, nos encontramos con un problema porque a medida que eliminamos contenido de la lista, la lista
+se acorta No solo tenemos un problema de indexación en la línea 4 después de un cierto punto, sino que también omitimos algunas cadenas porque se han movido. Para ver esto más fácilmente, intente recorrer este código en codelens. Tenga en cuenta que cada vez que iteramos por la lista, Python no reevalúa la variable iterador.
 
-We can also try to accumulate a list that we're iterating through as well. What do you think will happen here?
+También podemos intentar acumular una lista a través de la cual estamos iterando también. ¿Qué crees que pasará aquí?
 
 .. activecode:: ac8_12_4
 
@@ -65,8 +65,8 @@ We can also try to accumulate a list that we're iterating through as well. What 
 
     print(colors)
 
-Though there is not an error, the behavior may not be expected. When we come across a color that begins with a vowel, 
-that color is added to the end of the list. Again, because Python does not reevaluate the iterator variable we are not 
-stuck adding colors that start with vowels for an infinite number of times. That's good in this case! Ultimately though, 
-it can be confusing to write code like this. We recommend not iterating over a list that you will be mutating 
-within the for loop.
+Aunque no hay un error, el comportamiento puede no ser esperado. Cuando nos encontramos con un color que comienza con una vocal,
+ese color se agrega al final de la lista. Nuevamente, debido a que Python no reevalúa la variable iteradora, no somos
+pegado agregando colores que comienzan con vocales por un número infinito de veces. Eso es bueno en este caso! En última instancia, sin embargo,
+Puede ser confuso escribir código como este. Recomendamos no iterar sobre una lista que va a mutar
+dentro del ciclo for.
