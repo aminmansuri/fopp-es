@@ -15,8 +15,8 @@
    statement; if
    statement; pass
     
-Conditional Execution: Binary Selection
----------------------------------------
+Ejecución condicional: selección binaria
+----------------------------------------
 
 .. video:: binaryselection
    :controls:
@@ -26,86 +26,86 @@ Conditional Execution: Binary Selection
    http://media.interactivepython.org/thinkcsVideos/binaryselection.webm
 
 
-In order to write useful programs, we almost always need the ability to check
-conditions and change the behavior of the program accordingly. **Selection statements**, sometimes
-also referred to as **conditional statements**, give us this ability. The simplest form of selection is the **if statement**.  
-This is sometimes referred to as **binary selection** since there are two possible paths of execution.
+Para escribir programas útiles, casi siempre necesitamos la capacidad de verificar
+condiciones y cambiar el comportamiento del programa en consecuencia. **Declaraciones de selección**, a veces
+también conocido como **declaraciones condicionales**, danos esta habilidad. La forma más simple de selección es la declaración **if statement**.
+Esto a veces se conoce como **selección binaria** ya que hay dos posibles rutas de ejecución.
 
 .. activecode:: ac7_6_1
 
     x = 15
 
     if x % 2 == 0:
-        print(x, "is even")
+        print(x, "incluso")
     else:
-        print(x, "is odd")
+        print(x, "es impar")
 
 
-The syntax for an ``if`` statement looks like this:
+La sintaxis para una declaración ``if`` se ve así:
 
 .. sourcecode:: python
 
     if BOOLEAN EXPRESSION:
-        STATEMENTS_1        # executed if condition evaluates to True
+        STATEMENTS_1        # se ejecuta si la condición se evalúa como True
     else:
-        STATEMENTS_2        # executed if condition evaluates to False
+        STATEMENTS_2        # se ejecuta si la condición se evalúa como False
 
-The boolean expression after the ``if`` statement is called the **condition**.
-If it is true, then the indented statements get executed. If not, then the statements
-indented under the ``else`` clause get executed.
+La expresión boolean después de la declaración ``if`` se llama **condición**.
+Si es verdadero, se ejecutan las declaraciones sangradas. Si no, entonces las declaraciones
+sangradas bajo la cláusula ``else`` ejecutarse.
 
-.. sidebar::  Flowchart of a **if** statement with an **else**
+.. sidebar::  Diagrama de flujo de una declaración **if** con un **else**
 
    .. image:: Figures/flowchart_if_else.png
 
 
 
-As with the function definition from the last chapter and other compound
-statements like ``for``, the ``if`` statement consists of a header line and a body. The header
-line begins with the keyword ``if`` followed by a *boolean expression* and ends with
-a colon (:).
+Al igual que con la definición de función del último capítulo y otros compuestos
+declaraciones como ``for``, la declaración ``if`` consiste en una línea de encabezado y un cuerpo. El encabezado de
+la línea comienza con la palabra clave ``if`` seguida de una *expresión boolean* y termina con
+dos puntos (:).
 
-The indented statements that follow are called a **block**. The first
-unindented statement marks the end of the block.
+Las siguientes declaraciones sangradas se denominan **bloque**. La primera
+declaración sin sangría marca el final del bloque.
 
-Each of the statements inside the first block of statements is executed in order if the boolean
-expression evaluates to ``True``. The entire first block of statements
-is skipped if the boolean expression evaluates to ``False``, and instead
-all the statements under the ``else`` clause are executed.
+Cada una de las declaraciones dentro del primer bloque de declaraciones se ejecutan en orden si el valor boolean
+de la expresión se evalúa como ``True``. El primer bloque completo de declaraciones
+se omite si la expresión boolean se evalúa como ``False``, y en su lugar
+todas las declaraciones bajo la cláusula ``else`` se ejecutan.
 
-There is no limit on the number of statements that can appear under the two clauses of an
-``if`` statement, but there has to be at least one statement in each block.
+No hay límite en el número de declaraciones que pueden aparecer bajo las dos cláusulas de una
+declaración ``if``, pero debe haber al menos una declaración en cada bloque.
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_6_1
-   :answer_a: Just one.
-   :answer_b: Zero or more.
-   :answer_c: One or more.
-   :answer_d: One or more, and each must contain the same number.
+   :answer_a: Solo uno.
+   :answer_b: Cero o más.
+   :answer_c: Uno o más.
+   :answer_d: Uno o más, y cada uno debe contener el mismo número.
    :correct: c
-   :feedback_a: Each block may also contain more than one.
-   :feedback_b: Each block must contain at least one statement.
-   :feedback_c: Yes, a block must contain at least one statement and can have many statements.
-   :feedback_d: The blocks may contain different numbers of statements.
+   :feedback_a: Cada bloque también puede contener más de uno.
+   :feedback_b: Cada bloque debe contener al menos una declaración.
+   :feedback_c: Sí, un bloque debe contener al menos una declaración y puede tener muchas declaraciones.
+   :feedback_d: Los bloques pueden contener diferentes números de declaraciones.
    :practice: T
 
-   How many lines of code can appear in the indented code block below the if and else lines in a conditional?
+   ¿Cuántas líneas de código pueden aparecer en el bloque de código sangrado debajo de las líneas if y else en un condicional?
 
 .. mchoice:: question7_6_2
    :answer_a: TRUE
    :answer_b: FALSE
-   :answer_c: TRUE on one line and FALSE on the next
-   :answer_d: Nothing will be printed
+   :answer_c: TRUE en una línea y FALSE en la siguiente
+   :answer_d: Nada será impreso
    :correct: b
-   :feedback_a: TRUE is printed by the if-block, which only executes if the conditional (in this case, 4+5 == 10) is true.  In this case 5+4 is not equal to 10.
-   :feedback_b: Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.
-   :feedback_c: Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.
-   :feedback_d: Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.
+   :feedback_a: El bloque if imprime TRUE, que solo se ejecuta si el condicional (en este caso, 4+5 == 10) es verdadero. En este caso 5+4 no es igual a 10.
+   :feedback_b: Como 4+5==10 se evalúa como False, Python omitirá el bloque if y ejecutará la declaración en el bloque else.
+   :feedback_c: Python nunca imprimirá tanto TRUE como FALSE porque solo ejecutará uno de los bloques if o block, pero no ambos.
+   :feedback_d: Python siempre ejecutará el bloque if (si la condición es verdadera) o el bloque else (si la condición es falsa). Nunca saltaría sobre ambos bloques.
    :practice: T
 
-   What does the following code print? (choose from output a, b, c or nothing)
+   ¿Qué imprime el siguiente código? (elija de la salida a, b, c o nada)
 
    .. code-block:: python
 
@@ -115,18 +115,18 @@ There is no limit on the number of statements that can appear under the two clau
          print("FALSE")
 
 .. mchoice:: question7_6_3
-   :answer_a: Output a
-   :answer_b: Output b
-   :answer_c: Output c
-   :answer_d: Output d
+   :answer_a: Salida a
+   :answer_b: Salida b
+   :answer_c: Salida c
+   :answer_d: Salida d
    :correct: c
-   :feedback_a: Although TRUE is printed after the if-else statement completes, both blocks within the if-else statement print something too.  In this case, Python would have had to have skipped both blocks in the if-else statement, which it never would do.
-   :feedback_b: Because there is a TRUE printed after the if-else statement ends, Python will always print TRUE as the last statement.
-   :feedback_c: Python will print FALSE from within the else-block (because 5+4 does not equal 10), and then print TRUE after the if-else statement completes.
-   :feedback_d: To print these three lines, Python would have to execute both blocks in the if-else statement, which it can never do.
+   :feedback_a: Aunque TRUE se imprime después de que se completa la instrucción if-else, ambos bloques dentro de la instrucción if-else también imprimen algo. En este caso, Python debería haber omitido ambos bloques en la instrucción if-else, lo que nunca haría.
+   :feedback_b: Debido a que hay un TRUE impreso después de que finaliza la instrucción if-else, Python siempre imprimirá TRUE como la última instrucción.
+   :feedback_c: Python imprimirá FALSE desde dentro del bloque else (porque 5+4 no es igual a 10), y luego imprimirá TRUE después de que se complete la instrucción if-else.
+   :feedback_d: Para imprimir estas tres líneas, Python tendría que ejecutar ambos bloques en la instrucción if-else, lo que nunca puede hacer.
    :practice: T
 
-   What does the following code print?
+   ¿Qué imprime el siguiente código?
 
    .. code-block:: python
 
@@ -157,7 +157,7 @@ There is no limit on the number of statements that can appear under the two clau
    :autograde: unittest
    :practice: T
 
-   Write code to assign the string ``"You can apply to SI!"`` to ``output`` *if* the string ``"SI 106"`` is in the list ``courses``. If it is not in ``courses``, assign the value ``"Take SI 106!"`` to the variable ``output``.
+   Escriba el código para asignar la cadena ``"You can apply to SI!"`` A ``output`` *if* la cadena ``"SI 106"`` está en la lista ``courses``. Si no está en ``courses``, asigne el valor ``"Take SI 106!"`` A la variable ``output``.
    ~~~~
    courses = ["ENGR 101", "SI 110", "ENG 125", "SI 106", "CHEM 130"]
 
@@ -178,7 +178,7 @@ There is no limit on the number of statements that can appear under the two clau
    :autograde: unittest
    :practice: T
 
-   Create a variable, ``b``, and assign it the value of ``15``. Then, write code to see if the value ``b`` is greater than that of ``a``. If it is, ``a``'s value should be multiplied by 2. If the value of ``b`` is less than or equal to ``a``, nothing should happen. Finally, create variable ``c`` and assign it the value of the sum of ``a`` and ``b``.
+   Cree una variable, ``b``, y asígnele el valor de ``15``. Luego, escriba el código para ver si el valor ``b`` es mayor que el de ``a``. Si es así, el valor de ``a`` debe multiplicarse por 2. Si el valor de ``b`` es menor o igual que ``a``, no debe suceder nada. Finalmente, cree la variable ``c`` y asígnele el valor de la suma de ``a`` y ``b``.
    ~~~~
    a = 20
       
