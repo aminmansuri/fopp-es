@@ -20,8 +20,8 @@
    single:  ==; numbers
    single:  !=; numbers
 
-Boolean Values and Boolean Expressions
---------------------------------------
+Valores boolean y expresiones boolean
+--------------------------------------------
 
 .. video:: booleanexpressions
    :controls:
@@ -30,13 +30,13 @@ Boolean Values and Boolean Expressions
    http://media.interactivepython.org/thinkcsVideos/booleanexpressions.mov
    http://media.interactivepython.org/thinkcsVideos/booleanexpressions.webm
 
-The Python type for storing true and false values is called ``bool``, named
-after the British mathematician, George Boole. George Boole created *Boolean
-Algebra*, which is the basis of all modern computer arithmetic.
+El tipo de de variable en Python para almacenar valores verdaderos y falsos se llama ``bool``, llamado así
+en honor al matemático británico, George Boole. George Boole creó el *Álegbra
+Boolean*, que es la base de toda la aritmética informática moderna.
 
-There are only two **boolean values**.  They are ``True`` and ``False``.  Capitalization
-is important, since ``true`` and ``false`` are not boolean values (remember Python is case
-sensitive).
+Solo hay dos **valores boolean**. Son ``True`` y ``False``. Respetar las mayúsculas
+es importante, ya que ``true`` y ``false`` no son valores boolean (recuerde que Python es el caso
+sensible).
 
 .. activecode:: ac7_2_1
 
@@ -44,11 +44,11 @@ sensitive).
     print(type(True))
     print(type(False))
 
-.. note:: Boolean values are not strings!
+.. note:: ¡Los valores booleans no son strings!
 
-    It is extremely important to realize that True and False are not strings.   They are not
-    surrounded by quotes.  They are the only two values in the data type ``bool``.  Take a close look at the
-    types shown below.
+    Es extremadamente importante darse cuenta de que True y False no son strings. Ellos no están
+    rodeados de comillas. Son los únicos dos valores en el tipo de datos ``bool``. Mira de cerca los
+    tipos que se muestran a continuación.
 
 
 .. activecode:: ac7_2_2
@@ -56,47 +56,47 @@ sensitive).
     print(type(True))
     print(type("True"))
 
-A **boolean expression** is an expression that evaluates to a boolean value.
-The equality operator, ``==``, compares two values and produces a boolean value related to whether the
-two values are equal to one another.
+Una **expresión boolean** es una expresión que se evalúa como un valor boolean.
+El operador de igualdad, ``==``, compara dos valores y produce un valor boolean relacionado si
+los valores son iguales el uno al otro.
 
 .. activecode:: ac7_2_3
 
     print(5 == 5)
     print(5 == 6)
 
-In the first statement, the two operands are equal, so the expression evaluates
-to ``True``.  In the second statement, 5 is not equal to 6, so we get ``False``.
+En la primera instrucción, los dos operandos son iguales, por lo que la expresión evalúa
+a ``True``. En la segunda declaración, 5 no es igual a 6, por lo que obtenemos ``False``.
 
-The ``==`` operator is one of six common **comparison operators**; the others are:
+El operador ``==`` es uno de los seis operadores de comparación **comunes**; los otros son:
 
 .. sourcecode:: python
 
-    x != y               # x is not equal to y
-    x > y                # x is greater than y
-    x < y                # x is less than y
-    x >= y               # x is greater than or equal to y
-    x <= y               # x is less than or equal to y
+    x != y               # x no es igual a y
+    x > y                # x es mayor que y
+    x < y                # x es menor que y
+    x >= y               # x es mayor o igual que y
+    x <= y               # x es menor o igual que y
 
-Although these operations are probably familiar to you, the Python symbols are
-different from the mathematical symbols. A common error is to use a single
-equal sign (``=``) instead of a double equal sign (``==``). Remember that ``=``
-is an assignment operator and ``==`` is a comparison operator. Also, there is
-no such thing as ``=<`` or ``=>``.
+Aunque estas operaciones probablemente le sean familiares, los símbolos de Python son
+diferentes de los símbolos matemáticos. Un error común es usar un solo
+signo igual (``=``) en lugar de un doble signo igual (``==``). Recuerda que ``=``
+es un operador de asignación y ``==`` es un operador de comparación. Además, ahí
+no hay tal cosa como `` = <`` o ``=>``.
 
-.. With reassignment it is especially important to distinguish between an
-.. assignment statement and a boolean expression that tests for equality.
-.. Because Python uses the equal token (``=``) for assignment,
-.. it is tempting to interpret a statement like
-.. ``a = b`` as a boolean test.  Unlike mathematics, it is not!  Remember that the Python token
-.. for the equality operator is ``==``.
+.. Con la reasignación es especialmente importante distinguir entre una
+.. declaración de asignación y una expresión booleana que prueba la igualdad.
+.. Debido a que Python usa el token igual (``=``) para la asignación,
+.. es tentador interpretar una declaración como
+.. ``a = b`` como prueba boolean. A diferencia de las matemáticas, no lo es! Recuerda que el token Python
+.. para el operador de igualdad es ``==``.
 
-Note too that an equality test is symmetric, but assignment is not. For example,
-if ``a == 7`` then ``7 == a``. But in Python, the statement ``a = 7``
-is legal and ``7 = a`` is not. (Can you explain why?)
+Tenga en cuenta también que una prueba de igualdad es simétrica, pero la asignación no lo es. Por ejemplo,
+si ``a == 7`` entonces ``7 == a``. Pero en Python, la declaración ``a = 7``
+es legal y ``7 = a`` no lo es. (¿Puedes explicar porque?)
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_2_1
    :multiple_answers:
@@ -106,11 +106,11 @@ is legal and ``7 = a`` is not. (Can you explain why?)
    :answer_d: 3 + 4 == 7
    :answer_e: &quot;False&quot;
    :correct: a,b,d
-   :feedback_a: True and False are both Boolean literals.
-   :feedback_b: The comparison between two numbers via == results in either True or False (in this case False), both Boolean values.
-   :feedback_c:  3+4 evaluates to 7, which is a number, not a Boolean value.
-   :feedback_d: 3+4 evaluates to 7.  7 == 7 then evaluates to True, which is a Boolean value.
-   :feedback_e: With the double quotes surrounding it, False is interpreted as a string, not a Boolean value. If the quotes had not been included, False alone is in fact a Boolean value.
+   :feedback_a: True y False son literales boolean.
+   :feedback_b: La comparación entre dos números a través de == da como resultado True o False (en este caso False), ambos valores Boolean.
+   :feedback_c: 3+4 se evalúa a 7, que es un número, no un valor Boolean.
+   :feedback_d: 3+4 se evalúa como 7. 7 == 7 luego se evalúa como True, que es un valor Boolean.
+   :feedback_e: Con las comillas dobles que lo rodean, False se interpreta como una string, no como un valor Boolean. Si las comillas no se hubieran incluido, False solo seria  un valor Boolean.
    :practice: T
 
-   Which of the following is a Boolean expression? Select all that apply.
+    ¿Cuál de las siguientes es una expresión Boolean? Seleccione todas las que correspondan.
