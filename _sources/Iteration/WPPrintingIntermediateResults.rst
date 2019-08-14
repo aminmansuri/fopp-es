@@ -10,17 +10,17 @@
    :prefix: iter-7-
    :start: 1
 
-👩‍💻 Printing Intermediate Results
-===================================
+👩‍💻 Imprimiendo Resultados Intermedios
+========================================
 
-In this textbook we provide the codelens tool so that you are able to step through 
-the program and watch what happens each time a line is evaluated by the Python 
-interpretor. What if you didn't have codelens though, what would you do?
+En este libro de texto, proporcionamos la herramienta de codelens para que pueda avanzar
+el programa y observe lo que sucede cada vez que el intérprete de Python evalúa una línea
+¿Qué pasaría si no tuvieras codelens?, ¿qué haría?
 
-In that case, print statements are your best friend. They can show you what the value of
-something is. This is especially helpful in the case of writing for loops or accumulating 
-a value. If something is going wrong you can compare what you expect to happen to what
-is actually happening.
+En ese caso, las declaraciones impresas son su mejor amigo. Pueden mostrarle cuál es el valor de
+algo. Esto es especialmente útil en el caso de escribir para bucles o acumular
+un valor. Si algo va mal, puede comparar lo que espera que suceda con lo que
+en realidad está sucediendo.
 
 .. activecode:: ac6_7_1
 
@@ -31,8 +31,8 @@ is actually happening.
        tot += num
    print(tot)
 
-Say we weren't sure what ``num`` was being assigned each time we iterated. One way to find out 
-would be to add a print statement inside of the for loop to see.
+Digamos que no estábamos seguros de qué ``num`` se asignaba cada vez que iteramos. Una forma de averiguarlo
+sería agregar una declaración de impresión dentro del bucle for para ver.
 
 .. activecode:: ac6_7_2
 
@@ -44,7 +44,7 @@ would be to add a print statement inside of the for loop to see.
        tot += num
    print(tot)
 
-If we wanted to see what was happening to ``tot`` as well, we could print that out in the for loop as well!
+Si también quisiéramos ver lo que le estaba sucediendo a ``tot``, ¡también podríamos imprimir eso en el bucle for!
 
 .. activecode:: ac6_7_3
    
@@ -58,8 +58,8 @@ If we wanted to see what was happening to ``tot`` as well, we could print that o
        print(tot)
    print(tot)
 
-Finally, if we wanted to make these numbers easier to understand, we could add more to the print statements 
-to make them easier to read!
+Finalmente, si quisiéramos facilitar la comprensión de estos números, ¡podríamos agregar más a las declaraciones impresas
+para que sean más fáciles de leer!
 
 .. activecode:: ac6_7_4
    
