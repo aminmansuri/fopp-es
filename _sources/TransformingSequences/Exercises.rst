@@ -13,8 +13,8 @@
    :prefix: seqmut-13-
    :start: 1
 
-Exercises
-=========
+Ejercicios
+===========
 
 #.
 
@@ -24,7 +24,7 @@ Exercises
 
            .. actex:: ac8_11_1
 
-              For each word in the list ``verbs``, add an -ing ending. Overwrite the old list so that ``verbs`` has the same words with ``ing`` at the end of each one.
+              Para cada palabra en la lista ``verbs``, agregue una terminación -ing. Sobrescriba la lista anterior para que ``verbs`` tenga las mismas palabras con ``ing`` al final de cada uno.
               ~~~~
               verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
 
@@ -48,7 +48,7 @@ Exercises
 
            .. actex:: ac8_11_2
 
-              In XYZ University, upper level math classes are numbered 300 and up. Upper level English classes are numbered 200 and up. Upper level Psychology classes are 400 and up. Create two lists, ``upper`` and ``lower``. Assign each course in ``classes`` to the correct list, ``upper`` or ``lower``. HINT: remember, you can convert some strings to different types!
+              En la Universidad XYZ, las clases de matemáticas de nivel superior están numeradas de 300 en adelante. Las clases de inglés de nivel superior están numeradas de 200 en adelante. Las clases de psicología de nivel superior son 400 y más. Cree dos listas, ``upper`` y ``lower``. Asigne cada curso en ``classes`` a la lista correcta, ``upper`` o ``lower``. SUGERENCIA: recuerde, ¡puede convertir algunas cadenas a diferentes tipos!
               ~~~~
               classes = ["MATH 150", "PSYCH 111", "PSYCH 313", "PSYCH 412", "MATH 300", "MATH 404", "MATH 206", "ENG 100", "ENG 103", "ENG 201", "PSYCH 508", "ENG 220", "ENG 125", "ENG 124"]
 
@@ -73,15 +73,15 @@ Exercises
 
            .. actex:: ac8_11_3
 
-              Starting with the list myList = [76, 92.3, 'hello', True, 4, 76], write Python statements to do the following:
+              Comenzando con la lista myList = [76, 92.3, 'hello', True, 4, 76], escriba sentencias de Python para hacer lo siguiente:
    
-              a. Append "apple" and 76 to the list.
-              #. Insert the value "cat" at position 3.
-              #. Insert the value 99 at the start of the list.
-              #. Find the index of "hello".
-              #. Count the number of 76s in the list.
-              #. Remove the first occurrence of 76 from the list.
-              #. Remove True from the list using ``pop`` and ``index``.
+              a. Agregue "apple" y 76 a la lista.
+              #. Inserte el valor "cat" en la posición 3.
+              #. Inserte el valor 99 al inicio de la lista.
+              #. Encuentre el índice de "hello".
+              #. Cuente el número de 76 que hay en la lista.
+              #. Remueva de la lista la primera ocurrencia de 76.
+              #. Remueva True de la lista usando ``pop`` and ``index``.
               ~~~~
               myList = [76, 92.3, 'hello', True, 4, 76]
 
@@ -118,7 +118,7 @@ Exercises
            
            .. activecode:: ac13_5_3
 
-              The module ``keyword`` determines if a string is a keyword. e.g. ``keyword.iskeyword(s)`` where ``s`` is a string will return either ``True`` or ``False``, depending on whether or not the string is a Python keyword. Import the ``keyword`` module and test to see whether each of the words in list ``test`` are keywords. Save the respective answers in a list, ``keyword_test``.
+              El módulo ``keyword`` determina si una cadena es una palabra clave. por ejemplo. ``keyword.iskeyword(s)`` donde ``s`` es una cadena devolverá ``True`` o ``False``, dependiendo de si la cadena es o no una palabra clave de Python. Importe el módulo ``palabra clave`` y pruebe para ver si cada una de las palabras en la lista ``prueba`` son palabras clave. Guarde las respuestas respectivas en una lista, ``keyword_test``.
               ~~~~
 
               test = ["else", "integer", "except", "elif"]
@@ -143,7 +143,7 @@ Exercises
            
            .. activecode:: ac13_5_4
 
-              The ``string`` module provides sequences of various types of Python characters. It has an attribute called ``digits`` that produces the string '0123456789'. Import the module and assign this string to the variable ``nums``. Below, we have provided a list of characters called ``chars``. Using ``nums`` and ``chars``, produce a list called ``is_num`` that consists of tuples. The first element of each tuple should be the character from ``chars``, and the second element should be a Boolean that reflects whether or not it is a Python digit. 
+              El módulo ``cadena`` proporciona secuencias de varios tipos de caracteres Python. Tiene un atributo llamado ``dígitos`` que produce la cadena '0123456789'. Importe el módulo y asigne esta cadena a la variable ``nums``. A continuación, proporcionamos una lista de caracteres llamados ``caracteres``. Usando ``nums`` y ``chars``, produzca una lista llamada ``is_num`` que consta de tuplas. El primer elemento de cada tupla debe ser el carácter de ``caracteres``, y el segundo elemento debe ser un booleano que refleje si es o no un dígito de Python.
               ~~~~
 
               chars = ['h', '1', 'C', 'i', '9', 'True', '3.1', '8', 'F', '4', 'j']
