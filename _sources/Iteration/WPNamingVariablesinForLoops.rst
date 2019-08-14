@@ -12,45 +12,45 @@
 
 .. _naming_variables_in_for_loops:
 
-👩‍💻 Naming Variables in For Loops
-===================================
+👩‍💻 Nombrando Variables en bucles For
+=======================================
 
-We've mentioned before about carefully choosing your variable names. Though the
-names you choose aren't meaningful to the program, they can be to you. When we 
-choose names for variables in for loops, the more understandable they are to us,
-the easier it will be to use them. Here are some tips to make your for loops more 
-readable for yourself and anyone else who may read your programs:
+Hemos mencionado antes acerca de elegir cuidadosamente sus nombres de variables. Aunque el
+los nombres que elija no son significativos para el programa, pueden serlo para usted. Cuando nosotros
+elija nombres para variables en bucles for, cuanto más comprensibles sean para nosotros,
+más fácil será usarlos. Aquí hay algunos consejos para hacer más bucles
+legible para usted y para cualquier otra persona que pueda leer sus programas:
 
-1. Use singular nouns for the iterator variable, which is also called the loop variable (things like "song", "book", "post", "letter", "word").
-2. Use plural nouns for the sequence variable (things like "songs", "books", "posts", "letters", "words").
+1. Use sustantivos singulares para la variable iteradora, que también se llama variable de bucle (cosas como "canción", "libro", "publicación", "letra", "palabra").
+2. Use sustantivos en plural para la variable de secuencia (cosas como "canciones", "libros", "publicaciones", "letras", "palabras").
 
-While these two tips won't always apply, they are general best practices when it 
-comes to choosing variable names. Below we have an example!
+Si bien estos dos consejos no siempre se aplican, son mejores prácticas generales cuando
+viene a elegir nombres de variables. ¡A continuación tenemos un ejemplo!
 
 .. activecode:: ac6_8_1
    :include: ac6_8_3
 
-   # x is a list defined elsewhere
+   # x es una lista definida en alguna parte
 
    for y in x:
        print(y)
 
-Since we can't see the contents of x right now - this might be the case if we have 
-a long program - then these names would make the program hard to understand. Let's 
-compare this to a program that does the same thing, but uses better names.
+Como no podemos ver el contenido de x en este momento, este podría ser el caso si tenemos
+un programa largo, entonces estos nombres harían que el programa sea difícil de entender. Vamos
+a comparar esto con un programa que hace lo mismo, pero usa mejores nombres.
 
 .. activecode:: ac6_8_2
    :include: ac6_8_3
 
-   # genres is a list defined elsewhere
+   # genres es una lista definida en alguna parte
 
    for genre in genres:
        print(genre)
 
-Here what we expect is much more clear, even if we didn't see how genres was initialized!
+¡Aquí lo que esperamos es mucho más claro, incluso si no vemos cómo se inicializaron los géneros!
 
-The code below was used to initialize x and genres so you're free to look at it but you 
-don't need to run it!
+El código a continuación se usó para inicializar x y genres para que pueda verlo pero usted,
+¡no es necesario ejecutarlo!
 
 .. activecode:: ac6_8_3
    :hidecode:
