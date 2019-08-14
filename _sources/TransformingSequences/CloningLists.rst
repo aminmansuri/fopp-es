@@ -11,17 +11,17 @@
    :prefix: seqmut-5-
    :start: 1
 
-Cloning Lists
--------------
+Clonando Listas
+----------------
 
-If we want to modify a list and also keep a copy of the original, we need to be
-able to make a copy of the list itself, not just the reference. This process is
-sometimes called **cloning**, to avoid the ambiguity of the word copy.
+Si queremos modificar una lista y también conservar una copia del original, debemos ser
+capaz de hacer una copia de la lista en sí, no solo la referencia. Este proceso es
+a veces llamado **clonación**, para evitar la ambigüedad de la palabra copia.
 
-The easiest way to clone a list is to use the slice operator.
+La forma más fácil de clonar una lista es usar el operador slice.
 
-Taking any slice of ``a`` creates a new list. In this case the slice happens to
-consist of the whole list.
+Tomar cualquier porción de ``a`` crea una nueva lista. En este caso, el segmento pasa a
+consiste en toda la lista.
 
 .. activecode:: clens8_5_1
 
@@ -36,22 +36,22 @@ consist of the whole list.
     print(a)
     print(b)
 
-Now we are free to make changes to ``b`` without worrying about ``a``.  Again, we can clearly see in 
-codelens that ``a`` and ``b`` are entirely different list objects.
+Ahora somos libres de hacer cambios a ``b`` sin preocuparnos por ``a``. De nuevo, podemos ver claramente en
+codelens que ``a`` y ``b`` son objetos de lista completamente diferentes.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_5_1
    :answer_a: [4,2,8,999,5,4,2,8,6,5]
    :answer_b: [4,2,8,999,5]
    :answer_c: [4,2,8,6,5]
    :correct: c
-   :feedback_a: print alist not print blist
-   :feedback_b: blist is changed, not alist.
-   :feedback_c: Yes, alist was unchanged by the assignment statement. blist was a copy of the references in alist.
+   :feedback_a: imprime alist no imprime blist
+   :feedback_b: ha cambiado blist, no alist.
+   :feedback_c: Sí, alist no fue modificado por la declaración de asignación. blist fue una copia de las referencias en alist.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
