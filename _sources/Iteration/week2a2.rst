@@ -13,10 +13,10 @@
 
 .. Week 2 Assessment 2
 
-Chapter Assessment
-------------------
+Evaluación del capítulo
+------------------------
 
-**Check your understanding**
+**Revisa tu conocimiento**
 
 .. activecode:: assess_ps_02_01
     :language: python
@@ -24,7 +24,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/Stringsandforloops
 
-    Write one for loop to print out each character of the string ``my_str`` on a separate line.
+    Escriba un bucle for para imprimir cada carácter de la cadena ``my_str`` en una línea separada.
     ~~~~
     my_str = "MICHIGAN"
 
@@ -47,7 +47,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/Listsandforloops
 
-    Write one for loop to print out each element of the list ``several_things``. Then, write *another* for loop to print out the TYPE of each element of the list ``several_things``. To complete this problem you should have written two different for loops, each of which iterates over the list ``several_things``, but each of those 2 for loops should have a different result.
+    Escriba un bucle for para imprimir cada elemento de la lista ``several_things``. Luego, escriba *otro* bucle for para imprimir el TIPO de cada elemento de la lista ``varias_cosas``. Para completar este problema, debería haber escrito dos bucles for diferentes, cada uno de los cuales itera sobre la lista ``several_things``, pero cada uno de esos 2 bucles for debería tener un resultado diferente.
     ~~~~
     several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
 
@@ -72,7 +72,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/Listsandforloops
 
-    Write code that uses iteration to print out **the length** of each element of the list stored in ``str_list``.
+    Escriba código que use iteración para imprimir **la longitud** de cada elemento de la lista almacenada en ``str_list``.
     ~~~~
     str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
 
@@ -92,7 +92,7 @@ Chapter Assessment
     :language: python
     :autograde: unittest
 
-    Write a program that uses the turtle module **and** a for loop to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting ``.speed(10)`` for the turtle to draw fast, or ``.speed(0)`` for it to draw super fast with no animation.)
+    Escriba un programa que use el módulo de tortuga **y** un bucle for para dibujar algo. No tiene que ser complicado, pero dibuja algo diferente de lo que hemos hecho en el pasado. (Sugerencia: si está dibujando algo complicado, podría ser tedioso verlo dibujar una y otra vez. Intente configurar ``.speed(10)`` para que la tortuga dibuje rápido, o ``.speed(0)`` para que dibuje súper rápido sin animación).
     ~~~~
     import turtle
 
@@ -105,7 +105,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/TheAccumulatorPattern
 
-    Write code to count the number of characters in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_chars``. Do NOT use the ``len`` function to solve the problem (if you use it while you are working on this problem, comment it out afterward!)
+    Escriba el código para contar el número de caracteres en ``original_str`` usando accumulation pattern y asigne la respuesta a una variable ``num_chars``. NO use la función ``len`` para resolver el problema (si la usa mientras está trabajando en este problema, ¡coméntelo después!)
     ~~~~
     original_str = "The quick brown rhino jumped over the extremely lazy fox."
 
@@ -128,7 +128,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/TraversalandtheforLoopByIndex
 
-    ``addition_str`` is a string with a list of numbers separated by the ``+`` sign. Write code that uses the accumulation pattern to take the sum of all of the numbers and assigns it to ``sum_val`` (an integer). (You should use the ``.split("+")`` function to split by ``"+"`` and ``int()`` to cast to an integer).
+    ``addition_str`` es una cadena con una lista de números separados por el signo ``+``. Escriba código que use accumulation pattern para tomar la suma de todos los números y lo asigna a ``sum_val`` (un número entero). (Debe usar la función ``.split("+")`` para dividir entre ``"+"`` y ``int()`` para convertir a un entero).
 
     ~~~~
     addition_str = "2+5+10+20"
@@ -154,7 +154,7 @@ Chapter Assessment
     :practice: T
     :topics: Iteration/TraversalandtheforLoopByIndex
 
-    ``week_temps_f`` is a string with a list of fahrenheit temperatures separated by the ``,`` sign. Write code that uses the accumulation pattern to compute the **average** (sum divided by number of items) and assigns it to ``avg_temp``. Do not hard code your answer (i.e., make your code compute both the sum or the number of items in ``week_temps_f``) (You should use the ``.split(",")`` function to split by ``","`` and ``float()`` to cast to a float).
+    ``week_temps_f`` es una cadena con una lista de temperaturas Fahrenheit separadas por el signo ``,``. Escriba código que utilice accumulation pattern para calcular el **promedio** (suma dividida por el número de elementos) y lo asigna a ``avg_temp``. No codifique su respuesta (es decir, haga que su código calcule tanto la suma como el número de elementos en ``week_temps_f``) (Debe usar la función ``.split(",")`` para dividir por ``","`` y ``float()`` para convertir el resultado a un float).
 
     ~~~~
     week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
@@ -179,7 +179,7 @@ Chapter Assessment
    :practice: T
    :topics: Iteration/TraversalandtheforLoopByIndex
 
-   Write code to create a list of numbers from 0 to 67 and assign that list to the variable ``nums``. Do not hard code the list.
+   Escriba código para crear una lista de números del 0 al 67 y asigne esa lista a la variable ``nums``. No hagas hard code en la lista.
    ~~~~
 
    =====
