@@ -13,8 +13,8 @@
    :prefix: condition-14-
    :start: 1
 
-Exercises
----------
+Ejercicios
+----------
 
 #.
 
@@ -24,12 +24,12 @@ Exercises
 
             .. actex:: ac7_14_1
 
-               Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
+               Escriba un código que le pida al usuario que ingrese una puntuación numérica (0-100). En respuesta, debe imprimir el puntaje y la calificación de letra correspondiente, de acuerdo con la tabla a continuación.
         
                .. table::
         
                   =======   =====
-                  Score     Grade
+                  Puntaje   Grado
                   =======   =====
                   >= 90     A
                   [80-90)   B
@@ -38,15 +38,15 @@ Exercises
                   < 60      F
                   =======   =====
         
-               The square and round brackets denote closed and open intervals.
-               A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.
+               Los corchetes cuadrados y redondos indican intervalos cerrados y abiertos.
+               Un intervalo cerrado incluye el número, y el intervalo abierto lo excluye. Entonces 79.99999 obtiene el grado C, pero 80 obtiene el grado B.
                ~~~~
            
         .. tab:: Answer
 
             .. activecode:: ans7_14_1
             
-               sc = input("Enter a score from 0 to 100 (decimal points are allowed)")
+               sc = input("Ingrese una puntuación de 0 a 100 (se permiten puntos decimales)")
                fl_sc = float(sc)
                
                if fl_sc < 60:
@@ -60,7 +60,7 @@ Exercises
                else:
                    gr = "A"
                
-               print("Score", fl_sc, "gets a grade of", gr)
+               print("Puntaje", fl_sc, "obtiene una calificación de", gr)
                  
 
 #.
@@ -71,12 +71,12 @@ Exercises
 
            .. actex:: ac7_14_2
 
-               A year is a **leap year** if it is divisible by 4. If the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400. Then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
-    
+               Un año es un **año bisiesto** si es divisible entre 4. Si el año puede dividirse equitativamente entre 100, NO es un año bisiesto, a menos que el año sea **también** divisible por 400. Es un año bisiesto. Escriba un código que le pida al usuario que ingrese un año y genere True si es un año bisiesto o False de lo contrario. Use las declaraciones if.
+
                .. table::
     
                   =======  =====
-                  Year     Leap?
+                  Año      Bisiesto?
                   =======  =====
                   1944     True
                   2011     False
@@ -87,7 +87,7 @@ Exercises
                   2056     True
                   =======  =====
                 
-               Above are some examples of what the output should be for various inputs.
+               Arriba hay algunos ejemplos de cuál debería ser la salida para varias entradas.
                ~~~~
 
 
@@ -100,7 +100,7 @@ Exercises
 
             .. actex:: ac7_14_3
 
-                What do these expressions evaluate to?
+                ¿Qué evalúan estas expresiones?
             
                 #.  ``3 == 3``
                 #.  ``3 != 3``
@@ -125,9 +125,9 @@ Exercises
 
             .. actex:: ac7_14_4
 
-                Give the **logical opposites** of these conditions, meaning an expression that would 
-                produce False whenever this expression produces True, and vice versa.  You are not 
-                allowed to use the ``not`` operator.
+                Dé los **opuestos lógicos** de estas condiciones, lo que significa una expresión va a
+                producir False siempre que esta expresión produzca True, y viceversa. A Usted no
+                se le permite usar el operador ``not``.
 
                 #.  ``a > b``
                 #.  ``a >= b``
@@ -144,7 +144,7 @@ Exercises
             .. actex:: ac7_14_5
                 :nocodelens:
 
-                Provided are the lengths of two sides of a right-angled triangle. Assign the length of the hypotenuse the the variable ``hypo_len``.  (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
+                Se proporcionan las longitudes de dos lados de un triángulo rectángulo. Asigne la longitud de la hipotenusa a la variable ``hypo_len``.  (Sugerencia:  ``x ** 0.5`` devolverá la raíz cuadrada, o usará ``sqrt`` del módulo matemático)
                 ~~~~
 
                 side1 = 3
@@ -170,7 +170,7 @@ Exercises
                :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
-               Provided is a list of numbers. For each of the numbers in the list, determine whether they are even. If the number is even, add ``True`` to a new list called ``is_even``. If the number is odd, then add ``False``.
+               Se proporciona una lista de números. Para cada uno de los números en la lista, determine si son pares. Si el número es par, agregue ``True``  a una nueva lista llamada ``is_even``. Si el número es impar, entonces agregue ``False``.
                ~~~~
                num_lst = [3, 20, -1, 9, 10]
 
@@ -195,7 +195,7 @@ Exercises
                :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
 
-               Provided is a list of numbers. For each of the numbers in the list, determine whether they are odd. If the number is odd, add ``True`` to a new list called ``is_odd``. If the number is even, then add ``False``.
+               Se proporciona una lista de números. Para cada uno de los números en la lista, determine si son impares. Si el número es impar, agregue ``True``  a una nueva lista llamada ``is_odd``. Si el número es par, entonces agregue ``False``.
                ~~~~
                num_lst = [3, 20, -1, 9, 10]
 
@@ -216,16 +216,16 @@ Exercises
 
            .. actex:: ac7_14_8
 
-               Given the lengths of three sides of a triange, determine whether the triangle is right angled. If it is, the assign ``True`` to the variable ``is_rightangled``. If it's not, then assign ``False`` to the variable ``is_rightangled``.
+               Dadas las longitudes de tres lados de un triángulo, determina si el triángulo está en ángulo recto. Si es así, asigne ``True`` a la variable ``is_rightangled``. Si no es así, entonces asigne ``False`` a la variable ``is_rightangled``.
 
-               Hint: floating point arithmetic is not always exactly accurate,
-               so it is not safe to test floating point numbers for equality.
-               If a good programmer wants to know whether
-               ``x`` is equal or close enough to ``y``, they would probably code it up as
+               Sugerencia: la aritmética de coma flotante no siempre es exactamente precisa,
+               por lo tanto, no es seguro probar los números de coma flotante para determinar la igualdad.
+               Si un buen programador quiere saber si
+               ``x`` es igual o lo suficientemente cerca de ``y``, probablemente lo codificarían como
    
                .. sourcecode:: python
    
-                   if  abs(x - y) < 0.001:      # if x is approximately equal to y
+                   if  abs(x - y) < 0.001:      # si x es aproximadamente igual a y
                        ...
 
                ~~~~
@@ -250,14 +250,14 @@ Exercises
 
             .. actex:: ac7_14_9
 
-               Implement the calculator for the date of Easter.
-   
-               The following algorithm computes the date for Easter Sunday for any year between 1900 to 2099.
-   
-               Ask the user to enter a year.
-               Compute the following:
-   
-   
+               Implemente la calculadora para la fecha de Pascua.
+
+               El siguiente algoritmo calcula la fecha del Domingo de Pascua para cualquier año entre 1900 y 2099.
+
+               Solicite al usuario que ingrese un año.
+               Calcule lo siguiente:
+
+
    
                    1. a = year % 19
                    #. b = year % 4
@@ -267,17 +267,17 @@ Exercises
                    #. dateofeaster = 22 + d + e
    
    
-               Special note: The algorithm can give a date in April.  You will know that the date is in April if the calculation gives you an answer greater than 31.  (You'll need to adjust)  Also, if the year is one of four special
-               years (1954, 1981, 2049, or 2076) then subtract 7 from the date.
-   
-               Your program should print an error message if the user provides a date that is out of range.
+               Nota especial: el algoritmo puede dar una fecha en abril. Sabrá que la fecha es en abril si el cálculo le da una respuesta superior a  31.  (Deberá ajustar) Además, si el año es uno de cuatro especiales
+               años (1954, 1981, 2049 o 2076) restan 7 de la fecha.
+
+               Su programa debería imprimir un mensaje de error si el usuario proporciona una fecha que está fuera de rango.
                ~~~~
 
         .. tab:: Answer
 
             .. activecode:: answer_ex_6_13
 
-                year = int(input("Please enter a year"))
+                year = int(input("Por favor ingrese un año"))
                 if year >= 1900 and year <= 2099:
                     a = year % 19
                     b = year % 4
@@ -290,11 +290,11 @@ Exercises
                         dateofeaster = dateofeaster - 7
 
                     if dateofeaster > 31:
-                        print("April", dateofeaster - 31)
+                        print("Abril", dateofeaster - 31)
                     else:
-                        print("March", dateofeaster)
+                        print("Marzo", dateofeaster)
                 else:
-                    print("ERROR...year out of range")
+                    print("ERROR...año fuera de rango")
 
         .. tab:: Discussion
 
@@ -310,15 +310,15 @@ Exercises
 
             .. actex:: ac7_14_10
 
-               Get the user to enter some text and print out True if it's a palindrome, False otherwise. (Hint: reuse
-               some of your code from the last question. The == operator compares two values to see if they are the same)
+               Haga que el usuario ingrese texto e imprima True si es un palíndromo, False de lo contrario. (Sugerencia: reutilizar
+               parte de su código de la última pregunta. El operador == compara dos valores para ver si son iguales)
                ~~~~
 
 #.
 
    .. parsonsprob:: pp7_14_11
 
-      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
+      Escriba un programa que imprima un saludo a cada estudiante en la lista. Esta lista también debe hacer un seguimiento de cuántos estudiantes han sido recibidos y tener en cuenta que cada vez que un nuevo estudiante ha sido recibido. Cuando solo un estudiante ha ingresado, el programa debe decir "¡El primer estudiante ha ingresado!". Después, el programa debería decir "¡Hay {número aquí} estudiantes en el aula!".
       -----
       students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
       =====
@@ -326,28 +326,27 @@ Exercises
       =====
       for student in students:
       =====
-          print("Welcome to class, " + student)
+          print("Bienvenido a clase, " + student)
           num_students += 1
       =====
           if num_students == 1:
-              print("The first student has entered!")
+              print("El primer alumno ha entrado!")
       =====
           elif num_students > 1:
-              print("There are " + str(num_students) + " students in the classroom!")
+              print("Existen " + str(num_students) + " estudiantes en el aula!")
 
 #.
 
    .. parsonsprob:: pp7_14_12
 
-      Piece together a program so that it can successfully print out one print statement, given the value of x.
+      Arme un programa para que pueda imprimir con éxito una declaración de impresión, dado el valor de x.
       -----
       x = 16
       =====
       if x > 10:
       =====
           if x > 20:
-              print("This is a large number!")
+              print("¡Este es un gran número!")
       =====
           else:
-              print("This is a pretty big number.")
-
+              print("Este es un número bastante grande")
