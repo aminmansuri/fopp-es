@@ -10,30 +10,30 @@
    :prefix: iter-7-
    :start: 1
 
-👩‍💻 Keeping Track of Your Iterator Variable and Your Iterable
-===============================================================
+👩‍💻 Realizando un seguimiento de su variable iteradora y su iterable
+======================================================================
 
-When students first begin using for loops, they sometimes have difficulty understanding the difference between the iterator variable (the loop variable) and the iterable.
+Cuando los estudiantes comienzan a usar bucles por primera vez, a veces tienen dificultades para comprender la diferencia entre la variable iteradora (la variable de bucle) y la iterable.
 
-The iterable is the object that you will parsing through in a for loop. Generally, this object does not change while the for loop is being executed.
+El iterable es el objeto que analizará en un bucle for. Generalmente, este objeto no cambia mientras se ejecuta el bucle for.
 
-The iterator (loop) variable is the variable which stores a portion of the iterable when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different portion of the iterable.
+La variable iterador (bucle) es la variable que almacena una parte del iterable cuando se ejecuta el bucle for. Cada vez que el ciclo itera, el valor de la variable iterador cambiará a una porción diferente del iterable.
 
 .. mchoice:: question6_100_1
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Incorrect, that is not the type of the iterable.
-   :feedback_b: Yes, the iterable is n, and it is a list.
-   :feedback_c: Incorrect, that is not the type of the iterable.
-   :feedback_d: Incorrect, that is not the type of the iterable.
-   :feedback_e: Incorrect, Python can iterate over this type.
+   :answer_e: error, incapaz de iterar sobre el objeto.
+   :feedback_a: Incorrecto, ese no es el tipo del iterable.
+   :feedback_b: Sí, el iterable es n, y es una lista.
+   :feedback_c: Incorrecto, ese no es el tipo del iterable.
+   :feedback_d: Incorrecto, ese no es el tipo del iterable.
+   :feedback_e: Incorrecto, Python puede iterar sobre este tipo.
    :correct: b
    :practice: T
 
-   What is the type of your iterable?
+   ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -44,19 +44,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_2
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Yes, the iterable in this example is a string
-   :feedback_b: Incorrect, that is not the type of the iterable.
-   :feedback_c: Incorrect, that is not the type of the iterable.
-   :feedback_d: Incorrect, that is not the type of the iterable.
-   :feedback_e: Incorrect, Python can iterate over this type.
+   :answer_e: error, incapaz de iterar sobre el objeto.
+   :feedback_a: Sí, el iterable en este ejemplo es un string
+   :feedback_b: Incorrecto, ese no es el tipo del iterable.
+   :feedback_c: Incorrecto, ese no es el tipo del iterable.
+   :feedback_d: Incorrecto, ese no es el tipo del iterable.
+   :feedback_e: Incorrecto, Python puede iterar sobre este tipo.
    :correct: a
    :practice: T
 
-   What is the type of your iterable?
+   ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -66,19 +66,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_3
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Incorrect, there are no strings present in the code.
-   :feedback_b: Incorrect, there are no lists present in the code.
-   :feedback_c: Incorrect, there are no tuples in the code.
-   :feedback_d: Incorrect, there are no iterable objects in the code.
-   :feedback_e: Yes, Python is unable to iterate over integers and floats.
+   :answer_e: error, incapaz de iterar sobre el objeto.
+   :feedback_a: Incorrecto, no hay strings presentes en el código.
+   :feedback_b: Incorrecto, no hay listas presentes en el código.
+   :feedback_c: Incorrecto, no hay tuplas presentes en el código.
+   :feedback_d: Incorrecto, no hay objetos iterables en el código.
+   :feedback_e: Yes, Python es incapaz de iterar sobre integers y floats.
    :correct: e
    :practice: T
 
-   What is the type of your iterable?
+    ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -89,19 +89,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_4
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Incorrect, the iterable is not a string.
-   :feedback_b: Incorrect, there is no list in the code.
-   :feedback_c: Yes, the iterable in this situation is a tuple.
-   :feedback_d: Incorrect, that is not the best answer for this problem.
-   :feedback_e: Incorrect, Python can iterate over this type.
+   :answer_e: error, incapaz de iterar sobre el objeto.
+   :feedback_a: Incorrecto, el iterable no es un string.
+   :feedback_b: Incorrecto, no hay una lista en el código.
+   :feedback_c: Sí, el iterable en esta situación es una tupla.
+   :feedback_d: Incorrecto, esa no es la mejor respuesta para este problema.
+   :feedback_e: Incorrecto, Python puede iterar sobre este tipo.
    :correct: c
    :practice: T
 
-   What is the type of your iterable?
+   ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -112,19 +112,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_5
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: iterable
-   :answer_e: error, unable to iterate over the object.
-   :feedback_a: Correct! The iterable is a string.
-   :feedback_b: Incorrect, there is no list in the code.
-   :feedback_c: Incorrect, the iterable is not a tuple.
-   :feedback_d: Incorrect, that is not the best answer for this problem.
-   :feedback_e: Incorrect, Python can iterate over this type.
+   :answer_e: error, incapaz de iterar sobre el objeto.
+   :feedback_a: ¡Correcto! El iterable es un string.
+   :feedback_b: Incorrecto, no hay una lista en el código
+   :feedback_c: Incorrecto, el iterable no es una tupla.
+   :feedback_d: Incorrecto, esa no es la mejor respuesta para este problema.
+   :feedback_e: Incorrecto, Python puede iterar sobre este tipo.
    :correct: a
    :practice: T
 
-   What is the type of your iterable?
+   ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -136,19 +136,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_6
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: integer
-   :answer_e: error, unable to iterate and initialize the iterator variable
-   :feedback_a: Correct! Every item in the iterator variable will be a string.
-   :feedback_b: Incorrect, that is not the type of the iterator variable.
-   :feedback_c: Incorrect, that is not the type of the iterator variable.
-   :feedback_d: Incorrect, that is not the type of the iterator variable.
-   :feedback_e: Incorrect, the for loop is iterating over an iterable object.
+   :answer_e: error, incapaz de iterar e inicializar la variable iteradora
+   :feedback_a: ¡Correcto! Cada elemento en la variable iteradora será una cadena.
+   :feedback_b: Incorrecto, ese no es el tipo de la variable iteradora.
+   :feedback_c: Incorrecto, ese no es el tipo de la variable iteradora.
+   :feedback_d: Incorrecto, ese no es el tipo de la variable iteradora.
+   :feedback_e: Incorrecto, el bucle for está iterando sobre un objeto iterable.
    :correct: a
    :practice: T
 
-   What’s the type of your iterator variable? 
+   ¿Cuál es el tipo del iterable?
 
    .. sourcecode:: python
 
@@ -159,19 +159,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_7
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: integer
-   :answer_e: error, unable to iterate and initialize the iterator variable
-   :feedback_a: Incorrect, think about what the for loop will look at first.
-   :feedback_b: Incorrect, that is the type of the iterable, not the iterator variable.
-   :feedback_c: Incorrect, there is no tuple in the code.
-   :feedback_d: Yes, the first item in t is an integer.
-   :feedback_e: Incorrect, the for loop is iterating over an iterable object.
+   :answer_e: error, incapaz de iterar e inicializar la variable iteradora
+   :feedback_a: Incorrecto, Piense primero en cómo se verá el bucle for.
+   :feedback_b: Incorrecto, ese es el tipo del iterable, no de la variable iteradora.
+   :feedback_c: Incorrecto, no hay una tupla en el código.
+   :feedback_d: Sí, el primer elemento en t es un número entero.
+   :feedback_e: Incorrecto, el bucle for está iterando sobre un objeto iterable.
    :correct: d
    :practice: T
 
-   What’s the type of your iterator variable in the first iteration? 
+   ¿Cuál es el tipo de la variable iteradora en la primera iteración?
 
    .. sourcecode:: python
 
@@ -182,19 +182,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_8
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: integer
-   :answer_e: error, unable to iterate and initialize the iterator variable
-   :feedback_a: Yes, the second item in t is a string.
-   :feedback_b: Incorrect, that is the type of the iterable, not the iterator variable.
-   :feedback_c: Incorrect, there is no tuple in the code.
-   :feedback_d: Incorrect, think about what the for loop will look at during the second iteration.
-   :feedback_e: Incorrect, the for loop is iterating over an iterable object.
+   :answer_e: error, incapaz de iterar e inicializar la variable iteradora
+   :feedback_a: Sí, el segundo elemento en t es una cadena.
+   :feedback_b: Incorrecto, ese es el tipo del iterable, no de la variable iteradora.
+   :feedback_c: Incorrecto, no hay una tupla en el código.
+   :feedback_d: Incorrecto, piense en cómo se verá el ciclo for durante la segunda iteración.
+   :feedback_e: Incorrecto, el bucle for está iterando sobre un objeto iterable.
    :correct: a
    :practice: T
 
-   What’s the type of your iterator variable in the second iteration? 
+   ¿Cuál es el tipo de la variable iteradora en la segunda iteración?
 
    .. sourcecode:: python
 
@@ -204,19 +204,19 @@ The iterator (loop) variable is the variable which stores a portion of the itera
 
 .. mchoice:: question6_100_9
    :answer_a: string
-   :answer_b: list
-   :answer_c: tuple
+   :answer_b: lista
+   :answer_c: tupla
    :answer_d: integer
-   :answer_e: error, unable to iterate and initialize the iterator variable
-   :feedback_a: Yes, the last value stored in the iterator variable is a string.
-   :feedback_b: Incorrect, there is no list in the code.
-   :feedback_c: Incorrect, there is no tuple in the code.
-   :feedback_d: Incorrect, there is no integer in the code.
-   :feedback_e: Incorrect, the for loop is iterating over an iterable object.
+   :answer_e: error, incapaz de iterar e inicializar la variable iteradora
+   :feedback_a: Sí, el último valor almacenado en la variable iterador es una cadena.
+   :feedback_b: Incorrecto, no hay una lista en el código.
+   :feedback_c: Incorrecto, no hay una tupla en el código.
+   :feedback_d: Incorrecto, no hay un integer en el código.
+   :feedback_e: Incorrecto, el bucle for está iterando sobre un objeto iterable.
    :correct: a
    :practice: T
 
-   What’s the type of your iterator variable in the final iteration? 
+   ¿Cuál es el tipo de la variable iteradora en la iteración final?
 
    .. sourcecode:: python
 
@@ -224,11 +224,11 @@ The iterator (loop) variable is the variable which stores a portion of the itera
        for blue in red:
            print(blue)
 
-As you go through the codelens window, you will be asked a set of questions.
+A medida que avanza por la ventana de codelens, se le harán una serie de preguntas.
 
 .. codelens:: clensQuestion6_100_10
-   :question: What is the value of the iterator variable after line 3 executes?
-   :feedback: The value of the iterator variable is changed inside of the for loop.
+   :question: ¿Cuál es el valor de la variable iteradora después de que se ejecuta la línea 3?
+   :feedback: El valor de la variable iteradora se cambia dentro del ciclo for.
    :breakline: 3
    :correct: globals.val
 
@@ -237,8 +237,8 @@ As you go through the codelens window, you will be asked a set of questions.
        val = val + "!"
 
 .. codelens:: clensQuestion6_100_11
-   :question: What is the value of the iterator variable after line 2 executes?
-   :feedback: Remember that the value of the iterator variable changes each time.
+   :question: ¿Cuál es el valor de la variable iteradora después de que se ejecuta la línea 2?
+   :feedback: Recuerde que el valor de la variable iteradora cambia cada vez.
    :breakline: 2
    :correct: globals.n
 
