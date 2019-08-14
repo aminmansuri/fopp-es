@@ -11,13 +11,13 @@
    :prefix: seqmut-7-
    :start: 1
 
-Append versus Concatenate
--------------------------
+Append versus Concatenación
+----------------------------
 
-The ``append`` method adds a new item to the end of a list. It is also possible to add a new item to the end of a list 
-by using the concatenation operator. However, you need to be careful.
+El método ``agregar`` agrega un nuevo elemento al final de una lista. También es posible agregar un nuevo elemento al final de una lista
+mediante el uso del operador de concatenación. Sin embargo, debes tener cuidado.
 
-Consider the following example. The original list has 3 integers. We want to add the word "cat" to the end of the list.
+Considere el siguiente ejemplo. La lista original tiene 3 enteros. Queremos agregar la palabra "gato" al final de la lista.
 
 .. activecode:: clens8_7_1
 
@@ -25,13 +25,13 @@ Consider the following example. The original list has 3 integers. We want to add
 
     origlist.append("cat")
 
-Here we have used ``append`` which simply modifies the list. In order to use concatenation, we need to 
-write an assignment statement that uses the accumulator pattern::
+Aquí hemos usado ``append`` que simplemente modifica la lista. Para usar la concatenación, necesitamos
+escribir una declaración de asignación que use accumulator pattern::
 
     origlist = origlist + ["cat"]
 
-Note that the word "cat" needs to be placed in a list since the concatenation operator needs two lists 
-to do its work.
+Tenga en cuenta que la palabra "gato" debe colocarse en una lista ya que el operador de concatenación necesita dos listas
+para hacer su trabajo
 
 .. codelens:: clens8_7_2
     :python: py3
@@ -40,11 +40,11 @@ to do its work.
 
     origlist = origlist + ["cat"]
 
-It is also important to realize that with append, the original list is simply modified. On the other hand, 
-with concatenation, an entirely new list is created.  This can be seen in the following codelens example 
-where``newlist`` refers to a list which is a copy of the original list, ``origlist``, with the new item 
-"cat" added to the end.  ``origlist`` still contains the three values it did before the concatenation. 
-This is why the assignment operation is necessary as part of the accumulator pattern.
+También es importante darse cuenta de que con append, la lista original simplemente se modifica. Por otra parte,
+con concatenación, se crea una lista completamente nueva. Esto se puede ver en el siguiente ejemplo de codelens
+donde ``nueva lista`` se refiere a una lista que es una copia de la lista original, ``origlist``, con el nuevo elemento
+"gato" añadido al final. ``origlist`` todavía contiene los tres valores que tenía antes de la concatenación.
+Es por eso que la operación de asignación es necesaria como parte del patrón del acumulador.
 
 .. codelens:: clens8_7_3
     :python: py3
@@ -53,11 +53,11 @@ This is why the assignment operation is necessary as part of the accumulator pat
 
     newlist = origlist + ["cat"]
 
-This might be difficult to understand since these two lists appear to be the same. In Python, every object 
-has a unique identification tag. Likewise, there is a built-in function that can be called on any object to return 
-its unique id. The function is appropriately called ``id`` and takes a single parameter, the object that you are 
-interested in knowing about. You can see in the example below that a real id is usually a very large integer value 
-(corresponding to an address in memory). In the textbook though the number will likely be smaller.
+Esto puede ser difícil de entender ya que estas dos listas parecen ser las mismas. En Python, cada objeto
+tiene una etiqueta de identificación única. Del mismo modo, hay una función incorporada que se puede invocar en cualquier objeto para devolver
+su id única La función se llama apropiadamente ``id`` y toma un solo parámetro, el objeto que te interesa conocer.
+Puede ver en el siguiente ejemplo que una identificación real suele ser un valor entero muy grande
+(correspondiente a una dirección en la memoria). Aunque en el libro de texto, el número probablemente será menor.
 
 .. sourcecode:: python
 
@@ -70,17 +70,17 @@ interested in knowing about. You can see in the example below that a real id is 
 
     origlist = [45,32,88]
     print("origlist:", origlist)
-    print("the identifier:", id(origlist))             #id of the list before changes
+    print("the identifier:", id(origlist))             #id de la lista antes de los cambios
     newlist = origlist + ['cat'] 
     print("newlist:", newlist)   
-    print("the identifier:", id(newlist))              #id of the list after concatentation
+    print("the identifier:", id(newlist))              #id de la listadespués de la concatenación
     origlist.append('cat')
     print("origlist:", origlist)
-    print("the identifier:", id(origlist))             #id of the list after append is used
+    print("the identifier:", id(origlist))             #id de la lista después de que append es usado
 
-Note how even though ``newlist`` and ``origlist`` appear the same, they have different identifiers.
+Tenga en cuenta que, aunque ``newlist`` y ``origlist`` parecen iguales, tienen identificadores diferentes.
 
-We have previously described `x += 1` as a shorthand for `x = x + 1`. With lists, `+=` is actually a little different. In particular, `origlist += ["cat"] appends "cat" to the end of the original list object. If there is another alias for `origlist`, this can make a difference, as in the code below. See if you can follow (or, better yet, predict, changes in the reference diagram).
+Anteriormente hemos descrito `x += 1` como una abreviatura de `x = x + 1`. Con las listas, `+=` es en realidad un poco diferente. En particular, `origlist += ["cat"] agrega "cat" al final del objeto de lista original. Si hay otro alias para `origlist`, esto puede marcar la diferencia, como en el siguiente código. Vea si puede seguir (o, mejor aún, predecir cambios en el diagrama de referencia).
 
 .. codelens:: clens8_7_2a
     :python: py3
@@ -91,14 +91,14 @@ We have previously described `x += 1` as a shorthand for `x = x + 1`. With lists
     origlist = origlist + ["cow"]
 
 
-We can use append or concatenate repeatedly to create new objects. If we had a string and wanted to make a new list, where each element in the list is a character in the string, where do you think you should start? In both cases, you'll need to first create a variable to store the new object.
+Podemos usar append o concatenar repetidamente para crear nuevos objetos. Si tuviéramos una cadena y quisiéramos hacer una nueva lista, donde cada elemento de la lista es un carácter en la cadena, ¿dónde cree que debería comenzar? En ambos casos, primero deberá crear una variable para almacenar el nuevo objeto.
 
 .. activecode:: ac8_72
 
     st = "Warmth"
     a = []
 
-Then, character by character, you can add to the empty list. The process looks different if you concatentate as compared to using append.
+Luego, carácter por carácter, puede agregar a la lista vacía. El proceso se ve diferente si concatena en comparación con el uso de append.
 
 .. activecode:: ac8_7_3
 
@@ -124,20 +124,20 @@ Then, character by character, you can add to the empty list. The process looks d
     a.append(st[5])
     print(a)
 
-This might become tedious though, and difficult if the length of the string is long. 
-Can you think of a better way to do this?
+Sin embargo, esto puede volverse tedioso y difícil si la longitud de la cadena es larga.
+¿Puedes pensar en una mejor manera de hacer esto?
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_7_1
    :answer_a: [4,2,8,6,5,999]
-   :answer_b: Error, you cannot concatenate a list with an integer.
+   :answer_b: Error, no puede concatenar una lista con un número entero.
    :correct: b
-   :feedback_a: You cannot concatenate a list with an integer.
-   :feedback_b: Yes, in order to perform concatenation you would need to write alist+[999].  You must have two lists.
+   :feedback_a: No puede concatenar una lista con un número entero.
+   :feedback_b: Sí, para realizar la concatenación necesitaría escribir una lista+[999]. Debes tener dos listas.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
