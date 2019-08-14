@@ -15,11 +15,11 @@
    single: [ : ]; string slice
    slice; string
 
-The Slice Operator
+El Operador Slice
 ------------------
 
-A substring of a string is called a **slice**. Selecting a slice is similar to
-selecting a character:
+Una subcadena de una cadena se llama **slice**. Seleccionar un sector es similar a
+seleccionar un caracter:
 
 .. activecode:: ac5_6_1
     
@@ -29,14 +29,14 @@ selecting a character:
     print(singers[17:21])
     
 
-The ``slice`` operator ``[n:m]`` returns the part of the string starting
-with the character at index n and
-go up to but *not including* the character at index m. 
-Or with normal counting from 1, this is the (n+1)st character up to and including the mth character.
+El operador ``slice`` ``[n:m]`` devuelve la parte de la cadena que comienza
+con el carácter en el índice ny
+para arribar, pero *sin incluir* el carácter en el índice m.
+O con un conteo normal desde 1, este es el carácter (n+1) hasta e incluir el carácter enésimo.
 
-If you omit the first index (before the colon), the slice starts at the
-beginning of the string. If you omit the second index, the slice goes to the
-end of the string.
+Si omite el primer índice (antes de los dos puntos), el corte comienza en el
+comienzo del string. Si omite el segundo índice, el segmento va al
+fin del string.
 
 .. activecode:: ac5_6_2
     
@@ -44,15 +44,15 @@ end of the string.
     print(fruit[:3])
     print(fruit[3:])
 
-What do you think ``fruit[:]`` means?
+¿Qué crees que significa ``fruit[:]``?
 
 List Slices
 ===========
 
-The slice operation we saw with strings also work on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
-that if you omit the first index (before the colon), the slice starts at the
-beginning of the sequence. If you omit the second index, the slice goes to the
-end of the sequence.
+La operación slice que vimos con strings también funciona en listas. Recuerde que el primer índice es el punto de partida para el segmento y el segundo número es un índice más allá del final del segmento (hasta pero sin incluir ese elemento). Recordemos también
+que si omite el primer índice (antes de los dos puntos), el corte comienza en el
+comienzo de la secuencia. Si omite el segundo índice, el segmento va al
+fin de la secuencia.
 
 .. activecode:: ac5_6_3
     
@@ -66,10 +66,10 @@ end of the sequence.
 Tuple Slices
 ============
 
-We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information. 
-Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can 
-slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might 
-want to change her tuple. We can easily slice off the parts we want and concatenate them with the new tuple.
+No podemos modificar los elementos de un tuple, pero podemos hacer que una variable haga referencia a un nuevo tuple que contenga información diferente.
+Afortunadamente, también podemos usar la operación de corte en tuples, así como strings y lists. Para construir el nuevo tuple, podemos aplicar
+slice en partes del antiguo tuple y unir los pedazos para hacer el nuevo tuple. Entonces ``julia`` tiene una nueva película reciente, y podríamos
+querer cambiar su tuple. Podemos cortar fácilmente las partes que queremos y concatenarlas con el nuevo tuple.
 
 .. activecode:: ac5_6_4
 
@@ -84,21 +84,21 @@ want to change her tuple. We can easily slice off the parts we want and concaten
 
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question5_6_1
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
-   :answer_d: Error, you cannot have two numbers inside the [ ].
+   :answer_d: Error, no puedes tener dos números dentro de [ ].
    :correct: c
-   :feedback_a: That would be s[0:6].
-   :feedback_b: That would be s[7:].
-   :feedback_c: Yes, start with the character at index 3 and go up to but not include the character at index 8.
-   :feedback_d: This is called slicing, not indexing. It requires a start and an end.
+   :feedback_a: Eso sería s[0:6].
+   :feedback_b: Eso sería be s[7:].
+   :feedback_c: Sí, comienza con el carácter en el índice 3 y sube pero no incluye el carácter en el índice 8.
+   :feedback_d: Esto se llama sciling *rebanar*, no indexar. Requiere un comienzo y un final.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
@@ -110,12 +110,12 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :answer_b: [ [ ], 3.14]
    :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
    :correct: a
-   :feedback_a: Yes, the slice starts at index 4 and goes up to and including the last item.
-   :feedback_b: By leaving out the upper bound on the slice, we go up to and including the last item.
-   :feedback_c: Index values start at 0.
+   :feedback_a: Sí, el segmento comienza en el índice 4 y sube e incluye el último elemento.
+   :feedback_b: Al omitir el límite superior en el segmento, subimos e incluimos el último elemento.
+   :feedback_c: Los valores del índice comienzan en 0.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -127,7 +127,7 @@ want to change her tuple. We can easily slice off the parts we want and concaten
    :autograde: unittest
    :practice: T
 
-   Create a new list using the 9th through 12th elements (four items in all) of ``new_lst`` and assign it to the variable ``sub_lst``.
+   Cree una nueva lista utilizando los elementos noveno a duodécimo (cuatro elementos en total) de ``new_lst`` y asígnela a la variable ``sub_lst``.
    ~~~~
    new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
 
