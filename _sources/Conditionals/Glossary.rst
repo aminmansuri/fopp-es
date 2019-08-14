@@ -11,40 +11,40 @@
    :prefix: condition-12-
    :start: 1
 
-Glossary
+Glosario
 --------
 
 .. glossary::
 
-    block
-        A group of consecutive statements with the same indentation.
+    bloque
+        Un grupo de declaraciones consecutivas con la misma sangría.
 
-    body
-        The block of statements in a compound statement that follows the
-        header.
+    cuerpo
+        El bloque de declaraciones en una declaración compuesta que sigue al
+        encabezamiento.
 
-    branch
-        One of the possible paths of the flow of execution determined by
-        conditional execution.
+    rama
+        Uno de los posibles caminos del flujo de ejecución determinado por
+        ejecución condicional
 
-    chained conditional
-        A conditional branch with more than two possible flows of execution. In
-        Python chained conditionals are written with ``if ... elif ... else``
-        statements.
+    condicional encadenado
+        Una rama condicional con más de dos posibles flujos de ejecución. En
+        Los condicionales encadenados de Python se escriben con ``if ... elif ... else``
+        en las declaraciones.
 
-    comparison operator
-        One of the operators that compares two values: ``==``, ``!=``, ``>``,
-        ``<``, ``>=``, and ``<=``.
+    operador de comparación
+        Uno de los operadores que compara dos valores: ``==``, ``!=``, ``>``,
+        ``<``, ``>=`` y ``<=``.
 
-    condition
-        The boolean expression in a conditional statement that determines which
-        branch is executed.
+    condición
+        La expresión boolean en una declaración condicional que determina qué
+        se ejecuta en la rama.
 
-    conditional statement
-        A statement that controls the flow of execution depending on some
-        condition. In Python the keywords ``if``, ``elif``, and ``else`` are
-        used for conditional statements.
+    sentencia condicional
+        Una declaración que controla el flujo de ejecución dependiendo de alguna
+        condición. En Python, las palabras clave ``if``, ``elif`` y ``else`` son
+        usados para declaraciones condicionales.
 
-    nesting
-        One program structure within another, such as a conditional statement
-        inside a branch of another conditional statement.
+    anidamiento
+        Una estructura de programa dentro de otra, como una declaración condicional
+        dentro de una rama de otra declaración condicional.
