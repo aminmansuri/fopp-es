@@ -11,76 +11,76 @@
    :prefix: sequences-2-
    :start: 1
 
-Strings and Lists
+Strings y Listas
 =================
 
-Throughout the first chapters of this book we have used strings to represent words or phrases that we
-wanted to print out. Our definition was simple: a string is simply some characters inside quotes.  
-In this chapter we explore strings in much more detail.
+A lo largo de los primeros capítulos de este libro, hemos utilizado cadenas para representar palabras o frases que
+queriamos imprimir. Nuestra definición era simple: un string es simplemente algunos caracteres entre comillas.
+En este capítulo exploramos los strings *cadenas de caracteres* con mucho más detalle.
 
-Additionally, we explore lists, which are very much like strings but can hold different types.
+Además, exploraremos las listas, que son muy parecidas a strings pero que pueden contener diferentes tiposde datos.
 
 Strings
 -------
 
-Strings can be defined as sequential collections of characters.  This means that the individual 
-characters that make up a string are in a particular order from left to right.
+Los strings se pueden definir como colecciones secuenciales de caracteres. Esto significa que los caracteres
+individuales que forman un sting están en un orden particular de izquierda a derecha.
 
-A string that contains no characters, often referred to as the **empty string**, is still considered 
-to be a string. It is simply a sequence of zero characters and is represented by '' or "" (two single 
-or two double quotes with nothing in between).
+Un string que no contiene caracteres, a menudo denominada **string vacío**, todavía se considera
+ser un string. Es simplemente una secuencia de cero caracteres y está representado por '' or "" (dos comillas simples
+o dos comillas dobles sin nada en el medio).
 
 Lists
 -----
 
-A **list** is a sequential collection of Python data values, where each value is identified by an
-index. The values that make up a list are called its **elements**. Lists are similar to strings, which 
-are ordered collections of characters, except that the elements of a list can have any type and for 
-any one list, the items can be of different types.
+Una **list** es una colección secuencial de valores de datos de Python, donde cada valor se identifica mediante un
+índice. Los valores que forman una lista se llaman sus **elementos**. Las listas son similares a las cadenas, que
+son colecciones ordenadas de caracteres, excepto que los elementos de una lista pueden tener cualquier tipo y para
+cualquier lista, los artículos pueden ser de diferentes tipos.
 
-There are several ways to create a new list.  The simplest is to enclose the
-elements in square brackets ( ``[`` and ``]``).
+Hay varias formas de crear una nueva lista. Lo más simple es encerrar el
+elementos entre corchetes ( ``[`` y ``]``)..
 
 .. sourcecode:: python
     
     [10, 20, 30, 40]
     ["spam", "bungee", "swallow"]
 
-The first example is a list of four integers. The second is a list of three
-strings. As we said above, the elements of a list don't have to be the same type.  The following
-list contains a string, a float, an integer, and
-another list.
+El primer ejemplo es una lista de cuatro enteros. El segundo es una lista de tres
+instrumentos de cuerda. Como dijimos anteriormente, los elementos de una lista no tienen que ser del mismo tipo. El seguimiento
+La lista contiene una cadena, un flotador, un entero y
+otra lista
 
 .. sourcecode:: python
     
     ["hello", 2.0, 5, [10, 20]]
 
 
-.. note:: WP: Don't Mix Types!
+.. note:: WP: ¡No mezcles tipos!
 
-    You'll likely see us do this in the textbook to give you odd combinations, but when you create lists you
-    should generally not mix types together. A list of just strings or just integers or just floats is generally 
-    easier to deal with.
+    Es probable que nos veas hacer esto en el libro de texto para darte combinaciones extrañas, pero cuando creas listas
+    en general, no debe mezclar tipos juntos. Una lista de cadenas simples o enteros o flotantes es generalmente
+    más fácil de tratar.
 
 Tuples
 ------
 
-A **tuple**, like a list, is a sequence of items of any type. The printed representation of a tuple is a comma-separated 
-sequence of values, enclosed in parentheses. In other words, the representation is just like lists, except with 
-parentheses () instead of square brackets [].
+Un **tuple**, es como una lista, es una secuencia de elementos de cualquier tipo. La representación impresa de una tupla es una coma que separa
+secuencia de valores, entre paréntesis. En otras palabras, la representación es como listas, excepto con
+paréntesis () en lugar de corchetes [].
 
-One way to create a tuple is to write an expression, enclosed in parentheses,
-that consists of multiple other expressions, separated by commas.
+Una forma de crear una tupla es escribir una expresión, entre paréntesis,
+que consiste en varias otras expresiones, separadas por comas.
 
 .. sourcecode:: python
 
     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
 
-The key difference between lists and tuples is that a tuple is immutable, meaning that its contents can't be changed after the tuple is 
-created. We will examine the mutability of lists in detail in the chapter on :ref:`Mutability <mutability>`.
+La diferencia clave entre listas y tuplas es que una tupla es inmutable, lo que significa que su contenido no se puede cambiar después de que la tupla es
+creada. Examinaremos la mutabilidad de las listas en detalle en el capítulo sobre:ref:`Mutabilidad <mutabilidad>`.
 
-To create a tuple with a single element (but you're probably not likely to do that too often), we have to include the 
-final comma, because without the final comma, Python treats the ``(5)`` below as an integer in parentheses:
+Para crear una tupla con un solo elemento (pero es probable que no lo hagas con demasiada frecuencia), tenemos que incluir la
+coma final, porque sin la coma final, Python trata el ``(5)`` a continuación como un número entero entre paréntesis:
 
 .. activecode:: ac5_2_1
 
@@ -91,14 +91,14 @@ final comma, because without the final comma, Python treats the ``(5)`` below as
     print(type(x))
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question5_2_1 
-   :answer_a: False
-   :answer_b: True
+   :answer_a: Falso
+   :answer_b: Verdadero
    :correct: a
-   :feedback_a: Yes, unlike strings, lists can consist of any type of Python data.
-   :feedback_b: Lists are heterogeneous, meaning they can have different types of data.
+   :feedback_a: Sí, a diferencia de los strings, las listas pueden consistir en cualquier tipo de datos en Python.
+   :feedback_b: Las listas son heterogéneas, lo que significa que pueden tener diferentes tipos de datos.
    :practice: T
 
-   A list can contain only integer items.
+   Una lista solo puede contener elementos enteros.
