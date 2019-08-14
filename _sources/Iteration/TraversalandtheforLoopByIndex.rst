@@ -13,26 +13,26 @@
    :prefix: moreiter-6-
    :start: 1
 
-Traversal and the ``for`` Loop: By Index
-----------------------------------------
+Recorrido y bucle ``for``: Por índice
+--------------------------------------
 
-It is also possible to iterate through the *indexes* of a string or sequence. The ``for`` loop can then be used to 
-iterate over these positions. These positions can be used together with the indexing operator to access the individual
-characters in the string. We can use **Enumerate**, a built-in Python function, to make this process easier because it 
-allows us to loop through something and have an automatic counter.
+También es posible iterar a través de los *índices* de una cadena o secuencia. El bucle ``for`` puede usarse para
+iterar sobre estas posiciones. Estas posiciones se pueden usar junto con el operador de indexación para acceder al individuo
+caracteres en la cadena. Podemos usar **Enumerate**, una función incorporada de Python, para facilitar este proceso porque
+nos permite recorrer algo y tener un contador automático.
 
 .. activecode:: ac14_6_1
  
    for counter, item in enumerate(['apple', 'pear', 'apricot', 'cherry', 'peach']):
        print(counter, item)
 
-By using the enumerate function, we can print out a counter that tells us the position of an item in a list. We could do 
-this ourselves, but this saves us from having to do that. The index positions in the list are 0, 1 , 2, 3, and 4. This is 
-exactly the same sequence of integers that are stored in ``counter`` each time the loop is iterated. The first time through the for 
-loop, ``counter`` will be 0 and "apple" will be printed. Then, ``counter`` will be reassigned to 1 and "pear" will be displayed. This will 
-continue until the list has ended, so that the final value for ``counter`` will be 4 and the final value of ``item`` will be "peach". 
+Al usar la función de enumerar, podemos imprimir un contador que nos indica la posición de un elemento en una lista. Podríamos hacer
+esto nosotros mismos, pero esto nos salva de tener que hacer eso. Las posiciones de índice en la lista son 0, 1, 2, 3 y 4. Esto es
+exactamente la misma secuencia de enteros que se almacenan en ``contador`` cada vez que se itera el ciclo. La primera vez a través del
+bucle, ``counter`` será 0 y se imprimirá "apple". Luego, ``contador`` se reasignará a 1 y se mostrará "pera". Esto continuará
+hasta que la lista haya finalizado, de modo que el valor final para ``contador`` sea 4 y el valor final de ``elemento`` sea "durazno".
 
-Conveniently, we can also use the ``range`` function to automatically generate the indices of the characters. 
+Convenientemente, también podemos usar la función ``range`` para generar automáticamente los índices de los caracteres.
 
 .. activecode:: ac14_6_4
 
@@ -40,9 +40,9 @@ Conveniently, we can also use the ``range`` function to automatically generate t
    print(type(x))
    print(x)
 
-In order to make the iteration more general, we can use the ``len`` function to provide the bound for ``range``. This is 
-a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves 
-correctly when using ``len`` of the string as its parameter value.
+Para que la iteración sea más general, podemos usar la función ``len`` para proporcionar el límite de ``range``. Esto es
+Un patrón muy común para atravesar cualquier secuencia por posición. Asegúrese de entender por qué se comporta la función de rango
+correctamente cuando se usa ``len`` de la cadena como su valor de parámetro.
 
 .. activecode:: ac14_6_5
 
@@ -50,8 +50,8 @@ correctly when using ``len`` of the string as its parameter value.
    for n in range(len(fruit)):
        print(n, fruit[n])
 
-You may also note that iteration by position allows the programmer to control the direction of the traversal by changing 
-the sequence of index values.
+También puede notar que la iteración por posición le permite al programador controlar la dirección del recorrido cambiando
+La secuencia de valores de índice.
 
 .. codelens:: clens14_6_2
     :python: py3
@@ -60,7 +60,7 @@ the sequence of index values.
     for idx in [0, 2, 4, 3, 1]:
         print(fruit[idx])
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question14_6_1
    :answer_a: 0
@@ -69,14 +69,14 @@ the sequence of index values.
    :answer_d: 3
    :answer_e: 6
    :correct: d
-   :feedback_a: idx % 2 is 0 whenever idx is even
-   :feedback_b: idx % 2 is 0 whenever idx is even
-   :feedback_c: idx % 2 is 0 whenever idx is even
-   :feedback_d: idx % 2 is 0 whenever idx is even
-   :feedback_e: idx % 2 is 0 whenever idx is even
+   :feedback_a: idx % 2 is 0 siempre que idx sea par
+   :feedback_b: idx % 2 is 0 siempre que idx sea par
+   :feedback_c: idx % 2 is 0 siempre que idx sea par
+   :feedback_d: idx % 2 is 0 siempre que idx sea par
+   :feedback_e: idx % 2 is 0 siempre que idx sea par
    :practice: T
 
-   How many times is the letter p printed by the following statements?
+   ¿Cuántas veces se imprime la letra p en las siguientes afirmaciones?
    
    .. code-block:: python
 
