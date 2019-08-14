@@ -15,38 +15,38 @@
    single: chained conditional
    single: conditional; chained
 
-Chained conditionals
---------------------
+Condicionales anidados
+----------------------
 
-Python provides an alternative way to write nested selection such as the one shown in the previous section.
-This is sometimes referred to as a **chained conditional**.
+Python proporciona una forma alternativa de escribir una sección anidada, como la que se muestra en la sección anterior.
+Esto a veces se conoce como **condicional anidado**.
 
 .. sourcecode:: python
 
     if x < y:
-        print("x is less than y")
+        print("x es menor que y")
     elif x > y:
-        print("x is greater than y")
+        print("x es mayor que y")
     else:
-        print("x and y must be equal")
+        print("x e y son iguales")
 
-The flow of control can be drawn in a different orientation but the resulting pattern is identical to the one shown above.
+El flujo de control se puede dibujar en una orientación diferente, pero el patrón resultante es idéntico al que se muestra arriba.
 
 .. image:: Figures/flowchart_chained_conditional.png
 
-``elif`` is an abbreviation of ``else if``. Again, exactly one branch will be
-executed. There is no limit of the number of ``elif`` statements but only a
-single (and optional) final ``else`` statement is allowed and it must be the last
-branch in the statement.
+``elif`` es una abreviatura de ``else if``. De nuevo, exactamente una rama será
+ejecutado. No hay límite para el número de declaraciones ``elif``, sino solo uno
+se permite en la declaración final ``else`` única (y opcional) y debe ser la última
+rama en el comunicado.
 
 .. image:: Figures/conditionals_overview.png
 
-Each condition is checked in order. If the first is false, the next is checked,
-and so on. If one of them is true, the corresponding branch executes, and the
-statement ends. Even if more than one condition is true, only the first true
-branch executes.
+Cada condición se verifica en orden. Si el primero es falso, el siguiente está marcado,
+y así. Si uno de ellos es verdadero, se ejecuta la rama correspondiente y la
+declaración termina. Incluso si más de una condición es verdadera, solo la primera es verdadera
+rama se ejecuta.
 
-Here is the same program using ``elif``.
+Aquí está el mismo programa que usa ``elif``.
 
 .. activecode:: ac7_9_1
 
@@ -54,48 +54,48 @@ Here is the same program using ``elif``.
     y = 10
 
     if x < y:
-        print("x is less than y")
+        print("x es menor que y")
     elif x > y:
-        print("x is greater than y")
+        print("x es mayor que y")
     else:
-        print("x and y must be equal")
+        print("x e y deben ser iguales")
 
-The following image highlights different kinds of valid conditionals that can be used. Though there are other 
-versions of conditionals that Python can understand (imagine an if statement with twenty elif statements), those 
-other versions must follow the same order as seen below.
+La siguiente imagen resalta diferentes tipos de condicionales válidos que se pueden usar. Aunque hay otras
+versiones de condicionales que Python puede entender (imagine una declaración if con veinte declaraciones elif), esas
+otras versiones deben seguir el mismo orden que se ve a continuación.
 
 .. image:: Figures/valid_conditionals.png
    :alt: shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_9_1
-   :answer_a: I only
-   :answer_b: II only
-   :answer_c: III only
-   :answer_d: II and III
-   :answer_e: I, II, and III
+   :answer_a: I únicamente
+   :answer_b: II únicamente
+   :answer_c: III únicamente
+   :answer_d: II y III
+   :answer_e: I, II, y III
    :correct: b
-   :feedback_a: You can not use a Boolean expression after an else.
-   :feedback_b: Yes, II will give the same result.
-   :feedback_c: No, III will not give the same result.  The first if statement will be true, but the second will be false, so the else part will execute.
-   :feedback_d: No, Although II is correct III will not give the same result.  Try it.
-   :feedback_e: No, in I you can not have a Boolean expression after an else.
+   :feedback_a: No puede usar una expresión Boolean después de otra.
+   :feedback_b: Sí, II dará el mismo resultado.
+   :feedback_c: No, III no dará el mismo resultado. La primera instrucción if será verdadera, pero la segunda será falsa, por lo que la parte else se ejecutará.
+   :feedback_d: No, aunque II es correcto, III no dará el mismo resultado. Intentalo de nuevo.
+   :feedback_e: No, en I no puedes tener una expresión Boolean después de otra cosa.
    :practice: T
 
-   Which of I, II, and III below gives the same result as the following nested if?
+   ¿Cuál de I, II y III a continuación da el mismo resultado que el siguiente bucle anidado?
 
    .. code-block:: python
 
-     # nested if-else statement
+     # instrucción if-else anidada
      x = -10
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí.")
      else:
          if x > 0:
-             print(x, " is a positive number")
+             print(x, " es un número positivo")
          else:
-             print(x, " is 0")
+             print(x, " es 0")
 
 
    .. code-block:: python
@@ -103,11 +103,11 @@ other versions must follow the same order as seen below.
      I.
      
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí.")
      else (x > 0):
-         print(x, " is a positive number")
+         print(x, " es un número positivo")
      else:
-         print(x, " is 0")
+         print(x, " es 0")
 
 
    .. code-block:: python
@@ -115,34 +115,34 @@ other versions must follow the same order as seen below.
      II.
      
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí.")
      elif (x > 0):
-         print(x, " is a positive number")
+         print(x, " es un número positivo")
      else:
-         print(x, " is 0")
+         print(x, " es 0")
 
    .. code-block:: python
 
      III.
      
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí.")
      if (x > 0):
-         print(x, " is a positive number")
+         print(x, " es un número positivo")
      else:
-         print(x, " is 0")
+         print(x, " es 0")
 
 .. mchoice:: question7_9_2
    :answer_a: a
    :answer_b: b
    :answer_c: c
    :correct: c
-   :feedback_a: While the value in x is less than the value in y (3 is less than 5) it is not less than the value in z (3 is not less than 2).
-   :feedback_b: The value in y is not less than the value in x (5 is not less than 3).
-   :feedback_c: Since the first two Boolean expressions are false the else will be executed.
+   :feedback_a: Mientras que el valor en x es menor que el valor en y (3 es menor que 5) no es menor que el valor en z (3 no es menor que 2).
+   :feedback_b: El valor en y no es menor que el valor en x (5 no es menor que 3).
+   :feedback_c: Como las dos primeras expresiones booleanas son falsas, se ejecutará lo demás.
    :practice: T
 
-   What will the following code print if x = 3, y = 5, and z = 2?
+   ¿Qué imprimirá el siguiente código si x = 3, y = 5, and z = 2?
 
    .. code-block:: python
 
@@ -158,7 +158,7 @@ other versions must follow the same order as seen below.
    :autograde: unittest
    :practice: T
 
-   Create one conditional to find whether "false" is in string ``str1``. If so, assign variable ``output`` the string "False. You aren't you?". Check to see if "true" is in string ``str1`` and if it is then assign "True! You are you!" to the variable ``output``. If neither are in ``str1``, assign "Neither true nor false!" to ``output``.
+   Cree un condicional para encontrar si "false" está en el string ``str1``. Si es así, asigne a la variable ``output`` el string "False. You aren't you?". Verifique si "true" está en el string ``str1`` y, si es así, asigne "True! You are you!" a la variable ``output``. Si ninguno de los dos está en ``str1``, asigne "Neither true nor false!" a ``output``.
    ~~~~
    str1 = "Today you are you! That is truer than true! There is no one alive who is you-er than you!"
       
@@ -180,7 +180,7 @@ other versions must follow the same order as seen below.
    :autograde: unittest
    :practice: T
 
-   Create an empty list called ``resps``. Using the list ``percent_rain``, for each percent, if it is above 90, add the string 'Bring an umbrella.' to ``resps``, otherwise if it is above 80, add the string 'Good for the flowers?' to ``resps``, otherwise if it is above 50, add the string 'Watch out for clouds!' to ``resps``, otherwise, add the string 'Nice day!' to ``resps``. Note: if you're sure you've got the problem right but it doesn't pass, then check that you've matched up the strings exactly.
+   Cree una lista vacía llamada ``resps``. Usando la lista ``percent_rain``, para cada porcentaje, si está por encima de 90, agregue el string 'Bring an umbrella.' a ``resps``, de lo contrario, si está por encima de 80, agregue la cadena 'Good for the flowers?' a ``resps``, de lo contrario, si está por encima de 50, agregue la cadena 'Watch out for clouds!' a ``resps``, de lo contrario, agregue la cadena 'Nice day!' a ``resps``. Nota: si está seguro de que tiene el problema correcto pero no pasa, entonces verifique que haya hecho coincidir las cadenas exactamente.
    ~~~~
    percent_rain = [94.3, 45, 100, 78, 16, 5.3, 79, 86]
 
@@ -200,7 +200,7 @@ other versions must follow the same order as seen below.
    :autograde: unittest
    :practice: T
 
-   We have created conditionals for you to use. Do not change the provided conditional statements. Find an integer value for ``x`` that will cause ``output`` to hold the values ``True`` and ``None``. (Drawing diagrams or flow charts for yourself may help!)
+   Hemos creado condicionales para su uso. No cambie las declaraciones condicionales proporcionadas. Encuentre un valor entero para ``x`` que hará que ``output`` mantenga los valores ``True`` y ``None``. (¡Dibujar diagramas o diagramas de flujo para usted puede ayudar!)
    ~~~~
    x =
    output = []
