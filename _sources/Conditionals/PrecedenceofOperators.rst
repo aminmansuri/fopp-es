@@ -15,15 +15,15 @@
            if statement, compound statement, statement block, block, body,
            pass statement
 
-Precedence of Operators
------------------------
+Precedencia de operadores
+-------------------------
 
-Arithmetic operators take precedence over logical operators. Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression ``x*5 >= 10 and y-6 <= 20`` will be evaluated so as to first perform the arithmetic and then check the relationships.  The ``and`` will be done last.  Many programmers might place parentheses around the two relational expressions, ``(x*5 >= 10) and (y-6 <= 20)``. It is not necessary to do so, but causes no harm and may make it easier for people to read and understand the code.
+Los operadores aritméticos tienen prioridad sobre los operadores lógicos. Python siempre evaluará primero los operadores aritméticos (**es el más alto, luego la multiplicación / división, luego la suma / resta**). Luego vienen los operadores relacionales. Finalmente, los operadores lógicos se hacen al final. Esto significa que la expresión ``x*5 >= 10 and y-6 <= 20`` se evaluará para realizar primero la aritmética y luego verificar las relaciones. El ``and`` se hará al final. Muchos programadores pueden colocar paréntesis alrededor de las dos expresiones relacionales, ``(x*5 >= 10) and (y-6 <= 20)``. No es necesario hacerlo, pero no causa ningún daño y puede facilitar que las personas lean y entiendan el código.
 
-The following table summarizes the operator precedence from highest to lowest.  A complete table for the entire language can be found in the `Python Documentation <http://docs.python.org/py3k/reference/expressions.html#expression-lists>`_.
+La siguiente tabla resume la prioridad del operador de mayor a menor. Se puede encontrar una tabla completa para todo el idioma en el `Python Documentation <http://docs.python.org/py3k/reference/expressions.html#expression-lists>`_.
 
 =======   ==============  ===============
-Level     Category        Operators
+Nivel     Categoría        Operadores
 =======   ==============  ===============
 7(high)   exponent        \**
 6         multiplication  \*,/,//,%
@@ -36,26 +36,26 @@ Level     Category        Operators
 
 .. note::
 
-  This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
+  Este espacio de trabajo se proporciona para su conveniencia. Puede usar esta ventana de activecode para probar lo que quiera.
 
   .. activecode:: ac7_5_1
 
-.. admonition:: Common Mistake!
+.. admonition:: ¡Error común!
 
-   Students often incorrectly combine the in and or operators. For example, if they want to check
-   that the letter x is inside of either of two variables then they tend to write it the following 
-   way: ``'x' in y or z``
+   Los estudiantes a menudo combinan incorrectamente los operadores in y or. Por ejemplo, si quieren verificar
+   que la letra x está dentro de cualquiera de las dos variables, entonces tienden a escribirla de la siguiente
+   forma: ``'x' in y or z``
 
-   Written this way, the code would not always do what the programmer intended. This is because the 
-   ``in`` operator is only on the left side of the or statement. It doesn't get implemented on both 
-   sides of the or statement. In order to properly check that x is inside of either variable, the in 
-   operator must be used on both sides which looks like this:
+   Escrito de esta manera, el código no siempre haría lo que el programador pretendía. Esto es porque el
+   operador ``in`` está solo en el lado izquierdo de la instrucción o. No se implementa en ambos
+   lados de la declaración or. Para verificar adecuadamente que x está dentro de cualquiera de las variables, el
+   operador debe usarse en ambos lados, que se ve así:
 
    .. sourcecode:: python
 
        'x' in y or 'x' in z
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_5_1
    :answer_a: ((5*3) &gt; 10) and ((4+6) == 11)
@@ -63,15 +63,15 @@ Level     Category        Operators
    :answer_c: ((((5*3) &gt; 10) and 4)+6) == 11
    :answer_d: ((5*3) &gt; (10 and (4+6))) == 11
    :correct: a
-   :feedback_a: Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;
-   :feedback_b: Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)
-   :feedback_c: This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.
-   :feedback_d: This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.
+   :feedback_a: Sí, * y + tienen mayor prioridad, seguido de &gt; y ==, y luego la palabra clave &quot;and&quot;
+   :feedback_b: Los operadores aritméticos (*, +) tienen mayor prioridad que los operadores de comparación (&gt;, ==)
+   :feedback_c: Esta agrupación supone que Python simplemente evalúa de izquierda a derecha, lo cual es incorrecto. Sigue la precedencia que figura en la tabla de esta sección.
+   :feedback_d: Esta agrupación supone que &quot; y &quot; tiene una precedencia mayor que ==, lo cual no es cierto.
    :practice: T
 
-   Which of the following properly expresses the  precedence of operators (using parentheses) in the following expression: 5*3 > 10 and 4+6==11
+   ¿Cuál de los siguientes expresa correctamente la precedencia de los operadores (usando paréntesis) en la siguiente expresión: 5*3 > 10 and 4+6==11
 
-Here is an animation for the above expression:
+Aquí hay una animación para la expresión anterior:
 
 .. showeval:: se_ac7_5_1
    :trace_mode: true
