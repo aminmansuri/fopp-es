@@ -11,12 +11,12 @@
    :prefix: condition-1-
    :start: 1
 
-Intro: What we can do with Turtles and Conditionals
-===================================================
+Introducción: lo que podemos hacer con Turtles y Condicionales
+==============================================================
 
-So far, our programs have either been a series of statements which always execute sequentially or operations that are applied to each item in an iterable. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters that are not asleep. This is done with something called a **selection** or a **conditional statement**. 
+Hasta ahora, nuestros programas han sido una serie de declaraciones que siempre se ejecutan secuencialmente u operaciones que se aplican a cada elemento en un iterable. Sin embargo, los programas con frecuencia deben ser más sutiles con su comportamiento. Por ejemplo, una aplicación de mensajería solo puede establecer el título de un mensaje en negrita si el usuario no lo ha leído. O un videojuego necesita actualizar la posición de todos los personajes que no están dormidos. Esto se hace con algo llamado **selección** o **declaración condicional**.
 
-In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly
+En el contexto de los dibujos turtle, el uso de este tipo de declaración nos permitirá verificar las condiciones y cambiar el comportamiento del programa en consecuencia
 
 .. activecode:: ac7_1_1
 
@@ -42,17 +42,17 @@ In the context of turtle drawings, using this kind of statement will allow us to
         kenji.left(60)
         kenji.forward(100)
 
-In the above code, we first set amy's pen color to be "Pink" and then move her forward. Next we want one of 
-two actions to happen, either amy should move right and then forward, or left and then forward. The direction 
-that we want her to go in depends on her pen color. If her pen color is set to pink - which is determined by 
-writing ``amy.pencolor() == "Pink"`` which checks to see if the value returned by ``amy.pencolor()`` is the 
-equivalent to the string "Pink" - then we should have her move right and forward. Else (or otherwise) she 
-should move left and forward. Both things can't happen though. She can't move right, forward *and* left, 
-forward. We then do the same thing for kenji, though in this case, we didn't change kenji's pen color.
+En el código anterior, primero configuramos el color de la pluma de Amy para que sea "Pink" y luego la movemos hacia adelante. A continuación queremos uno
+para que ocurran dos acciones, o bien Amy debe moverse hacia la derecha y luego hacia adelante, o hacia la izquierda y luego hacia adelante. La dirección
+que queramos que vaya depende del color de su pluma. Si el color de su bolígrafo está configurado en rosa, que está determinado por
+escribir ``amy.pencolor() == "Pink"`` que comprueba si el valor devuelto por ``amy.pencolor()`` es el
+equivalente a la cadena "Pink", entonces deberíamos hacer que se mueva hacia la derecha y hacia adelante. De lo contrario (o de otro modo) ella
+debe moverse hacia la izquierda y hacia adelante. Sin embargo, ambas cosas no pueden suceder. Ella no puede moverse a la derecha, adelante *e* izquierda,
+adelante. Luego hacemos lo mismo para kenji, aunque en este caso, no cambiamos el color de la pluma de kenji.
 
-It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up amy 
-and kenji's colors, so why would we need a conditional? While it's true that this isn't the *best* place to 
-use a conditional, we can combine conditional statements with for loops to make something pretty cool! 
+Puede parecer un poco extraño agregar los condicionales en este ejemplo. ¿No sabríamos ya que creamos Amy?
+y los colores de kenji, entonces, ¿por qué necesitaríamos un condicional? Si bien es cierto que este no es el *mejor* lugar para que
+use un condicional, ¡podemos combinar enunciados condicionales con bucles for para hacer algo genial!
 
 .. activecode:: ac7_1_2
 
@@ -82,29 +82,29 @@ use a conditional, we can combine conditional statements with for loops to make 
 
         amy.pencolor(color)
 
-The above example combines a for loop with a set of conditional statements. Here, we loop through a list of 
-colors and each iteration checks to see what amy's pen color is. Depending on the pen color, the turtle will 
-move in a certain direction, for a certain distance. Before the for loop iterates, amy's pen color is changed 
-to whatever ``color`` is in the for loop and it continues. Note how the color doesn't change until the end, 
-so that we can start using whatever color amy is set to initally. This means that the last color in the list 
-``colors`` will not be used, though you can see how the icon changes to the appropriate color.
-    
-This chapter will further detail how to use conditional statements.
+El ejemplo anterior combina un bucle for con un conjunto de declaraciones condicionales. Aquí, recorremos una lista de
+colores y cada iteración comprueba para ver cuál es el color del lápiz de Amy. Dependiendo del color de la pluma, turtle
+debe moverse en cierta dirección, por una cierta distancia. Antes de que el ciclo for se repita, el color de la pluma de Amy cambia
+a cualquier ``color`` que esté en el bucle for y continúe. Tenga en cuenta que el color no cambia hasta el final,
+para que podamos comenzar a usar cualquier color que Amy esté configurado inicialmente. Esto significa que el último color en la lista
+no usará los ``colors``, aunque puede ver cómo el icono cambia al color apropiado.
 
-Learning Goals
---------------
+Este capítulo tratará más detalladamente cómo usar declaraciones condicionales.
 
-* To understand boolean expressions and logical operators
-* To understand conditional execution
-* To be able to write a boolean function
-* To know when to use binary, unary, chained and nested conditional statements
+Metas de aprendizaje
+--------------------
+
+* Entender expresiones boolean y operadores lógicos.
+* Para entender la ejecución condicional
+* Para poder escribir una función boolean
+* Saber cuándo usar declaraciones condicionales binarias, unarias, encadenadas y anidadas
 
 
-Objectives
+Objetivos
 ----------
 
-* To properly evaluate a (compound) boolean expression
-* To use parenthesis to properly demonstrate operator precedence
-* To use conditional statements to properly branch code
+* Para evaluar adecuadamente una expresión boolean (compuesta)
+* Usar paréntesis para demostrar adecuadamente la precedencia del operador
+* Para usar declaraciones condicionales para bifurcar correctamente el código
 
 
