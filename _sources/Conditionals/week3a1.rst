@@ -9,22 +9,22 @@
 
 .. Week 3 Assignment
 
-Chapter Assessment
-------------------
+Evaluación de capítulos
+-----------------------
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: assess_ps3_1_1_1
     :language: python
     :autograde: unittest
     :practice: T
 
-    ``rainfall_mi`` is a string that contains the average number of inches of rainfall in Michigan for every month (in inches) with every month separated by a comma.
-    Write code to compute the number of months that have more than 3 inches of rainfall. Store the result in the variable ``num_rainy_months``.
-    In other words, count the number of items with values ``> 3.0``.
+    ``rainfall_mi`` es un string que contiene el número promedio de pulgadas de lluvia en Michigan por cada mes (en pulgadas) con cada mes separado por una coma.
+    Escriba el código para calcular la cantidad de meses que tienen más de 3 pulgadas de lluvia. Almacene el resultado en la variable ``num_rainy_months``.
+    En otras palabras, cuente la cantidad de elementos con valores ``> 3.0``.
 
 
-    Hard-coded answers will receive no credit.
+    Las respuestas codificadas no recibirán crédito.
     ~~~~
     rainfall_mi = "1.65, 1.46, 2.05, 3.03, 3.35, 3.46, 2.83, 3.23, 3.5, 2.52, 2.8, 1.85"
     =====
@@ -42,15 +42,15 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    The variable ``sentence`` stores a string. Write code to determine how many words in ``sentence`` start and end with the same letter, including one-letter words.
-    Store the result in the variable ``same_letter_count``.
+    La variable ``sentence`` almacena una cadena. Escriba el código para determinar cuántas palabras en ``sentence`` comienzan y terminan con la misma letra, incluidas las palabras de una letra.
+    Almacene el resultado en la variable ``same_letter_count``.
 
 
-    Hard-coded answers will receive no credit.
+    Las respuestas codificadas no recibirán crédito.
     ~~~~
     sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
 
-    # Write your code here.
+    # Escribe tu código aquí.
 
 
     ====
@@ -68,14 +68,14 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    Write code to count the number of strings in list ``items`` that have the character ``w`` in it. Assign that number to the variable ``acc_num``.
+    Escriba el código para contar el número de strings en la lista ``items`` que tienen el caracter ``w``. Asigne ese número a la variable ``acc_num``.
 
-    HINT 1: Use the accumulation pattern!
+    SUGERENCIA 1: ¡Usa el patrón de acumulación!
 
-    HINT 2: the ``in`` operator checks whether a substring is present in a string.
+    SUGERENCIA 2: el operador ``in`` verifica si un substring está presente en un string.
 
 
-    Hard-coded answers will receive no credit.
+    Las respuestas codificadas no recibirán crédito.
     ~~~~
     items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
 
@@ -95,16 +95,16 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    Write code that counts the number of words in ``sentence`` that contain *either* an "a" or an "e". Store the result in the variable ``num_a_or_e``.
+    Escriba un código que cuente la cantidad de palabras en ``sentence`` que contienen *ya sea* una "a" o una "e". Almacene el resultado en la variable ``num_a_or_e``.
 
-    Note 1: be sure to not double-count words that contain both an a and an e.
+    Nota 1: Asegúrese de no contar dos veces las palabras que contienen tanto una a como una e.
 
-    HINT 1: Use the ``in`` operator.
+    SUGERENCIA 1: Use el operador ``in``.
 
-    HINT 2: You can either use ``or`` or ``elif``.
+    SUGERENCIA 2: Puede usar ``or`` o ``elif``.
 
 
-    Hard-coded answers will receive no credit.
+    Las respuestas codificadas no recibirán crédito.
     ~~~~
     sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
 
@@ -124,12 +124,12 @@ Chapter Assessment
     :autograde: unittest
     :practice: T
 
-    Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``. For this problem, vowels are only a, e, i, o, and u. Hint: use the ``in`` operator with ``vowels``.
+    Escriba un código que cuente el número de vocales en la oración ``s`` y asigne el resultado a la variable ``num_vowels``. Para este problema, las vocales son solo a, e, i, o, u. Sugerencia: use el operador ``in`` con ``vowels``.
     ~~~~
     s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
     vowels = ['a','e','i','o','u']
 
-    # Write your code here.
+    # Escribe tu código aquí
 
 
     =====
@@ -139,10 +139,10 @@ Chapter Assessment
     class myTests(TestCaseGui):
 
         def testOne(self):
-           self.assertEqual(num_vowels, 32, "testing whether num_vowels is set correctly")
+           self.assertEqual(num_vowels, 32, "Prueba si num_vowels está configurado correctamente")
 
         def testOneA(self):
-           self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop.")
+           self.assertIn('for', self.getEditorText(), "Prueba de que está utilizando un bucle for.")
 
     myTests().main()
 
@@ -151,7 +151,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   Create one conditional so that if "Friendly" is in ``w``, then "Friendly is here!" should be assigned to the variable ``wrd``. If it's not, check if "Friend" is in ``w``. If so, the string "Friend is here!" should be assigned to the variable ``wrd``, otherwise "No variation of friend is in here." should be assigned to the variable ``wrd``. (Also consider: does the order of your conditional statements matter for this problem? Why?)
+   Cree un condicional para que si "Friendly" está en ``w``, entonces "Friendly is here!" debe asignarse a la variable ``wrd``. Si no es así, verifique si "Friend" está en ``w``. Si es así, la cadena "Friend is here!" debe asignarse a la variable ``wrd``, de lo contrario "No variation of friend is in here." debe asignarse a la variable ``wrd``. (También considere: ¿importa el orden de sus declaraciones condicionales para este problema? ¿Por qué?)
    ~~~~
    w = "Friendship is a wonderful human experience!"
 
@@ -173,7 +173,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   We have written conditionals for you to use. Create the variable x and assign it some integer so that at the end of the code, ``output`` will be assigned the string ``"Consistently working"``.
+   Hemos escrito condicionales para su uso. Cree la variable x y asígnele un número entero para que al final del código, a ``output`` se le asigne el string ``"Consistently working"``.
    ~~~~
    if x >= 10:
        output = "working"
@@ -204,7 +204,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   Write code so that if ``"STATS 250"`` is in the list ``schedule``, then the string ``"You could be in Information Science!"`` is assigned to the variable ``resp``. Otherwise, the string ``"That's too bad."`` should be assigned to the variable ``resp``.
+   Escriba el código de manera que si ``"STATS 250"`` está en la lista ``schedule``, entonces el string ``"You could be in Information Science!"`` se asigna a la variable ``resp``. De lo contrario, el string ``"That's too bad."`` Debe asignarse a la variable ``resp``.
    ~~~~
    schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
 
@@ -225,7 +225,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   Create the variable ``z`` whose value is ``30``. Write code to see if ``z`` is greater than ``y``. If so, add 5 to ``y``'s value, otherwise do nothing. Then, multiply ``z`` and ``y``, and assign the resulting value to the variable ``x``.
+   Cree la variable ``z`` cuyo valor es ``30``. Escriba el código para ver si ``z`` es mayor que ``y``. Si es así, agregue 5 al valor de ``y``, de lo contrario no haga nada. Luego, multiplique ``z`` e ``y``, y asigne el valor resultante a la variable ``x``.
    ~~~~
    y = 22
 
@@ -247,7 +247,7 @@ Chapter Assessment
    :autograde: unittest
    :practice: T
 
-   For each string in ``wrd_lst``, find the number of characters in the string. If the number of characters is less than 6, add 1 to ``accum`` so that in the end, ``accum`` will contain an integer representing the total number of words in the list that have fewer than 6 characters.
+   Para cada cadena en ``wrd_lst``, encuentre el número de caracteres en la cadena. Si el número de caracteres es inferior a 6, agregue 1 a ``accum`` para que, al final, ``accum`` contenga un número entero que represente el número total de palabras en la lista que tienen menos de 6 caracteres.
    ~~~~
    wrd_lst = ["Hello", "activecode", "Java", "C#", "Python", "HTML and CSS", "Javascript", "Swift", "php"]
 
