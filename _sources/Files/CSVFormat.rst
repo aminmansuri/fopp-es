@@ -11,12 +11,12 @@
    :prefix: files-8-
    :start: 1
 
-CSV Format
-==========
+Formato CSV
+===========
 
-CSV stands for Comma Separated Values. If you print out tabular data in CSV format, it can be easily imported into other programs like Excel, Google spreadsheets, or a statistics package (R, stata, SPSS, etc.).
+CSV significa valores separados por comas. Si imprime datos tabulares en formato CSV, puede importarse fácilmente a otros programas como Excel, hojas de cálculo de Google o un paquete de estadísticas (R, stata, SPSS, etc.).
 
-For example, we can make a file with the following contents. If you save it as a file name grades.csv, then you could import it into one of those programs. The first line gives the column names and the later lines each give the data for one row.
+Por ejemplo, podemos hacer un archivo con los siguientes contenidos. Si lo guarda como un nombre de archivo ratings.csv, puede importarlo a uno de esos programas. La primera línea proporciona los nombres de las columnas y las líneas posteriores proporcionan los datos para una fila.
 
 .. sourcecode:: python
 
