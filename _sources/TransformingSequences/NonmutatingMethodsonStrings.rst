@@ -11,11 +11,11 @@
    :prefix: seqmut-8-
    :start: 1
 
-Non-mutating Methods on Strings
+Métodos no mutantes en Strings
 ===============================
 
-There are a wide variety of methods for string objects.  
-Try the following program.
+Hay una amplia variedad de métodos para objetos de cadena.
+Prueba el siguiente programa.
 
 .. activecode:: ac8_8_1
 
@@ -26,33 +26,32 @@ Try the following program.
     print(tt)
     print(ss)
 
-In this example, ``upper`` is a method that can be invoked on any string object to create a new string 
-in which all the characters are in uppercase. ``lower`` works in a similar fashion changing all 
-characters in the string to lowercase. (The original string ``ss`` remains unchanged.  A new string 
-``tt`` is created.)
+En este ejemplo, ``upper`` es un método que se puede invocar en cualquier objeto de cadena para crear una nueva cadena
+en el que todos los caracteres están en mayúsculas. ``lower`` funciona de manera similar cambiando todos
+caracteres en la cadena a minúsculas. (La cadena original ``ss`` permanece sin cambios. Una nueva cadena
+``tt`` es creada.)
 
 .. _string_methods:
 
-You've already seen a few methods, such as ``count`` and ``index``, that work with strings and are 
-non-mutating. In addition to those and ``upper`` and ``lower``, the following table provides a summary 
-of some other useful string methods. There are a few activecode examples that follow so that you can 
-try them out.
+Ya has visto algunos métodos, como ``count`` e ``index``, que funcionan con cadenas y son
+no mutantes además de esos y ``upper`` y ``lower``, la siguiente tabla proporciona un resumen
+de algunos métodos útiles. Hay algunos ejemplos de código activo que siguen para que pueda probarlos.
 
 
 ==========  ==============      ==================================================================
-Method      Parameters          Description
+Métodos     Parámetros          Descripción
 ==========  ==============      ==================================================================
-upper       none                Returns a string in all uppercase
-lower       none                Returns a string in all lowercase
-count       item                Returns the number of occurrences of item
-index       item                Returns the leftmost index where the substring item is found and causes 								a runtime error if item is not found
-strip       none                Returns a string with the leading and trailing whitespace removed
-replace     old, new            Replaces all occurrences of old substring with new
-format      substitutions       Involved! See :ref:`Format-Strings`, below
+upper       none                Devuelve una cadena en mayúsculas
+lower       none                Devuelve una cadena en minúsculas
+count       item                Devuelve el número de ocurrencias del artículo.
+index       item                Devuelve el índice más a la izquierda donde se encuentra el elemento de subcadena y causa								a runtime error if item is not found
+strip       none                Devuelve una cadena con el espacio en blanco inicial y final eliminado
+replace     old, new            Reemplaza todas las apariciones de subcadenas antiguas por nuevas
+format      substitutions       Ve a :ref:`Format-Strings`, más abajo
 ==========  ==============      ==================================================================
 
-You should experiment with these methods so that you understand what they do.  Note once again that the methods that return strings do not change the original. You can also consult the 
-`Python documentation for strings <http://docs.python.org/3/library/stdtypes.html#string-methods>`_.
+Debe experimentar con estos métodos para comprender lo que hacen. Tenga en cuenta una vez más que los métodos que devuelven cadenas no cambian el original. También puedes consultar la
+`Documentación de Python para Strings <http://docs.python.org/3/library/stdtypes.html#string-methods>`_.
 
 .. activecode:: ac8_8_2
 
@@ -74,19 +73,19 @@ You should experiment with these methods so that you understand what they do.  N
     print(food.upper())
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_8_1
    :answer_a: 0
    :answer_b: 2
    :answer_c: 3
    :correct: c
-   :feedback_a: There are definitely o and p characters.
-   :feedback_b: There are 2 o characters but what about p?
-   :feedback_c: Yes, add the number of o characters and the number of p characters.
+   :feedback_a: Definitivamente hay caracteres o y p.
+   :feedback_b: Hay 2 caracteres o pero ¿qué pasa con p?
+   :feedback_c: Sí, sume el número de caracteres o y el número de caracteres p.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -97,15 +96,15 @@ You should experiment with these methods so that you understand what they do.  N
    :answer_a: yyyyy
    :answer_b: 55555
    :answer_c: n
-   :answer_d: Error, you cannot combine all those things together.
+   :answer_d: Error, no puedes combinar todas esas cosas juntas.
    :correct: a
-   :feedback_a: Yes, s[1] is y and the index of n is 5, so 5 y characters.  It is important to realize that the index method has precedence over the repetition operator.  Repetition is done last.
-   :feedback_b: Close.  5 is not repeated, it is the number of times to repeat.
-   :feedback_c: This expression uses the index of n
-   :feedback_d: This is fine, the repetition operator used the result of indexing and the index method.
+   :feedback_a: Sí, s[1] es y y el índice de n es 5, entonces 5 caracteres. Es importante darse cuenta de que el método de índice tiene prioridad sobre el operador de repetición. La repetición se hace al final.
+   :feedback_b: Cerca. 5 no se repite, es el número de veces que se repite.
+   :feedback_c: Esta expresión usa el índice de n
+   :feedback_d: Esto está bien, el operador de repetición utilizó el resultado de la indexación y el método de indexación.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -114,12 +113,12 @@ You should experiment with these methods so that you understand what they do.  N
 
 .. _Format-Strings:
 
-String Format Method
+Método String Format
 ~~~~~~~~~~~~~~~~~~~~~
 
-Until now, we have created strings with variable content using the + operator to concatenate 
-partial strings together. That works, but it's very hard for people to read or debug a code 
-line that includes variable names and strings and complex expressions. Consider the following: 
+Hasta ahora, hemos creado cadenas con contenido variable utilizando el operador + para concatenar
+cuerdas parciales juntas. Eso funciona, pero es muy difícil para las personas leer o depurar un código
+línea que incluye nombres y cadenas de variables y expresiones complejas. Considera lo siguiente:
 
 .. activecode:: ac8_8_4
 
@@ -127,7 +126,7 @@ line that includes variable names and strings and complex expressions. Consider 
    score = -1  # No respect!
    print("Hello " + name + ". Your score is " + str(score))
 
-Or perhaps more realistically:
+O quizás de manera más realista:
  
 .. activecode:: ac8_8_5
  
@@ -137,7 +136,7 @@ Or perhaps more realistically:
        score = person[1]
        print("Hello " + name + ". Your score is " + str(score))
 
-In this section, you will learn to write that in a more readable way:
+En esta sección, aprenderá a escribir eso de una manera más legible:
 
 .. activecode:: ac8_8_6
  
@@ -147,15 +146,15 @@ In this section, you will learn to write that in a more readable way:
        score = person[1]
        print("Hello {}. Your score is {}.".format(name, score))
 
-In grade school quizzes a common convention is to use fill-in-the blanks. For instance,
+En las pruebas de la escuela primaria, una convención común es usar espacios en blanco. Por ejemplo,
 
     Hello _____!
 
 
-and you can fill in the name of the person greeted, and combine given text with a chosen 
-insertion. *We use this as an analogy:* Python has a similar construction, better called 
-fill-in-the-braces. The string method ``format``, makes substitutions into places in a string
-enclosed in braces. Run this code:
+y puede completar el nombre de la persona saludada y combinar el texto dado con una inserción.
+*Usamos esto como una analogía:* Python tiene una construcción similar, mejor llamada
+rellenar las llaves. El método de cadena ``format``, hace sustituciones en lugares en una cadena
+encerrada entre llaves. Ejecute este código:
 
 .. activecode:: ac8_8_7
 
@@ -164,30 +163,29 @@ enclosed in braces. Run this code:
     print(greeting)
 
 
-There are several new ideas here!
+¡Hay varias ideas nuevas aquí!
 
-The string for the ``format`` method has a special form, with braces embedded.
-Such a string is called a *format string*.  Places where
-braces are embedded are replaced by the value of an expression
-taken from the parameter list for the ``format`` method. There are many
-variations on the syntax between the braces. In this case we use
-the syntax where the first (and only) location in the string with
-braces has a substitution made from the first (and only) parameter.
+La cadena para el método ``formato`` tiene una forma especial, con llaves incorporadas.
+Tal cadena se llama *format String*. Los lugares donde las llaves están incrustadas son reemplazadas
+por el valor de una expresión tomado de la lista de parámetros para el método ``format``. Hay muchas
+variaciones en la sintaxis entre las llaves. En este caso usamos
+la sintaxis donde la primera (y única) ubicación en la cadena con
+Las llaves tienen una sustitución hecha del primer (y único) parámetro.
 
-In the code above, this new string is assigned to the identifier
-``greeting``, and then the string is printed. 
+En el código anterior, esta nueva cadena se asigna al identificador
+``greeting``, y luego se imprime la cadena.
 
-The identifier ``greeting`` was introduced to break the operations into a clearer sequence of 
-steps. However, since the value of ``greeting`` is only referenced once, it can be eliminated 
-with the more concise version:
+El identificador ``greeting`` se introdujo para dividir las operaciones en una secuencia más clara de
+pasos. Sin embargo, dado que el valor de ``greeting`` solo se hace referencia una vez, se puede eliminar
+con la versión más concisa:
 
 .. activecode:: ac8_8_8
 
     person = input('Enter your name: ') 
     print('Hello {}!'.format(person)) 
 
-There can be multiple substitutions, with data of any type.  
-Next we use floats.  Try original price $2.50  with a 7% discount:
+Puede haber múltiples sustituciones, con datos de cualquier tipo.
+A continuación usamos floats. Pruebe el precio original $2.50 con un 7% de descuento:
 
 .. activecode:: ac8_8_9
 
@@ -197,18 +195,17 @@ Next we use floats.  Try original price $2.50  with a 7% discount:
     calculation = '${} discounted by {}% is ${}.'.format(origPrice, discount, newPrice)
     print(calculation)
 
-It is important to pass arguments to the ``format`` method in the correct order, because they 
-are matched *positionally* into the ``{}`` places for interpolation where there is more than 
-one.
+Es importante pasar los argumentos al método ``format`` en el orden correcto, porque
+se combinan *posicionalmente* en los lugares ``{}`` para la interpolación donde hay más de uno.
 
-If you used the data suggested, this result is not satisfying.  
-Prices should appear with exactly two places beyond the decimal point,
-but that is not the default way to display floats.
+Si utilizó los datos sugeridos, este resultado no es satisfactorio.
+Los precios deben aparecer exactamente con dos lugares más allá del punto decimal,
+pero esa no es la forma predeterminada de mostrar flotantes.
 
-Format strings can give further information inside the braces 
-showing how to specially format data.
-In particular floats can be shown with a specific number of decimal places.  
-For two decimal places, put ``:.2f`` inside the braces for the monetary values:
+Las cadenas de formato pueden proporcionar más información dentro de las llaves
+mostrando cómo formatear datos especialmente.
+En particular, los flotadores se pueden mostrar con un número específico de lugares decimales.
+Para dos lugares decimales, ponga ``:.2f`` dentro de las llaves para los valores monetarios:
 
 .. activecode:: ac8_8_10
 
@@ -218,16 +215,16 @@ For two decimal places, put ``:.2f`` inside the braces for the monetary values:
     calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
     print(calculation)
 
-The 2 in the format modifier can be replaced by another integer to round to that
-specified number of digits.
+El 2 en el modificador de formato se puede reemplazar por otro entero para redondear a ese
+Número especificado de dígitos.
 
-This kind of format string depends directly on the order of the
-parameters to the format method. There are other approaches that we will
-skip here, such as explicitly numbering substitutions.
+Este tipo de cadena de formato depende directamente del orden de
+parámetros para el método de formato. Hay otros enfoques que haremos
+omita aquí, como numerar explícitamente sustituciones.
 
-It is also important that you give ``format`` the same amount of arguments as there are ``{}`` waiting for interpolation in the string. If you have a ``{}`` in a string that you do not pass arguments for, you may not get an error, but you will see a weird ``undefined`` value you probably did not intend suddenly inserted into your string. You can see an example below.
+También es importante que le dé a ``formato`` la misma cantidad de argumentos que hay ``{}`` esperando la interpolación en la cadena. Si tiene un ``{}`` en una cadena para la que no pasa argumentos, es posible que no obtenga un error, pero verá un valor extraño ``indefinido`` que probablemente no tenía la intención de insertar de repente en su cadena . Puedes ver un ejemplo a continuación.
 
-For example,
+Por ejemplo,
 
 .. activecode:: ac8_8_11
  
@@ -242,19 +239,19 @@ For example,
    print(s.format(name)) # 2 {}s, only one interpolation item! Not ideal.
 
 
-A technical point: Since braces have special meaning in a format string, there must be a 
-special rule if you want braces to actually be included in the final *formatted* string. The 
-rule is to double the braces: ``{{`` and ``}}``. For example mathematical set notation uses 
-braces. The initial and final doubled braces in the format string below generate literal 
-braces in the formatted string::
+Un punto técnico: como las llaves tienen un significado especial en una cadena de formato, debe haber un
+regla especial si desea incluir llaves en la cadena final *formateada*. los
+la regla es duplicar las llaves: ``{{`` y ``}}``. Por ejemplo, la notación de conjuntos matemáticos utiliza
+tirantes. Las llaves dobles iniciales y finales en la siguiente cadena de formato generan literal
+llaves en la cadena formateada::
 
     a = 5
     b = 9
     setStr = 'The set is {{{}, {}}}.'.format(a, b)
     print(setStr)
 
-Unfortunately, at the time of this writing, the ActiveCode format implementation has a bug,
-printing doubled braces, but standard Python prints ``{5, 9}``.
+Desafortunadamente, al momento de escribir esto, la implementación del formato ActiveCode tiene un error,
+imprimir llaves dobladas, pero las impresiones estándar de Python ``{5, 9}``.
 
 .. mchoice:: question8_8_3
    :answer_a: Nothing - it causes an error
@@ -269,7 +266,7 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    :practice: T
 
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
@@ -283,13 +280,13 @@ printing doubled braces, but standard Python prints ``{5, 9}``.
    :answer_b: 2.3 2.34 2.34567
    :answer_c: 2.3 2.35 2.3456700
    :correct: c
-   :feedback_a: The numbers before the f in the braces give the number of digits to display after the decimal point.
-   :feedback_b: Close, but round to the number of digits and display the full number of digits specified.
-   :feedback_c: Yes, correct number of digits with rounding!
+   :feedback_a: Los números antes de la f en las llaves dan el número de dígitos para mostrar después del punto decimal.
+   :feedback_b: Cierra, pero redondea al número de dígitos y muestra el número completo de dígitos especificado.
+   :feedback_c: Sí, ¡número correcto de dígitos con redondeo!
    :practice: T
    
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
    
