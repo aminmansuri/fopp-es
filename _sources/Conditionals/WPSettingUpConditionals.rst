@@ -11,59 +11,59 @@
    :prefix: condition-11-
    :start: 1
 
-👩‍💻 Setting Up Conditionals
-=============================
+👩‍💻 Configuración de condicionales
+=======================================
 
-Before writing your conditionals, it can be helpful to make your own flowchart that will 
-plot out the flow of each condition. By writing out the flow, you can better determine how 
-complex the set of conditionals will be as well as check to see if any condition is not 
-taken care of before you begin writing it out.
+Antes de escribir sus condicionales, puede ser útil hacer su propio diagrama de flujo que
+trazar el flujo de cada condición. Al escribir el flujo, puede determinar mejor cómo
+complejo el conjunto de condicionales será así como comprobar si alguna condición no es de
+cuidado antes de comenzar a escribirlo.
 
-To make sure that your code covers all of the conditions that you intend for it to cover, you 
-should add comments for each clause that explains what that clause is meant to do. Then, you 
-should add tests for each possible path that the program could go though. What leads 
-to certain conditional statements being executed? Is that what you intended?
+Para asegurarse de que su código cubra todas las condiciones que desea que cubra, usted
+debe agregar comentarios para que cada cláusula que explique lo que debe hacer esa cláusula. Entonces tú
+Sin embargo, debe agregar pruebas para cada ruta posible que el programa pueda seguir. Lo que lleva
+a ciertas declaraciones condicionales que se ejecutan? ¿Es eso lo que pretendías?
 
-Choosing your type of Conditional
+Elegir tu tipo de Condicional
 ---------------------------------
 
-When adding conditionals to your program, you should also consider the kinds of conditionals 
-that are at your disposal and what would fit best.
+Al agregar condicionales a su programa, también debe considerar los tipos de condicionales
+que están a su disposición y qué encajaría mejor.
 
 .. image:: Figures/valid_conditionals.png
 
-Though you'll use them often, remember that conditional statements don't always need an else clause.
-When deciding the flow, ask yourself what you want to have happen under a certain condition. 
-For example, if you wanted to find all of the words that have the letter 'n' in them. If there's nothing
-that needs to happen when a word does not contain the letter 'n' then you won't need an else 
-clause. The program should just continue onward!
+Aunque las usará con frecuencia, recuerde que las declaraciones condicionales no siempre necesitan una cláusula else.
+Al decidir el flujo, pregúntese qué desea que suceda bajo una determinada condición.
+Por ejemplo, si desea encontrar todas las palabras que tienen la letra 'n' en ellas. Si no hay nada,
+eso debe suceder cuando una palabra no contiene la letra 'n', entonces no necesitará otra
+cláusula. ¡El programa debería continuar!
 
 .. mchoice:: question7_11_1
-   :answer_a: If statement - Else statement
-   :answer_b: If statement - Elif statement
-   :answer_c: If statement - If statement
-   :answer_d: If statement - Elif statemenet - Else statement
+   :answer_a: Declaración If - Declaración Else
+   :answer_b: Declaración If - Declaración Elif
+   :answer_c: Declaración If - Declaración If
+   :answer_d: Declaración If - Declaración Elif - Declaración Else
    :correct: c
-   :feedback_a: Using if/else either uses an unnecessary else statement or would improperly keep track of one of the accumulator variables.
-   :feedback_b: Using if/elif means that words that have both a "t" and a "z" would not be propperly counted by the two variables.
-   :feedback_c: Yes, two if statements will keep track of - and properly update - the two different accumulator variables.
-   :feedback_d: Using if/elif/else here will provide an unnecessary else statement and improperly update one of the accumulator variables in the case where a word has both a "t" and a "z".
+   :feedback_a: El uso de if/else usa una instrucción else innecesaria o haría un seguimiento incorrecto de una de las variables del acumulador.
+   :feedback_b: El uso de if/elif significa que las dos variables no contarían correctamente las palabras que tienen tanto una "t" como una "z".
+   :feedback_c: Sí, dos sentencias if realizarán un seguimiento de las dos variables de acumulador diferentes y las actualizarán correctamente.
+   :feedback_d: Usar if/elif/else aquí proporcionará una declaración else innecesaria y actualizará incorrectamente una de las variables del acumulador en el caso en que una palabra tenga tanto una "t" como una "z".
    :practice: T
 
-   What is the best set of conditonal statements provided based on the following prompt? You want to keep track of all the words that have the letter 't' and in a separate variable you want to keep track of all the words that have the letter 'z' in them.
+   ¿Cuál es el mejor conjunto de declaraciones condicionales proporcionadas según el siguiente ejercicio? Desea realizar un seguimiento de todas las palabras que tienen la letra 't' y en una variable separada desea realizar un seguimiento de todas las palabras que tienen la letra 'z' en ellas.
 
 .. mchoice:: question7_11_2
-   :answer_a: If statement - Elif statemenet - Else statement
-   :answer_b: If statement - Else statement
-   :answer_c: If statement - Nested If statement
-   :answer_d: If statement
-   :answer_e: If statement - Nested If statement - Else statement
+   :answer_a: Declaración If - Declaración Elif - Declaración Else
+   :answer_b: Declaración If - Declaración Else
+   :answer_c: Declaración If - Declaración Anidada If
+   :answer_d: Declaración If
+   :answer_e: Declaración If - Declaración Anidada If - Declaración Else
    :correct: d
-   :feedback_a: The elif and else statements are both unnecessary.
-   :feedback_b: The else statement is unnecessary.
-   :feedback_c: Though you could write a set of conditional statements like this and answer the prompt, there is a more concise way.
-   :feedback_d: Yes, this is the most concise way of writing a conditional for that prompt.
-   :feedback_e: The else statement is unnecessary.
+   :feedback_a: Las declaraciones elif y else son innecesarias.
+   :feedback_b: La instrucción else es innecesaria.
+   :feedback_c: Aunque podría escribir un conjunto de declaraciones condicionales como esta y responder a la solicitud, hay una manera más concisa.
+   :feedback_d: Sí, esta es la forma más concisa de escribir un condicional para ese aviso.
+   :feedback_e: La declaración else es innecesaria.
    :practice: T
 
-   Select the most appropriate set of conditonal statements for the situation described: You want to keep track of all the words that contain both "t" and "z".
+   Seleccione el conjunto más apropiado de declaraciones condicionales para la situación descrita: desea realizar un seguimiento de todas las palabras que contienen "t" y "z".
