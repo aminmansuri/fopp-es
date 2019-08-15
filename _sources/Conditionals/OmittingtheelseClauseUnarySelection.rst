@@ -14,7 +14,7 @@
 .. index:: unary selection
    else; omitted
 
-Omitting the ``else`` Clause: Unary Selection
+Omitir la cláusula ``else``: Selección Unaria
 ---------------------------------------------
 
 .. video:: unaryselection
@@ -24,76 +24,76 @@ Omitting the ``else`` Clause: Unary Selection
    http://media.interactivepython.org/thinkcsVideos/unaryselection.mov
    http://media.interactivepython.org/thinkcsVideos/unaryselection.webm
 
-.. sidebar::  Flowchart of an **if** with no **else**
+.. sidebar::  Diagrama de flujo de un **if** sin **else**
 
    .. image:: Figures/flowchart_if_only.png
 
-Another form of the ``if`` statement is one in which the ``else`` clause is omitted entirely. This creates what 
-is sometimes called **unary selection**. In this case, when the condition evaluates to ``True``, the statements 
-are executed. Otherwise the flow of execution continues to the statement after the body of the ``if``.
+Otra forma de la declaración ``if`` es aquella en la que la cláusula ``else`` se omite por completo. Esto crea lo que
+a veces se llama **selección unaria**. En este caso, cuando la condición se evalúa como ``True``, las declaraciones
+son ejecutadas. De lo contrario, el flujo de ejecución continúa a la declaración después del cuerpo del ``if``.
 
 .. activecode:: ac7_7_1
 
     x = 10
     if x < 0:
-        print("The negative number ",  x, " is not valid here.")
-    print("This is always printed")
+        print("El número negativo ",  x, " no es válido aquí.")
+    print("Esto se imprimirá siempre")
 
-What would be printed if the value of ``x`` is negative?  Try it.
+¿Qué se imprimiría si el valor de ``x`` es negativo? Intentalo.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_7_1
-   :answer_a: Output a
-   :answer_b: Output b
-   :answer_c: Output c
-   :answer_d: It will cause an error because every if must have an else clause.
+   :answer_a: Salida a
+   :answer_b: Salida b
+   :answer_c: Salida c
+   :answer_d: Causará un error porque cada if debe tener una cláusula else.
    :correct: b
-   :feedback_a: Because -10 is less than 0, Python will execute the body of the if-statement here.
-   :feedback_b: Python executes the body of the if-block as well as the statement that follows the if-block.
-   :feedback_c: Python will also execute the statement that follows the if-block (because it is not enclosed in an else-block, but rather just a normal statement).
-   :feedback_d: It is valid to have an if-block without a corresponding else-block (though you cannot have an else-block without a corresponding if-block).
+   :feedback_a: Como -10 es menor que 0, Python ejecutará el cuerpo de la declaración if aquí.
+   :feedback_b: Python ejecuta el cuerpo del bloque if así como la declaración que sigue al bloque if.
+   :feedback_c: Python también ejecutará la declaración que sigue al bloque if (porque no está encerrado en un bloque else, sino simplemente una declaración normal).
+   :feedback_d: Es válido tener un bloque if sin el bloque else correspondiente (aunque no puede tener un bloque else sin el bloque if correspondiente).
    :practice: T
 
-   What does the following code print?
+   ¿Qué imprime el siguiente código?
 
    .. code-block:: python
      
      x = -10
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
-     print("This is always printed")
+         print("El número negativo ",  x, " no es válido aquí")
+     print("Esto se imprimirá siempre")
 
    ::
 
      a.
-     This is always printed
+     Esto se imprimirá siempre
 
      b.
-     The negative number -10 is not valid here
-     This is always printed
+     El número negativo -10 no es válido aquí
+     Esto se imprimirá siempre
 
      c.
-     The negative number -10 is not valid here
+      El número negativo -10 no es válido aquí
 
 
 .. mchoice:: question7_7_2
    :answer_a: No
-   :answer_b: Yes
+   :answer_b: Sí
    :correct: b
-   :feedback_a: Every else-block must have exactly one corresponding if-block.  If you want to chain if-else statements together, you must use the else if construct, described in the chained conditionals section.
-   :feedback_b: This will cause an error because the second else-block is not attached to a corresponding if-block.
+   :feedback_a: Todos los demás bloques deben tener exactamente un bloque if correspondiente. Si desea encadenar declaraciones if-else juntas, debe usar la construcción else if, descrita en la sección de condicionales encadenados.
+   :feedback_b: Esto causará un error porque el segundo bloque else no está conectado a un bloque if correspondiente.
    :practice: T
 
-   Will the following code cause an error?
+   ¿El siguiente código causará un error?
 
    .. code-block:: python
 
      x = -10
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí")
      else:
-         print(x, " is a positive number")
+         print(x, " es un número positivo")
      else:
-         print("This is always printed")
+         print("Esto se imprimirá siempre")
 
