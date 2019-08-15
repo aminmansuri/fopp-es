@@ -17,19 +17,19 @@
    runtime error; string item assignment
    string; immutable
 
-Mutability
-==========
+Mutabilidad
+============
 
-Some Python collection types - strings and lists so far - are able to change and some are not. If 
-a type is able to change, then it is said to be mutable. If the type is not able to change then it
-is said to be immutable. This will be expanded below.
+Algunos tipos de colección de Python -cadenas y listas hasta ahora- pueden cambiar y otros no. Si
+un tipo puede cambiar, se dice que es mutable. Si el tipo no puede cambiar, entonces
+se dice que es inmutable. Esto se ampliará a continuación.
 
-Lists are Mutable
------------------
+Las Listas son Mutables
+------------------------
 
-Unlike strings, lists are **mutable**. This means we can change an item in a list by accessing
-it directly as part of the assignment statement. Using the indexing operator (square brackets) on
-the left side of an assignment, we can update one of the list items.
+A diferencia de las cadenas, las listas son **mutables**. Esto significa que podemos cambiar un elemento en una lista accediendo
+directamente como parte de la declaración de asignación. Usando el operador de indexación (corchetes) en
+En el lado izquierdo de una tarea, podemos actualizar uno de los elementos de la lista.
 
 .. activecode:: ac8_1_4
 
@@ -41,11 +41,11 @@ the left side of an assignment, we can update one of the list items.
     print(fruit)
 
 
-An assignment to an element of a list is called **item assignment**. Item assignment does not work
-for strings. Recall that strings are immutable.
+Una asignación a un elemento de una lista se llama **asignación de elemento**. La asignación de elementos no funciona
+para Strings Recordemos que los Strings son inmutables.
 
-Here is the same example in codelens so that you can step through the statements and see the
-changes to the list elements.
+Aquí está el mismo ejemplo en codelens para que pueda recorrer las declaraciones y ver los
+cambios en los elementos de la lista.
 
 .. codelens:: clens8_1_1
     :python: py3
@@ -55,7 +55,7 @@ changes to the list elements.
     fruit[0] = "pear"
     fruit[-1] = "orange"
 
-By combining assignment with the slice operator we can update several elements at once.
+Al combinar la asignación con el operador slice podemos actualizar varios elementos a la vez.
 
 .. activecode:: ac8_1_5
 
@@ -63,7 +63,7 @@ By combining assignment with the slice operator we can update several elements a
     alist[1:3] = ['x', 'y']
     print(alist)
 
-We can also remove elements from a list by assigning the empty list to them.
+También podemos eliminar elementos de una lista asignándoles la lista vacía.
 
 .. activecode:: ac8_1_6
 
@@ -71,8 +71,8 @@ We can also remove elements from a list by assigning the empty list to them.
     alist[1:3] = []
     print(alist)
 
-We can even insert elements into a list by squeezing them into an empty slice at the
-desired location.
+Incluso podemos insertar elementos en una lista comprimiéndolos en un segmento vacío en la
+ubicación deseada.
 
 .. activecode:: ac8_1_7
 
@@ -82,14 +82,13 @@ desired location.
     alist[4:4] = ['e']
     print(alist)
 
-Strings are Immutable
----------------------
+Los Strings son Immutables
+---------------------------
 
-One final thing that makes strings different from some other Python collection types is that
-you are not allowed to modify the individual characters in the collection. It is tempting to use 
-the ``[]`` operator on the left side of an assignment, with the intention of changing a character 
-in a string. For example, in the following code, we would like to change the first letter of 
-``greeting``.
+Una última cosa que hace que los Strings sean diferentes de otros tipos de colección de Python es que
+no puede modificar los caracteres individuales de la colección. Es tentador usar
+el operador ``[]`` en el lado izquierdo de una asignación, con la intención de cambiar un caracter
+en un String, por ejemplo en el siguiente código, nos gustaría cambiar la primera letra de ``saludo``.
 
 .. activecode:: ac8_1_1
     
@@ -97,11 +96,11 @@ in a string. For example, in the following code, we would like to change the fir
     greeting[0] = 'J'            # ERROR!
     print(greeting)
 
-Instead of producing the output ``Jello, world!``, this code produces the
-runtime error ``TypeError: 'str' object does not support item assignment``.
+En lugar de producir la salida ``¡Jello, mundo!``, Este código produce el error de tiempo de ejecución
+``TypeError: 'str' el objeto no admite la asignación de elementos``.
 
-Strings are **immutable**, which means you cannot change an existing string. The
-best you can do is create a new string that is a variation on the original.
+Las Sttrings son **inmutables**, lo que significa que no puede cambiar una cadena existente.
+Lo mejor que puede hacer es crear una nueva cadena que sea una variación de la original.
 
 .. activecode:: ac8_1_2
     
@@ -110,11 +109,11 @@ best you can do is create a new string that is a variation on the original.
     print(newGreeting)
     print(greeting)          # same as it was
 
-The solution here is to concatenate a new first letter onto a slice of ``greeting``. 
-This operation has no effect on the original string.
+La solución aquí es concatenar una nueva primera letra a un slice de ``greeting``.
+Esta operación no tiene efecto en la cadena original.
 
-While it's possible to make up new variable names each time we make changes to existing
-values, it could become difficult to keep track of them all.
+Si bien es posible inventar nuevos nombres de variables cada vez que hacemos cambios a los existentes
+valores, podría ser difícil hacer un seguimiento de todos ellos.
 
 .. activecode:: ac8_1_3
 
@@ -124,12 +123,12 @@ values, it could become difficult to keep track of them all.
     phrase_complete = "M" + phrase_larger[1:] + " the night sky."
     excited_phrase_complete = phrase_complete[:-1] + "!"
 
-The more that you change the string, the more difficult it is to come up with a new variable to use. It's perfectly acceptable to re-assign the value to the same variable name in this case.
+Cuanto más cambie la cadena, más difícil será crear una nueva variable para usar. Es perfectamente aceptable reasignar el valor al mismo nombre de variable en este caso.
 
-Tuples are Immutable
---------------------
+Las Tuplas son Immutables
+--------------------------
 
-As with strings, if we try to use item assignment to modify one of the elements of a tuple, we get an error. In fact, that's the key difference between lists and tuples: tuples are like immutable lists. None of the operations on lists that mutate them are available for tuples. Once a tuple is created, it can't be changed.
+Al igual que con los Strings, si intentamos usar la asignación de elementos para modificar uno de los elementos de una tupla, obtenemos un error. De hecho, esa es la diferencia clave entre listas y tuplas: las tuplas son como listas inmutables. Ninguna de las operaciones en las listas que las mutan están disponibles para las tuplas. Una vez que se crea una tupla, no se puede cambiar.
 
 .. sourcecode:: python
 
@@ -138,19 +137,19 @@ As with strings, if we try to use item assignment to modify one of the elements 
 
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_1_1
    :answer_a: [4,2,True,8,6,5]
    :answer_b: [4,2,True,6,5]
-   :answer_c: Error, it is illegal to assign
+   :answer_c: Error, es una asignación incorrecta
    :correct: b
-   :feedback_a: Item assignment does not insert the new item into the list.
-   :feedback_b: Yes, the value True is placed in the list at index 2. It replaces 8.
-   :feedback_c: Item assignment is allowed with lists. Lists are mutable.
+   :feedback_a: La asignación de elementos no inserta el nuevo elemento en la lista.
+   :feedback_b: Sí, el valor True se coloca en la lista en el índice 2. Reemplaza 8.
+   :feedback_c: La asignación de artículos está permitida con listas. Las listas son mutables.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
@@ -163,12 +162,12 @@ As with strings, if we try to use item assignment to modify one of the elements 
    :answer_b: Call
    :answer_c: Error
    :correct: c
-   :feedback_a: Assignment is not allowed with strings.
-   :feedback_b: Assignment is not allowed with strings.
-   :feedback_c: Yes, strings are immutable.
+   :feedback_a: La asignación no está permitida con Strings.
+   :feedback_b: La asignación no está permitida con Strings.
+   :feedback_c: Sí, los Strings son inmutables.
    :practice: T
 
-   What is printed by the following statements:
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 

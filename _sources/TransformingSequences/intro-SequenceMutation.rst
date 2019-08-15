@@ -11,33 +11,33 @@
    :prefix: seqmut-1-
    :start: 1
 
-Introduction: Transforming Sequences
-====================================
+Introducción: Transformando Secuencias
+=======================================
 
-The sequences that we have used so far have been static: a list of colors that doesn't change or the characters in a string that stays the same.
-The real world is more complicated than that. A list of users for your social network may need to grow to accommodate new users (or shrink when users leave your service). The letters in a string may need to be modified to personalize a message ("Welcome to Wonderland, <your name>"), or to encode a secret message. 
+Las secuencias que hemos usado hasta ahora han sido estáticas: una lista de colores que no cambia o los caracteres en una cadena que permanece igual.
+El mundo real es más complicado que eso. Una lista de usuarios para su red social puede necesitar crecer para acomodar a nuevos usuarios (o reducirse cuando los usuarios dejan su servicio). Es posible que las letras de una cadena deban modificarse para personalizar un mensaje ("Bienvenido a Wonderland, <su nombre>") o para codificar un mensaje secreto.
 
-The following chapter will detail more of the methods that can be used to transform lists and strings. Generally, the two methods that can be used are changing the list object, in place, by mutating it; or by constructing a new string object using a copy-with-change operation.
+El siguiente capítulo detallará más de los métodos que se pueden usar para transformar listas y cadenas. Generalmente, los dos métodos que se pueden usar están cambiando el objeto de la lista, en su lugar, al mutarlo; o construyendo un nuevo objeto de cadena usando una operación de copiar con cambio.
 
 
-Learning Goals
---------------
+Metas de aprendizaje
+---------------------
 
-* To understand the concepts of mutable and immutable data types
-* To understand that methods on strings leave the origninal string alone but return a new string
-* To understand that lists are mutable data types and that mutating methods on lists return None
+* Comprender los conceptos de tipos de datos mutables e inmutables.
+* Para comprender que los métodos en cadenas dejan solo la cadena original pero devuelven una nueva cadena
+* Entender que las listas son tipos de datos mutables y que los métodos de mutación en las listas devuelven Ninguno
 
-Objectives
+Objectivos
 ----------
 
-Demonstrate the correct use of:
+Demostrar el uso correcto de:
 
-* concatenate
-* index operator
-* substring (slice)
-* search - contains in / not in and index
-* find method
+* concatenación
+* operador index
+* subcadenas (slice)
+* búsquedas - contains in / not in and index
+* método find
 * append
 * join
 * split
-* string format method
+* método string format

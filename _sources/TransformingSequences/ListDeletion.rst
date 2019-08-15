@@ -11,12 +11,12 @@
    :prefix: seqmut-2-
    :start: 1
 
-List Element Deletion
----------------------
+Eliminación de Elementos en una Lista
+--------------------------------------
 
-Using slices to delete list elements can be awkward and therefore error-prone.
-Python provides an alternative that is more readable.
-The ``del`` statement removes an element from a list by using its position.
+El uso de slices para eliminar elementos de la lista puede ser incómodo y, por lo tanto, propenso a errores.
+Python proporciona una alternativa que es más legible.
+La sentencia ``del`` elimina un elemento de una lista mediante el uso de su posición.
 
 .. activecode:: ac8_2_1
     
@@ -28,6 +28,6 @@ The ``del`` statement removes an element from a list by using its position.
     del alist[1:5]
     print(alist)
 
-As you might expect, ``del`` handles negative indices and causes a runtime
-error if the index is out of range. In addition, you can use a slice as an index for ``del``.
-As usual, slices select all the elements up to, but not including, the second index.
+Como es de esperar, ``del`` maneja índices negativos y provoca un error de tiempo de ejecución
+si el índice está fuera de rango. Además, puede usar un segmento como índice para ``del``.
+Como de costumbre, slice selecciona todos los elementos hasta, pero sin incluir, el segundo índice.

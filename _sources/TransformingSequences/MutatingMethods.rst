@@ -11,25 +11,25 @@
    :prefix: seqmut-6-
    :start: 1
 
-Mutating Methods
-================
+Métodos Mutantes
+=================
 
-You've seen some methods already, like the ``count`` and ``index`` methods. Methods are either 
-mutating or non-mutating. Mutating methods are ones that change the object after the method has been 
-used. Non-mutating methods do not change the object after the method has been used.
+Ya has visto algunos métodos, como los métodos ``count`` e ``index``. Los métodos son
+mutantes o no mutantes. Los métodos mutantes son aquellos que cambian el objeto después de que el método ha sido
+usado. Los métodos no mutantes no cambian el objeto una vez que se ha utilizado el método.
 
-The ``count`` and ``index`` methods are both non-mutating. Count returns the number of occurances of 
-the argument given but does not change the original string or list. Similarly, index returns the 
-leftmost occurance of the argument but does not change the original string or list. Below we'll talk 
-about list methods in general. Keep an eye out for methods that are mutating!
+Los métodos ``count`` e ``index`` no son mutantes. Count devuelve el número de ocurrencias del
+argumento dado pero no cambia la cadena o lista original. Del mismo modo, el índice devuelve la
+ocurrencia más a la izquierda del argumento pero no cambia la cadena o lista original. A continuación hablaremos
+acerca de los métodos de list en general. ¡Esté atento a los métodos que están mutando!
 
-List Methods
-------------
+Métodos de List
+-----------------
 
-The dot operator can also be used to access built-in methods of list objects.  
-``append`` is a list method which adds the argument passed to it to the end of
-the list. Continuing with this example, we show several other list methods.  Many of them are
-easy to understand.  
+El operador de puntos también se puede utilizar para acceder a métodos integrados de objetos de list.
+``append`` es un método de list que agrega el argumento que se le pasa al final de
+la lista. Continuando con este ejemplo, mostramos varios otros métodos de list. Muchos de ellos son
+fáciles de entender.
 
 .. activecode:: ac8_6_1
 
@@ -60,43 +60,43 @@ easy to understand.
     print(lastitem)
     print(mylist)
 
-There are two ways to use the ``pop`` method.  The first, with no parameter, will remove and return the
-last item of the list. If you provide a parameter for the position, ``pop`` will remove and return the
-item at that position. Either way the list is changed.
+Hay dos formas de usar el método ``pop``. El primero, sin parámetro, eliminará y devolverá el
+Último elemento de la lista. Si proporciona un parámetro para la posición, ``pop`` eliminará y devolverá el
+artículo en esa posición. De cualquier manera, la lista cambia.
 
-The following table provides a summary of the list methods shown above. The column labeled ``result`` 
-gives an explanation as to what the return value is as it relates to the new value of the list. The 
-word **mutator** means that the list is changed by the method but nothing is returned (actually 
-``None`` is returned). A **hybrid** method is one that not only changes the list but also returns a 
-value as its result. Finally, if the result is simply a return, then the list is unchanged by the 
-method.
+La siguiente tabla proporciona un resumen de los métodos de lista que se muestran arriba. La columna etiquetada como
+``resultado`` da una explicación de cuál es el valor de retorno en relación con el nuevo valor de la lista.
+La palabra **mutator** significa que el método cambia la lista pero no se devuelve nada (en realidad se devuelve
+``None``). Un método **hybrid** es uno que no solo cambia la lista sino que también devuelve un
+valor como resultado. Finalmente, si el resultado es simplemente un retorno, entonces la lista no fue cambiada por el
+método.
 
-Be sure to experiment with these methods to gain a better understanding of what they do.
+Asegúrese de experimentar con estos métodos para comprender mejor lo que hacen.
 
 
 
 ==========  ==============  ============  ================================================
-Method      Parameters       Result       Description
+Método      Parámetros       Resultado    Description
 ==========  ==============  ============  ================================================
-append      item            mutator       Adds a new item to the end of a list
-insert      position, item  mutator       Inserts a new item at the position given
-pop         none            hybrid        Removes and returns the last item
-pop         position        hybrid        Removes and returns the item at position
-sort        none            mutator       Modifies a list to be sorted
-reverse     none            mutator       Modifies a list to be in reverse order
-index       item            return idx    Returns the position of first occurrence of item
-count       item            return ct     Returns the number of occurrences of item
-remove      item            mutator       Removes the first occurrence of item
+append      item            mutator       Agrega un nuevo elemento al final de una lista
+insert      position, item  mutator       Inserta un nuevo elemento en la posición dada
+pop         none            hybrid        Elimina y devuelve el último artículo.
+pop         position        hybrid        Elimina y devuelve el artículo en su posición.
+sort        none            mutator       Modifica una lista para ordenarla
+reverse     none            mutator       Modifica una lista para estar en orden inverso
+index       item            return idx    Devuelve la posición de la primera aparición del artículo.
+count       item            return ct     Devuelve el número de ocurrencias del artículo.
+remove      item            mutator       Elimina la primera aparición del artículo.
 ==========  ==============  ============  ================================================
 
 
-Details for these and others can be found in the 
+Los detalles para estos y otros se pueden encontrar en el
 `Python Documentation <http://docs.python.org/py3k/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range>`_.
 
-It is important to remember that methods like ``append``, ``sort``,  and ``reverse`` all return 
-``None``. They change the list; they don't produce a new list. So, while we did reassignment to 
-increment a number, as in ``x = x + 1``, doing the analogous thing with these operations will lose 
-the entire list contents (see line 8 below).
+Es importante recordar que métodos como ``append``, ``sort`` y ``reverse`` devuelven todos
+``None``. Cambian la lista; No producen una nueva lista. Entonces, mientras realizamos la reasignación
+para incrementar un número, como en ``x = x + 1``, haciendo lo análogo con estas operaciones perderá
+todo el contenido de la lista (ver la línea 8 a continuación).
 
 .. activecode:: ac8_6_2
 
@@ -110,19 +110,19 @@ the entire list contents (see line 8 below).
     mylist = mylist.sort()   #probably an error
     print(mylist)
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_6_1
    :answer_a: [4,2,8,6,5,False,True]
    :answer_b: [4,2,8,6,5,True,False]
    :answer_c: [True,False,4,2,8,6,5]
    :correct: b
-   :feedback_a: True was added first, then False was added last.
-   :feedback_b: Yes, each item is added to the end of the list.
-   :feedback_c: append adds at the end, not the beginning.
+   :feedback_a: Primero se agregó True, luego se agregó False al final.
+   :feedback_b: Sí, cada elemento se agrega al final de la lista.
+   :feedback_c: append agrega al final, no al principio.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. code-block:: python
 
