@@ -11,58 +11,58 @@
    :prefix: files-4-
    :start: 1
 
-Alternative File Reading Methods
---------------------------------
+Métodos alternativos de lectura de archivos
+-------------------------------------------
 
-Once you have a file "object", the thing returned by the open function, Python provides three methods to read data
-from that object. The ``read()`` method returns the entire contents of the file as a single string (or just some 
-characters if you provide a number as an input parameter. The ``readlines`` method returns the entire contents of
-the entire file as a list of strings, where each item in the list is one line of the file. The ``readline`` 
-method reads one line from the file and returns it as a string. The strings returned by ``readlines`` or 
-``readline`` will contain the newline character at the end.  :ref:`Table 2 <filemethods2a>` summarizes these 
-methods and the following session shows them in action.
+Una vez que tiene un "objeto" de archivo, lo que devuelve la función abierta, Python proporciona tres métodos para leer datos
+de ese objeto El método ``read()`` devuelve todo el contenido del archivo como un solo string (o solo algunos
+caracteres si proporciona un número como parámetro de entrada). El método ``readlines`` devuelve todo el contenido de
+todo el archivo como una lista de strings, donde cada elemento de la lista es una línea del archivo. El método ``readline``
+lee una línea del archivo y la devuelve como un string. Los strings devueltos por ``readlines`` o
+``readline`` contendrán el carácter de nueva línea al final.  :ref:`Table 2 <filemethods2a>` resume estos
+métodos y la siguiente sesión los muestra en acción.
 
 .. _filemethods2a:
 
 ======================== =========================== =====================================
-**Method Name**           **Use**                     **Explanation**
+**Nombre del método**           **Uso**                     **Explicación**
 ======================== =========================== =====================================
-``write``                 ``filevar.write(astring)``  Add astring to the end of the file.
-                                                      filevar must refer to a file that has
-                                                      been  opened for writing.
-``read(n)``               ``filevar.read()``          Reads and returns a string of ``n``
-                                                      characters, or the entire file as a
-                                                      single string if  n is not provided.
-``readline(n)``           ``filevar.readline()``      Returns the next line of the file with
-                                                      all text up to and including the
-                                                      newline character. If n is provided as
-                                                      a parameter than only n characters
-                                                      will be returned if the line is longer
-                                                      than ``n``.
-``readlines(n)``          ``filevar.readlines()``     Returns a list of strings, each
-                                                      representing a single line of the file.
-                                                      If n is not provided then all lines of
-                                                      the file are returned. If n is provided
-                                                      then n characters are read but n is
-                                                      rounded up so that an entire line is
-                                                      returned.
+``write``                 ``filevar.write(astring)``  Agrega una cadena al final del archivo,
+                                                      filevar debe referirse a un archivo que
+                                                      debe haber sido abierto para escribir.
+``read(n)``               ``filevar.read()``          Lee y devuelve una cadena de ``n``
+                                                      caracteres, o todo el archivo como
+                                                      string único si no se proporciona n.
+``readline(n)``           ``filevar.readline()``      Devuelve la siguiente línea del archivo
+                                                      con todo el texto hasta e incluyendo el
+                                                      caracter de nueva línea. Si n se proporciona
+                                                      como un parámetro que solo n caracteres
+                                                      será devuelto si la línea es más larga
+                                                      que ``n``.
+``readlines(n)``          ``filevar.readlines()``     Devuelve una lista de cadenas, cada una
+                                                      representando una sola línea del archivo.
+                                                      Si no se proporciona n, entonces todas las líneas
+                                                      devuelven el archivo. Si se proporciona n
+                                                      entonces se leen n caracteres pero n es
+                                                      redondeado hacia arriba para que una línea
+                                                      entera sea devuelta
 ======================== =========================== =====================================
 
 
-In this course, we will generally either iterate through the lines returned by ``readlines()`` with a for loop, 
-or use ``read()`` to get all of the contents as a single string.
+En este curso, generalmente iteraremos a través de las líneas devueltas por ``readlines()`` con un bucle for,
+o usando ``read()`` para obtener todos los contenidos como un solo string.
 
-In other programming languages, where they don't have the convenient for loop method of going through the lines 
-of the file one by one, they use a different pattern which requires a different kind of loop, the ``while`` loop. 
-Fortunately, you don't need to learn this other pattern, and we will put off consideration of ``while`` loops 
-until later in this course. We don't need them for handling data from files.
+En otros lenguajes de programación, donde no tienen el método conveniente para recorrer las líneas
+del archivo, uno por uno, usan un patrón diferente que requiere un tipo diferente de bucle, el bucle ``while``.
+Afortunadamente, no necesita aprender este otro patrón, y pospondremos la consideración de los bucles  ``while``
+hasta más tarde en este curso. No los necesitamos para manejar datos de archivos.
 
 .. note::
 
-   A common error that novice programmers make is not realizing that all these ways of reading the file contents, 
-   **use up the file**. After you call readlines(), if you call it again you'll get an empty list.
+   Un error común que hacen los programadores novatos es no darse cuenta de que todas estas formas de leer el contenido del archivo,
+   **usan el archivo**. Después de llamar a readlines(), si lo vuelve a llamar obtendrá una lista vacía.
 
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. raw:: html
 
@@ -86,7 +86,7 @@ until later in this course. We don't need them for handling data from files.
    :practice: T
    :available_files: school_prompt2.txt
 
-   1. Using the file ``school_prompt2.txt``, find the number of characters in the file and assign that value to the variable ``num_char``.
+   1. Usando el archivo ``school_prompt2.txt``, encuentre el número de caracteres en el archivo y asigne ese valor a la variable ``num_char``.
    ~~~~
 
    =====
@@ -123,7 +123,7 @@ until later in this course. We don't need them for handling data from files.
    :autograde: unittest
    :practice: T
 
-   2. Find the number of lines in the file, ``travel_plans2.txt``, and assign it to the variable ``num_lines``.
+   2. Encuentre el número de líneas en el archivo, ``travel_plans2.txt``, y asígnelo a la variable ``num_lines``.
    ~~~~
    
    =====
@@ -156,7 +156,7 @@ until later in this course. We don't need them for handling data from files.
    :autograde: unittest
    :practice: T
    
-   3. Create a string called ``first_forty`` that is comprised of the first 40 characters of ``emotion_words2.txt``. 
+   3. Cree una cadena llamada ``first_forty`` que esté compuesta por los primeros 40 caracteres de ``emotion_words2.txt``.
    ~~~~
 
    =====
