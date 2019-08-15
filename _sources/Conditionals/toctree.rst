@@ -1,8 +1,8 @@
-Conditionals
+Condicionales
 ::::::::::::::::::::
 
 .. toctree::
-   :caption: Conditionals
+   :caption: Condicionales
    :maxdepth: 2
 
    intro-TurtlesandConditionals.rst
