@@ -15,33 +15,33 @@
    single: nested conditionals
    single: conditional; nested
 
-Nested conditionals
--------------------
+Condicionales anidados
+----------------------
 
-One conditional can also be **nested** within another. For example, assume we have two integer variables, ``x`` and 
-``y``. The following pattern of selection shows how we might decide how they are related to each other.
+Un condicional también puede ser **anidado** dentro de otro. Por ejemplo, supongamos que tenemos dos variables enteras, ``x`` e
+``y``. El siguiente patrón de selección muestra cómo podríamos decidir cómo se relacionan entre sí.
 
 .. sourcecode:: python
 
     if x < y:
-        print("x is less than y")
+        print("x es menor que y")
     else:
         if x > y:
-            print("x is greater than y")
+            print("x es mayor que y")
         else:
-            print("x and y must be equal")
+            print("x e y deben ser iguales")
 
-The outer conditional contains two branches.
-The second branch (the else from the outer) contains another ``if`` statement, which
-has two branches of its own. Those two branches could contain
-conditional statements as well.
+El condicional externo contiene dos ramas.
+La segunda rama (la otra desde el exterior) contiene otra declaración ``if``, que
+tiene dos ramas propias. Esas dos ramas podrían contener
+declaraciones condicionales también.
 
-The flow of control for this example can be seen in this flowchart illustration.
+El flujo de control para este ejemplo se puede ver en esta ilustración de diagrama de flujo.
 
 .. image:: Figures/flowchart_nested_conditional.png
 
 
-Here is a complete program that defines values for ``x`` and ``y``.  Run the program and see the result.  Then change the values of the variables to change the flow of control.
+Aquí hay un programa completo que define valores para ``x`` e ``y``. Ejecute el programa y vea el resultado. Luego cambie los valores de las variables para cambiar el flujo de control.
 
 .. activecode:: ac7_8_1
 
@@ -49,19 +49,19 @@ Here is a complete program that defines values for ``x`` and ``y``.  Run the pro
     y = 10
 
     if x < y:
-        print("x is less than y")
+        print("x es menor que y")
     else:
         if x > y:
-            print("x is greater than y")
+            print("x es mayor y")
         else:
-            print("x and y must be equal")
+            print("x e y deben ser iguales")
 
 .. note::
 
-    In some programming languages, matching the if and the else is a problem. However, in Python this is not 
-    the case. The indentation pattern tells us exactly which else belongs to which if.
+    En algunos lenguajes de programación, emparejar el if y el else es un problema. Sin embargo, en Python esto no es
+    el caso. El patrón de sangría nos dice exactamente qué más pertenece a qué si.
 
-If you are still a bit unsure, here is the same selection as part of a codelens example.  Step through it to see how the correct ``print`` is chosen.
+Si todavía está un poco inseguro, aquí está la misma selección como parte de un ejemplo de codelens. Recórralo para ver cómo se elige el ``print`` correcto.
 
 .. codelens:: clens7_8_1
     :python: py3
@@ -71,33 +71,33 @@ If you are still a bit unsure, here is the same selection as part of a codelens 
     y = 10
 
     if x < y:
-        print("x is less than y")
+        print("x es menor que y")
     else:
         if x > y:
-            print("x is greater than y")
+            print("x es mayor que y")
         else:
-            print("x and y must be equal")
+            print("x e y deben ser iguales")
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question7_8_1
    :answer_a: No
    :answer_b: Yes
    :correct: a
-   :feedback_a: This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.
-   :feedback_b: This is a legal nested if-else statement.  The inner if-else statement is contained completely within the body of the outer else-block.
+   :feedback_a: Esta es una declaración legal anidada if-else. La declaración interna if-else está contenida completamente dentro del cuerpo del bloque else externo.
+   :feedback_b: Esta es una declaración legal anidada if-else. La declaración interna if-else está contenida completamente dentro del cuerpo del bloque else externo.
    :practice: T
 
-   Will the following code cause an error?
+   ¿El siguiente código causará un error?
 
    .. code-block:: python
 
      x = -10
      if x < 0:
-         print("The negative number ",  x, " is not valid here.")
+         print("El número negativo ",  x, " no es válido aquí.")
      else:
          if x > 0:
-             print(x, " is a positive number")
+             print(x, " es un número positivo")
          else:
-             print(x," is 0")
+             print(x," es 0")
