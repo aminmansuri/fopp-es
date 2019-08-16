@@ -13,12 +13,12 @@
    :prefix: files-9-
    :start: 1
 
-Exercises
----------
+Ejercicios
+----------
 
-Below are the datafiles that you have been using so far, and will continue to use for the rest of the chapter.
+A continuación se muestran los archivos de datos que ha estado utilizando hasta ahora y que seguirá utilizando durante el resto del capítulo.
 
-The file below is ``travel_plans.txt``.
+El archivo a continuación es ``travel_plans.txt``.
 
 .. raw:: html
 
@@ -36,7 +36,7 @@ The file below is ``travel_plans.txt``.
     I only know English!
     </pre>
 
-The file below is ``school_prompt.txt``.
+El archivo a continuación es ``school_prompt.txt``.
 
 .. raw:: html
 
@@ -53,7 +53,7 @@ The file below is ``school_prompt.txt``.
     technical write ups, or scripts.
     </pre>
 
-The file below is ``emotion_words.txt``.
+El archivo a continuación es ``emotion_words.txt``.
 
 .. raw:: html
 
@@ -79,9 +79,9 @@ The file below is ``emotion_words.txt``.
                :nocodelens:
                :available_files: studentdata.txt
 
-               The following sample file called ``studentdata.txt`` contains one line for each student in an imaginary class.  The 
-               students name is the first thing on each line, followed by some exam scores.  
-               The number of scores might be different for each student.
+               El siguiente archivo de muestra llamado ``studentdata.txt`` contiene una línea para cada estudiante en una clase imaginaria.
+               El nombre de los estudiantes es lo primero en cada línea, seguido de algunas calificaciones de los exámenes.
+               El número de puntajes puede ser diferente para cada estudiante.
 
                .. raw:: html
 
@@ -93,13 +93,13 @@ The file below is ``emotion_words.txt``.
                    john 14 32 25 16 89
                    </pre>
 
-               Using the text file ``studentdata.txt`` write a program that prints out the names of
-               students that have more than six quiz scores. 
+               Usando el archivo de texto ``studentdata.txt``, escriba un programa que imprima los nombres de los
+               estudiantes que tienen más de seis puntajes de prueba.
                ~~~~
 
-               # Hint: first see if you can write a program that just prints out the number of scores on each line
-               # Then, make it print the number only if the number is at least six
-               # Then, switch it to printing the name instead of the number
+               # Sugerencia: primero vea si puede escribir un programa que simplemente imprima el número de puntajes en cada línea
+               # Luego, haga que imprima el número solo si el número es al menos seis
+               # Luego, cámbielo a imprimir el nombre en lugar del número
         
 
         .. tab:: Answer
@@ -127,7 +127,7 @@ The file below is ``emotion_words.txt``.
                :nocodelens:
                :available_files: travel_plans.txt
 
-               Create a list called ``destination`` using the data stored in ``travel_plans.txt``. Each element of the list should contain a line from the file that lists a country and cities inside that country. Hint: each line that has this information also has a colon ``:`` in it.
+               Cree una lista llamada ``destination`` utilizando los datos almacenados en ``travel_plans.txt``. Cada elemento de la lista debe contener una línea del archivo que enumera un país y ciudades dentro de ese país. Sugerencia: cada línea que tiene esta información también tiene dos puntos ``:``.
                ~~~~
                
                =====
@@ -152,7 +152,7 @@ The file below is ``emotion_words.txt``.
                :nocodelens:
                :available_files: emotion_words.txt
 
-               Create a list called ``j_emotions`` that contains every word in ``emotion_words.txt`` that begins with the letter "j".
+               Cree una lista llamada ``j_emotions`` que contenga cada palabra en ``emotion_words.txt`` que comience con la letra "j".
                ~~~~
                
                =====
