@@ -11,15 +11,15 @@
    :prefix: files-11-
    :start: 1
 
-👩‍💻 Tips on Handling Files
-============================
+👩‍💻 Consejos para manejar archivos
+======================================
 
-When working with files, there are a few things to keep in mind. When naming files, it's best to not include spaces. 
-While most operating systems can handle files with spaces in their names, not all can.
+Al trabajar con archivos, hay algunas cosas a tener en cuenta. Al nombrar archivos, es mejor no incluir espacios.
+Si bien la mayoría de los sistemas operativos pueden manejar archivos con espacios en sus nombres, no todos pueden hacerlo.
 
-Additionally, suffixes in files names, for example the .txt in ``FileNameExample.txt``, are not magic. Instead, these 
-suffixes are a convention. For some operating systems the suffixes have no special significance, and only have meaning when 
-used in a program. Other operating systems infer information from the suffixes - for example, ``.EXE`` is a suffix that 
-means a file is executable. 
+Además, los sufijos en los nombres de archivos, por ejemplo, el .txt en ``FileNameExample.txt``, no son mágicos. En cambio, estos
+sufijos son una convención. Para algunos sistemas operativos, los sufijos no tienen un significado especial, y solo tienen significado cuando son
+utilizados en un programa. Otros sistemas operativos infieren información de los sufijos; por ejemplo, ``.EXE`` es un sufijo que
+significa que un archivo es ejecutable.
 
-It's a good idea to follow the conventions. If a file contains CSV formatted data, name it with the extension ``.csv``, not ``.txt``. A python program will be able to read it either way, but if you follow the convention you will help other people guess what's in the file. And you will also help the computer's operating system to guess what application program it should open when you double-click on the file.
+Es una buena idea seguir las convenciones. Si un archivo contiene datos con formato CSV, asígnele el nombre con la extensión ``.csv``, no ``.txt``. Un programa de Python podrá leerlo de cualquier manera, pero si sigue la convención, ayudará a otras personas a adivinar qué hay en el archivo. Y también ayudará al sistema operativo de la computadora a adivinar qué programa de aplicación debe abrir cuando haga doble clic en el archivo.
