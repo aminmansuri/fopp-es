@@ -11,31 +11,30 @@
    :prefix: dictionaries-10-
    :start: 1
 
-Glossary
+Glosario
 --------
 
 .. glossary::
         
-    dictionary
-        A collection of key-value pairs that maps from keys to values. The keys
-        can be any immutable type, and the values can be any type.
+    diccionario
+        Una colección de pares clave-valor que se asigna de claves a valores. Las llaves
+        puede ser de cualquier tipo inmutable, y los valores pueden ser de cualquier tipo.
 
-    key
-        A data item that is *mapped to* a value in a dictionary. Keys are used
-        to look up values in a dictionary.
+    clave
+        Un elemento de datos que *se asigna a* un valor en un diccionario. Se usan llaves
+        para buscar valores en un diccionario.
     
-    value
-        The value that is associated with each key in a dictionary.
+    valor
+        El valor asociado con cada clave en un diccionario.
 
-    key-value pair
-        One of the pairs of items in a dictionary. Values are looked up in a
-        dictionary by key.
+    par clave-valor
+        Uno de los pares de elementos en un diccionario. Los valores se buscan en un
+        diccionario por clave.
         
-    mapping type
-        A mapping type is a data type comprised of a collection of keys and
-        associated values. Python's only built-in mapping type is the
-        dictionary.  Dictionaries implement the
-        `associative array <http://en.wikipedia.org/wiki/Associative_array>`__
-        abstract data type.
+    tipo de dato mapping
+        Es un tipo de datos compuesto por una colección de claves y
+        valores asociados El único tipo de mapeo incorporado de Python es el
+        diccionario. Los diccionarios implementan el tipo abstracto
+        `matriz asociativa <http://en.wikipedia.org/wiki/Associative_array>`__
 
 
