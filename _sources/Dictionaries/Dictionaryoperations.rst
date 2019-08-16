@@ -14,12 +14,12 @@
 .. index:: del; dictionary
    statement; del
 
-Dictionary operations
----------------------
+Operaciones de Diccionario
+---------------------------
 
-The ``del`` statement removes a key-value pair from a dictionary. For example, the following dictionary contains the 
-names of various fruits and the number of each fruit in stock. If someone buys all of the pears, we can remove the 
-entry from the dictionary.
+La declaración ``del`` elimina un par clave-valor de un diccionario. Por ejemplo, el siguiente diccionario contiene el
+nombres de varias frutas y el número de cada fruta en stock. Si alguien compra todas las peras, podemos eliminar el
+entrada del diccionario.
 
 .. codelens:: clens10_2_1
     :python: py3
@@ -28,9 +28,9 @@ entry from the dictionary.
     
     del inventory['pears']
 
-Dictionaries are mutable, as the delete operation above indicates. As we've seen before with lists, this means that the 
-dictionary can be modified by referencing an association on the left hand side of the assignment statement. In the 
-previous example, instead of deleting the entry for ``pears``, we could have set the inventory to ``0``.
+Los diccionarios son mutables, como lo indica la operación de eliminación anterior. Como hemos visto antes con las listas, esto significa que el
+El diccionario se puede modificar haciendo referencia a una asociación en el lado izquierdo de la instrucción de asignación. En el
+ejemplo anterior, en lugar de eliminar la entrada para ``pears``, podríamos haber configurado el inventario en ``0``.
 
 .. codelens:: clens10_2_2
     :python: py3
@@ -41,12 +41,12 @@ previous example, instead of deleting the entry for ``pears``, we could have set
 
 .. note:: 
    
-   Setting the value associated with ``pears`` to 0 has a different effect than removing the key-value pair entirely 
-   with ``del``. Try printout out the two dictionaries in the examples above.
+   Establecer el valor asociado con ``pears`` en 0 tiene un efecto diferente que eliminar completamente el par clave-valor
+   con ``del``. Intente imprimir los dos diccionarios en los ejemplos anteriores.
 
-Similarily, a new shipment of 200 bananas arriving could be handled like this. Notice that there are now 512 bananas---
-the dictionary has been modified. Note also that the ``len`` function also works on dictionaries. It returns the number 
-of key-value pairs.
+Del mismo modo, un nuevo envío de 200 plátanos que llegan podría manejarse de esta manera. Tenga en cuenta que ahora hay 512 plátanos
+El diccionario ha sido modificado. Tenga en cuenta también que la función ``len`` también funciona en los diccionarios. Devuelve el número
+de pares clave-valor.
 
 .. codelens:: clens10_2_3
     :python: py3
@@ -56,24 +56,24 @@ of key-value pairs.
 
     numItems = len(inventory)
 
-Notice that there are now 512 bananas---the dictionary has been modified. Note also that the ``len`` function also 
-works on dictionaries. It returns the number of key-value pairs.
+Tenga en cuenta que ahora hay 512 plátanos, el diccionario ha sido modificado. Tenga en cuenta también que la función ``len`` también
+funciona en diccionarios. Devuelve el número de pares clave-valor.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question10_2_1
    :answer_a: 12
    :answer_b: 0
    :answer_c: 18
-   :answer_d: Error, there is no entry with mouse as the key.
+   :answer_d: Error, no hay entrada con el mouse como clave.
    :correct: c
-   :feedback_a: 12 is associated with the key cat.
-   :feedback_b: The key mouse will be associated with the sum of the two values.
-   :feedback_c: Yes, add the value for cat and the value for dog (12 + 6) and create a new entry for mouse.
-   :feedback_d: Since the new key is introduced on the left hand side of the assignment statement, a new key-value pair is added to the dictionary.
+   :feedback_a: 12 está asociado con el gato clave.
+   :feedback_b: El mouse clave se asociará con la suma de los dos valores.
+   :feedback_c: Sí, agregue el valor para cat y el valor para dog (12 + 6) y cree una nueva entrada para mouse.
+   :feedback_d: Como la nueva clave se introduce en el lado izquierdo de la instrucción de asignación, se agrega un nuevo par clave-valor al diccionario.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -85,7 +85,7 @@ works on dictionaries. It returns the number of key-value pairs.
    :language: python
    :autograde: unittest
 
-   **2.** Update the value for "Phelps" in the dictionary ``swimmers`` to include his medals from the Rio Olympics by adding 5 to the current value (Phelps will now have 28 total medals). Do not rewrite the dictionary.
+   **2.** Actualice el valor de "Phelps" en el diccionario ``swimmers`` para incluir sus medallas de los Juegos Olímpicos de Río agregando 5 al valor actual (Phelps ahora tendrá 28 medallas en total). No reescribas el diccionario.
    ~~~~
 
    swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}

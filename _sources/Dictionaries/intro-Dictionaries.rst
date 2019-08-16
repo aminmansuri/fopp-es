@@ -15,14 +15,14 @@
    :prefix: dictionaries-1-
    :start: 1
 
-Introduction: Dictionaries
-==========================
+Introducción: Diccionarios
+===========================
 
-To provide an example of this new kind of datatype, we will create a dictionary to translate English words into Spanish. 
-For this dictionary, the keys are strings and the values will also be strings.
+Para proporcionar un ejemplo de este nuevo tipo de tipo de datos, crearemos un diccionario para traducir palabras en inglés al español.
+Para este diccionario, las claves son cadenas y los valores también serán cadenas.
 
-One way to create a dictionary is to start with the empty dictionary and add **key-value pairs**. The empty dictionary 
-is denoted ``{}``.
+Una forma de crear un diccionario es comenzar con el diccionario vacío y agregar **pares clave-valor**. El diccionario vacio
+se denota ``{}``.
 
 .. codelens:: clens10_1_1
     :python: py3
@@ -33,17 +33,17 @@ is denoted ``{}``.
     eng2sp['three'] = 'tres'
     print(eng2sp)
 
-The first assignment creates an empty dictionary named ``eng2sp``. The other assignments add new key-value pairs to 
-the dictionary. The left hand side gives the dictionary and the key being associated. The right hand side gives the 
-value being associated with that key. We can print the current value of the dictionary in the usual way. The key-value 
-pairs of the dictionary are separated by commas. Each pair contains a key and a value separated by a colon.
+La primera asignación crea un diccionario vacío llamado ``eng2sp``. Las otras asignaciones agregan nuevos pares clave-valor a
+el diccionario. El lado izquierdo muestra el diccionario y la clave asociada. El lado derecho da la
+valor asociado con esa clave. Podemos imprimir el valor actual del diccionario de la manera habitual. El valor clave
+Los pares del diccionario están separados por comas. Cada par contiene una clave y un valor separados por dos puntos.
 
-The order of the pairs may not be what you expected. Python uses complex algorithms, designed for very fast access, to 
-determine where the key-value pairs are stored in a dictionary. For our purposes we can think of this ordering as 
-unpredictable.
+El orden de los pares puede no ser el esperado. Python utiliza algoritmos complejos, diseñados para un acceso muy rápido, para
+determinar dónde se almacenan los pares clave-valor en un diccionario. Para nuestros propósitos, podemos considerar este pedido como
+impredecible.
 
-Another way to create a dictionary is to provide a bunch of key-value pairs using the same syntax as the previous 
-output.
+Otra forma de crear un diccionario es proporcionar un grupo de pares clave-valor utilizando la misma sintaxis que la anterior.
+salida.
 
 .. codelens:: clens10_1_2
     :python: py3
@@ -51,10 +51,10 @@ output.
     eng2sp = {'three': 'tres', 'one': 'uno', 'two': 'dos'}
     print(eng2sp)
 
-It doesn't matter what order we write the pairs. The values in a dictionary are accessed with keys, not with indices, 
-so there is no need to care about ordering.
+No importa en qué orden escribimos los pares. Se accede a los valores en un diccionario con claves, no con índices,
+así que no hay necesidad de preocuparse por ordenar.
 
-Here is how we use a key to look up the corresponding value.
+Así es como usamos una tecla para buscar el valor correspondiente.
 
 .. codelens:: clens10_1_3
     :python: py3
@@ -65,32 +65,32 @@ Here is how we use a key to look up the corresponding value.
     print(value)
     print(eng2sp['one'])
 
-The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value ``uno``.
+La clave ``'two'`` produce el valor ``'dos'``. La clave ``one`` produce el valor ``uno``.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question10_1_1 
-   :answer_a: False
-   :answer_b: True
-   :correct: b
-   :feedback_a: Dictionaries associate keys with values but there is no assumed order for the entries.
-   :feedback_b: Yes, dictionaries are associative collections meaning that they store key-value pairs.
+   :answer_a: Verdadero
+   :answer_b: Falso
+   :correct: a
+   :feedback_a: Los diccionarios asocian claves con valores, pero no hay un orden asumido para las entradas.
+   :feedback_b: Sí, los diccionarios son colecciones asociativas, lo que significa que almacenan pares clave-valor.
 
-   A dictionary is an unordered collection of key-value pairs.
+   Un diccionario es una colección desordenada de pares clave-valor.
 
 .. mchoice:: question10_1_2
    :answer_a: 12
    :answer_b: 6
    :answer_c: 23
-   :answer_d: Error, you cannot use the index operator with a dictionary.
+   :answer_d: Error, no puede usar el operador de índice con un diccionario.
    :correct: b
-   :feedback_a: 12 is associated with the key cat.
-   :feedback_b: Yes, 6 is associated with the key dog.
+   :feedback_a: 12 es asociado con la clave cat.
+   :feedback_b: Sí, 6 está asociado con la clave perro.
    :feedback_c: 23 is associated with the key elephant.
    :feedback_d: The [ ] operator, when used with a dictionary, will look up a value based on its key.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -102,7 +102,7 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
    :autograde: unittest
    :practice: T
 
-   **3.** Create a dictionary that keeps track of the USA's Olympic medal count. Each key of the dictionary should be the type of medal (gold, silver, or bronze) and each key's value should be the number of that type of medal the USA's won. Currently, the USA has 33 gold medals, 17 silver, and 12 bronze. Create a dictionary saved in the variable ``medals`` that reflects this information.
+   **3.** Cree un diccionario que haga un seguimiento del recuento de medallas olímpicas de EE.UU. Cada clave del diccionario debe ser el tipo de medalla (oro, plata o bronce) y el valor de cada clave debe ser el número de ese tipo de medalla que ganó EE. UU. Actualmente, Estados Unidos tiene 33 medallas de oro, 17 de plata y 12 de bronce. Cree un diccionario guardado en la variable ``medals`` que refleje esta información.
    ~~~~
 
    =====
@@ -121,7 +121,7 @@ The key ``'two'`` yields the value ``'dos'``. The key ``one`` yields the value `
    :autograde: unittest
    :practice: T
 
-   **4.** You are keeping track of olympic medals for Italy in the 2016 Rio Summer Olympics! At the moment, Italy has 7 gold medals, 8 silver metals, and 6 bronze medals. Create a dictionary called ``olympics`` where the keys are the types of medals, and the values are the number of that type of medals that Italy has won so far.
+   **4.** ¡Estás siguiendo las medallas olímpicas para Italia en los Juegos Olímpicos de Río 2016! Por el momento, Italia tiene 7 medallas de oro, 8 de plata y 6 de bronce. Cree un diccionario llamado ``olympics`` donde las claves son los tipos de medallas, y los valores son el número de ese tipo de medallas que Italia ha ganado hasta ahora.
    ~~~~
 
    =====

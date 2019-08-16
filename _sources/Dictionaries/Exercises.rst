@@ -13,8 +13,8 @@
    :prefix: dictionaries-8-
    :start: 1
 
-Exercises
-=========
+Ejercicios
+===========
 
 #.
     .. tabbed:: q1
@@ -23,7 +23,7 @@ Exercises
 
             .. actex:: ac10_8_1
 
-               Predict what will print out from the following code. If a line causes a run-time error, comment it out and see whether the rest of your predictions were correct.
+               Predecir lo que se imprimirá del siguiente código. Si una línea causa un error de tiempo de ejecución, coméntelo y vea si el resto de sus predicciones fueron correctas.
 
                ~~~~
 
@@ -39,7 +39,7 @@ Exercises
                del d['apples']
                print('apples' in d)
 
-2. Avast, try this one, swabbies!
+2. ¡Avast, prueba este, swabbies!
 
     .. tabbed:: q5
 
@@ -47,12 +47,12 @@ Exercises
 
             .. actex:: ac10_8_2
 
-               Here's a table of English to Pirate translations
+               Aquí hay una tabla de traducciones del inglés al pirata
 
                .. table::
         
                   ==========  ==============
-                  English     Pirate
+                  Inglés      Pirate
                   ==========  ==============
                   sir         matey
                   hotel       fleabag inn
@@ -74,7 +74,7 @@ Exercises
                   man         matey
                   ==========  ==============
 
-               Write a program that asks the user for a sentence in English and then translates that sentence to Pirate.
+               Escriba un programa que le pida al usuario una oración en inglés y luego traduzca esa oración a Pirate.
                ~~~~
 
         .. tab:: Answer
@@ -89,7 +89,7 @@ Exercises
                 pirate['restaurant'] = 'galley'
                 #and so on
 
-                sentence = input("Please enter a sentence in English")
+                sentence = input("Por favor, introduzca una oración en English")
 
                 psentence = []
                 words = sentence.split()
@@ -101,7 +101,7 @@ Exercises
 
                 print(" ".join(psentence))
 
-#. (challenge exericse)
+#. (ejercicio de desafío)
 
       .. tabbed:: q2
 
@@ -109,7 +109,7 @@ Exercises
 
                   .. actex:: ac10_8_3
 
-                     Write a program that finds the most used 7 letter word in scarlet3.txt.
+                     Escriba un programa que encuentre la palabra de 7 letras más utilizada en scarlet3.txt
                      ~~~~
 
                      f = open('scarlet3.txt', 'r')
@@ -146,10 +146,10 @@ Exercises
 
            .. actex:: ac10_8_4
 
-               Write a program that allows the user to enter a string.  It then prints a
-               table of the letters of the alphabet in alphabetical order which occur in
-               the string together with the number of times each letter occurs. Case should
-               be ignored. A sample run of the program might look this this::   
+               Escriba un programa que permita al usuario ingresar una cadena. Luego imprime un
+               tabla de las letras del alfabeto en orden alfabético que ocurren en
+               la cadena junto con la cantidad de veces que aparece cada letra. Caso debe
+               ser ignorado. Una ejecución de muestra del programa podría verse así::
                
                    Please enter a sentence: ThiS is String with Upper and lower case Letters.
                    a  2

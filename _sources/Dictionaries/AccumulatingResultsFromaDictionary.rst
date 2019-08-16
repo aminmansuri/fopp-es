@@ -11,32 +11,32 @@
    :prefix: dictionaries-6-
    :start: 1
 
-Accumulating Results From a Dictionary
---------------------------------------
+Acumulando Resultados de un Diccionario
+-----------------------------------------
 
-Just as we have iterated through the elements of a list to accumulate a result,
-we can also iterate through the keys in a dictionary, accumulating a result that may
-depend on the values associated with each of the keys.
+Así como hemos iterado a través de los elementos de una lista para acumular un resultado,
+También podemos iterar a través de las teclas en un diccionario, acumulando un resultado que puede
+dependerá de los valores asociados con cada una de las claves.
 
-For example, suppose that we wanted to compute a Scrabble score for the Study in Scarlet
-text. Each occurrence of the letter 'e' earns one point, but 'q' earns 10. We have
-a second dictionary, stored in the variable ``letter_values``. Now, to compute the
-total score, we start an accumulator at 0 and go through each of the letters in the 
-counts dictionary. For each of those letters that has a letter value (no points for spaces,
-punctuation, capital letters, etc.), we add to the total score.
+Por ejemplo, supongamos que queremos calcular una puntuación de Scrabble para el Estudio en el texto Scarlet.
+Cada aparición de la letra 'e' gana un punto, pero 'q' gana 10. Tenemos
+un segundo diccionario, almacenado en la variable ``letter_values``. Ahora, para calcular el
+puntaje total, comenzamos un acumulador en 0 y pasamos por cada una de las letras en el diccionario.
+Para cada una de esas letras que tiene un valor de letra (sin puntos para espacios,
+puntuación, mayúsculas, etc.), agregamos al puntaje total.
 
 .. activecode:: ac10_6_1
 
    f = open('scarlet2.txt', 'r')
    txt = f.read()
-   # now txt is one long string containing all the characters
-   x = {} # start with an empty dictionary
+   # ahora txt es un String larga que contiene todos los caracteres
+   x = {} # comenzar con un diccionario vacío
    for c in txt:
        if c not in x:
-           # we have not seen this character before, so initialize a counter for it
+           # no hemos visto este caracter antes, así que inicializa un contador para él
            x[c] = 0
       
-       #whether we've seen it before or not, increment its counter
+       #lo hayamos visto antes o no, incremente su contador
        x[c] = x[c] + 1
 
    letter_values = {'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f':4, 'g': 2, 'h':4, 'i':1, 'j':8, 'k':5, 'l':1, 'm':3, 'n':1, 'o':1, 'p':3, 'q':10, 'r':1, 's':1, 't':1, 'u':1, 'v':8, 'w':4, 'x':8, 'y':4, 'z':10}
@@ -48,17 +48,17 @@ punctuation, capital letters, etc.), we add to the total score.
 
    print(tot)
 
-Line 18 is the tricky one. We are updating the variable tot to have its old number plus the score for the current letter times the number of occurrences of that letter.
-Try changing some of the letter values and see how it affects the total. Try changing txt to be just a single word that you might play in Scrabble.
+La línea 18 es la complicada. Estamos actualizando la variable tot para que tenga su número anterior más el puntaje de la letra actual por el número de apariciones de esa letra.
+Intente cambiar algunos de los valores de las letras y vea cómo afecta el total. Intenta cambiar txt para que sea solo una palabra que puedas jugar en Scrabble.
 
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac10_6_2
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** The dictionary ``travel`` contains the number of countries within each continent that Jackie has traveled to. Find the total number of countries that Jackie has been to, and save this number to the variable name ``total``. Do not hard code this!
+   **1.** El diccionario ``viajar`` contiene el número de países dentro de cada continente al que Jackie ha viajado. Encuentre el número total de países en los que Jackie ha estado y guarde este número en el nombre de la variable ``total``. ¡*No hagas hard code aquí*!
    ~~~~
    travel = {"North America": 2, "Europe": 8, "South America": 3, "Asia": 4, "Africa":1, "Antarctica": 0, "Australia": 1}
 
@@ -78,7 +78,7 @@ Try changing some of the letter values and see how it affects the total. Try cha
    :autograde: unittest
    :practice: T
 
-   **2.** ``schedule`` is a dictionary where a class name is a key and its value is how many credits it was worth. Go through and accumulate the total number of credits that have been earned so far and assign that to the variable ``total_credits``. Do not hardcode.
+   **2.** ``schedule`` es un diccionario donde el nombre de una clase es clave y su valor es cuántos créditos valió. Revise y acumule el número total de créditos que se han obtenido hasta el momento y asígnelo a la variable ``total_credits``. Ho hagas *hard code*.
    ~~~~
    schedule = {"UARTS 150": 3, "SPANISH 103": 4, "ENGLISH 125": 4, "SI 110": 4, "ENS 356": 2, "WOMENSTD 240": 4, "SI 106": 4, "BIO 118": 3, "SPANISH 231": 4, "PSYCH 111": 4, "LING 111": 3, "SPANISH 232": 4, "STATS 250": 4, "SI 206": 4, "COGSCI 200": 4, "AMCULT 202": 4, "ANTHRO 101": 4}
 
