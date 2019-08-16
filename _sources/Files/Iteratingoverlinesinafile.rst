@@ -11,20 +11,20 @@
    :prefix: files-5-
    :start: 1
 
-Iterating over lines in a file
-------------------------------
+Iterando sobre líneas en un archivo
+-----------------------------------
 
-We will now use this file as input in a program that will do some data processing. In the program, we will 
-examine each line of the file and print it with some additional text. Because ``readlines()`` returns a list of 
-lines of text, we can use the *for* loop to iterate through each line of the file.
+Ahora usaremos este archivo como entrada en un programa que procesará algunos datos. En el programa, haremos que
+examine cada línea del archivo e imprímalo con texto adicional. Porque ``readlines()`` devuelve una lista de
+líneas de texto, podemos usar el bucle *for* para recorrer cada línea del archivo.
 
-A **line** of a file is defined to be a sequence of characters up to and including a special character called 
-the **newline** character. If you evaluate a string that contains a newline character you will see the character 
-represented as ``\n``. If you print a string that contains a newline you will not see the ``\n``, you will just 
-see its effects (a carriage return).
+Una **línea** de un archivo se define como una secuencia de caracteres hasta e incluyendo un carácter especial llamado
+caracter **newline**. Si evalúa un string que contiene un caracter newline, verá el caracter
+representado como ``\n``. Si imprime una cadena que contiene newline, no verá el ``\n``, solo verá
+sus efectos (un retorno de carro).
 
-As the *for* loop iterates through each line of the file the loop variable will contain the current line of the 
-file as a string of characters. The general pattern for processing each line of a text file is as follows:
+A medida que el bucle *for* recorre cada línea del archivo, la variable del bucle contendrá la línea actual del
+archivo como un string. El patrón general para procesar cada línea de un archivo de texto es el siguiente:
 
 ::
 
@@ -33,10 +33,10 @@ file as a string of characters. The general pattern for processing each line of 
             statement2
             ...
 
-To process all of our olypmics data, we will use a *for* loop to iterate over the lines of the file. Using
-the ``split`` method, we can break each line into a list containing all the fields of interest about the
-athlete. We can then take the values corresponding to name, team and event to
-construct a simple sentence.
+Para procesar todos nuestros datos olímpicos, utilizaremos un bucle *for* para iterar sobre las líneas del archivo. Utilizando
+el método ``split``, podemos dividir cada línea en una lista que contiene todos los campos de interés sobre el
+atleta. Luego podemos tomar los valores correspondientes a nombre, equipo y evento a
+construir una oración simple.
 
 .. activecode:: ac9_5_1
 
@@ -44,14 +44,14 @@ construct a simple sentence.
 
     for aline in olypmicsfile.readlines():
         values = aline.split(",")
-        print(values[0], "is from", values[3], "and is on the roster for", values[4])
+        print(values[0], "es desde", values[3], "y está en la lista de", values[4])
 
     olypmicsfile.close()
 
-To make the code a little simpler, and to allow for more efficient processing, Python provides a built-in way to 
-iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a 
-little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared 
-to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.
+Para simplificar un poco el código y permitir un procesamiento más eficiente, Python proporciona una forma integrada de
+iterar a través del contenido de un archivo línea por línea, sin leerlos primero en una lista. Algunos estudiantes encuentran esto confuso inicialmente, por lo que no recomendamos hacerlo de esta manera, hasta que obtenga un
+poco más cómodo con Python. Pero este lenguaje es preferido por los programadores de Python, por lo que debes estar preparado
+para leerlo Y cuando comience a lidiar con archivos grandes, puede notar las ganancias de eficiencia de usarlo.
 
 .. activecode:: ac9_5_2
 
@@ -59,7 +59,7 @@ to read it. And when you start dealing with big files, you may notice the effici
 
     for aline in olypmicsfile:
         values = aline.split(",")
-        print(values[0], "is from", values[3], "and is on the roster for", values[4])
+        print(values[0], "es desde", values[3], "y está en la lista de", values[4])
 
     olypmicsfile.close()
 
@@ -93,7 +93,7 @@ to read it. And when you start dealing with big files, you may notice the effici
     </pre>
 
 
-**Check your Understanding**
+**Revisa tu entedimiento**
 
 .. raw:: html
 
@@ -113,7 +113,7 @@ to read it. And when you start dealing with big files, you may notice the effici
    :autograde: unittest
    :practice: T
 
-   1. Write code to find out how many lines are in the file ``emotion_words.txt`` as shown above. Save this value to the variable ``num_lines``. Do not use the len method.
+   1. Escriba el código para averiguar cuántas líneas hay en el archivo ``emotion_words.txt`` como se muestra arriba. Guarde este valor en la variable ``num_lines``. No use el método len.
    ~~~~
 
    =====
