@@ -13,28 +13,28 @@
    :prefix: files-12-
    :start: 1
 
-Using ``with`` for Files
-========================
+Usando ``with`` para archivos
+=============================
 
 .. note:: 
-   This section is a bit of an advanced topic and can be easily skipped. But with statements are becoming very common and it doesn't hurt to know about them in case you run into one in the wild.
+   Esta sección es un tema un poco avanzado y se puede omitir fácilmente. Pero las declaraciones se están volviendo muy comunes y no está de más saberlas en caso de que te encuentres con una en la naturaleza.
 
-Now that you have seen and practiced a bit with opening and closing files, there is another mechanism that Python 
-provides for us that cleans up the often forgotten close. Forgetting to close a file does not necessarily cause a runtime 
-error in the kinds of programs you typically write in an introductory programing course. However if you are writing a 
-program that may run for days or weeks at a time that does a lot of file reading and writing you may run into trouble. 
+Ahora que has visto y practicado un poco abrir y cerrar archivos, hay otro mecanismo que Python
+proporciona para nosotros que limpia el cierre a menudo olvidado. Olvidar cerrar un archivo no necesariamente causa un tiempo de ejecución
+error en los tipos de programas que normalmente escribe en un curso introductorio de programación. Sin embargo, si estás escribiendo un
+programa que puede ejecutarse durante días o semanas a la vez que lee y escribe muchos archivos y puede tener problemas.
 
-Python has the notion of a context manager that automates the process of doing
-common operations at the start of some task, as well as automating certain operations at the end of some task. For reading and writing a file, the normal operation is to open the file and assign it to a variable. At the end 
-of working with a file the common operation is to make sure that file is closed.
+Python tiene la noción de un administrador de contexto que automatiza el proceso de hacer
+operaciones comunes al comienzo de alguna tarea, así como la automatización de ciertas operaciones al final de alguna tarea. Para leer y escribir un archivo, la operación normal es abrir el archivo y asignarlo a una variable. Al final
+de trabajar con un archivo, la operación común es asegurarse de que el archivo esté cerrado.
 
-The Python with statement makes using context managers easy. The general form of a with statement is::
+El Python con declaración facilita el uso de administradores de contexto. La forma general de una declaración with es::
 
     with <create some object that understands context> as <some name>:
         do some stuff with the object
         ...
 
-When the program exits the with block, the context manager handles the common stuff that normally happens at the end, in our case closing a file. A simple example will clear up all of this abstract discussion of contexts. Here are the contents of a file called "mydata.txt".
+Cuando el programa sale del bloque with, el administrador de contexto maneja las cosas comunes que normalmente ocurren al final, en nuestro caso cerrando un archivo. Un simple ejemplo aclarará toda esta discusión abstracta de contextos. Aquí están los contenidos de un archivo llamado "mydata.txt".
 
 .. datafile:: mydata.txt
 
@@ -48,13 +48,13 @@ When the program exits the with block, the context manager handles the common st
    with open('mydata.txt', 'r') as md:
        for line in md:
            print(line)
-   # continue on with other code          
+   # continue con otro código
 
-The first line of the `with` statement opens the file and assigns it to the variable ``md``. Then we can iterate over the file in any 
-of the usual ways. When we are done we simply stop indenting and let Python take care of closing the file and 
-cleaning up. The final line ``print(md)`` 
+La primera línea de la instrucción `with` abre el archivo y lo asigna a la variable ``md``. Luego podemos iterar sobre el archivo en cualquiera
+de las formas habituales. Cuando terminamos, simplemente dejamos de sangrar y dejamos que Python se encargue de cerrar el archivo y
+limpiar. La línea final ``print(md)``
 
-This is equivalent to code that specifically closes the file at the end, but neatly marks the set of code that can make use of the open file as an indented block, and ensures that the programmer won't forget to include the .close() invocation.
+Esto es equivalente al código que cierra específicamente el archivo al final, pero marca claramente el conjunto de código que puede usar el archivo abierto como un bloque sangrado, y asegura que el programador no se olvide de incluir la invocación .close()
 
 .. activecode:: ac9_12_2
    :nocodelens:
@@ -64,5 +64,5 @@ This is equivalent to code that specifically closes the file at the end, but nea
    for line in md:
        print(line)
    md.close()
-   # continue with other code
+   # continue con otro código
     
