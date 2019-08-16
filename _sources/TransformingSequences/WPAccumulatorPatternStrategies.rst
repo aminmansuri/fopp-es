@@ -10,15 +10,15 @@
    :prefix: seqmut-11-
    :start: 1
 
-👩‍💻  Accumulator Pattern Strategies
-=====================================
+👩‍💻  Estrategias para Accumulator Pattern
+============================================
 
-When to Use it
+Cuándo Usarlo
 --------------
 
-When children first encounter word problems in their math classes, they find it difficult to translate those words into arithmetic expressions involving addition, subtraction, multiplication, and division. Teachers offer heuristics. If the problem says "how many...altogether", that's an addition problem. If it says "how many are left", that's going to be a subtraction problem.
+Cuando los niños se encuentran por primera vez con problemas de palabras en sus clases de matemáticas, les resulta difícil traducir esas palabras en expresiones aritméticas que implican suma, resta, multiplicación y división. Los profesores ofrecen heurística. Si el problema dice "cuántos ... en total", ese es un problema adicional. Si dice "cuántos quedan", será un problema de resta.
 
-Learning to use the accumulator pattern can be similarly confusing. The first step is to recognizing something in the problem statement that suggests an accumulation pattern. Here are a few. You might want to try adding some more of your own.
+Aprender a usar el patrón acumulador puede ser igualmente confuso. El primer paso es reconocer algo en el enunciado del problema que sugiere un patrón de acumulación. Aquí hay algunos. Es posible que desee intentar agregar algunos más.
 
 +----------------+----------------------+
 | Phrase         | Accumulation Pattern |
@@ -37,230 +37,230 @@ Learning to use the accumulator pattern can be similarly confusing. The first st
 +----------------+----------------------+
 +----------------+----------------------+
 
-For example, if the problem is to compute the total distance traveled in a series of small trips, you would want to accumulate a sum. If the problem is to make a list of the cubes of all the numbers from 1-25, you want a list accumulation, starting with an empty list and appending one more cube each time. If the problem is to make a comma separated list of all the people invited to a party, you should think of concatenating them; you could start with an empty string and concatenate one more person on each iteration through a list of name.
+Por ejemplo, si el problema es calcular la distancia total recorrida en una serie de viajes pequeños, querrás acumular una suma. Si el problema es hacer una lista de los cubos de todos los números del 1 al 25, desea una acumulación de la lista, comenzando con una lista vacía y agregando un cubo más cada vez. Si el problema es hacer una lista separada por comas de todas las personas invitadas a una fiesta, debe pensar en concatenarlas; podría comenzar con una cadena vacía y concatenar a una persona más en cada iteración a través de una lista de nombres.
 
-Before Writing it
------------------
+Antes de escribirlo
+--------------------
 
-Before writing any code, we recommend that you first answer the following questions:
+Antes de escribir cualquier código, le recomendamos que primero responda las siguientes preguntas:
 
-- What sequence will you iterate through as you accumulate a result? It could be a range of numbers, the letters in a string, or some existing list that you have just as a list of names.
+- ¿A través de qué secuencia iterarás mientras acumulas un resultado? Podría ser un rango de números, las letras en una cadena o alguna lista existente que tenga como una lista de nombres.
 
-- What type of value will you accumulate? If your final result will be a number, your accumulator will start out with a number and always have a number even as it is updated each time. Similarly, if your final result will be a list, start with a list. If your final result will be a string, you'll probably want to start with a string; one other option is to accumulate a list of strings and then use the `.join()` method at the end to concatenate them all together.
+- ¿Qué tipo de valor acumularás? Si su resultado final será un número, su acumulador comenzará con un número y siempre tendrá un número aunque se actualice cada vez. Del mismo modo, si su resultado final será una lista, comience con una lista. Si su resultado final será una cadena, probablemente quiera comenzar con una cadena; otra opción es acumular una lista de cadenas y luego usar el método `.join ()` al final para concatenarlos todos juntos.
 
-We recommend writing your answers to these questions in a comment. As you encounter bugs and have to look things up, it will help remind you of what you were trying to implement. Sometimes, just writing the comment can help you to realize a potential problem and avoid it before you ever write any code.
+Recomendamos escribir sus respuestas a estas preguntas en un comentario. Cuando encuentre errores y tenga que buscar cosas, le ayudará a recordar lo que estaba tratando de implementar. A veces, solo escribir el comentario puede ayudarlo a darse cuenta de un problema potencial y evitarlo antes de escribir cualquier código.
 
-Choosing Good Accumulator and Iterator Variable Names
------------------------------------------------------
+Elegir buenos nombres de variables de acumulador e iterador
+-------------------------------------------------------------
 
-The final piece of advice regarding accumulation strategies is to be intentional when choosing variable names for the 
-accumulator and iterator variables. A good name can help remind you of what the value is assigned to the variable as 
-well as what you should have by the end of your code. While it might be tempting at first to use a short variable name, 
-such as ``a`` or ``x``, if you run into any bugs or look at your code later, you may have trouble understanding what you 
-intended to do and what your code is actually doing.
+El último consejo con respecto a las estrategias de acumulación debe ser intencional al elegir nombres de variables para
+acumulador e iterador de variables. Un buen nombre puede ayudarlo a recordar cuál es el valor asignado a la variable como
+así como lo que debería tener al final de su código. Si bien puede ser tentador al principio usar un nombre corto de variable,
+como ``a`` o ``x``, si encuentra algún error o mira su código más tarde, puede tener problemas para entender lo que
+destinado a hacer y lo que su código está haciendo realmente.
 
-For the accumulator variable, one thing that can help is to make the variable name end with "so_far". The prefix can be something that helps remind you of what you're supposed to end up with. For example: `count_so_far`, `total_so_far`, or `cubes_so_far`.
+Para la variable acumuladora, una cosa que puede ayudar es hacer que el nombre de la variable termine con "so_far". El prefijo puede ser algo que te ayude a recordar lo que se supone que debes terminar. Por ejemplo: `count_so_far`, `total_so_far` o `cubes_so_far`.
 
-As mentioned previously in a previous Way of the Programmer segment, :ref:`naming_variables_in_for_loops`, the iterator variable should be a singular noun. It should describe what one item in the original sequence, not what one item in the final result will be. For example, when accumulating the cubes of the numbers from 1-25, don't write `for cube in range(25):`. Instead, write `for num in range(25):`.  If you name the iterator variable `cube` you run the risk of getting confused that it has already been cubed, when that's an operation that you still have to write in your code.
+Como se mencionó anteriormente en un segmento anterior de El camino del Programador:ref:`naming_variables_in_for_loops`, la variable iterador debe ser un sustantivo singular. Debe describir qué elemento de la secuencia original, no cuál será el elemento del resultado final. Por ejemplo, cuando acumule los cubos de los números del 1 al 25, no escriba `for num in range(25):`. En su lugar, escriba `for num in range (25):`. Si nombra la variable iteradora `cube` corre el riesgo de confundirse de que ya ha sido cubicada, cuando esa es una operación que todavía tiene que escribir en su código.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question8_11_1
-   :answer_a: Yes; "save... to a list"
-   :answer_b: Yes; "add 'ed' to the end of the word"
+   :answer_a: Sí; "guardar... a una lista"
+   :answer_b: Yes; "agregar 'ed' al final de la palabra"
    :answer_c: No
-   :feedback_a: Correct!
-   :feedback_b: Not quite - these words don't necessarily mean that we want to accumulate the new strings into a new variable.
-   :feedback_c: In this case, an accumulation pattern would be good to use!
+   :feedback_a: ¡Correcto!
+   :feedback_b: No del todo: estas palabras no necesariamente significan que queremos acumular las nuevas cadenas en una nueva variable.
+   :feedback_c: ¡En este caso, sería bueno usar un accumulation pattern!
    :correct: a
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   ¿El siguiente mensaje requiere un patrón de acumulación? Si es así, ¿qué palabras indican eso? Para cada cadena en ``wrds``, agregue 'ed' al final de la palabra (paraconjugar la palabra en tiempo pasado). Guarde estas palabras en tiempo pasado en una lista llamada ``past_wrds``.
 
 .. mchoice:: question8_11_2
-   :answer_a: Yes; "to sum up"
-   :answer_b: Yes; "numbers in the list"
+   :answer_a: Sí; "para resumir"
+   :answer_b: Sí; "números en la lista"
    :answer_c: No
-   :feedback_a: Correct!
-   :feedback_b: Not quite - these words don't necessarily mean that we want to do sum accumulation.
-   :feedback_c: In this case, an accumulation pattern would be good to use!
+   :feedback_a: ¡Correcto!
+   :feedback_b: No del todo, estas palabras no necesariamente significan que queremos hacer una acumulación de suma.
+   :feedback_c: ¡En este caso, un patrón de acumulación sería bueno para usar!
    :correct: a
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
+   ¿El siguiente mensaje requiere un patrón de acumulación? Si es así, ¿qué palabras indican eso? Escriba el código para resumir todos los números en la lista ``seat_counts``. Almacene ese número en la variable ``total_seat_counts``.
 
 .. mchoice:: question8_11_3
-   :answer_a: Yes; "print out each"
-   :answer_b: Yes; "on a separate line"
+   :answer_a: Sí; "imprimir cada uno"
+   :answer_b: Sí; "en una línea separada"
    :answer_c: No
-   :feedback_a: Incorrect, this prompt does not need to use the accumulation pattern.
-   :feedback_b: Incorrect, this prompt does not need to use the accumulation pattern.
-   :feedback_c: Correct!
+   :feedback_a: Incorrecto, este aviso no necesita usar el patrón de acumulación.
+   :feedback_b: Incorrecto, este aviso no necesita usar el patrón de acumulación.
+   :feedback_c: ¡Correcto!
    :correct: c
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code to print out each character of the string ``my_str`` on a separate line.
+   ¿El siguiente mensaje requiere un patrón de acumulación? Si es así, ¿qué palabras indican eso? Escriba el código para imprimir cada carácter de la cadena ``my_str`` en una línea separada.
 
 .. mchoice:: question8_11_4
-   :answer_a: Yes; "vowels in the sentence"
-   :answer_b: Yes; "code that will count"
+   :answer_a: Sí; "vocales en la oración"
+   :answer_b: Sí; "código que contará"
    :answer_c: No
-   :feedback_a: Not quite - these words don't necessarily mean that we want to do sum accumulation.
-   :feedback_b: Correct!
-   :feedback_c: In this case, an accumulation pattern would be good to use!
+   :feedback_a: No del todo, estas palabras no necesariamente significan que queremos hacer una acumulación de suma.
+   :feedback_b: ¡Correcto!
+   :feedback_c: ¡En este caso, un patrón de acumulación sería bueno para usar!
    :correct: b
    :practice: T
 
-   Does the following prompt require an accumulation pattern? If so, what words indicate that? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   ¿El siguiente mensaje requiere un patrón de acumulación? Si es así, ¿qué palabras indican eso? Escriba un código que cuente el número de vocales en la oración ``s`` y asigne el resultado a la variable ``num_vowels``.
 
 .. mchoice:: question8_11_5
    :answer_a: string
    :answer_b: list
    :answer_c: integer
-   :answer_d: none, there is no accumulator variable.
-   :feedback_a: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_b: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_c: Yes, because we want to keep track of a number.
-   :feedback_d: Incorrect, we will need an accumulator variable.
+   :answer_d: ninguno, no hay variable acumuladora.
+   :feedback_a: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_b: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_c: Sí, porque queremos hacer un seguimiento de un número.
+   :feedback_d: Incorrecto, necesitaremos una variable acumuladora.
    :correct: c
    :practice: T
 
-   What type should be used for the accumulator variable in the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   ¿Qué tipo se debe usar para la variable acumuladora en el siguiente mensaje? Escriba un código que cuente el número de vocales en la oración ``s`` y asigne el resultado a la variable ``num_vowels``.
 
 .. mchoice:: question8_11_6
    :answer_a: num_vowels
    :answer_b: s
    :answer_c: the prompt does not say
-   :feedback_a: No, that is the accumulator variable.
-   :feedback_b: Yes, that is the sequence you will iterate through!
+   :feedback_a: No, esa es la variable acumuladora.
+   :feedback_b: Sí, esa es la secuencia por la que iterarás.
    :feedback_c: It is stated in the prompt.
    :correct: b
    :practice: T
 
-   What sequence will you iterate through as you accumulate a result in the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   ¿A través de qué secuencia iterará mientras acumula un resultado en el siguiente mensaje? Escriba un código que cuente el número de vocales en la oración ``s`` y asigne el resultado a la variable ``num_vowels``.
 
 .. mchoice:: question8_11_7
    :answer_a: string
    :answer_b: list
    :answer_c: integer
-   :answer_d: none, there is no accumulator variable.
-   :feedback_a: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_b: Yes, because we want a new list at the end of the code.
-   :feedback_c: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_d: Incorrect, we will need an accumulator variable.
+   :answer_d: ninguno, no hay variable acumuladora.
+   :feedback_a: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_b: Sí, porque queremos una nueva lista al final del código.
+   :feedback_c: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_d: Incorrecto, necesitaremos una variable acumuladora.
    :correct: b
    :practice: T
 
-   What type should be used for the accumulator variable in the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   ¿Qué tipo se debe usar para la variable acumuladora en el siguiente mensaje? Para cada cadena en ``wrds``, agregue 'ed' al final de la palabra (para conjugar la palabra en tiempo pasado). Guarde estas palabras en tiempo pasado en una lista llamada ``past_wrds``.
 
 .. mchoice:: question8_11_8
    :answer_a: wrds
    :answer_b: past_wrds
    :answer_c: the prompt does not say
-   :feedback_a: Yes, that is the sequence you will iterate through!
-   :feedback_b: No, that is the accumulator variable.
+   :feedback_a: Sí, esa es la secuencia por la que iterarás.
+   :feedback_b: No, esa es la variable acumuladora.
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
 
-   What sequence will you iterate through as you accumulate a result in the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   ¿A través de qué secuencia iterará mientras acumula un resultado en el siguiente mensaje? Para cada cadena en ``wrds``, agregue 'ed' al final de la palabra (para conjugar la palabra en tiempo pasado). Guarde estas palabras en tiempo pasado en una lista llamada ``past_wrds``.
 
 .. mchoice:: question8_11_9
    :answer_a: string
    :answer_b: list
    :answer_c: integer
-   :answer_d: none, there is no accumulator variable.
-   :feedback_a: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_b: Incorrect, that is not the best type for the accumulator variable.
-   :feedback_c: Yes, because we want to keep track of a number.
-   :feedback_d: Incorrect, we will need an accumulator variable.
+   :answer_d: ninguno, no hay variable acumuladora.
+   :feedback_a: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_b: Incorrecto, ese no es el mejor tipo para la variable del acumulador.
+   :feedback_c: Sí, porque queremos hacer un seguimiento de un número.
+   :feedback_d: Incorrecto, necesitaremos una variable acumuladora.
    :correct: c
    :practice: T
 
-   What type should be used for the accumulator variable in the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
+   ¿Qué tipo se debe usar para la variable acumuladora en el siguiente mensaje? Escriba el código para resumir todos los números en la lista ``seat_counts``. Almacene ese número en la variable ``total_seat_counts``.
 
 .. mchoice:: question8_11_10
    :answer_a: seat_counts
    :answer_b: total_seat_counts
    :answer_c: the prompt does not say
-   :feedback_a: Yes, that is the sequence you will iterate through!
-   :feedback_b: No, that is the accumulator variable.
+   :feedback_a: Sí, esa es la secuencia por la que iterarás.
+   :feedback_b: No, esa es la variable acumuladora.
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
 
-    What sequence will you iterate through as you accumulate a result in the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
+    ¿A través de qué secuencia iterará mientras acumula un resultado en el siguiente mensaje? Escriba el código para resumir todos los números en la lista ``seat_counts``. Almacene ese número en la variable ``total_seat_counts``.
 
 .. mchoice:: question8_11_11
    :answer_a: string
    :answer_b: list
    :answer_c: integer
-   :answer_d: none, there is no accumulator variable.
-   :feedback_a: Incorrect, there should not be an accumulator variable.
-   :feedback_b: Incorrect, there should not be an accumulator variable.
-   :feedback_c: Incorrect, there should not be an accumulator variable.
-   :feedback_d: Correct, because this prompt does not require an accumulator pattern
+   :answer_d: ninguno, no hay variable acumuladora.
+   :feedback_a: Incorrecto, no debería haber una variable acumuladora.
+   :feedback_b: Incorrecto, no debería haber una variable acumuladora.
+   :feedback_c: Incorrecto, no debería haber una variable acumuladora.
+   :feedback_d: Correcto, porque este mensaje no requiere un patrón acumulador.
    :correct: d
    :practice: T
 
-   What type should be used for the accumulator variable in the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
+   ¿Qué tipo se debe usar para la variable acumuladora en el siguiente mensaje? Escriba el código para imprimir cada carácter de la cadena ``my_str`` en una línea separada.
 
 .. mchoice:: question8_11_12
    :answer_a: my_str
    :answer_b: my_str.split()
    :answer_c: the prompt does not say
-   :feedback_a: Yes, that is the sequence you will iterate through!
-   :feedback_b: Close, but read the prompt again - did it say to iterate through words?
+   :feedback_a: Sí, esa es la secuencia por la que iterarás.
+   :feedback_b: Cperder, pero lea el mensaje nuevamente: ¿decía iterar a través de las palabras?
    :feedback_c: It is stated in the prompt.
    :correct: a
    :practice: T
 
-   What sequence will you iterate through as you accumulate a result in the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
+   ¿A través de qué secuencia iterará mientras acumula un resultado en el siguiente mensaje? Escriba el código para imprimir cada carácter de la cadena ``my_str`` en una línea separada.
 
 .. mchoice:: question8_11_13
-   :answer_a: Accumulator Variable: wrds_so_far     ; Iterator Variable: wrd
-   :answer_b: Accumulator Variable: wrds_so_far     ; Iterator Variable: x
-   :answer_c: Accumulator Variable: changed_wrds    ; Iterator Variable: ed
-   :feedback_a: Yes, this is the most clear combination of accumulator and iterator variables.
-   :feedback_b: The iterator variable is not the clearest here, something else may be better.
-   :feedback_c: The iterator variable is not the clearest here
+   :answer_a: Variable Acumuladora: wrds_so_far     ; Variable Iteradora: wrd
+   :answer_b: Variable Acumuladora: wrds_so_far     ; Variable Iteradora: x
+   :answer_c: Variable Acumuladora: changed_wrds    ; Variable Iteradora: ed
+   :feedback_a: Sí, esta es la combinación más clara de variables de acumulador e iterador.
+   :feedback_b: La variable iteradora no es la más clara aquí, algo más puede ser mejor.
+   :feedback_c: La variable iteradora no es la más clara aquí
    :correct: a
    :practice: T
 
-   Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   ¿Cuáles de estas son buenas alternativas a la variable del acumulador y los nombres de las variables del iterador para el siguiente mensaje? Para cada cadena en ``wrds``, agregue 'ed' al final de la palabra (para hacer que la palabra en tiempo pasado). Guarde estas palabras en tiempo pasado en una lista llamada ``past_wrds``.
 
 .. mchoice:: question8_11_14
-   :answer_a: Accumulator Variable: count_so_far  ; Iterator Variable: l
-   :answer_b: Accumulator Variable: total_so_far  ; Iterator Variable: letter
-   :answer_c: Accumulator Variable: n_v           ; Iterator Variable: letter
-   :feedback_a: Though the accumulator variable is good, the iterator variable is not very clear.
-   :feedback_b: Yes! Both the accumulator and iterator variable are clear.
-   :feedback_c: Though the iterator variable is good, the accumulator variable is not very clear.
+   :answer_a: Variable Acumuladora: count_so_far  ; Variable Iteradora: l
+   :answer_b: Variable Acumuladora: total_so_far  ; Variable Iteradora: letter
+   :answer_c: Variable Acumuladora: n_v           ; Variable Iteradora: letter
+   :feedback_a: Aunque la variable acumuladora es buena, la variable iteradora no está muy clara.
+   :feedback_b: ¡Sí! Tanto la variable del acumulador como la del iterador son claras.
+   :feedback_c: Aunque la variable iteradora es buena, la variable acumuladora no es muy clara.
    :correct: b
    :practice: T
 
-   WWhich of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code that will count the number of vowels in the sentence ``s`` and assign the result to the variable ``num_vowels``.
+   ¿Cuáles de estas son buenas alternativas a la variable del acumulador y los nombres de las variables del iterador para el siguiente mensaje? Escriba un código que cuente el número de vocales en la oración ``s`` y asigne el resultado a la variable ``num_vowels``.
 
 .. mchoice:: question8_11_15
-   :answer_a: Accumulator Variable: total_so_far        ; Iterator Variable: seat
-   :answer_b: Accumulator Variable: total_seats_so_far  ; Iterator Variable: seat_count
-   :answer_c: Accumulator Variable: count               ; Iterator Variable: n
-   :feedback_a: Though the accumulator variable is good, the iterator variable is not clear enough.
-   :feedback_b: Yes, this is the most clear combination.
-   :feedback_c: Neither the accumulator nor iterator variable are clear enough. The accumulator variable is better, but could be more clear.
+   :answer_a: Variable Acumuladora: total_so_far        ; Variable Iteradora: seat
+   :answer_b: Variable Acumuladora: total_seats_so_far  ; Variable Iteradora: seat_count
+   :answer_c: Variable Acumuladora: count               ; Variable Iteradora: n
+   :feedback_a: Aunque la variable del acumulador es buena, la variable del iterador no es lo suficientemente clara.
+   :feedback_b: Sí, esta es la combinación más clara.
+   :feedback_c: Ni el acumulador ni la variable iterador son lo suficientemente claros. La variable del acumulador es mejor, pero podría ser más clara.
    :correct: b
    :practice: T
 
-   Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to sum up all of the numbers in the list ``seat_counts``. Store that number in the variable ``total_seat_counts``.
+   ¿Cuáles de estas son buenas alternativas a la variable del acumulador y los nombres de las variables del iterador para el siguiente mensaje? Escriba el código para resumir todos los números en la lista ``seat_counts``. Almacene ese número en la variable ``total_seat_counts``.
 
 .. mchoice:: question8_11_16
-   :answer_a: Accumulator Variable: character_so_far    ; Iterator Variable: char
-   :answer_b: Accumulator Variable: no variable needed  ; Iterator Variable: c
-   :answer_c: Accumulator Variable: no variable needed  ; Iterator Variable: char
-   :feedback_a: Incorrect, there is no accumulator variable neccessary
-   :feedback_b: Though no accumulator variable is needed, the iterator variable is not clear enough
-   :feedback_c: Yes, there is no accumulator variable needed and the iterator variable is clear (char is a common short form of character)
+   :answer_a: Variable Acumuladora: character_so_far    ; Variable Iteradora: char
+   :answer_b: Variable Acumuladora: no variable needed  ; Variable Iteradora: c
+   :answer_c: Variable Acumuladora: no variable needed  ; Variable Iteradora: char
+   :feedback_a: Incorrecto, no hay variable de acumulador necesaria
+   :feedback_b: Aunque no se necesita una variable acumuladora, la variable iteradora no es lo suficientemente clara
+   :feedback_c: Sí, no se necesita una variable acumuladora y la variable iteradora es clara (char es una forma abreviada de character)
    :correct: c
    :practice: T
 
-   Which of these are good alternatives to the accumulator variable and iterator variable names for the following prompt? Write code to print out each character of the string ``my_str`` on a separate line.
+   ¿Cuáles de estas son buenas alternativas a la variable del acumulador y los nombres de las variables del iterador para el siguiente mensaje? Escriba el código para imprimir cada carácter de la cadena ``my_str`` en una línea separada.
