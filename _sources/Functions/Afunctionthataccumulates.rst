@@ -11,56 +11,56 @@
    :prefix: func-5-
    :start: 1
 
-A function that accumulates
+Una función que acumula
 ---------------------------
 
-We have used the ``len`` function a lot already. If it weren't part of python, our lives as programmers would have been 
-a lot harder.
+Ya hemos usado mucho la función ``len``. Si no fuera parte de Python, nuestras vidas como programadores habrían sido
+mucho más difíciles.
 
-Well, actually, not that much harder. Now that we know how to define functions, we could define ``len`` ourselves if it 
-did not exist. Previously, we have used the accumlator pattern to count the number of lines in a file. Let's use that 
-same idea and just wrap it in a function definition. We'll call it ``mylen`` to distinguish it from the real ``len`` 
-which already exists. We actually *could* call it len, but that wouldn't be a very good idea, because it would replace 
-the original len function, and our implementation may not be a very good one.
+Bueno, en realidad, no es mucho más difícil. Ahora que sabemos cómo definir funciones, podríamos definir ``len`` a nosotros mismos si
+no existió. Anteriormente, hemos utilizado el patrón acumulador para contar el número de líneas en un archivo. Vamos a usar esa
+misma idea y simplemente envolverla en una definición de función. Lo llamaremos ``mylen`` para distinguirlo del ``len`` real
+que ya existe. En realidad *podríamos* llamarlo len, pero eso no sería una muy buena idea, porque reemplazaría
+la función len original, y nuestra implementación puede no ser muy buena.
 
 .. activecode:: ac11_5_1
 
    def mylen(seq):
-       c = 0 # initialize count variable to 0
+       c = 0 # inicializar la variable de conteo a 0
        for _ in seq:
-           c = c + 1   # increment the counter for each item in seq
+           c = c + 1   # incremente el contador para cada elemento en seq
        return c
       
-   print(mylen("hello"))
+   print(mylen("hola"))
    print(mylen([1, 2, 7]))
 
 
 .. parsonsprob:: pp11_5_1
 
-   Rearrange the code statements to match the activecode window above. (This is an exercise in noticing where the indenting and outdenting happens, and where the return statement goes.)
+   Reorganice las declaraciones de código para que coincidan con la ventana de activecode anterior. (Este es un ejercicio para darse cuenta de dónde ocurre la sangría y dónde va la declaración de devolución.)
    
    -----
    def mylen(x):
    =====
-       c = 0 # initialize count variable to 0
+       c = 0 # inicializar la variable de conteo a 0
    =====
        for y in x:
    =====
-           c = c + 1   # increment the counter for each item in x
+           c = c + 1   # incremente el contador para cada elemento en x
    =====
        return c
    =====      
-   print(mylen("hello"))
+   print(mylen("hola"))
    print(mylen([1, 2, 7]))
 
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac11_5_2
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** Write a function named ``total`` that takes a list of integers as input, and returns the total value of all those integers added together.
+   **1.** Escriba una función llamada ``total`` que tome una lista de enteros como entrada y devuelva el valor total de todos esos enteros sumados.
    ~~~~
 
    =====
@@ -82,7 +82,7 @@ the original len function, and our implementation may not be a very good one.
    :autograde: unittest
    :practice: T
 
-   **2.** Write a function called ``count`` that takes a list of numbers as input and returns a count of the number of elements in the list.
+   **2.** Escriba una función llamada ``count`` que tome una lista de números como entrada y devuelva un recuento del número de elementos en la lista.
    ~~~~
 
    =====
