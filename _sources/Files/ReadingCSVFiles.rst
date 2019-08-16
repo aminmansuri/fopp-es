@@ -11,16 +11,16 @@
    :prefix: files-13-
    :start: 1
 
-Reading in data from a CSV File
-================================
+Lectura de datos de un archivo CSV
+==================================
 
-We are able to read in CSV files the same way we have with other text files. Because of the standardized structure of the data, there is a common pattern for processing it. To practice this,
-we will be using data about olympic events.
+Podemos leer en archivos CSV de la misma manera que lo hacemos con otros archivos de texto. Debido a la estructura estandarizada de los datos, existe un patrón común para procesarlos. Para practicar esto,
+utilizaremos datos sobre eventos olímpicos.
 
-Typically, CSV files will have a header as the first line, which contains column names. Then, 
-each following row in the file will contain data that corresponds to the appropriate columns. 
+Por lo general, los archivos CSV tendrán un encabezado como primera línea, que contiene los nombres de las columnas. Entonces,
+cada fila siguiente en el archivo contendrá datos que corresponden a las columnas apropiadas.
 
-All file methods that we have mentioned - ``read``, ``readline``, and ``readlines``, and simply iterating over the file object itself - will work on CSV files. In our examples, we will iterate over the lines. Because the values on each line are separated with commas, we can use the ``.split()`` method to parse each line into a collection of separate value.
+Todos los métodos de archivo que hemos mencionado - ``read``, ``readline``, y ``readlines``, y simplemente iterar sobre el objeto del archivo en sí, funcionarán en archivos CSV. En nuestros ejemplos, iteraremos sobre las líneas. Debido a que los valores en cada línea están separados por comas, podemos usar el método ``.split()`` para analizar cada línea en una colección de valores separados.
 
 .. activecode:: ac9_13_1
 
@@ -37,19 +37,19 @@ All file methods that we have mentioned - ``read``, ``readline``, and ``readline
                     vals[4],
                     vals[5]))
 
-In the above code, we open the file, olympics.txt, which contains data on some olympians. The contents are similar to our previous olympics file, but include an extra column with information about medals they won.
+En el código anterior, abrimos el archivo, olympics.txt, que contiene datos sobre algunos juegos olímpicos. El contenido es similar a nuestro archivo olímpico anterior, pero incluye una columna adicional con información sobre las medallas que ganaron.
 
-We split the first row to get the field names. We split other rows to get values. Note that we specify to split on commas by passing that as a parameter. Also note that we first pass the row through the .strip() method to get rid of the trailing \n.
+Dividimos la primera fila para obtener los nombres de los campos. Dividimos otras filas para obtener valores. Tenga en cuenta que especificamos dividir en comas pasando eso como un parámetro. También tenga en cuenta que primero pasamos la fila a través del método .strip() para deshacernos del \n.
 
-Once we have parsed the lines into their separate values, we can use those values in the program. For example, in the code above, we select only those rows where the olympian won a medal, and we print out only three of the fields, in a different format.
+Una vez que hemos analizado las líneas en sus valores separados, podemos usar esos valores en el programa. Por ejemplo, en el código anterior, seleccionamos solo aquellas filas donde el olímpico ganó una medalla, e imprimimos solo tres de los campos, en un formato diferente.
 
-Note that the trick of splitting the text for each row based on the presence of commas only works because commas are not used in any of the field values. Suppose that some of our events were more specific, and used commas. For example, "Swimming, 100M Freestyle". How will a program processing a .csv file know when a comma is separating columns, and when it is just part of the text string giving a value within a column?
+Tenga en cuenta que el truco de dividir el texto para cada fila en función de la presencia de comas solo funciona porque las comas no se utilizan en ninguno de los valores de campo. Supongamos que algunos de nuestros eventos fueron más específicos y utilizaron comas. Por ejemplo, "Swimming, 100M Freestyle". ¿Cómo sabrá un programa que procesa un archivo .csv cuándo una coma está separando columnas y cuándo es solo parte de la cadena de texto que da un valor dentro de una columna?
 
-The CSV format is actually a little more general than we have described and has a couple of solutions for that problem. One alternative format uses a different column separator, such as | or a tab (\t).  Sometimes, when a tab is used, the format is called tsv, for tab-separated values). If you get a file using a different separator, you can just call the ``.split('|')`` or ``.split('\\t')``.
+El formato CSV es en realidad un poco más general de lo que hemos descrito y tiene un par de soluciones para ese problema. Un formato alternativo utiliza un separador de columna diferente, como | o una pestaña (\t). A veces, cuando se usa una pestaña, el formato se llama tsv, para valores separados por tabulaciones). Si obtiene un archivo usando un separador diferente, puede llamar a  ``.split('|')`` o ``.split('\\t')``.
 
-The other advanced CSV format uses commas to separate but encloses all values in double quotes.
+El otro formato CSV avanzado usa comas para separar pero encierra todos los valores entre comillas dobles.
 
-For example, the data file might look like:
+Por ejemplo, el archivo de datos podría verse así:
 
 .. raw:: html
 
@@ -60,4 +60,4 @@ For example, the data file might look like:
     "Christine Jacoba Aaftink","F","21","Netherlands","Speed Skating, 1500M","NA"
     </pre>
 
-If you are reading a .csv file that has enclosed all values in double quotes, it's actually a pretty tricky programming problem to split the text for one row into a list of values. You won't want to try to do it directly. Instead, you should use python's built-in csv module. However, there's a bit of a learning curve for that, and we find that students gain a better understanding of reading CSV format by first learning to read the simple, unquoted format and split lines on commas.
+Si está leyendo un archivo .csv que ha encerrado todos los valores entre comillas dobles, en realidad es un problema de programación bastante complicado dividir el texto de una fila en una lista de valores. No querrás intentar hacerlo directamente. En su lugar, debe usar el módulo csv incorporado de python. Sin embargo, hay una pequeña curva de aprendizaje para eso, y descubrimos que los estudiantes obtienen una mejor comprensión de la lectura del formato CSV al aprender primero a leer el formato simple, sin comillas y las líneas divididas en comas.
