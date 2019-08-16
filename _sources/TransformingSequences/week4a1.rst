@@ -9,23 +9,23 @@
 
 .. Week 4 Assessment 1
 
-Chapter Assessment - List Methods
----------------------------------
+Evaluación del Capítulo - Métodos de Lista
+-------------------------------------------
 
-**Check your understanding**
+**Chequea tu entendimiento**
 
 .. mchoice:: assess_question4_1_1_1
    :answer_a: I.
    :answer_b: II.
-   :answer_c: Neither is the correct reference diagram.
-   :feedback_a: Yes, when we are using the remove method, we are just editing the existing list, not making a new copy.
-   :feedback_b: When we use the remove method, we just edit the existing list. We do not make a new copy that does not include the removed object. 
-   :feedback_c: One of the diagrams is correct - look again at what is happening to lst.
+   :answer_c: Tampoco es el diagrama de referencia correcto.
+   :feedback_a: Sí, cuando usamos el método remove, solo estamos editando la lista existente, no haciendo una nueva copia.
+   :feedback_b: Cuando usamos el método remove, simplemente editamos la lista existente. No hacemos una nueva copia que no incluya el objeto eliminado.
+   :feedback_c: Uno de los diagramas es correcto: mire nuevamente lo que le está sucediendo a lst.
    :correct: a
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which of these is a correct reference diagram following the execution of the following code?
+   ¿Cuál de estos es un diagrama de referencia correcto después de la ejecución del siguiente código?
 
    .. sourcecode:: python
    
@@ -48,30 +48,30 @@ Chapter Assessment - List Methods
    :answer_b: .insert()
    :answer_c: .count()
    :answer_d: .index()
-   :feedback_a: pop removes and returns items (default is to remove and return the last item in the list) 
-   :feedback_b: insert will add an item at whatever position is specified.
-   :feedback_c: count returns the number of times something occurs in a list
-   :feedback_d: Yes, index will return the position of the first occurance of an item.
+   :feedback_a: pop elimina y devuelve elementos (el comportamiento predeterminado es eliminar y devolver el último elemento de la lista).
+   :feedback_b: insert agregará un elemento en cualquier posición especificada.
+   :feedback_c: cuenta devuelve el número de veces que ocurre algo en una lista
+   :feedback_d: Sí, el índice devolverá la posición de la primera aparición de un elemento.
    :correct: d
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which method would you use to figure out the position of an item in a list?
+   ¿Qué método usarías para determinar la posición de un elemento en una lista?
 
 .. mchoice:: assess_question4_1_1_3
    :answer_a: .insert()
    :answer_b: .pop()
    :answer_c: .append()
    :answer_d: .remove()
-   :feedback_a: While you can use insert, it is not the best method to use because you need to specify that you want to stick the new item at the end.
-   :feedback_b: pop removes an item from a list
-   :feedback_c: Yes, though you can use insert to do the same thing, you don't need to provide the position.
-   :feedback_d: remove gets rid of the first occurance of any item that it is told. It does not add an item.
+   :feedback_a: Si bien puede usar la inserción, no es el mejor método para usar porque debe especificar que desea pegar el nuevo elemento al final.
+   :feedback_b: pop elimina un elemento de una lista
+   :feedback_c: Sí, aunque puede usar la inserción para hacer lo mismo, no necesita proporcionar la posición.
+   :feedback_d: remove elimina la primera aparición de cualquier elemento que se le indique. No agrega un elemento.
    :correct: c
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which method is best to use when adding an item to the end of a list?
+   ¿Qué método es el mejor para agregar un elemento al final de una lista?
 
 
 .. activecode:: assess_ac4_1_1_4
@@ -79,7 +79,7 @@ Chapter Assessment - List Methods
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to add 'horseback riding' to the third position (i.e., right before volleyball) in the list ``sports``.
+    Escriba el código para agregar 'equitación' a la tercera posición (es decir, justo antes del voleibol) en la lista ``sports``.
     ~~~~
     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
 
@@ -100,7 +100,7 @@ Chapter Assessment - List Methods
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to take 'London' out of the list ``trav_dest``.
+    Escriba el código para sacar a 'Londres' de la lista ``trav_dest``.
     ~~~~
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'London', 'Melbourne']
 
@@ -121,7 +121,7 @@ Chapter Assessment - List Methods
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to add 'Guadalajara' to the end of the list ``trav_dest`` using a list method.
+    Escriba el código para agregar 'Guadalajara' al final de la lista ``trav_dest`` usando un método de lista.
     ~~~~
     trav_dest = ['Beirut', 'Milan', 'Pittsburgh', 'Buenos Aires', 'Nairobi', 'Kathmandu', 'Osaka', 'Melbourne']
 
@@ -140,10 +140,10 @@ Chapter Assessment - List Methods
     myTests().main()
 
 
-Chapter Assessment - Aliases and References
-===========================================
+Evaluación del capítulo: alias y referencias
+=============================================
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. fillintheblank:: assess_question3_3_1_1
    :practice: T
@@ -167,13 +167,13 @@ Chapter Assessment - Aliases and References
 .. mchoice:: assess_question3_3_1_2
    :answer_a: yes
    :answer_b: no
-   :feedback_a: Yes, b and z reference the same list and changes are made using both aliases.
-   :feedback_b: Can you figure out what the value of b is only by looking at the lines that mention b?
+   :feedback_a: Sí, b y z hacen referencia a la misma lista y los cambios se realizan utilizando ambos alias.
+   :feedback_b: ¿Puedes averiguar cuál es el valor de b solo mirando las líneas que mencionan b?
    :correct: a
    :practice: T
    :topics: TransformingSequences/Aliasing
 
-   Could aliasing cause potential confusion in this problem?
+   ¿Podría el alias causar una posible confusión en este problema?
 
    .. sourcecode:: python
 
@@ -186,13 +186,13 @@ Chapter Assessment - Aliases and References
 .. mchoice:: assess_question3_3_1_4
    :answer_a: yes
    :answer_b: no
-   :feedback_a: Since a string is immutable, aliasing won't be as confusing. Beware of using something like item = item + new_item with mutable objects though because it creates a new object. However, when we use += then that doesn't happen.
-   :feedback_b: Since a string is immutable, aliasing won't be as confusing. Beware of using something like item = item + new_item with mutable objects though because it creates a new object. However, when we use += then that doesn't happen.
+   :feedback_a: Como una cadena es inmutable, el alias no será tan confuso. Tenga cuidado de usar algo como item = item + new_item con objetos mutables porque crea un nuevo objeto. Sin embargo, cuando usamos +=, eso no sucede.
+   :feedback_b: Como una cadena es inmutable, el alias no será tan confuso. Tenga cuidado de usar algo como item = item + new_item con objetos mutables porque crea un nuevo objeto. Sin embargo, cuando usamos +=, eso no sucede.
    :correct: b
    :practice: T
    :topics: TransformingSequences/Aliasing
 
-   Could aliasing cause potential confusion in this problem?
+   ¿Podría el alias causar una posible confusión en este problema?
 
    .. sourcecode:: python
 
@@ -205,15 +205,15 @@ Chapter Assessment - Aliases and References
    :answer_b: II.
    :answer_c: III.
    :answer_d: IV.
-   :feedback_a: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
-   :feedback_b: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
-   :feedback_c: When an object is concatenated with another using +=, it extends the original object. If this is done in the longer form (item = item + object) then it makes a copy.
-   :feedback_d: Yes, the behavior of obj = obj + object_two is different than obj += object_two when obj is a list. The first version makes a new object entirely and reassigns to obj. The second version changes the original object so that the contents of object_two are added to the end of the first.
+   :feedback_a: Cuando un objeto se concatena con otro usando +=, extiende el objeto original. Si esto se hace en la forma más larga (ítem = ítem + objeto), entonces hace una copia.
+   :feedback_b: Cuando un objeto se concatena con otro usando +=, extiende el objeto original. Si esto se hace en la forma más larga (ítem = ítem + objeto), entonces hace una copia.
+   :feedback_c: Cuando un objeto se concatena con otro usando +=, extiende el objeto original. Si esto se hace en la forma más larga (ítem = ítem + objeto), entonces hace una copia.
+   :feedback_d: Sí, el comportamiento de obj = obj + object_two es diferente de obj += object_two cuando obj es una lista. La primera versión crea un nuevo objeto por completo y lo reasigna a obj. La segunda versión cambia el objeto original para que el contenido de object_two se agregue al final de la primera.
    :correct: d
    :practice: T
    :topics: TransformingSequences/ObjectsandReferences
 
-   Which of these is a correct reference diagram following the execution of the following code?
+   ¿Cuál de estos es un diagrama de referencia correcto después de la ejecución del siguiente código?
    
    .. sourcecode:: python
 
@@ -242,23 +242,23 @@ Chapter Assessment - Aliases and References
    .. image:: Figures/week3a3_4.png
       :alt: Fourth Potential Solution
 
-Chapter Assessment - Split and Join
-===================================
+Evaluación del capítulo: Split y Join
+=======================================
 
 .. mchoice:: assess_question4_1_3_1
    :answer_a: I.
    :answer_b: II.
    :answer_c: III.
    :answer_d: IV.
-   :feedback_a: Yes, when we make our own diagrams we want to keep the old information because sometimes other variables depend on them. It can get cluttered though if there is a lot of information.
-   :feedback_b: Not quite, we want to keep track of old information because sometimes other variables depend on them. 
-   :feedback_c: Look again at what is happening when join is executed.
-   :feedback_d: What happens to the spaces in a string when it is split by whitespace?
+   :feedback_a: Sí, cuando hacemos nuestros propios diagramas, queremos mantener la información anterior porque a veces otras variables dependen de ellos. Sin embargo, puede estar abarrotado si hay mucha información.
+   :feedback_b: No del todo, queremos hacer un seguimiento de la información antigua porque a veces otras variables dependen de ellas.
+   :feedback_c: Mire nuevamente lo que sucede cuando se ejecuta la unión.
+   :feedback_d: ¿Qué les sucede a los espacios en una cadena cuando se divide por espacios en blanco?
    :correct: a
    :practice: T
    :topics: TransformingSequences/MutatingMethods
 
-   Which of these is a correct reference diagram following the execution of the following code?
+   ¿Cuál de estos es un diagrama de referencia correcto después de la ejecución del siguiente código?
 
    .. sourcecode:: python
 
@@ -294,7 +294,7 @@ Chapter Assessment - Split and Join
     :practice: T
     :topics: TransformingSequences/MutatingMethods
 
-    Write code to find the postion of the string "Tony" in the list ``awards`` and save that information in the variable ``pos``.
+    Escriba el código para encontrar la posición de la cadena "Tony" en la lista ``awards`` y guarde esa información en la variable ``pos``.
     ~~~~
     awards = ['Emmy', 'Tony', 'Academy', 'Grammy']
 
@@ -310,10 +310,10 @@ Chapter Assessment - Split and Join
 
     myTests().main()
 
-Chapter Assessment - For Loop Mechanics
-=======================================
+Evaluación del Capítulo - Mecánicas del bucle For
+==================================================
 
-**Check your understanding**
+**Revisa tu entendimientos**
 
 .. mchoice:: assess_question5_1_1_1
    :answer_a: byzo
@@ -321,14 +321,14 @@ Chapter Assessment - For Loop Mechanics
    :answer_c: z
    :answer_d: c
    :correct: d
-   :feedback_a: This is the variable with our string, but it does not accumulate anything.
-   :feedback_b: This is the iterator variable. It changes each time but does not accumulate.
-   :feedback_c: This is a variable inside the for loop. It changes each time but does not accumulate or retain the old expressions that were assigned to it.
-   :feedback_d: Yes, this is the accumulator variable. By the end of the program, it will have a full count of how many items are in byzo.
+   :feedback_a: Esta es la variable con nuestra cadena, pero no acumula nada.
+   :feedback_b: Esta es la variable iteradora. Cambia cada vez pero no se acumula.
+   :feedback_c: Esta es una variable dentro del ciclo for. Cambia cada vez, pero no acumula ni retiene las expresiones antiguas que se le asignaron.
+   :feedback_d: Sí, esta es la variable acumuladora. Al final del programa, tendrá un recuento completo de cuántos elementos hay en byzo.
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Which of these is the accumulator variable?
+   ¿Cuál de estas es la variable acumuladora?
    
    .. sourcecode:: python
 
@@ -344,13 +344,13 @@ Chapter Assessment - For Loop Mechanics
    :answer_b: elem
    :answer_c: t
    :correct: a
-   :feedback_a: Yes, this is the sequence that we iterate over.
-   :feedback_b: This is the iterator variable. It changes each time but is not the whole sequence itself.
-   :feedback_c: This is the accumulator variable. By the end of the program, it will have a full count of how many items are in cawdra.
+   :feedback_a: Sí, esta es la secuencia sobre la que iteramos.
+   :feedback_b: Esta es la variable iteradora. Cambia cada vez, pero no es toda la secuencia en sí.
+   :feedback_c: Esta es la variable acumuladora. Al final del programa, tendrá un recuento completo de cuántos elementos hay en cawdra.
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   Which of these is the sequence?
+   ¿Cuál de estos es la secuencia?
    
    .. sourcecode:: python
 
@@ -364,13 +364,13 @@ Chapter Assessment - For Loop Mechanics
    :answer_b: lst
    :answer_c: num
    :correct: a
-   :feedback_a: Yes, this is the iterator variable. It changes each time but is not the whole sequence itself.
-   :feedback_b: This is the sequence that we iterate over.
-   :feedback_c: This is the accumulator variable. By the end of the program, it will have the total value of the integers that are in lst.
+   :feedback_a: Sí, esta es la variable iteradora. Cambia cada vez, pero no es toda la secuencia en sí.
+   :feedback_b: Esta es la secuencia sobre la que iteramos.
+   :feedback_c: Esta es la variable acumuladora. Al final del programa, tendrá el valor total de los enteros que están en lst.
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   Which of these is the iterator (loop) variable?
+   ¿Cuál de estos es la variable iterador (bucle)?
    
    .. sourcecode:: python
 
@@ -383,7 +383,7 @@ Chapter Assessment - For Loop Mechanics
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   What is the iterator (loop) variable in the following?
+   ¿Cuál es la variable iterador (bucle) a continuación?
 
    .. sourcecode:: python
 
@@ -392,12 +392,12 @@ Chapter Assessment - For Loop Mechanics
     for phrase in rest:
         let += phrase[0]
 
-   The iterator variable is
+   La variable iteradora es
 
-   -  :phrase: Good work!
-      :rest: rest is the sequence, not the iterator variable.
-      :let: let is the accumulator variable, not the iterator variable.
-      :.*: Incorrect, try again.
+   -  :phrase: ¡Buen trabajo!
+      :rest: rest es la secuencia, no la variable iteradora.
+      :let: let es la variable acumuladora, no la variable iteradora.
+      :.*: Incorrecto. Inténtelo de nuevo.
 
 .. activecode:: assess_week5_01
    :language: python
@@ -405,10 +405,10 @@ Chapter Assessment - For Loop Mechanics
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Currently there is a string called ``str1``. Write code to create a list called ``chars`` which should contain the characters from ``str1``. Each character in ``str1`` should be its own element in the list ``chars``.
+   Actualmente hay una cadena llamada ``str1``. Escriba el código para crear una lista llamada ``chars`` que debe contener los caracteres de ``str1``. Cada carácter en ``str1`` debe ser su propio elemento en la lista ``chars``.
    ~~~~
-   str1 = "I love python"
-   # HINT: what's the accumulator? That should go here.
+   str1 = "Yo amo Python"
+   # PISTA: ¿Qué es el acumulador? Eso debería ir aquí.
       
    =====
 
@@ -421,25 +421,25 @@ Chapter Assessment - For Loop Mechanics
 
    myTests().main()
 
-Chapter Assessment - Accumulator Pattern
-========================================
+Evaluación de capítulos - Accumulator Pattern
+===============================================
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: assess_question5_2_1_1
    :answer_a: I.
    :answer_b: II.
    :answer_c: III.
-   :answer_d: none of the above would be appropriate for the problem.
+   :answer_d: ninguno de los anteriores sería apropiado para el problema.
    :correct: c
-   :feedback_a: This pattern will only count how many items are in the list, not provide the total accumulated value.
-   :feedback_b: This would reset the value of s each time the for loop iterated, and so by the end s would be assigned the value of the last item in the list plus the last item in the list.
-   :feedback_c: Yes, this will solve the problem.
-   :feedback_d: One of the patterns above is a correct way to solve the problem.
+   :feedback_a: Este patrón solo contará cuántos elementos hay en la lista, no proporcionará el valor acumulado total.
+   :feedback_b: Esto restablecería el valor de s cada vez que el ciclo for repitiera, por lo que al final s se le asignaría el valor del último elemento de la lista más el último elemento de la lista.
+   :feedback_c: Sí, esto resolverá el problema.
+   :feedback_d: Uno de los patrones anteriores es una forma correcta de resolver el problema.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Given that we want to accumulate the total sum of a list of numbers, which of the following accumulator patterns would be appropriate?
+   Dado que queremos acumular la suma total de una lista de números, ¿cuál de los siguientes patrones de acumuladores sería apropiado?
    
    I.
    
@@ -473,17 +473,17 @@ Chapter Assessment - Accumulator Pattern
    :answer_b: 2.
    :answer_c: 3.
    :answer_d: 4.
-   :answer_e: none of the above would be appropriate for the problem. 
+   :answer_e: ninguno de los anteriores sería apropiado para el problema.
    :correct: d
-   :feedback_a: How does this solution know that the element of lst is a string and that s should be updated?
-   :feedback_b: What happens to s each time the for loop iterates?
-   :feedback_c: Reread the prompt again, what do we want to accumulate?
-   :feedback_d: Yes, this will solve the problem.
-   :feedback_e: One of the patterns above is a correct way to solve the problem.
+   :feedback_a: ¿Cómo sabe esta solución que el elemento de lst es una cadena y que s debe actualizarse?
+   :feedback_b: ¿Qué le sucede a s cada vez que el ciclo for itera?
+   :feedback_c: Vuelva a leer el mensaje nuevamente, ¿qué queremos acumular?
+   :feedback_d: Sí, esto resolverá el problema.
+   :feedback_e: Uno de los patrones anteriores es una forma correcta de resolver el problema.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Given that we want to accumulate the total number of strings in the list, which of the following accumulator patterns would be appropriate?
+   Dado que queremos acumular el número total de cadenas en la lista, ¿cuál de los siguientes patrones de acumulador sería apropiado?
 
    1.
    
@@ -529,17 +529,17 @@ Chapter Assessment - Accumulator Pattern
    :answer_b: x
    :answer_c: total
    :answer_d: accum
-   :answer_e: none of the above
+   :answer_e: Ninguna de las anteriores
    :correct: c,d
-   :feedback_a: No, though sum might be clear, it is also the name of a commonly used function in Python, and so there can be issues if sum is used as an accumulator variable.
-   :feedback_b: No, x is not a clear enough name to be used for an accumulator variable.
-   :feedback_c: Yes, total is a good name for accumulating numbers.
-   :feedback_d: Yes, accum is a good name. It's both short and easy to remember.
-   :feedback_e: At least one of the answers above is a good name for an accumulator variable.
+   :feedback_a: No, aunque la suma podría ser clara, también es el nombre de una función de uso común en Python, por lo que puede haber problemas si la suma se usa como una variable acumuladora.
+   :feedback_b: No, x no es un nombre lo suficientemente claro como para ser usado para una variable acumuladora.
+   :feedback_c: Sí, total es un buen nombre para acumular números.
+   :feedback_d: Sí, accum es un buen nombre. Es corto y fácil de recordar.
+   :feedback_e: Al menos una de las respuestas anteriores es un buen nombre para una variable acumuladora.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Which of these are good names for an accumulator variable? Select as many as apply.
+   ¿Cuáles de estos son buenos nombres para una variable acumuladora? Selecciona todas las que apliquen.
 
 .. mchoice:: assess_question5_2_1_4
    :multiple_answers:
@@ -547,17 +547,17 @@ Chapter Assessment - Accumulator Pattern
    :answer_b: y
    :answer_c: elem
    :answer_d: char
-   :answer_e: none of the above
+   :answer_e: Ninguna de las anteriores
    :correct: a,c,d
-   :feedback_a: Yes, item can be a good name to use as an iterator variable.
-   :feedback_b: No, y is not likely to be a clear name for the iterator variable.
-   :feedback_c: Yes, elem can be a good name to use as an iterator variable, especially when iterating over lists.
-   :feedback_d: Yes, char can be a good name to use when iterating over a string, because the iterator variable would be assigned a character each time.
-   :feedback_e: At least one of the answers above is a good name for an iterator variable.
+   :feedback_a: Sí, el elemento puede ser un buen nombre para usar como variable iteradora.
+   :feedback_b: No, es probable que y no sea un nombre claro para la variable iteradora.
+   :feedback_c: Sí, elem puede ser un buen nombre para usar como variable iteradora, especialmente cuando se repite en listas.
+   :feedback_d: Sí, char puede ser un buen nombre para usar al iterar sobre una cadena, porque a la variable iteradora se le asignaría un carácter cada vez.
+   :feedback_e: Al menos una de las respuestas anteriores es un buen nombre para una variable iteradora.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Which of these are good names for an iterator (loop) variable? Select as many as apply.
+   ¿Cuáles de estos son buenos nombres para una variable iterador (bucle)? Selecciona todas las que apliquen.
 
 .. mchoice:: assess_question5_2_1_5
    :multiple_answers:
@@ -565,34 +565,34 @@ Chapter Assessment - Accumulator Pattern
    :answer_b: p
    :answer_c: sentence
    :answer_d: names
-   :answer_e: none of the above
+   :answer_e: ninguna de las anteriores
    :correct: a,c,d
-   :feedback_a: Yes, num_lst is good for a sequence variable if the value is actually a list of numbers.
-   :feedback_b: No, p is not likely to be a clear name for the iterator variable.
-   :feedback_c: Yes, this is good to use if the for loop is iterating through a string.
-   :feedback_d: Yes, names is good, assuming that the for loop is iterating through actual names and not something unrelated to names.
-   :feedback_e: At least one of the answers above is a good name for a sequence variable
+   :feedback_a: Sí, num_lst es bueno para una variable de secuencia si el valor es en realidad una lista de números.
+   :feedback_b: No, es probable que p no sea un nombre claro para la variable iteradora.
+   :feedback_c: Sí, es bueno usarlo si el ciclo for está iterando a través de una cadena.
+   :feedback_d: Sí, los nombres son buenos, suponiendo que el ciclo for esté iterando a través de nombres reales y no algo no relacionado con los nombres.
+   :feedback_e: Al menos una de las respuestas anteriores es un buen nombre para una variable de secuencia
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Which of these are good names for a sequence variable? Select as many as apply.
+   ¿Cuáles de estos son buenos nombres para una variable de secuencia? Selecciona todas las que apliquen.
 
 .. mchoice:: assess_question5_2_1_6
-   :answer_a: accumulator variable: x | iterator variable: s | sequence variable: lst
-   :answer_b: accumulator variable: total | iterator variable: s | sequence variable: lst
-   :answer_c: accumulator variable: x | iterator variable: sentences | sequence variable: sentence_lst
-   :answer_d: accumulator variable: total | iterator variable: sentence |sequence variable: sentence_lst
-   :answer_e: none of the above
+   :answer_a: variable acumuladora: x | variable iteradora: s | variable de secuencia: lst
+   :answer_b: variable acumuladora: total | variable iteradora: s | variable de secuencia: lst
+   :answer_c: variable acumuladora: x | variable iteradora: sentences | variable de secuencia: sentence_lst
+   :answer_d: variable acumuladora: total | variable iteradora: sentence | variable de secuencia: sentence_lst
+   :answer_e: Ninguna de las anteriores
    :correct: d
-   :feedback_a: Though lst is an acceptable name, x and s are not informative names for accumulator and iterator variables.
-   :feedback_b: Though total is great and lst is an acceptable name, s is a little bit cryptic as a variable name referring to a sentence.
-   :feedback_c: Though sentence_lst is a good name, the iterator variable should be singular rather than plural, and x is not an informative name for the accumulator variable.
-   :feedback_d: Yes, this combination of variable names is the clearest.
-   :feedback_e: One of the options above has good names for the scenario.
+   :feedback_a: Aunque lst es un nombre aceptable, x y s no son nombres informativos para las variables de acumulador e iterador.
+   :feedback_b: Aunque total es excelente y lst es un nombre aceptable, s es un poco críptico como un nombre variable que se refiere a una oración.
+   :feedback_c: Aunque sentence_lst es un buen nombre, la variable iteradora debe ser singular en lugar de plural, y x no es un nombre informativo para la variable acumuladora.
+   :feedback_d: Sí, esta combinación de nombres de variables es la más clara.
+   :feedback_e: Una de las opciones anteriores tiene buenos nombres para el escenario.
    :practice: T
    :topics: TransformingSequences/WPAccumulatorPatternStrategies
 
-   Given the following scenario, what are good names for the accumulator variable, iterator variable, and sequence variable? You are writing code that uses a list of sentences and accumulates the total number of sentences that have the word 'happy' in them.
+   Dado el siguiente escenario, ¿cuáles son los buenos nombres para la variable acumuladora, la variable iteradora y la variable de secuencia? Está escribiendo un código que usa una lista de oraciones y acumula el número total de oraciones que tienen la palabra 'happy' en ellas.
 
 .. activecode:: access_ac_5_2_1_1
    :language: python
@@ -600,7 +600,7 @@ Chapter Assessment - Accumulator Pattern
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   For each character in the string saved in ``ael``, append that character to a list that should be saved in a variable ``app``.
+   Para cada carácter en la cadena guardada en ``ael``, agregue ese carácter a una lista que debe guardarse en una variable ``app``.
    ~~~~
    ael = "python!"
 
@@ -622,7 +622,7 @@ Chapter Assessment - Accumulator Pattern
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-   For each string in ``wrds``, add 'ed' to the end of the word (to make the word past tense). Save these past tense words to a list called ``past_wrds``.
+   Para cada cadena en ``wrds``, agregue 'ed' al final de la palabra (para conjugar la palabra en tiempo pasado). Guarde estas palabras en tiempo pasado en una lista llamada ``past_wrds``.
    ~~~~
    wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
    =====
@@ -642,7 +642,7 @@ Chapter Assessment - Accumulator Pattern
     :practice: T
     :topics: TransformingSequences/TheAccumulatorPatternwithLists
 
-    Write code to create a **list of word lengths** for the words in ``original_str`` using the accumulation pattern and assign the answer to a variable ``num_words_list``. (You should use the ``len`` function).
+    Escriba código para crear una **lista de longitudes de palabras** para las palabras en ``original_str`` usando el patrón de acumulación y asigne la respuesta a una variable ``num_words_list``. (Debe usar la función ``len``).
 
     ~~~~
     original_str = "The quick brown rhino jumped over the extremely lazy fox"
@@ -667,7 +667,7 @@ Chapter Assessment - Accumulator Pattern
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Create an empty string and assign it to the variable ``lett``. Then using range, write code such that when your code is run, ``lett`` has 7 b's (``"bbbbbbb"``).
+   Cree una cadena vacía y asígnela a la variable ``lett``. Luego, usando el rango, escriba el código de manera que cuando se ejecute su código, ``lett`` tenga 7 b (``"bbbbbbb"``).
    ~~~~
 
    =====
@@ -682,8 +682,8 @@ Chapter Assessment - Accumulator Pattern
 
    myTests().main()
 
-Chapter Assessment - Problem Solving
-====================================
+Evaluación del capítulo: resolución de problemas
+=================================================
 
 .. activecode:: asign_c01_01
    :language: python
@@ -691,7 +691,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Below are a set of scores that students have received in the past semester. Write code to determine how many are 90 or above and assign that result to the value ``a_scores``.
+   A continuación hay un conjunto de puntajes que los estudiantes han recibido en el semestre pasado. Escriba el código para determinar cuántos son de 90 o más y asigne ese resultado al valor ``a_scores``.
    ~~~~
    scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
@@ -714,7 +714,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Write code that uses the string stored in ``org`` and creates an acronym which is assigned to the variable ``acro``. Only the first letter of each word should be used, each letter in the acronym should be a capital letter, and there should be nothing to separate the letters of the acronym. Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``org`` was assigned the string "hello to world" then the resulting acronym should be "HW".
+   Escriba el código que usa la cadena almacenada en ``org`` y crea un acrónimo que se asigna a la variable ``acro``. Solo se debe usar la primera letra de cada palabra, cada letra del acrónimo debe ser mayúscula y no debe haber nada que separe las letras del acrónimo. Las palabras que no deben incluirse en el acrónimo se almacenan en la lista ``stopwords``. Por ejemplo, si a ``org`` se le asignó la cadena "hello to world", el acrónimo resultante debería ser "HW".
    ~~~~
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', "The"]
    org = "The organization for health, safety, and education"
@@ -738,7 +738,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   Write code that uses the string stored in ``sent`` and creates an acronym which is assigned to the variable ``acro``. The first two letters of each word should be used, each letter in the acronym should be a capital letter, and each element of the acronym should be separated by a ". " (dot and space). Words that should not be included in the acronym are stored in the list ``stopwords``. For example, if ``sent`` was assigned the string "height and ewok wonder" then the resulting acronym should be "HE. EW. WO".
+   Escriba el código que usa la cadena almacenada en ``sent`` y crea un acrónimo que se asigna a la variable ``acro``. Deben usarse las dos primeras letras de cada palabra, cada letra en el acrónimo debe ser una letra mayúscula y cada elemento del acrónimo debe estar separado por un ". " (Punto y espacio). Las palabras que no deben incluirse en el acrónimo se almacenan en la lista ``stopwords``. Por ejemplo, si a ``sent`` se le asignó la cadena "height and ewok wonder", entonces el acrónimo resultante debería ser "HE. EW. WO".
    ~~~~
    stopwords = ['to', 'a', 'for', 'by', 'an', 'am', 'the', 'so', 'it', 'and', 'The']
    sent = "The water earth and air are vital"
@@ -762,7 +762,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/TheAccumulatorPatternwithStrings
 
-   A palindrome is a phrase that, if reversed, would read the exact same. Write code that checks if ``p_phrase`` is a palindrome by reversing it and then checking if the reversed version is equal to the original. Assign the reversed version of ``p_phrase`` to the variable ``r_phrase`` so that we can check your work.
+   Un palíndromo es una frase que, si se invierte, se leería exactamente igual. Escriba un código que verifique si ``p_phrase`` es un palíndromo invirtiéndolo y luego verificando si la versión invertida es igual a la original. Asigne la versión invertida de ``p_phrase`` a la variable ``r_phrase`` para que podamos verificar su trabajo.
    ~~~~
    p_phrase = "was it a car or a cat I saw"
 
@@ -787,7 +787,7 @@ Chapter Assessment - Problem Solving
    :practice: T
    :topics: TransformingSequences/NonmutatingMethodsonStrings
 
-   Provided is a list of data about a store's inventory where each item in the list represents the name of an item, how much is in stock, and how much it costs. Print out each item in the list with the same formatting, using the .format method (not string concatenation). For example, the first print statment should read ``The store has 12 shoes, each for 29.99 USD.``
+   Se proporciona una lista de datos sobre el inventario de una tienda donde cada artículo de la lista representa el nombre de un artículo, cuánto hay en stock y cuánto cuesta. Imprima cada elemento de la lista con el mismo formato, utilizando el método .format (no la concatenación de cadenas). Por ejemplo, la primera declaración impresa debería decir ``The store has 12 shoes, each for 29.99 USD.``.
    ~~~~
    inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 
