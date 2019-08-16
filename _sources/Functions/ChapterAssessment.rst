@@ -11,8 +11,8 @@
    :prefix: func-15-
    :start: 1
 
-Chapter Assessment
-==================
+Evaluación de capítulos
+=======================
 
 .. activecode:: ac11_15_1
    :language: python
@@ -20,7 +20,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   Write a function called ``int_return`` that takes an integer as input and returns the same integer.
+   Escriba una función llamada ``int_return`` que toma un entero como entrada y devuelve el mismo entero.
    ~~~~
    =====
 
@@ -39,7 +39,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   Write a function called ``add`` that takes any number as its input and returns that sum with 2 added.
+   Escriba una función llamada ``add`` que tome cualquier número como entrada y devuelva esa suma con 2 agregados.
    ~~~~
 
    =====
@@ -61,7 +61,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   Write a function called ``change`` that takes any string, adds "Nice to meet you!" to the end of the argument given, and returns that new string.
+   Escriba una función llamada ``change`` que tome cualquier string, agregue "Nice to meet you!" al final del argumento dado, y devuelve ese nuevo string.
    ~~~~
    
    =====
@@ -82,7 +82,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Afunctionthataccumulates
 
-   Write a function, ``accum``, that takes a list of integers as input and returns the sum of those integers.
+   Escriba una función, ``accum``, que toma una lista de enteros como entrada y devuelve la suma de esos enteros.
    ~~~~
 
    =====
@@ -104,7 +104,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Returningavaluefromafunction
 
-   Write a function, ``length``, that takes in a list as the input. If the length of the list is greater than or equal to 5, return "Longer than 5". If the length is less than 5, return "Less than 5".
+   Escriba una función, ``length``, que tome una lista como entrada. Si la longitud de la lista es mayor o igual a 5, devuelva "Longer than 5". Si la longitud es inferior a 5, devuelva "Less than 5".
    ~~~~
 
    =====
@@ -127,7 +127,7 @@ Chapter Assessment
    :practice: T
    :topics: Functions/Functionscancallotherfunctions
 
-   You will need to write two functions for this problem. The first function, ``divide`` that takes in any number and returns that same number divided by 2. The second function called ``sum`` should take any number, divide it by 2, and add 6. It should return this new number. You should call the ``divide`` function within the ``sum`` function. Do not worry about decimals.
+   Necesitará escribir dos funciones para este problema. La primera función, ``divide`` que toma cualquier número y devuelve ese mismo número dividido por 2. La segunda función llamada ``sum`` debe tomar cualquier número, dividirlo por 2 y agregar 6. Debería devolver esto un nuevo número. Debe llamar a la función ``divide`` dentro de la función ``sum``. No te preocupes por los decimales.
    ~~~~
 
    =====
