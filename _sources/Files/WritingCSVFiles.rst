@@ -12,12 +12,12 @@
    :prefix: files-10-
    :start: 1
 
-Writing data to a CSV File
-==========================
+Escribir datos en un archivo CSV
+====================================
 
-The typical pattern for writing data to a CSV file will be to write a header row and loop 
-through the items in a list, outputting one row for 
-each. Here we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.
+El patrón típico para escribir datos en un archivo CSV será escribir una fila de encabezado y un bucle
+a través de los elementos en una lista, generando una fila para
+cada una. Aquí tenemos una lista de tuples, cada una representando a un olímpico, un subconjunto de las filas y columnas del archivo del que hemos estado leyendo.
 
 .. activecode:: ac9_14_1
 
@@ -27,30 +27,30 @@ each. Here we a have a list of tuples, each representing one Olympian, a subset 
                ("Wakako Abe", 18, "Cycling")]
 
    outfile = open("reduced_olympics.csv","w")
-   # output the header row
+   # salida de la fila del encabezado
    outfile.write('Name,Age,Sport')
    outfile.write('\n')
-   # output each of the rows:
+   # salida de cada una de las filas:
    for olympian in olympians:
        row_string = '{},{},{}'.format(olympian[0], olympian[1], olympian[2])
        outfile.write(row_string)
        outfile.write('\n')
    outfile.close()
    
-There are a few things worth noting in the code above.
+Hay algunas cosas que vale la pena señalar en el código anterior.
 
-First, using .format() makes it really clear what we're doing when we create the variable row_string. We are making a comma separated set of values; the {} curly braces indicated where to substitute in the actual values. The equivalent string concatenation would be very hard to read. An alternative, also clear way to do it would be with the .join method: ``row_string = ','.join(olympian[0], olympian[1], olympian[2])``.
+Primero, usar .format() deja muy claro lo que estamos haciendo cuando creamos la variable row_string. Estamos haciendo un conjunto de valores separados por comas; las {} llaves indicaron dónde sustituir en los valores reales. La concatenación de cadena equivalente sería muy difícil de leer. Una alternativa, también una forma clara de hacerlo sería con el método .join : ``row_string = ','.join(olympian[0], olympian[1], olympian[2])``.
 
-Second, unlike the print statement, remember that the .write() method on a file object does not automatically insert a newline. Instead, we have to explicitly add the character ``\n`` at the end of each line.
+Segundo, a diferencia de la declaración de impresión, recuerde que el método .write() en un objeto de archivo no inserta automáticamente una nueva línea. En cambio, tenemos que agregar explícitamente el carácter ``\n`` al final de cada línea.
 
-Third, we have to explicitly refer to each of the elements of olympian when building the string to write. Note that just putting ``.format(olympian)`` wouldn't work because the interpreter would see only one value (a tuple) when it was expecting three values to try to substitute into the string template. Later in the book we will see that python provides an advanced technique for automatically unpacking the three values from the tuple, with ``.format(*olympian)``.
+Tercero, tenemos que referirnos explícitamente a cada uno de los elementos de Olympian cuando construimos lel string para escribir. Tenga en cuenta que simplemente poner ``.format(olympian)`` no funcionaría porque el intérprete vería solo un valor (un tuple) cuando esperaba tres valores para intentar sustituir en la plantilla de string. Más adelante en el libro veremos que Python proporciona una técnica avanzada para desempaquetar automáticamente los tres valores de la tupla, con ``.format(*olympian)``.
 
-As described previously, if one or more columns contain text, and that text could contain commas, we need to do something 
-to distinguish a comma in the text from a comma that is separating different values (cells in the 
-table). If we want to enclose each value in double quotes, it can start to get a little tricky, because we will 
-need to have the double quote character inside the string output. But it is doable. Indeed, one 
-reason Python allows strings to be delimited with either single quotes or double quotes is so 
-that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.
+Como se describió anteriormente, si una o más columnas contienen texto, y ese texto podría contener comas, debemos hacer algo
+para distinguir una coma en el texto de una coma que separa diferentes valores (celdas en la
+mesa). Si queremos encerrar cada valor entre comillas dobles, puede comenzar a ser un poco complicado, porque lo que haremos
+debe tener el carácter de comillas dobles dentro de la salida de la cadena. Pero es factible. De hecho,
+la razón por la que Python permite que las cadenas se delimiten con comillas simples o comillas dobles es que
+ese puede usarse para delimitar el string y el otro puede ser un caracter en el string. Si llega al punto en el que necesita citar todos los valores, le recomendamos aprender a usar el módulo csv de python.
 
 .. activecode:: ac9_14_2
 
@@ -60,10 +60,10 @@ that one can be used to delimit the string and the other can be a character in t
                ("Wakako Abe", 18, "Cycling")]
 
    outfile = open("reduced_olympics2.csv","w")
-   # output the header row
+   # salida de la fila del encabezado
    outfile.write('"Name","Age","Sport"')
    outfile.write('\n')
-   # output each of the rows:
+   # salida de cada una de las filas:
    for olympian in olympians:
        row_string = '"{}", "{}", "{}"'.format(olympian[0], olympian[1], olympian[2])
        outfile.write(row_string)
