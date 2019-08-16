@@ -32,10 +32,10 @@ pero aprenderá más si intenta escribirlo usted mismo primero.
 .. tabbed:: q0
 
    .. tab:: Question
-   
+
       Escriba un programa que encuentre la clave en un diccionario que tenga el valor máximo. Si
-      dos teclas tienen el mismo valor máximo, está bien imprimir cualquiera de las dos. Llenar
-      en el código esqueleto
+      dos teclas tienen el mismo valor máximo, está bien imprimir cualquiera de las dos. Llenar
+      en el código esqueleto
       
       .. actex:: ac10_7_1
 
