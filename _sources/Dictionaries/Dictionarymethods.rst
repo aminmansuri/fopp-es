@@ -11,31 +11,31 @@
    :prefix: dictionaries-3-
    :start: 1
 
-Dictionary methods
-------------------
+Métodos de Diccionario
+-----------------------
 
-Dictionaries have a number of useful built-in methods.
-The following table provides a summary and more details can be found in the
-`Python Documentation <http://docs.python.org/py3k/library/stdtypes.html#mapping-types-dict>`_.
+Los diccionarios tienen varios métodos útiles incorporados.
+La siguiente tabla proporciona un resumen y se pueden encontrar más detalles en la
+`Documentación de Python <http://docs.python.org/py3k/library/stdtypes.html#mapping-types-dict>`_.
 
 ==========  ==============      =======================================================
-Method      Parameters          Description
+Método      Parametros          Descripción
 ==========  ==============      =======================================================
-keys        none                Returns a view of the keys in the dictionary
-values      none                Returns a view of the values in the dictionary
-items       none                Returns a view of the key-value pairs in the dictionary
-get         key                 Returns the value associated with key; None otherwise
-get         key,alt             Returns the value associated with key; alt otherwise
+keys        none                Devuelve una vista de las teclas en el diccionario.
+values      none                Devuelve una vista de los valores en el diccionario.
+items       none                Devuelve una vista de los pares clave-valor en el diccionario
+get         key                 Devuelve el valor asociado con la clave; Ninguno de lo contrario
+get         key,alt             Devuelve el valor asociado con la clave; alt de lo contrario
 ==========  ==============      =======================================================
 
-As we saw earlier with strings and lists, dictionary methods use dot notation, which specifies the name of the method 
-to the right of the dot and the name of the object on which to apply the method immediately to the left of the dot. 
-The empty parentheses in the case of ``keys`` indicate that this method takes no parameters. If ``x`` is a variable 
-whose value is a dictionary, ``x.keys`` is the method object, and ``x.keys()`` invokes the method, returning a view of 
-the value.
+Como vimos anteriormente con cadenas y listas, los métodos de diccionario usan la notación de puntos, que especifica el nombre del método
+a la derecha del punto y el nombre del objeto sobre el cual aplicar el método inmediatamente a la izquierda del punto.
+Los paréntesis vacíos en el caso de `` claves '' indican que este método no toma parámetros. Si ``x`` es una variable
+cuyo valor es un diccionario, ``x.keys`` es el objeto del método, y ``x.keys()`` invoca el método, devolviendo una vista de
+el valor.
 
-The keys method returns the keys, not necessarily in the same order they were added to the dictionary or any other 
-particular order.
+El método de claves devuelve las claves, no necesariamente en el mismo orden en que se agregaron al diccionario o cualquier otro
+orden particular.
 
 .. activecode:: ac10_3_1
     
@@ -48,9 +48,9 @@ particular order.
     print(ks)
 
     
-It's so common to iterate over the keys in a dictionary that you can
-omit the ``keys`` method call in the ``for`` loop --- iterating over
-a dictionary implicitly iterates over its keys.
+Es tan común iterar sobre las claves en un diccionario que puede
+omitir la llamada al método ``keys`` en el ciclo ``for`` ya que al iterar sobre
+un diccionario itera implícitamente sobre sus claves.
 
 .. activecode:: ac10_3_2
     
@@ -60,8 +60,8 @@ a dictionary implicitly iterates over its keys.
         print("Got key", k)
 
  
-The ``values`` and ``items`` methods are similar to ``keys``. They return the objects which can be iterated over. Note 
-that the item objects are tuples containing the key and the associated value.
+Los métodos ``values`` y ``elements`` son similares a las ``keys``. Devuelven los objetos que se pueden iterar. Nota
+que los objetos del artículo son tuplas que contienen la clave y el valor asociado.
 
 .. activecode:: ac10_3_3
     
@@ -75,17 +75,17 @@ that the item objects are tuples containing the key and the associated value.
 
 .. note::
 
-    Technically, .keys(), .values(), and .items() don't return actual lists. Like the range function described 
-    previously, in python 3 they return objects that produce the items one at a time, rather than producing and 
-    storing all of them in advance as a list. Unless the dictionary has a whole lot of keys, this won't make a 
-    difference for performance. In any case, as with the range function, it is safe for you to think of them as 
-    returning lists, for most purposes. For the python interpreter built into this textbook, they actually do produce 
-    lists. In a native python interpreter, if you print out ``type(inventory.keys())``, you will find that it is 
-    something other than an actual list. If you want to get the first key, ``inventory.keys()[0]`` works in the online 
-    textbook, but in a real python interpreter, you need to make the collection of keys into a real list before using 
-    ``[0]`` to index into it: ``list(inventory.keys())[0]``.
-    
-The ``in`` and ``not in`` operators can test if a key is in the dictionary:
+    Técnicamente, .keys(), .values() y .items() no devuelven listas reales. Como la función de rango descrita
+    anteriormente, en python 3, devuelven objetos que producen los elementos uno a la vez, en lugar de producir y
+    almacenarlos todos por adelantado como una lista. A menos que el diccionario tenga muchas claves, esto no hará que
+    diferencia de rendimiento En cualquier caso, al igual que con la función de rango, es seguro para usted pensar en ellos como
+    Regresar listas, para la mayoría de los propósitos. Para el intérprete de Python integrado en este libro de texto, en realidad producen
+    liza. En un intérprete de Python nativo, si imprime ``type(inventory.keys())``, encontrará que es
+    algo más que una lista real. Si desea obtener la primera clave, ``Inventory.keys()[0]`` funciona en línea
+    libro de texto, pero en un intérprete de Python real, debe hacer la colección de claves en una lista real antes de usar
+    ``[0]`` para indexarlo: ``list(Inventory.keys())[0]``.
+
+Los operadores ``in`` y ``not in`` pueden probar si una clave está en el diccionario:
 
 .. activecode:: ac10_3_4
     
@@ -99,13 +99,13 @@ The ``in`` and ``not in`` operators can test if a key is in the dictionary:
         print("We have no bananas")
      
 
-This operator can be very useful since looking up a non-existent key in a dictionary causes a runtime error.
+Este operador puede ser muy útil ya que buscar una clave inexistente en un diccionario provoca un error de tiempo de ejecución.
 
-The ``get`` method allows us to access the value associated with a key, similar to the ``[ ]`` operator. The important 
-difference is that ``get`` will not cause a runtime error if the key is not present. It will instead return None. 
-There exists a variation of ``get`` that allows a second parameter that serves as an alternative return value in the 
-case where the key is not present. This can be seen in the final example below. In this case, since "cherries" is not 
-a key, return 0 (instead of None).
+El método ``get`` nos permite acceder al valor asociado con una clave, similar al operador ``[]``. Lo importante
+La diferencia es que ``get`` no causará un error de tiempo de ejecución si la clave no está presente. En su lugar, devolverá Ninguno.
+Existe una variación de ``get`` que permite un segundo parámetro que sirve como un valor de retorno alternativo en el
+caso donde la clave no está presente. Esto se puede ver en el ejemplo final a continuación. En este caso, ya que "cherries" no es
+una clave, devuelve 0 (en lugar de None).
 
 .. activecode:: ac10_3_5
     
@@ -117,20 +117,20 @@ a key, return 0 (instead of None).
     print(inventory.get("cherries",0))
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question10_3_1
    :answer_a: 2
    :answer_b: 0.5
    :answer_c: bear
-   :answer_d: Error, divide is not a valid operation on dictionaries.
+   :answer_d: Error, dividir no es una operación válida en los diccionarios.
    :correct: a
-   :feedback_a: get returns the value associated with a given key so this divides 12 by 6.
-   :feedback_b: 12 is divided by 6, not the other way around.
-   :feedback_c: Take another look at the example for get above.  get returns the value associated with a given key.
-   :feedback_d: The integer division operator is being used on the values returned from the get method, not on the dictionary.
+   :feedback_a: get devuelve el valor asociado con una clave dada, por lo que divide 12 por 6.
+   :feedback_b: 12 se divide por 6, no al revés.
+   :feedback_c: Eche otro vistazo al ejemplo de arriba. get devuelve el valor asociado con una clave dada.
+   :feedback_d: El operador de división entera se está utilizando en los valores devueltos por el método get, no en el diccionario.
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -142,11 +142,11 @@ a key, return 0 (instead of None).
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Yes, dog is a key in the dictionary.
-   :feedback_b: The in operator returns True if a key is in the dictionary, False otherwise.
+   :feedback_a: Sí, el perro es una clave en el diccionario.
+   :feedback_b: El operador in devuelve True si hay una clave en el diccionario, False en caso contrario.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -158,11 +158,11 @@ a key, return 0 (instead of None).
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: 23 is a value in the dictionary, not a key.  
-   :feedback_b: Yes, the in operator returns True if a key is in the dictionary, False otherwise.
+   :feedback_a: 23 es un valor en el diccionario, no una clave.
+   :feedback_b: Sí, el operador in devuelve True si hay una clave en el diccionario, de lo contrario, False.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -175,13 +175,13 @@ a key, return 0 (instead of None).
    :answer_c: 0
    :answer_d: 61
    :correct: b
-   :feedback_a: Add the values that have keys longer than 3 characters, not those with exactly 3 characters.
-   :feedback_b: Yes, the for statement iterates over the keys. It adds the values of the keys that have length greater than 3.
-   :feedback_c: This is the accumulator pattern. Total starts at 0 but then changes as the iteration proceeds.
-   :feedback_d: Not all the values are added together. The if statement only chooses some of them.
+   :feedback_a: Agregue los valores que tienen claves de más de 3 caracteres, no aquellos con exactamente 3 caracteres.
+   :feedback_b: Sí, la instrucción for itera sobre las claves. Agrega los valores de las claves que tienen una longitud mayor que 3.
+   :feedback_c: Este es el patrón del acumulador. El total comienza en 0 pero luego cambia a medida que avanza la iteración.
+   :feedback_d: No todos los valores se suman. La declaración if solo elige algunos de ellos.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
@@ -197,7 +197,7 @@ a key, return 0 (instead of None).
    :autograde: unittest
    :practice: T
 
-   **5.** Every four years, the summer Olympics are held in a different country. Add a key-value pair to the dictionary ``places`` that reflects that the 2016 Olympics were held in Brazil. Do not rewrite the entire dictionary to do this!
+   **5.** Cada cuatro años, los Juegos Olímpicos de verano se llevan a cabo en un país diferente. Agregue un par clave-valor al diccionario ``places`` que refleje que los Juegos Olímpicos de 2016 se celebraron en Brasil. ¡No reescribas todo el diccionario para hacer esto!
    ~~~~
 
    places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
@@ -218,7 +218,7 @@ a key, return 0 (instead of None).
    :autograde: unittest
    :practice: T
 
-   **6.** We have a dictionary of the specific events that Italy has won medals in and the number of medals they have won for each event. Assign to the variable ``events`` a list of the keys from the dictionary ``medal_events``. Do not hard code this.
+   **6.** Tenemos un diccionario de los eventos específicos en los que Italia ha ganado medallas y el número de medallas que han ganado para cada evento. Asigne a la variable ``events`` una lista de las claves del diccionario ``medal_events``. No codifiques esto.
    ~~~~
 
    medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
