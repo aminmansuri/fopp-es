@@ -13,42 +13,42 @@
 
 .. _accumulating_best_key:
 
-Accumulating the Best Key
--------------------------
+Acumulando la mejor clave
+--------------------------
                
-Now what if we want to find the *key* associated with the maximum value? It would be nice to just find
-the maximum value as above, and then look up the key associated with it, but dictionaries don't work
-that way. You can look up the value associated with a key, but not the key associated with a value. (The
-reason for that is there may be more than one key that has the same value).
+Ahora, ¿qué pasa si queremos encontrar la *clave* asociada con el valor máximo? Sería bueno solo encontrar
+el valor máximo como se indica arriba, y luego busque la clave asociada, pero los diccionarios no funcionan
+de esa manera. Puede buscar el valor asociado con una clave, pero no la clave asociada con un valor.
+(El motivo es que puede haber más de una clave que tenga el mismo valor).
 
-The trick is to have the accumulator keep track of the best key so far instead of the best value so far.
-For simplicity, let's assume that there are at least two keys in the dictionary. Then, similar to our
-first version of computing the max of a list, we can initialize the best-key-so-far to be the first key, 
-and loop through the keys, replacing the best-so-far whenever we find a better one.
+El truco es hacer que el acumulador haga un seguimiento de la mejor clave hasta ahora en lugar del mejor valor hasta ahora.
+Para simplificar, supongamos que hay al menos dos claves en el diccionario. Entonces, similar a nuestro
+primera versión de calcular el máximo de una lista, podemos inicializar la mejor clave hasta ahora para ser la primera clave,
+y recorrer las teclas, reemplazando la mejor hasta ahora cada vez que encontremos una mejor.
 
-In the exercise below, we have provided skeleton code. See if you can fill it in. An answer is provided,
-but you'll learn more if you try to write it yourself first.
+En el ejercicio a continuación, hemos proporcionado un código esqueleto. Vea si puede completarlo. Se proporciona una respuesta,
+pero aprenderá más si intenta escribirlo usted mismo primero.
 
 .. tabbed:: q0
 
    .. tab:: Question
    
-      Write a program that finds the key in a dictionary that has the maximum value. If
-      two keys have the same maximum value, it's OK to print out either one. Fill
-      in the skeleton code
+      Escriba un programa que encuentre la clave en un diccionario que tenga el valor máximo. Si
+      dos teclas tienen el mismo valor máximo, está bien imprimir cualquiera de las dos. Llenar
+      en el código esqueleto
       
       .. actex:: ac10_7_1
 
          d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
          
          ks = d.keys()
-         # initialize variable best_key_so_far to be the first key in d
+         # iniciliza la variable best_key_so_far para que sea la primera clave en d
          for k in ks:
-             # check if the value associated with the current key is
-             # bigger than the value associated with the best_key_so_far
-             # if so, save the current key as the best so far
+             # comprobar si el valor asociado con la clave actual es
+             # mayor que el valor asociado con best_key_so_far
+             # si es así, guarde la clave actual como la mejor hasta ahora
             
-         print("key " + best_key_so_far + " has the highest value, " + str(d[best_key_so_far]))
+         print("key " + best_key_so_far + " Tiene el valor más alto, " + str(d[best_key_so_far]))
    
    .. tab:: Answer 
    
@@ -57,21 +57,21 @@ but you'll learn more if you try to write it yourself first.
          d = {'a': 194, 'b': 54, 'c':34, 'd': 44, 'e': 312, 'full':31}
          
          ks = d.keys()
-         best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
+         best_key_so_far = list(ks)[0]  # Tiene que convertir ks en una lista real antes de usar [] para seleccionar un elemento
          for k in ks:
              if d[k] > d[best_key_so_far]:
                  best_key_so_far = k
             
-         print("key " + best_key_so_far + " has the highest value, " + str(d[best_key_so_far]))
+         print("key " + best_key_so_far + " tiene el valor más alto, " + str(d[best_key_so_far]))
          
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac10_7_2
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** Create a dictionary called ``d`` that keeps track of all the characters in the string ``placement`` and notes how many times each character was seen. Then, find the key with the lowest value in this dictionary and assign that key to ``min_value``.
+   **1.** Cree un diccionario llamado ``d`` que haga un seguimiento de todos los caracteres en la cadena ``placement`` y observe cuántas veces se vio cada carácter. Luego, encuentre la clave con el valor más bajo en este diccionario y asigne esa clave a ``min_value``.
    ~~~~
    placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
 
@@ -94,7 +94,7 @@ but you'll learn more if you try to write it yourself first.
    :autograde: unittest
    :practice: T
 
-   **5.** Create a dictionary called ``lett_d`` that keeps track of all of the characters in the string ``product`` and notes how many times each character was seen. Then, find the key with the highest value in this dictionary and assign that key to ``max_value``.
+   **5.** Cree un diccionario llamado ``lett_d`` que haga un seguimiento de todos los caracteres en la cadena ``product`` y observe cuántas veces se vio cada carácter. Luego, encuentre la clave con el valor más alto en este diccionario y asigne esa clave a ``max_value``.
    ~~~~
    product = "iphone and android phones"
 
