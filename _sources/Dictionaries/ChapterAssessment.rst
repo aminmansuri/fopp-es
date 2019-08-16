@@ -11,11 +11,11 @@
    :prefix: dictionaries-9-
    :start: 1
 
-Chapter Assessment
-------------------
+Evaluación de capítulos
+------------------------
 
-Assessment - Dictionaries
-=========================
+Evaluación - Diccionarios
+==========================
 
 .. activecode:: ac10_9_1
    :language: python
@@ -23,7 +23,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   At the halfway point during the Rio Olympics, the United States had 70 medals, Great Britain had 38 medals, China had 45 medals, Russia had 30 medals, and Germany had 17 medals. Create a dictionary assigned to the variable ``medal_count`` with the country names as the keys and the number of medals the country had as each key's value.
+   A mitad de camino durante los Juegos Olímpicos de Río, Estados Unidos tenía 70 medallas, Gran Bretaña tenía 38 medallas, China tenía 45 medallas, Rusia tenía 30 medallas y Alemania tenía 17 medallas. Cree un diccionario asignado a la variable ``medal_count`` con los nombres de los países como claves y el número de medallas que el país tenía como valor de cada clave.
    ~~~~
 
    =====
@@ -43,7 +43,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   Given the dictionary ``swimmers``, add an additional key-value pair to the dictionary with ``"Phelps"`` as the key and the integer ``23`` as the value. Do not rewrite the entire dictionary.
+   Dado el diccionario ``swimmers``, agregue un par clave-valor adicional al diccionario con ``"Phelps"`` como clave y el número entero ``23`` como valor. No reescribas todo el diccionario.
    ~~~~
 
    swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4}
@@ -65,7 +65,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   Add the string "hockey" as a key to the dictionary ``sports_periods`` and assign it the value of 3. Do not rewrite the entire dictionary.
+   Agregue la cadena "hockey" como clave del diccionario ``sports_periods`` y asígnele el valor 3. No reescriba todo el diccionario.
    ~~~~
 
    sports_periods = {'baseball': 9, 'basketball': 4, 'soccer': 4, 'cricket': 2}
@@ -88,7 +88,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   The dictionary ``golds`` contains information about how many gold medals each country won in the 2016 Olympics. But today, Spain won 2 more gold medals. Update ``golds`` to reflect this information.
+   El diccionario ``golds`` contiene información sobre cuántas medallas de oro ganó cada país en los Juegos Olímpicos de 2016. Pero hoy, España ganó 2 medallas de oro más. Actualice ``golds`` para reflejar esta información.
    ~~~~
 
    golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
@@ -111,7 +111,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/Dictionarymethods
 
-   Create a list of the countries that are in the dictionary ``golds``, and assign that list to the variable name ``countries``. Do not hard code this.
+   Cree una lista de los países que están en el diccionario ``golds`` y asigne esa lista al nombre de la variable ``countries``. No hagas *hard code*.
    ~~~~
 
    golds = {"Italy": 12, "USA": 33, "Brazil": 15, "China": 27, "Spain": 19, "Canada": 22, "Argentina": 8, "England": 29}
@@ -134,7 +134,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   Provided is the dictionary, ``medal_count``, which lists countries and their respective medal count at the halfway point in the 2016 Rio Olympics. Using dictionary mechanics, assign the medal count value for ``"Belarus"`` to the variable ``belarus``. Do not hardcode this.
+   Se proporciona el diccionario, ``medal_count``, que enumera los países y sus respectivos recuentos de medallas en la mitad de los Juegos Olímpicos de Río 2016. Usando la mecánica del diccionario, asigne el valor de conteo de medallas para ``"Bielorrusia"`` a la variable ``bielorrusia``. No hagas *hardcode* en esto.
    ~~~~
 
    medal_count = {'United States': 70, 'Great Britain':38, 'China':45, 'Russia':30, 'Germany':17, 'Italy':22, 'France': 22, 'Japan':26, 'Australia':22, 'South Korea':14, 'Hungary':12, 'Netherlands':10, 'Spain':5, 'New Zealand':8, 'Canada':13, 'Kazakhstan':8, 'Colombia':4, 'Switzerland':5, 'Belgium':4, 'Thailand':4, 'Croatia':3, 'Iran':3, 'Jamaica':3, 'South Africa':7, 'Sweden':6, 'Denmark':7, 'North Korea':6, 'Kenya':4, 'Brazil':7, 'Belarus':4, 'Cuba':5, 'Poland':4, 'Romania':4, 'Slovenia':3, 'Argentina':2, 'Bahrain':2, 'Slovakia':2, 'Vietnam':2, 'Czech Republic':6, 'Uzbekistan':5}
@@ -157,7 +157,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   The dictionary ``total_golds`` contains the total number of gold medals that countries have won over the course of history. Use dictionary mechanics to find the number of golds Chile has won, and assign that number to the variable name ``chile_golds``. Do not hard code this!
+   El diccionario ``total_golds`` contiene el número total de medallas de oro que los países han ganado en el transcurso de la historia. Use la mecánica del diccionario para encontrar el número de oros que Chile ha ganado, y asigne ese número al nombre de la variable ``chile_golds``. ¡No hagas *hardcode* aquí!
    ~~~~
 
    total_golds = {"Italy": 114, "Germany": 782, "Pakistan": 10, "Sweden": 627, "USA": 2681, "Zimbabwe": 8, "Greece": 111, "Mongolia": 24, "Brazil": 108, "Croatia": 34, "Algeria": 15, "Switzerland": 323, "Yugoslavia": 87, "China": 526, "Egypt": 26, "Norway": 477, "Spain": 133, "Australia": 480, "Slovakia": 29, "Canada": 22, "New Zealand": 100, "Denmark": 180, "Chile": 13, "Argentina": 70, "Thailand": 24, "Cuba": 209, "Uganda": 7,  "England": 806, "Denmark": 180, "Ukraine": 122, "Bahamas": 12}
@@ -180,7 +180,7 @@ Assessment - Dictionaries
    :practice: T
    :topics: Dictionaries/intro-Dictionaries
 
-   Provided is a dictionary called ``US_medals`` which has the first 70 metals that the United States has won in 2016, and in which category they have won it in. Using dictionary mechanics, assign the value of the key ``"Fencing"`` to a variable ``fencing_value``. Remember, do not hard code this.
+   Se proporciona un diccionario llamado ``US_medals`` que tiene los primeros 70 metales que Estados Unidos ganó en 2016, y en qué categoría lo ganó. Utilizando la mecánica del diccionario, asigne el valor de la clave ``"Fencing"`` a una variable ``fencing_value``. Recuerda, no codifiques esto.
    ~~~~
 
    US_medals = {"Swimming": 33, "Gymnastics": 6, "Track & Field": 6, "Tennis": 3, "Judo": 2, "Rowing": 2, "Shooting": 3, "Cycling - Road": 1, "Fencing": 4, "Diving": 2, "Archery": 2, "Cycling - Track": 1, "Equestrian": 2, "Golf": 1, "Weightlifting": 1}
@@ -196,8 +196,8 @@ Assessment - Dictionaries
 
    myTests().main()
 
-Assessment - Dictionary Accumulation
-====================================
+Evaluación - Acumulación de Diccionario
+========================================
 
 .. activecode:: ac10_9_9
    :language: python
@@ -205,7 +205,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   The dictionary ``Junior`` shows a schedule for a junior year semester. The key is the course name and the value is the number of credits. Find the total number of credits taken this semester and assign it to the variable ``credits``. Do not hardcode this -- use dictionary accumulation!
+   El diccionario ``Junior`` muestra un horario para un semestre de tercer año. La clave es el nombre del curso y el valor es el número de créditos. Encuentre el número total de créditos tomados este semestre y asígnelo a la variable ``credits``. No haaga *hardcode* en esto: ¡use la acumulación de diccionario!
    ~~~~
    Junior = {'SI 206':4, 'SI 310':4, 'BL 300':3, 'TO 313':3, 'BCOM 350':1, 'MO 300':3}
    =====
@@ -225,7 +225,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary, ``freq``, that displays each character in string ``str1`` as the key and its frequency as the value.
+   Cree un diccionario, ``freq``, que muestre cada carácter en la cadena ``str1`` como la clave y su frecuencia como el valor.
    ~~~~
    str1 = "peter piper picked a peck of pickled peppers"
    =====
@@ -246,7 +246,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Provided is a string saved to the variable name ``s1``. Create a dictionary named ``counts`` that contains each letter in ``s1`` and the number of times it occurs.
+   Se proporciona una cadena guardada en el nombre de la variable ``s1``. Cree un diccionario llamado ``counts`` que contenga cada letra en ``s1`` y la cantidad de veces que ocurra.
    ~~~~
    s1 = "hello"
 
@@ -265,7 +265,7 @@ Assessment - Dictionary Accumulation
    :language: python
    :autograde: unittest
 
-   Create a dictionary, ``freq_words``, that displays each word in string ``str1`` as the key and its frequency as the value.
+   Cree un diccionario, ``freq_words``, que muestre cada palabra en la cadena ``str1`` como la clave y su frecuencia como el valor.
    ~~~~
    str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
@@ -287,7 +287,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary called ``wrd_d`` from the string ``sent``, so that the key is a word and the value is how many times you have seen that word.
+   Cree un diccionario llamado ``wrd_d`` a partir de la cadena ``sent``, de modo que la clave sea una palabra y el valor sea cuántas veces haya visto esa palabra.
    ~~~~
    sent = "Singing in the rain and playing in the rain are two entirely different situations but both can be good"
 
@@ -309,7 +309,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingtheBestKey
 
-   Create the dictionary ``characters`` that shows each character from the string ``sally`` and its frequency. Then, find the most frequent letter based on the dictionary. Assign this letter to the variable ``best_char``.
+   Cree el diccionario ``characters`` que muestra cada carácter de la cadena ``sally`` y su frecuencia. Luego, encuentre la letra más frecuente basada en el diccionario. Asigne esta letra a la variable ``best_char``.
    ~~~~
    sally = "sally sells sea shells by the sea shore"
       
@@ -331,7 +331,7 @@ Assessment - Dictionary Accumulation
    :language: python
    :autograde: unittest
 
-   Do the same as above but now find the least frequent letter. Create the dictionary ``characters`` that shows each character from string ``sally`` and its frequency. Then, find the least frequent letter in the string and assign the letter to the variable ``worst_char``.
+   Haga lo mismo que arriba pero ahora encuentre la letra menos frecuente. Cree el diccionario ``characters`` que muestra cada carácter de la cadena ``sally`` y su frecuencia. Luego, encuentre la letra menos frecuente en la cadena y asigne la letra a la variable ``worts_char``.
    ~~~~
    sally = "sally sells sea shells by the sea shore and by the road"
 
@@ -355,7 +355,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingResultsFromaDictionary
 
-   Create a dictionary named ``letter_counts`` that contains each letter and the number of times it occurs in ``string1``. **Challenge:** Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
+   Cree un diccionario llamado ``letter_counts`` que contenga cada letra y la cantidad de veces que aparece en ``string1``. **Desafío:** Las letras no deben contarse por separado como mayúsculas y minúsculas. En su lugar, todos ellos deben contarse como minúsculas.
    ~~~~
    string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
 
@@ -385,7 +385,7 @@ Assessment - Dictionary Accumulation
    :practice: T
    :topics: Dictionaries/AccumulatingtheBestKey
 
-   Create a dictionary called ``low_d`` that keeps track of all the characters in the string ``p`` and notes how many times each character was seen. Make sure that there are no repeats of characters as keys, such that "T" and "t" are both seen as a "t" for example.
+   Cree un diccionario llamado ``low_d`` que haga un seguimiento de todos los caracteres en la cadena ``p`` y observe cuántas veces se vio cada carácter. Asegúrese de que no haya repeticiones de caracteres como teclas, de modo que "T" y "t" se vean como una "t", por ejemplo.
    ~~~~
    p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
 
