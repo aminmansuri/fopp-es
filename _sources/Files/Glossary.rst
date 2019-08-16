@@ -11,27 +11,27 @@
    :prefix: files-8-
    :start: 1
 
-Glossary
+Glosario
 --------
 
 .. glossary::
 
 
    open
-      You must open a file before you can read its contents.
+      Debe abrir un archivo antes de poder leer su contenido.
 
    close
-      When you are done with a file, you should close it.
+      Cuando haya terminado con un archivo, debe cerrarlo.
 
    read
-      Will read the entire contents of a file as a string.  This is often used in an assignment statement
-      so that a variable can reference the contents of the file.
+      Leerá todo el contenido de un archivo como un string. Esto se usa a menudo en una declaración de asignación
+      para que una variable pueda hacer referencia al contenido del archivo.
 
    readline
-      Will read a single line from the file, up to and including the first instance of the newline character.
+      Leerá una sola línea del archivo, hasta e incluyendo la primera instancia del carácter de nueva línea.
 
    readlines
-     Will read the entire contents of a file into a list where each line of the file is a string and is an element in the list.
-     
+     Leerá todo el contenido de un archivo en una lista donde cada línea del archivo es una cadena y es un elemento en la lista.
+
    write
-      Will add characters to the end of a file that has been opened for writing.
+      Agregará caracteres al final de un archivo que se ha abierto para escritura.
