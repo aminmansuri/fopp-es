@@ -1,8 +1,8 @@
-Files
-:::::
+Archivos
+::::::::
 
 .. toctree::
-   :caption: Files
+   :caption: Archivos
    :maxdepth: 2
 
    intro-WorkingwithDataFiles.rst
