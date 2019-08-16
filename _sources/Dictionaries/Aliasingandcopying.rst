@@ -16,12 +16,12 @@
    copy; dictionary
    dictionary; alias and copy
 
-Aliasing and copying
---------------------
+Creando Alias y Copias
+------------------------
 
-Because dictionaries are mutable, you need to be aware of aliasing (as we saw with lists). Whenever 
-two variables refer to the same dictionary object, changes to one affect the other. For example, ``opposites`` is a 
-dictionary that contains pairs of opposites.
+Debido a que los diccionarios son mutables, debe tener en cuenta el alias (como vimos con las listas). Cuando
+dos variables se refieren al mismo objeto del diccionario, los cambios en uno afectan al otro. Por ejemplo, ``opposites``
+es un diccionario que contiene pares de opuestos.
 
 .. activecode:: ac10_4_1
     
@@ -35,31 +35,31 @@ dictionary that contains pairs of opposites.
     
 
 
-As you can see from the ``is`` operator, ``alias`` and ``opposites`` refer to the same object.
+Como puede ver en el operador ``is``, ``alias`` y ``opposites`` se refieren al mismo objeto.
 
-If you want to modify a dictionary and keep a copy of the original, use the dictionary 
-``copy`` method.  Since *acopy* is a copy of the dictionary, changes to it will not effect the original.
+Si desea modificar un diccionario y conservar una copia del original, use el diccionario
+método ``copy``. Como *acopy* es una copia del diccionario, los cambios no afectarán al original.
 
 .. sourcecode:: python
     
     acopy = opposites.copy()
-    acopy['right'] = 'left'    # does not change opposites
+    acopy['right'] = 'left'    # no hace cambios opposites
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question10_4_1
    :answer_a: 23
    :answer_b: None
    :answer_c: 999
-   :answer_d: Error, there are two different keys named elephant.
+   :answer_d: Error, hay dos claves diferentes llamadas elefante.
    :correct: c
-   :feedback_a: mydict and yourdict are both names for the same dictionary.  
-   :feedback_b: The dictionary is mutable so changes can be made to the keys and values.
-   :feedback_c: Yes, since yourdict is an alias for mydict, the value for the key elephant has been changed.
-   :feedback_d: There is only one dictionary with only one key named elephant.  The dictionary has two different names, mydict and yourdict.
+   :feedback_a: mydict y yourdict son nombres para el mismo diccionario.
+   :feedback_b: El diccionario es mutable, por lo que se pueden hacer cambios en las claves y valores.
+   :feedback_c: Sí, dado que yourdict es un alias para mydict, el valor para el elefante clave ha cambiado.
+   :feedback_d: Solo hay un diccionario con una sola clave llamada elefante. El diccionario tiene dos nombres diferentes, mydict y yourdict.
    :practice: T
 
-   What is printed by the following statements?
+   ¿Qué se imprime en las siguientes declaraciones?
    
    .. sourcecode:: python
 
