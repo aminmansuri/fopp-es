@@ -1,8 +1,8 @@
-Dictionaries
+Diccionarios
 ::::::::::::
 
 .. toctree::
-   :caption: Dictionaries
+   :caption: Diccionarios
    :maxdepth: 2
 
    intro-DictionaryGoals.rst
