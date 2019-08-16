@@ -11,35 +11,35 @@
    :prefix: files-7-
    :start: 1
 
-Writing Text Files
-------------------
+Escribir archivos de texto
+--------------------------
 
-One of the most commonly performed data processing tasks is to read data from a file, 
-manipulate it in some way, and then write the resulting data out to a new data file to be used 
-for other purposes later. To accomplish this, the ``open`` function discussed above can also be 
-used to create a new file prepared for writing. Note in :ref:`Table 1<filemethods1a>` 
-that the only difference between opening a file for writing and opening a file for reading is 
-the use of the ``'w'`` flag instead of the ``'r'`` flag as the second parameter. When we open 
-a file for writing, a new, empty file with that name is created and made ready to accept our 
-data. If an existing file has the same name, its contents are overwritten. As before, the function returns a reference to the new file object.
+Una de las tareas de procesamiento de datos más comúnmente realizadas es leer datos de un archivo,
+manipúlelo de alguna manera y luego escriba los datos resultantes en un nuevo archivo de datos para usar
+para otros fines más tarde. Para lograr esto, la función ``open`` discutida anteriormente también puede ser
+utilizada para crear un nuevo archivo preparado para escribir. Note en:ref:`Table 1<filemethods1a>`
+que la única diferencia entre abrir un archivo para escribir y abrir un archivo para leer es
+el uso de la bandera ``'w'`` en lugar de la bandera ``'r'`` como segundo parámetro. Cuando abrimos
+un archivo para escribir, un nuevo archivo vacío con ese nombre se crea y se prepara para aceptar nuestros
+datos. Si un archivo existente tiene el mismo nombre, su contenido se sobrescribe. Como antes, la función devuelve una referencia al nuevo objeto de archivo.
 
-:ref:`Table 2 <filemethods2a>` shows one additional method on file objects that we have not used 
-thus far. The ``write`` method allows us to add data to a text file. Recall that text files 
-contain sequences of characters. We usually think of these character sequences as being the 
-lines of the file where each line ends with the newline ``\n`` character. Be very careful to 
-notice that the ``write`` method takes one parameter, a string. When invoked, the characters of 
-the string will be added to the end of the file. This means that it is the programmer's job to 
-include the newline characters as part of the string if desired.
+:ref:`Table 2 <filemethods2a>` muestra un método adicional en objetos de archivo que no hemos usado
+hasta ahora. El método ``write`` nos permite agregar datos a un archivo de texto. Recordemos que los archivos de texto
+contienen secuencias de personajes. Usualmente pensamos que estas secuencias de personajes son las
+líneas del archivo donde cada línea termina con el carácter de newline ``\n``. Ten mucho cuidado de
+Tenga en cuenta que el método ``write`` toma un parámetro, un string. Cuando se invoca, los personajes del
+string se agregará al final del archivo. Esto significa que es tarea del programador que
+incluya los caracteres de nueva línea como parte de la cadena si lo desea.
 
-Assume that we have been asked to provide a file consisting of all the squared numbers from 1 
-to 12.
+Supongamos que se nos ha pedido que proporcionemos un archivo que contenga todos los números al cuadrado del 1
+a 12.
 
-First, we will need to open the file. Afterwards, we will iterate through the numbers 1 through 
-12, and square each one of them. This new number will need to be converted to a string, and 
-then it can be written into the file.
+Primero, necesitaremos abrir el archivo. Luego, recorreremos los números del 1 al
+12, y al cuadrado cada uno de ellos. Este nuevo número deberá convertirse en una cadena, y
+entonces se puede escribir en el archivo.
 
-The program below solves part of the problem. We first want to make sure that we've written the 
-correct code to calculate the square of each number.
+El siguiente programa resuelve parte del problema. Primero queremos asegurarnos de que hemos escrito el
+código correcto para calcular el cuadrado de cada número.
 
 .. activecode:: ac9_7_1
 
@@ -47,31 +47,31 @@ correct code to calculate the square of each number.
         square = number * number
         print(square)
 
-When we run this program, we see the lines of output on the screen. Once we are satisfied that 
-it is creating the appropriate output, the next step is to add the necessary pieces to produce 
-an output file and write the data lines to it. To start, we need to open a new output file by 
-calling the ``open`` function, ``outfile = open("squared_numbers.txt",'w')``, using the ``'w'`` 
-flag.  We can choose any file name we like. If the file does not exist, it will be created. 
-However, if the file does exist, it will be reinitialized as empty and you will lose any 
-previous contents.  
+Cuando ejecutamos este programa, vemos las líneas de salida en la pantalla. Una vez que estemos satisfechos
+está creando la salida adecuada, el siguiente paso es agregar las piezas necesarias para producir
+un archivo de salida y escriba las líneas de datos en él. Para comenzar, necesitamos abrir un nuevo archivo de salida
+llamando a la función ``open`` , ``outfile = open("squared_numbers.txt",'w')``, usando el ``'w'``
+bandera. Podemos elegir cualquier nombre de archivo que nos guste. Si el archivo no existe, se creará.
+Sin embargo, si el archivo existe, se reiniciará como vacío y perderá cualquier
+contenidos previos.
 
-Once the file has been created, we just need to call the ``write`` method passing the string 
-that we wish to add to the file. In this case, the string is already being printed so we will 
-just change the ``print`` into a call to the ``write`` method. However, there is an additional 
-step to take, since the write method can only accept a string as input. We'll need to convert 
-the number to a string. Then, we just need to add one extra character to the string. The 
-newline character needs to be concatenated to the end of the line. The entire line now becomes 
-``outfile.write(str(square)+ '\n')``. The print statement automatically outputs a newline 
-character after whatever text it outputs, but the write method does not do that automatically. 
-We also need to close the file when we are done.
+Una vez que el archivo ha sido creado, solo necesitamos llamar al método ``write`` pasando el string
+que deseamos agregar al archivo. En este caso, el string ya se está imprimiendo, así que haremos
+que simplemente cambie el ``print`` en una llamada al método ``write``. Sin embargo, hay un adicional
+paso a seguir, ya que el método de escritura solo puede aceptar un string como entrada. Necesitaremos convertir
+el número de un string. Luego, solo necesitamos agregar un caracter adicional al string. Los
+el carácter de nueva línea debe concatenarse al final de la línea. Toda la línea ahora se convierte
+``outfile.write(str(square)+ '\n')``. La declaración de impresión genera automáticamente una nueva línea
+después de cualquier texto que salga, pero el método de escritura no lo hace automáticamente.
+También debemos cerrar el archivo cuando hayamos terminado.
 
-The complete program is shown below.
+El programa completo se muestra a continuación.
 
 .. note::
 
-    As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename.  If you try to overwrite a file that's built in to the page, it may not let you; don't try to get too fancy with our file system simulator!
+    Al igual que con la lectura de archivos, por razones de seguridad, el entorno de libro de texto interactivo de runestone no escribe archivos en el sistema de archivos en su computadora local. En una ventana de código activo, simulamos la escritura en un archivo. Se muestra el contenido del archivo escrito y puede realizar una lectura posterior del contenido de ese nombre de archivo. Si intenta sobrescribir un archivo integrado en la página, es posible que no lo permita; ¡no intentes ponerte demasiado exigente con nuestro simulador de sistema de archivos!
 
-    Below, we have printed the first 10 characters to the output window.
+    A continuación, imprimimos los primeros 10 caracteres en la ventana de salida.
 
 
 .. activecode:: ac9_7_2
