@@ -11,28 +11,28 @@
    :prefix: files-3-
    :start: 1
 
-Reading a File
-~~~~~~~~~~~~~~
+Leer un archivo
+~~~~~~~~~~~~~~~
 
-As an example, suppose we have a text file called ``olympics.txt`` that contains
-the data representing about olympians across different years. The contents of the file are shown at the bottom of the page.
+Como ejemplo, supongamos que tenemos un archivo de texto llamado ``olympics.txt`` que contiene
+los datos que representan a los olímpicos en diferentes años. El contenido del archivo se muestra en la parte inferior de la página.
 
-To open this file, we would call the ``open`` function. The variable,
-``fileref``, now holds a reference to the file object returned by
-``open``. When we are finished with the file, we can close it by using
-the ``close`` method. After the file is closed any further attempts to
-use ``fileref`` will result in an error.
+Para abrir este archivo, llamaremos a la función ``open``. La variable,
+``fileref``, ahora contiene una referencia al objeto de archivo devuelto por
+``open``. Cuando hayamos terminado con el archivo, podemos cerrarlo usando
+el método ``close``. Después de cerrar el archivo, cualquier otro intento de
+el uso de ``fileref`` dará como resultado un error.
 
 .. activecode:: ac9_2_1
     :available_files: olympics.txt
 
     fileref = open("olympics.txt","r")
-    ## other code here that refers to variable fileref
+    ## otro código aquí que se refiere a la variable fileref
     fileref.close()
 
 .. note::
 
-    A common mistake is to get confused about whether you are providing a variable name or a string literal as an input to the open function. In the code above, "olympics.txt" is a string literal that should correspond to the name of a file on your computer. If you put something without quotes, like ``open(x, "r")``, it will be treated as a variable name. In this example, x should be a variable that's already been bound to a string value like "olympics.txt".
+    Un error común es confundirse acerca de si está proporcionando un nombre de variable o un literal de string como entrada para la función abierta. En el código anterior, "olympics.txt" es un literal de string que debe corresponder al nombre de un archivo en su computadora. Si coloca algo sin comillas, como ``open(x, "r")``, se tratará como un nombre de variable. En este ejemplo, x debería ser una variable que ya se ha vinculado a un valor de string como "olympics.txt".
 
 .. datafile:: olympics.txt
 
