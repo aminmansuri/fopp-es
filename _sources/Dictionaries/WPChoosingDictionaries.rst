@@ -11,22 +11,22 @@
    :prefix: dictionaries-10-
    :start: 1
 
-👩‍💻 When to use a dictionary
-------------------------------
+👩‍💻 Cuando Usar un Diccionario
+--------------------------------
 
-Now that you have experience using lists and dictionaries, you will have to decide which one is best to use in each situation. The following guidelines will help you recognize when a dictionary will be beneficial:
+Ahora que tiene experiencia en el uso de listas y diccionarios, tendrá que decidir cuál es el mejor para cada situación. Las siguientes pautas le ayudarán a reconocer cuándo un diccionario será beneficioso:
 
-* When a piece of data consists of a set of properties of a single item, a dictionary is often better. You could try to keep track mentally that the zip code property is at index 2 in a list, but your code will be easier to read and you will make fewer mistakes if you can look up `mydiction['zipcode']` than if you look up `mylst[2]`.
-* When you have a collection of data pairs, and you will often have to look up one of the pairs based on its first value, it is better to use a dictionary than a list of (key, value) tuples. With a dictionary, you can find the value for any (key, value) tuple by looking up the key. With a list of tuples you would need to iterate through the list, examining each pair to see if it had the key that you want.
-* On the other hand, if you will have a collection of data pairs where multiple pairs share the same first data element, then you can't use a dictionary, because a dictionary requires all the keys to be distinct from each other.
+* Cuando un dato consiste en un conjunto de propiedades de un solo elemento, un diccionario a menudo es mejor. Podría intentar hacer un seguimiento mental de que la propiedad del código postal está en el índice 2 de una lista, pero su código será más fácil de leer y cometerá menos errores si puede buscar `mydiction['zipcode']` que si busque `mylst[2]`.
+* Cuando tiene una colección de pares de datos, y a menudo tendrá que buscar uno de los pares en función de su primer valor, es mejor usar un diccionario que una lista de tuplas (clave, valor). Con un diccionario, puede encontrar el valor de cualquier tupla (clave, valor) buscando la clave. Con una lista de tuplas, necesitaría recorrer la lista, examinando cada par para ver si tenía la clave que desea.
+* Por otro lado, si tendrá una colección de pares de datos donde varios pares comparten el mismo primer elemento de datos, entonces no puede usar un diccionario, porque un diccionario requiere que todas las claves sean distintas entre sí.
 
-.. You'll see more complicated data structures later, but for now imagine data about U.S. states, which contains population data, the state name, the state capital, and the state abreviation. If you were to put the information about each state in a list, then the order of each bit of data would have to be consistent. It might look like the following:
+.. Verá estructuras de datos más complicadas más adelante, pero por ahora imagine datos sobre estados de EE. UU., Que contienen datos de población, el nombre del estado, la capital del estado y la apertura del estado. Si tuviera que poner la información sobre cada estado en una lista, entonces el orden de cada bit de datos tendría que ser coherente. Puede verse así:
 
 .. .. sourcecode python
 
 .. data = [4779736, "Alabama", "Montgomery", "AL", 710231, "Alaska", "Juneau", "AK", 6392017, "Arizona", "Phoenix" , "AZ" ......]
 
-.. In order to extract all population data for example, you would have to know that it was always the first piece of information about a state, and that each state had four pieces of information. Then you would need to figure out how to extract the information which might look something like this:
+.. Para extraer todos los datos de población, por ejemplo, debe saber que siempre fue la primera información sobre un estado, y que cada estado tenía cuatro piezas de información. Luego, necesitaría descubrir cómo extraer la información que podría verse así:
 
 .. .. activecode ac10_10_1
 
@@ -38,7 +38,7 @@ Now that you have experience using lists and dictionaries, you will have to deci
 ..         if position % 4 == 0:
 ..             print("Population of a State: " + str(data[position]))
 
-.. If the population was instead in a dictionary, then we could have a dictionary for looking up population counts and another for looking up abbreviations, as illustrated below. (Later in the course, we will see nested data structures, which would allow us to have a single dictionary, each of whose values was a list or a dictionary.)
+.. Si la población estaba en cambio en un diccionario, entonces podríamos tener un diccionario para buscar recuentos de población y otro para buscar abreviaturas, como se ilustra a continuación. (Más adelante en el curso, veremos estructuras de datos anidados, lo que nos permitiría tener un solo diccionario, cada uno de cuyos valores era una lista o un diccionario).
 
 .. .. sourcecode python
 
