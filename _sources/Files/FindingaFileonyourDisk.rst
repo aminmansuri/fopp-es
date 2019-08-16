@@ -11,33 +11,33 @@
    :prefix: files-2-
    :start: 1
 
-Finding a File in your Filesystem
-=================================
+Encontrar un archivo en su sistema de archivos
+==============================================
 
-In the examples we have provided, and in the simulated file system that we've built for this online textbook, all files sit in a single directory, and it's the same directory where the python program is stored. Thus, we can just write ``open('myfile.txt','r')``.
+En los ejemplos que hemos proporcionado, y en el sistema de archivos simulados que hemos creado para este libro de texto en línea, todos los archivos se encuentran en un solo directorio, y es el mismo directorio donde se almacena el programa Python. Por lo tanto, podemos simplemente escribir ``open('myfile.txt','r')``.
 
-If you have installed python on your local computer and you are trying to get file reading and writing operations to work, there's a little more that you may need to understand. Computer operating systems (like Windows and the Mac OS) organize files into a hierarchy of folders, with some folders containing other folders. 
+Si ha instalado Python en su computadora local y está intentando que las operaciones de lectura y escritura de archivos funcionen, es posible que necesite comprender algo más. Los sistemas operativos de computadora (como Windows y Mac OS) organizan los archivos en una jerarquía de carpetas, con algunas carpetas que contienen otras carpetas.
 
 .. image:: Figures/ExampleFileHierarchy.png
   :align: center
 
 
-If your file and your Python program are in the same directory you can simply use 
-the filename. For example, with the file hierarchy in the diagram, the file `myPythonProgram.py` could contain the code ``open('data1.txt','r')``. 
+Si su archivo y su programa Python están en el mismo directorio, simplemente puede usar
+el nombre del archivo. Por ejemplo, con la jerarquía de archivos en el diagrama, el archivo `myPythonProgram.py` podría contener el código``open('data1.txt','r')``.
 
-If your file and your Python program are in different directories, however, then you need to specify a **path**. You can think of the filename as the short name for a file, and the path as the full name. Typically, you will specify a *relative file path*, which says where to find the file to open, relative to the directory where the code is running from. For example, the file `myPythonProgram.py` could contain the code ``open('../myData/data2.txt','r')``. The ``../`` means to go up one level in the directory structure, to the containing folder (allProjects); ``myData/`` says to descend into the myData subfolder.
+Sin embargo, si su archivo y su programa Python están en directorios diferentes, entonces debe especificar una **ruta**. Puede pensar en el nombre del archivo como el nombre corto y la ruta como el nombre completo. Por lo general, especificará una *ruta de archivo relativa*, que dice dónde encontrar el archivo para abrir, en relación con el directorio desde donde se ejecuta el código. Por ejemplo, el archivo `myPythonProgram.py` podría contener el código ``open('../myData/data2.txt','r')``. El ``../`` significa subir un nivel en la estructura del directorio, a la carpeta que lo contiene (allProjects); ``myData/`` dice descender a la subcarpeta myData.
 
-There is also an option to use an *absolute file path*. For example, suppose the file structure in the figure is stored on a computer in the user's home directory,``/Users/joebob01/myFiles``. Then code in any python program running from any file folder could open data2.txt via ``open('/Users/joebob01/myFiles/allProjects/myData/data2.txt','r')``. You can tell an absolute file path because it begins with a `/`.
-If you will ever move your programs and data to another computer (e.g., to share them with someone else), it will be much more convenient if your use relative file paths rather than absolute. That way, if you preserve the folder structure when moving everything, you won't need to change your code. If you use absolute paths, then the person you are sharing with probably not have the same home directory name, `/Users/joebob01/`. Note that python pathnames follow the UNIX conventions (Mac OS is a UNIX variant), rather than the Windows file pathnames that use `:` and '\'. The python interpreter will translate to Windows pathnames when running on a Windows machine; you should be able to share your python program between a Windows machine and a MAC without having to rewrite the file open commands. 
+También hay una opción para usar una *ruta de archivo absoluta*. Por ejemplo, suponga que la estructura de archivos en la figura se almacena en una computadora en el directorio de inicio del usuario, ``/Users/joebob01/myFiles``. Luego, el código en cualquier programa de Python que se ejecute desde cualquier carpeta de archivos podría abrir data2.txt a través de ``open('/Users/joebob01/myFiles/allProjects/myData/data2.txt','r')``. Puede decir una ruta de archivo absoluta porque comienza con un `/`.
+Si alguna vez mueve sus programas y datos a otra computadora (por ejemplo, para compartirlos con otra persona), será mucho más conveniente si usa rutas de archivos relativas en lugar de absolutas. De esa manera, si conserva la estructura de carpetas al mover todo, no necesitará cambiar su código. Si usa rutas absolutas, entonces la persona con la que comparte probablemente no tenga el mismo nombre de directorio de inicio, `/Users/joebob01/`. Tenga en cuenta que los nombres de ruta de Python siguen las convenciones de UNIX  (Mac OS es una variante de UNIX), en lugar de los nombres de ruta de archivo de Windows que usan `:` y '\'. El intérprete de python se traducirá en nombres de ruta de Windows cuando se ejecute en una máquina con Windows; debería poder compartir su programa Python entre una máquina Windows y un MAC sin tener que volver a escribir los comandos de abrir archivo.
 
 .. note::
 
-   For security reasons, our code running in your browser doesn't read or write files to your computer's file 
-   system. Later, when you run python natively on your own computer, you will be able to truly read files, using 
-   path names as suggested above. To get you started, we have faked it by providing a few files that you can read 
-   *as if* they were on your hard disk. In this chapter, we simulate the existence of one textfile; you can't open any other files from your local computer from textbook code running in your browser.
+   Por razones de seguridad, nuestro código que se ejecuta en su navegador no lee ni escribe archivos en el archivo del sistema de su
+   computadora. Más tarde, cuando ejecutas python de forma nativa en tu propia computadora, podrás leer realmente archivos, usando
+   nombres de ruta como se sugirió anteriormente. Para comenzar, lo hemos falsificado al proporcionar algunos archivos que puede leer
+   *como si* estuvieran en su disco duro. En este capítulo, simulamos la existencia de un archivo de texto; no puede abrir ningún otro archivo desde su computadora local desde el código del libro de texto que se ejecuta en su navegador.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question9_2_1
    :answer_a: open("YearlyProjections.csv", "r")
@@ -46,14 +46,14 @@ If you will ever move your programs and data to another computer (e.g., to share
    :answer_d: open("Project/CompanyData/YearlyProjections.csv", "r")
    :answer_e: open("../YearlyProjections.csv", "r")
    :correct: c
-   :feedback_a: This would try to open a file inside of Project (but that is not where the file is.)
-   :feedback_b: This would go to the parent directory of Project and look for a subdirectory of that called CompanyData. But CompanyData is inside Project so it wouldn't be found.
-   :feedback_c: Yes, this is how you can access the file!
-   :feedback_d: This would try to find a subdirectory Project of the current directory called Project.
-   :feedback_e: Remember that '..' will bring you up one level to the parent directory. This would try to open a csv file in the parent directory of Project (but that is not where the file is.)
+   :feedback_a: Esto intentaría abrir un archivo dentro del Proyecto (pero no es donde está el archivo.)
+   :feedback_b: Esto iría al directorio padre de Project y buscaría un subdirectorio llamado CompanyData. Pero CompanyData está dentro de Project, por lo que no se encontrará.
+   :feedback_c: Sí, así es como puedes acceder al archivo.
+   :feedback_d: Esto intentaría encontrar un proyecto de subdirectorio del directorio actual llamado Project.
+   :feedback_e: Recuerde que '..' lo llevará un nivel al directorio principal. Esto intentaría abrir un archivo csv en el directorio padre de Project (pero no es donde está el archivo.)
    :practice: T 
 
-   Say you are in a directory called Project. In it, you have a file with your python code. You would like to read in data from a file called "YearlyProjections.csv" which is in a folder called CompanyData, which is inside of Project. What is the best way to open the file in your python program?
+   Digamos que está en un directorio llamado Project. En él, tienes un archivo con tu código de Python. Le gustaría leer los datos de un archivo llamado "YearlyProjections.csv" que se encuentra en una carpeta llamada CompanyData, que se encuentra dentro de Project. ¿Cuál es la mejor manera de abrir el archivo en su programa de Python?
 
 .. mchoice:: question9_2_2
    :multiple_answers:
@@ -62,10 +62,10 @@ If you will ever move your programs and data to another computer (e.g., to share
    :answer_c: "/private/tmp/swtag.txt"
    :answer_d: "ScienceData/ProjectFive/experiment_data.csv"
    :correct: a,d
-   :feedback_a: Yes, this is a relative file path. You can tell by the lack of "/" at the beginning of the path.
-   :feedback_b: This is an absolute file path. All absolute file paths start with "/".
-   :feedback_c: This is an absolute file path. Not all absolute file paths contain "User"! Instead, check to see if the path starts with "/".
-   :feedback_d: Yes, this is a relative file path. You can tell by the lack of "/" at the beginning of the path.
+   :feedback_a: Sí, esta es una ruta de archivo relativa. Se nota por la falta de "/" al comienzo del camino.
+   :feedback_b: Esta es una ruta de archivo absoluta. Todas las rutas de archivos absolutas comienzan con "/".
+   :feedback_c: Esta es una ruta de archivo absoluta. ¡No todas las rutas de archivos absolutas contienen "User"! En su lugar, verifique si la ruta comienza con "/".
+   :feedback_d: Sí, esta es una ruta de archivo relativa. Se nota por la falta de "/" al comienzo del camino.
    :practice: T 
 
-   Which of the following paths are relative file paths?
+   ¿Cuál de las siguientes rutas son rutas de archivos relativas?
