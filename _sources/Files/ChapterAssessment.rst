@@ -11,8 +11,8 @@
    :prefix: files-10-
    :start: 1
 
-Chapter Assessment
-==================
+Evaluación de capítulos
+=======================
 
 .. datafile:: travel_plans.txt
    :fromfile: travel_plans.txt
@@ -32,7 +32,7 @@ Chapter Assessment
    :practice: T
    :available_files: travel_plans.txt
 
-   The textfile, ``travel_plans.txt``, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable ``num``.
+   El archivo de texto, ``travel_plans.txt``, contiene los planes de viaje de verano para alguien con algún comentario. Encuentre el número total de caracteres en el archivo y guárdelo en la variable ``num``.
    ~~~~
 
    =====
@@ -52,7 +52,7 @@ Chapter Assessment
    :practice: T
    :available_files: emotion_words.txt
    
-   We have provided a file called ``emotion_words.txt`` that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable ``num_words``.
+   Hemos proporcionado un archivo llamado ``emotion_words.txt`` que contiene líneas de palabras que describen emociones. Encuentre el número total de palabras en el archivo y asigne este valor a la variable ``num_words``.
    ~~~~
 
    =====
@@ -73,7 +73,7 @@ Chapter Assessment
    :practice: T
    :available_files: school_prompt.txt
 
-   Assign to the variable ``num_lines`` the number of lines in the file ``school_prompt.txt``.
+   Asigne a la variable ``num_lines`` el número de líneas en el archivo ``school_prompt.txt``.
    ~~~~
 
    =====
@@ -94,7 +94,7 @@ Chapter Assessment
    :practice: T
    :available_files: school_prompt.txt
 
-   Assign the first 30 characters of ``school_prompt.txt`` as a string to the variable ``beginning_chars``.
+   Asigne los primeros 30 caracteres de ``school_prompt.txt`` como una cadena a la variable ``beginning_chars``.
    ~~~~
 
    =====
@@ -116,7 +116,7 @@ Chapter Assessment
    :practice: T
    :available_files: school_prompt.txt
 
-   **Challenge:** Using the file ``school_prompt.txt``, assign the third word of every line to a list called ``three``.
+   **Desafío:** Usando el archivo ``school_prompt.txt``, asigne la tercera palabra de cada línea a una lista llamada ``three``.
    ~~~~
 
    =====
@@ -137,7 +137,7 @@ Chapter Assessment
    :practice: T
    :available_files: emotion_words.txt
 
-   **Challenge:** Create a list called ``emotions`` that contains the first word of every line in ``emotion_words.txt``.
+   **Desafío:** Cree una lista llamada ``emotions`` que contenga la primera palabra de cada línea en ``emotion_words.txt``.
    ~~~~
 
    =====
@@ -158,7 +158,7 @@ Chapter Assessment
    :practice: T
    :available_files: travel_plans.txt
 
-   Assign the first 33 characters from the textfile, ``travel_plans.txt`` to the variable ``first_chars``.
+   Asigne los primeros 33 caracteres del archivo de texto, ``travel_plans.txt`` a la variable ``first_chars``.
    ~~~~
 
    =====
@@ -179,7 +179,7 @@ Chapter Assessment
    :practice: T
    :available_files: school_prompt.txt
 
-   **Challenge:** Using the file ``school_prompt.txt``, if the character 'p' is in a word, then add the word to a list called ``p_words``.
+   **Desafío:** Usando el archivo ``school_prompt.txt``, si el carácter 'p' está en una palabra, entonces agregue la palabra a una lista llamada ``p_words``.
    ~~~~
 
    =====
