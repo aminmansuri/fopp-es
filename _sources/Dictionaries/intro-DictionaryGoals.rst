@@ -15,35 +15,35 @@
    :prefix: dictionaries-1-
    :start: 1
 
-Introduction: Dictionaries
-==========================
+Introducción: Diccionarios
+===========================
 
-The compound data types we have studied in detail so far — strings and lists — are sequential collections. This means that the items in the collection are ordered from left to right and they use integers as indices to access the values they contain. This also means that looking for a particular value requires scanning the many items in the  list until you find the desired value.
+Los tipos de datos compuestos que hemos estudiado en detalle hasta ahora (cadenas y listas) son colecciones secuenciales. Esto significa que los elementos de la colección están ordenados de izquierda a derecha y usan números enteros como índices para acceder a los valores que contienen. Esto también significa que buscar un valor particular requiere escanear los muchos elementos de la lista hasta que encuentre el valor deseado.
 
-Data can sometimes be organized more usefully by associating a key with the value we are looking for. For example, if you are asked for the page number for the start of chapter 5 in a large textbook, you might flip around the book looking for the chapter 5 heading. If the chapter number appears in the header or footer of each page, you might be able to find the page number fairly quickly but it's generally easier and faster to go to the index page and see that chapter 5 starts on page 78.
+Los datos a veces se pueden organizar de manera más útil asociando una clave con el valor que estamos buscando. Por ejemplo, si se le solicita el número de página para el comienzo del capítulo 5 en un libro de texto grande, puede hojear el libro buscando el título del capítulo 5. Si el número de capítulo aparece en el encabezado o pie de página de cada página, es posible que pueda encontrar el número de página con bastante rapidez, pero generalmente es más fácil y rápido ir a la página de índice y ver que el capítulo 5 comienza en la página 78.
 
-This sort of direct look up of a value in Python is done with an object called a Dictionary. Dictionaries are a different kind of collection. They are Python’s built-in **mapping** type. A map is an unordered, associative collection. The association, or mapping, is from a **key**, which can be of any immutable type (e.g., the chapter name and number in the analogy above), to a **value** (the starting page number), which can be any Python data object. You’ll learn how to use these collections in the following chapter.
+Este tipo de búsqueda directa de un valor en Python se realiza con un objeto llamado Diccionario. Los diccionarios son un tipo diferente de colección. Son el tipo **mapping** incorporado de Python. Un mapa es una colección asociativa no ordenada. La asociación, o mapeo, es de una **clave**, que puede ser de cualquier tipo inmutable (por ejemplo, el nombre y número del capítulo en la analogía anterior), a un **valor** (el número de la página de inicio), que puede ser cualquier objeto de datos de Python. Aprenderá a usar estas colecciones en el siguiente capítulo.
 
 
-Learning Goals
---------------
+Metas de Aprendizaje
+---------------------
 
-* To introduce the idea of Key, Value pairs
-* To introduce the idea of an unordered sequence
-* To understand the use of parallel construction in lists
-* To understand the performance benefit and simplicity of a dictionary over parallel lists
-* To understand that dictionary iteration iterates over keys
+* Introducir la idea de pares clave, valor
+* Introducir la idea de una secuencia desordenada
+* Comprender el uso de la construcción paralela en listas
+* Para comprender el beneficio de rendimiento y la simplicidad de un diccionario en listas paralelas
+* Para comprender que la iteración del diccionario itera sobre las teclas
 
-Objectives
+Objectivos
 ----------
 
-To correctly use the following:
+Para utilizar correctamente lo siguiente:
 
-* The index operator to add a key,value pair to a dicionary
-* The del operator to remove an antry
-* index operator - retrieval by key
-* search - contains in / not in
+* El operador index para agregar un par clave-valor a un diccionario
+* El operador del para eliminar una entrada
+* operador de index -  recuperación por clave
+* search - contiene in / not in
 * items
-* keys
-* values
-* get - with a default value
+* claves
+* valores
+* get - con un valor predeterminado
