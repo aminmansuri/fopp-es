@@ -11,14 +11,14 @@
    :prefix: advfuncs-3-
    :start: 1
 
-Anonymous functions with lambda expressions
--------------------------------------------
+Funciones anónimas con expresiones lambda
+------------------------------------------
 
-To further drive home the idea that we are passing a function object as a parameter to the sorted object, 
-let's see an alternative notation for creating a function, a **lambda expression**. The syntax of a lambda 
-expression is the word "lambda" followed by parameter names, separated by commas but not inside (parentheses), 
-followed by a colon and then an expression. ``lambda arguments: expression`` yields a function object. This 
-unnamed object behaves just like the function object constructed below. 
+Para dejar bien clara la idea de que estamos pasando un objeto de función como parámetro al objeto ordenado,
+veamos una notación alternativa para crear una función, una **expresión lambda**. La sintaxis de una expresión
+lambda es la palabra "lambda" seguida de nombres de parámetros, separados por comas pero no adentro (paréntesis),
+seguido de dos puntos y luego una expresión. ``argumentos lambda: expresión`` produce un objeto de función. Este
+objeto sin nombre se comporta igual que el objeto de función construido a continuación.
 
 .. sourcecode:: python
 
@@ -28,7 +28,7 @@ unnamed object behaves just like the function object constructed below.
 .. image:: Figures/lambda.gif
    :alt: image showing how elements of a lambda expression are like a function definition.
 
-Consider the following code
+Considere el siguiente código
 
 .. activecode:: ac15_3_1
 
@@ -43,53 +43,53 @@ Consider the following code
     print(type(lambda x: x-2))
     print((lambda x: x-2)(6))
     
-Note the paralells between the two. At line 4, f is bound to a function object. Its printed representation
-is "<function f>". At line 8, the lambda expression produces a function object. Because it is unnamed (anonymous), 
-its printed representation doesn't include a name for it, "<function <lambda>>". Both are of type 'function'.
+Tenga en cuenta las paralelas entre los dos. En la línea 4, f está vinculada a un objeto de función. Su representación impresa
+es "<función f>". En la línea 8, la expresión lambda produce un objeto de función. Como no tiene nombre (anónimo),
+su representación impresa no incluye un nombre para ella, "<function <lambda>>". Ambos son de tipo 'función'.
 
-A function, whether named or anonymous, can be called by placing parentheses () after it.
-In this case, because there is one parameter, there is one value in parentheses. This
-works the same way for the named function and the anonymous function produced by the lambda
-expression. The lambda expression had to go in parentheses just for the purposes
-of grouping all its contents together. Without the extra parentheses around it on line 10, 
-the interpreter would group things differently and make a function of x that returns x - 2(6).
+Se puede llamar a una función, ya sea nombrada o anónima, colocando paréntesis () después de ella.
+En este caso, debido a que hay un parámetro, hay un valor entre paréntesis. Esta
+funciona de la misma manera para la función nombrada y la función anónima producida por lambda
+expresión. La expresión lambda tenía que ir entre paréntesis solo para los fines
+de agrupar todos sus contenidos juntos. Sin los paréntesis adicionales a su alrededor en la línea 10,
+el intérprete agruparía las cosas de manera diferente y haría una función de x que devuelva x - 2(6).
 
-Some students find it more natural to work with lambda expressions than to refer to a function
-by name. Others find the syntax of lambda expressions confusing. It's up to you which version you want to 
-use though you will need to be able to read and understand lambda expressions that are written by others. 
-In all the examples below, both ways of doing it will be illustrated.
+Algunos estudiantes encuentran más natural trabajar con expresiones lambda que referirse a una función
+por nombre. Otros encuentran confusa la sintaxis de las expresiones lambda. Depende de usted qué versión desea
+use aunque necesitará poder leer y comprender expresiones lambda escritas por otros.
+En todos los ejemplos a continuación, se ilustrarán ambas formas de hacerlo.
 
-Say we want to create a function that takes a string and returns the last character in that string. What might this look 
-like with the functions you've used before?
+Digamos que queremos crear una función que tome una cadena y devuelva el último carácter en esa cadena. ¿Qué podría parecer esto?
+como con las funciones que has usado antes?
 
 .. activecode:: ac15_3_2
 
     def last_char(s):
         return s[-1]
 
-To re-write this using lambda notation, we can do the following:
+Para volver a escribir esto usando la notación lambda, podemos hacer lo siguiente:
 
 .. activecode:: ac15_3_3
 
     last_char = (lambda s: s[-1])
 
-Note that neither function is actually invoked. Look at the parallels between the two structures. The parameters are 
-defined in both functions with the variable ``s``. In the typical function, we have to use the keyword ``return`` to send 
-back the value. In a lambda function, that is not necessary - whatever is placed after the colon is what will be returned.
+Tenga en cuenta que ninguna función se invoca realmente. Mira los paralelos entre las dos estructuras. Los parámetros son
+definido en ambas funciones con la variable ``s``. En la función típica, tenemos que usar la palabra clave ``return`` retornar
+el valor. En una función lambda, eso no es necesario: lo que se coloca después de los dos puntos es lo que se devolverá.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question15_3_1
-   :answer_a: A string with a - in front of the number.
-   :answer_b: A number of the opposite sign (positive number becomes negative, negative becomes positive).
-   :answer_c: Nothing is returned because there is no return statement.
+   :answer_a: Una cadena con un - delante del número.
+   :answer_b: Un número del signo opuesto (el número positivo se vuelve negativo, el negativo se vuelve positivo).
+   :answer_c: No se devuelve nada porque no hay una declaración de devolución.
    :correct: b
-   :feedback_a: The number would be assigned to the variable x and there is no type conversion used here, so the number would stay a number.
-   :feedback_b: Correct!
-   :feedback_c: Remember, lambda functions do not use return statements.
+   :feedback_a: El número se asignaría a la variable x y aquí no se utiliza ninguna conversión de tipo, por lo que el número se mantendría como un número.
+   :feedback_b: ¡Correcto!
+   :feedback_c: Recuerde, las funciones lambda no usan declaraciones de retorno.
    :practice: T
 
-   If the input to this lambda function is a number, what is returned?
+   Si la entrada a esta función lambda es un número, ¿qué se devuelve?
    
    .. code-block:: python 
      
