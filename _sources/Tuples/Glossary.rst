@@ -11,24 +11,24 @@
    :prefix: tuples-6-
    :start: 1
 
-Glossary
---------
+Glosario
+---------
 
 .. glossary::
 
 
-    tuple
-        A type of sequence, much like a list but immutable. A tuple is created
-        by enclosing one or more values in parentheses, separated by commas.
+    tupla
+        Un tipo de secuencia, muy parecida a una lista pero inmutable. Se crea una tupla
+        al encerrar uno o más valores entre paréntesis, separados por comas.
 
-    packing
-        When multiple values are specified, separated by commas, they are
-        packed into a tuple.
+    empaquetado
+        Cuando se especifican varios valores, separados por comas, son
+        empaquetados en una tupla.
         
-    unpacking
-        When a tuple is assigned to a collection of variable names separated
-        by commas, the tuple is unpacked and the separate values are assigned to each 
-        of the variables.
+    desempaquetado
+        Cuando se asigna una tupla a una colección de nombres de variables separadas
+        por comas, la tupla se desempaqueta y se asignan valores separados a cada
+        de las variables
         
-    pair
-        A tuple with exactly two items.
+    par
+        Una tupla con exactamente dos elementos.
