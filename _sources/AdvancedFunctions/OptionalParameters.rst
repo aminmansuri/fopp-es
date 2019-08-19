@@ -13,28 +13,29 @@
    :prefix: advfuncs-1-
    :start: 1
 
-Introduction: Optional Parameters
-=================================
+Introducción: parámetros opcionales
+====================================
 
-In the treatment of functions so far, each function definition specifies zero or more formal parameters 
-and each function invocation provides exactly that many values. Sometimes it is convenient to have 
-**optional parameters** that can be specified or omitted. When an optional parameter is omitted from a function invocation, the formal parameter is bound to a **default value**. When the optional parameter is included, then 
-the formal parameter is bound to the value provided. Optional parameters are convenient when a function is 
-almost always used in a simple way, but it's nice to allow it to be used in a more complex way, with non-default
-values specified for the optional parameters.
+En el tratamiento de funciones hasta ahora, cada definición de función especifica cero o más parámetros formales
+y cada invocación de función proporciona exactamente esa cantidad de valores. A veces es conveniente tener
+**parámetros opcionales** que pueden especificarse u omitirse. Cuando se omite un parámetro opcional de una invocación de función,
+el parámetro formal está vinculado a un **valor predeterminado**. Cuando se incluye el parámetro opcional, entonces
+El parámetro formal está vinculado al valor proporcionado. Los parámetros opcionales son convenientes cuando una función
+casi siempre se usa de manera simple, pero es bueno permitir que se use de una manera más compleja, con valores no predeterminados
+valores especificados para los parámetros opcionales.
 
-Consider, for example, the ``int`` function, which you have used previously. Its first parameter, 
-which is required, specifies the object that you wish to convert to an integer. For example, if you 
-call in on a string, ``int("100")``, the return value will be the integer 100.
+Considere, por ejemplo, la función ``int``, que ha utilizado anteriormente. Su primer parámetro,
+que es obligatorio, especifica el objeto que desea convertir a un entero. Por ejemplo, si tu
+llamar en una cadena, ``int("100")``, el valor de retorno será el entero 100.
 
-That's the most common way programmers want to convert strings to integers. Sometimes, however, they 
-are working with numbers in some other "base" rather than base 10. For example, in base 8, the rightmost 
-digit is ones, the next digit to the left is 8s, and the one to the left of that is the 64s place (8**2).
+Esa es la forma más común en que los programadores quieren convertir cadenas en enteros. A veces, sin embargo, ellos
+están trabajando con números en alguna otra "base" en lugar de la base 10. Por ejemplo, en la base 8, la más a la derecha
+el dígito son unos, el siguiente dígito a la izquierda es 8s, y el que está a la izquierda es el lugar 64s (8**2).
 
-The int function provides an optional parameter for the base. When it is not specified, the number is 
-converted to an integer assuming the original number was in base 10. We say that 10 is the default value. 
-So ``int("100")`` is the same as invoking ``int("100", 10)``. We can override the default of 10 by 
-supplying a different value.
+La función int proporciona un parámetro opcional para la base. Cuando no se especifica, el número es
+convertido a un entero suponiendo que el número original estaba en la base 10. Decimos que 10 es el valor predeterminado.
+Entonces ``int("100")`` es lo mismo que invocar ``int("100", 10)``. Podemos anular el valor predeterminado de 10 por
+suministrando un valor diferente.
 
 .. activecode:: ac15_1_1
 
@@ -42,18 +43,18 @@ supplying a different value.
     print(int("100", 10))   # same thing, 10 is the default value for the base
     print(int("100", 8))     # now the base is 8, so the result is 1*64 = 64
 
-.. note:: Tom Lehrer's New Math
+.. note:: La Nueva Matemática de Tom Lehrer's
 
-    Some math educators believe that elementary school students will get a much deeper understanding 
-    of the place-value system, and set a foundation for learning algebra later, if they learn to do 
-    arithmetic not only in base-10 but also in base-8 and other bases. This was part of a movement 
-    called "The New Math", though it's not so new now (I had it when I was in elementary school!) Tom
-    Lehrer made a really funny song about it, and it's set with visuals in several YouTube renditions 
-    now. Try this very nice `lip-synched version <http://www.youtube.com/watch?v=DfCJgC2zezw>`_. 
+    Algunos educadores de matemáticas creen que los estudiantes de primaria obtendrán una comprensión mucho más profunda
+    del sistema de valor posicional, y establecerán una base para aprender álgebra más adelante, si aprenden a hacer
+    aritmética no solo en base 10 sino también en base 8 y otras bases. Esto era parte de un movimiento.
+    llamado "The New Math", aunque no es tan nuevo ahora (¡lo tenía cuando estaba en la escuela primaria!) Tom
+    Lehrer hizo una canción realmente divertida al respecto, y está ambientada con imágenes en varias versiones en YouTube.
+    Mira esta versión `lip-sync <http://www.youtube.com/watch?v=DfCJgC2zezw>`_.
     
-When defining a function, you can specify a default value for a parameter. That parameter then becomes an 
-optional parameter when the function is called. The way to specify a default value is with an assignment 
-statement inside the parameter list. Consider the following code, for example.
+Al definir una función, puede especificar un valor predeterminado para un parámetro. Ese parámetro se convierte en un
+parámetro opcional cuando se llama a la función. La forma de especificar un valor predeterminado es con una asignación
+declaración dentro de la lista de parámetros. Considere el siguiente código, por ejemplo.
 
 .. codelens:: clens15_1_1
     :python: py3
@@ -66,23 +67,23 @@ statement inside the parameter list. Consider the following code, for example.
     f(2, 5)
     f(2, 5, 8)
     
-Notice the different bindings of x, y, and z on the three invocations of f. The first time, y and z have 
-their default values, 3 and 7. The second time, y gets the value 5 that is passed in, but z still gets the 
-default value of 7. The last time, z gets the value 8 that is passed in.
+Observe las diferentes vinculaciones de x, y & z en las tres invocaciones de f. La primera vez, y & z tienen
+sus valores predeterminados, 3 y 7. La segunda vez, y obtiene el valor 5 que se pasa, pero z aún obtiene el
+valor predeterminado de 7. La última vez, z obtiene el valor 8 que se pasa.
 
-If you want to provide a non-default value for the third parameter (z), you also need to provide a value 
-for the second item (y). We will see in the next section a mechanism called keyword parameters that lets you 
-specify a value for z without specifying a value for y.
+Si desea proporcionar un valor no predeterminado para el tercer parámetro (z), también debe proporcionar un valor
+para el segundo elemento (y). Veremos en la siguiente sección un mecanismo llamado parámetros de palabras clave que le permite
+especifique un valor para z sin especificar un valor para y.
 
 .. note::
 
-   This is a second, related but slightly different use of = than we have seen previously. In a stand-alone assignment statement, not part of a function definition, ``x=3`` assigns 3 to the variable x. As part of specifying the parameters in a function definition, ``x=3`` says that 3 is the *default* value for x, used *only when* no value is provided during the function invocation.
+   Este es un segundo uso relacionado, pero ligeramente diferente de = del que hemos visto anteriormente. En una declaración de asignación independiente, que no forma parte de una definición de función, ``x=3`` asigna 3 a la variable x. Como parte de la especificación de los parámetros en una definición de función, ``x=3`` dice que 3 es el *valor predeterminado* para x, que se usa *solo cuando* no se proporciona ningún valor durante la invocación de la función.
 
-There are two tricky things that can confuse you with default values. The first is that the default
-value is determined at the time that the function is defined, not at the time that it is invoked. So 
-in the example above, if we wanted to invoke the function f with a value of 10 for z, we cannot simply 
-set initial = 10 right before invoking f. See what happens in the code below, where z still gets the 
-value 7 when f is invoked without specifying a value for z.
+Hay dos cosas difíciles que pueden confundirte con los valores predeterminados. El primero es que el valor predeterminado
+se determina en el momento en que se define la función, no en el momento en que se invoca. Asi que
+en el ejemplo anterior, si quisiéramos invocar la función f con un valor de 10 para z, no podemos simplemente
+establecer initial = 10 justo antes de invocar f. Vea lo que sucede en el código a continuación, donde z todavía obtiene el
+valor 7 cuando se invoca f sin especificar un valor para z.
 
 .. codelens:: clens15_1_2
     :python: py3
@@ -94,9 +95,9 @@ value 7 when f is invoked without specifying a value for z.
     initial = 10
     f(2)
  
-The second tricky thing is that if the default value is set to a mutable object, such as a list or a dictionary, 
-that object will be shared in all invocations of the function. This can get very confusing, so I suggest that you 
-never set a default value that is a mutable object. For example, follow the exceution of this one carefully.
+La segunda cosa difícil es que si el valor predeterminado se establece en un objeto mutable, como una lista o un diccionario,
+ese objeto se compartirá en todas las invocaciones de la función. Esto puede ser muy confuso, así que le sugiero que
+nunca establezca un valor predeterminado que sea un objeto mutable. Por ejemplo, siga la ejecución de este cuidadosamente.
 
 .. codelens:: opt_params_4
     :python: py3
@@ -111,8 +112,8 @@ never set a default value that is a mutable object. For example, follow the exce
     print(f(4, ["Hello"]))
     print(f(5, ["Hello"]))
     
-When the default value is used, the same list is shared. But on lines 8 and 9 two different copies of the list 
-["Hello"] are provided, so the 4 that is appended is not present in the list that is printed on line 9.
+Cuando se usa el valor predeterminado, se comparte la misma lista. Pero en las líneas 8 y 9 dos copias diferentes de la lista
+["Hello"] son proporcionados , por lo que el 4 que se adjunta no está presente en la lista que se imprime en la línea 9.
 
 **Check your understanding**
 
@@ -120,15 +121,15 @@ When the default value is used, the same list is shared. But on lines 8 and 9 tw
    :answer_a: 0
    :answer_b: 1
    :answer_c: None
-   :answer_d: Runtime error since no parameters are passed in the call to f.
+   :answer_d: Error de tiempo de ejecución ya que no se pasan parámetros en la llamada a f.
    :correct: a
-   :feedback_a: Since no parameters are specified, x is 0 and y is 1, so 0 is returned.
-   :feedback_b: 0 * 1 is 0.
-   :feedback_c: The function does return a value.
-   :feedback_d: Because both parameters have default values specified in the definition, they are both optional.
+   :feedback_a: Como no se especifican parámetros, x es 0 e y es 1, por lo que se devuelve 0.
+   :feedback_b: 0 * 1 es 0.
+   :feedback_c: La función devuelve un valor.
+   :feedback_d: Como ambos parámetros tienen valores predeterminados especificados en la definición, ambos son opcionales.
    :practice: T
 
-   What will the following code print?
+   ¿Qué imprimirá el siguiente código?
    
    .. code-block:: python 
 
@@ -141,15 +142,15 @@ When the default value is used, the same list is shared. But on lines 8 and 9 tw
    :answer_a: 0
    :answer_b: 1
    :answer_c: None
-   :answer_d: Runtime error since the second parameter value is missing.
+   :answer_d: Error de tiempo de ejecución ya que falta el segundo valor del parámetro.
    :correct: b
-   :feedback_a: Since one parameter value is specified, it is bound to x; y gets the default value of 1.
-   :feedback_b: Since one parameter value is specified, it is bound to x; y gets the default value of 1.
-   :feedback_c: The function does return a value.
-   :feedback_d: Because both parameters have default values specified in the definition, they are both optional.
+   :feedback_a: Como se especifica un valor de parámetro, está vinculado a x; y obtiene el valor predeterminado de 1.
+   :feedback_b: Como se especifica un valor de parámetro, está vinculado a x; y obtiene el valor predeterminado de 1.
+   :feedback_c: La función devuelve un valor.
+   :feedback_d: Como ambos parámetros tienen valores predeterminados especificados en la definición, ambos son opcionales.
    :practice: T
 
-   What will the following code print?
+   ¿Qué imprimirá el siguiente código?
    
    .. code-block:: python 
 
@@ -163,7 +164,7 @@ When the default value is used, the same list is shared. But on lines 8 and 9 tw
    :autograde: unittest
    :practice: T
 
-   **3.** Write a function called ``str_mult`` that takes in a required string parameter and an optional integer parameter. The default value for the integer parameter should be 3. The function should return the string multiplied by the integer parameter.
+   **3.** Escriba una función llamada ``str_mult`` que tome un parámetro de cadena requerido y un parámetro entero opcional. El valor predeterminado para el parámetro entero debe ser 3. La función debe devolver la cadena multiplicada por el parámetro entero.
    ~~~~
 
    =====
