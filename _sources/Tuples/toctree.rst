@@ -1,8 +1,8 @@
-Tuple Packing and Unpacking
-:::::::::::::::::::::::::::
+Empaquetado y Desempaquetado de Tuplas
+::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Tuple Packing and Unpacking
+   :caption: Empaquetado y Desempaquetado de Tuplas
    :maxdepth: 2
 
    TuplePacking.rst
