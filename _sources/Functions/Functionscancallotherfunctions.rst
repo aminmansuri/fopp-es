@@ -19,16 +19,16 @@
     composition
     function; composition
 
-Functions can call other functions (Composition)
-------------------------------------------------
+Las funciones pueden llamar a otras funciones (Composición)
+-----------------------------------------------------------
 
-It is important to understand that each of the functions we write can be used and called from other functions we 
-write. This is one of the most important ways that computer programmers take a large problem and break it down into a 
-group of smaller problems. This process of breaking a problem into smaller subproblems is called **functional decomposition**.
+Es importante entender que cada una de las funciones que escribimos se puede usar y llamar desde otras funciones que
+escribimos. Esta es una de las formas más importantes en que los programadores informáticos toman un gran problema y lo dividen en un
+grupo de problemas menores. Este proceso de dividir un problema en subproblemas más pequeños se llama **descomposición funcional**.
 
-Here's a simple example of functional decomposition using two functions. The first function called ``square`` simply 
-computes the square of a given number. The second function called ``sum_of_squares`` makes use of square to compute
-the sum of three numbers that have been squared.
+Aquí hay un ejemplo simple de descomposición funcional usando dos funciones. La primera función llamada ``square`` simplemente
+calcula el cuadrado de un número dado. La segunda función llamada ``sum_of_squares`` hace uso del cuadrado para calcular
+la suma de tres números que se han elevado al cuadrado.
 
 .. codelens:: clens11_9_1
     :python: py3
@@ -50,25 +50,25 @@ the sum of three numbers that have been squared.
     result = sum_of_squares(a,b,c)
     print(result)
 
-Even though this is a pretty simple idea, in practice this example illustrates many very important Python concepts, 
-including local and global variables along with parameter passing. Note that the body of ``square`` is not executed 
-until it is called from inside the ``sum_of_squares`` function for the first time on line 6.  
+Aunque esta es una idea bastante simple, en la práctica este ejemplo ilustra muchos conceptos muy importantes de Python,
+incluyendo variables locales y globales junto con el paso de parámetros. Tenga en cuenta que el cuerpo de ``square`` no se ejecuta
+hasta que se llame desde dentro de la función ``sum_of_squares`` por primera vez en la línea 6.
 
-Also notice that when ``square`` is called (at Step 8, for example), there are two groups of local variables, one for 
-``square`` and one for ``sum_of_squares``.  Each group of local variables is called a **stack frame**. The variables 
-``x``, and ``y`` are local variables in both functions. These are completely different variables, even though they
-have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice 
-that at step 9, y has the value 25 is one frame and 2 in the other.  
+Observe también que cuando se llama a ``square`` (en el Paso 8, por ejemplo), hay dos grupos de variables locales, uno para
+``square`` y uno para ``sum_of_squares``. Cada grupo de variables locales se llama **marco de pila**. Las variables
+``x`` e ``y`` son variables locales en ambas funciones. Estas son variables completamente diferentes, aunque al
+tener el mismo nombre cada invocación de función crea un nuevo marco, y las variables se buscan en ese marco. Aviso
+que en el paso 9, y tiene el valor 25 es un cuadro y 2 en el otro.
 
-What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the 
-``square`` function. If it didn't find it there, it would go look in the global frame.  
+¿Qué sucede cuando se refiere a la variable y en la línea 3? Python busca el valor de y en el marco de la pila para la
+función ``square``. Si no lo encontraba allí, iría a buscar en el marco global.
 
-Let's use composition to build up a little more useful function. Recall from the dictionaries chapter that we had a two-step process for finding the letter that appears most frequently in a text string:
+Usemos composición para construir una función un poco más útil. Recuerde del capítulo de diccionarios que teníamos un proceso de dos pasos para encontrar la letra que aparece con mayor frecuencia en una cadena de texto:
 
-1. Accumulate a dictionary with letters as keys and counts as values. See :ref:`example <accumulating_counts>`.
-2. Find the best key from that dictionary. See :ref:`example <accumulating_best_key>`.
+1. Acumula un diccionario con letras como claves y cuenta como valores. Ver:ref:`example <accumulating_counts>`.
+2. Encuentra la mejor clave de ese diccionario. Ver:ref:`example <accumulating_best_key>`.
 
-We can make functions for each of those and then compose them into a single function that finds the most common letter.
+Podemos hacer funciones para cada una de ellas y luego componerlas en una sola función que encuentre la letra más común.
 
 .. activecode:: ac_11_9_1
 
@@ -94,14 +94,14 @@ We can make functions for each of those and then compose them into a single func
 
     print(most_common_letter("abbbbbbbbbbbccccddddd"))
 
-**Check your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac11_9_1
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** Write two functions, one called ``addit`` and one called ``mult``. ``addit`` takes one number as an input and adds 5. ``mult`` takes one number as an input, and multiplies that input by whatever is returned by ``addit``, and then returns the result.
+   **1.** Escriba dos funciones, una llamada ``addit`` y otra llamada ``mult``. ``addit`` toma un número como entrada y agrega 5. ``mult`` toma un número como entrada, y multiplica esa entrada por lo que sea devuelto por ``addit``, y luego devuelve el resultado.
    ~~~~
 
    =====
