@@ -11,8 +11,8 @@
    :prefix: func-1-
    :start: 1
 
-Introduction to Functions
-=========================
+Introducción a las funciones
+===============================
 
 .. video:: function_intro
    :controls:
@@ -21,41 +21,41 @@ Introduction to Functions
    http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.mov
    http://media.interactivepython.org/thinkcsVideos/FunctionsIntro.webm
 
-In Python, a **function** is a chunk of code that performs some operation that is meaningful for a person to think about as a whole unit, for example calculating a student's GPA in a learning system or responding to the jump action in a video game. Once a function has been defined and you are satisfied that it does what it is supposed to do, you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of code that make it work.
+En Python, una **función** es un fragmento de código que realiza alguna operación que es significativa para una persona para considerarla como una unidad completa, por ejemplo, calcular el GPA de un estudiante en un sistema de aprendizaje o responder a la acción de salto en un videojuego. Una vez que se ha definido una función y está satisfecho de que hace lo que se supone que debe hacer, comenzará a pensar en términos de la operación más grande que realiza en lugar de las líneas específicas de código que hacen que funcione.
 
-This breaking down of a task or problem is crucial to the successful implementation of any program of more than 50 or so lines (and plenty of smaller ones too).  For example, the program that displays the Instagram landing page is made up of functions that:
+Este desglose de una tarea o problema es crucial para la implementación exitosa de cualquier programa de más de 50 líneas (y muchas más pequeñas también). Por ejemplo, el programa que muestra la página de inicio de Instagram está compuesto por funciones que:
 
-* display the header bar
-* display your friends' posts
-* display your friends' stories
-* display the ad at the bottom of the screen recommending you use the app
+* muestra la barra de encabezado
+* muestra las publicaciones de tus amigos
+* muestra las historias de tus amigos
+* muestra el anuncio en la parte inferior de la pantalla recomendando que uses la aplicación
 
-And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to: 
+Y cada uno de esos está compuesto de funciones también. Por ejemplo, la función que muestra las publicaciones de tus amigos es un bucle for que llama a una función para:
 
-* display a single post which in turn calls functions to:
-* display the photo and name of the person posting the story
-* display the photo itself
-* display other users' "likes" to the story
-* display the comments on the story
+* mostrar una sola publicación que a su vez llama a las funciones para:
+* mostrar la foto y el nombre de la persona que publica la historia
+* mostrar la foto en sí
+* mostrar "Me gusta" de otros usuarios a la historia
+* mostrar los comentarios en la historia
 * etc.
 
-In this chapter you will learn about named functions, functions that can be referred to by name when you want to execute them.
+En este capítulo aprenderá sobre funciones con nombre, funciones a las que se puede hacer referencia por nombre cuando desee ejecutarlas.
 
 
-Topics
+Temas
 ------
 
-* functions as a means of abstraction
-* local and global scope
-* side effects
+* funciona como un medio de abstracción
+* alcance local y global
+* efectos secundarios
 
-Learning Objectives
--------------------
+Objetivos de aprendizaje
+-------------------------
 
-At the end of this chapter, you should be able to:
+Al final de este capítulo, debería poder:
 
-* identify formal parameters and parameter values in a code sample
-* predict the return value of a function given sample parameter values
-* define functions with appropriate names for formal parameter
-* avoid the use of global variables in function definitions by creating formal parameters for all values that are needed
-* identify whether a function has any side effects
+* Identificar parámetros formales y valores de parámetros en una muestra de código
+* Predecir el valor de retorno de una función dados los valores de parámetros de muestra
+* Definir funciones con nombres apropiados para el parámetro formal
+* Evitar el uso de variables globales en las definiciones de funciones creando parámetros formales para todos los valores necesarios
+* Identificar si una función tiene algún efecto secundario
