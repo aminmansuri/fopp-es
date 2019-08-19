@@ -12,29 +12,29 @@
    :start: 1
 
 
-Introduction
+Introducción
 ============
 
-You have previously seen tuples, a sequence type that works just like lists except that they are immutable.
+Ya has visto tuplas, un tipo de secuencia que funciona igual que las listas, excepto que son inmutables.
 
-When working with multiple values or multiple variable names, the Python interpreter does some automatic packing and unpacking to and from tuples, which allows some simplifications in the code you write.
+Cuando se trabaja con valores múltiples o nombres de variables múltiples, el intérprete de Python realiza el empaquetado y desempaquetado automático desde y hacia las tuplas, lo que permite algunas simplificaciones en el código que escribe.
 
-Learning Objectives
--------------------
+Objetivos de aprendizaje
+------------------------
 
-At the end of this chapter, you will be able to:
+Al final de este capítulo, podrá:
 
-* Recognize when code is using implicit tuple packing
-* Use implicit tuple packing to return multiple values from a function
-* Read and write code that unpacks a tuple into multiple variables
+* Reconocer cuando el código está usando el empaquetado de tuplas implícito
+* Utilice el empaquetado de tuplas implícito para devolver múltiples valores de una función
+* Leer y escribir código que descomprime una tupla en múltiples variables
 
 
-Tuple Packing
-=============
+Empaquetado de Tuplas
+======================
 
-Wherever python expects a single value, if multiple expressions are provided, separated
-by commas, they are automatically **packed** into a tuple. For example, we could
-have omitted the parentheses when first assigning a tuple to the variable julia.
+Donde sea que python espere un solo valor, si se proporcionan múltiples expresiones, separadas
+por comas, se empaquetan **automáticamente** en una tupla. Por ejemplo, podríamos
+he omitido los paréntesis al asignar una tupla a la variable julia por primera vez.
 
 .. activecode:: ac13-1-1
 
@@ -44,7 +44,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
     print(julia[4])
     
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question12_2_1
    :multiple_answers:
@@ -54,14 +54,14 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :answer_d: print(julia(6))
    :answer_e: print(julia[7])
    :correct: b
-   :feedback_a: julia is a tuple, not a dictionary; indexes must be integers.
-   :feedback_b: [-1] picks out the last item in the sequence.
-   :feedback_c: Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.
-   :feedback_d: Index into tuples using square brackets. julia(-1) will try to treat julia as a function call, with -1 as the parameter value.
-   :feedback_e: Indexing starts at 0. You want the seventh item, which is julia[6]
+   :feedback_a: julia es una tupla, no un diccionario; Los índices deben ser enteros.
+   :feedback_b: [-1] selecciona el último elemento de la secuencia.
+   :feedback_c: Indexa en tuplas usando corchetes. julia(-1) intentará tratar a julia como una llamada de función, con -1 como valor del parámetro.
+   :feedback_d: Indexa en tuplas usando corchetes. julia(-1) intentará tratar a julia como una llamada de función, con -1 como valor del parámetro.
+   :feedback_e: La indexación comienza en 0. y usted desea el séptimo elemento, que es julia[6]
    :practice: T
 
-   Which of the following statements will output Atlanta, Georgia
+   ¿Cuál de las siguientes declaraciones generará Atlanta, Georgia?
 
 .. activecode:: ac12_2_1
    :language: python
@@ -69,7 +69,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :chatcodes:
    :practice: T
 
-   **2.** Create a tuple called ``practice`` that has four elements: 'y', 'h', 'z', and 'x'.
+   **2.** Cree una tupla llamada ``práctica`` que tenga cuatro elementos: 'y', 'h', 'z' y 'x'.
    ~~~~
 
    =====
@@ -89,7 +89,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :chatcodes:
    :practice: T
 
-   **3.** Create a tuple named ``tup1`` that has three elements: 'a', 'b', and 'c'.
+   **3.** Cree una tupla llamada ``tup1`` que tenga tres elementos: 'a', 'b' y 'c'.
    ~~~~
 
    =====
@@ -109,7 +109,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :chatcodes:
    :practice: T
 
-   **4.** Provided is a list of tuples. Create another list called ``t_check`` that contains the third element of every tuple.
+   **4.** Se proporciona una lista de tuplas. Cree otra lista llamada ``t_check`` que contenga el tercer elemento de cada tupla.
    ~~~~
 
    lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
@@ -131,7 +131,7 @@ have omitted the parentheses when first assigning a tuple to the variable julia.
    :chatcodes:
    :practice: T
 
-   **5.** Below, we have provided a list of tuples. Write a for loop that saves the second element of each tuple into a list called ``seconds``.
+   **5.** A continuación, hemos proporcionado una lista de tuplas. Escriba un bucle for que guarde el segundo elemento de cada tupla en una lista llamada ``seconds``.
    ~~~~
 
    tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 'red'), (5.6, 9.99, 2.5, 8.2), ('squirrel', 'chipmunk')]
