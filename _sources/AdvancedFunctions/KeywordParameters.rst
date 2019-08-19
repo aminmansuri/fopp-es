@@ -14,30 +14,30 @@
    :prefix: advfuncs-2-
    :start: 1
 
-Keyword Parameters
-==================
+Parámetros de palabras clave
+============================
 
-In the previous section, on :ref:`Optional Parameters <optional_params_chap>` you learned how to define default values 
-for formal parameters, which made it optional to provide values for those parameters when invoking the functions.
+En la sección anterior, en :ref:`Parámetros opcionales <optional_params_chap>` aprendiste a definir valores predeterminados
+para parámetros formales, que hicieron opcional proporcionar valores para esos parámetros cuando se invocan las funciones.
 
-In this chapter, you'll see one more way to invoke functions with optional parameters, with keyword-based parameter 
-passing. This is particularly convenient when there are several optional parameters and you want to provide a value for 
-one of the later parameters while not providing a value for the earlier ones.
+En este capítulo, verá una forma más de invocar funciones con parámetros opcionales, con parámetros basados en el paso​
+de palabras clave. Esto es particularmente conveniente cuando hay varios parámetros opcionales y desea proporcionar un valor para
+uno de los parámetros posteriores sin proporcionar un valor para los anteriores.
 
-The online official python documentation includes a tutorial on optional 
-parameters which covers the topic quite well. Please read the content 
-there: `Keyword arguments <http://docs.python.org/3/tutorial/controlflow.html#keyword-arguments>`_
+La documentación oficial en línea de Python incluye un tutorial sobre parámetros opcionales
+que cubre bastante bien el tema. Por favor lea el contenido
+allí: `Argumentos de palabras clave <http://docs.python.org/3/tutorial/controlflow.html#keyword-arguments>`_
 
-Don't worry about the ``def cheeseshop(kind, *arguments, **keywords):`` example. You should be able to get by without 
-understanding ``*parameters`` and ``**parameters`` in this course. But do make sure you understand the stuff above that.
+No se preocupe por el ejemplo ``def cheeseshop(kind, *arguments, **keywords):``. Deberías poder sobrevivir sin
+Comprender los ``*parámetros`` y los ``**parámetros`` en este curso. Pero asegúrate de entender lo que está por encima de eso.
 
-The basic idea of passing arguments by keyword is very simple. When invoking a function, inside the parentheses there 
-are always 0 or more values, separated by commas. With keyword arguments, some of the values can be of the form 
-``paramname = <expr>`` instead of just ``<expr>``. Note that when you have ``paramname = <expr>`` in a function 
-definition, it is defining the default value for a parameter when no value is provided in the invocation; when you have 
-``paramname = <expr>`` in the invocation, it is supplying a value, overriding the default for that paramname.
+La idea básica de pasar argumentos por palabra clave es muy simple. Al invocar una función, dentro de los paréntesis hay
+son siempre 0 o más valores, separados por comas. Con argumentos de palabras clave, algunos de los valores pueden tener la forma
+``paramname = <expr>`` en lugar de solo ``<expr>``. Tenga en cuenta que cuando tiene ``paramname = <expr>`` en una definición de
+una función, es definir el valor predeterminado para un parámetro cuando no se proporciona ningún valor en la invocación; cuando tengas
+``paramname = <expr>`` en la invocación, está proporcionando un valor, anulando el valor predeterminado para ese nombre de parámetro.
 
-To make it easier to follow the details of the examples in the official python tutorial, you can step through them in CodeLens.
+Para que sea más fácil seguir los detalles de los ejemplos en el tutorial oficial de Python, puede recorrerlos en CodeLens.
 
 .. codelens:: keyword_params_1
    :python: py3
@@ -55,27 +55,26 @@ To make it easier to follow the details of the examples in the official python t
    parrot('a million', 'bereft of life', 'jump')         # 3 positional arguments
    parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword
    
-As you step through it, each time the function is invoked, make a prediction about what each of the four parameter 
-values will be during execution of lines 2-5. Then, look at the stack frame to see what they actually are during the 
-execution.
+A medida que avanza, cada vez que se invoca la función, haga una predicción sobre cuál será el valor de cada uno de los
+cuatro parámetros durante la ejecución de las líneas 2-5. Luego, mire la pila para ver cuáles son realmente durante el
+ejecución.
 
 .. note::
 
-   Note that we have yet another, slightly different use of the = sign here. As a stand-alone, top-level statement, 
-   ``x=3``, the variable x is set to 3. Inside the parentheses that invoke a function, ``x=3`` says that 3 should be 
-   bound to the local variable x in the stack frame for the function invocation. Inside the parentheses of a function 
-   definition, ``x=3`` says that 3 should be the value for x in every invocation of the function where no value is 
-   explicitly provided for x.
+   Tenga en cuenta que tenemos otro uso ligeramente diferente del signo = aquí. Como una declaración independiente de alto nivel,
+   ``x=3``, la variable x se establece en 3. Dentro de los paréntesis que invocan una función, ``x=3`` dice que 3 debería ser
+   enlazado a la variable local x en el marco de la pila para la invocación de la función. Dentro de los paréntesis de una función
+   definición, ``x=3`` dice que 3 debería ser el valor para x en cada invocación de la función donde no hay valor provisto explícitamente para x.
 
 
-Keyword Parameters with .format
--------------------------------
+Parámetros de palabras clave con .format
+------------------------------------------
 
-Earlier you learned how to use the ``format`` method for strings, which allows you to structure strings like 
-fill-in-the-blank sentences. Now that you've learned about optional and keyword parameters, we can introduce a new way to 
-use the ``format`` method.
+Anteriormente aprendió a usar el método de ``format`` para cadenas, que le permite estructurar cadenas como
+sentencias para rellenar los espacios en blanco. Ahora que ha aprendido acerca de los parámetros opcionales y de palabras clave, podemos presentar una nueva forma de
+use el método de ``format``.
 
-This other option is to specifically refer to keywords for interpolation values, like below.
+Esta otra opción es referirse específicamente a palabras clave para valores de interpolación, como a continuación.
 
 .. activecode:: ac15_2_1
  
@@ -84,45 +83,45 @@ This other option is to specifically refer to keywords for interpolation values,
        print("The scores {nm} got were: {s1},{s2},{s3}.".format(nm=name,s1=scores[0],s2=scores[1],s3=scores[2]))
 
 
-Sometimes, you may want to use the ``.format`` method to insert the same value into a string 
-multiple times. You can do this by simply passing the same string into the format method, 
-assuming you have included ``{}`` s in the string everywhere you want to interpolate them. But 
-you can also use positional passing references to do this! The order in which you pass 
-arguments into the ``format`` method matters: the first one is argument ``0``, the second is 
-argument ``1``, and so on.
+A veces, es posible que desee utilizar el método ``.format`` para insertar el mismo valor en una cadena
+varias veces. Puede hacerlo simplemente pasando la misma cadena al método de formato,
+suponiendo que haya incluido ``{}`` s en la cadena en todas partes donde desee interpolarlos. Pero
+¡también puede usar referencias de paso posicional para hacer esto! El orden en que pasas
+los argumentos en el método ``format`` es importante: el primero es el argumento ``0``, el segundo es
+argumento ``1``, y así sucesivamente.
 
-For example,
+Por ejemplo,
 
 .. activecode:: ac15_2_2
  
-   # this works
+   # esto funciona
    names = ["Jack","Jill","Mary"]
    for n in names:
        print("'{}!' she yelled. '{}! {}, {}!'".format(n,n,n,"say hello"))
 
-   # but this also works!
+   # pero esto también funciona!
    names = ["Jack","Jill","Mary"]
    for n in names:
        print("'{0}!' she yelled. '{0}! {0}, {1}!'".format(n,"say hello"))
 
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question15_2_1
    :answer_a: 2
    :answer_b: 3
    :answer_c: 5
    :answer_d: 7
-   :answer_e: Runtime error since not enough values are passed in the call to f
+   :answer_e: Error de tiempo de ejecución ya que no se pasan suficientes valores en la llamada a f
    :correct: d
-   :feedback_a: 2 is bound to x, not z
-   :feedback_b: 3 is the default value for y, not z
-   :feedback_c: 5 is bound to y, not z
-   :feedback_d: 2 is bound x, 5 to y, and z gets its default value, 7
-   :feedback_e: z has a default value in the function definition, so it's optional to pass a value for it.
+   :feedback_a: 2 está vinculado a x, no z
+   :feedback_b: 3 es el valor predeterminado para y, no z
+   :feedback_c: 5 está vinculado a y, no z
+   :feedback_d: 2 está vinculado x, 5 a y, y z obtiene su valor predeterminado, 7
+   :feedback_e: z tiene un valor predeterminado en la definición de la función, por lo que es opcional pasarle un valor.
    :practice: T
 
-   What value will be printed for z?
+   ¿Qué valor se imprimirá para z?
    
    .. code-block:: python 
 
@@ -137,16 +136,16 @@ For example,
    :answer_b: 3
    :answer_c: 5
    :answer_d: 10
-   :answer_e: Runtime error since no value is provided for y, which comes before z
+   :answer_e: Error de tiempo de ejecución ya que no se proporciona ningún valor para y, que viene antes de z
    :correct: b
-   :feedback_a: 2 is bound to x, not y
-   :feedback_b: 3 is the default value for y, and no value is specified for y, 
-   :feedback_c: say what?
-   :feedback_d: 10 is the second value passed, but it is bound to z, not y.
-   :feedback_e: That's the beauty of passing parameters with keywords; you can skip some parameters and they get their default values.
+   :feedback_a: 2 está unido a x, no a y
+   :feedback_b: 3 es el valor predeterminado para y, y no se especifica ningún valor para y,
+   :feedback_c: ¿Qué dijiste?
+   :feedback_d: 10 es el segundo valor pasado, pero está vinculado a z, no a y.
+   :feedback_e: Esa es la belleza de pasar parámetros con palabras clave; puede omitir algunos parámetros y ellos obtienen sus valores predeterminados.
    :practice: T
 
-   What value will be printed for y?
+   ¿Qué valor se imprimirá para y?
    
    .. code-block:: python 
 
@@ -161,16 +160,16 @@ For example,
    :answer_b: 3
    :answer_c: 5
    :answer_d: 7
-   :answer_e: Runtime error since two different values are provided for x
+   :answer_e: Error de tiempo de ejecución ya que se proporcionan dos valores diferentes para x
    :correct: e
-   :feedback_a: 2 is bound to x since it's the first value, but so is 5, based on keyword.
+   :feedback_a: 2 está vinculado a x ya que es el primer valor, pero también lo es 5, según la palabra clave.
    :feedback_b: 
-   :feedback_c: 5 is bound to x by keyword, but 2 is also bound to it by virtue of being the value and not having a keyword. In the online environment, it actually allows this, but not in a proper python interpreter.
+   :feedback_c: 5 está vinculado a x por palabra clave, pero 2 también está vinculado a él en virtud de ser el valor y no tener una palabra clave. El entorno en línea, en realidad lo permite, pero no en un intérprete de Python adecuado.
    :feedback_d: 
-   :feedback_e: 2 is bound to x since it's the first value, but so is 5, based on keyword.
+   :feedback_e: 2 está vinculado a x ya que es el primer valor, pero también lo es 5, según la palabra clave.
    :practice: T
 
-   What value will be printed for x?
+   ¿Qué valor se imprimirá para x?
    
    .. code-block:: python 
 
@@ -184,15 +183,15 @@ For example,
    :answer_a: 2
    :answer_b: 7
    :answer_c: 0
-   :answer_d: Runtime error since two different values are provided for initial.
+   :answer_d: Error de tiempo de ejecución ya que se proporcionan dos valores diferentes para inicial.
    :correct: b
-   :feedback_a: 2 is bound to x, no z
-   :feedback_b: the default value for z is determined at the time the function is defined; at that time initial has the value 0.
-   :feedback_c: the default value for z is determined at the time the function is defined, not when it is invoked.
-   :feedback_d: there's nothing wrong with reassigning the value of a variable at a later time.
+   :feedback_a: 2 está unido a x, no z
+   :feedback_b: El valor predeterminado para z se determina en el momento en que se define la función; en ese momento inicial tiene el valor 0.
+   :feedback_c: El valor predeterminado para z se determina en el momento en que se define la función, no cuando se invoca.
+   :feedback_d: No hay nada de malo en reasignar el valor de una variable en un momento posterior.
    :practice: T
 
-   What value will be printed for z?
+   ¿Qué valor se imprimirá para z?
    
    .. code-block:: python 
 
@@ -208,13 +207,13 @@ For example,
    :answer_c: 'Catalina!' she yelled. 'Come here, Catalina! Alexey, Misuki, and Pablo are here!'
    :answer_d: There is an error. You cannot repeatedly use the keyword parameters.
    :correct: c
-   :feedback_a: Remember, the values inside of {} are variable names. The values of the variables will be used.
-   :feedback_b: Look again at what value is set to the variable first.
-   :feedback_c: Yes, the keyword parameters will determine the order of the strings.
-   :feedback_d: This is not an error, you can do that in Python!
+   :feedback_a: Recuerde, los valores dentro de {} son nombres de variables. Se utilizarán los valores de las variables.
+   :feedback_b: Mire nuevamente qué valor se establece en la variable primero.
+   :feedback_c: Sí, los parámetros de palabras clave determinarán el orden de las cadenas.
+   :feedback_d: ¡Esto no es un error, puedes hacerlo en Python!
    :practice: T
 
-   What value will be printed below?
+   ¿Qué valor se imprimirá a continuación?
    
    .. code-block:: python 
 
@@ -226,7 +225,7 @@ For example,
    :autograde: unittest
    :practice: T
 
-   **5.** Define a function called ``multiply``. It should have one required parameter, a string. It should also have one optional parameter, an integer, named ``mult_int``, with a default value of 10. The function should return the string multiplied by the integer. (i.e.: Given inputs "Hello", mult_int=3, the function should return "HelloHelloHello")
+   **5.** Defina una función llamada ``multiply``. Debe tener un parámetro requerido, una cadena. También debe tener un parámetro opcional, un número entero, llamado ``mult_int``, con un valor predeterminado de 10. La función debe devolver la cadena multiplicada por el número entero. (es decir: Dadas las entradas "Hello", mult_int=3, la función debería devolver "HelloHelloHello")
    ~~~~
 
    def multiply():
@@ -248,7 +247,7 @@ For example,
    :autograde: unittest
    :practice: T
 
-   **6.** Currently the function is supposed to take 1 required parameter, and 2 optional parameters, however the code doesn't work. Fix the code so that it passes the test. This should only require changing one line of code.
+   **6.** Actualmente se supone que la función debe tomar 1 parámetro requerido y 2 parámetros opcionales, sin embargo, el código no funciona. Arregle el código para que pase la prueba. Esto solo debería requerir cambiar una línea de código.
    ~~~~
 
    def waste(var = "Water", mar, marble = "type"):
