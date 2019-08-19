@@ -13,8 +13,8 @@
    :prefix: advfuncs-4-
    :start: 1
 
-Exercises
----------
+Ejercicios
+-----------
 
 .. question:: q16_4_1
 
@@ -24,7 +24,7 @@ Exercises
 
            .. actex:: actex16_4_1
 
-              1. Fill in the parameter list for g so that the invocations of g yield the return values specified
+              1. Complete la lista de parámetros para g para que las invocaciones de g produzcan los valores de retorno especificados
               ~~~~ 
 
               def g():
@@ -41,7 +41,7 @@ Exercises
 
            .. actex:: actex16_4_2
 
-              2. Define a function called ``nums`` that has three parameters. The first parameter, an integer, should be required. A second parameter named ``mult_int`` should be optional with a default value of 5. The final parameter, ``switch``, should also be optional with a default value of False. The function should multiply the two integers together, and if switch is True, should change the sign of the product before returning it.
+              2. Defina una función llamada ``nums`` que tenga tres parámetros. El primer parámetro, un integer, debe ser requerido. Un segundo parámetro llamado ``mult_int`` debería ser opcional con un valor predeterminado de 5. El parámetro final, ``switch``, también debería ser opcional con un valor predeterminado de False. La función debe multiplicar los dos enteros y, si switch es True, debe cambiar el signo del producto antes de devolverlo.
               ~~~~ 
 
               def nums():
@@ -70,7 +70,7 @@ Exercises
 
            .. actex:: actex16_4_3
 
-              3. Write a function called ``together`` that takes three parameters, the first is a required parameter that is a number (integer or float), the second is a required parameter that is a string, and the third is an optional parameter whose default is " ". What is returned is the first parameter, concatenated with the second, using the third.
+              3. Escriba una función llamada ``juntos`` que tome tres parámetros, el primero es un parámetro requerido que es un número (entero o flotante), el segundo es un parámetro requerido que es una cadena y el tercero es un parámetro opcional cuyo valor predeterminado es " ". Lo que se devuelve es el primer parámetro, concatenado con el segundo, usando el tercero.
               ~~~~ 
 
               =====
