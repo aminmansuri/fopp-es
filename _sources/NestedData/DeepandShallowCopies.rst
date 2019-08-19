@@ -11,15 +11,16 @@
    :prefix: nested-5-
    :start: 1
 
-Deep and Shallow Copies
-=======================
+Deep Copy y Shallow Copy
+========================
 
-Earlier when we discussed cloning and aliasing lists we had mentioned that simply cloning a list using [:] would take care of any issues 
-with having two lists unintentionally connected to each other. That was definitely true for making shallow copies (copying a list at the
-highest level), but as we get into nested data, and nested lists in particular, the rules become a bit more complicated. We can have second-level aliasing in these cases, which means we need to make deep copies.
+Anteriormente, cuando discutimos las listas de clonación y alias, mencionamos que simplemente clonar una lista usando [:] se ocuparía de cualquier problema
+con tener dos listas conectadas involuntariamente entre sí. Eso fue definitivamente cierto para hacer copias poco profundas -*shallow copies*- (copiar una lista en el
+nivel más alto), pero a medida que ingresamos a los datos anidados, y a las listas anidadas en particular, las reglas se vuelven un poco más complicadas. Podemos tener
+alias de segundo nivel en estos casos, lo que significa que necesitamos hacer copias profundas.
 
-When you copy a nested list, you do not also get copies of the internal lists. This means that if you perform a mutation operation on one 
-of the original sublists, the copied version will also change. We can see this happen in the following nested list, which only has two levels.
+Cuando copia una lista anidada, tampoco obtiene copias de las listas internas. Esto significa que si realiza una operación de mutación en uno
+de las sublistas originales, la versión copiada también cambiará. Podemos ver que esto suceda en la siguiente lista anidada, que solo tiene dos niveles.
 
 .. activecode:: ac17_100_1
 
@@ -33,7 +34,7 @@ of the original sublists, the copied version will also change. We can see this h
     print("-------- Now look at the copied version -----------")
     print(copied_version)
 
-Assuming that you don't want to have aliased lists inside of your nested list, then you'll need to perform nested iteration.
+Suponiendo que no desea tener listas con alias dentro de su lista anidada, deberá realizar una iteración anidada.
 
 .. activecode:: ac17_100_2
 
@@ -50,7 +51,7 @@ Assuming that you don't want to have aliased lists inside of your nested list, t
     print("-------- Now look at the copied version -----------")
     print(copied_outer_list)
 
-Or, equivalently, you could take advantage of the slice operator to do the copying of the inner list.
+O, de manera equivalente, podría aprovechar el operador de división para copiar la lista interna.
 
 .. activecode:: ac17_100_2a
 
@@ -65,9 +66,9 @@ Or, equivalently, you could take advantage of the slice operator to do the copyi
     print("-------- Now look at the copied version -----------")
     print(copied_outer_list)
 
-This process above works fine when there are only two layers or levels in a nested list. However, if we want to make a copy of a nested 
-list that has *more* than two levels, then we recommend using the ``copy`` module. In the ``copy`` module there is a method called 
-``deepcopy`` that will take care of the operation for you.
+Este proceso anterior funciona bien cuando solo hay dos capas o niveles en una lista anidada. Sin embargo, si queremos hacer una copia de una
+lista anidada que tiene *más* de dos niveles, entonces recomendamos usar el módulo ``copy``. En el módulo ``copy`` hay un método llamado
+``deepcopy`` que se encargará de la operación por usted.
 
 .. activecode:: ac17_100_3
 
