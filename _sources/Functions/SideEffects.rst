@@ -11,12 +11,12 @@
    :prefix: func-13-
    :start: 1
 
-Side Effects
-------------
+Efectos secundarios
+--------------------
 
-We say that the function ``changeit`` has a **side effect** on the list object that is passed to it. Global 
-variables are another way to have side effects. For example, similar to examples you have seen above, we could make 
-``double`` have a side effect on the global variable y.
+Decimos que la función ``changeit`` tiene un **efecto secundario** en el objeto de lista que se le pasa. Las variables
+Global son otra forma de tener efectos secundarios. Por ejemplo, similar a los ejemplos que ha visto anteriormente, podríamos hacer que
+``double`` tenga un efecto secundario en la variable global y.
 
 .. codelens:: clens11_13_1
    :python: py3
@@ -29,16 +29,16 @@ variables are another way to have side effects. For example, similar to examples
    double(y)
    print(y)
 
-Side effects are sometimes convenient. For example, it may be convenient to have a single dictionary that accumulates 
-information, and pass it around to various functions that might add to it or modify it.
+Los efectos secundarios a veces son convenientes. Por ejemplo, puede ser conveniente tener un solo diccionario que acumule
+información y pasarla a varias funciones que podrían agregarle o modificarla.
 
-However, programs that have side effects can be very difficult to debug. When an object has a value that is not what 
-you expected, it can be difficult to track down exactly where in the code it was set. Wherever it is practical to do 
-so, it is best to avoid side effects. The way to avoid using side effects is to use return values instead.
+Sin embargo, los programas que tienen efectos secundarios pueden ser muy difíciles de depurar. Cuando un objeto tiene un valor que no es lo que
+esperaba, puede ser difícil rastrear exactamente en qué parte del código se configuró. Donde sea práctico hacer.
+Por lo tanto, es mejor evitar los efectos secundarios. La forma de evitar el uso de efectos secundarios es usar valores de retorno en su lugar.
 
-Instead of modifying a global variable inside a function, pass the global variable's value in as a parameter, and set 
-that global variable to be equal to a value returned from the function. For example, the following is a better version 
-of the code above.
+En lugar de modificar una variable global dentro de una función, pase el valor de la variable global como parámetro y establezca
+que la variable global sea igual a un valor devuelto por la función. Por ejemplo, la siguiente es una versión mejor
+del código anterior.
 
 .. codelens:: clens11_13_2
    :python: py3
@@ -50,11 +50,11 @@ of the code above.
    y = double(y)
    print(y)
 
-You can use the same coding pattern to avoid confusing side effects with sharing of mutable objects. To do that, 
-explicitly make a copy of an object and pass the copy in to the function. Then return the modified copy and reassign it 
-to the original variable if you want to save the changes. The built-in ``list`` function, which takes a sequence as a 
-parameter and returns a new list, works to copy an existing list. For dictionaries, you can similarly call the ``dict`` 
-function, passing in a dictionary to get a copy of the dictionary back as a return value.
+Puede usar el mismo patrón de codificación para evitar confusos efectos secundarios al compartir objetos mutables. Para hacer eso,
+explícitamente haga una copia de un objeto y pase la copia a la función. Luego devuelva la copia modificada y reasigne
+a la variable original si desea guardar los cambios. La función incorporada de ``lista``, que toma una secuencia como
+parámetro y devuelve una nueva lista, funciona para copiar una lista existente. Para los diccionarios, también puede llamar al ``dict``,
+pasando un diccionario para recuperar una copia del diccionario como valor de retorno.
 
 .. codelens:: clens11_13_3
    :python: py3
@@ -69,9 +69,9 @@ function, passing in a dictionary to get a copy of the dictionary back as a retu
    print(mylst)
    print(newlst)
 
-In general, any lasting effect that occurs in a function, not through its return value, is called a side effect. There 
-are three ways to have side effects:
+En general, cualquier efecto duradero que ocurra en una función, no a través de su valor de retorno, se denomina efecto secundario. Ahí
+hay tres formas de tener efectos secundarios:
 
-* Printing out a value. This doesn't change any objects or variable bindings, but it does have a potential lasting effect outside the function execution, because a person might see the output and be influenced by it.
-* Changing the value of a mutable object.
-* Changing the binding of a global variable.
+* Imprimir un valor. Esto no cambia ningún objeto o enlaces variables, pero tiene un efecto potencial duradero fuera de la ejecución de la función, porque una persona puede ver el resultado y ser influenciado por él.
+* Cambiar el valor de un objeto mutable.
+* Cambiar el enlace de una variable global.
