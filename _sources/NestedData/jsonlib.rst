@@ -7,20 +7,20 @@
     License".
 
 
-Processing JSON results
-=======================
+Procesando resultados JSON
+===========================
 
-JSON stands for JavaScript Object Notation. It looks a lot like the representation of nested dictionaries and lists in 
-python when we write them out as literals in a program, but with a few small differences (e.g., the word null instead of 
-None). When your program receives a JSON-formatted string, generally you will want to convert it into a python object, a 
-list or a dictionary.
+JSON significa JavaScript Object Notation. Se parece mucho a la representación de diccionarios y listas anidados en
+python cuando los escribimos como literales en un programa, pero con algunas pequeñas diferencias (por ejemplo, la palabra null en lugar de
+None). Cuando su programa recibe una cadena con formato JSON, generalmente querrá convertirlo en un objeto de Python, una
+lista o un diccionario.
 
-Again, python provides a module for doing this. The module is called json. We will be using two functions in this module, 
-``loads`` and ``dumps``.
+Nuevamente, python proporciona un módulo para hacer esto. El módulo se llama json. Utilizaremos dos funciones en este módulo,
+``loads`` y ``dumps``.
 
-``json.loads()`` takes a string as input and produces a python object (a dictionary or a list) as output.
+``json.loads()`` toma una cadena como entrada y produce un objeto python (un diccionario o una lista) como salida.
 
-Consider, for example, some data that we might get from Apple's iTunes, in the JSON format:
+Considere, por ejemplo, algunos datos que podríamos obtener de iTunes de Apple, en formato JSON:
 
 .. activecode:: ac17_3_1
     :language: python
@@ -35,7 +35,7 @@ Consider, for example, some data that we might get from Apple's iTunes, in the J
     print(d['resultCount'])
     # print(a_string['resultCount'])
 
-The other function we will use is ``dumps``. It does the inverse of ``loads``. It takes a python object, typically a dictionary or a list, and returns a string, in JSON format. It has a few other parameters. Two useful parameters are sort_keys and indent. When the value True is passed for the sort_keys parameter, the keys of dictionaries are output in alphabetic order with their values. The indent parameter expects an integer. When it is provided, dumps generates a string suitable for displaying to people, with newlines and indentation for nested lists or dictionaries. For example, the following function uses json.dumps to make a human-readable printout of a nested data structure.
+La otra función que usaremos es ``dumps``. Hace el inverso de ``loads``. Toma un objeto python, generalmente un diccionario o una lista, y devuelve una cadena, en formato JSON. Tiene algunos otros parámetros. Dos parámetros útiles son sort_keys e indent. Cuando se pasa el valor True para el parámetro sort_keys, las claves de los diccionarios se emiten en orden alfabético con sus valores. El parámetro de sangría espera un número entero. Cuando se proporciona, los volcados generan una cadena adecuada para mostrar a las personas, con nuevas líneas y sangría para listas anidadas o diccionarios. Por ejemplo, la siguiente función usa json.dumps para realizar una impresión legible por humanos de una estructura de datos anidada.
 
 .. activecode:: ac17_3_2
     :language: python
@@ -50,32 +50,32 @@ The other function we will use is ``dumps``. It does the inverse of ``loads``. I
     print('--------')
     print(pretty(d))
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question17_3_1
    :answer_a: json.loads(d)
    :answer_b: json.dumps(d)
    :answer_c: d.json()
-   :feedback_a: loads turns a json-formatted string into a list or dictionary
-   :feedback_b: dumps turns a list or dictionary into a json-formatted string
-   :feedback_c: .json() tries to invoke the json method, but that method is not defined for dictionaries
+   :feedback_a: loads convierte una cadena con formato json en una lista o diccionario
+   :feedback_b: dumps convierte una lista o diccionario en una cadena con formato json
+   :feedback_c: .json() intenta invocar el método json, pero ese método no está definido para los diccionarios
    :correct: b
    :practice: T
 
-   Because we can only write strings into a file, if we wanted to convert a dictionary `d` into a json-formatted string so that we could store it in a file, what would we use?
+   Como solo podemos escribir cadenas en un archivo, si quisiéramos convertir un diccionario `d` en una cadena con formato json para poder almacenarlo en un archivo, ¿qué usaríamos?
 
 .. mchoice:: question17_3_2
    :multiple_answers:
    :answer_a: entertainment.json()
    :answer_b: json.dumps(entertainment)
    :answer_c: json.loads(entertainment)
-   :feedback_a: The .json() method is not defined for strings.
-   :feedback_b: dumps (dump to string) turns a list or dictionary into a json-formatted string
-   :feedback_c: loads (load from string) turns a json-formatted string into a list or dictionary
+   :feedback_a: El método .json() no está definido para strings.
+   :feedback_b: dumps (dump to string) convierte una lista o diccionario en una cadena con formato json
+   :feedback_c: loads (load from string) convierte una cadena con formato json en una lista o diccionario
    :correct: c
    :practice: T
 
-   Say we had a JSON string in the following format. How would you convert it so that it is a python list?
+   Digamos que teníamos un String JSON en el siguiente formato. ¿Cómo lo convertirías para que sea una lista de Python?
 
    .. sourcecode:: python
 
