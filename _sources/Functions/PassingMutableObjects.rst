@@ -11,27 +11,27 @@
    :prefix: func-12-
    :start: 1
 
-Passing Mutable Objects
------------------------
+Pasando objetos mutables
+------------------------
 
-As you have seen, when a function (or method) is invoked and a parameter value is provided, a new stack frame is
-created, and the parameter name is bound to the parameter value. What happens when the value that is provided is a 
-mutable object, like a list or dictionary? Is the parameter name bound to a *copy* of the original object, or does it 
-become an alias for exactly that object? In python, the answer is that it becomes an alias for the original object. 
-This answer matters  when the code block inside the function definition causes some change to be made to the object 
-(e.g., adding a key-value pair to a dictionary or appending to a list). 
+Como ha visto, cuando se invoca una función (o método) y se proporciona un valor de parámetro, se genera un nuevo marco de pila
+creado, y el nombre del parámetro está vinculado al valor del parámetro. Lo que sucede cuando el valor que se proporciona es un
+objeto mutable, ¿como una lista o diccionario? ¿El nombre del parámetro está vinculado a una *copia* del objeto original, o lo hace
+convertirse en un alias para exactamente ese objeto? En python, la respuesta es que se convierte en un alias para el objeto original.
+Esta respuesta es importante cuando el bloque de código dentro de la definición de la función hace que se realicen algunos cambios en el objeto
+(por ejemplo, agregar un par clave-valor a un diccionario o agregar a una lista).
 
-This sheds a little different light on the idea of parameters being *local*. They *are* local in the sense that if you 
-have a parameter x inside a function and there is a global variable x, any reference to x inside the function gets you 
-the value of local variable x, not the global one. If you set ``x = 3``, it changes the value of the local variable x, 
-but when the function finishes executing, that local x disappears, and so does the value 3. 
+Esto arroja una luz un poco diferente sobre la idea de que los parámetros sean  *locales*. Son *locales* en el sentido de que si usted
+tiene un parámetro x dentro de una función y hay una variable global x, cualquier referencia a x dentro de la función te lleva
+a el valor de la variable local x, no la global. Si establece ``x = 3``, cambia el valor de la variable local x,
+pero cuando la función termina de ejecutarse, esa x local desaparece, y también el valor 3.
 
-If, one the other hand, the local variable x points to a list ``[1, 3, 7]``, setting ``x[2] = 0`` makes x still point 
-to the same list, but changes the list's contents to ``[1, 3, 0]``. The local variable x is discarded when the function 
-completes execution, but the mutation to the list lives on if there is some other variable outside the function that 
-also is an alias for the same list.
+Si, por otro lado, la variable local x apunta a una lista ``[1, 3, 7]``, al establecer ``x[2] = 0``, x sigue apuntando
+a la misma lista, pero cambia el contenido de la lista a ``[1, 3, 0]``. La variable local x se descarta cuando la función
+completa la ejecución, pero la mutación en la lista sigue viva si hay alguna otra variable fuera de la función que
+también es un alias para la misma lista.
 
-Consider the following example.
+Considere el siguiente ejemplo.
 
 .. activecode:: ac11_12_1
    
@@ -50,8 +50,8 @@ Consider the following example.
    changeit(mylst)
    print(mylst)
 
-Try running it. Similar to examples we have seen before, running ``double`` does not change the global y. But running 
-``changeit`` does change ``mylst``. The explanation is above, about the sharing of mutable objects. Try stepping through it in codelens to see the difference.
+Intenta ejecutarlo. Similar a los ejemplos que hemos visto antes, ejecutar ``double`` no cambia la y global. Pero corriendo
+``changeit`` cambia ``mylst``. La explicación es anterior, sobre el intercambio de objetos mutables. Intente recorrerlo en codelens para ver la diferencia.
 
 .. codelens:: clens11_12_1
    :python: py3
