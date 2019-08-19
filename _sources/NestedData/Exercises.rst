@@ -13,8 +13,8 @@
    :prefix: nested-5-
    :start: 1
 
-Exercises
-=========
+Ejercicios
+==========
 
 .. question:: q17_5_1
 
@@ -25,7 +25,7 @@ Exercises
 
            .. actex:: ac17_5_1
 
-              Iterate through the list so that if the character 'm' is in the string, then it should be added to a new list called ``m_list``. Hint: Because this isn't just a list of lists, think about what type of object you want your data to be stored in. Conditionals may help you.
+              Itere a través de la lista de modo que si el carácter 'm' está en la cadena, se debe agregar a una nueva lista llamada ``m_list``. Sugerencia: Debido a que esto no es solo una lista de listas, piense en qué tipo de objeto desea que se almacenen sus datos. Los condicionales pueden ayudarlo.
               ~~~~
 
               d = ['good morning', 'hello', 'chair', 'python', ['music', 'flowers', 'facebook', 'instagram', 'snapchat', ['On my Own', 'monster', 'Words dont come so easily', 'lead me right']], 'Stressed Out', 'Pauver Coeur', 'Reach for Tomorrow', 'mariners song', 'Wonder sleeps here']
@@ -49,7 +49,7 @@ Exercises
 
            .. actex:: ac17_5_2
 
-              The nested dictionary, ``pokemon``, shows the number of various Pokemon that each person has caught while playing Pokemon Go. Find the total number of rattatas, dittos, and pidgeys caught and assign to the variables ``r``, ``d``, and ``p`` respectively. Do not hardcode. Note: Be aware that not every trainer has caught a ditto.
+              El diccionario anidado, ``pokemon``, muestra el número de varios Pokémon que cada persona ha atrapado mientras jugaba Pokemon Go. Encuentre el número total de rattatas, dittos y pidgeys capturados y asigne a las variables ``r``, ``d`` y ``p`` respectivamente. No hagas *hardcode*. Nota: Tenga en cuenta que no todos los entrenadores han capturado un ditto.
 
               ~~~~
 
@@ -86,7 +86,7 @@ Exercises
 
            .. actex:: ac17_5_3
 
-              Below, we have provided a nested list called ``big_list``. Use nested iteration to create a dictionary, ``word_counts``, that contains all the words in ``big_list`` as keys, and the number of times they occur as values.
+              A continuación, proporcionamos una lista anidada llamada ``big_list``. Use la iteración anidada para crear un diccionario, ``word_counts``, que contenga todas las palabras en ``big_list`` como claves, y la cantidad de veces que aparecen como valores.
 
               ~~~~
 
@@ -111,7 +111,7 @@ Exercises
 
            .. actex:: ac17_5_4
 
-              Provided is a dictionary that contains pokemon go player data, where each player reveals the amount of candy each of their pokemon have. If you pooled all the data together, which pokemon has the highest number of candy? Assign that pokemon to the variable ``most_common_pokemon``.
+              Se proporciona un diccionario que contiene datos de jugadores de pokemon go, donde cada jugador revela la cantidad de dulces que tiene cada uno de sus pokemon. Si reuniste todos los datos, ¿qué pokemon tiene la mayor cantidad de dulces? Asigna ese pokemon a la variable ``most_common_pokemon``.
               ~~~~
 
               pokemon_go_data = {'bentspoon': 
