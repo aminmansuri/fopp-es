@@ -15,15 +15,15 @@
     single: tuple; return value
     return; tuple
 
-Tuples as Return Values
------------------------
+Tuplas como Valores de Retorno
+------------------------------
 
-Functions can return tuples as return values. This is very useful --- we often want to know some batsman's highest and 
-lowest score, or we want to find the mean and the standard deviation, or we want to know the year, the month, and the 
-day, or if we're doing some ecological modeling we may want to know the number of rabbits and the number of wolves on 
-an island at a given time.  In each case, a function (which can only return a single value), can create a single tuple holding multiple elements. 
+Las funciones pueden devolver tuplas como valores de retorno. Esto es muy útil. A menudo queremos saber lo más alto y lo mejor de un bateador
+puntaje más bajo, o queremos encontrar la media y la desviación estándar, o queremos saber el año, el mes y el
+día, o si estamos haciendo algunos modelos ecológicos, podemos querer saber la cantidad de conejos y la cantidad de lobos en
+una isla en un momento dado En cada caso, una función (que solo puede devolver un solo valor), puede crear una tupla única que contiene múltiples elementos.
 
-For example, we could write a function that returns both the area and the circumference of a circle of radius r.
+Por ejemplo, podríamos escribir una función que devuelva tanto el área como la circunferencia de un círculo de radio r.
 
 .. activecode:: ac12_3_1
 
@@ -36,7 +36,7 @@ For example, we could write a function that returns both the area and the circum
 
     print(circleInfo(10))
 
-Again, we can take advantage of packing to make the code look a little more readable on line 4
+Una vez más, podemos aprovechar el empaque para que el código se vea un poco más legible en la línea 4
 
 .. activecode:: ac12_3_2
 
@@ -49,7 +49,7 @@ Again, we can take advantage of packing to make the code look a little more read
 
     print(circleInfo(10))
 
-**Check your Understanding**
+**Revisa tu Entendimiento**
 
 .. activecode:: ac12_3_3
    :language: python
@@ -57,7 +57,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :chatcodes:
    :practice: T
 
-   **1.** Define a function called ``information`` that takes as input, the variables ``name``, ``birth_year``, ``fav_color``, and ``hometown``. It should return a tuple of these variables in this order.
+   **1.** Defina una función llamada ``information`` que tome como entrada, las variables ``name``, ``birth_year``, ``fav_color`` y ``hometown``. Debería devolver una tupla de estas variables en este orden.
    ~~~~
 
    =====
@@ -77,7 +77,7 @@ Again, we can take advantage of packing to make the code look a little more read
    :chatcodes:
    :practice: T
 
-   **2.** Define a function called ``info`` with the following required parameters: ``name``, ``age``, ``birth_year``, ``year_in_college``, and ``hometown``. The function should return a tuple that contains all the inputted information.
+   **2.** Defina una función llamada ``info`` con los siguientes parámetros obligatorios: ``name``, ``age``, ``birth_year``, ``year_in_college`` y ``hometown``. La función debe devolver una tupla que contiene toda la información ingresada.
    ~~~~
 
    def info():
