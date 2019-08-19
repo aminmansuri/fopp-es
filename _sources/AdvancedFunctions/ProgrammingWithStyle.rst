@@ -11,22 +11,22 @@
    :prefix: style-1-
    :start: 1
 
-👩‍💻 Programming With Style
+👩‍💻 Programando con Estilo
 ----------------------------
 
-Readability is very important to programmers, since in practice programs are
-read and modified far more often then they are written.  
+La legibilidad es muy importante para los programadores, ya que en la práctica los programas son
+leer y modificar con mucha más frecuencia que con la que se escriben.
 
 .. All the code examples
 .. in this book will be consistent with the *Python Enhancement Proposal 8*
 .. (`PEP 8 <http://www.python.org/dev/peps/pep-0008/>`__), a style guide developed by the Python community.
 
-We'll have more to say about style as our programs become more complex, but a
-few pointers will be helpful already:
+Tendremos más que decir sobre el estilo a medida que nuestros programas se vuelvan más complejos, pero un
+Algunos consejos ya serán útiles:
 
-* use 4 spaces for indentation
-* imports should go at the top of the file
-* separate function definitions with two blank lines
-* keep function definitions together
-* keep top level statements, including function calls, together at the
-  bottom of the program
+* usar 4 espacios para identar
+* las importaciones deben ir al principio del archivo
+* separar definiciones de funciones con dos líneas en blanco
+* mantener las definiciones de funciones juntas
+* mantener declaraciones de nivel superior, incluidas las llamadas a funciones, juntas en la
+  parte inferior del programa
