@@ -14,83 +14,83 @@
 👩‍💻 Print vs. return
 ----------------------
 
-Many beginning programmers find the distinction between print and return very confusing, especially since most of the 
-illustrations of return values in intro texts like this one show the returned value from a function call by printing 
-it, as in ``print(square(g(2)))``.
+Muchos programadores principiantes encuentran la distinción entre impresión y devolución muy confusa, especialmente porque la mayoría de
+las ilustraciones de valores de retorno en textos introductorios como este muestran el valor devuelto de una llamada a función print
+it, como en ``print(square(g(2)))``.
 
-The print statement is fairly easy to understand. It takes a python object and outputs a printed representation of it 
-in the output window. You can think of the print statement as something that takes an object from the land of the 
-program and makes it visible to the land of the human observer.
+La declaración impresa es bastante fácil de entender. Toma un objeto python y genera una representación impresa del mismo
+en la ventana de salida. Puede pensar en la declaración impresa como algo que toma un objeto de la tierra del
+programa y lo hace visible a la tierra del observador humano.
 
 .. note::
 
-   **Print is for people**. Remember that slogan. Printing has no effect on the ongoing execution of a program. It doesn't assign a value to a variable. It doesn't return a value from a function call.
+   **La impresión es solo para las personas**. Recuerda ese eslogan. La impresión no tiene ningún efecto en la ejecución en curso de un programa. No asigna un valor a una variable. No devuelve un valor de una llamada de función.
 
-If you're confused, chances are the source of your confusion is really about returned values and the evaluation of 
-complex expressions. A function that returns a value is producing a value for use *by the program*, in particular for 
-use in the part of the code where the function was invoked. Remember that when a function is invoked, the function's 
-code block is executed -- all that code indented under the ``def`` statement gets executed, following the rules of the 
-Python formal language for what should and should not execute as it goes. But when the function returns, control goes 
-back to the calling location, and a return value may come back with it.
+Si está confundido, es probable que la fuente de su confusión sea realmente acerca de los valores devueltos y la evaluación de
+expresiones complejas. Una función que devuelve un valor está produciendo un valor para usar *por el programa*, en particular para
+usar en la parte del código donde se invocó la función. Recuerde que cuando se invoca una función, la función
+se ejecuta el bloque de código: todo ese código sangrado bajo la instrucción ``def`` se ejecuta, siguiendo las reglas de el
+Lenguaje formal de Python para lo que debe y no debe ejecutarse a medida que avanza. Pero cuando la función regresa, el control se va
+a volver a la ubicación de la llamada, y un valor de retorno puede volver con él.
 
-You've already seen some function calls in Chapter 1. When we told you about the function ``square`` that we defined, 
-you saw that the expression ``square(2)`` evaluated to the integer value ``4``. 
+Ya ha visto algunas llamadas a funciones en el Capítulo 1. Cuando te contamos sobre la función ``square`` que definimos,
+viste que la expresión ``square(2)`` evalúa el valor entero ``4``.
 
-That's because the ``square`` function *returns* a value: the square of whatever input is passed into it. 
+Esto se debe a que la función ``square`` *devuelve* un valor: el cuadrado de cualquier entrada que se le pase.
 
-If a returned value is for use *by the program*, why did you make that function invocation to return a value? What do 
-you use the result of the function call for? There are three possibilities.
+Si un valor devuelto es para uso *por el programa*, ¿por qué hizo esa invocación de función para devolver un valor? Qué hacer si se
+utiliza el resultado de la llamada a la función? Hay tres posibilidades
 
-#. Save it for later. 
-    The returned value may be:
-    
-    * Assigned to a variable. For example, ``w = square(3)``
-    * Put in a list. For example, ``L.append(square(3))``
-    * Put in a dictionary. For example, ``d[3] = square(3)``
+#. Guárdalo para después.
+    El valor devuelto puede ser:
 
-#. Use it in a more complex expression. 
-    In that case, think of the return value as 
-    replacing the entire text of the function invocation. For example, if there is a line
-    of code ``w = square(square(3) + 7) - 5``, think of the return value 9 replacing the
-    text square(3) in that invocation, so it becomes ``square(9 + 7) -5``.
+    * Asignado a una variable. Por ejemplo, ``w = cuadrado (3)``
+    * Poner en una lista. Por ejemplo, ``L.append(cuadrado (3))``
+    * Poner en un diccionario. Por ejemplo, ``d[3] = cuadrado (3)``
 
-#. Print it for human consumption. 
-    For example, ``print(square(3))`` outputs 9 to the
-    output area. Note that, unless the return value is first  saved as in possibility 1, it will be available
-    only to the humans watching the output area, not to the program as it continues executing.
+#. Úselo en una expresión más compleja.
+    En ese caso, piense en el valor de retorno como
+    reemplazando todo el texto de la invocación de la función. Por ejemplo, si hay una línea
+    del código ``w = cuadrado (cuadrado (3) + 7) - 5``, piense en el valor de retorno 9 que reemplaza el
+    texto cuadrado (3) en esa invocación, por lo que se convierte en ``square(9 + 7) -5``.
 
-If your only purpose in running a function is to make an output visible for human consumption, there are two ways to 
-do it. You can put one or more print statements inside the function definition and not bother to return anything from 
-the function (the value None will be returned). In that case, invoke the function without a print statement. For 
-example, you can have an entire line of code that reads ``f(3)``. That will run the function f and throw away the 
-return value. Of course, if square doesn't print anything out or have any side effects, it's useless to call it and do 
-nothing with the return value. But with a function that has print statements inside it, it can be quite useful.
+#. Imprimirlo para consumo humano.
+    Por ejemplo, ``print(square(3))`` da salida a 9.
+    Tenga en cuenta que, a menos que el valor de retorno se guarde primero como en la posibilidad 1, estará disponible
+    solo a los humanos que miran el área de salida, no al programa mientras continúa ejecutándose.
 
-The other possibility is to return a value from the function and print it, as in ``print(f(3))``. As you start to 
-write larger, more complex programs, this will be more typical. Indeed the print statement will usually only be a 
-temporary measure while you're developing the program. Eventually, you'll end up calling f and saving the return value 
-or using it as part of a more complex expression.
+Si su único propósito al ejecutar una función es hacer que una salida sea visible para el consumo humano, hay dos formas de
+hacerlo. Puede poner una o más declaraciones de impresión dentro de la definición de la función y no molestarse en devolver nada de
+la función (se devolverá el valor Ninguno). En ese caso, invoque la función sin una declaración de impresión. Por
+ejemplo, puede tener una línea completa de código que lea ``f(3)``. Eso ejecutará la función f y tirará el
+valor de retorno. Por supuesto, si el cuadrado no imprime nada o tiene efectos secundarios, es inútil llamarlo y hacer
+nada con el valor de retorno. Pero con una función que tiene declaraciones de impresión dentro, puede ser bastante útil.
 
-You will know you've really internalized the idea of functions when you are no longer confused about the difference 
-between print and return. Keep working at it until it makes sense to you!
+La otra posibilidad es devolver un valor de la función e imprimirlo, como en ``print(f(3))``. Cuando empiezas a
+escriba programas más grandes y complejos, esto será más típico. De hecho, la declaración impresa generalmente solo será una
+medida temporal mientras desarrolla el programa. Eventualmente, terminará llamando f y guardando el valor de retorno
+o usándolo como parte de una expresión más compleja.
 
-**Check your understanding**
+Sabrá que realmente ha internalizado la idea de las funciones cuando ya no esté confundido acerca de la diferencia
+entre impresión y devolución. ¡Sigue trabajando hasta que tenga sentido para ti!
+
+**Revisa tu entendimiento**
 
 .. mchoice:: question11_11_1
    :answer_a: 2
    :answer_b: 5
    :answer_c: 7
    :answer_d: 25
-   :answer_e: Error: y has a value but x is an unbound variable inside the square function
+   :answer_e: Error: y tiene un valor pero x es una variable independiente dentro de la función square
    :correct: c
-   :feedback_a: 2 is the input; the value returned from h is what will be printed.
-   :feedback_b: Don't forget that 2 gets squared.
-   :feedback_c: First square 2, then add 3.
-   :feedback_d: 3 is added to the result of squaring 2
-   :feedback_e: When square is called, x is bound to the parameter value that is passed in, 2.
+   :feedback_a: 2 es la entrada; El valor devuelto por h es el que se imprimirá.
+   :feedback_b: No olvides que 2 se eleva al cuadrado.
+   :feedback_c: primer cuadrado 2, luego agregue 3.
+   :feedback_d: 3 se agrega al resultado de la cuadratura 2
+   :feedback_e: cuando se llama al cuadrado, x está vinculado al valor del parámetro que se pasa, 2.
    :practice: T
 
-   What will the following code output?
+   ¿Cuál será el siguiente código de salida?
 
    .. code-block:: python
 
@@ -110,16 +110,16 @@ between print and return. Keep working at it until it makes sense to you!
    :answer_b: 5
    :answer_c: 7
    :answer_d: 10
-   :answer_e: Error: you can't nest function calls
+   :answer_e: Error: no puede anidar llamadas de función
    :correct: d
-   :feedback_a: Better read the section above one more time.
-   :feedback_b: Better read the section above one more time.
-   :feedback_c: That's h(2), but it is passed to g.
-   :feedback_d: h(2) returns 7, so y is bound to 7 when g is invoked.
-   :feedback_e: Ah, but you can nest function calls.
+   :feedback_a: Mejor lea la sección anterior una vez más.
+   :feedback_b: Mejor lea la sección anterior una vez más.
+   :feedback_c: Eso es h(2), pero se pasa a g.
+   :feedback_d: h(2) devuelve 7, por lo que y está vinculado a 7 cuando se invoca g.
+   :feedback_e: Ah, pero puede anidar llamadas de función.
    :practice: T
 
-   What will the following code output?
+   ¿Cuál será el siguiente código de salida?
    
    .. code-block:: python 
 
