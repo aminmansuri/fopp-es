@@ -1,8 +1,8 @@
-Advanced Functions
-::::::::::::::::::
+Funciones Avanzadas
+::::::::::::::::::::
 
 .. toctree::
-   :caption: Advanced Functions
+   :caption: Funciones Avanzadas
    :maxdepth: 2
 
    OptionalParameters.rst
