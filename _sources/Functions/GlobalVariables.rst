@@ -11,20 +11,20 @@
    :prefix: func-8-
    :start: 1
 
-Global Variables
-----------------
+Variables Globales
+-------------------
 
-Variable names that are at the *top-level*, not inside any function definition,
-are called global. 
+Los nombres de variables que están en el *nivel superior*, no dentro de ninguna definición de función,
+se llaman globales.
 
-It is legal for a function to access a global variable. However, this is considered
-**bad form** by nearly all programmers and should be avoided. This subsection
-includes some examples that illustrate the potential interactions of global and
-local variables. These will help you understand exactly how python works. Hopefully,
-they will also convince you that things can get pretty confusing when you mix
-local and global variables, and that you really shouldn't do it.  
+Es legal que una función acceda a una variable global. Sin embargo, esto se considera
+**mala forma** por casi todos los programadores y debe evitarse. Esta subsección
+incluye algunos ejemplos que ilustran las posibles interacciones de global y
+variables locales. Esto te ayudará a entender exactamente cómo funciona Python. Ojalá,
+también te convencerán de que las cosas pueden volverse bastante confusas cuando mezclas
+variables locales y globales, y que realmente no deberías hacerlo.
 
-Look at the following, nonsensical variation of the square function.
+Mire la siguiente variación sin sentido de la función square.
 
 .. activecode:: ac11_8_1
 
@@ -36,25 +36,25 @@ Look at the following, nonsensical variation of the square function.
     result = badsquare(10)
     print(result)
 
-Although the ``badsquare`` function works, it is silly and poorly written. We have done it here to illustrate
-an important rule about how variables are looked up in Python.
-First, Python looks at the variables that are defined as local variables in
-the function.  We call this the **local scope**. If the variable name is not
-found in the local scope, then Python looks at the global variables,
-or **global scope**. This is exactly the case illustrated in the code above.
-``power`` is not found locally in ``badsquare`` but it does exist globally.
-The appropriate way to write this function would be to pass power as a parameter.
-For practice, you should rewrite the badsquare example to have a second parameter called power.
+Aunque la función ``badsquare`` funciona, es tonta y está mal escrita. Lo hemos hecho aquí para ilustrar
+una regla importante sobre cómo se buscan las variables en Python.
+Primero, Python analiza las variables que se definen como variables locales en
+la función. Llamamos a esto el **alcance local**. Si el nombre de la variable no es
+encontrado en el ámbito local, luego Python mira las variables globales,
+o **alcance global**. Este es exactamente el caso ilustrado en el código anterior.
+``power`` no se encuentra localmente en ``badsquare`` pero existe a nivel mundial.
+La forma apropiada de escribir esta función sería pasar la potencia como parámetro.
+Para practicar, debe reescribir el ejemplo de badsquare para tener un segundo parámetro llamado potencia.
 
-There is another variation on this theme of local versus global variables. Assignment statements in the local function cannot 
-change variables defined outside the function. Consider the following
+Hay otra variación sobre este tema de variables locales versus globales. Las declaraciones de asignación en la función local no pueden
+cambiar variables definidas fuera de la función. Considera lo siguiente
 codelens example:
 
 .. codelens::  clens11_8_1
     :python: py3
 
     def powerof(x,p):
-        power = p   # Another dumb mistake
+        power = p   # Otro error tonto
         y = x ** power
         return y
 
@@ -62,30 +62,30 @@ codelens example:
     result = powerof(10,2)
     print(result)
 
-Now step through the code. What do you notice about the values of variable ``power``
-in the local scope compared to the variable ``power`` in the global scope?
+Ahora revisa el código. ¿Qué notas sobre los valores de la variable ``power``?
+en el ámbito local en comparación con la variable ``power`` en el ámbito global?
 
-The value of ``power`` in the local scope was different than the global scope.
-That is because in this example ``power`` was used on the left hand side of the
-assignment statement ``power = p``. When a variable name is used on the
-left hand side of an assignment statement Python creates a local variable.
-When a local variable has the same name as a global variable we say that the
-local shadows the global. A **shadow** means that the global variable cannot
-be accessed by Python because the local variable will be found first. This is
-another good reason not to use global variables. As you can see,
-it makes your code confusing and difficult to understand.
+El valor de ``power`` en el ámbito local era diferente del ámbito global.
+Esto se debe a que en este ejemplo se usó ``power`` en el lado izquierdo del
+declaración de asignación ``power = p``. Cuando se usa un nombre de variable en
+lado izquierdo de una declaración de asignación Python crea una variable local.
+Cuando una variable local tiene el mismo nombre que una variable global, decimos que
+sombras locales lo global. Una **sombra** significa que la variable global no puede
+Python acceder a ella porque la variable local se encontrará primero. Esto es
+otra buena razón para no utilizar variables globales. Como puedes ver,
+hace que su código sea confuso y difícil de entender.
 
-If you really want to change the value of a global variable inside a function,
-you can can do it by explicitly declaring the variable to be global, as in the example
-below. Again, you should *not* do this in your code. The example is here only
-to cement your understanding of how python works.
+Si realmente desea cambiar el valor de una variable global dentro de una función,
+puede hacerlo declarando explícitamente que la variable es global, como en el ejemplo
+abajo. Una vez más, debe *no* hacer esto en su código. El ejemplo es solo aquí
+para consolidar su comprensión de cómo funciona Python.
 
 .. codelens::  clens11_8_2
     :python: py3
 
     def powerof(x,p):
-        global power  # a really... 
-        power = p     # ...bad idea, but valid code
+        global power  # una realidad...
+        power = p     # ...mala idea, pero código válido
         y = x ** power
         return y
 
@@ -94,64 +94,64 @@ to cement your understanding of how python works.
     print(result)
     print(power)
 
-To cement all of these ideas even further lets look at one final example.
-Inside the ``square`` function we are going to make an assignment to the
-parameter ``x``  There's no good reason to do this other than to emphasize
-the fact that the parameter ``x`` is a local variable.  If you step through
-the example in codelens you will see that although ``x`` is 0 in the local
-variables for ``square``, the ``x`` in the global scope remains 2.  This is confusing
-to many beginning programmers who think that an assignment to a
-formal parameter will cause a change to the value of the variable that was
-used as the actual parameter, especially when the two share the same name.
-But this example demonstrates that that is clearly not how Python operates.
+Para consolidar todas estas ideas aún más, veamos un ejemplo final.
+Dentro de la función ``square`` vamos a hacer una asignación a el
+parámetro ``x`` .No hay una buena razón para hacer esto aparte de enfatizar
+el hecho de que el parámetro ``x`` es una variable local. Si entras en
+el ejemplo en codelens verá que aunque ``x`` es 0 en la variable
+local para ``square``, la ``x`` en el alcance global sigue siendo 2. Esto es confuso
+a muchos programadores principiantes que piensan que una asignación a un
+parámetro formal causará un cambio en el valor de la variable que fue
+usado como el parámetro real, especialmente cuando los dos comparten el mismo nombre.
+Pero este ejemplo demuestra que claramente no es así como funciona Python.
 
 .. codelens:: clens11_8_3
     :python: py3
 
     def square(x):
         y = x * x
-        x = 0       # assign a new value to the parameter x
+        x = 0       # asignar un nuevo valor al parámetro x
         return y
 
     x = 2
     z = square(x)
     print(z)
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question11_8_1
-   :answer_a: Its value
-   :answer_b: The range of statements in the code where a variable can be accessed.
-   :answer_c: Its name
+   :answer_a: Es valor
+   :answer_b: El rango de declaraciones en el código donde se puede acceder a una variable.
+   :answer_c: Su nombre
    :correct: b
-   :feedback_a: Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.
-   :feedback_b: Correct.
-   :feedback_c: The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.
+   :feedback_a: El valor es el contenido de la variable. El alcance se refiere a dónde se conoce la variable.
+   :feedback_b: Correcto.
+   :feedback_c: El nombre de una variable es solo un identificador o alias. El alcance se refiere a dónde se conoce la variable.
 
-   What is a variable's scope?
+   ¿Cuál es el alcance de una variable?
 
 .. mchoice:: question11_8_2
-   :answer_a: A temporary variable that is only used inside a function
-   :answer_b: The same as a parameter
-   :answer_c: Another name for any variable
+   :answer_a: Una variable temporal que solo se usa dentro de una función
+   :answer_b: Lo mismo que un parámetro
+   :answer_c: Otro nombre para cualquier variable
    :correct: a
-   :feedback_a: Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.
-   :feedback_b: While parameters may be considered local variables, functions may also define and use additional local variables.
-   :feedback_c: Variables that are used outside a function are not local, but rather global variables.
+   :feedback_a: Sí, una variable local es una variable temporal que solo se conoce (solo existe) en la función en la que se define.
+   :feedback_b: Si bien los parámetros pueden considerarse variables locales, las funciones también pueden definir y usar variables locales adicionales.
+   :feedback_c: Las variables que se usan fuera de una función no son locales, sino más bien variables globales.
 
-   What is a local variable?
+   ¿Qué es una variable local?
 
 .. mchoice:: question11_8_3
-   :answer_a: Yes, and there is no reason not to.
-   :answer_b: Yes, but it is considered bad form.
-   :answer_c: No, it will cause an error.
+   :answer_a: Sí, y no hay razón para no hacerlo.
+   :answer_b: Sí, pero se considera mala forma.
+   :answer_c: No, causará un error.
    :correct: b
-   :feedback_a: While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.
-   :feedback_b: it is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.
-   :feedback_c: Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.
+   :feedback_a: Si bien no hay ningún problema en lo que respecta a Python, generalmente se considera un mal estilo debido a la posibilidad de que el programador se confunda.
+   :feedback_b: generalmente se considera un mal estilo debido a la posibilidad de que el programador se confunda. Si debe utilizar variables globales (también generalmente de forma incorrecta) asegúrese de que tengan nombres únicos.
+   :feedback_c: Python gestiona el alcance global y local por separado y tiene reglas claras sobre cómo manejar variables con el mismo nombre en diferentes ámbitos, por lo que esto no causará un error de Python.
 
-   Can you use the same name for a local variable as a global variable?
+   ¿Se puede usar el mismo nombre para una variable local como una variable global?
 
-.. note:: WP: Scope
+.. note:: WP: Alcance
 
-    You may be asking yourself at this point when you should make some object a local variable and when should you make it a global variable. Generally, we do not recommend making variables global. Imagine you are trying to write a program that keeps track of money while purchasing groceries. You may make a variable that represents how much money the person has, called ``wallet``. You also want to make a function called ``purchase``, which will take the name of the item and its price, and then add the item to a list of groceries, and deduct the price from the amount stored in ``wallet``. If you initialize wallet before the function as a variable within the global scope instead of passing it as a third parameter for ``purchase``, then an error would occur because wallet would not be found in the local scope. Though there are ways to get around this, as outlined in this page, if your program was supposed to handle groceries for multiple people, then you would need to declare each wallet as a global variable in the functions that want to use wallet, and that would become very confusing and tedious to deal with. 
+    En este punto, es posible que se pregunte cuándo debe convertir un objeto en una variable local y cuándo debe convertirlo en una variable global. En general, no recomendamos hacer variables globales. Imagine que está tratando de escribir un programa que haga un seguimiento del dinero mientras compra comestibles. Puede hacer una variable que represente cuánto dinero tiene la persona, llamada ``wallet``, también desea realizar una función llamada ``purchase``, que tomará el nombre del artículo y su precio, y luego agregará el artículo a una lista de comestibles y deducirá el precio del monto almacenado en la ``wallet``. Si inicializa la billetera antes de la función como una variable dentro del alcance global en lugar de pasarla como un tercer parámetro para ``purchase``, se producirá un error porque la billetera no se encontrará en el alcance local. Aunque hay formas de evitar esto, como se describe en esta página, si se suponía que su programa manejaría alimentos para varias personas, entonces necesitaría declarar cada billetera como una variable global en las funciones que desean usar la billetera, y eso se volvería muy confuso y tedioso de tratar.
