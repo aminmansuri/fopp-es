@@ -13,30 +13,30 @@
 
 .. index:: flow of execution
 
-Flow of Execution Summary
--------------------------
+Resumen de flujo de ejecución
+--------------------------------
 
-When you are working with functions it is really important to know the order in which statements are executed. This is 
-called the **flow of execution** and we've already talked about it a number of times in this chapter.
+Cuando trabaja con funciones, es realmente importante saber el orden en que se ejecutan las declaraciones. Esto es
+llamado el **flujo de ejecución** y ya lo hemos hablado varias veces en este capítulo.
 
-Execution always begins at the first statement of the program. Statements are executed one at a time, in order, from 
-top to bottom. Function definitions do not alter the flow of execution of the program, but remember that statements 
-inside the function are not executed until the function is called. Function calls are like a detour in the flow of 
-execution. Instead of going to the next statement, the flow jumps to the first line of the called function, executes 
-all the statements there, and then comes back to pick up where it left off.
+La ejecución siempre comienza en la primera declaración del programa. Las declaraciones se ejecutan una a la vez, en orden, desde
+de arriba hacia abajo. Las definiciones de funciones no alteran el flujo de ejecución del programa, pero recuerde que las declaraciones
+dentro de la función no se ejecutan hasta que se llama a la función. Las llamadas a funciones son como un desvío en el flujo de
+ejecución. En lugar de pasar a la siguiente instrucción, el flujo salta a la primera línea de la función llamada, se ejecuta
+todas las declaraciones allí, y luego regresa para continuar donde lo dejó.
 
-That sounds simple enough, until you remember that one function can call another. While in the middle of one function, 
-the program might have to execute the statements in another function. But while executing that new function, the
-program might have to execute yet another function!
+Eso suena bastante simple, hasta que recuerdes que una función puede llamar a otra. Mientras está en el medio de una función,
+el programa podría tener que ejecutar las declaraciones en otra función. Pero al ejecutar esa nueva función,
+¡El programa podría tener que ejecutar otra función más!
 
-Fortunately, the Python interperter is adept at keeping track of where it is, so each time a function completes, the 
-program picks up where it left off in the function that called it. When it gets to the end of the program, it terminates.
+Afortunadamente, el intérprete de Python es experto en realizar un seguimiento de dónde está, por lo que cada vez que se completa una función, el
+el programa continúa donde lo dejó en la función que lo llamó. Cuando llega al final del programa, finaliza.
 
-What does all that mean for us when we try to understand a program? Don't read from top to bottom. Instead, follow the 
-flow of execution.  This means that you will read the def statements as you are scanning from top to bottom, but you 
-should skip the body of the function until you reach a point where that function is called.
+¿Qué significa todo eso para nosotros cuando tratamos de entender un programa? No lea de arriba a abajo. En cambio, siga el
+flujo de ejecución. Esto significa que leerá las declaraciones def mientras escanea de arriba a abajo, pero usted
+debe omitir el cuerpo de la función hasta llegar a un punto donde se llama esa función.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question11_10_1
    :answer_a: 25
@@ -44,13 +44,13 @@ should skip the body of the function until you reach a point where that function
    :answer_c: 125
    :answer_d: 32
    :correct: a
-   :feedback_a: The function square returns the square of its input (via a call to pow).
-   :feedback_b: What is printed is the output of the square function.  5 is the input to the square function.
-   :feedback_c: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
-   :feedback_d: Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.
+   :feedback_a: El cuadrado de la función devuelve el cuadrado de su entrada (a través de una llamada a pow).
+   :feedback_b: Lo que se imprime es la salida de la función cuadrada. 5 es la entrada a la función cuadrada.
+   :feedback_c: Note que pow se llama desde dentro del cuadrado con una base (b) de 5 y una potencia (p) de dos.
+   :feedback_d: Note que pow se llama desde dentro del cuadrado con una base (b) de 5 y una potencia (p) de dos.
    :practice: T
 
-   Consider the following Python code. Note that line numbers are included on the left.
+   Considere el siguiente código de Python. Tenga en cuenta que los números de línea se incluyen a la izquierda.
 
    .. code-block:: python
       :linenos:
@@ -67,4 +67,4 @@ should skip the body of the function until you reach a point where that function
       result = square(n)
       print(result)
 
-   What does this function print?
+   ¿Qué imprime esta función?
