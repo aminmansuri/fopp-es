@@ -11,27 +11,27 @@
    :prefix: func-6-
    :start: 1
 
-Method Invocations
-------------------
+Invocaciones de métodos
+------------------------
 
 .. note::
 
-   This section is a review of material you have already seen, but it may be helpful to look at it again now that you're focusing on functions and function calls.
+   Esta sección es una revisión del material que ya ha visto, pero puede ser útil volver a verlo ahora que se está centrando en las funciones y las llamadas a funciones.
 
-There is one other special type of function called a **method**, which is invoked slightly differently. Some
-object types have methods defined for them. You have already seen some methods that operate on strings (e.g., 
-``find``, ``index``, ``split``, ``join``) and on lists (e.g., ``append``, ``pop``). 
+Existe otro tipo especial de función llamada **método**, que se invoca de manera ligeramente diferente. Algunos
+Los tipos de objeto tienen métodos definidos para ellos. Ya ha visto algunos métodos que operan en cadenas (por ejemplo,
+``find``, ``index``, ``split``, ``join``) y en las listas (por ejemplo, ``append``, ``pop``).
 
-We will not learn about how to define methods until later in the course, when we cover Classes. But it's worth getting a
-basic understanding now of how methods are invoked. To invoke a method, the syntax is 
-``<expr>.<methodname>(<additional parameter values>)``.
+No aprenderemos sobre cómo definir métodos hasta más adelante en el curso, cuando cubramos las clases. Pero vale la pena conseguir
+una comprensión básica ahora de cómo se invocan los métodos. Para invocar un método, la sintaxis es
+``<expr>.<nombre del método> (<valores de parámetros adicionales>)``.
 
-The expression to the left of the dot should evaluate to an object of the correct type, an object for which <methodname>
-is defined. The method will be applied to that object (that object will be a parameter value passed to the 
-function/method.) If the method takes additional parameters (some do, some don't), additional expressions that evaluate 
-to values are included inside the parentheses.
+La expresión a la izquierda del punto debe evaluar a un objeto del tipo correcto, un objeto para el cual <nombredelmétodo>
+se define. El método se aplicará a ese objeto (ese objeto será un valor de parámetro pasado a la
+función/método.) Si el método toma parámetros adicionales (algunos sí, otros no), expresiones adicionales que evalúan
+los valores a se incluyen dentro de los paréntesis.
 
-For example, let's look at an invocation of the split method.
+Por ejemplo, veamos una invocación del método de división.
 
 .. activecode:: ac11_6_1
 
@@ -43,25 +43,25 @@ For example, let's look at an invocation of the split method.
    for w in z:
        print(w)
       
-The split method operates on a string. Because it is a method rather than a regular function, the string it operates on 
-appears to the left of the period, rather than inside the parentheses. The split method always returns a list. On line 
-2, that returned value is assigned to the variable z.
+El método de división opera en una cadena. Debido a que es un método en lugar de una función regular, la cadena en la que opera
+aparece a la izquierda del punto, en lugar de dentro del paréntesis. El método de división siempre devuelve una lista. En línea
+2, ese valor devuelto se asigna a la variable z.
 
-The split method actually takes an optional extra parameter. If no value is provided inside the parentheses, the split 
-method chops up the list whenever it encounters a whitespace (a space, a tab, or a newline). But you can specifying a 
-character or character string to split on. Try putting "s" inside the parentheses on line 2 above, make a prediction 
-about what the output will be, and then check it. Try some other things inside the parentheses.
+El método de división en realidad toma un parámetro adicional opcional. Si no se proporciona ningún valor dentro de los paréntesis,
+El método split corta la lista cada vez que encuentra un espacio en blanco (un espacio, una pestaña o una nueva línea). Pero puedes especificar un
+carácter o cadena de caracteres para dividir. Intente poner "s" dentro de los paréntesis en la línea 2 de arriba, haga una predicción
+sobre cuál será el resultado y luego verifíquelo. Pruebe otras cosas dentro de los paréntesis.
 
-Note that the thing to the left of the period can be any expression, not just a variable name. It can even be a return 
-value from some other function call or method invocation. For example, if we want to remove the s and t characters from 
-a string, we can do it all on one line as show below.
+Tenga en cuenta que lo que está a la izquierda del punto puede ser cualquier expresión, no solo un nombre de variable. Incluso puede ser un regreso
+valor de alguna otra llamada a función o invocación de método. Por ejemplo, si queremos eliminar los caracteres s y t de
+una cadena, podemos hacerlo todo en una línea como se muestra a continuación.
 
 .. activecode:: ac11_6_2
 
    print("This is a sentence".replace("s", "").replace("t", ""))
  
-What's going on there? Start reading left to right. "This is a sentence" is a string, and the replace method is invoked 
-on it. Two additional parameter values are provided, "s", and an empty string. So, in the sentence, all occurrences of 
-"s" are replaced with the empty string. A new string is returned, "Thi i a entence." There is another period followed 
-by the word replace, so the replace method is called again on that string, returning the shorter string, which is 
-printed.
+¿Que esta pasando ahí? Comienza a leer de izquierda a derecha. "This is a sentence" es una cadena y se invoca el método replace
+en ella. Se proporcionan dos valores de parámetros adicionales, "s", y una cadena vacía. Entonces, en la oración, todas las ocurrencias de
+"s" se reemplazan con la cadena vacía. Se devuelve una nueva cadena, "Thi i a entence". Hay otro período seguido
+por la palabra reemplazar, por lo que el método de reemplazo se llama nuevamente en esa cadena, devolviendo la cadena más corta, que es
+impreso.
