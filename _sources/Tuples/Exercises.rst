@@ -11,8 +11,8 @@
    :prefix: tuples-7-
    :start: 1
 
-Exercises
----------
+Ejercicios
+-----------
 
 #.
 
@@ -22,7 +22,7 @@ Exercises
 
            .. actex:: ac12_7_1
 
-              Fill in the left side of line 7 so that the following code runs without error
+              Complete el lado izquierdo de la línea 7 para que el siguiente código se ejecute sin error
               ~~~~
               def circleInfo(r):
                   """ Return (circumference, area) of a circle of radius r """
@@ -42,7 +42,7 @@ Exercises
 
            .. actex:: ac12_7_2
 
-              Use a for loop to print out the last name, year of birth, and city for each of the people. (There are multiple ways you could do this. Try out some code and see what happens!)
+              Use un bucle for para imprimir el apellido, el año de nacimiento y la ciudad de cada una de las personas. (Hay varias formas de hacer esto. ¡Pruebe un código y vea qué sucede!)
               ~~~~
 
               julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")

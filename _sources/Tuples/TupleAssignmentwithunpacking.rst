@@ -15,12 +15,12 @@
     single: assignment; tuple 
     single: tuple; assignment 
 
-Tuple Assignment with unpacking
--------------------------------
+Asignación de tuplas con desempaquetado
+-----------------------------------------
 
-Python has a very powerful **tuple assignment** feature that allows a tuple of variable names on the left of an 
-assignment statement to be assigned values from a tuple on the right of the assignment. Another way to think of this 
-is that the tuple of values is **unpacked** into the variable names.
+Python tiene una característica **tuple assignment** muy poderosa que permite una tupla de nombres de variables a la izquierda de un
+declaración de asignación para asignar valores de una tupla a la derecha de la asignación. Otra forma de pensar en esto
+es que la tupla de valores está **desempaquetada** en los nombres de las variables.
 
 .. activecode:: ac12_4_1
 
@@ -28,11 +28,11 @@ is that the tuple of values is **unpacked** into the variable names.
 
     name, surname, birth_year, movie, movie_year, profession, birth_place = julia
 
-This does the equivalent of seven assignment statements, all on one easy line. One requirement is that the number of 
-variables on the left must match the number of elements in the tuple. 
+Esto equivale a siete declaraciones de asignación, todas en una sola línea fácil. Un requisito es que el número de
+variables de la izquierda deben coincidir con el número de elementos en la tupla.
 
-Once in a while, it is useful to swap the values of two variables. With conventional assignment statements, we have to 
-use a temporary variable. For example, to swap ``a`` and ``b``:
+De vez en cuando, es útil intercambiar los valores de dos variables. Con las declaraciones de asignación convencionales, tenemos que
+usa una variable temporal. Por ejemplo, para intercambiar ``a`` y ``b``:
 
 .. activecode:: ac12_4_2
 
@@ -43,7 +43,7 @@ use a temporary variable. For example, to swap ``a`` and ``b``:
     b = temp
     print(a, b, temp)
 
-Tuple assignment solves this problem neatly:
+La asignación de tuplas resuelve este problema perfectamente:
 
 .. activecode:: ac12_4_3
 
@@ -52,18 +52,18 @@ Tuple assignment solves this problem neatly:
     (a, b) = (b, a)
     print(a, b)
 
-The left side is a tuple of variables; the right side is a tuple of values. Each value is assigned to its respective 
-variable. All the expressions on the right side are evaluated before any of the assignments. This feature makes
-tuple assignment quite versatile.
+El lado izquierdo es una tupla de variables; el lado derecho es una tupla de valores. Cada valor se asigna a sus respectivos
+variable. Todas las expresiones en el lado derecho se evalúan antes de cualquiera de las asignaciones. Esta característica hace
+Asignación de tuplas bastante versátil.
 
-Naturally, the number of variables on the left and the number of values on the right have to be the same.
+Naturalmente, el número de variables a la izquierda y el número de valores a la derecha tienen que ser los mismos.
 
 .. activecode:: ac12_4_4
 
     (a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack 
 
-Earlier we were demonstrating how to use tuples as return values when calculating the area and circumference of a 
-circle. Here we can unpack the return values after calling the function.
+Anteriormente estábamos demostrando cómo usar las tuplas como valores de retorno al calcular el área y la circunferencia de un
+círculo. Aquí podemos desempaquetar los valores de retorno después de llamar a la función.
 
 .. activecode:: ac12_4_5
     
@@ -83,8 +83,8 @@ circle. Here we can unpack the return values after calling the function.
     print(circumference_two)
     print(area_two)
 
-Python even provides a way to pass a single tuple to a function and have it be unpacked for assignment to the named 
-parameters. 
+Python incluso proporciona una manera de pasar una sola tupla a una función y hacer que se desempaquete para asignarla a la persona nombrada
+parámetros
 
 .. activecode:: ac12_4_6
 
@@ -96,25 +96,25 @@ parameters.
     print(add(*z)) # this line will cause the values to be unpacked
     print(add(z)) # this line causes an error
 
-If you run this, you will be get an error caused by line 7, where it says that the function add is expecting two 
-parameters, but you're only passing one parameter (a tuple). In line 6 you'll see that the tuple is unpacked and 5 is 
-bound to x, 4 to y. 
+Si ejecuta esto, recibirá un error causado por la línea 7, donde dice que la función add espera dos
+parámetros, pero solo está pasando un parámetro (una tupla). En la línea 6 verá que la tupla está desempaquetada y 5 es
+obligado a x, 4 a y.
 
-Don't worry about mastering this idea yet. But later in the course, if you come across some code that someone else has 
-written that uses the * notation inside a parameter list, come back and look at this again.
+No te preocupes por dominar esta idea todavía. Pero más adelante en el curso, si encuentras algún código que alguien más tiene
+escrito que usa la notación * dentro de una lista de parámetros, regrese y mire esto nuevamente.
 
 .. note::
 
-    Unpacking into multiple variable names also works with lists, or any other sequence type, as long as there is exactly one value for each variable. For example, you can write ``x, y = [3, 4]``.
+    Desempaquetar en múltiples nombres de variables también funciona con listas, o cualquier otro tipo de secuencia, siempre que haya exactamente un valor para cada variable. Por ejemplo, puede escribir ``x, y = [3, 4]``.
 
-Unpacking Into Iterator Variables
----------------------------------
+Desempaquetado en Variables de Iterador
+-----------------------------------------
 
-Multiple assignment with unpacking is particularly useful when you iterate through a list of tuples or lists.
+La asignación múltiple con desempaquetado es particularmente útil cuando recorre una lista de tuplas o listas.
 
-For example, a dictionary consists of key-value pairs. When you call the items() method on a dictionary, you get back a sequence of
-key-value pairs. Each of those pairs is a two-item tuple. (More generally, we refer to any two-item tuple as a
-**pair**). You can iterate over the key-value pairs.
+Por ejemplo, un diccionario consta de pares clave-valor. Cuando llama al método items() en un diccionario, obtiene una secuencia de
+pares clave-valor. Cada uno de esos pares es una tupla de dos elementos. (Más generalmente, nos referimos a cualquier tupla de dos elementos como
+**par**). Puede iterar sobre los pares clave-valor.
 
 .. activecode:: ac12_4_7
 
@@ -123,10 +123,10 @@ key-value pairs. Each of those pairs is a two-item tuple. (More generally, we re
     for p in d.items():
         print("key: {}, value: {}".format(p[0], p[1]))
 
-Each time line 4 is executed, p will refer to one key-value pair from d. A pair is just a tuple, so p[0] refers to the
-key and p[1] refers to the value.
+Cada vez que se ejecuta la línea 4, p se referirá a un par clave-valor de d. Un par es solo una tupla, por lo que p[0] se refiere a
+clave y p[1] se refiere al valor.
 
-That code is easier to read if we unpack the key-value pairs into two variable names.
+Ese código es más fácil de leer si desempaquetamos los pares clave-valor en dos nombres de variables.
 
 .. activecode:: ac12_4_8
 
@@ -135,40 +135,40 @@ That code is easier to read if we unpack the key-value pairs into two variable n
     for k, v in d.items():
         print("key: {}, value: {}".format(k, v))
 
-More generally, if you have a list of tuples that each has more than two items, and you iterate through them with a for
-loop pulling out information from the tuples, the code will be far more readable if you unpack them into separate
-variable names right after the word ``for``.
+En términos más generales, si tiene una lista de tuplas que tienen más de dos elementos y las repite con un
+bucle sacando información de las tuplas, el código será mucho más legible si los desempaqueta en
+nombres de variables justo después de la palabra ``for``.
 
-**Check your Understanding**
+**Revisa tu Entendimiento**
 
 .. mchoice:: question12_4_1
    :practice: T
    :multiple_answers:
-   :answer_a: Make the last two lines of the function be "return x" and "return y"  
-   :answer_b: Include the statement "return [x, y]" 
-   :answer_c: Include the statement "return (x, y)"
-   :answer_d: Include the statement "return x, y"
-   :answer_e: It's not possible to return two values; make two functions that each compute one value.
-   :feedback_a: As soon as the first return statement is executed, the function exits, so the second one will never be executed; only x will be returned
-   :feedback_b: return [x,y] is not the preferred method because it returns x and y in a list and you would have to manually unpack the values. But it is workable.
-   :feedback_c: return (x, y) returns a tuple.
-   :feedback_d: return x, y causes the two values to be packed into a tuple.
-   :feedback_e: It is possible, and frequently useful, to have one function compute multiple values.
+   :answer_a: Haga que las dos últimas líneas de la función sean "return x" y "return y"
+   :answer_b: Incluya la declaración "return [x, y]"
+   :answer_c: Incluya la declaración "return (x, y)"
+   :answer_d: Incluya la declaración "return x, y"
+   :answer_e: No es posible devolver dos valores; hacer dos funciones que cada una calcule un valor.
+   :feedback_a: Tan pronto como se ejecuta la primera declaración de retorno, la función se cierra, por lo que la segunda nunca se ejecutará; solo se devolverá x
+   :feedback_b: return [x,y] no es el método preferido porque devuelve xey en una lista y tendría que desempaquetar manualmente los valores. Pero es viable.
+   :feedback_c: return (x, y) retorna una tupla.
+   :feedback_d: return x, y hace que los dos valores se empaqueten en una tupla.
+   :feedback_e: Es posible, y con frecuencia útil, tener una función que calcule múltiples valores.
    :correct: b,c,d
 
-   If you want a function to return two values, contained in variables x and y, which of the following methods will work?
+   Si desea que una función devuelva dos valores, contenidos en las variables x e y, ¿cuál de los siguientes métodos funcionará?
 
 .. mchoice:: question12_4_2
    :practice: T
-   :answer_a: You can't use different variable names on the left and right side of an assignment statement.
-   :answer_b: At the end, x still has it's original value instead of y's original value.
-   :answer_c: Actually, it works just fine!
-   :feedback_a: Sure you can; you can use any variable on the right-hand side that already has a value.
-   :feedback_b: Once you assign x's value to y, y's original value is gone.
-   :feedback_c: Once you assign x's value to y, y's original value is gone.
+   :answer_a: No puede usar diferentes nombres de variables en el lado izquierdo y derecho de una declaración de asignación.
+   :answer_b: Al final, x todavía tiene su valor original en lugar del valor original de y.
+   :answer_c: En realidad, ¡funciona bien!
+   :feedback_a: Seguro que puede; puede usar cualquier variable en el lado derecho que ya tenga un valor.
+   :feedback_b: Una vez que asigna el valor de x a y, el valor original de y desaparece.
+   :feedback_c: Una vez que asigna el valor de x a y, el valor original de y desaparece.
    :correct: b
 
-   Consider the following alternative way to swap the values of variables x and y. What's wrong with it?
+   Considere la siguiente forma alternativa de intercambiar los valores de las variables x e y. ¿Qué tiene de malo?
    
    .. code-block:: python 
         
@@ -182,7 +182,7 @@ variable names right after the word ``for``.
    :practice: T
    :chatcodes:
 
-   **3.** With only one line of code, assign the variables water, fire, electric, and grass to the values "Squirtle", "Charmander", "Pikachu", and "Bulbasaur"
+   **3.** Con solo una línea de código, asigne las variables agua, fuego, electricidad y pasto a los valores "Squirtle", "Charmander", "Pikachu" y "Bulbasaur"
    ~~~~
 
    =====
@@ -205,7 +205,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **4.** With only one line of code, assign four variables, ``v1``, ``v2``, ``v3``, and ``v4``, to the following four values: 1, 2, 3, 4.
+   **4.** Con solo una línea de código, asigne cuatro variables, ``v1``, ``v2``, ``v3`` y ``v4``, a los siguientes cuatro valores: 1, 2, 3, 4.
    ~~~~
 
    =====
@@ -229,7 +229,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **1.** If you remember, the .items() dictionary method produces a sequence of tuples. Keeping this in mind, we have provided you a dictionary called ``pokemon``. For every key value pair, append the key to the list ``p_names``, and append the value to the list ``p_number``. Do not use the .keys() or .values() methods.
+   **1.** Si recuerdas, el método de diccionario .items() produce una secuencia de tuplas. Teniendo esto en cuenta, le proporcionamos un diccionario llamado ``pokemon``. Para cada par de valores clave, agregue la clave a la lista ``p_names``, y agregue el valor a la lista ``p_number``. No utilice los métodos .keys() o .values().
    ~~~~
 
    pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
@@ -256,7 +256,7 @@ variable names right after the word ``for``.
    :chatcodes:
    :practice: T
 
-   **2.** The .items() method produces a sequence of key-value pair tuples. With this in mind, write code to create a list of keys from the dictionary ``track_medal_counts`` and assign the list to the variable name ``track_events``. Do **NOT** use the .keys() method.
+   **2.** El método .items() produce una secuencia de tuplas de pares clave-valor. Con esto en mente, escriba el código para crear una lista de claves del diccionario ``track_medal_counts`` y asigne la lista al nombre de la variable ``track_events``. **NO** use el método .keys().
    ~~~~
 
    track_medal_counts = {'shot put': 1, 'long jump': 3, '100 meters': 2, '400 meters': 2, '100 meter hurdles': 3, 'triple jump': 3, 'steeplechase': 2, '1500 meters': 1, '5K': 0, '10K': 0, 'marathon': 0, '200 meters': 0, '400 meter hurdles': 0, 'high jump': 1}

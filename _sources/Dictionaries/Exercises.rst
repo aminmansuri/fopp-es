@@ -147,9 +147,9 @@ Ejercicios
            .. actex:: ac10_8_4
 
                Escriba un programa que permita al usuario ingresar una cadena. Luego imprime un
-               tabla de las letras del alfabeto en orden alfabético que ocurren en
-               la cadena junto con la cantidad de veces que aparece cada letra. Caso debe
-               ser ignorado. Una ejecución de muestra del programa podría verse así::
+               tabla de las letras del alfabeto en orden alfabético que ocurren en
+               la cadena junto con la cantidad de veces que aparece cada letra. Caso debe
+               ser ignorado. Una ejecución de muestra del programa podría verse así::
                
                    Please enter a sentence: ThiS is String with Upper and lower case Letters.
                    a  2
