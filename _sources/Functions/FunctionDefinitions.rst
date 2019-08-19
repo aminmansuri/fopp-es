@@ -11,41 +11,41 @@
    :prefix: func-1-
    :start: 1
 
-Function Definition
--------------------
+Definición de función
+------------------------
 
-The syntax for creating a named function, a **function definition**, is:
+La sintaxis para crear una función con nombre, una **definición de función**, es:
 
 .. code-block:: python
 
     def name( parameters ):
         statements
 
-You can make up any names you want for the functions you create, except that you can't use a name that is a Python 
-keyword, and the names must follow the rules for legal identifiers that were given previously. The parameters specify
-what information, if any, you have to provide in order to use the new function. Another way to say this is that the 
-parameters specify what the function needs to do its work.
+Puede inventar los nombres que desee para las funciones que cree, excepto que no puede usar un nombre que sea Python
+palabra clave, y los nombres deben seguir las reglas para los identificadores legales que se dieron anteriormente. Los parámetros especifican
+qué información, si hay alguna, tiene que proporcionar para usar la nueva función. Otra forma de decir esto es que el
+Los parámetros especifican qué necesita la función para hacer su trabajo.
 
-There can be any number of statements inside the function, but they have to be indented from the ``def``. In the 
-examples in this book, we will use the standard indentation of four spaces. Function definitions are the third of
-several **compound statements** we will see, all of which have the same pattern:
+Puede haber cualquier número de declaraciones dentro de la función, pero tienen que estar sangradas de ``def``. En el
+ejemplos en este libro, usaremos la sangría estándar de cuatro espacios. Las definiciones de funciones son el tercero de
+veremos varias **declaraciones compuestas**, todas las cuales tienen el mismo patrón:
 
-#. A header line which begins with a keyword and ends with a colon.
-#. A **body** consisting of one or more Python statements, each
-   indented the same amount -- *4 spaces is the Python standard* -- from
-   the header line.
+#. Una línea de encabezado que comienza con una palabra clave y termina con dos puntos.
+#. Un **cuerpo** que consiste en una o más declaraciones de Python, cada
+   sangrado con la misma cantidad -- *4 espacios es el estándar de Python* -- desde
+   la línea de encabezado.
 
-We've already seen the ``for`` statement which has the same structure, with an indented block of code, and the 
-``if``, ``elif``, and ``else`` statements that do so as well.
+Ya hemos visto la declaración ``for`` que tiene la misma estructura, con un bloque de código sangrado, y las
+declaraciones ``if``, ``elif`` y ``else`` que también lo hacen.
 
-In a function definition, the keyword in the header is ``def``, which is followed by the name of the function and 
-some *parameter names* enclosed in parentheses. The parameter list may be empty, or it may contain any number of
-parameters separated from one another by commas. In either case, the parentheses are required.
+En una definición de función, la palabra clave en el encabezado es ``def``, que es seguida por el nombre de la función y
+algunos *nombres de parámetros* entre paréntesis. La lista de parámetros puede estar vacía o puede contener cualquier número de
+parámetros separados entre sí por comas. En cualquier caso, los paréntesis son obligatorios.
 
-We will come back to the parameters in a little while, but first let's see what happens when a function is executed, 
-using a function without any parameters to illustrate.
+Volveremos a los parámetros en un momento, pero primero veamos qué sucede cuando se ejecuta una función,
+usando una función sin ningún parámetro para ilustrar.
 
-Here's the definition of a simple function, hello.
+Aquí está la definición de una función simple, hello.
 
 .. activecode:: ac11_1_1
 
@@ -56,20 +56,20 @@ Here's the definition of a simple function, hello.
 
 .. admonition::  docstrings
 
-    If the first thing after the function header is a string (some tools insist that
-    it must be a triple-quoted string), it is called a **docstring**
-    and gets special treatment in Python and in some of the programming tools.
+    Si lo primero después del encabezado de la función es un string (algunas herramientas insisten en que
+    debe ser un string entre comillas triples), se llama **docstring**
+    y recibe un tratamiento especial en Python y en algunas de las herramientas de programación.
 
-    Another way to retrieve this information is to use the interactive
-    interpreter, and enter the expression ``<function_name>.__doc__``, which will retrieve the
-    docstring for the function.  So the string you write as documentation at the start of a function is
-    retrievable by python tools *at runtime*.  This is different from comments in your code,
-    which are completely eliminated when the program is parsed.
+    Otra forma de recuperar esta información es utilizar el intérprete
+    interactivo e ingrese la expresión ``<function_name>.__doc__``, que recuperará el
+    docstring para la función. Entonces, el string que escribe como documentación al comienzo de una función es
+    recuperable por python tools *en tiempo de ejecución*. Esto es diferente de los comentarios en su código,
+    que se eliminan por completo cuando se analiza el programa.
 
-    By convention, Python programmers use docstrings for the key documentation of
-    their functions.
+    Por convención, los programadores de Python usan docstrings para la documentación clave de
+    sus funciones
 
-We can apply functions to the turtle drawings we've done in the past as well.
+También podemos aplicar funciones a los dibujos turtle que hemos hecho en el pasado.
 
 .. activecode:: ac11_1_2
     :nocodelens:
@@ -84,15 +84,15 @@ We can apply functions to the turtle drawings we've done in the past as well.
             t.left(90)
 
 
-    wn = turtle.Screen()      # Set up the window and its attributes
+    wn = turtle.Screen()      # Configurar la ventana y sus atributos.
     wn.bgcolor("lightgreen")
 
-    alex = turtle.Turtle()    # create alex
-    drawSquare(alex, 50)      # Call the function to draw the square passing the actual turtle and the actual side size
+    alex = turtle.Turtle()    # crear alex
+    drawSquare(alex, 50)      # llama a la función para dibujar el cuadrado que pasa turtle real y el tamaño del lado real
 
     wn.exitonclick()
 
-This function is named ``drawSquare``. It has two parameters --- one to tell the function which turtle to move around 
-and the other to tell it the size of the square we want drawn. In the function definition they are called ``t`` and 
-``sz`` respectively. Make sure you know where the body of the function ends --- it depends on the indentation and the 
-blank lines don't count for this purpose!
+Esta función se llama ``drawSquare``. Tiene dos parámetros: uno para indicarle a la función qué turtle debe moverse
+y el otro para decirle el tamaño del cuadrado que queremos dibujar. En la definición de la función se llaman ``t`` y
+``sz`` respectivamente. Asegúrese de saber dónde termina el cuerpo de la función --- depende de la sangría y
+¡Las líneas en blanco no cuentan para este propósito!

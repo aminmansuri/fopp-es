@@ -13,8 +13,8 @@
    :prefix: func-14-
    :start: 1
 
-Exercises
-=========
+Ejercicios
+=============
 #.
 
     .. tabbed:: q1
@@ -23,7 +23,7 @@ Exercises
 
            .. actex:: ac11_14_1
 
-              Write a function named ``num_test`` that takes a number as input. If the number is greater than 10, the function should return "Greater than 10." If the number is less than 10, the function should return "Less than 10." If the number is equal to 10, the function should return "Equal to 10."
+              Escriba una función llamada ``num_test`` que tome un número como entrada. Si el número es mayor que 10, la función debería devolver "Greater than 10". Si el número es menor que 10, la función debería devolver "Less than 10.". Si el número es igual a 10, la función debería devolver "Equal to 10."
               ~~~~
               
 
@@ -51,10 +51,10 @@ Exercises
 
            .. actex:: ac11_14_2
 
-              Write a function that will return the number of digits in an integer.
+              Escriba una función que devolverá el número de dígitos en un entero.
               ~~~~
               def numDigits(n):
-                  # your code here
+                  # su código aquí
 
               ====
 
@@ -101,7 +101,7 @@ Exercises
 
            .. actex:: ac11_14_3
       
-              Write a function that reverses its string argument.
+              Escriba una función que invierta el argumento de un string.
               ~~~~
               def reverse(astring):
                   # your code here
@@ -131,12 +131,12 @@ Exercises
            .. actex:: ac11_14_4
               :nocodelens:
 
-              Write a function that mirrors its string argument, 
-              generating a string containing the original string and the string backwards.
+              Escriba una función que refleje su argumento de string para
+              generar un string que contiene el string original y el string anterior hacia atrás.
               ~~~~
 
               def mirror(mystr):
-                  # your code here
+                  # su código aquí
 
               ====
 
@@ -191,10 +191,10 @@ Exercises
            .. actex:: ac11_14_5
               :nocodelens:
 
-              Write a function that removes all occurrences of a given letter from a string.
+              Escriba una función que elimine todas las apariciones de una letra dada de una cadena.
               ~~~~
               def remove_letter(theLetter, theString):
-                  # your code here
+                  # su código aquí
 
               ====
 
@@ -221,7 +221,7 @@ Exercises
 
            .. actex:: ac11_14_6
 
-              Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Implement a Python function that works like the following:
+              Aunque Python nos proporciona muchos métodos de lista, es una buena práctica y muy instructivo pensar cómo se implementan. Implemente una función de Python que funcione de la siguiente manera:
    
               a. count
               #. in
@@ -288,8 +288,8 @@ Exercises
 
            .. actex:: ac11_14_7
 
-              Write a function ``replace(s, old, new)`` that replaces all occurences of
-              ``old`` with ``new`` in a string ``s``::
+              Escriba una función ``replace(s, old, new)`` que reemplaza todas las ocurrencias de
+              ``old`` con ``new`` en un string ``s``::
    
                  test(replace('Mississippi', 'i', 'I'), 'MIssIssIppI')
    
@@ -300,10 +300,10 @@ Exercises
                  test(replace(s, 'o', 'a'), 
                         'I lave spam!  Spam is my favarite faad.  Spam, spam, spam, yum!')
    
-              *Hint*: use the ``split`` and ``join`` methods.
+              *Hint*: use los métodos de ``split`` y ``join``.
               ~~~~
               def replace(s, old, new):
-                  # your code here
+                  # su código aquí
 
               ====
               from unittest.gui import TestCaseGui
@@ -325,7 +325,7 @@ Exercises
 
            .. actex:: ac11_14_8
 
-              Write a Python function that will take a the list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
+              Escriba una función de Python que tomará una lista de 100 enteros aleatorios entre 0 y 1000 y devolverá el valor máximo. (Nota: hay una función incorporada llamada ``max`` pero finge que no puedes usarla)
               ~~~~
 
 
@@ -362,12 +362,12 @@ Exercises
 
            .. actex:: ac11_14_9
 
-              Write a function ``sum_of_squares(xs)`` that computes the sum
-              of the squares of the numbers in the list ``xs``.  For example,
-              ``sum_of_squares([2, 3, 4])`` should return 4+9+16 which is 29:
+              Escriba una función ``sum_of_squares(xs)`` que calcule la suma
+              de los cuadrados de los números en la lista ``xs``. Por ejemplo,
+              ``sum_of_squares([2, 3, 4])`` debería devolver 4+9+16, que es 29:
               ~~~~   
               def sum_of_squares(xs):
-                  # your code here
+                  # su código aquí
 
               ====
               from unittest.gui import TestCaseGui
@@ -389,10 +389,10 @@ Exercises
 
            .. actex:: ac11_14_10
 
-              Write a function to count how many odd numbers are in a list.
+              Escriba una función para contar cuántos números impares hay en una lista.
               ~~~~
               def countOdd(lst):
-                  # your code here
+                  # su código aquí
 
               ====
               from unittest.gui import TestCaseGui
@@ -422,7 +422,7 @@ Exercises
                             odd = odd + 1
                     return odd
 
-                # make a random list to test the function
+                # hacer una lista aleatoria para probar la función
                 lst = []
                 for i in range(100):
                     lst.append(random.randint(0, 1000))
@@ -444,10 +444,10 @@ Exercises
 
            .. actex:: ac11_14_11
 
-              Sum up all the even numbers in a list.
+              Resume todos los números pares en una lista.
               ~~~~
               def sumEven(lst):
-                  # your code here
+                  # su código aquí
 
               ====
               from unittest.gui import TestCaseGui
@@ -470,10 +470,10 @@ Exercises
 
            .. actex:: ac11_14_12
 
-              Sum up all the negative numbers in a list.
+              Resume todos los números negativos en una lista.
               ~~~~
               def sumNegatives(lst):
-                  # your code here
+                  # su código aquí
 
               ====
               from unittest.gui import TestCaseGui
@@ -524,11 +524,11 @@ Exercises
             .. actex:: ac11_14_13
                 :nocodelens:
 
-                Write a function ``findHypot``.  The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse. (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
+                Escribe una función ``findHypot``. La función tendrá la longitud de dos lados de un triángulo rectángulo y debe devolver la longitud de la hipotenusa. (Sugerencia:  ``x ** 0.5`` devolverá la raíz cuadrada, o usará ``sqrt`` del módulo matemático)
                 ~~~~
 
                 def findHypot(a,b):
-                    # your code here
+                    # su código aquí
 
                 ====
 
@@ -551,10 +551,10 @@ Exercises
            .. actex:: ac11_14_14
                :nocodelens:
 
-               Write a function called ``is_even(n)`` that takes an integer as an argument and returns ``True`` if the argument is an **even number** and ``False`` if it is **odd**.
+               Escriba una función llamada ``is_even(n)`` que toma un número entero como argumento y devuelve ``True`` si el argumento es un **número par** y ``False`` si es **impar**.
                ~~~~
                def is_even(n):
-                   #your code here
+                   # su código aquí
 
                ====
 
@@ -577,11 +577,11 @@ Exercises
            .. actex:: ac11_14_15
                :nocodelens:
 
-               Now write the function ``is_odd(n)`` that returns ``True`` when ``n`` is odd and ``False`` otherwise.
+               Ahora escriba la función ``is_odd(n)`` que devuelve ``True`` cuando ``n`` es impar y ``False`` de lo contrario.
                ~~~~
 
                def is_odd(n):
-                   # your code here
+                   # su código aquí
 
 
                ====
@@ -605,21 +605,21 @@ Exercises
 
            .. actex:: ac11_14_16
 
-               Write a function ``is_rightangled`` which, given the length of three sides of a triangle, will determine whether the triangle is right-angled. Assume that the third argument to the function is always the longest side. It will return ``True`` if the triangle is right-angled, or ``False`` otherwise.
+               Escriba una función ``is_rightangled`` que, dada la longitud de tres lados de un triángulo, determinará si el triángulo está en ángulo recto. Suponga que el tercer argumento de la función es siempre el lado más largo. Devolverá ``True`` si el triángulo está en ángulo recto, o ``False`` de lo contrario.
 
-               Hint: floating point arithmetic is not always exactly accurate,
-               so it is not safe to test floating point numbers for equality.
-               If a good programmer wants to know whether
-               ``x`` is equal or close enough to ``y``, they would probably code it up as
+               Sugerencia: la aritmética de coma flotante no siempre es exactamente precisa,
+               por lo tanto, no es seguro probar los números de coma flotante para determinar la igualdad.
+               Si un buen programador quiere saber si
+               ``x`` es igual o lo suficientemente cerca de ``y``, probablemente lo codificarían como:
    
                .. sourcecode:: python
    
-                   if  abs(x - y) < 0.001:      # if x is approximately equal to y
+                   if  abs(x - y) < 0.001:      # si x es aproximadamente igual a y
                        ...
 
                ~~~~
                def is_rightangled(a, b, c):
-                   # your code here
+                   # su código aquí
 
 
                ====
