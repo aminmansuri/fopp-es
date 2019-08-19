@@ -11,41 +11,41 @@
    :prefix: func-3-
    :start: 1
 
-Function Parameters
--------------------
+Parámetros de funciones
+--------------------------
 
-Named functions are nice because, once they are defined and we understand what they do, we can refer to them by name 
-and not think too much about what they do. With parameters, functions are even more powerful, because they can do 
-pretty much the same thing on each invocation, but not exactly the same thing. The parameters can cause them to do 
-something a little different. 
+Las funciones con nombre son buenas porque, una vez que están definidas y entendemos lo que hacen, podemos referirnos a ellas por nombre
+y no pensar demasiado en lo que hacen. Con los parámetros, las funciones son aún más potentes, porque pueden hacer
+más o menos lo mismo en cada invocación, pero no exactamente lo mismo. Los parámetros pueden hacer que hagan
+algo un poco diferente.
 
-The figure below shows this relationship. A function needs certain information to do its work. These values, often 
-called **arguments** or **actual parameters** or **parameter values**, are passed to the function by the user.
+La siguiente figura muestra esta relación. Una función necesita cierta información para hacer su trabajo. Estos valores, a menudo
+llamados **argumentos** o **parámetros reales** o **valores de parámetros**, son pasados a la función por el usuario.
 
 .. image:: Figures/blackboxproc.png
 
-This type of diagram is often called a **black-box diagram** because it only states the requirements from the 
-perspective of the user (well, the programmer, but the programmer who uses the function, who may be different than the 
-programmer who created the function). The user must know the name of the function and what arguments need to be 
-passed. The details of how the function works are hidden inside the "black-box".
+Este tipo de diagrama a menudo se llama un **diagrama de recuadro negro** porque solo establece los requisitos de la
+perspectiva del usuario (bueno, el programador, pero el programador que usa la función, que puede ser diferente al
+programador que creó la función). El usuario debe conocer el nombre de la función y qué argumentos deben ser
+pasados. Los detalles de cómo funciona la función están ocultos dentro del "recuadro negro".
 
-You have already been making function invocations with parameters. For example, when you write ``len("abc")`` or 
-``len([3, 9, "hello"])``, len is the name of a function, and the value that you put inside the parentheses, the string 
-"abc" or the list [3, 9, "hello"], is a parameter value.
+Ya ha estado haciendo invocaciones de funciones con parámetros. Por ejemplo, cuando escribe ``len("abc")`` o
+``len([3, 9, "hello"])``, len es el nombre de una función y el valor que pones entre paréntesis, la cadena
+"abc" o la lista [3, 9, "hello"], es un valor de parámetro.
 
-When a function has one or more parameters, the names of the parameters appear in the function definition, and the 
-values to assign to those parameters appear inside the parentheses of the function invocation. Let's look at each of 
-those a little more carefully.
+Cuando una función tiene uno o más parámetros, los nombres de los parámetros aparecen en la definición de la función, y
+los valores para asignar a esos parámetros aparecen dentro de los paréntesis de la invocación de la función. Veamos cada uno de
+esos un poco más cuidadosamente.
 
-In the definition, the parameter list is sometimes referred to as the **formal parameters** or **parameter names**. 
-These names can be any valid variable name. If there is more than one, they are separated by commas. 
+En la definición, la lista de parámetros a veces se denomina **parámetros formales** o **nombres de parámetros**.
+Estos nombres pueden ser cualquier nombre de variable válido. Si hay más de uno, están separados por comas.
 
-In the function invocation, inside the parentheses one value should be provided for each of the parameter names. These 
-values are separated by commas. The values can be specified either directly, or by any python expression including a 
-reference to some other variable name.
+En la invocación de la función, dentro de los paréntesis se debe proporcionar un valor para cada uno de los nombres de los parámetros. Estas
+los valores están separados por comas. Los valores se pueden especificar directamente o mediante cualquier expresión de Python que incluya una
+referencia a algún otro nombre de variable.
 
-That can get kind of confusing, so let's start by looking at a function with just one parameter. The revised hello 
-function personalizes the greeting: the person to greet is specified by the parameter. 
+Eso puede ser un poco confuso, así que comencemos mirando una función con solo un parámetro. El hello revisa
+la función personaliza, el saludo: la persona a saludar se especifica mediante el parámetro.
 
 .. codelens:: clens11_3_1
    :python: py3
@@ -57,17 +57,17 @@ function personalizes the greeting: the person to greet is specified by the para
    hello2("Iman")
    hello2("Jackie")
 
-First, notice that hello2 has one formal parameter, s. You can tell that because
-there is exactly one variable name inside the parentheses on line 1.
+Primero, observe que hello2 tiene un parámetro formal, s. Puedes decir eso porque
+hay exactamente un nombre de variable dentro de los paréntesis en la línea 1.
 
-Next, notice what happened during Step 2. Control was passed to the function, just like we saw before. But in 
-addition, the variable s was bound to a value, the string "Iman". When it got to Step 7, for the second invocation of
-the function, s was bound to "Jackie".
+Luego, observe lo que sucedió durante el Paso 2. El control pasó a la función, tal como vimos antes. Pero
+además, la variable s estaba vinculada a un valor, la cadena "Iman". Cuando llegó al Paso 7, para la segunda invocación de
+la función, s estaba vinculada a "Jackie".
 
-Function invocations always work that way. The expression inside the parentheses on the line that invokes the function 
-is evaluated before control is passed to the function. The value is assigned to the corresponding formal parameter. 
-Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value, 
-the value that was 'passed into' the function.
+Las invocaciones de funciones siempre funcionan de esa manera. La expresión dentro de los paréntesis en la línea que invoca la función
+se evalúa antes de pasar el control a la función. El valor se asigna al parámetro formal correspondiente.
+Luego, cuando el bloque de código dentro de la función se está ejecutando, puede referirse a ese parámetro formal y obtener su valor.
+El valor que se 'pasó' a la función.
 
 .. showeval:: eval11_3_1
    :trace_mode: true
@@ -82,10 +82,10 @@ the value that was 'passed into' the function.
    def hello2({{s}}{{"Nick"}}):
    {{def hello2("Nick"):}}{{print("Hello " + s)}}
    print("Hello " + {{s}}{{"Nick"}})
-   {{print("Hello " + "Nick")     #prints out "hello Nick"}}{{print("Glad to meet you")   #prints out "Glad to meet you"}}
-   {{print("Glad to meet you")   #prints out "Glad to meet you"}}{{# the function is finished}}
+   {{print("Hello " + "Nick")     #imprime "hello Nick"}}{{print("Glad to meet you")   #imprime "Glad to meet you"}}
+   {{print("Glad to meet you")   #imprime "Glad to meet you"}}{{# the function is finished}}
 
-To get a feel for that, let's invoke hello2 using some more complicated expressions. Try some of your own, too.
+Para tener una idea de eso, invoquemos hello2 usando algunas expresiones más complicadas. Pruebe algunos de los suyos también.
 
 .. activecode:: ac11_3_1
 
@@ -96,8 +96,8 @@ To get a feel for that, let's invoke hello2 using some more complicated expressi
    hello2("Iman" + " and Jackie")
    hello2("Class " * 3)
 
-Now let's consider a function with two parameters. This version of hello takes
-a parameter that controls how many times the greeting will be printed.
+Ahora consideremos una función con dos parámetros. Esta versión de hello toma
+un parámetro que controla cuántas veces se imprimirá el saludo.
 
 .. codelens:: clens11_3_2
    :python: py3
@@ -110,15 +110,15 @@ a parameter that controls how many times the greeting will be printed.
    hello3("", 1)
    hello3("Kitty", 11)
 
-At Step 3 of the execution, in the first invocation of hello3, notice that the variable s is bound
-to the value "Wei" and the variable n is bound to the value 4.
+En el paso 3 de la ejecución, en la primera invocación de hello3, observe que la variable s está vinculada
+al valor "Wei" y la variable n está vinculada al valor 4.
 
-That's how function invocations always work. Each of the expressions, separated by commas, that are inside the
-parentheses are evaluated to produce values. Then those values are matched up positionally
-with the formal parameters. The first parameter name is bound to the first value
-provided. The second parameter name is bound to the second value provided. And so on.
+Así es como siempre funcionan las invocaciones de funciones. Cada una de las expresiones, separadas por comas, que están dentro de
+los paréntesis se evalúan para producir valores. Entonces esos valores se corresponden posicionalmente
+con los parámetros formales. El primer nombre del parámetro está vinculado al primer valor
+previsto. El segundo nombre del parámetro está vinculado al segundo valor proporcionado. Y así.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question11_3_1
    :answer_a: def greet(t):
@@ -126,13 +126,13 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_c: greet(t, n):
    :answer_d: def greet(t, n)
    :correct: a
-   :feedback_a: A function may take zero or more parameters.  In this case it has one.  
-   :feedback_b: A function needs to specify its parameters in its header. If there are no paramters, put () after the function name.
-   :feedback_c: A function definition needs to include the keyword def.
-   :feedback_d: A function definition header must end in a colon (:).
+   :feedback_a: Una función puede tomar cero o más parámetros. En este caso tiene uno.
+   :feedback_b: una función necesita especificar sus parámetros en su encabezado. Si no hay parámetros, ponga () después del nombre de la función.
+   :feedback_c: una definición de función debe incluir la palabra clave def.
+   :feedback_d: un encabezado de definición de función debe terminar en dos puntos (:).
    :practice: T
 
-   Which of the following is a valid function header (first line of a function definition)?
+   ¿Cuál de los siguientes es un encabezado de función válido (primera línea de una definición de función)?
 
 .. mchoice:: question11_3_2
    :answer_a: def print_many(x, y):
@@ -140,17 +140,17 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_c: print_many(x, y)
    :answer_d: Print out string x, y times.
    :correct: b
-   :feedback_a: This line is the complete function header (except for the semi-colon) which includes the name as well as several other components.
-   :feedback_b: Yes, the name of the function is given after the keyword def and before the list of parameters.
-   :feedback_c: This includes the function name and its parameters
-   :feedback_d: This is a comment stating what the function does.
+   :feedback_a: Esta línea es el encabezado completo de la función (excepto el punto y coma) que incluye el nombre y varios otros componentes.
+   :feedback_b: Sí, el nombre de la función se proporciona después de la palabra clave def y antes de la lista de parámetros.
+   :feedback_c: Esto incluye el nombre de la función y sus parámetros
+   :feedback_d: Este es un comentario que indica lo que hace la función.
 
-   What is the name of the following function?
+   ¿Cuál es el nombre de la siguiente función?
 
    .. code-block:: python
 
      def print_many(x, y):
-         """Print out string x, y times."""
+         """Imprimir cadena x, y veces."""
          for i in range(y):
              print(x)
 
@@ -160,17 +160,17 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_c: x, y
    :answer_d: x, y, i
    :correct: c
-   :feedback_a: i is a variable used inside of the function, but not a parameter, which is passed in to the function.
-   :feedback_b: x is only one of the parameters to this function.
-   :feedback_c: Yes, the function specifies two parameters: x and y.
-   :feedback_d: the parameters include only those variables whose values that the function expects to receive as input. They are specified in the header of the function.
+   :feedback_a: i es una variable utilizada dentro de la función, pero no un parámetro, que se pasa a la función.
+   :feedback_b: x es solo uno de los parámetros para esta función.
+   :feedback_c: Sí, la función especifica dos parámetros: x e y.
+   :feedback_d: los parámetros incluyen solo aquellas variables cuyos valores la función espera recibir como entrada. Se especifican en el encabezado de la función.
 
-   What are the parameters of the following function?
+   ¿Cuáles son los parámetros de la siguiente función?
 
    .. code-block:: python
 
      def print_many(x, y):
-         """Print out string x, y times."""
+         """Imprimir cadena x, y veces."""
          for i in range(y):
              print(x)
 
@@ -181,18 +181,18 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_d: print_many("Greetings", 10):
    :answer_e: print_many("Greetings", z)
    :correct: e
-   :feedback_a: No, x and y are the names of the formal parameters to this function.  When the function is called, it requires actual values to be passed in.
-   :feedback_b: A function call always requires parentheses after the name of the function.
-   :feedback_c: This function takes two parameters (arguments)
-   :feedback_d: A colon is only required in a function definition.  It will cause an error with a function call.
-   :feedback_e: Since z has the value 3, we have passed in two correct values for this function. "Greetings" will be printed 3 times.
+   :feedback_a: No, x e y son los nombres de los parámetros formales de esta función. Cuando se llama a la función, requiere que se pasen los valores reales.
+   :feedback_b: Una llamada de función siempre requiere paréntesis después del nombre de la función.
+   :feedback_c: Esta función toma dos parámetros (argumentos)
+   :feedback_d: Solo se requieren dos puntos en una definición de función. Causará un error con una llamada a la función.
+   :feedback_e: Dado que z tiene el valor 3, hemos pasado dos valores correctos para esta función. Los "saludos" se imprimirán 3 veces.
 
-   Considering the function below, which of the following statements correctly invokes, or calls, this function (i.e., causes it to run)?
+   Teniendo en cuenta la siguiente función, ¿cuál de las siguientes afirmaciones invoca o invoca correctamente esta función (es decir, hace que se ejecute)?
 
    .. code-block:: python
 
       def print_many(x, y):
-         """Print out string x, y times."""
+         """Imprimir cadena x, y veces."""
          for i in range(y):
              print(x)
 
@@ -202,10 +202,10 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Yes, you can call a function multiple times by putting the call in a loop.
-   :feedback_b: One of the purposes of a function is to allow you to call it more than once. Placing it in a loop allows it to executed multiple times as the body of the loop runs multiple times.
+   :feedback_a: Sí, puede llamar a una función varias veces poniendo la llamada en un bucle.
+   :feedback_b: Uno de los propósitos de una función es permitirle llamarla más de una vez. Colocarlo en un bucle le permite ejecutarse varias veces a medida que el cuerpo del bucle se ejecuta varias veces.
 
-   True or false: A function can be called several times by placing a function call in the body of a for loop.
+   True o false: se puede llamar a una función varias veces colocando una llamada de función en el cuerpo de un bucle for.
 
 .. mchoice:: question11_3_6
    :answer_a: Hello
@@ -213,13 +213,13 @@ provided. The second parameter name is bound to the second value provided. And s
    :answer_c: s1
    :answer_d: s2
    :correct: b
-   :feedback_a: "Hello" is shorter than "Goodbye"
-   :feedback_b: "Goodbye" is longer than "Hello"
-   :feedback_c: s1 is a variable name; its value would print out, not the variable name.
-   :feedback_d: s2 is a variable name; its value would print out, not the variable name.
+   :feedback_a: "Hello" es más corto que "Goodbye"
+   :feedback_b: "Goodbye" es más largo que "Hello"
+   :feedback_c: s1 es un nombre de variable; se imprimirá su valor, no el nombre de la variable.
+   :feedback_d: s2 es un nombre de variable; se imprimirá su valor, no el nombre de la variable.
    :practice: T
 
-   What output will the following code produce?
+   ¿Qué salida producirá el siguiente código?
    
    .. code-block:: python
 
