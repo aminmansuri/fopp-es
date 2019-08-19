@@ -11,37 +11,37 @@
    :prefix: func-14-
    :start: 1
 
-Glossary
+Glosario
 --------
 
 .. glossary::
 
-    argument
-        A value provided to a function when the function is called. This value
-        is assigned to the corresponding parameter in the function. The argument
-        can be the result of an expression which may involve operators,
-        operands and calls to other fruitful functions.
+    argumento
+        Un valor proporcionado a una función cuando se llama a la función. Este valor
+        se asigna al parámetro correspondiente en la función. El argumento
+        puede ser el resultado de una expresión que puede involucrar operadores,
+        operandos y llamadas a otras funciones fructíferas.
 
-    body
-        The second part of a compound statement. The body consists of a
-        sequence of statements all indented the same amount from the beginning
-        of the header. The standard amount of indentation used within the
-        Python community is 4 spaces.
+    cuerpo
+        La segunda parte de una declaración compuesta. El cuerpo consiste en un
+        secuencia de declaraciones todas sangradas la misma cantidad desde el principio
+        del encabezado. La cantidad estándar de sangría utilizada dentro de
+        lacomunidad de Python es de 4 espacios.
 
-    calling stack
-        A sequence (stack) of frames, showing all the function calls that are in process
-        but not yet complete. When one function's code invokes another function call,
-        there will be more than one frame on the stack. 
+    pila de llamadas
+        Una secuencia (pila) de cuadros, que muestra todas las llamadas a funciones que están en proceso
+        pero aún no está completo. Cuando el código de una función invoca otra llamada de función,
+        habrá más de un cuadro en la pila.
 
-    compound statement
-        A statement that consists of two parts:
+    declaración compuesta
+        Una declaración que consta de dos partes:
 
-        #. header - which begins with a keyword determining the statement
-           type, and ends with a colon.
-        #. body - containing one or more statements indented the same amount
-           from the header.
+        #. encabezado: que comienza con una palabra clave que determina la declaración
+           tipo, y termina con dos puntos.
+        #. cuerpo: contiene una o más declaraciones sangradas por la misma cantidad
+           del encabezado
 
-        The syntax of a compound statement looks like this:
+        La sintaxis de una declaración compuesta se ve así:
 
         .. code-block:: python
 
@@ -51,69 +51,69 @@ Glossary
                 ...
 
     docstring
-        If the first thing in a function body is a string (or, we'll see later, in other situations
-        too) that is attached to the function as its ``__doc__`` attribute.
+        Si lo primero en un cuerpo de función es un string (o, como veremos más adelante, en otras situaciones
+        también) que se adjunta a la función como su atributo ``__doc__``.
 
-    flow of execution
-        The order in which statements are executed during a program run.
+    flujo de ejecución
+        El orden en que se ejecutan las declaraciones durante la ejecución de un programa.
 
-    function
-        A named sequence of statements that performs some useful operation.
-        Functions may or may not take parameters and may or may not produce a
-        result.
+    función
+        Una secuencia con nombre de declaraciones que realiza alguna operación útil.
+        Las funciones pueden o no tomar parámetros y pueden o no producir un
+        resultado.
 
-    function call
-        A statement that executes a function. It consists of the name of the
-        function followed by a list of arguments enclosed in parentheses.
+    Llamada de función
+        Una declaración que ejecuta una función. Consiste en el nombre de la
+        función seguida de una lista de argumentos entre paréntesis.
 
-    function composition
-        Using the output from one function call as the input to another.
+    composición de funciones
+        Usando la salida de una llamada de función como entrada a otra.
 
-    function definition
-        A statement that creates a new function, specifying its name,
-        parameters, and the statements it executes.
+    definición de función
+        Una declaración que crea una nueva función, especificando su nombre,
+        parámetros y las declaraciones que ejecuta.
 
-    fruitful function
-        A function that returns a value when it is called.
+    función fructífera
+        Una función que devuelve un valor cuando se llama.
 
-    global variable
-        A variable defined at the top level, not inside any function.
+    variable global
+        Una variable definida en el nivel superior, no dentro de ninguna función.
 
-    header line
-        The first part of a compound statement. A header line begins with a keyword and
-        ends with a colon (:)
+    línea de cabecera
+        La primera parte de una declaración compuesta. Una línea de encabezado comienza con una palabra clave y
+        termina con dos puntos (:)
 
     lifetime
-        Variables and objects have lifetimes --- they are created at some point during
-        program execution, and will be destroyed at some time. In python, objects
-        live as long as there is some variable pointing to it, or it is part of some 
-        other compound object, like a list or a dictionary. In python, local variables
-        live only until the function finishes execution.
+        Las variables y los objetos lifetimes --- se crean en algún momento durante la
+        ejecución del programa, y será destruido en algún momento. En python,  los objetos
+        viven mientras haya alguna variable apuntando a ella, o es parte de algún
+        otro objeto compuesto, como una lista o un diccionario. En python, variables locales
+        viven solo hasta que la función finalice la ejecución.
 
-    local variable
-        A variable defined inside a function. A local variable can only be used
-        inside its function. Parameters of a function are also a special kind
-        of local variable.
+    variable local
+        Una variable definida dentro de una función. Una variable local solo puede usarse
+        dentro de su función. Los parámetros de una función también son especiales.
+        de variable local.
 
-    method
-        A special kind of function that is invoked on objects of particular types of
-        objects, using the syntax ``<expr>.<methodname>(<additional parameter values>)``
-    
+    método
+        Un tipo especial de función que se invoca en objetos de tipos particulares de
+        objetos, utilizando la sintaxis ``<expr>.<nombre del método> (<valores de parámetros adicionales>)``
+
     None
-        A special Python value. One use in Python is that it is returned 
-        by functions that do not execute a return statement with a return argument. 
+        Un valor especial de Python. Un uso en Python es que se devuelve
+        por funciones que no ejecutan una declaración de retorno con un argumento de retorno.
 
-    parameter
-        A name used inside a function to refer to the value which was passed
-        to it as an argument.
-   
-    return value
-        The value provided as the result of a function call.
+    parámetro
+        Un nombre usado dentro de una función para referirse al valor que se pasó
+        a eso como argumento.
 
-    side effect
-        Some lasting effect of a function call, other than its return value. Side effects include print statements, changes to mutable objects, and changes to the values of global variables.
+    valor de retorno
+        El valor proporcionado como resultado de una llamada de función.
 
-    stack frame
-        A frame that keeps track of the values of local variables during a function execution,
-        and where to return control when the function execution completes.
+    efecto secundario
+        Algún efecto duradero de una llamada a función, que no sea su valor de retorno. Los efectos secundarios incluyen declaraciones de impresión, cambios en objetos mutables y cambios en los valores de las variables globales.
+
+    marco de pila
+        Un marco que realiza un seguimiento de los valores de las variables locales durante la ejecución de una función,
+        y dónde devolver el control cuando se completa la ejecución de la función.
    
