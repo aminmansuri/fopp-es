@@ -1,8 +1,8 @@
-Nested Data and Nested Iteration
-::::::::::::::::::::::::::::::::
+Datos Anidados e Iteración Anidada
+::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Nested Data and Nested Iteration
+   :caption: Datos Anidados e Iteración Anidada
    :maxdepth: 2
 
    ListswithComplexItems.rst
