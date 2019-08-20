@@ -7,23 +7,24 @@
     License".
 
 
-Overriding Methods
-==================
+Sobreescritura de Métodos
+==========================
 
-If a method is defined for a class, and also defined for its parent class, the subclass' method is called and not the parent's. This follows from the rules for looking up attributes that you saw in the previous section.
+Si se define un método para una clase, y también se define para su clase padre, se llama al método de la subclase y no al padre.
+Esto se desprende de las reglas para buscar atributos que viste en la sección anterior.
 
-We can use the same idea to understand overriding methods.
+Podemos usar la misma idea para entender la sobreescritura de métodos.
 
-Let's return to our idea of making Cats, Dogs, and other pets generate a string for their "mood" differently.
+Volvamos a nuestra idea de hacer que Gatos, Perros y otras mascotas generen una cadena para cada "mood" diferente.
 
-Here's the original Pet class again.
+Aquí está la clase original Pet nuevamente.
 
 .. activecode:: inheritance_pet_class
     :nocanvas:
 
     from random import randrange
 
-    # Here's the original Pet class
+    # Aquí está la clase original Pet
     class Pet():
         boredom_decrement = 4
         hunger_decrement = 6
@@ -71,7 +72,7 @@ Here's the original Pet class again.
         def reduce_boredom(self):
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
-Now let's make two subclasses, Dog and Cat. Dogs are always happy unless they are bored *and* hungry. Cats, on the other hand, are happy only if they are fed and if their boredom level is in a narrow range and, even then, only with probability 1/2.
+Ahora hagamos dos subclases, Dog y Cat. Los perros siempre son felices a menos que estén aburridos *y* hambrientos. Los gatos, por otro lado, son felices solo si son alimentados y si su nivel de aburrimiento está en un rango estrecho e, incluso entonces, solo con probabilidad 1/2.
 
 .. activecode:: inheritance_override
     :nocanvas:
