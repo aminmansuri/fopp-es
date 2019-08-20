@@ -1,8 +1,8 @@
-Functions
+Funciones
 :::::::::
 
 .. toctree::
-   :caption: Functions
+   :caption: Funciones
    :maxdepth: 2
 
    intro-Functions.rst
