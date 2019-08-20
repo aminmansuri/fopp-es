@@ -8,13 +8,12 @@
 
 :skipreading:`True`
 
-Exercises
-=========
+Ejercicios
+===========
 
-For exercises, you can expand the Tamagotchi game even further. Try these out.
+Para ejercitarte, puedes expandir el juego Tamagotchi aún más. Prueba estos.
 
-Here's *all* the code we just saw for our new and improved game, with a few additions. You can run this and play the game again.
-
+Aquí está *todo* el código que acabamos de ver para nuestro juego nuevo y mejorado, con algunas adiciones. Puedes ejecutar esto y volver a jugar.
 #.
 
     .. tabbed:: q1
@@ -24,15 +23,15 @@ Here's *all* the code we just saw for our new and improved game, with a few addi
            .. actex:: tamagotchi_exercises
               :nocanvas:
 
-              #. Change the above code to allow you to adopt a Tiger pet (that you're about to create). HINT: look at the ``whichtype`` function, and think about what's happening in the code for that function.
+              #. Cambie el código anterior para permitirle adoptar una mascota Tigre (que está a punto de crear). SUGERENCIA: mire la función ``whichtype`` y piense en lo que está sucediendo en el código para esa función.
 
-              #. Now, modify the code to define a new class, ``Tiger``. The ``Tiger`` class should inherit from the ``Cat`` class, but its default meow count should be ``5``, not ``3``, and it should have an extra instance method, ``roar``, that prints out the string ``ROOOOOAR!``. 
+              #. Ahora, modifique el código para definir una nueva clase, ``Tiger ''. La clase ``Tiger`` debe heredar de la clase ``Cat``, pero su recuento de maullidos predeterminado debe ser ``5``, no ``3``, y debe tener un método de instancia adicional, ``ROOOOOAR!``, que imprime la cadena ``ROOOOOAR!``.
 
-              #. Next, modify the code so that when the ``hi`` method is called for the ``Tiger`` class, the ``roar`` method is called. HINT: You'll have to call one instance method inside another, and you'll have to redefine a method for the ``Tiger`` class. See the **overriding methods** section. 
+              #. A continuación, modifique el código para que cuando se llame al método ``hi`` para la clase ``Tiger``, se llame al método ``ROOOOOAR!``. SUGERENCIA: Deberá llamar a un método de instancia dentro de otro, y deberá redefinir un método para la clase ``Tiger``. Consulte la sección **sobreescritura de métodos**.
 
-              #. Now, modify the code to define another new class, ``Retriever``. This class should inherit from ``Lab``. It should be exactly like ``Lab``, except instead of printing just ``I found the tennis ball!`` when the ``fetch`` method is called, it should say ``I found the tennis ball! I can fetch anything!``.
+              #. Ahora, modifique el código para definir otra nueva clase, ``Retriever``. Esta clase debe heredar de ``Lab``. Debería ser exactamente como ``Lab``, excepto que en lugar de imprimir solo ``I found the tennis ball!`` Cuando se llama al método ``fetch``, debería decir ``I found the tennis ball! I can fetch anything!``.
 
-              #. Add your own new pets and modifications as you like -- remember, to use them in the game, you'll also have to alter the ``whichtype`` function so they can be used in game play. Otherwise, you'll have different classes that may work just fine, but you won't see the effects in the game, since the code that actually makes the game play is found in the second half of the provided code (look for the ``while`` loop!).
+              #. Agregue sus propias mascotas nuevas y las modificaciones que desee: recuerde, para usarlas en el juego, también tendrá que alterar la función ``whichtype`` para que puedan usarse en el juego. De lo contrario, tendrá diferentes clases que pueden funcionar bien, pero no verá los efectos en el juego, ya que el código que realmente hace que el juego se encuentre en la segunda mitad del código proporcionado (busque el bucle ``while``).
               ~~~~
 
               from random import randrange
