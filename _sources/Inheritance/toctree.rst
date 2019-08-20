@@ -1,8 +1,8 @@
-Inheritance
+Herencia
 :::::::::::
 
 .. toctree::
-   :caption: Inheritance
+   :caption: Herencia
    :maxdepth: 2
 
    intro.rst
