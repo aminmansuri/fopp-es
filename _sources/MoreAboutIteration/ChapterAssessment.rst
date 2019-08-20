@@ -11,14 +11,14 @@
    :prefix: moreiter-10-
    :start: 1
 
-Chapter Assessment
-------------------
+Evaluación de capítulos
+-----------------------
 
 .. activecode:: ac14_10_1
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
     
-    Write a function, ``sublist``, that takes in a list of numbers as the parameter. In the function, use a while loop to return a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the number 5 (it should not contain the number 5).
+    Escriba una función, ``sublist``, que tome una lista de números como parámetro. En la función, use un bucle while para devolver una sublista de la lista de entrada. La sublista debe contener los mismos valores de la lista original hasta que alcance el número 5 (no debe contener el número 5).
     ~~~~
 
     =====
@@ -39,7 +39,7 @@ Chapter Assessment
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
-    Write a function called ``check_nums`` that takes a list as its parameter, and contains a while loop that only stops once the element of the list is the number 7. What is returned is a list of all of the numbers up until it reaches 7.
+    Escriba una función llamada ``check_nums`` que tome una lista como parámetro y contenga un ciclo while que solo se detiene una vez que el elemento de la lista es el número 7. Lo que se devuelve es una lista de todos los números hasta llega a 7.
     ~~~~
 
     =====
@@ -60,7 +60,7 @@ Chapter Assessment
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
-    Write a function, ``sublist``, that takes in a list of strings as the parameter. In the function, use a while loop to return a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the string "STOP" (it should not contain the string "STOP").
+    Escriba una función, ``sublist``, que tome una lista de strings como parámetro. En la función, use un bucle while para devolver una sublista de la lista de entrada. La sublista debe contener los mismos valores de la lista original hasta que llegue al string "STOP" (no debe contener la cadena "STOP").
     ~~~~
 
     =====
@@ -80,7 +80,7 @@ Chapter Assessment
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
-    Write a function called ``stop_at_z`` that iterates through a list of strings. Using a while loop, append each string to a new list until the string that appears is "z". The function should return the new list.
+    Escriba una función llamada ``stop_at_z`` que itera a través de una lista de strings. Usando un ciclo while, agregue cada string a una nueva lista hasta que el string que aparece sea "z". La función debería devolver la nueva lista.
     ~~~~
 
     def stop_at_z():
@@ -102,7 +102,7 @@ Chapter Assessment
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
-    Below is a for loop that works. Underneath the for loop, rewrite the problem so that it does the same thing, but using a while loop instead of a for loop. Assign the accumulated total in the while loop code to the variable ``sum2``. Once complete, sum2 should equal sum1.
+    A continuación se muestra un bucle for que funciona. Debajo del ciclo for, reescribe el problema para que haga lo mismo, pero usando un ciclo while en lugar de un ciclo for. Asigne el total acumulado en el código del bucle while a la variable ``sum2``. Una vez completado, sum2 debe ser igual a sum1.
     ~~~~
 
     sum1 = 0
@@ -128,7 +128,7 @@ Chapter Assessment
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
-    **Challenge:** Write a function called ``beginning`` that takes a list as input and contains a while loop that only stops once the element of the list is the string 'bye'. What is returned is a list that contains up to the first 10 strings, regardless of where the loop stops. (i.e., if it stops on the 32nd element, the first 10 are returned. If "bye" is the 5th element, the first 4 are returned.) *If you want to make this even more of a challenge, do this without slicing*
+    **Desafío:** Escribe una función llamada ``beginning`` que toma una lista como entrada y contiene un ciclo while que solo se detiene una vez que el elemento de la lista es el string 'bye'. Lo que se devuelve es una lista que contiene hasta los primeros 10 strings, independientemente de dónde se detenga el ciclo. (es decir, si se detiene en el elemento 32, se devuelven los primeros 10. Si "bye" es el quinto elemento, se devuelven los primeros 4). *Si desea que esto sea un desafío aún mayor, hágalo sin slice*
     ~~~~
 
     =====
