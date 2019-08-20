@@ -8,14 +8,14 @@
 
 .. _inheritance_chap:
 
-Introduction: Class Inheritance
-===============================
+Introducción: Herencia de Clase
+================================
 
-Classes can "inherit" methods and class variables from other classes. We'll see the mechanics of how this works in subsequent sections. First, however, let's motivate why this might be valuable. It turns out that inheritance doesn't let you do anything that you couldn't do without it, but it makes some things a lot more elegant. You will also find it's useful when someone else has defined a class in a module or library, and you just want to override a few things without having to reimplement everything they've done.
+Las clases pueden "heredar" métodos y variables de clase de otras clases. Veremos la mecánica de cómo funciona esto en secciones posteriores. Primero, sin embargo, motivemos por qué esto podría ser valioso. Resulta que la herencia no te permite hacer nada que no podrías hacer sin ella, pero hace que algunas cosas sean mucho más elegantes. También encontrará que es útil cuando alguien más ha definido una clase en un módulo o biblioteca, y solo desea anular algunas cosas sin tener que volver a implementar todo lo que ha hecho.
 
-Consider our Tamagotchi game. Suppose we wanted to make some different kinds of pets that have the same structure as other pets, but have some different attributes or behave a little differently. For example, suppose that dog pets should show their emotional state a little differently than cats or act differently when they are hungry or when they are asked to fetch something.
+Considera nuestro juego Tamagotchi. Supongamos que queremos hacer algunos tipos diferentes de mascotas que tengan la misma estructura que otras mascotas, pero que tengan algunos atributos diferentes o se comporten de manera un poco diferente. Por ejemplo, suponga que las mascotas de los perros deben mostrar su estado emocional de manera un poco diferente a los gatos o actuar de manera diferente cuando tienen hambre o cuando se les pide que vayan a buscar algo.
 
-You could implement this by making an instance variable for the pet type and dispatching on that instance variable in various methods.
+Puede implementar esto haciendo una variable de instancia para el tipo de mascota y despachando en esa variable de instancia en varios métodos.
 
 .. code:: python
 
@@ -79,10 +79,10 @@ You could implement this by making an instance variable for the pet type and dis
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
 
-That code is exactly the same as the code defining the ``Pet`` class that you saw in the :ref:`Tamagotchi <tamagotchi_chap>` section, except that we've added a few things.
-    * A new input to the constructor -- the ``pet_type`` input parameter, which defaults to ``"dog"``, and the ``self.pet_type`` instance variable.
-    * if..elif..else in the ``self.mood()`` method, such that different types of pets (a dog, a cat, or any other type of animal) express their moods and their hunger in slightly different ways.
+Ese código es exactamente el mismo que define la clase ``Pet`` que viste en la sección:ref:`Tamagotchi <tamagotchi_chap>`, excepto que hemos agregado algunas cosas.
+    * Una nueva entrada al constructor: el parámetro de entrada ``pet_type``, que por defecto es ``"dog"``, y la variable de instancia ``self.pet_type``.
+    * if..elif..else en el método ``self.mood()``, de modo que los diferentes tipos de mascotas (un perro, un gato o cualquier otro tipo de animal) expresen sus estados de ánimo y su hambre de manera ligeramente diferente formas.
 
-But that's not an elegant way to do it. It obscures the parts of being a pet that are common to all pets and it buries the unique stuff about being a dog or a cat in the middle of the mood method. What if you also wanted a dog to reduce boredom at a different rate than a cat, and you wanted a bird pet to be different still? Here, we've only implemented **dogs**, **cats**, and **other** -- but you can imagine the possibilities.
+Pero esa no es una forma elegante de hacerlo. Oculta las partes de ser una mascota que son comunes a todas las mascotas y entierra las cosas únicas de ser un perro o un gato en medio del método del estado de ánimo. ¿Qué pasaría si también quisieras que un perro redujera el aburrimiento a un ritmo diferente al de un gato y quisieras que una mascota pájaro fuera diferente? Aquí, solo hemos implementado **perros**, **gatos** y **otros**, pero puedes imaginar las posibilidades.
 
-If there were lots of different types of pets, those methods would start to have long and complex **if..elif..elif** code clauses, which can be confusing. And you'd need that in every method where the behavior was different for different types of pets. Class inheritance will give us a more elegant way to do it.
+Si hubiera muchos tipos diferentes de mascotas, esos métodos comenzarían a tener cláusulas de código **if..elif..elif** largas y complejas, lo que puede ser confuso. Y necesitaría eso en cada método donde el comportamiento era diferente para los diferentes tipos de mascotas. La herencia de clase nos dará una forma más elegante de hacerlo.
