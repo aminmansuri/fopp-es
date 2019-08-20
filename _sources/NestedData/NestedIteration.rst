@@ -11,11 +11,11 @@
    :prefix: nested-3-
    :start: 1
 
-Nested Iteration
-----------------
+Iteración Anidada
+------------------
 
-When you have nested data structures, especially lists and/or dictionaries, you will frequently need nested for loops
-to traverse them.
+Cuando haya anidado estructuras de datos, especialmente listas y/o diccionarios, con frecuencia necesitará
+bucles for anidados para atravesarlas.
 
 .. activecode:: ac17_4_1
 
@@ -25,8 +25,9 @@ to traverse them.
         for y in x:
             print("     level2: " + y)
 
-Line 3 executes once for each top-level list, three times in all. With each sub-list,
-line 5 executes once for each item in the sub-list. Try stepping through it in Codelens to make sure you understand what the nested iteration does.
+La línea 3 se ejecuta una vez para cada lista de nivel superior, tres veces en total. Con cada sublista,
+la línea 5 se ejecuta una vez para cada elemento en la sublista.
+Intente recorrerlo en Codelens para asegurarse de comprender lo que hace la iteración anidada.
 
 .. codelens:: clens17_4_1
     :python: py3
@@ -37,11 +38,11 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
         for y in x:
             print("    level2: " + y)
 
-**Check Your Understanding**
+**Revisa tu Entendimiento**
 
 .. parsonsprob:: pp17_4_1
 
-   Now try rearranging these code fragments to make a function that counts all the *leaf* items in a nested list like nested1 above, the items at the lowest level of nesting (8 of them in nested1).
+   Ahora intente reorganizar estos fragmentos de código para hacer una función que cuente todos los elementos *leaf* en una lista anidada como nested1 arriba, los elementos en el nivel más bajo de anidamiento (8 de ellos en nested1).
    -----
    def count_leaves(n):
    =====
@@ -60,7 +61,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    :autograde: unittest
    :practice: T
 
-   **2.** Below, we have provided a list of lists that contain information about people. Write code to create a new list that contains every person's last name, and save that list as ``last_names``.
+   **2.** A continuación, proporcionamos una lista de listas que contienen información sobre personas. Escriba el código para crear una nueva lista que contenga el apellido de cada persona y guarde esa lista como ``last_names``.
 
    ~~~~
 
@@ -82,7 +83,7 @@ line 5 executes once for each item in the sub-list. Try stepping through it in C
    :autograde: unittest
    :practice: T
 
-   **3.** Below, we have provided a list of lists named ``L``. Use nested iteration to save every string containing "b" into a new list named ``b_strings``.
+   **3.** A continuación, proporcionamos una lista de listas llamadas ``L``. Use la iteración anidada para guardar cada cadena que contenga "b" en una nueva lista llamada ``b_strings``.
 
    ~~~~
 
