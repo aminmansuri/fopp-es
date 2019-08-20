@@ -11,8 +11,8 @@
    :prefix: moreiter-2-
    :start: 1
 
-The ``while`` Statement
------------------------
+La declaración ``while``
+-------------------------
 
 .. video:: whileloop
    :controls:
@@ -21,30 +21,30 @@ The ``while`` Statement
    http://media.interactivepython.org/thinkcsVideos/whileloop.mov
    http://media.interactivepython.org/thinkcsVideos/whileloop.webm
 
-There is another Python statement that can also be used to build an iteration. It is called the ``while`` statement.
-The ``while`` statement provides a much more general mechanism for iterating. Similar to the ``if`` statement, it uses
-a boolean expression to control the flow of execution. The body of while will be repeated as long as the controlling 
-boolean expression evaluates to ``True``.
+Hay otra declaración de Python que también se puede usar para construir una iteración. Se llama la declaración ``while``.
+La declaración ``while`` proporciona un mecanismo mucho más general para iterar. Similar a la declaración ``if``, usa
+una expresión booleana para controlar el flujo de ejecución. El cuerpo de while se repetirá mientras el control de
+la expresión boolean se evalúa como ``True``.
 
-The following two figures show the flow of control. The first focuses on the flow inside the while loop and the second 
-shows the while loop in context.
+Las siguientes dos figuras muestran el flujo de control. El primero se centra en el flujo dentro del bucle while y el segundo
+muestra el ciclo while en contexto.
 
 .. image:: Figures/while_flow.png
-   :alt: a diamond at the top has the phrase "Is the condition True?". Two arrows come out it with either the phrase yes or no on the arrows. The yes arrow points to a box that says "evaluate the statemenets in the body of the loop". It then has an arrow that unconditionally points back to "Is the condition True?" diamond. The no arrow escapes the loop and points down past the "evaluate" square.
+   :alt: un diamante en la parte superior tiene la frase "Is the condition True?". Dos flechas salen con la frase sí o no en las flechas. La flecha de sí apunta a un cuadro que dice "evaluate the statemenets in the body of the loop". Luego tiene una flecha que señala incondicionalmente a "Is the condition True?" diamante. La flecha de no escapa del bucle y apunta hacia abajo más allá del square "evaluate".
 
 .. image:: Figures/while_loop.png
-   :alt: image showing a rectangle with "code block" written on it on top. Then, text that read "while {condition}": followed by an indented block with "run if {condition} is True" written on it. An arrow points from the bottom of the indented block to the top of the while loop and says "run loop again". At the bottom of the image is an unindented block that says the phrase "code block."
+   :alt: imagen que muestra un rectángulo con "bloque de código" escrito en la parte superior. Luego, el texto que dice "while {condition}": seguido de un bloque sangrado con "run if {condition} is True" escrito en él. Una flecha apunta desde la parte inferior del bloque sangrado a la parte superior del ciclo while y dice "ejecutar ciclo nuevamente". En la parte inferior de la imagen hay un bloque sin sangría que dice la frase "bloque de código."
 
-We can use the ``while`` loop to create any type of iteration we wish, including anything that we have previously 
-done with a ``for`` loop. For example, the program in the previous section could be rewritten using ``while``.
-Instead of relying on the ``range`` function to produce the numbers for our summation, we will need to produce them 
-ourselves. To do this, we will create a variable called ``aNumber`` and initialize it to 1, the first number in the 
-summation. Every iteration will add ``aNumber`` to the running total until all the values have been used. In order to 
-control the iteration, we must create a boolean expression that evaluates to ``True`` as long as we want to keep 
-adding values to our running total. In this case, as long as ``aNumber`` is less than or equal to the bound, we 
-should keep going.
+Podemos usar el bucle ``while`` para crear cualquier tipo de iteración que deseemos, incluido todo lo que tenemos previamente
+hecho con un bucle ``for``. Por ejemplo, el programa en la sección anterior podría reescribirse usando ``while``.
+En lugar de confiar en la función ``range`` para producir los números para nuestra suma, necesitaremos producirlos
+nosotros mismos. Para hacer esto, crearemos una variable llamada ``aNumber`` y la inicializaremos a 1, el primer número en la
+suma. Cada iteración agregará ``aNumber`` al total acumulado hasta que se hayan utilizado todos los valores. A fin de que
+Para controlar la iteración, debemos crear una expresión booleana que se evalúe como ``True`` siempre que queramos mantener
+agregando valores a nuestro total acumulado. En este caso, siempre que ``aNumber`` sea menor o igual que el límite,
+debería seguir adelante.
 
-Here is a new version of the summation program that uses a while statement.
+Aquí hay una nueva versión del programa de suma que utiliza una instrucción while.
 
 .. activecode:: ac14_2_1
 
@@ -62,13 +62,13 @@ Here is a new version of the summation program that uses a while statement.
 
     print(sumTo(1000))
 
-You can almost read the ``while`` statement as if it were in natural language. It means, while ``aNumber`` is less 
-than or equal to ``aBound``, continue executing the body of the loop. Within the body, each time, update ``theSum`` 
-using the accumulator pattern and increment ``aNumber``. After the body of the loop, we go back up to the condition 
-of the ``while`` and reevaluate it. When ``aNumber`` becomes greater than ``aBound``, the condition fails and flow 
-of control continues to the ``return`` statement.
+Casi puede leer la declaración ``while`` como si estuviera en lenguaje natural. Significa que mientras ``aNumber`` es menor
+que o igual a ``aBound``, continúe ejecutando el cuerpo del bucle. Dentro del cuerpo, cada vez, actualice ``theSum``
+utilizando el patrón del acumulador e incremente ``aNumber``. Después del cuerpo del bucle, volvemos a la condición
+del ``while`` y reevaluarlo. Cuando ``aNumber`` se vuelve mayor que ``aBound``, la condición falla y fluye
+de control continúa a la declaración de ``return``.
 
-The same program in codelens will allow you to observe the flow of execution.
+El mismo programa en codelens le permitirá observar el flujo de ejecución.
 
 .. codelens:: clens14_2_1
     :python: py3
@@ -85,73 +85,73 @@ The same program in codelens will allow you to observe the flow of execution.
 
     print(sumTo(4))
 
-.. note:: The names of the variables have been chosen to help readability.
+.. note:: Los nombres de las variables se han elegido para ayudar a la legibilidad.
 
-More formally, here is the flow of execution for a ``while`` statement:
+Más formalmente, aquí está el flujo de ejecución para una declaración ``while``:
 
-#. Evaluate the condition, yielding ``False`` or ``True``.
-#. If the condition is ``False``, exit the ``while`` statement and continue
-   execution at the next statement.
-#. If the condition is ``True``, execute each of the statements in the body and
-   then go back to step 1.
+#. Evalúe la condición, produciendo ``False`` o ``True``.
+#. Si la condición es ``False``, salga de la instrucción ``while`` y continúe la
+   ejecución en la siguiente declaración.
+#. Si la condición es ``True``, ejecute cada una de las declaraciones en el cuerpo y
+   luego regrese al paso 1.
 
-The body consists of all of the statements below the header with the same indentation.
+El cuerpo consta de todas las declaraciones debajo del encabezado con la misma sangría.
 
-This type of flow is called a **loop** because the third step loops back around to the top. Notice that if the 
-condition is ``False`` the first time through the loop, the statements inside the loop are never executed.
+Este tipo de flujo se denomina **bucle** porque el tercer paso se repite hacia la parte superior. Tenga en cuenta que si
+la condición es ``False`` la primera vez a través del ciclo, las declaraciones dentro del ciclo nunca se ejecutan.
 
-The body of the loop should change the value of one or more variables so that eventually the condition becomes 
-``False`` and the loop terminates. Otherwise the loop will repeat forever. This is called an **infinite loop**. 
-An endless source of amusement for computer scientists is the observation that the directions written on the back of 
-the shampoo bottle (lather, rinse, repeat) create an infinite loop.
+El cuerpo del bucle debe cambiar el valor de una o más variables para que eventualmente la condición se vuelva
+``False`` y el ciclo termina. De lo contrario, el bucle se repetirá para siempre. Esto se llama un **bucle infinito**.
+Una fuente interminable de diversión para los informáticos es la observación de que las instrucciones escritas en la parte posterior de
+la botella de champú (espuma, enjuague, repita) crea un bucle infinito.
 
-In the case shown above, we can prove that the loop terminates because we know that the value of ``aBound`` is 
-finite, and we can see that the value of ``aNumber`` increments each time through the loop, so eventually it will 
-have to exceed ``aBound``. In other cases, it is not so easy to tell.
+En el caso que se muestra arriba, podemos probar que el ciclo termina porque sabemos que el valor de ``aBound`` es
+finito, y podemos ver que el valor de ``aNumber`` aumenta cada vez a través del ciclo, por lo que eventualmente lo hará
+tiene que exceder ``aBound``. En otros casos, no es tan fácil saberlo.
 
 .. note::
 
-    Introduction of the while statement causes us to think about the types of iteration we have seen. The ``for`` 
-    statement will always iterate through a sequence of values like the list of names for the party or the list of 
-    numbers created by ``range``. Since we know that it will iterate once for each value in the collection, it is 
-    often said that a ``for`` loop creates a **definite iteration** because we definitely know how many times we are 
-    going to iterate.  On the other hand, the ``while`` statement is dependent on a condition that needs to evaluate 
-    to ``False`` in order for the loop to terminate. Since we do not necessarily know when this will happen, it 
-    creates what we call **indefinite iteration**. Indefinite iteration simply means that we don't know how many 
-    times we will repeat but eventually the condition controlling the iteration will fail and the iteration will 
-    stop. (Unless we have an infinite loop which is of course a problem)
+    La introducción de la instrucción while nos hace pensar en los tipos de iteración que hemos visto. El ``for``
+    la declaración siempre iterará a través de una secuencia de valores como la lista de nombres para la parte o la lista de
+    números creados por ``range``. Como sabemos que iterará una vez para cada valor de la colección, es
+    A menudo se dice que un bucle ``for`` crea una **iteración definida** porque definitivamente sabemos cuántas veces estamos
+    va a iterar Por otro lado, la declaración ``while`` depende de una condición que necesita evaluar
+    a  ``False`` para que el ciclo finalice. Como no necesariamente sabemos cuándo ocurrirá esto,
+    crea lo que llamamos **iteración indefinida**. La iteración indefinida simplemente significa que no sabemos cuántos
+    repetiremos, pero eventualmente la condición que controla la iteración fallará y la iteración fallará
+    detener. (A menos que tengamos un bucle infinito que, por supuesto, es un problema)
 
-What you will notice here is that the ``while`` loop is more work for you --- the programmer --- than the equivalent 
-``for`` loop.  When using a ``while`` loop you have to control the loop variable yourself. You give it an initial 
-value, test for completion, and then make sure you change something in the body so that the loop terminates. That 
-also makes a while loop harder to read and understand than the equivalent for loop. So, while you *can* implement 
-definite iteration with a while loop, it's not a good idea to do that. Use a for loop whenever it will be known at 
-the beginning of the iteration process how many times the block of code needs to be executed. 
+Lo que notará aquí es que el ciclo ``while`` es más trabajo para usted --- el programador --- que el equivalente
+bucle ``for``. Cuando se usa un ciclo ``while``, debe controlar la variable del ciclo usted mismo. Le das una inicial
+valor, prueba de finalización y luego asegúrese de cambiar algo en el cuerpo para que el ciclo finalice. Ese
+también hace que un bucle while sea más difícil de leer y comprender que el bucle equivalente. Entonces, mientras que *puedes* implementar
+iteración definida con un ciclo while, no es una buena idea hacer eso. Use un bucle for siempre que se conozca
+el comienzo del proceso de iteración cuántas veces se debe ejecutar el bloque de código.
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question14_2_1
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: Although the while loop uses a different syntax, it is just as powerful as a for-loop and often more flexible.
-   :feedback_b: Often a for-loop is more natural and convenient for a task, but that same task can always be expressed using a while loop.
+   :feedback_a: Aunque el ciclo while usa una sintaxis diferente, es tan poderoso como un ciclo for y a menudo más flexible.
+   :feedback_b: A menudo, un ciclo for es más natural y conveniente para una tarea, pero esa misma tarea siempre se puede expresar usando un ciclo while.
 
-   True or False: You can rewrite any for-loop as a while-loop.
+   True o False: Puede reescribir cualquier bucle for como un bucle while.
 
 .. mchoice:: question14_2_2
-   :answer_a: n starts at 10 and is incremented by 1 each time through the loop, so it will always be positive
-   :answer_b: answer starts at 1 and is incremented by n each time, so it will always be positive
-   :answer_c: You cannot compare n to 0 in while loop.  You must compare it to another variable.
-   :answer_d: In the while loop body, we must set n to False, and this code does not do that.
+   :answer_a: n comienza en 10 y se incrementa en 1 cada vez a través del ciclo, por lo que siempre será positivo
+   :answer_b: La respuesta comienza en 1 y se incrementa en n cada vez, por lo que siempre será positiva
+   :answer_c: No puede comparar n con 0 en el ciclo while. Debes compararlo con otra variable.
+   :answer_d: En el cuerpo del bucle while, debemos establecer n en False, y este código no hace eso.
    :correct: a
-   :feedback_a: The loop will run as long as n is positive.  In this case, we can see that n will never become non-positive.
-   :feedback_b: While it is true that answer will always be positive, answer is not considered in the loop condition.
-   :feedback_c: It is perfectly valid to compare n to 0.  Though indirectly, this is what causes the infinite loop.
-   :feedback_d: The loop condition must become False for the loop to terminate, but n by itself is not the condition in this case.
+   :feedback_a: El ciclo se ejecutará mientras n sea positivo. En este caso, podemos ver que n nunca será no positiva.
+   :feedback_b: Si bien es cierto que la respuesta siempre será positiva, la respuesta no se considera en la condición de bucle.
+   :feedback_c: Es perfectamente válido comparar n a 0. Aunque indirectamente, esto es lo que causa el bucle infinito.
+   :feedback_d: La condición del bucle debe volverse False para que el bucle termine, pero n por sí sola no es la condición en este caso.
    :practice: T
 
-   The following code contains an infinite loop. Which is the best explanation for why the loop does not terminate?
+   El siguiente código contiene un bucle infinito. ¿Cuál es la mejor explicación de por qué el ciclo no termina?
 
    .. code-block:: python
 
@@ -163,22 +163,22 @@ the beginning of the iteration process how many times the block of code needs to
      print(answer)
 
 .. mchoice:: question14_2_3
-   :answer_a: a for-loop or a while-loop
-   :answer_b: only a for-loop
-   :answer_c: only a while-loop
+   :answer_a: un bucle for o un bucle while
+   :answer_b: solo un ciclo for
+   :answer_c: solo un ciclo while
    :correct: a
-   :feedback_a: Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so either a for-loop or a while-loop will work.
-   :feedback_b: As you learned in section 7.2, a while-loop can always be used for anything a for-loop can be used for.
-   :feedback_c: Although you do not know how many iterations you loop will run before the program starts running, once you have chosen your random integer, Python knows exactly how many iterations the loop will run, so this is an example of definite iteration.
+   :feedback_a: Aunque no sabe cuántas iteraciones ejecutará el bucle antes de que el programa comience a ejecutarse, una vez que haya elegido su entero aleatorio, Python sabe exactamente cuántas iteraciones ejecutará el bucle, por lo que funcionará un bucle for o un bucle while.
+   :feedback_b: Como aprendió en la sección 7.2, un ciclo while siempre se puede usar para cualquier cosa para la que se pueda usar un ciclo for.
+   :feedback_c: Aunque no sabe cuántas iteraciones ejecutará el ciclo antes de que el programa comience a ejecutarse, una vez que haya elegido su entero aleatorio, Python sabe exactamente cuántas iteraciones ejecutará el ciclo, por lo que este es un ejemplo de iteración definitiva.
    :practice: T
 
-   Which type of loop can be used to perform the following iteration: You choose a positive integer at random and then print the numbers from 1 up to and including the selected integer.
+   Qué tipo de bucle se puede usar para realizar la siguiente iteración: elige un entero positivo al azar y luego imprime los números desde 1 hasta el entero seleccionado.
 
 
 .. activecode:: ac14_2_2
    :practice: T
 
-   Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
+   Escriba un ciclo while que se inicialice en 0 y se detenga en 15. Si el contador es un número par, añádalo a una lista llamada ``eve_nums``.
    ~~~~
 
    =====
@@ -195,7 +195,7 @@ the beginning of the iteration process how many times the block of code needs to
 .. activecode:: ac14_2_3
     :practice: T
 
-    Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
+    A continuación, proporcionamos un bucle for que resume todos los elementos de ``list1``. Escriba el código que realiza la misma tarea, pero en su lugar utiliza un ciclo while. Asigne la variable acumuladora al nombre ``accum``.
     ~~~~
 
     list1 = [8, 3, 4, 5, 6, 7, 9]
@@ -220,7 +220,7 @@ the beginning of the iteration process how many times the block of code needs to
 .. activecode:: ac14_2_4
     :practice: T
 
-    Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.
+    Escriba una función llamada ``stop_at_four`` que itera a través de una lista de números. Usando un ciclo while, agregue cada número a una nueva lista hasta que aparezca el número 4. La función debería devolver la nueva lista.
     ~~~~
 
     def stop_at_four():
