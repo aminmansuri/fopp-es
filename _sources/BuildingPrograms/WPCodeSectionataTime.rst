@@ -11,93 +11,93 @@
    :prefix: buildP-3-
    :start: 1
 
-👩‍💻 Code one section at a time
-================================
+👩‍💻 Codificar una sección a la vez
+====================================
 
-As a reminder, this is our prompt:
+Como recordatorio, este es nuestro aviso:
 
-*Build a program that replicates a physical dictionary that you might use. The program should that take five different input from the user. Each input will have two words and we will build a dictionary where the words are the keys and values*.
+*Cree un programa que reproduzca un diccionario físico que pueda usar. El programa debe tomar cinco entradas diferentes del usuario. Cada entrada tendrá dos palabras y crearemos un diccionario donde las palabras son las claves y los valores*.
 
-We'll start to build up the sections one at a time now! First, we need to pick a name for the dictionary. We'll try to pick a clear name for each of these variables
+¡Comenzaremos a construir las secciones de una en una ahora! Primero, necesitamos elegir un nombre para el diccionario. Intentaremos elegir un nombre claro para cada una de estas variables
 
 .. activecode:: ac500_3_1
    
-    # initialize a dictionary
+    # inicializa un diccionario
     user_dictionary = {}
     print("---------- keys in user_dictionary: " + str(list(user_dictionary.keys())) + " ----------")
 
-    # write a for loop that will iterate five times. I can use the range function for this!
+    # escribe un bucle for que iterará cinco veces. ¡Puedo usar la función range para esto!
 
-    # in the for loop, I should ask for input from the user
+    # en el bucle for, debería solicitar la entrada del usuario
 
-    # next, I should separate the words
+    # luego, debería separar las palabras
 
-    # finally, I should add the key value pair to the dictionary
+    # finalmente, debería agregar el par de valores clave al diccionario
 
-We picked the variable name ``user_dictionary`` because it will be a dictionary that is created by a user. Other names could be 
-appropriate as well! Though it may seem unnecessary, we'll add a print statement to remind ourself that ``user_dictionary`` is empty.
+Elegimos el nombre de la variable ``user_dictionary`` porque será un diccionario creado por un usuario. Otros nombres podrían ser
+apropiados también! Aunque parezca innecesario, agregaremos una declaración de impresión para recordarnos que ``user_dictionary`` está vacío.
 
-Next we'll build up the for loop!
+¡Luego construiremos el bucle for!
 
 .. activecode:: ac500_3_2
    
-    # initialize a dictionary
+    # inicializa un diccionario
     user_dictionary = {}
     print("---------- keys in user_dictionary: " + str(list(user_dictionary.keys())) + " ----------")
 
-    # write a for loop that will iterate five times. I can use the range function for this!
+    # escriba un bucle for que iterará cinco veces. ¡Puedo usar la función range para esto!
     for _ in range(5):
         print("---------- LOOP HAS STARTED ----------")
-        # in the for loop, I should ask for input from the user
+        # en el bucle for, debería solicitar la entrada del usuario
 
-        # next, I should separate the words
+        # luego, debería separar las palabras
 
-        # finally, I should add the key value pair to the dictionary
-        print("---------- LOOP HAS ENDED ----------")
+        # finalmente, debería agregar el par de valores clave al diccionario
+        print("---------- LOOP HA TERMINADO ----------")
 
-If we want to make sure that the for loop is iterating five times then we can add these print statements to execute so that we 
-can track the progress of the program.
+Si queremos asegurarnos de que el ciclo for esté iterando cinco veces, entonces podemos agregar estas declaraciones de impresión para ejecutarlas de modo que podamos
+Puede seguir el progreso del programa.
 
-Next, we'lll get the input from the user!
+A continuación, ¡recibiremos la entrada del usuario!
 
 .. activecode:: ac500_3_3
    
-    # initialize a dictionary
+    # inicializa un diccionario
     user_dictionary = {}
     print("---------- keys in user_dictionary: " + str(list(user_dictionary.keys())) + " ----------")
 
-    # write a for loop that will iterate five times. I can use the range function for this!
+    # escriba un bucle for que iterará cinco veces. ¡Puedo usar la función range para esto!
     for _ in range(5):
         print("---------- LOOP HAS STARTED ----------")
-        # in the for loop, I should ask for input from the user
+        # en el bucle for, debería solicitar la entrada del usuario
         response = input("Please enter two words to add to a dictionary. The first word is the definition, the second will be the word associated with it.")
         print("---------- The response: " + response + " ----------")
 
-        # next, I should separate the words
+        # a continuación, debería separar las palabras
 
-        # finally, I should add the key value pair to the dictionary
+        # finalmente, debería agregar el par de valores clave al diccionario
         print("---------- LOOP HAS ENDED ----------")
 
-Now we'll want to print out the response. We're expecting that it should be as string, so we should be able to add it to the print 
-statement with other strings without any issue. If there is an issue, then something could be going wrong with how we are getting input 
-from the user.
+Ahora queremos imprimir la respuesta. Esperamos que sea como una cadena, por lo que deberíamos poder agregarlo a la impresión
+declaración con otras cadenas sin ningún problema. Si hay un problema, entonces algo podría estar mal con la forma en que estamos recibiendo aportes
+del usuario
 
-Now, we can separate the words so that we have our key and value to add to the dictionary!
+¡Ahora, podemos separar las palabras para tener nuestra clave y valor para agregar al diccionario!
 
 .. activecode:: ac500_3_4
    
-    # initialize a dictionary
+    # inicializa un diccionario
     user_dictionary = {}
     print("---------- keys in user_dictionary: " + str(list(user_dictionary.keys())) + " ----------")
 
-    # write a for loop that will iterate five times. I can use the range function for this!
+    # escriba un bucle for que iterará cinco veces. ¡Puedo usar la función range para esto!
     for _ in range(5):
         print("---------- LOOP HAS STARTED ----------")
-        # in the for loop, I should ask for input from the user
+        # en el bucle for, debería solicitar la entrada del usuario
         response = input("Please enter two words to add to a dictionary. The first word is the definition, the second will be the word associated with it.")
         print("---------- The response: " + response + " ----------")
 
-        # next, I should separate the words
+        # a continuación, debería separar las palabras
         separated_response = response.split()
         print("---------- The separated response: " + str(separated_response) + " ----------")
         response_key = separated_response[0]
@@ -105,26 +105,26 @@ Now, we can separate the words so that we have our key and value to add to the d
         response_value = separated_response[1]
         print("---------- The response value: " + response_value + " ----------")
 
-        # finally, I should add the key value pair to the dictionary
+        # finalmente, debería agregar el par de valores clave al diccionario
         print("---------- LOOP HAS ENDED ----------")
 
-Here we know that ``response`` is a string that contains two words. We can use the split method to separate the words, which will give us 
-a list. The first word will be the key and the second word will be the value, so we can use indexing to access that information. 
+Aquí sabemos que ``response`` es una cadena que contiene dos palabras. Podemos usar el método de división para separar las palabras, lo que nos dará
+una lista. La primera palabra será la clave y la segunda será el valor, por lo que podemos usar la indexación para acceder a esa información.
 
 .. activecode:: ac500_3_5
    
-    # initialize a dictionary
+    # inicializa un diccionario
     user_dictionary = {}
     print("---------- keys in user_dictionary: " + str(list(user_dictionary.keys())) + " ----------")
 
-    # write a for loop that will iterate five times. I can use the range function for this!
+    # escriba un bucle for que iterará cinco veces. ¡Puedo usar la función range para esto!
     for _ in range(5):
         print("---------- LOOP HAS STARTED ----------")
-        # in the for loop, I should ask for input from the user
+        # en el bucle for, debería solicitar la entrada del usuario
         response = input("Please enter two words to add to a dictionary. The first word is the definition, the second will be the word associated with it.")
         print("---------- The response: " + response + " ----------")
 
-        # next, I should separate the words
+        # a continuación, debería separar las palabras
         separated_response = response.split()
         print("---------- The separated response: " + str(separated_response) + " ----------")
         response_key = separated_response[0]
@@ -132,7 +132,7 @@ a list. The first word will be the key and the second word will be the value, so
         response_value = separated_response[1]
         print("---------- The response value: " + response_value + " ----------")
 
-        # finally, I should add the key value pair to the dictionary
+        # finalmente, debería agregar el par de valores clave al diccionario
         user_dictionary[response_key] = response_value
         print("---------- LOOP HAS ENDED ----------")
 
@@ -140,5 +140,5 @@ a list. The first word will be the key and the second word will be the value, so
     print(user_dictionary)
     print("----------")
 
-Finally, we add code to add the key and value pair into a dictionary. We can print out the final result of the dictionary once the for 
-loop is over so that we can determine if it has been done correctly.
+Finalmente, agregamos código para agregar el par clave y valor en un diccionario. Podemos imprimir el resultado final del diccionario una vez que
+el ciclo ha terminado para que podamos determinar si se ha realizado correctamente.
