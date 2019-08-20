@@ -13,16 +13,16 @@
 
 .. _nested_chap:
 
-Introduction: Nested Data and Nested Iteration
-==============================================
+Introducción: Datos Anidados e Iteraciones Anidadas
+====================================================
 
-Lists with Complex Items
-------------------------
+Listas con elementos complejos
+-------------------------------
 
-The lists we have seen so far have had numbers or strings as items. We've snuck in a few more complex items, but without
-ever explicitly discussing what it meant to have more complex items.
+Las listas que hemos visto hasta ahora tienen números o cadenas como elementos. Nos hemos metido en algunos elementos más complejos, pero sin
+discutiendo explícitamente lo que significaba tener elementos más complejos.
 
-In fact, the items in a list can be any type of python object. For example, we can have a list of lists.
+De hecho, los elementos en una lista pueden ser cualquier tipo de objeto python. Por ejemplo, podemos tener una lista de listas.
 
 .. activecode:: ac17_1_1
 
@@ -34,11 +34,11 @@ In fact, the items in a list can be any type of python object. For example, we c
     for L in nested1:
         print(L)
 
-Line 2 prints out the first item from the list that ``nested1`` is bound to. That item is itself a list, so it prints out
-with square brackets. It has length 3, which prints out on line 3. Line 4 adds a new item to ``nested1``. It is a list with
-one element, 'i' (it a list with one element, it's not just the string 'i').
+La línea 2 imprime el primer elemento de la lista a la que está vinculado ``nested1``. Ese elemento es en sí mismo una lista, por lo que se imprime
+con corchetes. Tiene una longitud 3, que se imprime en la línea 3. La línea 4 agrega un nuevo elemento a ``nested1``. Es una lista con
+un elemento, 'i' (es una lista con un elemento, no es solo la cadena 'i').
 
-Codelens gives a you a reference diagram, a visual display of the contents of nested1. 
+Codelens le ofrece un diagrama de referencia, una visualización del contenido de nested1.
 
 .. codelens:: clens_1_1
     :python: py3
@@ -51,16 +51,16 @@ Codelens gives a you a reference diagram, a visual display of the contents of ne
         print(L)
 
 
-When you get to step 4 of the execution, take a look at the object that variable nested1 points to. It is a list of three 
-items, numbered 0, 1, and 2. The item in slot 1 is small enough that it is shown right there as a list containing items 
-"d" and "e". The item in slot 0 didn't quite fit, so it is shown in the figure as a pointer to another separate list; 
-same thing for the item in slot 2, the list ``['f', 'g', 'h']``.
+Cuando llegue al paso 4 de la ejecución, eche un vistazo al objeto al que apunta la variable nested1. Es una lista de tres
+elementos, numerados 0, 1 y 2. El elemento en la ranura 1 es lo suficientemente pequeño como para mostrarse allí como una
+lista que contiene los elementos "d" y "e". El elemento en el espacio 0 no encajaba bien, por lo que se muestra en la figura
+como un puntero a otra lista separada; Lo mismo para el elemento en el espacio 2, la lista ``['f', 'g', 'h']``.
 
-There's no special meaning to whether the list is shown embedded or with a pointer to it: that's just CodeLens making the 
-best use of space that it can. In fact, if you go on to step 5, you'll see that, with the addition of a fourth item, the 
-list ['i'], CodeLens has chosen to show all four lists embedded in the top-level list.
+No hay un significado especial para saber si la lista se muestra incrustada o con un puntero: eso es solo CodeLens haciendo
+el mejor uso del espacio que pueda. De hecho, si continúa con el paso 5, verá que, con la adición de un cuarto elemento, la
+lista ['i'], CodeLens ha elegido mostrar las cuatro listas incrustadas en la lista de nivel superior.
 
-With a nested list, you can make complex expressions to get or set a value in a sub-list. 
+Con una lista anidada, puede crear expresiones complejas para obtener o establecer un valor en una sublista.
 
 .. activecode:: ac17_1_2
 
@@ -72,22 +72,21 @@ With a nested list, you can make complex expressions to get or set a value in a 
     print([10, 20, 30][1])
     print(nested1[1][0])
     
-Lines 1-4 above probably look pretty natural to you. Line 5 illustrates the left to right processing of expressions. ``nested1[1]`` evaluates to the second inner list, so ``nested1[1][1]`` evaluates to its second element, ``'e'``.
-Line 6 is just a reminder that you index into a literal list, one that is written
-out, the same way as you can index into a list referred to by a variable. ``[10, 20, 30]`` creates a list. ``[1]`` indexes into that list, pulling out the second item, 20.
+Las líneas 1-4 anteriores probablemente te parezcan bastante naturales. La línea 5 ilustra el procesamiento de expresiones de izquierda a derecha. ``nested1[1]`` se evalúa en la segunda lista interna, por lo que ``nested1[1][1]`` se evalúa en su segundo elemento, ``'e'``.
+La línea 6 es solo un recordatorio de que indexa en una lista literal, una que está escrita fuera, de la misma manera que puede indexar en una lista a la que hace referencia una variable. ``[10, 20, 30]`` crea una lista. ``[1]`` indexa en esa lista, sacando el segundo elemento, 20.
 
-Just as with a function call where the return value can be thought of as replacing the text of the function call in an 
-expression, you can evaluate an expression like that in line 7 from left to right. Because the value of ``nested1[1]`` is the
-list ``['d', 'e']``, ``nested1[1][0]`` is the same as ``['d', 'e'][0]``. So line 7 is equivalent to lines 2 and 4; it is a simpler way
-of pulling out the first item from the second list. 
+Al igual que con una llamada a la función donde se puede pensar que el valor de retorno reemplaza el texto de la llamada a la función en un
+expresión, puede evaluar una expresión como esa en la línea 7 de izquierda a derecha. Porque el valor de ``nested1[1]`` es la
+lista ``['d', 'e']``, ``nested1[1][0]`` es lo mismo que ``['d', 'e'][0]``. Entonces la línea 7 es equivalente a las líneas 2 y 4; es una forma mas simple
+de sacar el primer elemento de la segunda lista.
 
-At first, expressions like that on line 7 may look foreign. They will soon feel more natural, and you will end up using 
-them a lot. Once you are comfortable with them, the only time you will write code like lines 2-4 is when you aren't quite 
-sure what your data's structure is, and so you need to incrementally write and debug your code. Often, you will
-start by writing code like lines 2-4, then, once you're sure it's working, replace it with something like line 7.
+Al principio, expresiones como esa en la línea 7 pueden parecer extrañas. Pronto se sentirán más naturales y terminarás usando
+ellos mucho. Una vez que se sienta cómodo con ellos, la única vez que escribirá código como las líneas 2-4 es cuando no está del todo
+Asegúrese de cuál es la estructura de sus datos, por lo que debe escribir y depurar su código de forma incremental. A menudo, lo harás
+comience escribiendo código como las líneas 2-4, luego, una vez que esté seguro de que está funcionando, reemplácelo con algo como la línea 7.
 
-You can change values in such lists in the usual ways. You can even use complex expressions to change values. Consider 
-the following
+Puede cambiar los valores en dichas listas de la forma habitual. Incluso puede usar expresiones complejas para cambiar valores. Considerar
+el seguimiento
 
 .. codelens:: clens_1_2
     :python: py3
@@ -96,31 +95,31 @@ the following
     nested1[1] = [1, 2, 3]
     nested1[1][0] = 100
     
-The complex items in a list do not have to be lists. They can be tuples or dictionaries. The items in a list do not all 
-have to be the same time, but you will drive yourself crazy if you have lists of objects of varying types. Save yourself
-some headaches and don't do that. Here's a list of dictionaries and some operations on them. Take a look at its visual 
-representation in codelens.
+Los elementos complejos en una lista no tienen que ser listas. Pueden ser tuplas o diccionarios. Los elementos de una lista no todos
+tiene que ser al mismo tiempo, pero se volvería loco si tienes listas de objetos de diferentes tipos. Ahórrese
+algunos dolores de cabeza y no hagas eso. Aquí hay una lista de diccionarios y algunas operaciones sobre ellos. Echa un vistazo a su
+representación visual en codelens.
 
 .. codelens:: clens_1_3
    :python: py3
 
    nested2 = [{'a': 1, 'b': 3}, {'a': 5, 'c': 90, 5: 50}, {'b': 3, 'c': "yes"}]
    
-Try practicing some operations to get or set values in a list of dictionaries.
+Intente practicar algunas operaciones para obtener o establecer valores en una lista de diccionarios.
 
 .. actex:: ac17_1_3
 
    nested2 = [{'a': 1, 'b': 3}, {'a': 5, 'c': 90, 5: 50}, {'b': 3, 'c': "yes"}]
 
-   #write code to print the value associated with key 'c' in the second dictionary (90)
-   
-   #write code to print the value associated with key 'b' in the third dictionary
-   
-   #add a fourth dictionary add the end of the list; print something to check your work.
-   
-   #change the value associated with 'c' in the third dictionary from "yes" to "no"; print something to check your work
-     
-You can even have a list of functions (!). 
+   #escribe el código para imprimir el valor asociado con la clave 'c' en el segundo diccionario (90)
+
+   #escribe el código para imprimir el valor asociado con la clave 'b' en el tercer diccionario
+
+   # agregue un cuarto diccionario al final de la lista; imprima algo para revisar su trabajo.
+
+   #cambie el valor asociado con 'c' en el tercer diccionario de "sí" a "no"; imprima algo para revisar su trabajo
+
+Incluso puede tener una lista de funciones (!).
 
 .. activecode:: ac17_1_4
 
@@ -142,22 +141,22 @@ You can even have a list of functions (!).
     print(L[0](3))
         
         
-Here, L is a list with three items. All those items are functions. The first is the function square that is defined on 
-lines 1 and 2. The second is the built-in python function abs. The third is an anonymous function that returns one more 
-than its input.
+Aquí, L es una lista con tres elementos. Todos esos artículos son funciones. El primero es el cuadrado de la función que se define en
+líneas 1 y 2. La segunda es la función incorporada de python abs. La tercera es una función anónima que devuelve una más.
+que su entrada.
 
-In the first for loop, we do not call the functions, we just output their printed representations. The output 
-<function square> confirms that square truly is a function object. For some reason, in our online environment, it's not 
-able to produce a nice printed representation of the built-in function abs, so it just outputs <unknown>
+En el primer bucle for, no llamamos a las funciones, solo mostramos sus representaciones impresas. La salida
+<cuadrado de función> confirma que el cuadrado realmente es un objeto de función. Por alguna razón, en nuestro entorno en línea, no es
+capaz de producir una buena representación impresa de la función incorporada abs, por lo que solo muestra <unknown>
 
-In the second for loop, we call each of the functions, passing in the value -2 each time and printing whatever value the 
-function returns. 
+En el segundo bucle for, llamamos a cada una de las funciones, pasando el valor -2 cada vez e imprimiendo cualquier valor
+La función vuelve.
 
-The last two lines just emphasize that there's nothing special about lists of functions. They follow all the same rules 
-for how python treats any other list. Because L[0] picks out the function square, L[0](3) calls the function square, 
-passing it the parameter 3.
+Las últimas dos líneas solo enfatizan que no hay nada especial en las listas de funciones. Siguen todas las mismas reglas
+sobre cómo trata Python cualquier otra lista. Debido a que L[0] selecciona el cuadrado de la función, L[0](3) llama al cuadrado de la función,
+pasándole el parámetro 3.
 
-Step through it in Codelens if that's not all clear to you yet.
+Avance en Codelens si aún no lo tiene todo claro.
 
 .. codelens:: clens_1_4
     :python: py3
@@ -179,14 +178,14 @@ Step through it in Codelens if that's not all clear to you yet.
     print(L[0])
     print(L[0](3))
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac17_1_5
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** Below, we have provided a list of lists. Use indexing to assign the element 'horse' to the variable name ``idx1``.
+   **1.** A continuación, hemos proporcionado una lista de listas. Utilice la indexación para asignar el elemento 'horse' al nombre de variable ``idx1``.
 
    ~~~~
 
@@ -209,7 +208,7 @@ Step through it in Codelens if that's not all clear to you yet.
    :autograde: unittest
    :practice: T
 
-   **2.** Using indexing, retrieve the string 'willow' from the list and assign that to the variable ``plant``.
+   **2.** Usando la indexación, recupere la cadena 'willow' de la lista y asígnela a la variable ``plant``.
 
    ~~~~
 
