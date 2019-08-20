@@ -15,12 +15,12 @@
    variable; local
    lifetime
 
-Variables and parameters are local
-----------------------------------
+Las variables y los parámetros son locales.
+-------------------------------------------
 
-An assignment statement in a function creates a **local variable** for the variable on the left hand side of the 
-assignment operator. It is called local because this variable only exists inside the function and you cannot use it 
-outside. For example, consider again the ``square`` function:
+Una instrucción de asignación en una función crea una **variable local** para la variable en el lado izquierdo del
+operador de asignación. Se llama local porque esta variable solo existe dentro de la función y no puede usarla
+fuera de. Por ejemplo, considere nuevamente la función ``square``:
 
 .. activecode:: ac11_7_1
 
@@ -32,40 +32,40 @@ outside. For example, consider again the ``square`` function:
     print(y)
 
 
-Try running this in Codelens. When a function is invoked in Codelens, the local scope is separated from global scope by 
-a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global 
-frame. If you press the 'last >>' button you will see an error message. When we try to use ``y`` on line 6 (outside the 
-function) Python looks for a global variable named ``y`` but does not find one. This results in the error: 
-``Name Error: 'y' is not defined.``
+Intenta ejecutar esto en Codelens. Cuando se invoca una función en Codelens, el ámbito local se separa del ámbito global por
+Una caja azul. Las variables en el ámbito local se colocarán en el cuadro azul, mientras que las variables globales permanecerán en el global
+marco. Si presiona el botón 'último >>' verá un mensaje de error. Cuando intentamos usar ``y`` en la línea 6 (fuera de
+función) Python busca una variable global llamada ``y`` pero no encuentra una. Esto da como resultado el error:
+``Error de nombre: 'y' no está definido``
 
-The variable ``y`` only exists while the function is being executed --- we call this its **lifetime**. When the 
-execution of the function terminates (returns), the local variables are destroyed. Codelens helps you visualize this 
-because the local variables disappear after the function returns. Go back and step through the statements paying 
-particular attention to the variables that are created when the function is called. Note when they are subsequently 
-destroyed as the function returns.
+La variable ``y`` solo existe mientras se ejecuta la función --- llamamos a esto su **duración**. Cuando
+la ejecución de la función termina (regresa), las variables locales se destruyen. Codelens te ayuda a visualizar esto
+porque las variables locales desaparecen después de que vuelve la función. Regrese y revise los estados de cuenta pagando
+especial atención a las variables que se crean cuando se llama a la función. Tenga en cuenta cuando son posteriormente
+destruido cuando la función regresa.
 
-Formal parameters are also local and act like local variables. For example, the lifetime of ``x`` begins when 
-``square`` is called, and its lifetime ends when the function completes its execution.
+Los parámetros formales también son locales y actúan como variables locales. Por ejemplo, la vida útil de ``x`` comienza cuando
+se llama ``square`` y su vida útil finaliza cuando la función completa su ejecución.
 
-So it is not possible for a function to set some local variable to a value, complete its execution, and then when it 
-is called again next time, recover the local variable. Each call of the function creates new local variables, and 
-their lifetimes expire when the function returns to the caller.
+Por lo tanto, no es posible que una función establezca alguna variable local en un valor, complete su ejecución y luego cuando
+se llama nuevamente la próxima vez, recupere la variable local. Cada llamada de la función crea nuevas variables locales, y
+sus vidas caducan cuando la función vuelve a la persona que llama.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question11_7_1
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: Local variables cannot be referenced outside of the function they were defined in.
-   :feedback_b: Local variables cannot be referenced outside of the function they were defined in.
+   :feedback_a: Las variables locales no se pueden referenciar fuera de la función en la que se definieron.
+   :feedback_b: Las variables locales no se pueden referenciar fuera de la función en la que se definieron.
    :practice: T
 
-   True or False: Local variables can be referenced outside of the function they were defined in.
+   True o False: Las variables locales se pueden referenciar fuera de la función en la que se definieron.
 
 .. fillintheblank:: question11_7_2
 
-   Which of the following are local variables? Please, write them in order of what line they are on in the code.
+   ¿Cuáles de las siguientes son variables locales? Por favor, escríbalos en orden de línea en el código.
 
    .. sourcecode:: python
 
@@ -79,28 +79,28 @@ their lifetimes expire when the function returns to the caller.
         addresses.append(foo(item))
 
 
-   The local variables are
+   Las variables locales son
 
-   -  :bar: Good work!
-      :aug: While aug is a local variable, it is not the first one in the code.
-      :item: item is not a local variable.
-      :.*: Incorrect, try again.
-   -  :aug: Good work!
-      :bar: While bar is a local variable, it is not the first one in the code.
-      :item: item is not a local variable.
-      :.*: Incorrect, try again.
+   -  :bar: ¡Buen trabajo!
+      :aug: Si bien aug es una variable local, no es la primera en el código.
+      :item: item no es una variable local.
+      :.*: Incorrecto. Inténtelo de nuevo.
+   -  :aug: ¡Buen trabajo!
+      :bar: aunque bar es una variable local, no es la primera en el código.
+      :item: item no es una variable local.
+      :.*: Incorrecto. Inténtelo de nuevo.
 
 .. mchoice:: question11_7_3
    :answer_a: 33
    :answer_b: 12
-   :answer_c: There is an error in the code.
+   :answer_c: Hay un error en el código.
    :correct: c
-   :feedback_a: Incorrect, look again at what is happening in producing.
-   :feedback_b: Incorrect, look again at what is happening in producing.
-   :feedback_c: Yes! There is an error because we reference y in the producing function, but it was defined in adding. Because y is a local variable, we can't use it in both functions without initializing it in both. If we initialized y as 3 in both though, the answer would be 33.
+   :feedback_a: Incorrecto, mira nuevamente lo que está sucediendo.
+   :feedback_b: Incorrecto, mira nuevamente lo que está sucediendo.
+   :feedback_c: ¡Si! Hay un error porque hacemos referencia a y en la función de producción, pero se define al agregar. Como y es una variable local, no podemos usarla en ambas funciones sin inicializarla en ambas. Sin embargo, si inicializamos y como 3 en ambos, la respuesta sería 33.
    :practice: T
 
-   What is the result of the following code?
+   ¿Cuál es el resultado del siguiente código?
 
    .. sourcecode:: python
 
