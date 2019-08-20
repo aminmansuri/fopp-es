@@ -1,8 +1,8 @@
-Building Programs
-:::::::::::::::::
+Creando Programas
+::::::::::::::::::
 
 .. toctree::
-   :caption: Building Programs
+   :caption: Creando Programas
    :maxdepth: 2
 
    TheStrategy.rst
