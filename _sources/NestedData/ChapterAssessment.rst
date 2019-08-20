@@ -11,8 +11,8 @@
    :prefix: nested-6-
    :start: 1
 
-Chapter Assessment
-==================
+Evaluación del Capítulo
+=======================
 
 .. activecode:: ac17_6_1
    :language: python
@@ -20,7 +20,7 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/ListswithComplexItems
 
-   The variable ``nested`` contains a nested list. Assign 'snake' to the variable ``output`` using indexing.
+   La variable ``nested`` contiene una lista anidada. Asigne 'snake' a la variable ``output``  usando indexación.
 
    ~~~~
 
@@ -43,19 +43,19 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/ListswithComplexItems
 
-   Below, a list of lists is provided. Use in and not in tests to create variables with Boolean values. See comments for further instructions.
+   A continuación, se proporciona una lista de listas. Use in y not en pruebas para crear variables con valores booleanos. Ver comentarios para más instrucciones.
 
    ~~~~
 
    lst = [['apple', 'orange', 'banana'], [5, 6, 7, 8, 9.9, 10], ['green', 'yellow', 'purple', 'red']]
 
-   #Test to see if 'yellow' is in the third list of lst. Save to variable ``yellow``
+   # Prueba para ver si 'yellow' está en la tercera lista de lst. Guarda en la variable ``yellow``
 
 
-   #Test to see if 4 is in the second list of lst. Save to variable ``four``
+   #Pruebe para ver si 4 está en la segunda lista de lst. Guardar en la variable ``four``
 
 
-   #Test to see if 'orange' is in the first element of lst. Save to variable ``orange``
+   #Pruebe para ver si 'orange' está en el primer elemento de lst. Guardar en variable ``orange``
       
    =====
 
@@ -78,17 +78,17 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/ListswithComplexItems
 
-   Below, we've provided a list of lists. Use in statements to create variables with Boolean values - see the ActiveCode window for further directions.
+   A continuación, proporcionamos una lista de listas. Úselo en declaraciones para crear variables con valores booleanos; consulte la ventana ActiveCode para obtener más instrucciones.
 
    ~~~~
 
    L = [[5, 8, 7], ['hello', 'hi', 'hola'], [6.6, 1.54, 3.99], ['small', 'large']]
 
-   # Test if 'hola' is in the list L. Save to variable name test1
+   # Pruebe si 'hola' está en la lista L. Guardar en la variable test1
 
-   # Test if [5, 8, 7] is in the list L. Save to variable name test2
+   # Prueba si [5, 8, 7] está en la lista L. Guardar en la variable test2
 
-   # Test if 6.6 is in the third element of list L. Save to variable name test3
+   # Prueba si 6.6 está en el tercer elemento de la lista L. Guardar en la variable test3
 
    =====
 
@@ -112,19 +112,19 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedDictionaries
 
-   Provided is a nested data structure. Follow the instructions in the comments below. Do not hard code.
+   Se proporciona una estructura de datos anidada. Siga las instrucciones en los comentarios a continuación. No hagas *hard code*.
 
    ~~~~
 
    nested = {'data': ['finding', 23, ['exercises', 'hangout', 34]], 'window': ['part', 'whole', [], 'sum', ['math', 'calculus', 'algebra', 'geometry', 'statistics',['physics', 'chemistry', 'biology']]]}
 
-   # Check to see if the string data is a key in nested, if it is, assign True to the variable data, otherwise assign False.
+   # Verifique si los datos de la cadena son una clave anidada, si es así, asigne True a los datos variables, de lo contrario, asigne False.
 
-   # Check to see if the integer 24 is in the value of the key data, if it is then assign to the variable twentyfour the value of True, otherwise False.
+   # Compruebe si el número entero 24 está en el valor de los datos clave, si se asigna a la variable veinticuatro el valor de Verdadero, de lo contrario, Falso.
 
-   # Check to see that the string 'whole' is not in the value of the key window. If it's not, then assign to the variable whole the value of True, otherwise False.
+   # Verifique que la cadena 'entera' no esté en el valor de la ventana clave. Si no es así, asigne a la variable entera el valor de Verdadero, de lo contrario, Falso.
 
-   # Check to see if the string 'physics' is a key in the dictionary nested. If it is, assign to the variable physics, the value of True, otherwise False.
+   # Verifique si la cadena 'física' es una clave en el diccionario anidado. Si es así, asigne a la variable física, el valor de Verdadero, de lo contrario, Falso.
 
    =====
 
@@ -150,7 +150,7 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedDictionaries
 
-   The variable ``nested_d`` contains a nested dictionary with the gold medal counts for the top four countries in the past three Olympics. Assign the value of Great Britain's gold medal count from the London Olympics to the variable ``london_gold``. Use indexing. Do not hardcode.
+   La variable ``nested_d`` contiene un diccionario anidado con los recuentos de medallas de oro para los cuatro principales países en los últimos tres Juegos Olímpicos. Asigne el valor del recuento de medallas de oro de Gran Bretaña de los Juegos Olímpicos de Londres a la variable ``london_gold``. Usar indexación. No hagas *hardcode*.
 
    ~~~~
 
@@ -174,19 +174,19 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedDictionaries
 
-   Below, we have provided a nested dictionary. Index into the dictionary to create variables that we have listed in the ActiveCode window.
+   A continuación, proporcionamos un diccionario anidado. Indexe en el diccionario para crear las variables que hemos enumerado en la ventana ActiveCode.
 
    ~~~~
 
    sports = {'swimming': ['butterfly', 'breaststroke', 'backstroke', 'freestyle'], 'diving': ['springboard', 'platform', 'synchronized'], 'track': ['sprint', 'distance', 'jumps', 'throws'], 'gymnastics': {'women':['vault', 'floor', 'uneven bars', 'balance beam'], 'men': ['vault', 'parallel bars', 'floor', 'rings']}}
 
-   # Assign the string 'backstroke' to the name v1
+   # Asignar la cadena 'backstroke' al nombre v1
 
-   # Assign the string 'platform' to the name v2
+   # Asignar la cadena 'platform' al nombre v2
 
-   # Assign the list ['vault', 'floor', 'uneven bars', 'balance beam'] to the name v3
+   # Asigne la lista ['vault', 'floor', 'uneven bars', 'balance beam'] al nombre v3
 
-   # Assign the string 'rings' to the name v4
+   # Asignar la cadena 'rings' al nombre v4
 
    =====
 
@@ -219,7 +219,7 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedIteration
 
-   Given the dictionary, ``nested_d``, save the medal count for the USA from all three Olympics in the dictionary to the list ``US_count``.
+   Dado el diccionario, ``nested_d``, guarde el recuento de medallas para los EE. UU. De las tres Olimpiadas en el diccionario en la lista ``US_count``.
 
    ~~~~
 
@@ -246,7 +246,7 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedIteration
 
-   Iterate through the contents of ``l_of_l`` and assign the third element of sublist to a new list called ``third``.
+   Repite el contenido de ``l_of_l`` y asigna el tercer elemento de la sublista a una nueva lista llamada ``third``.
 
    ~~~~
 
@@ -270,7 +270,7 @@ Chapter Assessment
    :practice: T
    :topics: NestedData/NestedIteration
 
-   Given below is a list of lists of athletes. Create a list, ``t``, that saves only the athlete's name if it contains the letter "t". If it does not contain the letter "t", save the athlete name into list ``other``.
+   A continuación se incluye una lista de listas de atletas. Cree una lista, ``t``, que guarde solo el nombre del atleta si contiene la letra "t". Si no contiene la letra "t", guarde el nombre del atleta en la lista ``other``.
 
    ~~~~
 
