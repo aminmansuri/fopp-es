@@ -7,19 +7,19 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Chapter Assessment
-==================
+Evaluación del Capítulo
+========================
 
 .. activecode:: ee_inheritance_01
    :tags: Inheritance/inheritVarsAndMethods.rst
    :practice: T
    :topics: Inheritance/inheritVarsAndMethods
 
-   The class, ``Pokemon``, is provided below and describes a Pokemon and its leveling and evolving characteristics. An instance of the class is one pokemon that you create.
-   
-   ``Grass_Pokemon`` is a subclass that inherits from ``Pokemon`` but changes some aspects, for instance, the boost values are different.
-   
-   For the subclass ``Grass_Pokemon``, add another method called ``action`` that returns the string ``"[name of pokemon] knows a lot of different moves!"``. Create an instance of this class with the ``name`` as ``"Belle"``. Assign this instance to the variable ``p1``.
+   La clase, ``Pokemon``, se proporciona a continuación y describe un Pokémon y sus características de nivelación y evolución. Una instancia de la clase es un pokemon que creas.
+
+   ``Grass_Pokemon`` es una subclase que hereda de ``Pokemon`` pero cambia algunos aspectos, por ejemplo, los valores de impulso son diferentes.
+
+   Para la subclase ``Grass_Pokemon``, agregue otro método llamado ``action`` que devuelve la cadena ``"[name of pokemon] conoce muchos movimientos diferentes!"``. Cree una instancia de esta clase con el ``name`` como ``"Belle"``. Asigne esta instancia a la variable ``p1``.
    ~~~~
    class Pokemon(object):
        attack = 12
@@ -95,9 +95,9 @@ Chapter Assessment
    :practice: T
    :topics: Inheritance/OverrideMethods
 
-   Modify the ``Grass_Pokemon`` subclass so that the attack strength for ``Grass_Pokemon`` instances does not change until they reach level 10. At level 10 and up, their attack strength should increase by the ``attack_boost`` amount when they are trained.
-   
-   To test, create an instance of the class with the name as ``"Bulby"``. Assign the instance to the variable ``p2``. Create another instance of the ``Grass_Pokemon`` class with the name set to ``"Pika"`` and assign that instance to the variable ``p3``. Then, use ``Grass_Pokemon`` methods to train the ``p3`` ``Grass_Pokemon`` instance until it reaches at least level 10.
+   Modifique la subclase ``Grass_Pokemon`` para que la fuerza de ataque para las instancias de ``Grass_Pokemon`` no cambie hasta que alcancen el nivel 10. En el nivel 10 y más, su fuerza de ataque debería aumentar en la cantidad de ``attack_boost`` cuando son entrenados.
+
+   Para probar, cree una instancia de la clase con el nombre como ``"Bulby"``. Asigne la instancia a la variable ``p2``. Cree otra instancia de la clase ``Grass_Pokemon`` con el nombre establecido en ``"Pika"`` y asigne esa instancia a la variable ``p3``. Luego, use los métodos ``Grass_Pokemon`` para entrenar la instancia ``p3`` ``Grass_Pokemon`` hasta que alcance al menos el nivel 10.
    ~~~~
    class Pokemon(object):
        attack = 12
@@ -173,14 +173,14 @@ Chapter Assessment
 .. activecode:: ee_inheritance_05
    :tags: Inheritance/inheritVarsAndMethods.rst
 
-   Along with the ``Pokemon`` parent class, we have also provided several subclasses. Write another method in the parent class that will be inherited by the subclasses. Call it ``opponent``. It should return which type of pokemon the current type is weak and strong against, as a tuple.
+   Junto con la clase principal ``Pokemon``, también hemos proporcionado varias subclases. Escriba otro método en la clase principal que las subclases heredarán. Llámalo ``opponent``. Debería devolver contra qué tipo de pokemon el tipo actual es débil y fuerte, como una tupla.
 
-   - **Grass** is weak against *Fire* and strong against *Water*
-   - **Ghost** is weak against *Dark* and strong against *Psychic*
-   - **Fire** is weak against *Water* and strong against *Grass*
-   - **Flying** is weak against *Electric* and strong against *Fighting*
-   
-   For example, if the ``p_type`` of the subclass is ``'Grass'``, ``.opponent()`` should return the tuple ``('Fire', 'Water')``
+   - **Hierba** es débil contra *Fuego* y fuerte contra *Agua*
+   - **Fantasma** es débil contra *Oscuro* y fuerte contra *Psíquico*
+   - **Fuego** es débil contra *Agua* y fuerte contra *Hierba*
+   - **Volador** es débil contra *Eléctrico* y fuerte contra *Lucha*
+
+   Por ejemplo, si el ``p_type`` de la subclase es ``'Grass'``, ``.opponent()`` debería devolver la tupla ``('Fire', 'Water')``
    ~~~~
    class Pokemon():
        attack = 12
