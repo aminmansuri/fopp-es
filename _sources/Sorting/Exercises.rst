@@ -13,8 +13,8 @@
    :prefix: sort-8-
    :start: 1
 
-Exercises
----------
+Ejercicios
+-----------
 
 .. tabbed:: q1
 
@@ -22,11 +22,11 @@ Exercises
 
         .. actex:: ac18_8_1
 
-            You're going to write a function that takes a string as a parameter and returns a list of the five most frequent characters in the string. Eventually, you will be able to do this sort of problem without a lot of coaching. But we're going to step you through it as a series of exercises.
+            Va a escribir una función que tome un string como parámetro y devuelva una lista de los cinco caracteres más frecuentes en el string. Eventualmente, podrá hacer este tipo de problema sin mucho entrenamiento. Pero vamos a guiarlo a través de una serie de ejercicios.
 
-            First, the function will count the frequencies of all the characters, as we've done before, using a dictionary and the accumulator pattern. Then, it will sort the (key, value) pairs. Finally, it will take a slice of the sorted list to get just the top five. That slice will be returned.
+            Primero, la función contará las frecuencias de todos los caracteres, como lo hemos hecho antes, usando un diccionario y el patrón acumulador. Luego, ordenará los pares (clave, valor). Finalmente, tomará una porción de la lista ordenada para obtener solo los cinco primeros. Esa rebanada será devuelta.
 
-            Step 1. Suppose you had this list, [8, 7, 6, 6, 4, 4, 3, 1, 0], already sorted, how would you make a list of just the best 5? (Hint: take a slice).
+            Paso 1. Supongamos que tiene esta lista, [8, 7, 6, 6, 4, 4, 3, 1, 0], ya ordenada, ¿cómo haría una lista de los 5 mejores? (Sugerencia: toma un slice).
             ~~~~
             
             L = [8, 7, 6, 6, 4, 4, 3, 1, 0]
@@ -44,7 +44,7 @@ Exercises
 
         .. actex:: ac18_8_2
 
-            Now suppose the list wasn't sorted yet. How would get those same five elements from this list?
+            Ahora supongamos que la lista aún no está ordenada. ¿Cómo obtendría esos mismos cinco elementos de esta lista?
             ~~~~
 
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
@@ -64,7 +64,7 @@ Exercises
 
         .. actex:: ac18_8_3
 
-            Now take a list L and make a dictionary of counts for how often these numbers appear in the list.
+            Ahora tome una lista L y haga un diccionario de recuentos de la frecuencia con la que aparecen estos números en la lista.
             ~~~~
     
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
@@ -89,7 +89,7 @@ Exercises
     
         .. actex:: ac18_8_4
 
-            Now sort the keys (numbers) based on their frequencies. Review *Sorting a Dictionary* if you're not sure how to do this. Keep just the top five keys.
+            Ahora ordene las teclas (números) según sus frecuencias. Revise *Sorting a Dictionary* si no está seguro de cómo hacerlo. Mantenga solo las cinco llaves principales.
             ~~~~
 
             L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
@@ -118,7 +118,7 @@ Exercises
 
         .. actex:: ac18_8_5
 
-           Finally, generalize what you've done. Write a function that takes a string instead of a list as a parameter and returns a list of the five most frequent characters in the string.
+           Finalmente, generaliza lo que ha hecho. Escriba una función que tome un string en lugar de una lista como parámetro y devuelva una lista de los cinco caracteres más frecuentes en el string.
            ~~~~
 
 
