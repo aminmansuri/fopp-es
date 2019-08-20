@@ -13,8 +13,8 @@
    :prefix: moreiter-9-
    :start: 1
 
-Exercises
----------
+Ejercicios
+----------
 
 
 .. question:: moreiter_ex_1
@@ -26,7 +26,7 @@ Exercises
 
            .. actex:: ac14_9_1
 
-              **1.** Using a while loop, create a list ``numbers`` that contains the numbers 0 through 35. Your while loop should initialize a counter variable to 0. On each iteration, the loop should append the current value of the counter to the list and the counter should increase by 1. The while loop should stop when the counter is greater than 35.
+              **1.** Usando un ciclo while, cree una lista de ``numbers`` que contenga los números del 0 al 35. Su ciclo while debe inicializar una variable de contador a 0. En cada iteración, el ciclo debe agregar el valor actual del contador a la lista y el contador debe aumentar en 1. El ciclo while debe detenerse cuando el contador es mayor que 35.
               ~~~~
 
 
@@ -52,7 +52,7 @@ Exercises
 
    .. actex:: ac14_9_2
 
-      Using a while loop, create a list called ``L`` that contains the numbers 0 to 10. (i.e.: Your while loop should initialize a counter variable to 0. On each iteration, the loop should append the current value of the counter variable to ``L`` and then increase the counter by 1. The while loop should stop once the counter variable is greater than 10.)
+      Usando un ciclo while, cree una lista llamada ``L`` que contenga los números del 0 al 10. (es decir: su ciclo while debe inicializar una variable de contador a 0. En cada iteración, el ciclo debe agregar el valor actual del contador variable a ``L`` y luego aumente el contador en 1. El ciclo while debe detenerse una vez que la variable del contador sea mayor que 10.)
       ~~~~
 
       =====
@@ -74,7 +74,7 @@ Exercises
 
            .. actex:: ac14_9_3
 
-              Using a while loop, create a list called ``nums`` that contains the numbers 0 though 20. (i.e: your while looop should initialize a counter variable on 0. During each iteration, the loop should append the current value of the counter variable to ``nums`` and then increase the counter by 1. The while loop should stop once the counter variable is greater than 20)
+              Usando un bucle while, cree una lista llamada ``nums`` que contenga los números del 0 al 20. (es decir: su bucle while debe inicializar una variable de contador en 0. Durante cada iteración, el bucle debe agregar el valor actual del contador variable a ``nums`` y luego aumentar el contador en 1. El ciclo while debe detenerse una vez que la variable del contador sea mayor que 20)
               ~~~~
 
               ====
@@ -92,8 +92,8 @@ Exercises
     .. actex:: ac14_9_4
        :nocodelens:
 
-       Modify the walking turtle program so that rather than a 90 degree left or right turn the
-       angle of the turn is determined randomly at each step.
+       Modifique el programa turtle caminando para que, en lugar de girar 90 grados a la izquierda o derecha,
+       el ángulo de giro se determine aleatoriamente en cada paso.
        ~~~~
 
 
@@ -106,8 +106,8 @@ Exercises
            .. actex:: ac14_9_5
               :nocodelens:
 
-              Modify the turtle walk program so that you have two turtles each with a
-              random starting location. Keep the turtles moving until one of them leaves the screen.
+              Modifique el programa two turtles each para que tenga dos turtles cada una con un
+              ubicación inicial aleatoria. Mantén a las turtles en movimiento hasta que una de ellas salga de la pantalla.
               ~~~~
 
         .. tab:: Answer
@@ -192,7 +192,7 @@ Exercises
    .. actex:: ac14_9_6
       :nocodelens:
 
-      Create a while loop that initializes a counter at 0 and will run until the counter reaches 50. If the value of the counter is divisible by 10, append the value to the list, ``tens``.
+      Cree un ciclo while que inicialice un contador en 0 y se ejecutará hasta que el contador alcance 50. Si el valor del contador es divisible por 10, agregue el valor a la lista, ``tens``.
       ~~~~
 
       =====
@@ -211,7 +211,7 @@ Exercises
    .. actex:: ac14_9_7
       :nocodelens:
 
-      Use a while loop to iterate through the numbers 0 through 35. If a number is divisible by 3, it should be appended to a list called ``three_nums``.
+      Use un bucle while para recorrer los números del 0 al 35. Si un número es divisible por 3, debe agregarse a una lista llamada ``three_nums``.
       ~~~~
 
       =====
