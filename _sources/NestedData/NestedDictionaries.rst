@@ -11,18 +11,19 @@
    :prefix: nested-2-
    :start: 1
 
-Nested Dictionaries
--------------------
+Diccionarios Anidados
+----------------------
 
-Just as lists can contain items of any type, the value associated with a key in a dictionary can also be an object of any 
-type. In particular, it is often useful to have a list or a dictionary as a value in a dictionary. And of course, those 
-lists or dictionaries can also contain lists and dictionaries. There can be many layers of nesting.
+Así como las listas pueden contener elementos de cualquier tipo, el valor asociado con una clave en un diccionario también puede ser un objeto de cualquier
+tipo. En particular, a menudo es útil tener una lista o un diccionario como valor en un diccionario. Y por supuesto, esas listas
+o diccionarios también pueden contener listas y diccionarios. Puede haber muchas capas de anidamiento.
 
-Only the values in dictionaries can be objects of arbitrary type. The keys in dictionaries must be one of the immutable 
-data types (numbers, strings, tuples).
+Solo los valores en los diccionarios pueden ser objetos de tipo arbitrario. Las claves en los diccionarios deben ser uno de los
+tipos de datos inmutables (números, cadenas, tuplas).
 
 
-**Check Your Understanding**
+
+**Revisa tu Entendimiento**
 
 .. mchoice:: question17_2_1
    :practice: T
@@ -32,12 +33,12 @@ data types (numbers, strings, tuples).
    :answer_c: d['key1']['d'] = d['key2']
    :answer_d: d[key2] = 3
    :correct: a,c
-   :feedback_a: 5 is a valid key; {1:2, 3:4} is a dictionary with two keys, and is a valid value to associate with key 5.
-   :feedback_b: Dictionary keys must be of immutable types. A dictionary can't be used as a key in a dictionary.
-   :feedback_c: d['key2'] is {'b': 3, 'c': "yes"}, a python object. It can be bound to the key 'd' in a dictionary {'a': 5, 'c': 90, 5: 50}
-   :feedback_d: key2 is an unbound variable here. d['key2'] would be OK.
+   :feedback_a: 5 es una clave válida; {1:2, 3:4} es un diccionario con dos claves, y es un valor válido para asociar con la clave 5.
+   :feedback_b: las claves del diccionario deben ser de tipos inmutables. Un diccionario no se puede usar como clave en un diccionario.
+   :feedback_c: d['key2'] es {'b': 3, 'c': "yes"}, un objeto python. Se puede vincular a la clave 'd' en un diccionario {'a': 5, 'c': 90, 5: 50}
+   :feedback_d: key2 es una variable independiente aquí. d['clave2'] estaría bien.
     
-   Which of the following is a legal assignment statement, after the following code executes?
+   ¿Cuál de las siguientes es una declaración de asignación legal, después de que se ejecuta el siguiente código?
     
    .. code-block:: python 
     
@@ -48,7 +49,7 @@ data types (numbers, strings, tuples).
    :autograde: unittest
    :practice: T
 
-   **1.** Extract the value associated with the key color and assign it to the variable ``color``. Do not hard code this.
+   **1.** Extraiga el valor asociado con la clave color y asígnelo a la variable ``color``. No haga *hard code* para esto.
 
    ~~~~
 
