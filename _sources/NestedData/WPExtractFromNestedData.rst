@@ -12,29 +12,28 @@
    :prefix: WPNested-1-
    :start: 1
 
-👩‍💻 Extracting from Nested Data
-=================================
+👩‍💻 Extracción de Datos Anidados
+====================================
 
-A common problem, especially when dealing with data returned from a web site, is to extract certain elements from deep 
-inside a nested data structure. In principle, there's nothing more difficult about pulling something out from deep inside 
-a nested data structure: with lists, you use [] to index or a for loop to get them them all; with dictionaries, you get 
-the value associated with a particular key using [] or iterate through all the keys, accessing the value for each. But it's easy to get lost in the process and think you've extracted
-something different than you really have. Because of this, we have created a usable technique to help you during the 
-debugging process. 
+Un problema común, especialmente cuando se trata de datos devueltos desde un sitio web, es extraer ciertos elementos de
+dentro de una estructura de datos anidada. En principio, no hay nada más difícil sobre sacar algo de lo más profundo de
+una estructura de datos anidada: con listas, usa [] para indexar o un bucle for para obtenerlas todas; con diccionarios, obtienes
+el valor asociado con una clave particular usando [] o iterar a través de todas las claves, accediendo al valor de cada una.
+Pero es fácil perderse en el proceso y pensar que ha extraído algo diferente de lo que realmente tienes. Debido a esto, hemos
+creado una técnica utilizable para ayudarlo durante el proceso de depuración
 
-Follow the system described below and you will have success with extracting nested data. The process involves the 
-following steps:
+Siga el sistema descrito a continuación y tendrá éxito con la extracción de datos anidados. El proceso involucra el
+siguientes pasos:
 
-1. Understand the nested data object.
-2. Extract one object at the next level down.
-3. Repeat the process with the extracted object
+1. Comprender el objeto de datos anidados.
+2. Extraer un objeto en el siguiente nivel hacia abajo.
+3. Repita el proceso con el objeto extraído.
 
-Understand. Extract. Repeat.
+Entender. Extraer. Repetir.
 
-To illustrate this, we will walk through extracting information from data formatted in a way that it's return by the Twitter API.
-This nested dictionary results from querying Twitter, asking for three tweets
-matching "University of Michigan". As you'll see, it's quite a daunting data structure, even when printed with nice 
-indentation as it's shown below. 
+Para ilustrar esto, veremos cómo extraer información de los datos formateados de manera tal que la API de Twitter la devuelva.
+Este diccionario anidado resulta de consultar Twitter, pidiendo tres tweets emparejando "Universidad de Michigan".
+Como verá, es una estructura de datos bastante desalentadora, incluso cuando se imprime con buena sangría como se muestra a continuación.
 
 .. activecode:: ac300_1_1
 
@@ -748,29 +747,29 @@ indentation as it's shown below.
    }   
 
 
-Understand
-----------
+Entender
+---------
 
-At any level of the extraction process, the first task is to make sure you understand the current object you have 
-extracted. There are few options here.
+En cualquier nivel del proceso de extracción, la primera tarea es asegurarse de que comprende el objeto actual que ha sido
+extraído. Hay pocas opciones aquí.
 
-1. Print the entire object. If it's small enough, you may be able to make sense of the printout directly. If it's a little bit larger, you may find it helpful to "pretty-print" it, with indentation showing the level of nesting of the data. We don't have a way to pretty-print in our online browser-based environment, but if you're running code with a full Python interpreter, you can use the dumps function in the json module. For example:
+1. Imprima todo el objeto. Si es lo suficientemente pequeño, es posible que pueda entender la impresión directamente. Si es un poco más grande, puede que le resulte útil "imprimirlo bonito", con sangría que muestre el nivel de anidamiento de los datos. No tenemos una forma bonita de imprimir en nuestro entorno basado en el navegador en línea, pero si está ejecutando código con un intérprete completo de Python, puede usar la función dumps en el módulo json. Por ejemplo:
 
 .. sourcecode:: python
 
    import json
    print(json.dumps(res, indent=2))
 
-2. If printing the entire object gives you something that's too unwieldy, you have other options for making sense of it.
+2. Si imprimir todo el objeto le da algo demasiado difícil de manejar, tiene otras opciones para darle sentido.
 
-   * Copy and paste it to a site like https://jsoneditoronline.org/ which will let you explore and collapse levels
-   * Print the type of the object.
-   * If it's a dictionary:
-      * print the keys
-   * If it's a list:
-      * print its length
-      * print the type of the first item
-      * print the first item if it's of manageable size
+   * Cópielo y péguelo en un sitio como https://jsoneditoronline.org/ que le permitirá explorar y colapsar niveles
+   * Imprima el tipo del objeto.
+   * Si es un diccionario:
+      * imprimir las llaves
+   * Si es una lista:
+      * imprime su longitud
+      * imprime el tipo del primer elemento
+      * imprima el primer elemento si es de tamaño manejable
 
 .. activecode:: ac300_1_2
    :include: ac300_1_1
@@ -781,14 +780,14 @@ extracted. There are few options here.
    print(type(res))
    print(res.keys())
 
-Extract
--------
+Extraer
+--------
 
-In the extraction phase, you will be diving one level deeper into the nested data.
+En la fase de extracción, se sumergirá un nivel más en los datos anidados.
 
-1. If it's a dictionary, figure out which key has the value you're looking for, and get its value. For example: ``res2 = res['statuses']``
+1. Si se trata de un diccionario, averigua qué clave tiene el valor que estás buscando y obtén su valor. Por ejemplo: ``res2 = res['status']``
 
-2. If it's a list, you will typically be wanting to do something with each of the items (e.g., extracting something from each, and accumulating them in a list). For that you'll want a for loop, such as ``for res2 in res``. During your exploration phase, however, it will be easier to debug things if you work with just one item. One trick for doing that is to iterate over a slice of the list containing just one item. For example, ``for res2 in res[:1]``.
+2. Si se trata de una lista, normalmente querrá hacer algo con cada uno de los elementos (por ejemplo, extraer algo de cada uno y acumularlos en una lista). Para eso, querrás un bucle for, como ``for res2 in res``. Durante su fase de exploración, sin embargo, será más fácil depurar las cosas si trabaja con un solo elemento. Un truco para hacerlo es iterar sobre una porción de la lista que contiene solo un elemento. Por ejemplo, `` para res2 en res[:1]``.
 
 .. activecode:: ac300_1_3
    :include: ac300_1_1
@@ -798,15 +797,15 @@ In the extraction phase, you will be diving one level deeper into the nested dat
    res2 = res['statuses']
 
 
-Repeat
-------
+Repetir
+--------
 
-Now you'll repeat the Understand and Extract processes at the next level.
+Ahora repetirá los procesos Entender y Extraer en el siguiente nivel.
 
-Level 2
-^^^^^^^
+Nivel 2
+^^^^^^^^^
 
-First understand.
+Primero entienda.
 
 .. activecode:: ac300_1_4
    :include: ac300_1_1
@@ -818,10 +817,10 @@ First understand.
    print(type(res2)) # it's a list!
    print(len(res2))
       
-It's a list, with three items, so it's a good guess that each item represents one tweet.
+Es una lista, con tres elementos, por lo que es una buena suposición de que cada elemento representa un tweet.
 
-Now extract. Since it's a list, we'll want to work with each item, but to keep things manageable for now, let's use the 
-trick for just looking at the first item. Later we'll switch to processing all the items.
+Ahora extraer. Como es una lista, queremos trabajar con cada elemento, pero para mantener las cosas manejables por ahora, usemos
+un truco para solo mirar el primer elemento. Más tarde pasaremos a procesar todos los artículos.
 
 .. activecode:: ac300_1_5
    :include: ac300_1_1
@@ -831,17 +830,17 @@ trick for just looking at the first item. Later we'll switch to processing all t
    print(res.keys())
    res2 = res['statuses'] 
    print("----Level 2: a list of tweets-----")
-   print(type(res2)) # it's a list!
-   print(len(res2))  # looks like one item representing each of the three tweets
+   print(type(res2)) # es una lista!
+   print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2[:1]:
       print("----Level 3: a tweet----")
       print(json.dumps(res3, indent=2)[:30])
 
   
-Level 3
-^^^^^^^
+Nivel 3
+^^^^^^^^
 
-First understand.
+Primero entienda.
 
 .. activecode:: ac300_1_6
    :include: ac300_1_1
@@ -851,16 +850,16 @@ First understand.
    print(res.keys())
    res2 = res['statuses']
    print("----Level 2: a list of tweets-----")
-   print(type(res2)) # it's a list!
-   print(len(res2))  # looks like one item representing each of the three tweets
+   print(type(res2)) # es una list!
+   print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2[:1]:
       print("----Level 3: a tweet----")
       print(json.dumps(res3, indent=2)[:30])
       print(type(res3)) # it's a dictionary
       print(res3.keys())
 
-Then extract. Let's pull out the information about who sent each of the tweets. Probably that's the value associated with 
-the 'user' key.
+Luego extraer. Saquemos la información sobre quién envió cada uno de los tweets. Probablemente ese sea el valor asociado con
+la clave 'usuario'.
 
 .. activecode:: ac300_1_7
    :include: ac300_1_1
@@ -870,19 +869,19 @@ the 'user' key.
    print(res.keys())
    res2 = res['statuses']
    print("----Level 2: a list of tweets-----")
-   print(type(res2)) # it's a list!
-   print(len(res2))  # looks like one item representing each of the three tweets
+   print(type(res2)) # es una list!
+   print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2[:1]:
       print("----Level 3: a tweet----")
       print(json.dumps(res3, indent=2)[:30])
       res4 = res3['user']
       
-Now repeat.
+Ahora repita.
 
-Level 4
-^^^^^^^
+Nivel 4
+^^^^^^^^
 
-Understand.
+Entienda.
 
 .. activecode:: ac300_1_8
    :include: ac300_1_1
@@ -892,8 +891,8 @@ Understand.
    print(res.keys())
    res2 = res['statuses']
    print("----Level 2: a list of tweets-----")
-   print(type(res2)) # it's a list!
-   print(len(res2))  # looks like one item representing each of the three tweets
+   print(type(res2)) # es una lista!
+   print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2[:1]:
       print("----Level 3: a tweet----")
       print(json.dumps(res3, indent=2)[:30])
@@ -902,7 +901,7 @@ Understand.
       print(type(res4)) # it's a dictionary
       print(res4.keys())
 
-Extract. Let's print out the user's screen name and when their account was created.
+Extraer. Imprimamos el nombre de usuario del usuario y cuándo se creó su cuenta.
 
 .. activecode:: ac300_1_9
    :include: ac300_1_1
@@ -912,8 +911,8 @@ Extract. Let's print out the user's screen name and when their account was creat
    # print(res.keys())
    res2 = res['statuses']
    # print("----Level 2: a list of tweets-----")
-   # print(type(res2)) # it's a list!
-   # print(len(res2))  # looks like one item representing each of the three tweets
+   # print(type(res2)) # es una lista!
+   # print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2[:1]:
       print("----Level 3: a tweet----")
       # print(json.dumps(res3, indent=2)[:30])
@@ -923,7 +922,7 @@ Extract. Let's print out the user's screen name and when their account was creat
       # print(res4.keys())
       print(res4['screen_name'], res4['created_at'])
 
-Now, we may want to go back have it extract for all the items rather than only the first item in res2.  
+Ahora, es posible que deseemos volver a extraerlo para todos los elementos en lugar de solo el primer elemento en res2.
 
 .. activecode:: ac300_1_10
    :include: ac300_1_1
@@ -933,8 +932,8 @@ Now, we may want to go back have it extract for all the items rather than only t
    # print(res.keys())
    res2 = res['statuses']
    #print("----Level 2: a list of tweets-----")
-   #print(type(res2)) # it's a list!
-   #print(len(res2))  # looks like one item representing each of the three tweets
+   #print(type(res2)) # es una lista!
+   #print(len(res2))  # parece un elemento que representa cada uno de los tres tweets
    for res3 in res2:
       #print("----Level 3: a tweet----")
       #print(json.dumps(res3, indent=2)[:30])
@@ -944,14 +943,15 @@ Now, we may want to go back have it extract for all the items rather than only t
       #print(res4.keys())
       print(res4['screen_name'], res4['created_at'])
 
-Reflections
+Reflexiones
 ^^^^^^^^^^^
 
-Notice that each time we descend a level in a dictionary, we have a [] picking out a key. Each time we look inside a 
-list, we will have a for loop. If there are lists at multiple levels, we will have nested for loops.
+Observe que cada vez que descendemos un nivel en un diccionario, tenemos un [] seleccionando una clave.
+Cada vez que miramos dentro de una lista, tendremos un bucle for. Si hay listas en varios niveles, habremos
+anidado bucles for.
 
-Once you've figured out how to extract everything you want, you *may* choose to collapse things with multiple extractions 
-in a single expression. For example, we could have this shorter version.
+Una vez que haya descubierto cómo extraer todo lo que desea, *puede* optar por colapsar las cosas con múltiples extracciones
+en una sola expresión Por ejemplo, podríamos tener esta versión más corta.
 
 .. activecode:: ac300_1_11
    :include: ac300_1_1
@@ -959,8 +959,8 @@ in a single expression. For example, we could have this shorter version.
    for res3 in res['statuses']:
        print(res3['user']['screen_name'], res3['user']['created_at'])
 
-Even with this compact code, we can still count off how many levels of nesting we have extracted from, in this case four. 
-res['statuses'] says we have descended one level (in a dictionary). for res3 in... says we are have descended another 
-level (in a list). ['user'] is descending one more level, and ['screen_name'] is descending one more level. 
+Incluso con este código compacto, aún podemos contar cuántos niveles de anidamiento hemos extraído, en este caso cuatro.
+res['statuses'] dice que hemos descendido un nivel (en un diccionario). for res3 in... dice que hemos descendido otro
+nivel (en una lista). ['user'] está descendiendo un nivel más y ['screen_name'] está descendiendo un nivel más.
 
  
