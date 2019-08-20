@@ -11,26 +11,26 @@
    :prefix: func-4-
    :start: 1
 
-Returning a value from a function
+Devolver un valor de una función
 ---------------------------------
 
 .. image:: Figures/function_call.gif
    :alt: gif of a box labeled function with three spaces on the top for input and a space on the bottom for output. Three arrows enter the top and are labeled as input or arguments. The function box shakes, and then one arrow leaves the bottom of the function box.
 
-Not only can you pass a parameter value into a function, a function can also produce a value. You have already 
-seen this in some previous functions that you have used. For example, ``len`` takes a list or string as a parameter 
-value and returns a number, the length of that list or string. ``range`` takes an integer as a parameter value and 
-returns a list containing all the numbers from 0 up to that parameter value.
+No solo puede pasar un valor de parámetro a una función, una función también puede producir un valor. Ya lo tienes
+visto esto en algunas funciones anteriores que ha utilizado. Por ejemplo, ``len`` toma una lista o string como parámetro
+valor y devuelve un número, la longitud de esa lista o string. ``range`` toma un entero como valor de parámetro y
+devuelve una lista que contiene todos los números desde 0 hasta ese valor de parámetro.
 
-Functions that return values are sometimes called **fruitful functions**. In many other languages, a function that 
-doesn't return a value is called a **procedure**, but we will stick here with the Python way of also calling it a 
-function, or if we want to stress it, a *non-fruitful* function.
+Las funciones que devuelven valores a veces se denominan **funciones fructíferas**. En muchos otros idiomas, una función que
+no devuelve un valor se llama un **procedimiento**, pero nos quedaremos aquí con la forma de Python de llamarlo también una
+función, o si queremos enfatizarlo, una función *no fructífera*.
 
 .. image:: Figures/blackboxfun.png
 
-How do we write our own fruitful function? Let's start by creating a very simple mathematical function that we will 
-call ``square``. The square function will take one number as a parameter and return the result of squaring that 
-number. Here is the black-box diagram with the Python code following.
+¿Cómo escribimos nuestra propia función fructífera? Comencemos creando una función matemática muy simple que haremos
+llamar ``square``. La función square tomará un número como parámetro y devolverá el resultado de la cuadratura del
+número. Aquí está el diagrama de caja negra con el siguiente código de Python.
 
 .. image:: Figures/squarefun.png
 
@@ -42,19 +42,19 @@ number. Here is the black-box diagram with the Python code following.
 
     toSquare = 10
     result = square(toSquare)
-    print("The result of {} squared is {}.".format(toSquare, result))
+    print("El resultado de {} square es {}.".format(toSquare, result))
 
-The **return** statement is followed by an expression which is evaluated. Its result is returned to the caller as the 
-"fruit" of calling this function. Because the return statement can contain any Python expression we could have 
-avoided creating the **temporary variable** ``y`` and simply used ``return x*x``. Try modifying the square function 
-above to see that this works just the same. On the other hand, using **temporary variables** like ``y`` in the program 
-above makes debugging easier. These temporary variables are referred to as **local variables**.
+La declaración **return** es seguida por una expresión que se evalúa. Su resultado se devuelve a la persona que llama como
+"fruto" de llamar a esta función. Debido a que la declaración de retorno puede contener cualquier expresión de Python que podamos tener,
+evitó crear la **variable temporal** ``y`` y simplemente usó ``return x*x``. Intenta modificar la función square
+arriba para ver que esto funciona igual. Por otro lado, usando **variables temporales** como ``y`` en el programa
+arriba facilita la depuración. Estas variables temporales se denominan **variables locales**.
 
-Notice something important here. The name of the variable we pass as an argument --- ``toSquare`` --- has nothing to 
-do with the name of the formal parameter --- ``x``.  It is as if  ``x = toSquare`` is executed when ``square`` is 
-called. It doesn't matter what the value was named in the caller (the place where the function was invoked). Inside 
-``square``, it's name is ``x``.  You can see this very clearly in codelens, where the global variables and the local 
-variables for the square function are in separate boxes.
+Note algo importante aquí. El nombre de la variable que pasamos como argumento --- ``toSquare`` --- no tiene nada que
+hacer con el nombre del parámetro formal  --- ``x``. Es como si se ejecuta ``x = toSquare`` cuando ``square`` es
+llamado. No importa cómo se llamó el valor en la persona que llama (el lugar donde se invocó la función). Dentro
+``square``, su nombre es ``x``. Puede ver esto muy claramente en codelens, donde están las variables globales y las locales
+para la función cuadrada están en cuadros separados.
 
 .. codelens:: clens11_4_1
     :python: py3
@@ -66,32 +66,32 @@ variables for the square function are in separate boxes.
     toSquare = 10
     squareResult = square(toSquare)
 
-There is one more aspect of function return values that should be noted. All Python functions return the special value 
-``None`` unless there is an explicit return statement with a value other than ``None``. Consider the following common 
-mistake made by beginning Python programmers. As you step through this example, pay very close attention to the return 
-value in the local variables listing. Then look at what is printed when the function is over.
+Hay un aspecto más de los valores de retorno de la función que debe tenerse en cuenta. Todas las funciones de Python devuelven el valor especial
+``None`` a menos que haya una declaración de retorno explícita con un valor diferente a ``None``. Considere lo siguiente un común
+error cometido por los programadores principiantes de Python. A medida que avance en este ejemplo, preste mucha atención al retorno
+valor en el listado de variables locales. Luego mire lo que se imprime cuando finaliza la función.
 
 .. codelens:: clens11_4_2
     :python: py3
 
     def square(x):
         y = x * x
-        print(y)   # Bad! This is confusing! Should use return instead!
+        print(y)   # ¡Malo! ¡Esto es confuso! ¡Debería usar return en su lugar!
 
     toSquare = 10
     squareResult = square(toSquare)
     print("The result of {} squared is {}.".format(toSquare, squareResult))
 
-The problem with this function is that even though it prints the value of the squared input, that value will not be 
-returned to the place where the call was done. Instead, the value ``None`` will be returned. Since line 6 uses the 
-return value as the right hand side of an assignment statement, ``squareResult`` will have ``None`` as its value and 
-the result printed in line 7 is incorrect. Typically, functions will return values that can be printed or processed in 
-some other way by the caller.
+El problema con esta función es que, aunque imprima el valor de la entrada al cuadrado, ese valor no será
+regresó al lugar donde se realizó la llamada. En cambio, se devolverá el valor ``None``. Como la línea 6 usa el
+valor de retorno como el lado derecho de una instrucción de asignación, ``squareResult`` tendrá ``None`` como su valor y
+El resultado impreso en la línea 7 es incorrecto. Normalmente, las funciones devolverán valores que se pueden imprimir o procesar
+de otra manera por la persona que llama.
 
-A return statement, once executed, immediately terminates execution of a function, even if it is not the last 
-statement in the function. In the following code, when line 3 executes, the value 5 is returned and assigned to the 
-variable x, then printed. Lines 4 and 5 never execute. Run the following code and try making some modifications of 
-it to make sure you understand why "there" and 10 never print out.
+Una declaración de retorno, una vez ejecutada, finaliza inmediatamente la ejecución de una función, incluso si no es la última.
+declaración en la función. En el siguiente código, cuando se ejecuta la línea 3, el valor 5 se devuelve y se asigna a
+variable x, luego impresa. Las líneas 4 y 5 nunca se ejecutan. Ejecute el siguiente código e intente hacer algunas modificaciones de
+para asegurarse de que entiende por qué "allí" y 10 nunca se imprimen.
 
 .. activecode:: ac11_4_2
 
@@ -104,45 +104,45 @@ it to make sure you understand why "there" and 10 never print out.
   x = weird()
   print(x)
 
-The fact that a return statement immediately ends execution of the code block inside a function is important to 
-understand for writing complex programs, and it can also be very useful. The following example is a situation where 
-you can use this to your advantage -- and understanding this will help you understand other people's code better, and 
-be able to walk through code more confidently.
+El hecho de que una declaración de devolución finalice inmediatamente la ejecución del bloque de código dentro de una función es importante para
+entender para escribir programas complejos, y también puede ser muy útil. El siguiente ejemplo es una situación donde
+puede usar esto para su ventaja, y comprender esto lo ayudará a comprender mejor el código de otras personas, y
+ser capaz de recorrer el código con más confianza.
 
-Consider a situation where you want to write a function to find out, from a class attendance list, whether anyone's 
-first name is longer than five letters, called ``longer_than_five``. If there is anyone in class whose first name is 
-longer than 5 letters, the function should return ``True``. Otherwise, it should return ``False``. 
+Considere una situación en la que desea escribir una función para averiguar, de una lista de asistencia a clase, si alguien
+El primer nombre es más largo que cinco letras, llamado ``longer_than_five``. Si hay alguien en clase cuyo primer nombre es
+con más de 5 letras, la función debe devolver ``True``. De lo contrario, debería devolver ``False``.
 
-In this case, you'll be using conditional statements in the code that exists in the **function body**, the code block 
-indented underneath the function definition statement (just like the code that starts with the line ``print("here")`` 
-in the example above -- that's the body of the function ``weird``, above).
+En este caso, usará sentencias condicionales en el código que existe en el **cuerpo de la función**, el bloque de código
+sangrado debajo de la declaración de definición de función (al igual que el código que comienza con la línea ``print("here")``
+en el ejemplo anterior, ese es el cuerpo de la función ``extraño``, arriba).
 
-**Bonus challenge for studying:** After you look at the explanation below, stop looking at the code -- just the 
-description of the function above it, and try to write the code yourself! Then test it on different lists and make 
-sure that it works. But read the explanation first, so you can be sure you have a solid grasp on these function 
-mechanics.
+**Desafío adicional para estudiar:** Después de mirar la explicación a continuación, deja de mirar el código, solo el
+descripción de la función que se encuentra arriba e intente escribir el código usted mismo. Luego pruébelo en diferentes listas y haga
+Seguro que funciona. Pero lea primero la explicación, para asegurarse de tener una sólida comprensión de estas funciones.
+mecánica.
 
-First, an English plan for this new function to define called ``longer_than_five``:
+Primero, un plan en español para definir esta nueva función llamado ``longer_than_five``:
 
-* You'll want to pass in a list of strings (representing people's first names) to the function.
-* You'll want to iterate over all the items in the list, each of the strings.
-* As soon as you get to one name that is longer than five letters, you know the function should return ``True`` -- yes, there is at least one name longer than five letters! 
-* And if you go through the whole list and there was no name longer than five letters, then the function should return ``False``.
+* Querrá pasar una lista de cadenas (que representan los nombres de las personas) a la función.
+* Querrá iterar sobre todos los elementos de la lista, cada una de las cadenas.
+* Tan pronto como llegue a un nombre que tenga más de cinco letras, sabrá que la función debe devolver `` Verdadero ''. ¡Sí, hay al menos un nombre con más de cinco letras!
+* Y si revisa toda la lista y no había un nombre de más de cinco letras, entonces la función debería devolver `` False``.
 
-Now, the code:
+Ahora, el código:
 
 .. activecode:: ac11_4_3
 
   def longer_than_five(list_of_names):
-      for name in list_of_names: # iterate over the list to look at each name
-          if len(name) > 5: # as soon as you see a name longer than 5 letters,
-              return True # then return True!
-              # If Python executes that return statement, the function is over and the rest of the code will not run -- you already have your answer!
-      return False # You will only get to this line if you
-      # iterated over the whole list and did not get a name where 
-      # the if expression evaluated to True, so at this point, it's correct to return False!
+      for name in list_of_names: # iterar sobre la lista para ver cada nombre
+          if len(name) > 5: # tan pronto como vea un nombre de más de 5 letras,
+              return True # luego retorna True!
+              # Si Python ejecuta esa declaración de retorno, la función ha terminado y el resto del código no se ejecutará, ¡ya tiene su respuesta!
+      return False # Solo llegarás a esta línea si
+      # iterado en toda la lista y no obtuvo un nombre donde
+      # la expresión if se evaluó como True, por lo que en este punto, ¡es correcto devolver False!
 
-  # Here are a couple sample calls to the function with different lists of names. Try running this code in Codelens a few times and make sure you understand exactly what is happening.
+  # Aquí hay un par de llamadas de muestra a la función con diferentes listas de nombres. Intente ejecutar este código en Codelens varias veces y asegúrese de comprender exactamente lo que está sucediendo.
 
   list1 = ["Sam","Tera","Sal","Amita"]
   list2 = ["Rey","Ayo","Lauren","Natalie"]
@@ -151,42 +151,42 @@ Now, the code:
   print(longer_than_five(list2))
 
 
-So far, we have just seen return values being assigned to variables. For example, we had the line 
-``squareResult = square(toSquare)``. As with all assignment statements, the right hand side is executed first. It 
-invokes the ``square`` function, passing in a parameter value 10 (the current value of ``toSquare``). That returns a 
-value 100, which completes the evaluation of the right-hand side of the assignment. 100 is then assigned to the 
-variable ``squareResult``. In this case, the function invocation was the entire expression that was evaluated.
+Hasta ahora, acabamos de ver valores de retorno asignados a variables. Por ejemplo, tuvimos la línea
+``squareResult = square(toSquare)``. Como con todas las declaraciones de asignación, el lado derecho se ejecuta primero. Eso
+invoca la función `` cuadrado '', pasando un valor de parámetro 10 (el valor actual de ``toSquare``). Eso devuelve un
+valor 100, que completa la evaluación del lado derecho de la tarea. 100 se asigna a la
+variable ``squareResult``. En este caso, la invocación de la función fue la expresión completa que se evaluó.
 
-Function invocations, however, can also be used as part of more complicated expressions. For example, 
-``squareResult = 2 * square(toSquare)``. In this case, the value 100 is returned and is then multiplied by 2 to 
-produce the value 200. When python evaluates an expression like ``x * 3``, it substitutes the current value of x into 
-the expression and then does the multiplication. When python evaluates an expression like ``2 * square(toSquare)``, it 
-substitutes the return value 100 for entire function invocation and then does the multiplication.
+Sin embargo, las invocaciones de funciones también se pueden usar como parte de expresiones más complicadas. Por ejemplo,
+``squareResult = 2 * square(toSquare)``. En este caso, se devuelve el valor 100 y luego se multiplica por 2 para
+producir el valor 200. Cuando python evalúa una expresión como ``x * 3``, sustituye el valor actual de x en
+la expresión y luego hace la multiplicación. Cuando python evalúa una expresión como ``2 * square(toSquare)``,
+sustituye el valor de retorno 100 por la invocación de la función completa y luego realiza la multiplicación.
 
-To reiterate, when executing a line of code ``squareResult = 2 * square(toSquare)``, the python
-interpreter does these steps:
+Para reiterar, al ejecutar una línea de código ``squareResult = 2 * square(toSquare)``,
+el intérprete hace estos pasos:
 
-#. It's an assignment statement, so evaluate the right-hand side expression ``2 * square(toSquare)``.
-#. Look up the values of the variables square and toSquare: square is a function object and toSquare is 10
-#. Pass 10 as a parameter value to the function, get back the return value 100
-#. Substitute 100 for square(toSquare), so that the expression now reads ``2 * 100``
-#. Assign 200 to variable ``squareResult``
+#. Es una declaración de asignación, así que evalúa la expresión del lado derecho ``2 * square(toSquare)``.
+#. Busque los valores de las variables square y toSquare: square es un objeto de función y toSquare es 10
+#. Pase 10 como valor de parámetro a la función, recupere el valor de retorno 100
+#. Sustituya el cuadrado por 100 (toSquare), de modo que la expresión ahora lea ``2 * 100``
+#. Asigne 200 a la variable ``squareResult``
 
-**Check your understanding**
+**Revise su Entendimiento**
 
 .. mchoice:: question11_4_1
-   :answer_a: You should never use a print statement in a function definition.
-   :answer_b: You should not have any statements in a function after the return statement.  Once the function gets to the return statement it will immediately stop executing the function.
-   :answer_c: You must calculate the value of x+y+z before you return it.
-   :answer_d: A function cannot return a number.
+   :answer_a: Nunca debe usar una declaración de impresión en una definición de función.
+   :answer_b: No debería tener ninguna declaración en una función después de la declaración de devolución. Una vez que la función llega a la declaración de retorno, inmediatamente dejará de ejecutarla.
+   :answer_c: Debe calcular el valor de x+y+z antes de devolverlo.
+   :answer_d: Una función no puede devolver un número.
    :correct: b
-   :feedback_a: Although you should not mistake print for return, you may include print statements inside your functions.
-   :feedback_b: This is a very common mistake so be sure to watch out for it when you write your code!
-   :feedback_c: Python will automatically calculate the value x+y+z and then return it in the statement as it is written
-   :feedback_d: Functions can return any legal data, including (but not limited to) numbers, strings, lists, dictionaries, etc.
+   :feedback_a: Aunque no debe confundir la impresión con la devolución, puede incluir declaraciones de impresión dentro de sus funciones.
+   :feedback_b: Este es un error muy común, ¡así que asegúrese de tenerlo en cuenta cuando escriba su código!
+   :feedback_c: Python calculará automáticamente el valor x+y+z y luego lo devolverá en la declaración tal como está escrito
+   :feedback_d: Las funciones pueden devolver cualquier información legal, incluidos (entre otros) números, strings, listas, diccionarios, etc.
    :practice: T
 
-   What is wrong with the following function definition:
+   Lo que está mal con la siguiente definición de función:
 
    .. code-block:: python
 
@@ -195,16 +195,16 @@ interpreter does these steps:
          print('the answer is', x+y+z)
 
 .. mchoice:: question11_4_2
-   :answer_a: The value None
-   :answer_b: The value of x+y+z
-   :answer_c: The string 'x+y+z'
+   :answer_a: El valor None
+   :answer_b: El valor de x+y+z
+   :answer_c: El string 'x+y+z'
    :correct: a
-   :feedback_a: We have accidentally used print where we mean return.  Therefore, the function will return the value None by default.  This is a VERY COMMON mistake so watch out!  This mistake is also particularly difficult to find because when you run the function the output looks the same.  It is not until you try to assign its value to a variable that you can notice a difference.
-   :feedback_b: Careful!  This is a very common mistake.  Here we have printed the value x+y+z but we have not returned it.  To return a value we MUST use the return keyword.
-   :feedback_c: x+y+z calculates a number (assuming x+y+z are numbers) which represents the sum of the values x, y and z.
+   :feedback_a: Hemos usado accidentalmente print donde queremos decir retorno. Por lo tanto, la función devolverá el valor Ninguno de forma predeterminada. Este es un error MUY COMÚN, ¡así que ten cuidado! Este error también es particularmente difícil de encontrar porque cuando ejecuta la función la salida se ve igual. No es hasta que intenta asignar su valor a una variable que puede notar una diferencia.
+   :feedback_b: ¡Cuidado! Este es un error muy común. Aquí hemos impreso el valor x+y+z pero no lo hemos devuelto. Para devolver un valor DEBEMOS utilizar la palabra clave return.
+   :feedback_c: x+y+z calcula un número (suponiendo que x+y+z son números) que representa la suma de los valores x, y and z.
    :practice: T
 
-   What will the following function return?
+   ¿Qué devolverá la siguiente función?
 
    .. code-block:: python
 
@@ -216,9 +216,9 @@ interpreter does these steps:
    :answer_b: 50
    :answer_c: 25 + 25
    :correct: b
-   :feedback_a: It squares 5 twice, and adds them together.
-   :feedback_b: The two return values are added together.
-   :feedback_c: The two results are substituted into the expression and then it is evaluated. The returned values are integers in this case, not strings.
+   :feedback_a: Eleva al cuadrado 5 dos veces y los suma.
+   :feedback_b: los dos valores de retorno se suman.
+   :feedback_c: Los dos resultados se sustituyen en la expresión y luego se evalúa. Los valores devueltos son enteros en este caso, no cadenas.
    :practice: T
 
    What will the following code output?
@@ -234,13 +234,13 @@ interpreter does these steps:
 .. mchoice:: question11_4_4
    :answer_a: 8
    :answer_b: 16
-   :answer_c: Error: can't put a function invocation inside parentheses
+   :answer_c: Error: no se puede poner una invocación de función entre paréntesis
    :correct: b
-   :feedback_a: It squares 2, yielding the value 4. But that doesn't mean the next value multiplies 2 and 4.
-   :feedback_b: It squares 2, yielding the value 4. 4 is then passed as a value to square again, yeilding 16.
-   :feedback_c: This is a more complicated expression, but still valid. The expression square(2) is evaluated, and the return value 4 substitutes for square(2) in the expression.
+   :feedback_a: Eleva al cuadrado 2, produciendo el valor 4. Pero eso no significa que el siguiente valor multiplique 2 y 4.
+   :feedback_b: Eleva al cuadrado 2, produciendo el valor 4. 4 luego se pasa como un valor al cuadrado nuevamente, obteniendo 16.
+   :feedback_c: Esta es una expresión más complicada, pero aún válida. Se evalúa la expresión cuadrado (2) y el valor de retorno 4 sustituye al cuadrado (2) en la expresión.
 
-   What will the following code output?
+   ¿Cuál será el siguiente código de salida?
    
    .. code-block:: python 
 
@@ -252,19 +252,19 @@ interpreter does these steps:
 
 .. mchoice:: question11_4_5
    :answer_a: 1
-   :answer_b: Yes
-   :answer_c: First one was longer
-   :answer_d: Second one was at least as long
+   :answer_b: Sí
+   :answer_c: El primero fue más largo
+   :answer_d: El segundo fue al menos tan largo
    :answer_e: Error
    :correct: c
-   :feedback_a: cyu2 returns the value 1, but that's not what prints.
-   :feedback_b: "Yes" is longer, but that's not what prints.
-   :feedback_c: cyu2 returns the value 1, which is assigned to z.
-   :feedback_d: cyu2 returns the value 1, which is assigned to z.
-   :feedback_e: what do you think will cause an error.
+   :feedback_a: cyu2 devuelve el valor 1, pero eso no es lo que se imprime.
+   :feedback_b: "Sí" es más largo, pero eso no es lo que se imprime.
+   :feedback_c: cyu2 devuelve el valor 1, que se asigna a z.
+   :feedback_d: cyu2 devuelve el valor 1, que se asigna a z.
+   :feedback_e: ¿qué crees que causará un error?
    :practice: T
 
-   What will the following code output?
+   ¿Cuál será el siguiente código de salida?
    
    .. code-block:: python 
 
@@ -273,23 +273,23 @@ interpreter does these steps:
            y = len(s2)
            return x-y
            
-       z = cyu2("Yes", "no")
+       z = cyu2("Si", "No")
        if z > 0:
-           print("First one was longer")
+           print("El primero fue más largo")
        else:
-           print("Second one was at least as long")
+           print("El segundo fue al menos tan largo")
  
 .. mchoice:: question11_4_6
    :answer_a: square
    :answer_b: g
    :answer_c: a number
    :correct: b
-   :feedback_a: Before executing square, it has to figure out what value to pass in, so g is executed first
-   :feedback_b: g has to be executed and return a value in order to know what paramater value to provide to x.
-   :feedback_c: square and g both have to execute before the number is printed.
+   :feedback_a: Antes de ejecutar el cuadrado, tiene que averiguar qué valor pasar, por lo que g se ejecuta primero
+   :feedback_b: g debe ejecutarse y devolver un valor para saber qué valor de parámetro proporcionar a x.
+   :feedback_c: square y g deben ejecutarse antes de imprimir el número.
    :practice: T
 
-   Which will print out first, square, g, or a number?
+   ¿Cuál imprimirá primero, square, g o un número?
    
    .. code-block:: python 
 
@@ -308,23 +308,23 @@ interpreter does these steps:
    :answer_b: 2
    :answer_c: None
    :correct: b
-   :feedback_a: The function gets to a return statement after 2 lines are printed, so the third print statement will not run.
-   :feedback_b: Yes! Two printed lines, and then the function body execution reaches a return statement.
-   :feedback_c: The function returns an integer value! However, this code does not print out the result of the function invocation, so you can't see it (print is for people). The only lines you see printed are the ones that occur in the print statements before the return statement.
+   :feedback_a: La función llega a una declaración de retorno después de imprimir 2 líneas, por lo que la tercera declaración de impresión no se ejecutará.
+   :feedback_b: ¡Sí! Dos líneas impresas, y luego la ejecución del cuerpo de la función alcanza una declaración de retorno.
+   :feedback_c: ¡La función devuelve un valor entero! Sin embargo, este código no imprime el resultado de la invocación de la función, por lo que no puede verlo (la impresión es para personas). Las únicas líneas que ve impresas son las que aparecen en las declaraciones de impresión antes de la declaración de devolución.
    :practice: T
 
-   How many lines will the following code print?
+   ¿Cuántas líneas imprimirá el siguiente código?
    
    .. code-block:: python
 
        def show_me_numbers(list_of_ints):
            print(10)
-           print("Next we'll accumulate the sum")
+           print("Luego acumularemos la suma")
            accum = 0
            for num in list_of_ints:
                accum = accum + num
            return accum
-           print("All done with accumulation!")
+           print("Todo hecho con acumulación!")
 
        show_me_numbers([4,2,3])
 
@@ -333,7 +333,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **8.** Write a function named ``same`` that takes a string as input, and simply returns that string.
+   **8.** Escriba una función llamada ``same`` que tome un string como entrada y simplemente devuelva ese string.
    ~~~~
    
    =====
@@ -353,7 +353,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **9.** Write a function called ``same_thing`` that returns the parameter, unchanged.
+   **9.** Escriba una función llamada ``same_thing`` que devuelva el parámetro, sin cambios.
    ~~~~
 
    =====
@@ -373,7 +373,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **10.** Write a function called ``subtract_three`` that takes an integer or any number as input, and returns that number minus three.
+   **10.** Escriba una función llamada ``subtract_three`` que tome un número entero o cualquier número como entrada, y devuelva ese número menos tres.
    ~~~~
    
    ===== 
@@ -394,7 +394,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **11.** Write a function called ``change`` that takes one number as its input and returns that number, plus 7.
+   **11.** Escriba una función llamada ``change`` que tome un número como entrada y devuelva ese número, más 7.
    ~~~~
 
    =====
@@ -414,7 +414,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **12.** Write a function named ``intro`` that takes a string as input. Given the string "Becky" as input, the function should return: "Hello, my name is Becky and I love SI 106."
+   **12.** Escriba una función llamada ``intro`` que tome un string como entrada. Dado el string "Becky" como entrada, la función debería devolver: "Hello, my name is Becky and I love SI 106."
    ~~~~
 
    =====
@@ -434,7 +434,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **13.** Write a function called ``s_change`` that takes one string as input and returns that string, concatenated with the string " for fun.".
+   **13.** Escriba una función llamada ``s_change`` que tome un string como entrada y devuelva ese string, concatenado con el string " for fun.".
    ~~~~
 
    =====
@@ -454,7 +454,7 @@ interpreter does these steps:
    :autograde: unittest
    :practice: T
 
-   **14.** Write a function called ``decision`` that takes a string as input, and then checks the number of characters. If it has over 17 characters, return "This is a long string", if it is shorter or has 17 characters, return "This is a short string".
+   **14.** Escriba una función llamada ``decision`` que tome un string como entrada y luego verifique el número de caracteres. Si tiene más de 17 caracteres, devuelva "This is a long string", si es más corta o tiene 17 caracteres, devuelva "This is a short string".
    ~~~~
 
    =====
