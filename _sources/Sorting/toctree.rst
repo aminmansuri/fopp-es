@@ -1,8 +1,8 @@
-Sorting
-:::::::
+Ordenamiento
+::::::::::::
 
 .. toctree::
-   :caption: Sorting
+   :caption: Ordenamiento
    :maxdepth: 2
 
    intro-SortingwithSortandSorted.rst

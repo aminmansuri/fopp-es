@@ -13,13 +13,13 @@
    :prefix: sort-1-
    :start: 1
 
-Introduction: Sorting with Sort and Sorted
-==========================================
+Introducción: Ordenamiento con Sort y Sorted
+================================================
 
-When we first introduced lists, we noted the existence of a method sort. When invoked on a list, the 
-order of items in the list is changed. If no optional parameters are specified, the items are arranged in 
-whatever the natural ordering is for the item type. For example, if the items are all integers, then 
-smaller numbers go earlier in the list. If the items are all strings, they are arranged in alphabetic order.
+Cuando presentamos las listas por primera vez, notamos la existencia de un método de clasificación. Cuando se invoca en una lista,
+se cambia el orden de los elementos de la lista. Si no se especifican parámetros opcionales, los elementos se organizan en
+cualquiera que sea el orden natural para el tipo de artículo. Por ejemplo, si los elementos son todos enteros, entonces
+los números más pequeños van antes en la lista. Si los elementos son todos strings, se ordenan en orden alfabético.
 
 .. activecode:: ac18_1_1
 
@@ -31,14 +31,14 @@ smaller numbers go earlier in the list. If the items are all strings, they are a
     L2.sort()
     print(L2)
     
-Note that the sort method does **not** return a sorted version of the list. In fact, it 
-returns the value None. But the list itself has been modified. This kind of operation 
-that works by having a *side effect* on the list can be quite confusing. 
+Tenga en cuenta que el método de clasificación **no** devuelve una versión ordenada de la lista. De hecho,
+devuelve el valor None. Pero la lista misma ha sido modificada. Este tipo de operación
+funciona al tener un *efecto secundario* en la lista, puede ser bastante confuso.
 
-In this course, we will generally use an alternative way of sorting, the function ``sorted`` rather than 
-the method ``sort``. Because it is a function rather than a method, it is invoked on a list by passing the 
-list as a parameter inside the parentheses, rather than putting the list before the period. More importantly, 
-``sorted`` does not change the original list. Instead, it returns a new list.
+En este curso, generalmente usaremos una forma alternativa de ordenar, la función ``sorted`` en lugar de
+el método ``sort``. Debido a que es una función en lugar de un método, se invoca en una lista pasando la
+lista como un parámetro dentro de los paréntesis, en lugar de poner la lista antes del punto. Más importante,
+``sorted`` no cambia la lista original. En cambio, devuelve una nueva lista.
 
 .. activecode:: ac18_1_2
 

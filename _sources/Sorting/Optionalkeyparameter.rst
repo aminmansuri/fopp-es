@@ -11,20 +11,20 @@
    :prefix: sort-3-
    :start: 1
 
-Optional key parameter
-----------------------
+Parámetro clave opcional
+-------------------------
 
-If you want to sort things in some order other than the "natural" or its reverse, you can provide an
-additional parameter, the key parameter. For example, suppose you want to sort a list of numbers based on
-their absolute value, so that -4 comes after 3? Or suppose you have a dictionary with strings as the keys
-and numbers as the values. Instead of sorting them in alphabetic order based on the keys, you might like
-to sort them in order based on their values.
+Si desea ordenar las cosas en un orden distinto al "natural" o al revés, puede proporcionar un
+parámetro adicional, el parámetro clave. Por ejemplo, suponga que desea ordenar una lista de números según
+su valor absoluto, de modo que -4 viene después de 3? O suponga que tiene un diccionario con strings como teclas
+y números como los valores. En lugar de ordenarlos en orden alfabético según las teclas, es posible que desee
+ordenarlos en orden según sus valores.
 
-First, let's see an example, and then we'll dive into how it works.
+Primero, veamos un ejemplo, y luego profundizaremos en cómo funciona.
 
-First, let's define a function absolute that takes a number and returns its absolute value.
-(Actually, python provides a built-in function ``abs`` that does this, but we are going to
-define our own, for reasons that will be explained in a minute.)
+Primero, definamos una función absoluta que tome un número y devuelva su valor absoluto.
+(En realidad, python proporciona una función incorporada ``abs`` que hace esto, pero vamos a
+definir el nuestro, por razones que se explicarán en un minuto).
 
 .. activecode:: ac18_3_1
 
@@ -43,8 +43,8 @@ define our own, for reasons that will be explained in a minute.)
         print(absolute(y))
 
 
-Now, we can pass the absolute function to L1 in order to specify that we want the items
-sorted in order of their absolute value, rather than in order of their actual value.
+Ahora, podemos pasar la función absoluta a L1 para especificar que queremos los elementos
+ordenados por su valor absoluto, en lugar de por su valor real.
 
 .. activecode:: ac18_3_2
 
@@ -62,58 +62,58 @@ sorted in order of their absolute value, rather than in order of their actual va
     #or in reverse order
     print(sorted(L1, reverse=True, key=absolute))
 
-What's really going on there? We've done something pretty strange. Before, all the values we have
-passed as parameters have been pretty easy to understand: numbers, strings, lists, Booleans, dictionaries.
-Here we have passed a function object: absolute is a variable name whose value is the function. When we
-pass that function object, it is *not* automatically invoked. Instead, it is just bound to the formal
-parameter key of the function sorted.
+¿Qué está pasando realmente allí? Hemos hecho algo bastante extraño. Antes todos los valores que tenemos
+pasados como parámetros han sido bastante fáciles de entender: números, strings, lists, Booleans, diccionarios.
+Aquí hemos pasado un objeto de función: absoluto es un nombre de variable cuyo valor es la función. Cuando nosotros
+pasar ese objeto de función, *no* se invoca automáticamente. En cambio, solo está vinculado a lo formal
+clave de parámetro de la función ordenada.
 
-We are not going to look at the source code for the built-in function sorted. But if we did, we would find
-somewhere in its code a parameter named key with a default value of None. When a value is provided for that
-parameter in an invocation of the function sorted, it has to be a function. What the sorted function does is
-call that key function once for each item in the list that's getting sorted. It associates the result returned
-by that function (the absolute function in our case) with the original value. Think of those associated values
-as being little post-it notes that decorate the original values. The value 4 has a post-it note that says 4
-on it, but the value -2 has a post-it note that says 2 on it. Then the sorted function rearranges the original
-items in order of the values written on their associated post-it notes.
+No vamos a ver el código fuente de la función incorporada ordenada. Pero si lo hiciéramos, encontraríamos
+en algún lugar de su código, un parámetro llamado clave con un valor predeterminado de Ninguno. Cuando se proporciona un valor para ese
+parámetro en una invocación de la función ordenada, tiene que ser una función. Lo que hace la función ordenada se
+llame a esa función clave una vez para cada elemento de la lista que se está ordenando. Asocia el resultado devuelto
+por esa función (la función absoluta en nuestro caso) con el valor original. Piensa en esos valores asociados
+como pequeñas notas post-it que decoran los valores originales. El valor 4 tiene una nota post-it que dice 4
+en él, pero el valor -2 tiene una nota post-it que dice 2 en él. Luego, la función ordenada reorganiza el original
+elementos en el orden de los valores escritos en sus notas post-it asociadas.
 
-To illustrate that the absolute function is invoked once on each item, during the execution of sorted, I have
-added some print statements into the code.
+Para ilustrar que la función absoluta se invoca una vez en cada elemento, durante la ejecución de ordenado,se
+agregó algunas declaraciones de impresión en el código.
 
 .. activecode:: ac18_3_3
 
     L1 = [1, 7, 4, -2, 3]
 
     def absolute(x):
-        print("--- figuring out what to write on the post-it note for " + str(x))
+        print("--- averiguar qué escribir en la nota post-it para" + str(x))
         if x >= 0:
             return x
         else:
             return -x
 
-    print("About to call sorted")
+    print("A punto de llamar a sorted")
     L2 = sorted(L1, key=absolute)
-    print("Finished execution of sorted")
+    print("Ejecución terminada de sorted")
     print(L2)
 
-Note that this code never explicitly calls the absolute function at all. It passes the absolute function as a parameter
-value to the sorted function. Inside the sorted function, whose code we haven't seen, that function gets invoked.
+Tenga en cuenta que este código nunca llama explícitamente a la función absoluta. Pasa la función absoluta como parámetro
+valor a la función ordenada. Dentro de la función ordenada, cuyo código no hemos visto, se invoca esa función.
 
 .. note::
 
-   It is a little confusing that we are reusing the word *key* so many times. The name of the optional parameter is
-   ``key``. We will usually pass a parameter value using the keyword parameter passing mechanism. When we write
-   ``key=some_function`` in the function invocation, the word key is there because it is the name of the parameter,
-   specified in the definition of the sort function, not because we are using keyword-based parameter passing.
+   Es un poco confuso que estemos reutilizando la palabra *key* tantas veces. El nombre del parámetro opcional es
+   ``key``. Por lo general, pasaremos un valor de parámetro utilizando el mecanismo de paso de parámetro de palabra clave. Cuando escribimos
+   ``key=some_function`` en la invocación de la función, la palabra clave está ahí porque es el nombre del parámetro,
+   especificado en la definición de la función de ordenamiento, no porque estemos usando el paso de parámetros basado en palabras clave.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. activecode:: ac18_3_4
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** You will be sorting the following list by each element's second letter a to z. Create a function to use when sorting, called ``second_let``. It will take a string as input and return the second letter of that string. Then sort the list,  create a variable called ``sorted_by_second_let`` and assign the sorted list to it. Do not use lambda.
+   **1.** Ordenar la siguiente lista por la segunda letra de la A a la Z de cada elemento. Cree una función para usar al ordenar, llamada ``second_let``. Tomará un string como entrada y devolverá la segunda letra de ese string. Luego ordene la lista, cree una variable llamada ``sorted_by_second_let`` y asígnele la lista ordenada. No use lambda.
    ~~~~
 
    ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
@@ -136,7 +136,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    :autograde: unittest
    :practice: T
 
-   **2.** Below, we have provided a list of strings called ``nums``. Write a function called ``last_char`` that takes a string as input, and returns only its last character. Use this function to sort the list ``nums`` by the last digit of each number, from highest to lowest, and save this as a new list called ``nums_sorted``.
+   **2.** A continuación, proporcionamos una lista de strings llamada ``nums``. Escriba una función llamada ``last_char`` que tome un string como entrada y solo devuelva su último carácter. Use esta función para ordenar la lista ``nums`` por el último dígito de cada número, de mayor a menor, y guárdela como una nueva lista llamada ``nums_sorted``.
    ~~~~
 
    nums = ['1450', '33', '871', '19', '14378', '32', '1005', '44', '8907', '16']
@@ -164,7 +164,7 @@ value to the sorted function. Inside the sorted function, whose code we haven't 
    :autograde: unittest
    :practice: T
 
-   **3.** Once again, sort the list ``nums`` based on the last digit of each number from highest to lowest. However, now you should do so by writing a lambda function. Save the new list as ``nums_sorted_lambda``.
+   **3.** Una vez más, ordene la lista ``nums`` según el último dígito de cada número de mayor a menor. Sin embargo, ahora debe hacerlo escribiendo una función lambda. Guarde la nueva lista como ``nums_sorted_lambda``.
    ~~~~
 
    nums = ['1450', '33', '871', '19', '14378', '32', '1005', '44', '8907', '16']

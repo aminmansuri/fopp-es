@@ -11,13 +11,13 @@
    :prefix: sort-2-
    :start: 1
 
-Optional reverse parameter
+Parámetro inverso opcional
 --------------------------
 
-The sorted function takes some optional parameters (see the Optional Parameters page). The first optional parameter is 
-a key function, which will be described in the next section. The second optional parameter is a Boolean value which 
-determines whether to sort the items in reverse order. By default, it is False, but if you set it to True, the list will 
-be sorted in reverse order.
+La función ordenada toma algunos parámetros opcionales (consulte la página Parámetros opcionales). El primer parámetro opcional es
+una función clave, que se describirá en la siguiente sección. El segundo parámetro opcional es un valor Boolean que
+determina si se deben ordenar los elementos en orden inverso. Por defecto, es False, pero si lo configura en True, la lista aparecerá
+ordenada en orden inverso.
 
 .. activecode:: ac18_2_1
 
@@ -26,20 +26,20 @@ be sorted in reverse order.
     
 .. note::
 
-    This is a situation where it is convenient to use the keyword mechanism for providing optional parameters. It is 
-    possible to provide the value True for the reverse parameter without naming that parameter, but then we would have 
-    to provide a value for the second parameter as well, rather than allowing the default parameter value to be used. We 
-    would have had to write ``sorted(L2, None, True)``. That's a lot harder for humans to read and understand.
+    Esta es una situación en la que es conveniente utilizar el mecanismo de palabras clave para proporcionar parámetros opcionales. Es
+    posible proporcionar el valor True para el parámetro inverso sin nombrar ese parámetro, pero entonces tendríamos
+    para proporcionar un valor para el segundo parámetro también, en lugar de permitir que se use el valor predeterminado del parámetro. Nosotros
+    habríamos tenido que escribir ``sorted(L2, None, True)``. Eso es mucho más difícil para los humanos de leer y entender.
 
 
-**Check Your Understanding**
+**Revisa tu entendimiendo**
 
 .. activecode:: ac18_2_2
    :language: python
    :autograde: unittest
    :practice: T
 
-   **1.** Sort the list, ``lst`` from largest to smallest. Save this new list to the variable ``lst_sorted``.
+   **1.** Ordene la lista, ``lst``, de mayor a menor. Guarde esta nueva lista en la variable ``lst_sorted``.
    ~~~~
 
    lst = [3, 5, 1, 6, 7, 2, 9, -2, 5]
