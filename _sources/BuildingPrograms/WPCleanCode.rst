@@ -11,10 +11,10 @@
    :prefix: buildP-4-
    :start: 1
 
-👩‍💻 Clean Up
+👩‍💻 Limpiar
 ==============
 
-Congrats! We've solved the problem now, but our code isn't very nice to read. We can clean it up now and remove the print statements.
+¡Felicidades! Hemos resuelto el problema ahora, pero nuestro código no es muy agradable de leer. Podemos limpiarlo ahora y eliminar las declaraciones de impresión.
 
 .. activecode:: ac500_4_1
    
@@ -35,14 +35,14 @@ Congrats! We've solved the problem now, but our code isn't very nice to read. We
         user_dictionary[response_key] = response_value
 
 
-We can also fix the comments so that they aren't so obvious. 
+También podemos corregir los comentarios para que no sean tan obvios.
 
 .. activecode:: ac500_4_2
    
     user_dictionary = {}
 
-    # asks a user for two words to add to the user dictionary - will do this five times.
-    # the first word will be the key, the second word will be the value.
+    # le pide al usuario dos palabras para agregar al diccionario del usuario; lo hará cinco veces.
+    # la primera palabra será la clave, la segunda palabra será el valor.
     for _ in range(5):
         response = input("Please enter two words to add to a dictionary. The first word is the definition, the second will be the word associated with it.")
 
@@ -52,4 +52,4 @@ We can also fix the comments so that they aren't so obvious.
 
         user_dictionary[response_key] = response_value
 
-At this point, the code has been cleaned up fully - you could easily write the comments in a different way but this should be easy for other programmers to understand, and ourselves to understand if we come back to the code days, weeks, or months later!
+En este punto, el código se ha limpiado completamente: puede escribir fácilmente los comentarios de una manera diferente, pero esto debería ser fácil de entender para otros programadores ¡y para nosotros mismos si volvemos al código días, semanas o meses después!

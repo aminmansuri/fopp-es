@@ -11,14 +11,14 @@
    :prefix: buildP-2-
    :start: 1
 
-👩‍💻 Sketch an Outline
+👩‍💻 Dibuja un Esquema
 =======================
 
-The prompt that we will be using is the following:
+El aviso que utilizaremos es el siguiente:
 
-*Build a program that replicates a physical dictionary that you might use. The program should that take five different input from the user. Each input will have two words and we will build a dictionary where the words are the keys and values*.
+*Cree un programa que reproduzca un diccionario físico que pueda usar. El programa debe tomar cinco entradas diferentes del usuario. Cada entrada tendrá dos palabras y crearemos un diccionario donde las palabras son las claves y los valores*.
 
-Try writting out what you think the outline would be, and then check out our answer to see how we did it! Always remember that there can be multiple ways to solve a problem, so your solution may be different from ours but still solve the problem.
+¡Intenta escribir lo que crees que sería el esquema, y luego mira nuestra respuesta para ver cómo lo hicimos! Recuerde siempre que puede haber múltiples formas de resolver un problema, por lo que su solución puede ser diferente de la nuestra, pero aún así resolver el problema.
 
 .. question:: sketch_1
    :number: 1
@@ -29,18 +29,18 @@ Try writting out what you think the outline would be, and then check out our ans
 
            .. actex:: ac500_2_1
 
-              #put your comments below here
+              #pon tus comentarios aquí abajo
 
         .. tab:: Answer
 
             .. activecode:: answer500_2_1
 
-                # initialize a dictionary
+                # inicializar un diccionario
 
-                # write a for loop that will iterate five times. I can use the range function for this!
+                # escribe un bucle for que iterará cinco veces. ¡Puedo usar la función de rango para esto!
 
-                # in the for loop, I should ask for input from the user
+                # en el bucle for, debería solicitar la entrada del usuario
 
-                # next, I should separate the words
+                # siguiente, debería separar las palabras
 
-                # finally, I should add the key value pair to the dictionary
+                # finalmente, debería agregar el par de valores clave al diccionario

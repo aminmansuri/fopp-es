@@ -11,38 +11,40 @@
    :prefix: buildP-1-
    :start: 1
 
-Building A Program: A Strategy
-==============================
+Creando un Programa: Una Estrategia
+=====================================
 
-Building on lessons learned in the first debugging interlude, this chapter offers a strategy for writing a program to solve a problem such as those that appear in the exercises at the ends of the chapters in this book. (A similar approach is helpful for writing larger programs, but that will come later.)
+Sobre la base de las lecciones aprendidas en el primer interludio de depuración, este capítulo ofrece una estrategia para
+escribir un programa para resolver un problema como los que aparecen en los ejercicios al final de los capítulos de este libro.
+(Un enfoque similar es útil para escribir programas más grandes, pero eso vendrá más adelante).
 
-.. admonition:: Warning. 
+.. admonition:: Advertencia.
 
-   You may find it tempting to start an exercise by copying and pasting a snippet of code from somewhere in the textbook, and hoping that a small edit will lead to a solution to the current problem. Often this will lead to frustration and confusion; after trying a few code substitutions that feel vaguely familiar to you, you’ll find the code looking kind of complicated and the outputs baffling. 
-   
-   Copying and editing snippets of code is actually a useful element of the strategy we outline below. But it comes a little later in the process, not as the first thing. And it requires a fair bit of work to make sure you understand the code snippet that you’ve copied. Only then will you be able to find the *right* small edits to the code snippet to make it do what you want.
+   Puede resultarle tentador comenzar un ejercicio copiando y pegando un fragmento de código de alguna parte del libro de texto, y esperando que una pequeña edición conduzca a una solución al problema actual. A menudo esto conducirá a la frustración y la confusión; después de probar algunas sustituciones de código que le resulten vagamente familiares, encontrará que el código parece un poco complicado y los resultados son desconcertantes.
 
-There are three basic steps to the strategy we recommend: Outline; Code One Section at a Time; Clean Up.
+   Copiar y editar fragmentos de código es en realidad un elemento útil de la estrategia que describimos a continuación. Pero llega un poco más tarde en el proceso, no como lo primero. Y requiere un poco de trabajo para asegurarse de que comprende el fragmento de código que ha copiado. Solo así podrá encontrar las pequeñas ediciones *correctas* en el fragmento de código para que haga lo que desea.
 
-Sketch an Outline
------------------
+Hay tres pasos básicos para la estrategia que recomendamos: Esquematizar; Codificar una sección a la vez; Limpiar.
 
-We are suggesting you first write down all the steps you want the program to do. You can do this in any manner you like. We are going to 
-show you how to outline using comments, but if you are more visual you might want to sketch on a piece of paper and if you are more 
-spatial try walking around the room. The big trick is to understand everything you want to do first in your own words, so then you are 
-translating them to the computer.
+Dibuja un esquema
+------------------
 
-Code One Section at a Time
---------------------------
+Le sugerimos que primero escriba todos los pasos que desea que haga el programa. Puedes hacer esto de la manera que quieras. Vamos a
+mostrarle cómo esquematizar usando comentarios, pero si es más visual, es posible que desee dibujar en un papel y si es más espacial
+prueba caminando por la habitación. El gran truco es entender todo lo que quieres hacer primero con tus propias palabras, para que luego estés
+traduciéndolo a la computadora.
 
-After you outline your program, you should write code one section at a time, and carefully test that section before you go on. The idea here is to make sure your program is doing what you think it’s doing at each stage.
+Codifica una sección a la vez
+-------------------------------
 
-Translating your English description of a step into code may be the most challenging step for you early in your learning about programming. Later it will come more naturally. Here is a checklist of questions that you may find useful in trying to find the right python code to express your idea, based on what you’ve learned so far:
+Después de trazar su programa, debe escribir el código una sección a la vez y probar cuidadosamente esa sección antes de continuar. La idea aquí es asegurarse de que su programa esté haciendo lo que cree que está haciendo en cada etapa.
 
-* Is this operation pulling out an item from a list or string or dictionary? If so, use [] to pull out the item you want.
-* Is this operation transforming a string into another string? If so, look at the summary of string methods.
-* Is this operation modifying a list? If so, look at the material on lists.
-* Is the operation doing something multiple times? If so, you’ll want a ``for`` loop. Start by making a skeleton version of a for loop, and then fill in the parts that are in <brackets>
+Traducir desde su descripción a código puede ser el paso más difícil para usted al principio de su aprendizaje sobre programación. Más tarde vendrá más naturalmente. Aquí hay una lista de preguntas que puede resultarle útil al tratar de encontrar el código de Python adecuado para expresar su idea, en función de lo que ha aprendido hasta ahora:
+
+* ¿Esta operación extrae un elemento de una lista, cadena o diccionario? Si es así, use [] para extraer el elemento que desea.
+* ¿Esta operación está transformando una cadena en otra cadena? Si es así, mira el resumen de los métodos de cadena.
+* ¿Esta operación está modificando una lista? Si es así, mira el material en las listas.
+* ¿La operación está haciendo algo varias veces? Si es así, querrás un bucle ``for``. Comience por hacer una versión esqueleto de un bucle for, y luego complete las partes que están entre <>
 
 ::
 
@@ -51,7 +53,7 @@ Translating your English description of a step into code may be the most challen
                   <code block line 2>
                   ...
 
-* Is the operation something that should only occur in some circumstances and not in others? If so, you’ll want an ``if`` statement. Start by making a skeleton version of an if/then/else code snippet, and then fill in the parts that are in <brackets>
+* ¿Es la operación algo que solo debería ocurrir en algunas circunstancias y no en otras? Si es así, querrás una declaración de ``if``. Comience por hacer una versión esqueleto de un fragmento de código if/then/else, y luego complete las partes que están entre <>
 
 ::
 
@@ -62,7 +64,7 @@ Translating your English description of a step into code may be the most challen
     <else block here>
     ...
 
-* Is this an accumulator pattern? If so, start by making a skeleton version of it, and then fill it in.
+* ¿Es este un patrón acumulador? Si es así, comience por hacer una versión esqueleto y luego complétela.
 
 ::
 
@@ -76,13 +78,13 @@ Translating your English description of a step into code may be the most challen
   print(a)
 
 
-Finally, you may be reminded of a snippet of code somewhere in the textbook that did something similar to what you want to do. Now is the time to copy and edit that code. **But wait!** Before you start editing that code snippet, make sure you understand it. See the section below on understanding code.
+Finalmente, es posible que se te recuerde un fragmento de código en algún lugar del libro de texto que hizo algo similar a lo que quieres hacer. Ahora es el momento de copiar y editar ese código. **¡Pero espera!** Antes de comenzar a editar ese fragmento de código, asegúrate de entenderlo. Vea la sección a continuación sobre la comprensión del código.
 
-Clean Up
---------
+Limpia
+-------
 
-When you are done with outlining and testing your program, delete any diagnostic print statements from your program. No one really needs to see the test statements you wrote, and leaving test statements in the program might confuse you if you add more to the program.
+Cuando haya terminado de delinear y probar su programa, elimine cualquier declaración de impresión de diagnóstico de su programa. Nadie realmente necesita ver las declaraciones de prueba que escribió, y dejar las declaraciones de prueba en el programa podría confundirlo si agrega más al programa.
 
-Extra comments do help other people read your code, but try to leave in only the bits that you think are useful. There is an art to writing good informative comments, and you can only learn this art by reading other people's programs and having your peers read your programs. As a rule of thumb for comments, when in doubt, keep it; it you’re worried it won’t make sense to you or someone else later, add more detail to it.
+Los comentarios adicionales ayudan a otras personas a leer su código, pero trate de dejar solo los bits que considere útiles. Hay un arte en escribir buenos comentarios informativos, y solo puedes aprender este arte leyendo los programas de otras personas y haciendo que tus compañeros lean tus programas. Como regla general para comentarios, cuando tenga dudas, guárdelo; si le preocupa que no tenga sentido para usted u otra persona más tarde, agregue más detalles.
 
-In the next few pages, we'll go through this process using a question similar to something that you may have already seen before.
+En las próximas páginas, veremos este proceso utilizando una pregunta similar a algo que quizás ya haya visto antes.
