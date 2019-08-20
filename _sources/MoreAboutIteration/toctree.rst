@@ -1,8 +1,8 @@
-More About Iteration
+Más sobre iteración
 ::::::::::::::::::::
 
 .. toctree::
-   :caption: More About Iteration
+   :caption: Más sobre iteración
    :maxdepth: 3
 
    intro-indefiniteiteration.rst

@@ -15,26 +15,26 @@
     iteration, assignment, assignment statement, reassignment
     single: statement; assignment
 
-Introduction
+Introducción
 ============
 
-Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making 
-errors is something that computers do well and people do poorly.
+Las computadoras a menudo se usan para automatizar tareas repetitivas. Repetir tareas idénticas o similares sin cometer
+errores, es algo que las computadoras hacen bien y las personas hacen mal.
 
-Repeated execution of a sequence of statements is called **iteration**. Because iteration is so common, Python 
-provides several language features to make it easier. We've already seen the ``for`` statement in a previous chapter. 
-This is a very common form of iteration in Python. In this chapter we are going to look at the ``while`` statement --- 
-another way to have your program do iteration.
+La ejecución repetida de una secuencia de declaraciones se llama **iteración**. Debido a que la iteración es tan común, Python
+proporciona varias funciones de lenguaje para que sea más fácil. Ya hemos visto la declaración ``for`` en un capítulo anterior.
+Esta es una forma muy común de iteración en Python. En este capítulo vamos a ver la declaración ``while``  ---
+otra forma de hacer que su programa haga iteraciones.
 
 
-Learning Goals
---------------
+Metas de aprendizaje
+--------------------
 
-* To understand indefinite iteration
-* To solve problems involving convergence
+* Comprender la iteración indefinida
+* Resolver problemas de convergencia
 
-Objectives
+Objetivos
 ----------
 
-* To apply the while loop for indefinite iteration
-* To be able to identify while loops that are likely to be infinite loops
+* Aplicar el ciclo while para iteración indefinida
+* Poder identificar bucles while que probablemente sean bucles infinitos

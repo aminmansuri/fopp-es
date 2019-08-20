@@ -17,80 +17,80 @@
     single: validation
     single: input; validating
 
-The Listener Loop
-=================
+El Bucle Listener
+==================
 
-At the end of the previous section, we advised using a for loop whenever it will be known at the beginning of the 
-iteration process how many times the block of code needs to be executed. Usually, in python, you will use a for loop 
-rather than a while loop. When is it *not* known at the beginning of the iteration how many times the code block needs 
-to be executed? The answer is, when it depends on something that happens during the execution.
+Al final de la sección anterior, recomendamos utilizar un bucle for siempre que se conozca el comienzo del
+proceso de iteración, cuántas veces se debe ejecutar el bloque de código. Por lo general, en Python, usará un bucle for
+en lugar de un bucle while. ¿Cuándo *no* se conoce al comienzo de la iteración ni cuántas veces necesita el bloque de código
+ser ejecutado? La respuesta es, cuando depende de algo que sucede durante la ejecución.
 
-One very common pattern is called a **listener loop**. Inside the while loop there is a function call to get user input. 
-The loop repeats indefinitely, until a particular input is received.
+Un patrón muy común se llama **listener loop**. Dentro del ciclo while hay una llamada a la función para obtener la entrada del usuario.
+El bucle se repite indefinidamente, hasta que se recibe una entrada particular.
 
 .. activecode:: ac14_3_1
 
    theSum = 0
    x = -1
    while (x != 0):
-       x = int(input("next number to add up (enter 0 if no more numbers): "))
+       x = int(input("siguiente número a sumar (ingrese 0 si no hay más números): "))
        theSum = theSum + x
 
    print(theSum)
    
-This is just our old friend, the accumulation pattern, adding each additional output to the sum-so-far, which is stored 
-in a variable called theSum and reassigned to that variable on each iteration. Notice that theSum is initialized to 0. 
-Also notice that we had to initialize x, our variable that stores each input that the user types, before the while loop. 
-This is typical with while loops, and makes them a little tricky to read and write. We had to initialize it because the 
-condition ``x != 0`` is checked at the very beginning, before the code block is ever executed. In this case, we picked 
-an initial value that we knew would make the condition true, to ensure that the while loop's code block would execute at 
-least once.
+Este es solo nuestro viejo amigo, el patrón de acumulación, que agrega cada salida adicional a la suma hasta ahora, que se almacena
+en una variable llamada theSum y reasignada a esa variable en cada iteración. Observe que theSum se inicializa en 0.
+Observe también que tuvimos que inicializar x, nuestra variable que almacena cada entrada que el usuario escribe, antes del ciclo while.
+Esto es típico con los bucles while, y los hace un poco difíciles de leer y escribir. Tuvimos que inicializarlo porque
+La condición ``x != 0`` se verifica al principio, antes de que se ejecute el bloque de código. En este caso, elegimos
+un valor inicial que sabíamos que haría que la condición sea verdadera, para garantizar que el bloque de código del bucle while se ejecute al
+menos una vez.
 
-If you're at all unsure about how that code works, try adding print statements inside the while loop that print out the 
-values of x and theSum.
+Si no está seguro de cómo funciona ese código, intente agregar declaraciones de impresión dentro del ciclo while que imprima el
+valores de x y theSum.
 
-Other uses of ``while``
+Otros usos de ``while``
 ------------------------------
 
-Sentinel Values
+Valores Centinela
 ~~~~~~~~~~~~~~~~~~~
 
-Indefinite loops are much more common in the real world than definite loops.
+Los bucles indefinidos son mucho más comunes en el mundo real que los bucles definidos.
 
-* If you are selling tickets to an event, you don't know in advance how
-  many tickets you will sell. You keep selling tickets as long as people come
-  to the door and there's room in the hall.
-* When the baggage crew unloads a plane, they don't know in advance how many
-  suitcases there are. They just keep unloading while there are bags left in the
-  cargo hold. (Why *your* suitcase is always the last one is an entirely different problem.)
-* When you go through the checkout line at the grocery, the clerks don't
-  know in advance how many items there are. They just keep ringing up items as
-  long as there are more on the conveyor belt.
+* Si está vendiendo entradas para un evento, no sabe de antemano cuantos
+  boletos venderás. Sigues vendiendo boletos mientras la gente venga
+  a la puerta y hay espacio en el pasillo.
+* Cuando la tripulación de equipaje descarga un avión, no saben de antemano cuántas
+  maletas hay. Siguen descargándose mientras quedan bolsas en el
+  bodega de carga. (¿Por qué *su* maleta siempre es la última? Es un problema completamente diferente).
+* Cuando pasas por la línea de pago en el supermercado, los empleados no
+  saben de antemano cuántos elementos hay. Siguen sonando artículos
+  siempre que haya más en la cinta transportadora.
 
-Let's implement the last of these in Python, by asking the user for prices and
-keeping a running total and count of items. When the last item is entered,
-the program gives the grand total, number of items, and average price.
-We'll need these variables:
+Implementemos el último de estos en Python, preguntando al usuario por los precios y
+mantenemiendo un total acumulado y un recuento de artículos. Cuando se ingresa el último elemento,
+el programa proporciona el total general, el número de artículos y el precio promedio.
+Necesitaremos estas variables:
 
-* ``total`` - this will start at zero
-* ``count`` - the number of items, which also starts at zero
-* ``moreItems`` - a boolean that tells us whether more items are waiting; this starts as True
+* ``total`` - esto comenzará en cero
+* ``count`` - el número de elementos, que también comienza en cero
+* ``moreItems`` - un boolean que nos dice si hay más artículos esperando; esto comienza como cierto
 
-The pseudocode (code written half in English, half in Python) for the body of the loop
-looks something like this::
+El pseudocódigo (código escrito mitad en inglés, mitad en Python) para el cuerpo del bucle
+se parece a esto ::
 
     while moreItems
-        ask for price
-        add price to total
-        add one to count
+        preguntar precio
+        agregar precio al total
+        agregue uno para contar
 
-This pseudocode has no option to set ``moreItems`` to ``False``, so it would run forever.
-In a grocery store, there's a little
-plastic bar that you put after your last item to separate your groceries from
-those of the person behind you; that's how the clerk knows you have no more items.
-We don't have a "little plastic bar" data type in Python, so we'll do the next best thing: we
-will use a ``price`` of zero to mean "this is my last item." In this program,
-zero is a **sentinel value**, a value used to signal the end of the loop. Here's the code:
+Este pseudocódigo no tiene opción para establecer ``moreItems`` en ``False``, por lo que se ejecutará para siempre.
+En una tienda de comestibles, hay una pequeña
+barra de plástico que colocas después de tu último artículo para separar tus alimentos de
+los de la persona detrás de ti; así es como el empleado sabe que no tiene más artículos.
+No tenemos un tipo de datos de "pequeña barra de plástico" en Python, por lo que haremos la siguiente mejor opción:
+usará un ``price`` de cero para significar "este es mi último artículo". En este programa
+cero es un **valor centinela**, un valor utilizado para señalar el final del bucle. Aquí está el código:
 
 .. activecode:: ac14_3_2
     :timelimit: 60000
@@ -100,7 +100,7 @@ zero is a **sentinel value**, a value used to signal the end of the loop. Here's
         count = 0
         moreItems = True
         while moreItems:
-            price = float(input('Enter price of item (0 when done): '))
+            price = float(input('Ingrese el precio del artículo (0 when done): '))
             if price != 0:
                 count = count + 1
                 total = total + price
@@ -110,32 +110,32 @@ zero is a **sentinel value**, a value used to signal the end of the loop. Here's
         average = total / count
         print('Total items:', count)
         print('Total $', total)
-        print('Average price per item: $', average)
+        print('Precio promedio por artículo: $', average)
 
     checkout()
 
-There are still a few problems with this program.
+Todavía hay algunos problemas con este programa.
 
-* If you enter a negative number, it will be added to the total and count. Modify the code
-  so that negative numbers give an error message instead (but don't end the loop) Hint: ``elif`` is
-  your friend.
-* If you enter zero the first time you are asked for a price, the loop will end, and the program
-  will try to divide by zero. Use an ``if``/``else`` statement outside the loop to avoid the
-  division by zero and tell the user that you can't compute an average without data.
-* This program doesn't display the amounts to two decimal places. You'll be introduced to that in another
-  chapter.
+* Si ingresa un número negativo, se agregará al total y contará. Modifica el código
+  para que los números negativos den un mensaje de error (pero no terminen el ciclo). Sugerencia: ``elif`` es
+  tu amigo.
+* Si ingresa cero la primera vez que se le solicita un precio, el ciclo finalizará y el programa
+  intentará dividir por cero. Use una declaración ``if``/``else`` fuera del ciclo para evitar
+  división por cero y decirle al usuario que no puede calcular un promedio sin datos.
+* Este programa no muestra las cantidades con dos decimales. Se te presentará eso en otro
+  capítulo.
 
-Validating Input
-~~~~~~~~~~~~~~~~~~~
+Entrada de validación
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can also use a ``while`` loop when you want to **validate** input;  when you want to make
-sure the user has entered valid input for a prompt. Let's say you want a function
-that asks a yes-or-no question. In this case, you want to make sure that the person using
-your program enters either a Y for yes or N for no (in either upper or lower case).
-Here is a program that uses a ``while`` loop to keep asking until it receives a valid answer.
-As a preview of coming attractions, it uses
-the ``upper()`` method which is described in String Methods to convert a string to upper case.
-When you run the following code, try typing something other than Y or N to see how the code reacts:
+También puede usar un bucle ``while`` cuando desee **validar** la entrada; cuando quiera hacer esto,
+asegúrese de que el usuario haya ingresado una entrada válida para una solicitud. Digamos que quiere que una función
+haga una pregunta de sí o no. En este caso, desea asegurarse de que la persona que usa
+su programa ingresa una S para sí o una N para no (en mayúsculas o minúsculas).
+Aquí hay un programa que usa un ciclo ``while`` para seguir preguntando hasta que reciba una respuesta válida.
+Como anticipo de las próximas atracciones, utiliza
+el método ``upper()`` que se describe en Métodos de string para convertir un string en mayúsculas.
+Cuando ejecute el siguiente código, intente escribir algo distinto de Y o N para ver cómo reacciona el código:
 
 .. activecode:: ac14_3_3
     :timelimit: 60000
@@ -144,15 +144,15 @@ When you run the following code, try typing something other than Y or N to see h
         valid_input = False
         while not valid_input:
             answer = input(message)
-            answer = answer.upper() # convert to upper case
+            answer = answer.upper() # convertir a mayúsculas
             if answer == 'Y' or answer == 'N':
                 valid_input = True
             else:
-                print('Please enter Y for yes or N for no.')
+                print('Ingrese S para sí o N para no.')
         return answer
 
-    response = get_yes_or_no('Do you like lima beans? Y)es or N)o: ')
+    response = get_yes_or_no('¿Te gustan las habas? Y)es or N)o: ')
     if response == 'Y':
-        print('Great! They are very healthy.')
+        print('¡Excelente! Son muy saludables')
     else:
-        print('Too bad. If cooked right, they are quite tasty.')
+        print('Demasiado. Si se cocinan bien, son bastante sabrosos.')
