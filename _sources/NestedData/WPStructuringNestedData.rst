@@ -11,15 +11,15 @@
    :prefix: nested-9-
    :start: 1
 
-👩‍💻 Structuring Nested Data
------------------------------
+👩‍💻 Estructurando Datos Anidados
+----------------------------------
 
-When constructing your own nested data, it is a good idea to keep the structure consistent across each level. For example, 
-if you have a list of dictionaries, then each dictionary should have the same structure, meaning the same keys and the same type of value associated with a particular key in all the dictionaries. The reason
-for this is because any deviation in the structure that is used will require extra code to handle those special cases. The 
-more the structure deviates, the more you will have to use special cases.
+Al construir sus propios datos anidados, es una buena idea mantener la estructura consistente en cada nivel. Por ejemplo,
+si tiene una lista de diccionarios, entonces cada diccionario debe tener la misma estructura, es decir, las mismas claves y el mismo tipo de valor asociado con una clave particular en todos los diccionarios. La razón
+Esto se debe a que cualquier desviación en la estructura utilizada requerirá un código adicional para manejar esos casos especiales. los
+cuanto más se desvía la estructura, más tendrá que usar casos especiales.
 
-For example, let's reconsider this nested iteration, but suppose not all the items in the outer list are lists.
+Por ejemplo, reconsideremos esta iteración anidada, pero supongamos que no todos los elementos de la lista externa son listas.
 
 .. activecode:: ac17_50_1
     :language: python
@@ -30,9 +30,9 @@ For example, let's reconsider this nested iteration, but suppose not all the ite
         for y in x:
             print("     level2: {}".format(y))
 
-Now the nested iteration fails.
+Ahora la iteración anidada falla.
 
-We can solve this with special casing, a conditional that checks the type.
+Podemos resolver esto con un casing especial, un condicional que verifica el tipo.
 
 .. activecode:: ac17_50_2
     :language: python
@@ -46,4 +46,4 @@ We can solve this with special casing, a conditional that checks the type.
         else:
             print(x)
 
-You can imagine how many special case if-thens we'd need, and how complicated the code would get, if we had many layers of nesting but not always a consistent structure.
+¿Puede imaginar cuántos casos especiales necesitaríamos, y cuán complicado se volvería el código, si tuviéramos muchas capas de anidamiento pero no siempre una estructura consistente?.
