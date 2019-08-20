@@ -7,12 +7,12 @@
     License".
 
 
-Tamagotchi Revisited
-====================
+Tamagotchi Revisitado
+======================
 
-Using what we know about class inheritance, we can make a new version of the Tamagotchi game, where you can adopt different types of pets that are slightly different from one another.
+Usando lo que sabemos sobre la herencia de clases, podemos hacer una nueva versión del juego Tamagotchi, donde puedes adoptar diferentes tipos de mascotas que son ligeramente diferentes entre sí.
 
-And now we can play the Tamagotchi game with some small changes, such that we can adopt different types of pets.
+Y ahora podemos jugar al juego Tamagotchi con algunos pequeños cambios, de modo que podamos adoptar diferentes tipos de mascotas.
 
 .. activecode:: tamagotchi_revisited
     :nocanvas:
