@@ -7,12 +7,12 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Converting an Object to a String
---------------------------------
+Convirtiendo un Objeto en una Cadena
+--------------------------------------
 
- 
-When we're working with classes and objects, it is often necessary to print an object (that is, to print the state of an object).
-Consider the example below.
+
+Cuando trabajamos con clases y objetos, a menudo es necesario imprimir un objeto (es decir, imprimir el estado de un objeto).
+Considere el siguiente ejemplo.
 
 .. activecode:: chp13_classesstr1
     
@@ -37,20 +37,18 @@ Consider the example below.
     p = Point(7,6)
     print(p)
 
-The ``print`` function shown above produces a string representation of the Point ``p``.  The default functionality provided by
-Python tells you that ``p`` is an object of type ``Point``.  However, it does not tell you anything about the specific
-state of the point.
+La función ``print`` que se muestra arriba produce una representación de cadena del Punto ``p``. La funcionalidad predeterminada proporcionada por
+Python te dice que ``p`` es un objeto de tipo ``Point``. Sin embargo, no le dice nada sobre el estado específico del punto.
 
-We can improve on this representation if we include a special method call ``__str__``.  Notice that this method uses the same naming convention as the constructor, that is two underscores before and after the name.  It is common that Python
-uses this naming technique for special methods.
+Podemos mejorar esta representación si incluimos un método especial llamado ``__str__``. Tenga en cuenta que este método utiliza la misma convención de nomenclatura que el constructor, es decir, dos guiones bajos antes y después del nombre. Es común que Python
+utiliza esta técnica de denominación para métodos especiales.
 
-The ``__str__`` method is responsible for returning a string representation as defined by the class creator.  In other words, you as the programmer, get to choose what a ``Point`` should look like when it gets printed.  In this case, we
-have decided that the string representation will include the values of x and y as well as some identifying text.  It
-is required that the ``__str__`` method create and *return* a string.
+El método ``__str__`` es responsable de devolver una representación de cadena según lo definido por el creador de la clase. En otras palabras, usted, como programador, puede elegir cómo debe ser un ``Point`` cuando se imprime. En este caso, nosotros
+hemos decidido que la representación de la cadena incluirá los valores de x e y, así como algo de texto de identificación. Eso requiere que el método ``__str__`` cree y *devuelva* una cadena.
 
-Whatever string the ``__str__`` method for a class returns, that is the string that will print when you put any instance of that class in a print statement. For that reason, the string that a class's ``__str__`` method returns should usually include values of instance variables. If a point has ``x`` value 3 and ``y`` value 4, but another point has ``x`` value 5 and ``y`` value 9, those two Point objects should probably look different when you print them, right? 
+Cualquier cadena que devuelva el método ``__str__`` para una clase, esa es la cadena que se imprimirá cuando coloque cualquier instancia de esa clase en una declaración de impresión. Por esa razón, la cadena que devuelve el método ``__str__`` de una clase generalmente debe incluir valores de variables de instancia. Si un punto tiene el valor 3 de ``x`` y valor 4 de ``y``, pero otro punto tiene el valor 5 de `` x`` y el valor 9 de `` y``, esos dos objetos Point probablemente deberían verse diferentes cuando imprimirlos, ¿verdad?
 
-Take a look at the code below.
+Echa un vistazo al código a continuación.
 
 .. activecode:: chp13_classesstr2
 
@@ -78,23 +76,22 @@ Take a look at the code below.
     print(p)
 
 
-When we run the program above you can see that the ``print`` function now shows the string that we chose.
+Cuando ejecutamos el programa anterior, puede ver que la función ``print`` ahora muestra la cadena que elegimos.
 
-Now, you ask, don't we already have a ``str`` type converter that can 
-turn our object into a string?  Yes we do!  
+Ahora, pregunta, ¿no tenemos ya un convertidor de tipo ``str`` que pueda
+convertir nuestro objeto en un String? ¡Sí!
 
-And doesn't ``print``
-automatically use this when printing things?  Yes again! 
+¿Y no ``imprime`` automáticamente al imprimir cosas? ¡Si de nuevo!
 
-However, as we saw earlier, these automatic mechanisms do not do exactly what we want.  Python provides many default implementations for
-methods that we as programmers will probably want to change.  When a programmer changes the meaning of a method we
-say that we **override** the method.  Note also that the ``str`` type converter function uses whatever ``__str__`` method we
-provide.
+Sin embargo, como vimos anteriormente, estos mecanismos automáticos no hacen exactamente lo que queremos. Python proporciona muchas implementaciones predeterminadas para
+métodos que nosotros como programadores probablemente querremos cambiar. Cuando un programador cambia el significado de un método,
+digamos que **anulamos** el método. Tenga en cuenta también que la función de convertidor de tipo ``str`` utiliza cualquier método ``__str__`` que
+proporciona.
 
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
-1. Create a class called Cereal that accepts three inputs: 2 strings and 1 integer, and assigns them to 3 instance variables in the constructor: ``name``, ``brand``, and ``fiber``. When an instance of ``Cereal`` is printed, the user should see the following: "[name] cereal is produced by [brand] and has [fiber integer] grams of fiber in every serving!" To the variable name ``c1``, assign an instance of ``Cereal`` whose name is ``"Corn Flakes"``, brand is ``"Kellogg's"``, and fiber is ``2``. To the variable name ``c2``, assign an instance of ``Cereal`` whose name is ``"Honey Nut Cheerios"``, brand is ``"General Mills"``, and fiber is ``3``. Practice printing both! 
+1. Cree una clase llamada Cereal que acepte tres entradas: 2 cadenas y 1 entero, y las asigne a 3 variables de instancia en el constructor: ``name``, ``brand`` y ``fiber``. Cuando se imprime una instancia de ``Cereal``, el usuario debe ver lo siguiente: "¡[nombre] cereal es producido por [marca] y tiene [integer fibra] gramos de fibra en cada porción!" Al nombre de la variable ``c1``, asigne una instancia de ``Cereal`` cuyo nombre es ``"Corn Flakes"``, la marca es ``"Kellogg's"`` y la fibra es ``2``. Al nombre de la variable ``c2``, asigne una instancia de ``Cereal`` cuyo nombre es ``"Honey Nut Cheerios" ``, la marca es ``"General Mills"`` y la fibra es ``3``. ¡Practica imprimir ambos!
 
 .. activecode:: ac_ch13_classstr_01
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst, Classes/ConvertinganObjecttoaString.rst
