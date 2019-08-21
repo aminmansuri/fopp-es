@@ -7,15 +7,15 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Objects Revisited
------------------
+Objetos Revisitado
+--------------------
 
-In Python, every value is actually an object. Whether it be a dictionary, a list, or even an integer, they are all objects.  Programs manipulate those objects either by performing
-computation with them or by asking them to perform methods.  To be more specific, we say that an object has
-a **state** and a collection of **methods** that it can perform. (More about **methods** below.) The state of an object represents those things
-that the object knows about itself.  The state is stored in **instance variables**. For example, as we have seen with turtle objects, each turtle has a state consisting
-of the turtle's position, its color, its heading and so on.  Each turtle also has the ability to go forward, backward, or turn right or left.  Individual turtles are different in that even though they are
-all turtles, they differ in the specific values of the individual state attributes (maybe they are in a different location or have a different heading).
+En Python, cada valor es en realidad un objeto. Ya sea un diccionario, una lista o incluso un número entero, todos son objetos. Los programas manipulan esos objetos ya sea realizando
+cálculos con ellos o pidiéndoles que realicen métodos. Para ser más específicos, decimos que un objeto tiene
+un **estado** y una colección de **métodos** que puede realizar. (Más información sobre **métodos** a continuación.) El estado de un objeto representa esas cosas
+que el objeto sabe de si mismo. El estado se almacena en **variables de instancia**. Por ejemplo, como hemos visto con los objetos de turtle, cada tortuga tiene un estado consistente
+de la posición de la tortuga, su color, su rumbo, etc. Cada tortuga también tiene la capacidad de avanzar, retroceder o girar a la derecha o izquierda. Las tortugas individuales son diferentes en eso a pesar de que son
+todas tortugas, difieren en los valores específicos de los atributos de estado individuales (tal vez estén en una ubicación diferente o tengan un dirección diferente).
 
 
 
