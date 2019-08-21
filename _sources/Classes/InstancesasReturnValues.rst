@@ -7,18 +7,18 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Instances as Return Values
---------------------------
+Instancias como Valores de Retorno
+------------------------------------
 
-Functions and methods can return objects.  This is actually nothing new since everything in Python is an object and we have
-been returning values for quite some time. (You can also have lists or tuples of object instances, etc.)  The difference here is that we want to have the method create an object using
-the constructor and then return it as the value of the method.
+Las funciones y los métodos pueden devolver objetos. En realidad, esto no es nada nuevo, ya que todo en Python es un objeto y tenemos
+estado devolviendo valores durante bastante tiempo. (También puede tener listas o tuplas de instancias de objetos, etc.) La diferencia aquí es que queremos que el método cree un objeto usando
+el constructor y luego lo devuelve como el valor del método.
 
-    
-Suppose you have a point object
-and wish to find the midpoint halfway between it and some other target point.  We would like to write a method, let's call
-it ``halfway``, which takes another ``Point`` as a parameter and returns the ``Point`` that is halfway between the point and
-the target point it accepts as input.
+
+Supongamos que tiene un objeto Point
+y desea encontrar el punto medio a medio camino entre este y algún otro punto objetivo. Nos gustaría escribir un método, llamémoslo
+``halfway``, que toma otro ``Point`` como parámetro y devuelve el ``Punto`` que está a medio camino entre el punto inicial y
+el punto objetivo que acepta como entrada.
 
 .. activecode:: chp13_classesmid1
 
@@ -58,8 +58,8 @@ the target point it accepts as input.
     print(mid.getY())
        
 
-The resulting Point, ``mid``, has an x value of 4 and a y value of 8.  We can also use any other methods on ``mid`` since it is a
-``Point`` object.
+El punto resultante, ``mid``, tiene un valor x de 4 y un valor y de 8. También podemos usar cualquier otro método en ``mid`` ya que es un
+objeto ``Point``.
 
     
 
