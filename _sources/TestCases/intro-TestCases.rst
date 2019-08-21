@@ -13,81 +13,81 @@
 
 .. _test_cases_chap:
 
-Introduction: Test Cases
-========================
+Introducción: casos de prueba
+=============================
 
-A **test case** expresses requirements for a program, in a way that can be checked automatically. Specifically, a test
-asserts something about the state of the program at a particular point in its execution.
+Un **caso de prueba** expresa los requisitos para un programa, de una manera que puede verificarse automáticamente. Específicamente, una prueba
+afirma algo sobre el estado del programa en un punto particular de su ejecución.
 
-We have previously suggested that it's a good idea to first write down comments about what your code is supposed to do, 
-before actually writing the code. It is an even better idea to write down some test cases before writing a program. For 
-example, before writing a function, write a few test cases that check that it returns an object of the right type and 
-that it returns the correct values when invoked on particular inputs.
+Anteriormente hemos sugerido que es una buena idea escribir primero los comentarios sobre lo que se supone que debe hacer su código,
+antes de escribir el código. Es una idea aún mejor escribir algunos casos de prueba antes de escribir un programa, por
+ejemplo, antes de escribir una función, escriba algunos casos de prueba que verifiquen que devuelva un objeto del tipo correcto y
+que devuelve los valores correctos cuando se invoca en entradas particulares.
 
-There are several reasons why it's a good habit to write test cases.
+Hay varias razones por las cuales es un buen hábito escribir casos de prueba.
 
-* Before we write code, we have in mind what it *should* do, but those thoughts may be a little vague. Writing down test cases forces us to be more concrete about what should happen.
-* As we write the code, the test cases can provide automated feedback. You've actually been the beneficiary of such automated feedback via test cases throughout this book in some of the activecode windows and almost all of the exercises. We wrote the code for those test cases but kept it hidden, so as not to confuse you and also to avoid giving away the answers. You can get some of the same benefit from writing your own test cases.
-* In larger software projects, the set of test cases, called unit tests, can be run every time a change is made to the code base. This can help to identify situations where a change in code in one place breaks the correct operation of some other code. We won't see that advantage of tests cases in this textbook, but keep in mind that this introduction to test cases is setting the stage for an essential software engineering practice if you are participating in a larger software development project.
+* Antes de escribir el código, tenemos en mente lo que *debería* hacer, pero esos pensamientos pueden ser un poco vagos. Escribir casos de prueba nos obliga a ser más concretos sobre lo que debería suceder.
+* Mientras escribimos el código, los casos de prueba pueden proporcionar comentarios automáticos. De hecho, usted se ha beneficiado de tales comentarios automáticos a través de casos de prueba a lo largo de este libro en algunas de las ventanas de código activo y en casi todos los ejercicios. Escribimos el código para esos casos de prueba, pero lo mantuvimos oculto para no confundirlo y también para evitar dar las respuestas. Puede obtener algunos de los mismos beneficios escribiendo sus propios casos de prueba.
+* En proyectos de software más grandes, el conjunto de casos de prueba, llamados pruebas unitarias, se puede ejecutar cada vez que se realiza un cambio en la base del código. Esto puede ayudar a identificar situaciones en las que un cambio de código en un lugar interrumpe el funcionamiento correcto de otro código. No veremos esa ventaja de los casos de prueba en este libro de texto, pero tenga en cuenta que esta introducción a los casos de prueba está preparando el escenario para una práctica esencial de ingeniería de software si participa en un proyecto de desarrollo de software más grande.
 
-Now it's time to learn how to write code for test cases, or **unit tests**. To write one, we must know what we *expect* some value to be at a particular point in the program's execution. For example, we need to specify what the correct result would be when calling the function with a specific input.
+Ahora es el momento de aprender a escribir código para casos de prueba, o **pruebas unitarias**. Para escribir uno, debemos saber qué *esperamos*, que algún valor tenga en un punto particular de la ejecución del programa. Por ejemplo, necesitamos especificar cuál sería el resultado correcto al llamar a la función con una entrada específica.
 
 .. activecode:: ac19_1_1
 
     def square(x):
-        '''raise x to the second power'''
+        '''elevar x a la segunda potencia'''
         return x * x
     
     import test
-    print('testing square function')
+    print('prueba de función square')
     test.testEqual(square(10), 100)
 
 
-``testEqual`` (from the ``test`` module) is a function that allows us to perform a unit test. It takes two parameters. In the example above, the first is a call to the function we want to test (``square`` in this example) with a particular input (10 in this example). The second is the correct result that should be produced (100 in this example). ``test.testEqual`` compares the two values and displays a message about whether the unit test passes or fails: pass if the two values are equal, fail if not.
+``testEqual`` (del módulo ``test``) es una función que nos permite realizar una prueba unitaria. Se necesitan dos parámetros. En el ejemplo anterior, el primero es una llamada a la función que queremos probar (``square`` en este ejemplo) con una entrada particular (10 en este ejemplo). El segundo es el resultado correcto que debe producirse (100 en este ejemplo). ``test.testEqual`` compara los dos valores y muestra un mensaje sobre si la prueba de la unidad pasa o no: pasa si los dos valores son iguales, falla si no.
 
-.. admonition:: Extend the program ...
+.. admonition:: Extiende el programa ...
 
-   On line 8, write another unit test (that should pass) for the ``square`` function.
+   En la línea 8, escriba otra prueba unitaria (que debería pasar) para la función ``square``.
 
 .. note::
-   The ``test`` module is not a standard Python module. Instead, there are other more powerful and more modern modules, such as one called ``unittest`` which will be taught in more advanced courses. However, the ``test`` module offers a simple introduction to testing that is appropriate at this stage in the interactive text.
+   El módulo ``test`` no es un módulo estándar de Python. En cambio, hay otros módulos más potentes y más modernos, como uno llamado ``unittest`` que se enseñará en cursos más avanzados. Sin embargo, el módulo ``test`` ofrece una introducción simple a las pruebas que es apropiada en esta etapa del texto interactivo.
 
-**Check your understanding**
+**Revisa tu Entendimiento**
 
 .. mchoice:: question19_1_1
    :answer_a: True
    :answer_b: False
-   :answer_c: It depends
+   :answer_c: Depende
    :correct: b
-   :feedback_a: A message is printed out, but the program does not stop executing
-   :feedback_b: A message is printed out, but the program does not stop executing
-   :feedback_c: A message is printed out, but the program does not stop executing
+   :feedback_a: Se imprime un mensaje, pero el programa no deja de ejecutarse
+   :feedback_b: Se imprime un mensaje, pero el programa no deja de ejecutarse
+   :feedback_c: Se imprime un mensaje, pero el programa no deja de ejecutarse
    :practice: T
 
-   When ``test.testEqual()`` is passed two values that are not the same, it generates an error and stops execution of the program.
+   Cuando ``test.testEqual()`` pasa dos valores que no son iguales, genera un error y detiene la ejecución del programa.
  
 .. mchoice:: question19_1_2
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: You might not notice the error, if the code just produces a wrong output rather generating an error. And it may be difficult to figure out the original cause of an error when you do get one.
-   :feedback_b: Test cases let you test some pieces of code as you write them, rather than waiting for problems to show themselves later.
+   :feedback_a: Es posible que no note el error, si el código solo produce una salida incorrecta en lugar de generar un error. Y puede ser difícil descubrir la causa original de un error cuando se obtiene uno.
+   :feedback_b: Los casos de prueba le permiten probar algunos fragmentos de código a medida que los escribe, en lugar de esperar a que los problemas se muestren más tarde.
    :practice: T
 
-   Test cases are a waste of time, because the python interpreter will give an error
-   message when the program runs incorrectly, and that's all you need for debugging.
+   Los casos de prueba son una pérdida de tiempo, porque el intérprete de Python dará un error
+   mensaje cuando el programa se ejecuta incorrectamente, y eso es todo lo que necesita para la depuración.
 
 .. mchoice:: question19_1_3
     :answer_a: test.testEqual(blanked('under', 'du', 'u_d__'))
     :answer_b: test.testEqual(blanked('under', 'u_d__'), 'du')
     :answer_c: test.testEqual(blanked('under', 'du'), 'u_d__')
     :correct: c
-    :feedback_a: blanked only takes two inputs; this provides three inputs to the blanked function
-    :feedback_b: The second argument to the blanked function should be the letters that have been guessed, not the blanked version of the word
-    :feedback_c: This checks whether the value returned from the blanked function is 'u_d__'.
+    :feedback_a: blanked solo toma dos entradas; esto proporciona tres entradas a la función en blanco
+    :feedback_b: El segundo argumento para la función blanked debería ser las letras que se han adivinado, no la versión blanked de la palabra
+    :feedback_c: Comprueba si el valor devuelto por la función blanked es 'u_d__'.
     :practice: T
 
-    For the hangman game blanked function, which of the following is the correct way to write a test to check that 'under' will be blanked as ``'u_d__'`` when the user has guessed letters d and u so far?
+    Para la función blanked del juego del ahorcado, ¿cuál de las siguientes es la forma correcta de escribir una prueba para verificar que 'under' se ponga en blanco como ``'u_d__'`` cuando el usuario ha adivinado las letras d y u hasta ahora?
 
     .. code-block:: python
 
