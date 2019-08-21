@@ -7,15 +7,15 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Chapter Assessment
-==================
+Evalución del Capítulo
+=======================
 
 .. activecode:: ac_ch13_01
    :practice: T
    :topics: Classes/ImprovingourConstructor.rst
    :tags: Classes/ImprovingourConstructor.rst
 
-   Define a class called ``Bike`` that accepts a string and a float as input, and assigns those inputs respectively to two instance variables, ``color`` and ``price``. Assign to the variable ``testOne`` an instance of ``Bike`` whose color is **blue** and whose price is **89.99**. Assign to the variable ``testTwo`` an instance of Bike whose color is **purple** and whose price is **25.0**. 
+   Defina una clase llamada ``Bike`` que acepte una cadena y un float como entrada, y asigne esas entradas respectivamente a dos variables de instancia, ``color`` y ``price``. Asigne a la variable ``testOne`` una instancia de ``Bike`` cuyo color sea **azul** y cuyo precio sea **89.99**. Asigne a la variable ``testTwo`` una instancia de Bike cuyo color sea **púrpura** y cuyo precio sea **25.0**.
    ~~~~
 
 
@@ -40,7 +40,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/ImprovingourConstructor.rst, Classes/AddingOtherMethodstoourClass.rst
 
-   Create a class called ``AppleBasket`` whose constructor accepts two inputs: a string representing a color, and a number representing a quantity of apples. The constructor should initialize two instance variables: ``apple_color`` and ``apple_quantity``.  Write a class method called ``increase`` that increases the quantity by ``1`` each time it is invoked. You should also write a ``__str__`` method for this class that returns a string of the format: ``"A basket of [quantity goes here] [color goes here] apples."`` e.g. ``"A basket of 4 red apples."`` or ``"A basket of 50 blue apples."`` (Writing some test code that creates instances and assigns values to variables may help you solve this problem!)
+   Cree una clase llamada ``AppleBasket`` cuyo constructor acepte dos entradas: una cadena que representa un color y un número que representa una cantidad de manzanas. El constructor debe inicializar dos variables de instancia: ``apple_color`` y ``apple_quantity``. Escriba un método de clase llamado ``increase`` que aumente la cantidad en ``1`` cada vez que se invoque. También debe escribir un método ``__str__`` para esta clase que devuelva una cadena del formato: ``"Una canasta de manzanas [la cantidad va aquí] [el color va aquí]".``"Una canasta de 4 manzanas rojas".`` O ``"Una canasta de 50 manzanas azules". ``(¡Escribir un código de prueba que cree instancias y asigne valores a las variables puede ayudarlo a resolver este problema!)``
    ~~~~
 
    =====
@@ -69,7 +69,7 @@ Chapter Assessment
    :topics: Classes/AddingOtherMethodstoourClass.rst
    :tags: Classes/AddingOtherMethodstoourClass.rst, Classes/ImprovingourConstructor.rst, Classes/ConvertinganObjecttoaString.rst
 
-   Define a class called ``BankAccount`` that accepts the name you want associated with your bank account in a string, and an integer that represents the amount of money in the account. The constructor should initialize two instance variables from those inputs: ``name`` and ``amt``. Add a string method so that when you print an instance of ``BankAccount``, you see ``"Your account, [name goes here], has [start_amt goes here] dollars."`` Create an instance of this class with ``"Bob"`` as the name and ``100`` as the amount. Save this to the variable ``t1``.
+   Defina una clase llamada ``BankAccount`` que acepte el nombre que desea asociar con su cuenta bancaria en una cadena y un número entero que represente la cantidad de dinero en la cuenta. El constructor debe inicializar dos variables de instancia de esas entradas: ``name`` y ``amt``. Agregue un método de cadena para que cuando imprima una instancia de ``BankAccount``, vea ``"Su cuenta, [el nombre va aquí], tiene [start_amt va aquí] dólares"``. Cree una instancia de esta clase con ``"Bob"`` como el nombre y ``100`` como la cantidad. Guarde esto en la variable ``t1``.
    ~~~~
 
    
