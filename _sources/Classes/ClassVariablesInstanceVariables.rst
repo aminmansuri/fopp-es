@@ -8,16 +8,16 @@
 
 .. _class_and_instance_vars:
 
-Class Variables and Instance Variables
---------------------------------------
+Variables de Clase y Variables de Instancia
+--------------------------------------------
 
-You have already seen that each instance of a class has its own namespace with its own instance variables. Two instances of the Point class each have their own instance variable x. Setting x in one instance doesn't affect the other instance.
+Ya ha visto que cada instancia de una clase tiene su propio espacio de nombres con sus propias variables de instancia. Dos instancias de la clase Point tienen cada una su propia variable de instancia x. Establecer x en una instancia no afecta a la otra instancia.
 
-A class can also have class variables. A class variable is set as part of the class definition.
+Una clase también puede tener variables de clase. Una variable de clase se establece como parte de la definición de clase.
 
-For example, consider the following version of the Point class. Here we have added a graph method that generates a string representing a little text-based graph with the Point plotted on the graph. It's not a very pretty graph, in part because the y-axis is stretched like a rubber band, but you can get the idea from this.
+Por ejemplo, considere la siguiente versión de la clase Point. Aquí hemos agregado un método gráfico que genera una cadena que representa un pequeño gráfico basado en texto con el Punto trazado en el gráfico. No es un gráfico muy bonito, en parte porque el eje y está estirado como una banda elástica, pero puedes obtener la idea de esto.
 
-Note that there is an assignment to the variable printed_rep on line 4. It is not inside any method. That makes it a class variable. It is accessed in the same way as instance variables. For example, on line 16, there is a reference to self.printed_rep. If you change line 4, you have it print a different character at the x,y coordinates of the Point in the graph.
+Tenga en cuenta que hay una asignación a la variable printed_rep en la línea 4. No está dentro de ningún método. Eso lo convierte en una variable de clase. Se accede de la misma manera que las variables de instancia. Por ejemplo, en la línea 16, hay una referencia a self.printed_rep. Si cambia la línea 4, debe imprimir un carácter diferente en las coordenadas x, y del Punto en el gráfico.
 
 .. activecode:: classvars_1
 
@@ -55,23 +55,23 @@ Note that there is an assignment to the variable printed_rep on line 4. It is no
     print()
     print(p2.graph())
 
-To be able to reason about class variables and instance variables, it is helpful to know the rules that the python interpreter uses. That way, you can mentally simulate what the interpreter does.
+Para poder razonar sobre las variables de clase y las variables de instancia, es útil conocer las reglas que usa el intérprete de Python. De esa manera, puede simular mentalmente lo que hace el intérprete.
 
-When the interpreter sees an expression of the form <obj>.<varname>, it:
-    1. Checks if the object has an instance variable set. If so, it uses that value.
-    2. If it doesn't find an instance variable, it checks whether the class has a class variable. If so it uses that value.
-    3. If it doesn't find an instance or a class variable, it creates a runtime error (actually, it does one other check first, which you will learn about in the next chapter).
+Cuando el intérprete ve una expresión de la forma <obj>. <varname>, esta:
+    1. Comprueba si el objeto tiene un conjunto de variables de instancia. Si es así, usa ese valor.
+    2. Si no encuentra una variable de instancia, verifica si la clase tiene una variable de clase. Si es así, usa ese valor.
+    3. Si no encuentra una instancia o una variable de clase, crea un error de tiempo de ejecución (en realidad, primero realiza otra verificación, de la que aprenderá en el próximo capítulo).
 
-When the interpreter sees an assignment statement of the form <obj>.<varname> = <expr>, it:
-    1. Evaluates the expression on the right-hand side to yield some python object;
-    2. Sets the instance variable <varname> of <obj> to be bound to that python object. Note that an assignment statement of this form never sets the class variable; it only sets the instance variable.
+Cuando el intérprete ve una declaración de asignación de la forma <obj>. <varname> = <expr>, esta:
+    1. Evalúa la expresión en el lado derecho para producir algún objeto python;
+    2. Establece la variable de instancia <varname> de <obj> para que se vincule a ese objeto de Python. Tenga en cuenta que una declaración de asignación de este formulario nunca establece la variable de clase; solo establece la variable de instancia.
 
-In order to set the class variable, you use an assignment statement of the form <varname> = <expr> at the top-level in a class definition, like on line 4 in the code above to set the class variable printed_rep.
+Para establecer la variable de clase, utiliza una instrucción de asignación de la forma <varname> = <expr> en el nivel superior en una definición de clase, como en la línea 4 en el código anterior para establecer la variable de clase printed_rep.
 
-In case you are curious, method definitions also create class variables. Thus, in the code above, graph becomes a class variable that is bound to a function/method object. p1.graph() is evaluated by:
-    * looking up p1 and finding that it's an instance of Point
-    * looking for an instance variable called graph in p1, but not finding one
-    * looking for a class variable called graph in p1's class, the Point class; it finds a function/method object
-    * Because of the () after the word graph, it invokes the function/method object, with the parameter self bound to the object p1 points to.
+En caso de que tenga curiosidad, las definiciones de métodos también crean variables de clase. Por lo tanto, en el código anterior, el gráfico se convierte en una variable de clase que está vinculada a un objeto de función / método. p1.graph () es evaluado por:
+    * buscando p1 y descubriendo que es una instancia de Point
+    * buscando una variable de instancia llamada gráfica en p1, pero no encuentra una
+    * buscando una variable de clase llamada gráfica en la clase de p1, la clase Point; encuentra un objeto de función / método
+    * Debido a () después de la palabra gráfica, invoca el objeto de función / método, con el parámetro self unido al objeto al que apunta p1.
 
-Try running it in codelens and see if you can follow how it all works.
+Intente ejecutarlo en codelens y vea si puede seguir cómo funciona todo.
