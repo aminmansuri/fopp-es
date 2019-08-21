@@ -10,27 +10,27 @@
 
 .. index:: Tamagotchi
 
-A Tamagotchi Game
------------------
+Un Juego de Tamagotchi
+------------------------
 
-There are also a lot of interesting ways to put user-defined classes to use that don't involve data from the internet. Let's pull all these mechanics together in a slightly more interesting way than we got with the Point class. Remember `Tamagotchis <https://en.wikipedia.org/wiki/Tamagotchi>`_, the little electronic pets? As time passed, they would get hungry or bored. You had to clean up after them or they would get sick. And you did it all with a few buttons on the device.
+También hay muchas formas interesantes de usar clases definidas por el usuario que no involucran datos de Internet. Vamos a juntar todas estas mecánicas de una manera un poco más interesante de lo que obtuvimos con la clase Point. Recuerda `Tamagotchis <https://en.wikipedia.org/wiki/Tamagotchi>`_, las pequeñas mascotas electrónicas? A medida que pasaba el tiempo, tendrían hambre o aburrimiento. Tenías que limpiar después de ellos o se enfermarían. Y lo hiciste todo con unos pocos botones en el dispositivo.
 
-We are going to make a simplified, text-based version of that. In your problem set and in the chapter on `Inheritance <chap_inheritance>` we will extend this further.
+Vamos a hacer una versión simplificada basada en texto de eso. En su conjunto de problemas y en el capítulo sobre `Herencia <cap_inheritance>` ampliaremos esto más.
 
-First, let's start with a class ``Pet``. Each instance of the class will be one electronic pet for the user to take care of. Each instance will have a current state, consisting of three instance variables:
-    * hunger, an integer
-    * boredom, an integer
-    * sounds, a list of strings, each a word that the pet has been taught to say
+Primero, comencemos con una clase ``Pet``. Cada instancia de la clase será una mascota electrónica para que el usuario se encargue. Cada instancia tendrá un estado actual, que consta de tres variables de instancia:
+    * hambre, (*hunger*) un número entero
+    * aburrimiento, (*boredom*)un número entero
+    * sonidos, (*sounds*) una lista de cadenas, cada una una palabra que se le ha enseñado a la mascota a decir
 
-In the ``__init__`` method, hunger and boredom are initialized to random values between 0 and the threshold for being hungry or bored. The ``sounds`` instance variable is initialized to be a copy of the class variable with the same name. The reason we make a copy of the list is that we will perform destructive operations (appending new sounds to the list). If we didn't make a copy, then those destructive operations would affect the list that the class variable points to, and thus teaching a sound to any of the pets would teach it to all instances of the class!
+En el método ``__init__``, el hambre y el aburrimiento se inicializan en valores aleatorios entre 0 y el umbral para tener hambre o aburrirse. La variable de instancia ``sounds`` se inicializa para ser una copia de la variable de clase con el mismo nombre. La razón por la que hacemos una copia de la lista es que realizaremos operaciones destructivas (agregando nuevos sonidos a la lista). Si no hiciéramos una copia, entonces esas operaciones destructivas afectarían la lista a la que apunta la variable de clase, y por lo tanto, ¡enseñar un sonido a cualquiera de las mascotas lo enseñaría a todas las instancias de la clase!
 
-There is a ``clock_tick`` method which just increments the boredom and hunger instance variables, simulating the idea that as time passes, the pet gets more bored and hungry.
+Hay un método ``clock_tick`` que simplemente incrementa las variables de instancia de aburrimiento y hambre, simulando la idea de que a medida que pasa el tiempo, la mascota se aburre y tiene más hambre.
 
-The ``__str__`` method produces a string representation of the pet's current state, notably whether it is bored or hungry or whether it is happy. It's bored if the boredom instance variable is larger than the threshold, which is set as a class variable.
+El método ``__str__`` produce una representación en cadena del estado actual de la mascota, especialmente si está aburrido o hambriento o si está contento. Se aburre si la variable de instancia de aburrimiento es mayor que el umbral, que se establece como una variable de clase.
 
-To relieve boredom, the pet owner can either teach the pet a new word, using the ``teach()`` method, or interact with the pet, using the ``hi()`` method. In response to teach(), the pet adds the new word to its list of words. In response to the hi() method, it prints out one of the words it knows, randomly picking one from its list of known words. Both hi() and teach() cause an invocation of the ``reduce_boredom()`` method. It decrements the boredom state by an amount that it reads from the class variable hunger_decrement. The boredom state can never go below 0.
+Para aliviar el aburrimiento, el dueño de la mascota puede enseñarle una nueva palabra a la mascota, usando el método ``teach()``, o interactuar con la mascota, usando el método ``hi()``. En respuesta a teach(), la mascota agrega la nueva palabra a su lista de palabras. En respuesta al método hi(), imprime una de las palabras que conoce, escogiendo al azar una de su lista de palabras conocidas. Tanto hi() como teach() provocan una invocación del método ``reduce_boredom()``. Disminuye el estado de aburrimiento en una cantidad que lee de la variable de clase hunger_decrement. El estado de aburrimiento nunca puede ir por debajo de 0.
 
-To relieve hunger, we call the feed() method.
+Para aliviar el hambre, llamamos al método feed().
 
 .. activecode:: tamagotchi_1
     :nocanvas:
@@ -84,7 +84,7 @@ To relieve hunger, we call the feed() method.
         def reduce_boredom(self):
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
-Let's try making a pet and playing with it a little. Add some of your own commands, too, and keep printing p1 to see what the effects are. If you want to directly inspect the state, try printing p1.boredom or p1.hunger.
+Intentemos hacer una mascota y jugar un poco con ella. Agregue también algunos de sus propios comandos y siga imprimiendo p1 para ver cuáles son los efectos. Si desea inspeccionar directamente el estado, intente imprimir p1.boredom o p1.hunger.
 
 .. activecode:: tamagotchi_2_copy
     :nocanvas:
@@ -104,13 +104,13 @@ Let's try making a pet and playing with it a little. Add some of your own comman
 
 
 
-That's all great if you want to interact with the pet by writing python code. Let's make a game that non-programmers can play.
+Eso es genial si quieres interactuar con la mascota escribiendo código python. Hagamos un juego que los no programadores puedan jugar.
 
-We will use the `Listener Loop <chap_listener>` pattern. At each iteration, we will display a text prompt reminding the user of what commands are available.
+Utilizaremos el patrón `Listener Loop <chap_listener>`. En cada iteración, mostraremos un mensaje de texto que le recordará al usuario qué comandos están disponibles.
 
-The user will have a list of pets, each with a name. The user can issue a command to adopt a new pet, which will create a new instance of Pet. Or the user can interact with an existing pet, with a Greet, Teach, or Feed command.
+El usuario tendrá una lista de mascotas, cada una con un nombre. El usuario puede emitir un comando para adoptar una nueva mascota, lo que creará una nueva instancia de mascota. O el usuario puede interactuar con una mascota existente, con un comando Saludar, Enseñar o Alimentar.
 
-No matter what the user does, with each command entered, the clock ticks for all their pets. Watch out, if you have too many pets, you won't be able to keep them all satisfied!
+No importa lo que haga el usuario, con cada comando ingresado, el reloj marca para todas sus mascotas. Cuidado, si tienes demasiadas mascotas, ¡no podrás mantenerlas todas satisfechas!
 
 .. activecode:: tamogotchi_3:
     :nocanvas:
