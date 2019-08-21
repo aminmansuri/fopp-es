@@ -7,14 +7,14 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Objects as Arguments and Parameters
------------------------------------
+Objetos como Argumentos y Parámetros
+--------------------------------------
 
-You can pass an object as an argument to a function, in the usual way.
+Puede pasar un objeto como argumento a una función, de la forma habitual.
 
-Here is a simple function called ``distance`` involving our new ``Point`` objects.  The job of this function is to figure out the 
-distance between two points.
- 
+Aquí hay una función simple llamada ``distance`` que involucra nuestros nuevos objetos ``Point``. El trabajo de esta función es descubrir la
+distancia entre dos puntos.
+
 .. activecode:: chp13_classes6
 
     import math
@@ -48,10 +48,11 @@ distance between two points.
     print(distance(p,q))
 
 
-``distance`` takes two points and returns the distance between them.  Note that ``distance`` is **not** a method of the Point class.  You can see this by looking at the indentation pattern.  It is not inside the class definition.  The other way we
-can know that ``distance`` is not a method of Point is that ``self`` is not included as a formal parameter.  In addition, we do not invoke ``distance`` using the dot notation.
+``distance`` toma dos puntos y devuelve la distancia entre ellos. Tenga en cuenta que ``distance`` **no es** un método de la clase Point. Puede ver esto mirando el patrón de sangría. No está dentro de la definición de clase. De la otra manera en la que nosotros
+podemos saber que ``distance`` no es un método de Point, es que ``self`` no está incluido como un parámetro formal. Además, no invocamos ``distance`` utilizando la notación de puntos.
 
-We *could have* made distance be a method of the Point class. Then, we would have called the first parameter self, and would have invoked it using the dot notation, as in the following code. Which way to implement it is a matter of coding style. Both work correctly. Most programmers choose whether to make functions be stand-alone or methods of a class based on whether the function semantically seems to be an operation that is performed on instances of the class. In this case, because distance is really a property of a pair of points and is symmetric (the distance from a to b is the same as that from b to a) it makes more sense to have it be a standalone function and not a method. Many heated discussions have occurred between programmers about such style decisions.
+*Podríamos haber hecho* que distance sea un método de la clase Point. Entonces, habríamos llamado al primer parámetro self, y lo habríamos invocado usando la notación de puntos, como en el siguiente código. La forma de implementarlo es una cuestión de estilo de codificación.
+Ambos funcionan correctamente. La mayoría de los programadores eligen si las funciones son independientes o los métodos de una clase en función de si la función parece semánticamente ser una operación que se realiza en instancias de la clase. En este caso, debido a que la distancia es realmente una propiedad de un par de puntos y es simétrica (la distancia de a a b es la misma que la de b a a) tiene más sentido que sea una función independiente y no un método . Se han producido muchas discusiones acaloradas entre los programadores sobre tales decisiones de estilo.
 
 .. activecode:: chp13_classes6a
 
