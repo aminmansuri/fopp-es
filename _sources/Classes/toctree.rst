@@ -1,8 +1,8 @@
-Defining your own Classes
-:::::::::::::::::::::::::
+Definiendo tus Propias Clases
+:::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Defining your own Classes
+   :caption: Definiendo tus Propias Clases
    :maxdepth: 2
 
    intro-ClassesandObjectstheBasics.rst
