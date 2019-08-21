@@ -1,8 +1,8 @@
-Test Cases
-::::::::::
+Casos de prueba
+:::::::::::::::
 
 .. toctree::
-   :caption: Test Cases
+   :caption: Casos de prueba
    :maxdepth: 3
 
    intro-TestCases.rst
