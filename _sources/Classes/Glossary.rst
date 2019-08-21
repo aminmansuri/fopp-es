@@ -7,56 +7,55 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-Glossary
---------
+Glosario
+---------
 
 .. glossary::
 
 
-    attribute
-        One of the named data items that makes up an instance.
+    atributo
+        Uno de los elementos de datos con nombre que constituye una instancia.
 
-    class
-        A user-defined compound type. A class can also be thought of as a
-        template for the objects that are instances of it.
+    clase
+        Un tipo compuesto definido por el usuario. Una clase también puede considerarse como un
+        plantilla para los objetos que son instancias de la misma.
         
     constructor
-        Every class has a "factory", called by the same name as the class, for
-        making new instances.  If the class has an *initializer method*, this method
-        is used to get the attributes (i.e. the state) of the new object properly set up. 
+        Cada clase tiene una "fábrica", llamada por el mismo nombre que la clase, para
+        hacer nuevas instancias. Si la clase tiene un *método de inicializador*, este método
+        se utiliza para obtener los atributos (es decir, el estado) del nuevo objeto configurado correctamente.
             
-    initializer method
-        A special method in Python (called ``__init__``) 
-        that is invoked automatically to set a newly created object's
-        attributes to their initial (factory-default) state.
+    método inicilizador
+        Un método especial en Python (llamado ``__init__``)
+        que se invoca automáticamente para establecer un objeto recién creado
+        atributos a su estado inicial (predeterminado de fábrica).
         
-    instance
-        An object whose type is of some class.  The words instance and object are used
-        interchangeably.
+    instancia
+        Un objeto cuyo tipo es de alguna clase. Se usan las palabras instancia y objeto
+        indistintamente.
     
-    instance variable
-        A variable that stores a value associated with the instance. The instance variables together store the state of an instance.
+    variable de instancia
+        Una variable que almacena un valor asociado con la instancia. Las variables de instancia juntas almacenan el estado de una instancia.
         
-    instantiate
-        To create an instance of a class, and to run its initializer. 
+    instanciar
+        Crear una instancia de una clase y ejecutar su inicializador.
         
-    method
-        A function that is defined inside a class definition and is invoked on
-        instances of that class. 
+    método
+        Una función que se define dentro de una definición de clase y se invoca en
+        instancias de esa clase.
 
-    object
-        A compound data type that is often used to model a thing or concept in
-        the real world.  It bundles together the data and the operations that 
-        are relevant for that kind of data.  Instance and object are used
-        interchangeably.
+    objeto
+        Un tipo de datos compuesto que a menudo se usa para modelar una cosa o concepto en
+        el mundo real. Agrupa los datos y las operaciones que
+        son relevantes para ese tipo de datos. Se utilizan instancia y objeto indistintamente.
 
-    object-oriented programming
-        A powerful style of programming in which data and the operations 
-        that manipulate it are organized into classes and methods.        
+    programación orientada a objetos
+        Un poderoso estilo de programación en el que los datos y las operaciones
+        que lo manipulan se organizan en clases y métodos.
 
-    object-oriented language
-        A language that provides features, such as user-defined classes and
-        inheritance, that facilitate object-oriented programming.
+    lenguaje orientado a objetos
+        Un lenguaje que proporciona características, como clases definidas por el usuario y
+        herencia, que facilita la programación orientada a objetos.
 
 
 
