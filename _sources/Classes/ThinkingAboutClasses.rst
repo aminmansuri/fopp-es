@@ -8,26 +8,26 @@
 
 .. _thinking_about_classes:
 
-Thinking About Classes and Instances
+Pensando En Clases e Instancias
 ------------------------------------
 
-You can now imagine some reasons you may want to define a class. You have seen examples of creating types that are more complicated or specific than the ones built in to Python (like lists or strings). ``Turtle``, with all the instance variables and methods you learned about using earlier in the semester, is a class that programmers defined which is now included in the Python language. In this chapter, we defined ``Point`` with some functionality that can make it easier to write programs that involve ``x,y`` coordinate ``Point`` instances. And shortly, you'll see how you can define classes to represent objects in a game.
+Ahora puede imaginar algunas razones por las que puede querer definir una clase. Ha visto ejemplos de creación de tipos que son más complicados o específicos que los integrados en Python (como listas o cadenas). ``Turtle``, con todas las variables de instancia y métodos que aprendió sobre el uso anterior en el semestre, es una clase que los programadores definieron y que ahora está incluida en el lenguaje Python. En este capítulo, definimos ``Point`` con alguna funcionalidad que puede facilitar la escritura de programas que involucran instancias de ``Point`` de coordenadas ``x,y``. Y en breve, verás cómo puedes definir clases para representar objetos en un juego.
 
-You can also use self-defined classes to hold data -- for example, data you get from making a request to a REST API.
+También puede usar clases autodefinidas para almacenar datos, por ejemplo, los datos que obtiene al realizar una solicitud a una API REST.
 
-Before you decide to define a new class, there are a few things to keep in mind, and questions you should ask yourself:
+Antes de decidir definir una nueva clase, hay algunas cosas a tener en cuenta y preguntas que debe hacerse:
 
-* **What is the data that you want to deal with?** (Data about a bunch of songs from iTunes? Data about a bunch of tweets from Twitter? Data about a bunch of hashtag searches on Twitter? Two numbers that represent coordinates of a point on a 2-dimensional plane?)
+* **¿Cuáles son los datos que desea tratar?** (Datos sobre un montón de canciones de iTunes? Datos sobre un montón de tweets de Twitter? Datos sobre un montón de búsquedas de hashtag en Twitter? Dos números que representan coordenadas de un punto en un plano bidimensional?)
 
-* **What will one instance of your class represent?** In other words, which sort of new *thing* in your program should have fancy functionality? One song? One hashtag? One tweet? One point? The answer to this question should help you decide what to call the class you define.
+* **¿Qué representará una instancia de su clase?** En otras palabras, ¿qué tipo de *cosa* nueva en su programa debería tener una funcionalidad elegante? ¿Una canción? ¿Un hashtag? ¿Un tweet? ¿Un punto? La respuesta a esta pregunta debería ayudarlo a decidir cómo llamar a la clase que defina.
 
-* **What information should each instance have as instance variables?** This is related to what an instance represents. See if you can make it into a sentence. *"Each instance represents one < song > and each < song > has an < artist > and a < title > as instance variables."* Or, *"Each instance represents a < Tweet > and each < Tweet > has a < user (who posted it) > and < a message content string > as instance variables."*
+* **¿Qué información debe tener cada instancia como variables de instancia?** Esto está relacionado con lo que representa una instancia. Vea si puede convertirlo en una oración. *"Cada instancia representa una <canción> y cada <canción> tiene un <artista> y un <título> como variables de instancia."* O, *"Cada instancia representa un <Tweet> y cada <Tweet> tiene un <usuario (quién lo publicó)> y <una cadena de contenido del mensaje> como variables de instancia ".*
 
-* **What instance methods should each instance have?** What should each instance be able to *do*? To continue using the same examples: Maybe each song has a method that uses a lyrics API to get a long string of its lyrics. Maybe each song has a method that returns a string of its artist's name. Or for a tweet, maybe each tweet has a method that returns the length of the tweet's message. (Go wild!)
+* **¿Qué métodos de instancia debe tener cada instancia?** ¿Qué *debe poder hacer* cada instancia? Para continuar usando los mismos ejemplos: tal vez cada canción tiene un método que utiliza una API de letras para obtener una larga cadena de letras. Tal vez cada canción tiene un método que devuelve una cadena del nombre de su artista. O para un tweet, tal vez cada tweet tiene un método que devuelve la longitud del mensaje del tweet. (¡Enloquecer!)
 
-* **What should the printed version of an instance look like?** (This question will help you determine how to write the ``__str__`` method.) Maybe, "Each song printed out will show the song title and the artist's name." or "Each Tweet printed out will show the username of the person who posted it and the message content of the tweet."
+* **¿Cómo debería ser la versión impresa de una instancia?** (Esta pregunta lo ayudará a determinar cómo escribir el método ``__str__``). Quizás, "Cada canción impresa mostrará el título de la canción y el nombre del artista nombre." o "Cada Tweet impreso mostrará el nombre de usuario de la persona que lo publicó y el contenido del mensaje del tweet".
 
-After considering those questions and making decisions about how you're going to get started with a class definition, you can begin to define your class.
+Después de considerar esas preguntas y tomar decisiones sobre cómo comenzará con una definición de clase, puede comenzar a definir su clase.
 
-Remember that a class definition, like a function definition, is a general description of what *every instance of the class should have*. (Every Point has an ``x`` and a ``y``.) The class instances are specific: e.g. the Point with *a specific x and y >.* You might have a Point with an ``x`` value of 3 and a ``y`` value of 2, so for that particular *instance* of the *class* ``Point``, you'd pass in ``3`` and ``2`` to the constructor, the ``__init__`` method, like so: ``new_point = Point(3,2)``, as you saw in the last sections.
+Recuerde que una definición de clase, como una definición de función, es una descripción general de lo que *debería tener cada instancia de la clase*. (Cada punto tiene una ``x`` y una ``y``.) Las instancias de clase son específicas: p. el Punto con *una x e y específica>.* Es posible que tenga un Punto con un valor de ``x`` de 3 y un valor de ``y`` de 2, así que para esa *instancia* particular de la *clase* ``Point``, pasaría ``3`` y ``2`` al constructor, el método ``__init__``, así: ``new_point = Point(3,2)``, como viste en las últimas secciones.
 
