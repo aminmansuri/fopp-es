@@ -11,48 +11,48 @@
    :prefix: progdev-1-
    :start: 1
 
-👩‍💻 Program Development
--------------------------
+👩‍💻 Desarrollo del programa
+------------------------------------
 
-At this point, you should be able to look at complete functions and tell what
-they do. Also, if you have been doing the exercises, you have written some
-small functions. As you write larger functions, you might start to have more
-difficulty, especially with runtime and semantic errors.
+En este punto, debería poder ver las funciones completas y decir qué
+ellas hacen. Además, si ha estado haciendo los ejercicios, ha escrito algunas
+pequeñas funciones. A medida que escribe funciones más grandes, puede comenzar a tener más
+dificultad, especialmente con tiempo de ejecución y errores semánticos.
 
-To deal with increasingly complex programs, we are going to suggest a technique
-called **incremental development**. The goal of incremental development is to
-avoid long debugging sessions by adding and testing only a small amount of code
-at a time.
+Para tratar con programas cada vez más complejos, vamos a sugerir una técnica
+llamado **desarrollo incremental**. El objetivo del desarrollo incremental es que
+evite largas sesiones de depuración agregando y probando solo una pequeña cantidad de código
+a la vez
 
-If you write unit tests before doing the incremental development, you will be able to track your progress as the code passes more and more of the tests. Alternatively, you can write additional tests at each stage of incremental development.
- Then you will be able to check whether any code change you make at a later stage of development causes one of the earlier tests, which used to pass, to not pass any more.
+Si escribe pruebas unitarias antes de realizar el desarrollo incremental, podrá seguir su progreso a medida que el código pase más y más pruebas. Alternativamente, puede escribir pruebas adicionales en cada etapa del desarrollo incremental.
+Luego podrá verificar si cualquier cambio de código que realice en una etapa posterior del desarrollo hace que una de las pruebas anteriores, que solía pasar, ya no pasara.
 
-As an example, suppose you want to find the distance between two points, given
-by the coordinates (x\ :sub:`1`\ , y\ :sub:`1`\ ) and
-(x\ :sub:`2`\ , y\ :sub:`2`\ ).  By the Pythagorean theorem, the distance is:
+Como ejemplo, suponga que desea encontrar la distancia entre dos puntos, dado
+por las coordenadas (x\ :sub:`1`\ , y\ :sub:`1`\ ) y
+(x\ :sub:`2`\ , y\ :sub:`2`\ ). Según el teorema de Pitágoras, la distancia es:
 
 .. image:: Figures/distance_formula.png
-   :alt: Distance formula 
+   :alt: Fórmula de distancia
 
-The first step is to consider what a ``distance`` function should look like in
-Python. In other words, what are the inputs (parameters) and what is the output
-(return value)?
+El primer paso es considerar cómo debería ser una función de ``distance`` en
+Python. En otras palabras, ¿cuáles son las entradas (parámetros) y cuál es la salida?
+(valor de retorno)?
 
-In this case, the two points are the inputs, which we can represent using four
-parameters. The return value is the distance, which is a floating-point value.
+En este caso, los dos puntos son las entradas, que podemos representar usando cuatro
+parámetros. El valor de retorno es la distancia, que es un valor de coma flotante.
 
-Already we can write an outline of the function that captures our thinking so far.
+Ya podemos escribir un resumen de la función que captura nuestro pensamiento hasta ahora.
 
 .. sourcecode:: python
     
     def distance(x1, y1, x2, y2):
         return None
 
-Obviously, this version of the function doesn't compute distances; it always
-returns None. But it is syntactically correct, and it will run, which means
-that we can test it before we make it more complicated.
+Obviamente, esta versión de la función no calcula distancias; siempre
+devuelve None. Pero es sintácticamente correcto y se ejecutará, lo que significa
+que podemos probarlo antes de hacerlo más complicado.
 
-We import the test module to enable us to write a unit test for the function. The distance between any point and itself should be 0.
+Importamos el módulo de prueba para permitirnos escribir una prueba unitaria para la función. La distancia entre cualquier punto y sí mismo debe ser 0.
 
 .. activecode:: ac400_1_1
     
@@ -62,12 +62,12 @@ We import the test module to enable us to write a unit test for the function. Th
 
     test.testEqual(distance(1, 2, 1, 2), 0)
 
-The ``testEqual`` function from the test module calls the distance function with sample inputs: (1,2, 1,2).
-The first 1,2 are the coordinates of the first point and the second 1,2 are the coordinates of the second point.
-What is the distance between these two points? Zero. ``testEqual`` compares what is returned by the distance function
-and the None that is returned.
+La función ``testEqual`` del módulo de prueba llama a la función de distancia con entradas de muestra: (1,2, 1,2).
+Los primeros 1,2 son las coordenadas del primer punto y los segundos 1,2 son las coordenadas del segundo punto.
+¿Cuál es la distancia entre estos dos puntos? Cero. ``testEqual`` compara lo que devuelve la función de distancia
+y el None que se devuelve.
 
-It's not returning the correct answer, so we don't pass the test. Let's fix that.
+No está devolviendo la respuesta correcta, por lo que no aprobamos la prueba. Vamos a arreglar eso.
 
 .. activecode:: ac400_1_2
 
@@ -77,21 +77,21 @@ It's not returning the correct answer, so we don't pass the test. Let's fix that
 
     test.testEqual(distance(1, 2, 1, 2), 0)
 
-Now we pass the test. But really, that's not a sufficient test.
+Ahora pasamos la prueba. Pero realmente, esa no es una prueba suficiente.
 
-.. admonition:: Extend the program ...
+.. admonition:: Ampliar el programa ...
 
-   On line 6, write another unit test. Use (1,2, 4,6) as the parameters to the distance function. How far apart are these two points? Use that value (instead of 0) as the correct answer for this unit test.
+   En la línea 6, escriba otra prueba unitaria. Use (1,2, 4,6) como los parámetros para la función de distancia. ¿Qué tan separados están estos dos puntos? Use ese valor (en lugar de 0) como la respuesta correcta para esta prueba unitaria.
 
-   On line 7, write another unit test. Use (0,0, 1,1) as the parameters to the distance function. How far apart are these two points? Use that value as the correct answer for this unit test.
+   En la línea 7, escriba otra prueba unitaria. Use (0,0, 1,1) como los parámetros para la función de distancia. ¿Qué tan separados están estos dos puntos? Use ese valor como la respuesta correcta para esta prueba unitaria.
 
-   Are there any other edge cases that you think you should consider? Perhaps points with negative numbers for x-values or y-values?
+   ¿Hay otros casos límite que crees que deberías considerar? ¿Quizás puntos con números negativos para valores x o valores y?
 
 
-**When testing a function, it is essential to know the right answer.**
+**Al probar una función, es esencial saber la respuesta correcta.**
 
-For the second test the horizontal distance equals 3 and the vertical distance equals 4; that way, the result is 
-5 (the hypotenuse of a 3-4-5 triangle). For the third test, we have a 1-1-sqrt(2) triangle.
+Para la segunda prueba, la distancia horizontal es igual a 3 y la distancia vertical es igual a 4; de esa manera, el resultado es
+5 (la hipotenusa de un triángulo 3-4-5). Para la tercera prueba, tenemos un triángulo 1-1-sqrt(2).
 
 .. activecode:: ac400_1_3
 
@@ -105,14 +105,14 @@ For the second test the horizontal distance equals 3 and the vertical distance e
 
 
 
-The first test passes but the others fail since the distance function does not yet contain all the necessary steps.
+La primera prueba pasa pero las otras fallan ya que la función de distancia aún no contiene todos los pasos necesarios.
 
-At this point we have confirmed that the function is syntactically correct, and we can start adding lines of code. 
-After each incremental change, we test the function again. If an error occurs at any point, we know where it must be 
---- in the last line we added.
+En este punto, hemos confirmado que la función es sintácticamente correcta y podemos comenzar a agregar líneas de código.
+Después de cada cambio incremental, probamos la función nuevamente. Si se produce un error en algún momento, sabemos dónde debe estar
+--- en la última línea que agregamos.
 
-A logical first step in the computation is to find the differences x\ :sub:`2`\ - x\ :sub:`1`\  and y\ :sub:`2`\ - y\ :sub:`1`\ . 
-We will store those values in temporary variables named ``dx`` and ``dy``.
+Un primer paso lógico en el cálculo es encontrar las diferencias x\ :sub:`2`\ - x\ :sub:`1`\ e y\ :sub:`2`\ - y\ :sub:`1`\ .
+Almacenaremos esos valores en variables temporales llamadas ``dx`` y ``dy``.
 
 .. sourcecode:: python
     
@@ -121,7 +121,7 @@ We will store those values in temporary variables named ``dx`` and ``dy``.
         dy = y2 - y1
         return 0.0
 
-Next we compute the sum of squares of ``dx`` and ``dy``.
+Luego calculamos la suma de los cuadrados de ``dx`` y ``dy``.
 
 .. sourcecode:: python
     
@@ -131,11 +131,11 @@ Next we compute the sum of squares of ``dx`` and ``dy``.
         dsquared = dx**2 + dy**2
         return 0.0
 
-Again, we could run the program at this stage and check the value of ``dsquared`` (which
-should be 25).
+De nuevo, podríamos ejecutar el programa en esta etapa y verificar el valor de ``dsquared`` (que
+debería ser 25).
 
-Finally, using the fractional exponent ``0.5`` to find the square root,
-we compute and return the result.
+Finalmente, usando el exponente fraccional ``0.5`` para encontrar la raíz cuadrada,
+calculamos y devolvemos el resultado.
 
 .. index:: testing, unit test
 
@@ -158,34 +158,34 @@ we compute and return the result.
 
 .. .. admonition Fix the error ...
 
-..    Two of the tests pass but the last one fails. Is there still an error in the function?
+..    Dos de las pruebas pasan pero la última falla. ¿Sigue habiendo un error en la función?
 
-..    Frequently we discover errors in the functions that we are writing. However, it is possible that there is an error in a test. Here the error is in the precision of the correct answer.
+.. Frecuentemente descubrimos errores en las funciones que estamos escribiendo. Sin embargo, es posible que haya un error en una prueba. Aquí el error está en la precisión de la respuesta correcta.
 
-..    The third test fails because by default testEqual checks 5 digits to the right of the decimal point.
+.. La tercera prueba falla porque por defecto testEqual verifica 5 dígitos a la derecha del punto decimal.
 
-..    - Change ``1.41`` to ``1.41421`` and run. The test will pass.
-   
-..    There are circumstances where 2 digits to the right of the decimal point is sufficiently precise.
+..    - Cambie ``1.41`` a ``1.41421`` y ejecútelo. La prueba pasará.
 
-..    - Copy line 11 on to line 12. On line 12, change ``1.41421`` to ``1.41``. Run. The test fails.
+.. Hay circunstancias en las que 2 dígitos a la derecha del punto decimal son lo suficientemente precisos.
 
-..    - Type ``, 2`` after 1.41. (The 2 represents the precision of the test -- how many digits to the right of the decimal that must be correct.) Run.
+..    - Copie la línea 11 en la línea 12. En la línea 12, cambie ``1.41421`` a ``1.41``. Ejecutar. La prueba falla.
 
-..    Now all four of the tests pass! Wonderful! However, you may still need to perform additional tests.
+..    - Escriba ``, 2`` después de 1.41. (El 2 representa la precisión de la prueba: cuántos dígitos a la derecha del decimal deben ser correctos). Ejecutar.
 
-When you start out, you might add only a line or two of code at a time. As you gain more experience, you might find 
-yourself writing and debugging bigger conceptual chunks. As you improve your programming skills you should find yourself
-managing bigger and bigger chunks: this is very similar to the way we learned to read letters, syllables, words, phrases, 
-sentences, paragraphs, etc., or the way we learn to chunk music --- from individual notes to chords, bars, phrases, and so on.  
+..    Ahora pasan las cuatro pruebas. ¡Maravilloso! Sin embargo, es posible que aún necesite realizar pruebas adicionales.
 
-The key aspects of the process are:
+Cuando comienzas, puedes agregar solo una o dos líneas de código a la vez. A medida que ganes más experiencia, podría encontrar
+usted mismo escribiendo y depurando fragmentos conceptuales más grandes. A medida que mejore sus habilidades de programación, debería
+gestionar trozos cada vez más grandes: esto es muy similar a la forma en que aprendimos a leer letras, sílabas, palabras, frases,
+oraciones, párrafos, etc., o la forma en que aprendemos a tocar música --- desde notas individuales hasta acordes, compases, frases, etc.
 
-#. Make sure you know what you are trying to accomplish. Then you can write appropriate unit tests.
-#. Start with a working skeleton program and make small incremental changes. At any
-   point, if there is an error, you will know exactly where it is.
-#. Use temporary variables to hold intermediate values so that you can easily inspect
-   and check them.
-#. Once the program is working, you might want to consolidate multiple statements 
-   into compound expressions,
-   but only do this if it does not make the program more difficult to read.
+Los aspectos clave del proceso son:
+
+#. Asegúrese de saber lo que está tratando de lograr. Entonces puedes escribir pruebas unitarias apropiadas.
+#. Comience con un programa de esqueleto funcional y realice pequeños cambios incrementales. A cualquier
+   punto, si hay un error, sabrá exactamente dónde está.
+#. Use variables temporales para mantener valores intermedios para que pueda inspeccionar fácilmente
+   y verifíquelos.
+#. Una vez que el programa está funcionando, es posible que desee consolidar varias declaraciones
+   en expresiones compuestas,
+   pero solo haga esto si no hace que el programa sea más difícil de leer.
