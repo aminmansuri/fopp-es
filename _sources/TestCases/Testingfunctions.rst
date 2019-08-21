@@ -11,50 +11,50 @@
    :prefix: test-2-
    :start: 1
 
-Writing Test Cases for Functions
-================================
+Escribir casos de prueba para funciones
+=======================================
 
-It is a good idea to write one or more test cases for each function that you define.
+Es una buena idea escribir uno o más casos de prueba para cada función que defina.
 
-A function defines an operation that can be performed. If the function takes one or more parameters, it is supposed to 
-work properly on a variety of possible inputs. Each test case will check whether the function works properly on 
-**one set of possible inputs**. 
+Una función define una operación que se puede realizar. Si la función toma uno o más parámetros, se supone que debe
+funcionar correctamente en una variedad de posibles entradas. Cada caso de prueba verificará si la función funciona correctamente en
+**un conjunto de entradas posibles**.
 
-A useful function will do some combination of three things, given its input parameters:
+Una función útil hará una combinación de tres cosas, dados sus parámetros de entrada:
 
-* Return a value. For these, you will write **return value tests**.
-* Modify the contents of some mutable object, like a list or dictionary. For these you will write **side effect tests**.
-* Print something or write something to a file. Tests of whether a function generates the right printed output are beyond the scope of this testing framework; you won't write these tests.
+* Devuelve un valor. Para estos, escribirá **pruebas de valor de retorno**.
+* Modifica el contenido de algún objeto mutable, como una lista o diccionario. Para estos, escribirá **pruebas de efectos secundarios**.
+* Imprime algo o escribe algo en un archivo. Las pruebas de si una función genera el resultado impreso correcto están más allá del alcance de este marco de prueba; No escribirás estas pruebas.
 
-Return Value Tests
-~~~~~~~~~~~~~~~~~~
+Pruebas de valor de retorno
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Testing whether a function returns the correct value is the easiest test case to define. You simply check whether the 
-result of invoking the function on a particular input produces the particular output that you expect. If ``f`` is your 
-function, and you think that it should transform inputs ``x`` and ``y`` into output ``z``, then you could write a test as 
-``test.testEqual(f(x, y), z)``. Or, to give a more concrete example, if you have a function ``square``, you could have 
-a test case ``test.testEqual(square(3), 9)``. Call this a **return value test**.
+Probar si una función devuelve el valor correcto es el caso de prueba más fácil de definir. Simplemente verifica si el
+resultado de invocar la función en una entrada particular produce la salida particular que espera. Si ``f`` es tu
+y cree que debería transformar las entradas ``x`` e ``y`` en la salida ``z``, entonces podría escribir una prueba como
+``test.testEqual(f(x, y), z)``. O, para dar un ejemplo más concreto, si tiene una función ``square``, podría tener
+un caso de prueba ``test.testEqual(square(3), 9)``. Llame a esto una **prueba de valor de retorno**.
 
-Because each test checks whether a function works properly on specific inputs, the test cases will never be complete: in 
-principle, a function might work properly on all the inputs that are tested in the test cases, but still not work 
-properly on some other inputs. That's where the art of defining test cases comes in: you try to find specific inputs that 
-are representative of all the important kinds of inputs that might ever be passed to the function.
+Como cada prueba verifica si una función funciona correctamente en entradas específicas, los casos de prueba nunca estarán completos: en
+principio, una función podría funcionar correctamente en todas las entradas que se prueban en los casos de prueba, pero aún no funciona
+correctamente en algunas otras entradas. Ahí es donde entra el arte de definir casos de prueba: intenta encontrar entradas específicas que
+son representativos de todos los tipos importantes de entradas que podrían pasar a la función.
 
-The first test case that you define for a function should be an "easy" case, one that is prototypical of the kinds of 
-inputs the function is supposed to handle. Additional test cases should handle "extreme" or unusual inputs, sometimes 
-called **edge cases**. For example, if you are defining the "square" function, the first, easy case, might be an input 
-like 3. Additional extreme or unusual inputs around which you create test cases might be a negative number, 0, and a 
-floating point number.
+El primer caso de prueba que defina para una función debe ser un caso "fácil", prototipo de los tipos de
+entradas que se supone que maneja la función. Los casos de prueba adicionales deben manejar entradas "extremas" o inusuales, a veces
+llamado **casos de borde**. Por ejemplo, si está definiendo la función "square", el primer caso fácil podría ser una entrada
+como 3. Las entradas extremas o inusuales adicionales alrededor de las cuales crea casos de prueba pueden ser un número negativo, 0 y un
+número de coma flotante
 
-One way to think about how to generate edge cases is to think in terms of **equivalence classes** of the different kinds of inputs the function might get. For example, the input to the ``square`` function could be either positive or negative. We then choose an input from each of these classes.
-**It is important to have at least one test for each equivalence class of inputs.**
+Una forma de pensar sobre cómo generar casos extremos es pensar en términos de **clases de equivalencia** de los diferentes tipos de entradas que podría obtener la función. Por ejemplo, la entrada a la función ``square`` podría ser positiva o negativa. Luego elegimos una entrada de cada una de estas clases.
+**Es importante tener al menos una prueba para cada clase de equivalencia de entradas.**
 
-Semantic errors are often caused by improperly handling the boundaries between equivalence classes. The boundary for this
-problem is zero. **It is important to have a test at each boundary.**
+Los errores semánticos a menudo son causados por el manejo inadecuado de los límites entre las clases de equivalencia. El límite para
+el problema es cero. **Es importante tener una prueba en cada límite.**
 
-Another way to think about edge cases is to imagine things that could go wrong in the implementation. For example, in the square function we might mistakenly use addition instead of multiplication. Thus, we shouldn't rely on a test that uses 2 as input, but we might be fooled into thinking it was working when it produced an output of 4, when it was really doubling rather than squaring.
+Otra forma de pensar sobre casos extremos es imaginar cosas que podrían salir mal en la implementación. Por ejemplo, en la función cuadrada podríamos usar por error la suma en lugar de la multiplicación. Por lo tanto, no deberíamos confiar en una prueba que use 2 como entrada, pero podríamos engañarnos al pensar que estaba funcionando cuando producía una salida de 4, cuando realmente se duplicaba en lugar de cuadrar.
 
-Try adding one or two more test cases for the square function in the code below, based on the suggestions for edge cases.
+Intente agregar uno o dos casos de prueba más para la función cuadrada en el código a continuación, según las sugerencias para los casos límite.
 
 .. activecode:: ac19_2_1
 
@@ -66,21 +66,21 @@ Try adding one or two more test cases for the square function in the code below,
     test.testEqual(square(3), 9)
 
 
-Side Effect Tests
-~~~~~~~~~~~~~~~~~
+Pruebas de efectos secundarios
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To test whether a function makes correct changes to a mutable object, you will need more than one line of code. You will 
-first set the mutable object to some value, then run the function, then check whether the object has the expected value. 
-Call this a **side effect test** because you are checking to see whether the function invocation has had the correct side 
-effect on the mutable object.
+Para probar si una función realiza los cambios correctos en un objeto mutable, necesitará más de una línea de código. Vas a
+primero establezca el objeto mutable en algún valor, luego ejecute la función, luego verifique si el objeto tiene el valor esperado.
+Llame a esto una **prueba de efectos secundarios** porque está verificando si la invocación de la función ha tenido el lado correcto
+efecto sobre el objeto mutable.
 
-An example follows, testing the ``update_counts`` function (which is deliberately implemented incorrectly...). This 
-function takes a string called ``letters`` and updates the counts in ``counts_diction`` that are associated with each 
-character in the string. To do a side effect test, we first create a dictionary with initial counts for some letters. 
-Then we invoke the function. Then we test that the dictionary has the correct counts for some letters (those correct 
-counts are computed manually when we write the test. We have to know what the correct answer should be in order to write 
-a test). You can think of it like writing a small exam for your code -- we would not give you an exam without knowing the 
-answers ourselves.
+A continuación, se muestra un ejemplo que prueba la función ``update_counts`` (que se implementa de manera deliberada de manera incorrecta ...). Esta
+función toma un string llamado ``letters`` y actualiza los recuentos en ``counts_diction`` que están asociados con cada
+personaje en el string. Para hacer una prueba de efectos secundarios, primero creamos un diccionario con recuentos iniciales para algunas letras.
+Luego invocamos la función. Luego probamos que el diccionario tiene los recuentos correctos para algunas letras (las correctas).
+Los recuentos se calculan manualmente cuando escribimos la prueba. Tenemos que saber cuál debería ser la respuesta correcta para escribir
+una prueba). Puede pensarlo como escribir un pequeño examen para su código; no le daríamos un examen sin conocer el
+nos responde a nosotros mismos.
 
 .. activecode:: ac19_2_2
 
@@ -94,33 +94,33 @@ answers ourselves.
 
     counts = {'a': 3, 'b': 2}
     update_counts("aaab", counts)
-    # 3 more occurrences of a, so 6 in all
+    # 3 ocurrencias más de a, entonces 6 en total
     test.testEqual(counts['a'], 6)
-    # 1 more occurrence of b, so 3 in all
+    # 1 ocurrencia más de a, entonces 3 en total
     test.testEqual(counts['b'], 3)
 
 
-Testing Conditionals and Loops
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prueba de condicionales y bucles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the code has a conditional execution, or a for loop, then you'll want to include test cases that exercise different 
-possible paths through the code. For example, if there is a for loop, edge cases would include iteration through an empty 
-sequence or a sequence with just one item. With a conditional, you would want different inputs that cause the if and else 
-clauses to execute.
+Si el código tiene una ejecución condicional o un bucle for, entonces querrá incluir casos de prueba que ejerzan diferentes
+posibles caminos a través del código. Por ejemplo, si hay un bucle for, los casos extremos incluirían la iteración a través de una
+secuencia vacía o una secuencia con solo un elemento. Con un condicional, desearía diferentes entradas que causen el if y else
+cláusulas para ejecutar.
 
-If you were writing tests on a function that takes any list as input and returns a value that is a computation on that 
-input list, you might test the function's return value when it is invoked on an empty list, a list with only one value, a 
-list with an element that is a list itself, a list that has many elements...
+Si estaba escribiendo pruebas en una función que toma cualquier lista como entrada y devuelve un valor que es un cálculo en ese
+lista de entrada, puede probar el valor de retorno de la función cuando se invoca en una lista vacía, una lista con un solo valor, un
+lista con un elemento que es una lista en sí, una lista que tiene muchos elementos ...
 
-Try adding those some of those tests in the code window above, for the update_counts function. What if you start with an 
-empty counts dictionary? What if the string passed to update_counts is empty? What if the string includes letters that 
-aren't in the dictionary yet?
+Intente agregar algunas de esas pruebas en la ventana de código anterior, para la función update_counts. ¿Qué pasa si comienzas con un
+diccionario de recuentos vacíos? ¿Qué pasa si la cadena pasada a update_counts está vacía? ¿Qué pasa si la cadena incluye letras que
+¿Todavía no estás en el diccionario?
 
-Testing Optional Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Prueba de parámetros opcionales
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If a function takes an optional parameter, one of the edge cases to test for is when no parameter value is supplied 
-during execution. Below are some tests for the built-in sorted function.
+Si una función toma un parámetro opcional, uno de los casos límite para probar es cuando no se proporciona ningún valor de parámetro
+durante la ejecución. A continuación se presentan algunas pruebas para la función ordenada incorporada.
 
 .. activecode:: ac19_2_3
 
@@ -134,7 +134,7 @@ during execution. Below are some tests for the built-in sorted function.
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: No matter how many tests you write, there may be some input that you didn't test, and the function could do the wrong thing on that input.
-   :feedback_b: The tests should cover as many edge cases as you can think of, but there's always a possibility that the function does badly on some input that you didn't include as a test case.
+   :feedback_a: No importa cuántas pruebas escriba, puede haber alguna entrada que no haya probado, y la función podría hacer lo incorrecto en esa entrada.
+   :feedback_b: Las pruebas deben cubrir tantos casos extremos como se te ocurran, pero siempre existe la posibilidad de que la función funcione mal en alguna entrada que no incluiste como caso de prueba.
 
-   If you write a complete set of tests and a function passes all the tests, you can be sure that it's working correctly.
+   Si escribe un conjunto completo de pruebas y una función pasa todas las pruebas, puede estar seguro de que funciona correctamente.
