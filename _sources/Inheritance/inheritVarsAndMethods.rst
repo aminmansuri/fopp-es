@@ -7,23 +7,23 @@
     License".
 
 
-Inheriting Variables and Methods
+Heredando Variables y Métodos
 ================================
 
-.. index:: Mechanics of defining a subclass
+.. index:: Mecánicas para definir una subclase
 
-Mechanics of Defining a Subclass
---------------------------------
+Mecánicas para Definir una Subclase
+------------------------------------
 
-We said that inheritance provides us a more elegant way of, for example, creating  ``Dog`` and ``Cat`` types, rather than making a very complex ``Pet`` class. In the abstract, this is pretty intuitive: all pets have certain things, but dogs are different from cats, which are different from birds. Going a step further, a Collie dog is different from a Labrador dog, for example. Inheritance provides us with an easy and elegant way to represent these differences.
+Dijimos que la herencia nos proporciona una forma más elegante de, por ejemplo, crear tipos de ``Dog`` y ``Cat``, en lugar de crear una clase muy compleja de ``Pet``. En resumen, esto es bastante intuitivo: todas las mascotas tienen ciertas cosas, pero los perros son diferentes de los gatos, que son diferentes de las aves. Yendo un paso más allá, un perro Collie es diferente de un perro Labrador, por ejemplo. La herencia nos brinda una manera fácil y elegante de representar estas diferencias.
 
-Basically, it works by defining a new class, and using a special syntax to show what the new sub-class *inherits from* a super-class. So if you wanted to define a ``Dog`` class as a special kind of ``Pet``, you would say that the ``Dog`` type inherits from the ``Pet`` type. In the definition of the inherited class, you only need to specify the methods and instance variables that are different from the parent class (the **parent class**, or the **superclass**,  is what we may call the class that is *inherited from*. In the example we're discussing, ``Pet`` would be the superclass of ``Dog`` or ``Cat``).
+Básicamente, funciona definiendo una nueva clase y utilizando una sintaxis especial para mostrar lo que la nueva subclase *hereda de* una superclase. Entonces, si desea definir una clase ``Dog`` como un tipo especial de ``Mascota``, diría que el tipo ``Dog hereda del tipo ``Pet``. En la definición de la clase heredada, solo necesita especificar los métodos y las variables de instancia que son diferentes de la clase principal (la **clase principal**, o la **superclase**, es lo que podemos llamar la clase que es *heredado de*. En el ejemplo que estamos discutiendo, ``Pet`` sería la superclase de ``Dog`` o ``Cat``).
 
-Here is an example. Say we want to define a class ``Cat`` that inherits from ``Pet``. Assume we have the ``Pet`` class that we defined earlier.
+Aquí hay un ejemplo. Digamos que queremos definir una clase ``Cat`` que herede de ``Pet``. Supongamos que tenemos la clase ``Pet`` que definimos anteriormente.
 
-We want the ``Cat`` type to be exactly the same as ``Pet``, *except* we want the sound cats to start out knowing "meow" instead of "mrrp", and we want the ``Cat`` class to have its own special method called ``chasing_rats``, which only ``Cat`` s have.
+Queremos que el tipo ``Cat`` sea exactamente el mismo que ``Pet``, *excepto que* queremos que los gatos de sonido comiencen a conocer "Meow" en lugar de "mrrp", y queremos que la clase ``Cat`` tenga su propio método especial llamado ``chasing_rats``, que solo lo tedrá ``Cat``.
 
-For reference, here's the original Tamagotchi code
+Como referencia, aquí está el código original de Tamagotchi
 
 
 .. activecode:: inheritance_cat_example
@@ -87,13 +87,13 @@ For reference, here's the original Tamagotchi code
             return "What are you doing, Pinky? Taking over the world?!"
 
 
-All we need is the few extra lines at the bottom of the ActiveCode window! The elegance of inheritance allows us to specify just the differences in the new, inherited class. In that extra code, we make sure the ``Cat`` class inherits from the ``Pet`` class. We do that by putting the word Pet in parentheses, ``class Cat(Pet):``. In the definition of the class ``Cat``, we only need to define the things that are different from the ones in the ``Pet`` class.
+¡Todo lo que necesitamos son las pocas líneas adicionales en la parte inferior de la ventana de ActiveCode! La elegancia de la herencia nos permite especificar solo las diferencias en la nueva clase heredada. En ese código adicional, nos aseguramos de que la clase ``Cat`` herede de la clase Pet. Hacemos eso poniendo la palabra Pet entre paréntesis, ``classCat (Pet):``. En la definición de la clase ``Cat``, solo necesitamos definir las cosas que son diferentes de las de la clase ``Pet``.
 
-In this case, the only difference is that the class variable ``sounds`` starts out with the string ``"Meow"`` instead of the string ``"mrrp"``, and there is a new method ``chasing_rats``.
+En este caso, la única diferencia es que la variable de clase ``sounds`` comienza con la cadena ``"Meow"`` en lugar de la cadena ``"mrrp"``, y hay un nuevo método ``chasing_rats``.
 
-We can still use all the ``Pet`` methods in the ``Cat`` class, this way. You can call the ``__str__`` method on an instance of ``Cat`` to ``print`` an instance of ``Cat``, the same way you could call it on an instance of ``Pet``, and the same is true for the ``hi`` method -- it's the same for instances of ``Cat`` and ``Pet``. But the ``chasing_rats`` method is special: it's only usable on ``Cat`` instances, because ``Cat`` is a subclass of ``Pet`` which has that additional method.
+Todavía podemos usar todos los métodos ``Pet`` en la clase ``Cat``, de esta manera. Puede llamar al método ``__str__`` en una instancia de ``Cat`` para ``imprimir`` una instancia de ``Cat``, de la misma manera que podría llamarlo en una instancia de ``Pet`` , y lo mismo es cierto para el método ``hi``: es lo mismo para las instancias de ``Cat y ``Pet. Pero el método ``chasing_rats`` es especial: solo se puede usar en instancias ``Cat``, porque ``Cat`` es una subclase de ``Pet`` que tiene ese método adicional.
 
-In the original Tamagotchi game in the last chapter, you saw code that created instances of the ``Pet`` class. Now let's write a little bit of code that uses instances of the ``Pet`` class AND instances of the ``Cat`` class.
+En el juego original de Tamagotchi en el último capítulo, viste código que creó instancias de la clase ``Pet``. Ahora escribamos un poco de código que usa instancias de la clase ``Pet`` e instancias de la clase ``Cat``.
 
 .. activecode:: tamagotchi_2
     :nocanvas:
@@ -117,7 +117,7 @@ In the original Tamagotchi game in the last chapter, you saw code that created i
 
     #print(p1.chasing_rats()) # This line will give us an error. The Pet class doesn't have this method!
 
-And you can continue the inheritance tree. We inherited ``Cat`` from ``Pet``. Now say we want a subclass of ``Cat`` called ``Cheshire``. A Cheshire cat should inherit everything from ``Cat``, which means it inherits everything that ``Cat`` inherits from ``Pet``, too. But the ``Cheshire`` class has its own special method, ``smile``.
+Y puedes continuar con el árbol de herencia. Heredamos ``Cat`` de ``Pet``. Ahora digamos que queremos una subclase de ``Cat`` llamada ``Cheshire``. Un gato de Cheshire debería heredar todo de ``Cat``, lo que significa que también hereda todo lo que ``Cat`` hereda de ``Pet`` pero la clase ``Cheshire`` tiene su propio método especial, ``smile``.
 
 .. activecode:: inheritance_cheshire_example
     :nocanvas:
@@ -150,79 +150,79 @@ And you can continue the inheritance tree. We inherited ``Cat`` from ``Pet``. No
     #p1.smile() # This will give you an error, too. This method does not exist on instances of the Pet class.
 
 
-How the interpreter looks up attributes
+Cómo el Intérprete Busca Atributos
 ---------------------------------------
 
-So what is happening in the Python interpreter when you write programs with classes, subclasses, and instances of both parent classes and subclasses?
+Entonces, ¿qué sucede en el intérprete de Python cuando escribes programas con clases, subclases e instancias de clases y subclases primarias?
 
-**This is how the interpreter looks up attributes:**
+** Así es como el intérprete busca los atributos:**
 
-1. First, it checks for an instance variable or an instance method by the name it's looking for.
-2. If an instance variable or method by that name is not found, it checks for a class variable. (See the :ref:`previous chapter <class_and_instance_vars>` for an explanation of the difference between **instance variables** and **class variables**.)
-3. If no class variable is found, it looks for a class variable in the parent class.
-4. If no class variable is found _there_, the interpreter looks for a class variable in THAT class's parent, if it exists -- the "grandparent" class.
-5. This process goes on until the last ancestor is reached, at which point Python will signal an error.
+1. Primero, busca una variable de instancia o un método de instancia por el nombre que está buscando.
+2. Si no se encuentra una variable de instancia o método con ese nombre, busca una variable de clase. (Consulte el :ref:`capítulo anterior <class_and_instance_vars>` para obtener una explicación de la diferencia entre **variables de instancia** y **variables de clase**.)
+3. Si no se encuentra ninguna variable de clase, busca una variable de clase en la clase primaria.
+4. Si no se encuentra ninguna variable de clase _aquí_, el intérprete busca una variable de clase en el padre de ESA clase, si existe, la clase "abuelo".
+5. Este proceso continúa hasta que se alcanza el último antepasado, momento en el que Python señalará un error.
 
-Let's look at this with respect to some code.
+Miremos esto con respecto a algún código.
 
-Say you write the lines:
+Digamos que escribes las líneas:
 
 .. code:: python
 
     new_cat = Cheshire("Pumpkin")
     print(new_cat.name)
 
-In the second line, after the instance is created, Python looks for the instance variable ``name`` in the ``new_cat`` instance.  In this case, it exists. The name on this instance of ``Cheshire`` is ``Pumpkin``. There you go!
+En la segunda línea, después de crear la instancia, Python busca la variable de instancia ``name`` en la instancia ``new_cat``. En este caso, existe. El nombre en esta instancia de ``Cheshire`` es ``Pumpkin``. Ahí tienes!
 
-When the following lines of code are written and executed:
+Cuando se escriben y ejecutan las siguientes líneas de código:
 
 .. code:: python
 
     cat1 = Cat("Sepia")
     cat1.hi()
 
-The Python interpreter looks for ``hi`` in the instance of ``Cat``. It does not find it, because there's no statement of the form ``cat1.hi = ...``. (Be careful here -- if you *had* set an instance variable on Cat called ``hi`` it would be a bad idea, because you would not be able to use the **method** that it inherited anymore. We'll see more about this later.)
+El intérprete de Python busca ``hi`` en la instancia de ``Cat``. No lo encuentra, porque no hay una declaración de la forma ``cat1.hi = ...``. (Tenga cuidado aquí: si *hubiera* establecido una variable de instancia en Cat llamada ``hi``, hubiese sido una mala idea, porque ya no podría usar el **método** que heredó. Más adelante veremos más sobre esto).
 
-Then it looks for hi as a class variable (or method) in the class Cat, and still doesn't find it.
+Luego busca hola como una variable de clase (o método) en la clase Cat, y aún no la encuentra.
 
-Next, it looks for a class variable ``hi`` on the parent class of ``Cat``, ``Pet``. It finds that -- there's a **method** called ``hi`` on the class ``Pet``. Because of the ``()`` after ``hi``, the method is invoked. All is well.
+A continuación, busca una variable de clase ``hi`` en la clase padre de ``Cat``, ``Pet``. Encuentra que hay un **método** llamado ``hi`` en la clase ``Pet``. Debido a ``()`` después de ``hi``, se invoca el método. Todo está bien.
 
-However, for the following, it won't go so well
+Sin embargo, para lo siguiente, no irá tan bien
 
 .. code:: python
 
     p1 = Pet("Teddy")
     p1.chasing_rats()
 
-The Python interpreter looks for an instance variable or method called ``chasing_rats`` on the ``Pet`` class. It doesn't exist. ``Pet`` has no parent classes, so Python signals an error.
+El intérprete de Python busca una variable de instancia o método llamado ``chasing_rats`` en la clase ``Pet``. No existe ``Pet`` no tiene clases principales, por lo que Python señala un error.
 
-**Check your understanding**
+**Revisa tu Entendimiento**
 
 .. mchoice:: question_inheritance_1
    :answer_a: 1
    :answer_b: 2
    :answer_c: 3
    :answer_d: 4
-   :feedback_a: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
-   :feedback_b: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
-   :feedback_c: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. Check how many instance variables it sets.
-   :feedback_d: Neither Cheshire nor Cat defines an __init__ constructor method, so the grandaprent class, Pet, will have it's __init__ method called. That constructor method sets the instance variables name, hunger, boredom, and sounds.
+   :feedback_a: Ni Cheshire ni Cat definen un método de constructor __init__, por lo que la clase abuela, Pet, tendrá su método __init__ llamado. Verifique cuántas variables de instancia establece.
+   :feedback_b: Ni Cheshire ni Cat definen un método de constructor __init__, por lo que la clase abuela, Pet, tendrá su método __init__ llamado. Verifique cuántas variables de instancia establece.
+   :feedback_c: Ni Cheshire ni Cat definen un método de constructor __init__, por lo que la clase abuela, Pet, tendrá su método __init__ llamado. Verifique cuántas variables de instancia establece.
+   :feedback_d: Ni Cheshire ni Cat definen un método de constructor __init__, por lo que la clase abuela, Pet, tendrá su método __init__ llamado. Ese método constructor establece las variables de instancia nombre, hambre, aburrimiento y sonidos.
    :correct: d
    
-   After you run the code, ``new_cat = Cheshire("Pumpkin")``, how many instance variables exist for the new_cat instance of Cheshire?
+   Después de ejecutar el código, ` new_cat = Cheshire("Pumpkin")``, ¿cuántas variables de instancia existen para la instancia new_cat de Cheshire?
 
 .. mchoice:: question_inheritance_2
    :answer_a: We are Siamese if you please. We are Siamese if you don’t please.
    :answer_b: Error
    :answer_c: Pumpkin
    :answer_d: Nothing. There’s no print statement.
-   :feedback_a: another_cat is an instance of Siamese, so its song() method is invoked.
-   :feedback_b: another_cat is an instance of Siamese, so its song() method is invoked.
-   :feedback_c: This would print if the statement was print new_cat.name.
-   :feedback_d: There is a print statement in the method definition.
+   :feedback_a: another_cat es una instancia de Siamese, por lo que se invoca su método song().
+   :feedback_b: another_cat es una instancia de Siamese, por lo que se invoca su método song().
+   :feedback_c: Esto se imprimiría si la instrucción fuera print new_cat.name.
+   :feedback_d: Hay una declaración de impresión en la definición del método.
    :correct: a
 
-   What would print after running the following code:
+   Lo que se imprimiría después de ejecutar el siguiente código:
 
    .. code-block:: python
 
@@ -239,13 +239,13 @@ The Python interpreter looks for an instance variable or method called ``chasing
    :answer_b: Error
    :answer_c: Pumpkin
    :answer_d: Nothing. There’s no print statement.
-   :feedback_a: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
-   :feedback_b: You cannot invoke methods defined in the Siamese class on an instance of the Cheshire class. Both are subclasses of Cat, but Cheshire is not a subclass of Siamese, so it doesn't inherit its methods.
-   :feedback_c: This would print if the statement was print new_cat.name.
-   :feedback_d: There is a print statement in the method definition for Siamese.
+   :feedback_a: No puede invocar métodos definidos en la clase Siamese en una instancia de la clase Cheshire. Ambas son subclases de Cat, pero Cheshire no es una subclase de Siamese, por lo que no hereda sus métodos.
+   :feedback_b: No puede invocar métodos definidos en la clase Siamese en una instancia de la clase Cheshire. Ambas son subclases de Cat, pero Cheshire no es una subclase de Siamese, por lo que no hereda sus métodos.
+   :feedback_c: Esto se imprimiría si la instrucción fuera print new_cat.name.
+   :feedback_d: Hay una sentencia de impreión en la definición del método para siamés.
    :correct: b
 
-   What would print after running the following code:
+   Qué se imprimiría después de ejecutar el siguiente código:
 
    .. code-block:: python
 
