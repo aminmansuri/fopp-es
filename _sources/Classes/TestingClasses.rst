@@ -11,33 +11,33 @@
    :prefix: test-3-
    :start: 1
 
-Testing classes
----------------
+Clases de prueba
+------------------
 
 .. note::
 
-    This page depends on the use of the test module, which is introduced in :ref:`the testing chapter <test_cases_chap>`. If you haven't covered that chapter yet, you will want to delay reading this page until you do.
+    Esta página depende del uso del módulo de prueba, que se presenta en:ref:`the testing chapter <test_cases_chap>`. Si aún no ha cubierto ese capítulo, querrá retrasar la lectura de esta página hasta que lo haga.
 
-To test a user-defined class, you will create test cases that check whether instances are created properly, and you will 
-create test cases for each of the methods as functions, by invoking them on particular instances and seeing whether they 
-produce the correct return values and side effects, especially side effects that change data stored in the instance 
-variables. To illustrate, we will use the Point class that was used in the introduction to classes.
+Para probar una clase definida por el usuario, creará casos de prueba que verifiquen si las instancias se crean correctamente, y
+crear casos de prueba para cada uno de los métodos como funciones, invocandolos en instancias particulares y viendo si
+producen los valores de retorno correctos y los efectos secundarios, especialmente los efectos secundarios que cambian los datos almacenados en la ivariable de
+nstancia. Para ilustrar, usaremos la clase Point que se usó en la introducción a las clases.
 
-To test whether the class constructor (the ``__init__``) method is working correctly, create an instance and then make 
-tests to see whether its instance variables are set correctly. Note that this is a side effect test: the constructor 
-method's job is to set instance variables, which is a side effect. Its return value doesn't matter.
+Para probar si el método del constructor de clases (el ``__init__``) funciona correctamente, cree una instancia y luego haga la
+prueba para ver si sus variables de instancia están establecidas correctamente. Tenga en cuenta que esta es una prueba de efectos secundarios: el constructor.
+El trabajo del método es establecer variables de instancia, que es un efecto secundario. Su valor de retorno no importa.
 
-A method like ``distanceFromOrigin`` in the ``Point`` class you saw does its work by computing a return value, so it 
-needs to be tested with a return value test. A method like ``move`` in the ``Turtle`` class does its work by changing the 
-contents of a mutable object (the point instance has its instance variable changed) so it needs to be tested with a side 
-effect test.
+Un método como ``distanceFromOrigin`` en la clase ``Point`` hace su trabajo calculando un valor de retorno, por lo que
+necesita ser probado con una prueba de valor de retorno. Un método como ``move`` en la clase ``Turtle`` hace su trabajo cambiando el
+contenido de un objeto mutable (la instancia de punto tiene su variable de instancia modificada) por lo que debe probarse con un lado
+prueba de efecto.
 
-Try adding some more tests in the code below, once you understand what's there.
+Intente agregar algunas pruebas más en el código a continuación, una vez que comprenda lo que hay allí.
 
 .. activecode:: ac19_3_1
 
     class Point:
-        """ Point class for representing and manipulating x,y coordinates. """
+        """ Clase de punto para representar y manipular coordenadas x, y. """
    
         def __init__(self, initX, initY):
    
@@ -53,52 +53,52 @@ Try adding some more tests in the code below, once you understand what's there.
 
     import test
 
-    #testing class constructor (__init__ method)
+    #constructor de clase de prueba (__init__ method)
     p = Point(3, 4)
     test.testEqual(p.y, 4)
     test.testEqual(p.x, 3)
 
-    #testing the distance method
+    #probando el método de distancia
     p = Point(3, 4)
     test.testEqual(p.distanceFromOrigin(), 5.0)
 
-    #testing the move method
+    #probar el método de movimiento
     p = Point(3, 4)
     p.move(-2, 3)
     test.testEqual(p.x, 1)
     test.testEqual(p.y, 7)
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question19_3_1
    :practice: T
    :answer_a: True
    :answer_b: False
    :correct: b
-   :feedback_a: Each test case checks whether the function works correctly on one input. It's a good idea to check several different inputs, including some extreme cases.
-   :feedback_b: It's a good idea to check some extreme cases, as well as the typical cases.
+   :feedback_a: Cada caso de prueba verifica si la función funciona correctamente en una entrada. Es una buena idea verificar varias entradas diferentes, incluidos algunos casos extremos.
+   :feedback_b: Es una buena idea verificar algunos casos extremos, así como los casos típicos.
 
-   For each function, you should create exactly one test case.
+   Para cada función, debe crear exactamente un caso de prueba.
  
 .. mchoice:: question19_3_2
    :practice: T
-   :answer_a: return value test
-   :answer_b: side effect test
+   :answer_a: Prueba de valor de retorno
+   :answer_b: prueba de efectos secundarios
    :correct: b
-   :feedback_a: The method may return the correct value but not properly change the values of instance variables. See the move method of the Point class above. 
-   :feedback_b: The move method of the Point class above is a good example.
+   :feedback_a: El método puede devolver el valor correcto pero no cambiar adecuadamente los valores de las variables de instancia. Vea el método de movimiento de la clase Point arriba.
+   :feedback_b: El método de movimiento de la clase Point anterior es un buen ejemplo.
 
-   To test a method that changes the value of an instance variable, which kind of test case should you write?
+   Para probar un método que cambia el valor de una variable de instancia, ¿qué tipo de caso de prueba debe escribir?
 
 .. mchoice:: question19_3_3
    :practice: T
-   :answer_a: return value test
-   :answer_b: side effect test
+   :answer_a: Prueba de valor de retorno
+   :answer_b: Prueba de efectos secundarios
    :correct: a
-   :feedback_a: You want to check if maxabs returns the correct value for some input. 
-   :feedback_b: The function has no side effects; even though it takes a list L as a parameter, it doesn't alter its contents.
+   :feedback_a: Desea verificar si maxabs devuelve el valor correcto para alguna entrada.
+   :feedback_b: La función no tiene efectos secundarios; aunque toma una lista L como parámetro, no altera su contenido.
 
-   To test the function maxabs, which kind of test case should you write?
+   Para probar la función maxabs, ¿qué tipo de caso de prueba debería escribir?
 
    .. sourcecode:: python
    
@@ -108,10 +108,10 @@ Try adding some more tests in the code below, once you understand what's there.
 
 .. mchoice:: question19_3_4
    :practice: T
-   :answer_a: return value test
-   :answer_b: side effect test
+   :answer_a: Prueba de valor de retorno
+   :answer_b: Prueba de efectos secundarios
    :correct: b
-   :feedback_a: The sort method always returns None, so there's nothing to check about whether it is returning the right value. 
-   :feedback_b: You want to check whether it has the correct side effect, whether it correctly mutates the list.
-      
-   We have usually used the ``sorted`` function, which takes a list as input and returns a new list containing the same items, possibly in a different order. There is also a method called ``sort`` for lists (e.g. ``[1,6,2,4].sort()``). It changes the order of the items in the list itself, and it returns the value ``None``. Which kind of test case would you use on the sort method?    
+   :feedback_a: El método de clasificación siempre devuelve None, por lo que no hay nada que verificar si está devolviendo el valor correcto.
+   :feedback_b: Desea verificar si tiene el efecto secundario correcto, si muta correctamente la lista.
+
+   Por lo general, hemos utilizado la función ``sorted``, que toma una lista como entrada y devuelve una nueva lista que contiene los mismos elementos, posiblemente en un orden diferente. También hay un método llamado ``sort`` para las listas (por ejemplo, ``[1,6,2,4].sort()``). Cambia el orden de los elementos en la lista y devuelve el valor ``None``. ¿Qué tipo de caso de prueba usarías en el método de clasificación?
