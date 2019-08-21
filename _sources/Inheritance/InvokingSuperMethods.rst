@@ -8,14 +8,14 @@
 
 
 
-Invoking the Parent Class's Method
-==================================
+Invocando el Método de la Clase Principal
+===========================================
 
-Sometimes the parent class has a useful method, but you just need to execute a little extra code when running the subclass's method. You can override the parent class's method in the subclass's method with the same name, but also invoke the parent class's method. Here's how.
+A veces, la clase principal tiene un método útil, pero solo necesita ejecutar un pequeño código adicional al ejecutar el método de la subclase. Puede anular el método de la clase primaria en el método de la subclase con el mismo nombre, pero también invocar el método de la clase primaria. Así es como se hace:
 
-Say you wanted the ``Dog`` subclass of ``Pet`` to say "Arf! Thanks!" when the ``feed`` method is called, as well as executing the code in the original method.
+Digamos que quería que la subclase ``Dog`` de ``Pet`` dijera "Arf! Thanks!" cuando se llama al método ``feed``, así como a la ejecución del código en el método original.
 
-Here's the original Pet class again.
+Aquí está la clase de mascotas original nuevamente.
 
 .. activecode:: inheritance_pet_class_copy
     :nocanvas:
@@ -70,7 +70,7 @@ Here's the original Pet class again.
         def reduce_boredom(self):
             self.boredom = max(0, self.boredom - self.boredom_decrement)
 
-And here's a subclass that overrides feed() by invoking the the parent class's feed() method; it then also executes an extra line of code. Note the somewhat inelegant way of invoking the parent class' method. We explicitly refer to Pet.feed to get the method/function object. We invoke it with parentheses. However, since we are not invoking the method the normal way, with <obj>.methodname, we have to explicitly pass an instance as the first parameter. In this case, the variable self in Dog.feed() will be bound to an instance of Dog, and so we can just pass self: ``Pet.feed(self)``.
+Y aquí hay una subclase que anula feed() al invocar el método feed() de la clase padre; entonces también ejecuta una línea extra de código. Tenga en cuenta la forma poco elegante de invocar el método de la clase padre. Nos referimos explícitamente a Pet.feed para obtener el método/objeto de función. Lo invocamos entre paréntesis. Sin embargo, dado que no estamos invocando el método de la manera normal, con <obj>.methodname, tenemos que pasar explícitamente una instancia como primer parámetro. En este caso, la variable self en Dog.feed() estará vinculada a una instancia de Dog, por lo que podemos pasar self: ``Pet.feed(self)``.
 
 .. activecode:: feed_me_example
     :nocanvas:
@@ -91,11 +91,11 @@ And here's a subclass that overrides feed() by invoking the the parent class's f
 
 .. note::
 
-    There's a better way to invoke a superclass's method. Unfortunately, the implementation of python in our ActiveCode windows doesn't support it, so we aren't using it here. In that alternative method, we would call ``super().feed()``. This is nice because it's easier to read, and also because it puts the specification of the class that Dog inherits from in just one place, ``class Dog(Pet)``. Elsewhere, you just refer to ``super()`` and python takes care of looking up that the parent (super) class of Dog is Pet.
+    Hay una mejor manera de invocar el método de una superclase. Desafortunadamente, la implementación de python en nuestras ventanas ActiveCode no lo admite, por lo que no lo estamos usando aquí. En ese método alternativo, llamaríamos ``super().Feed()``. Esto es bueno porque es más fácil de leer y también porque pone la especificación de la clase de la que Dog hereda en un solo lugar, ``class Dog(Pet)``. En otro lugar, solo se refiere a ``super()`` y python se encarga de buscar que la clase padre (super) de Dog sea Pet.
 
-This technique is very often used with the ``__init__`` method for a subclass. Suppose that some extra instance variables are defined for the subclass. When you invoke the constructor, you pass all the regular parameters for the parent class, plus the extra ones for the subclass. The subclass' ``__init__`` method then stores the extra parameters in instance variables and calls the parent class'   ``__init__`` method to store the common parameters in instance variables and do any other initialization that it normally does.
+Esta técnica se usa muy a menudo con el método ``__init__`` para una subclase. Suponga que se definen algunas variables de instancia adicionales para la subclase. Cuando invoca el constructor, pasa todos los parámetros regulares para la clase padre, más los adicionales para la subclase. El método de la subclase `` __init__`` almacena los parámetros adicionales en las variables de instancia y llama al método de la clase principal ``__init__`` para almacenar los parámetros comunes en las variables de instancia y hacer cualquier otra inicialización que normalmente hace.
 
-Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want it to take an extra parameter, ``chirp_number``, with a default value of 2, and have an extra instance variable, ``self.chirp_number``. Then, we'll use this in the ``hi`` method to make more than one sound.
+Digamos que queremos crear una subclase de ``Pet``, llamada ``Bird``, y queremos que tome un parámetro adicional, ``chirp_number``, con un valor predeterminado de 2, y tenga una instancia adicional variable, ``self.chirp_number``. Luego, usaremos esto en el método ``hi`` para hacer más de un sonido.
 
 .. activecode:: super_methods_1
     :nocanvas:
@@ -117,31 +117,31 @@ Let's say we want to create a subclass of ``Pet``, called ``Bird``, and we want 
     b1.teach("Polly wanna cracker")
     b1.hi()
 
-**Check your understanding**
+**Revisa tu Entendimiento**
 
 .. mchoice:: question_inheritance_4
    :answer_a: 5
    :answer_b: ["Mrrp"]
    :answer_c: ["chirp"]
    :answer_d: Error
-   :feedback_a: This would print if the code was print(b1.chirp_number).
-   :feedback_b: We set b1 to be Bird('tweety', 5) above.  Bird is a subclass of Pet, which has ["Mrrp"] for sounds, but Bird has a different value for that class variable. The interpreter looks in the subclass first.
-   :feedback_c: The interpeter finds the value in the class variable for the class Bird.
-   :feedback_d: We ran set b1 to be Bird('tweety', 5) above.  Bird has a value set for the attribute sounds.
+   :feedback_a: Esto se imprimiría si el código fuera print(b1.chirp_number).
+   :feedback_b: Configuramos b1 para que sea Bird('tweety', 5) arriba. Bird es una subclase de Pet, que tiene ["Mrrp"] para sonidos, pero Bird tiene un valor diferente para esa variable de clase. El intérprete busca primero en la subclase.
+   :feedback_c: El intérprete encuentra el valor en la variable de clase para la clase Bird.
+   :feedback_d: Ejecutamos el conjunto b1 para ser Bird('tweety', 5) arriba. Bird tiene un valor establecido para los sonidos del atributo.
    :correct: c
 
-   What will print when ``print(b1.sounds)`` is run?
+   ¿Qué se imprimirá cuando se ejecute ``print(b1.sounds)``?
 
 .. mchoice:: question_inheritance_5
-   :answer_a: Error when invoked
-   :answer_b: The string would not print out but d1 would have its hunger reduced.
-   :answer_c: The string would print but d1 would not have its hunger reduced.
-   :answer_d: Nothing would be different. It is the same as the current code.
-   :feedback_a: Since we are no longer calling the parent method in the subclass method definition, the actions defined in the parent method feed will not happen, and only Arf! Thanks! will be printed.
-   :feedback_b: Remember that the Python interpreter checks for the existence of feed in the Dog class and looks for feed in Pet only if it isn't found in Dog.
-   :feedback_c: Since we are no longer calling the parent Pet class's method in the Dog subclass's method definition, the class definition will override the parent method.
-   :feedback_d: Remember that the Python interpreter checks for the existence of feed in the Dog class and looks for feed in Pet only if it isn't found in Dog.
+   :answer_a: Error al ser invocado
+   :answer_b: La cadena no se imprimirá pero d1 reducirá su hambre.
+   :answer_c: La cadena se imprimirá pero d1 no tendrá su hambre reducida.
+   :answer_d: Nada sería diferente. Es lo mismo que el código actual.
+   :feedback_a: Dado que ya no estamos llamando al método padre en la definición del método de subclase, las acciones definidas en el feed del método padre no sucederán, y solo Arf! Thanks! será impreso
+   :feedback_b: Recuerde que el intérprete de Python verifica la existencia de feed en la clase Dog y busca feed en Pet solo si no se encuentra en Dog.
+   :feedback_c: Dado que ya no estamos llamando al método de la clase Pet principal en la definición del método de la subclase Dog, la definición de clase anulará el método padre.
+   :feedback_d: Recuerde que el intérprete de Python verifica la existencia de feed en la clase Dog y busca feed en Pet solo si no se encuentra en Dog.
    :correct: c
    
-   For the Dog class defined in the earlier activecode window, what would happen when d1.feed() is run if the Pet.feed(self) line was deleted?
+   Para la clase Dog definida en la ventana de activecode anterior, ¿qué sucedería cuando se ejecute d1.feed() si se elimina la línea Pet.feed(self)?
 
