@@ -12,17 +12,17 @@
    :prefix: sort-5-
    :start: 1
 
-Breaking Ties: Second Sorting
------------------------------
+Romper Lazos: segunda clasificación
+----------------------------------------
 
-What happens when two items are "tied" in the sort order? For example, suppose we sort a list of words by their lengths. 
-Which five letter word will appear first?
+¿Qué sucede cuando dos artículos están "tied" *atados* en el orden de clasificación? Por ejemplo, supongamos que ordenamos una lista de palabras por su longitud.
+¿Qué palabra de cinco letras aparecerá primero?
 
-The answer is that the python interpreter will sort the tied items in the same order they were in before the sorting. 
+La respuesta es que el intérprete de Python clasificará los elementos vinculados en el mismo orden en que estaban antes de la clasificación.
 
-What if we wanted to sort them by some other property, say alphabetically, when the words were the same length? Python allows us to specify multiple conditions when we perform a sort by returning a tuple from a key function.
+¿Qué pasaría si quisiéramos ordenarlos por alguna otra propiedad, digamos alfabéticamente, cuando las palabras tenían la misma longitud? Python nos permite especificar múltiples condiciones cuando realizamos una ordenación al devolver una tupla de una función clave.
 
-First, let's see how python sorts tuples. We've already seen that there's a built-in sort order, if we don't specify any key function. For numbers, it's lowest to highest. For strings, it's alphabetic order. For a sequence of tuples, the default sort order is based on the default sort order for the first elements of the tuples, with ties being broken by the second elements, and then third elements if necessary, etc. For example,
+Primero, veamos cómo Python clasifica las tuplas. Ya hemos visto que hay un orden de clasificación incorporado, si no especificamos ninguna función clave. Para los números, es de menor a mayor. Para strings, es el orden alfabético. Para una secuencia de tuplas, el orden de clasificación predeterminado se basa en el orden de clasificación predeterminado para los primeros elementos de las tuplas, con lazos rotos por los segundos elementos y luego los terceros elementos si es necesario, etc. Por ejemplo,
 
 .. activecode:: ac18_5_0
 
@@ -34,7 +34,7 @@ First, let's see how python sorts tuples. We've already seen that there's a buil
     for tup in sorted(tups):
         print(tup)
 
-In the code below, we are going to sort a list of fruit words first by their length, smallest to largest, and then alphabetically to break ties among words of the same length. To do that, we have the key function return a tuple whose first element is the length of the fruit's name, and second element is the fruit name itself.
+En el siguiente código, vamos a ordenar una lista de palabras de fruta primero por su longitud, de menor a mayor, y luego alfabéticamente para romper los lazos entre palabras de la misma longitud. Para hacer eso, tenemos la función de tecla de devolver una tupla cuyo primer elemento es la longitud del nombre de la fruta, y el segundo elemento es el nombre de la fruta en sí.
 
 .. activecode:: ac18_5_1
 
@@ -43,9 +43,9 @@ In the code below, we are going to sort a list of fruit words first by their len
     for fruit in new_order:
         print(fruit)
 
-Here, each word is evaluated first on it's length, then by its alphabetical order. Note that we could continue to specify other conditions by including more elements in the tuple.
+Aquí, cada palabra se evalúa primero en su longitud, luego por su orden alfabético. Tenga en cuenta que podríamos seguir especificando otras condiciones al incluir más elementos en la tupla.
 
-What would happen though if we wanted to sort it by largest to smallest, and then by alphabetical order?
+¿Qué pasaría si quisiéramos ordenarlo de mayor a menor y luego por orden alfabético?
 
 .. activecode:: ac18_5_2
 
@@ -54,9 +54,9 @@ What would happen though if we wanted to sort it by largest to smallest, and the
     for fruit in new_order:
         print(fruit)
 
-Do you see a problem here? Not only does it sort the words from largest to smallest, but also in reverse alphabetical order! Can you think of any ways you can solve this issue?
+¿Ves un problema aquí? ¡No solo ordena las palabras de mayor a menor, sino también en orden alfabético inverso! ¿Puedes pensar en alguna forma de resolver este problema?
 
-One solution is to add a negative sign in front of ``len(fruit_name)``, which will convert all positive numbers to negative, and all negative numbers to positive. As a result, the longest elements would be first and the shortest elements would be last.
+Una solución es agregar un signo negativo delante de ``len(fruit_name)``, que convertirá todos los números positivos a negativos y todos los números negativos a positivos. Como resultado, los elementos más largos serían los primeros y los elementos más cortos serían los últimos.
 
 .. activecode:: ac18_5_3
 
@@ -65,23 +65,23 @@ One solution is to add a negative sign in front of ``len(fruit_name)``, which wi
     for fruit in new_order:
         print(fruit)
    
-We can use this for any numerical value that we want to sort, however this will not work for strings.
+Podemos usar esto para cualquier valor numérico que queramos ordenar, sin embargo, esto no funcionará para cadenas.
 
-**Check Your Understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question18_5_1
-      :answer_a: first city name (alphabetically), then temperature (lowest to highest)
-      :answer_b: first temperature (highest to lowest), then city name (alphabetically)
-      :answer_c: first city name (alphabetically), then temperature (highest to lowest)
-      :answer_d: first temperature (lowest to highest), then city name (alphabetically)
-      :feedback_a: Correct! First we sort alphabetically by city name, then by the temperature, from lowest to highest.
-      :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
-      :feedback_c: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
-      :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort.
+      :answer_a: primer nombre de la ciudad (alfabéticamente), luego temperatura (de menor a mayor)
+      :answer_b: primera temperatura (de mayor a menor), luego nombre de la ciudad (alfabéticamente)
+      :answer_c: primer nombre de ciudad (alfabéticamente), luego temperatura (de mayor a menor)
+      :answer_d: primera temperatura (de menor a mayor), luego el nombre de la ciudad (alfabéticamente)
+      :feedback_a: ¡Correcto! Primero ordenamos alfabéticamente por nombre de ciudad, luego por temperatura, de menor a mayor.
+      :feedback_b: El orden de la tupla importa. El primer elemento de la tupla es la primera condición utilizada para ordenar.
+      :feedback_c: No del todo, recuerde que, de manera predeterminada, la función ordenada se ordenará por orden alfabético, o de menor a mayor. ¿El parámetro inverso está configurado en Verdadero? ¿Se ha usado un signo negativo en el parámetro clave?
+      :feedback_d: El orden de la tupla importa. El primer elemento de la tupla es la primera condición utilizada para ordenar.
       :correct: a
       :practice: T
 
-      What will the sorted function sort by?
+      ¿Por qué ordenará la función ordenada?
 
       .. code-block:: python
 
@@ -94,20 +94,20 @@ We can use this for any numerical value that we want to sort, however this will 
          sorted_weather = sorted(weather, key=lambda w: (w, weather[w]['temp']))
 
 .. mchoice:: question18_5_2
-      :answer_a: first city name (reverse alphabetically), then temperature (lowest to highest)
-      :answer_b: first temperature (highest to lowest), then city name (alphabetically)
-      :answer_c: first city name (reverse alphabetically), then temperature (highest to lowest)
-      :answer_d: first temperature (lowest to highest), then city name (alphabetically)
-      :answer_e: first city name (alphabetically), then temperature (lowest to highest)
-      :feedback_a: Correct! In this case, the reverse parameter will cause the country name to be sorted reverse alphabetically instead of alphabetically, and it will also negate the negative sign in front of the temperature.
-      :feedback_b: The order of the tuple matters. The first item in the tuple is the first condition used to sort. Also, take note of the reverse parameter - what will it do in this instance?
-      :feedback_c: Not quite - is the reverse parameter set to True? Has a negative sign been used in the key parameter? What happens when those are both used?
-      :feedback_d: The order of the tuple matters. The first item in the tuple is the first condition used to sort. 
-      :feedback_e: Not quite, remember that by default, the sorted function will sort by alphabetical order, or lowest to highest. Is the reverse parameter set to True? Has a negative sign been used in the key parameter?
+      :answer_a: primer nombre de la ciudad (en orden alfabético inverso), luego temperatura (de menor a mayor)
+      :answer_b: primera temperatura (de mayor a menor), luego nombre de la ciudad (alfabéticamente)
+      :answer_c: primer nombre de la ciudad (en orden alfabético inverso), luego temperatura (de mayor a menor)
+      :answer_d: primera temperatura (de menor a mayor), luego el nombre de la ciudad (alfabéticamente)
+      :answer_e: primer nombre de la ciudad (alfabéticamente), luego temperatura (de menor a mayor)
+      :feedback_a: ¡Correcto! En este caso, el parámetro inverso hará que el nombre del país se ordene alfabéticamente en lugar de alfabéticamente, y también negará el signo negativo frente a la temperatura.
+      :feedback_b: El orden de la tupla importa. El primer elemento de la tupla es la primera condición utilizada para ordenar. Además, tome nota del parámetro inverso: ¿qué hará en este caso?
+      :feedback_c: No del todo: ¿el parámetro inverso está establecido en True? ¿Se ha usado un signo negativo en el parámetro clave? ¿Qué sucede cuando ambos se usan?
+      :feedback_d: El orden de la tupla importa. El primer elemento de la tupla es la primera condición utilizada para ordenar.
+      :feedback_e: No del todo, recuerde que, de forma predeterminada, la función ordenada se ordenará por orden alfabético, o de menor a mayor. ¿El parámetro inverso está configurado en Verdadero? ¿Se ha usado un signo negativo en el parámetro clave?
       :correct: a
       :practice: T
 
-      What how will the following data be sorted?
+      ¿Cómo se ordenarán los siguientes datos?
 
       .. code-block:: python
 
