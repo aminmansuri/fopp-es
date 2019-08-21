@@ -9,33 +9,33 @@
 
 .. _classes_chap:
 
-Introduction: Classes and Objects - the Basics
+Introducción: Clases y Objetos - Las Bases
 ==============================================
 
 
 .. index:: object-oriented programming
 
-Object-oriented programming
----------------------------
+Programación Orientada a Objetos
+----------------------------------
 
 
 
-Python is an **object-oriented programming language**.  That means it
-provides features that support `object-oriented programming
+Python es un **lenguaje de programación orientado a objetos**. Eso significa que
+proporciona características que admiten `la programación orientada a objetos
 <http://en.wikipedia.org/wiki/Object-oriented_programming>`__ (**OOP**).
 
-Object-oriented programming has its roots in the 1960s, but it wasn't until the
-mid 1980s that it became the main `programming paradigm
-<http://en.wikipedia.org/wiki/Programming_paradigm>`__ used in the creation
-of new software. It was developed as a way to handle the rapidly increasing
-size and complexity of software systems and to make it easier to modify these
-large and complex systems over time.
+La programación orientada a objetos tiene sus raíces en la década de 1960, pero no fue sino hasta
+mediados de la década de 1980 que se convirtió en el principal `paradigma de programación
+<http://en.wikipedia.org/wiki/Programming_paradigm>`__ utilizado en la creación
+de nuevo software. Fue desarrollado como una forma de manejar el rápido aumento
+tamaño y complejidad de los sistemas de software y para facilitar su modificación.
+Sistemas grandes y complejos a lo largo del tiempo.
 
-Up to now, some of the programs we have been writing use a `procedural programming
-<http://en.wikipedia.org/wiki/Procedural_programming>`__ paradigm. In
-procedural programming the focus is on writing functions or *procedures* which
-operate on data. In object-oriented programming the focus is on the creation of
-**objects** which contain both data and functionality together.
-Usually, each object definition corresponds to some object or concept in the real
-world and the functions that operate on that object correspond to the ways
-real-world objects interact.
+Hasta ahora, algunos de los programas que hemos estado escribiendo usan un paradigma de `programación procedual
+<http://en.wikipedia.org/wiki/Procedural_programming>`__. En
+programación procedual el foco está en escribir funciones o *procedimientos* que puedan
+operar con datos. En la programación orientada a objetos, el foco está en la creación de
+**objetos** que contienen datos y funcionalidad juntos.
+Usualmente, cada definición de objeto corresponde a algún objeto o concepto del mundo real
+y las funciones que operan en ese objeto corresponden a las formas en las que interactúan
+Los objetos del mundo real
