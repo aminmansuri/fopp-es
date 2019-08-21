@@ -15,12 +15,12 @@
    
 .. _sort_instances_chap:
 
-Sorting Lists of Instances
-==========================
+Ordenando Listas de Instancias
+===============================
 
-You previously learned :ref:`how to sort lists <sort_chap>`. Sorting lists of instances of a class is not fundamentally different from sorting lists of objects of any other type. There is a way to define a default sort order for instances, right in the class definition, but it requires defining a bunch of methods or one complicated method, so we won't bother with that. Instead, you should just provide a key function as a parameter to sorted (or sort).
+Aprendiste previamente:ref:`cómo ordenar listas <sort_chap>`. Ordenar listas de instancias de una clase no es fundamentalmente diferente de ordenar listas de objetos de cualquier otro tipo. Hay una manera de definir un orden de clasificación predeterminado para las instancias, directamente en la definición de la clase, pero requiere definir un montón de métodos o un método complicado, por lo que no nos molestaremos con eso. En su lugar, solo debe proporcionar una función clave como parámetro para ordenar (u ordenar).
 
-Previously, you have seen how to provide such a function when sorting lists of other kinds of objects. For example, given a list of strings, you can sort them in ascending order of their lengths by passing a key parameter. Note that if you refer to a function by name, you give the name of the function without parentheses after it, because you want the function object itself. The sorted function will take care of calling the function, passing the current item in the list. Thus, in the example below, we write ``key=len`` and not ``key=len()``.
+Anteriormente, ha visto cómo proporcionar dicha función al ordenar listas de otros tipos de objetos. Por ejemplo, dada una lista de cadenas, puede ordenarlas en orden ascendente de sus longitudes pasando un parámetro clave. Tenga en cuenta que si se refiere a una función por su nombre, le da el nombre de la función sin paréntesis después de ella, porque desea que el objeto de la función en sí. La función ordenada se encargará de llamar a la función, pasando el elemento actual en la lista. Por lo tanto, en el siguiente ejemplo, escribimos ``key=len`` y no ``key=len()``.
 
 .. activecode:: sort_instances_1
 
@@ -30,7 +30,7 @@ Previously, you have seen how to provide such a function when sorting lists of o
    #alternative form using lambda, if you find that easier to understand
    print(sorted(L, key= lambda x: len(x)))   
 
-When each of the items in a list is an instance of a class, you need to provide a function that takes one instance as an input, and returns a number. The instances will be sorted by their numbers.
+Cuando cada uno de los elementos de una lista es una instancia de una clase, debe proporcionar una función que tome una instancia como entrada y devuelva un número. Las instancias se ordenarán por sus números.
 
 .. activecode:: sort_instances_2
 
@@ -43,7 +43,7 @@ When each of the items in a list is an instance of a class, you need to provide 
    for f in sorted(L, key=lambda x: x.price):
        print(f.name)
 
-Sometimes you will find it convenient to define a method for the class that does some computation on the data in an instance. In this case, our class is too simple to really illustrate that. But to simulate it, I've defined a method ``sort_priority`` that just returns the price that's stored in the instance. Now, that method, sort_priority takes one instance as input and returns a number. So it is exactly the kind of function we need to provide as the key parameter for sorted. Here it can get a little confusing: to refer to that method, without actually invoking it, you can refer to ``Fruit.sort_priority``. This is analogous to the code above that referred to ``len`` rather than invoking ``len()``.
+A veces, le resultará conveniente definir un método para la clase que haga algunos cálculos sobre los datos en una instancia. En este caso, nuestra clase es demasiado simple para ilustrarlo realmente. Pero para simularlo, he definido un método ``sort_priority`` que solo devuelve el precio almacenado en la instancia. Ahora, ese método, sort_priority toma una instancia como entrada y devuelve un número. Por lo tanto, es exactamente el tipo de función que debemos proporcionar como parámetro clave para ordenar. Aquí puede ser un poco confuso: para referirse a ese método, sin invocarlo realmente, puede referirse a ``Fruit.sort_priority``. Esto es análogo al código anterior que se refería a ``len`` en lugar de invocar a ``len()``.
 
 .. activecode:: sort_instances_3
 
