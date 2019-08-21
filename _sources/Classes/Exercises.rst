@@ -9,8 +9,8 @@
 
 :skipreading:`True`
 
-Exercises
----------
+Ejercicios
+-----------
 
 .. question:: classes_ex_1
 
@@ -21,7 +21,7 @@ Exercises
 
            .. actex:: ch_cl_01
 
-              Add a method ``reflect_x`` to Point which returns a new Point, one which is the reflection of the point about the x-axis. For example, ``Point(3, 5).reflect_x()`` is (3, -5)
+              Agregue un método a Point llamado ``reflect_x`` que devuelve un nuevo Punto, uno que es el reflejo del punto sobre el eje x. Por ejemplo, ``Point(3, 5).reflect_x()`` es (3, -5)
 
               ~~~~
 
@@ -58,7 +58,7 @@ Exercises
 
            .. actex:: ch_cl_02
 
-              Add a method called ``move`` that will take two parameters, call them ``dx`` and ``dy``.  The method will cause the point to move in the x and y direction the number of units given. (Hint: you will change the values of the state of the point)
+              Agregue un método llamado ``move`` que tomará dos parámetros, llámelos ``dx`` y ``dy``. El método hará que el punto se mueva en la dirección x e y el número de unidades dado. (Sugerencia: cambiar los valores del estado del punto)
 
               ~~~~
 
