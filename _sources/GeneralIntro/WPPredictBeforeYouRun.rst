@@ -21,8 +21,8 @@ fragmentos de código, pero por ahora normalmente predecirá el efecto de ejecut
 será sobre lo que se imprime, o sobre el valor de una variable, o que se producirá un error.
 
 Una predicción no es una suposición aleatoria. Se basa en alguna explicación que tenga sobre cuál es el estado actual de
-variables y sobre lo que crees que hacen ciertos comandos en python.
+variables y sobre lo que cree que hacen ciertos comandos en python.
 
 Mientras lee el libro de texto, verá capítulos, páginas o fragmentos de texto que comienzan con "WP:". Esto denota secciones
-que hablan sobre el Camino del Programador: consejos o información que te ayudarán a ser un mejor programador y a hacer
+que hablan sobre el Camino del Programador: consejos o información que le ayudarán a ser un mejor programador y a hacer
 mejores programas ¡Esté atento a otras páginas de WP!

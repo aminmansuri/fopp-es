@@ -54,15 +54,15 @@ Glosario
     lenguaje formal
         Cualquiera de los idiomas que las personas han diseñado para
         propósitos, tales como representar ideas matemáticas o programas de computadora;
-        Todos los lenguajes de programación son lenguajes formales.
+        todos los lenguajes de programación son lenguajes formales.
 
     Lenguaje de alto nivel
         Un lenguaje de programación como Python que está diseñado para ser fácil para
-        humanos para leer y escribir.
+        humanos de leer y escribir.
 
     interpretar
         Para ejecutar un programa en un lenguaje de alto nivel traduciéndolo
-        línea a la vez.
+        línea por línea a la vez.
 
     lenguaje de bajo nivel
         Un lenguaje de programación diseñado para que sea fácil de ejecutar para una computadora;
@@ -85,10 +85,10 @@ Glosario
         muestre un valor en su dispositivo de salida.
 
     resolución de problemas
-        El proceso de formular un problema, encontrar una solución y expresando la solución.
+        El proceso de formular un problema, encontrar una solución y expresar la solución.
 
     programa
-        Una secuencia de instrucciones que especifica las acciones de una computadora y Cálculos a realizar.
+        Una secuencia de instrucciones que especifica las acciones de una computadora y cálculos a realizar.
 
     lenguaje de programación
         Una notación formal para representar soluciones.
@@ -114,7 +114,7 @@ Glosario
         Contrastar con **código fuente**, y vea la entrada en **Python shell**.
 
     código fuente
-        Un programa, almacenado en un archivo, en un lenguaje de alto nivel antes de ser compilado o interpretado.
+        Un programa almacenado en un archivo, en un lenguaje de alto nivel antes de ser compilado o interpretado.
 
     sintaxis
         La estructura de un programa.

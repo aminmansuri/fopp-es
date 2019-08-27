@@ -17,21 +17,21 @@ Un primer programa típico
 -------------------------
 
 Tradicionalmente, el primer programa escrito en un nuevo idioma se llama *Hola,
-Mundo!* Porque todo lo que hace es mostrar las palabras, ¡Hola Mundo! En Python, el código fuente
-Se ve como esto.
+Mundo!* Porque todo lo que hace es mostrar las palabras ¡Hola Mundo! en Python, el código fuente
+se ve como esto.
 
 .. sourcecode:: python
 
     print("¡Hola, mundo!")
 
 Este es un ejemplo del uso de la **función print**, que en realidad no
-imprimir cualquier cosa en papel. Muestra un valor en la pantalla. En este caso, el resultado es la frase:
+imprime cualquier cosa en papel. Muestra un valor en la pantalla. En este caso, el resultado es la frase:
 
 ::
 
     ¡Hola Mundo!
 
-Aquí está el ejemplo en una ventana de código activo, donde puede ejecutarlo y modificarlo.
+Aquí está el ejemplo en una ventana de activecode, donde puede ejecutarlo y modificarlo.
 
 .. activecode:: ac1_7_1
 
@@ -41,16 +41,16 @@ Las comillas en el programa marcan el principio y el final del valor.
 No aparecen en el resultado. Aprenderá más sobre por qué en el próximo capítulo.
 
 Algunas personas juzgan la calidad de un lenguaje de programación por la simplicidad de
-el hola mundo! programa. Según este estándar, Python funciona tan bien como
+el programa hola mundo!. Según este estándar, Python funciona tan bien como es
 posible.
 
 **Chequea tu entendimiento**
 
 .. mchoice:: question1_7_1
-   :answer_a: envía información a la impresora para que se imprima en papel.
-   :answer_b: muestra un valor en la pantalla.
-   :answer_c: le dice a la computadora que ponga la información en formato impreso, en lugar de cursiva.
-   :answer_d: le dice a la computadora que diga la información.
+   :answer_a: Envía información a la impresora para que se imprima en papel.
+   :answer_b: Muestra un valor en la pantalla.
+   :answer_c: Le dice a la computadora que ponga la información en formato impreso, en lugar de cursiva.
+   :answer_d: Le dice a la computadora que diga la información.
    :correct: b
    :feedback_a: Dentro del lenguaje de programación Python, la declaración de impresión no tiene nada que ver con la impresora.
    :feedback_b: Sí, la declaración de impresión se usa para mostrar el valor de la cosa que se está imprimiendo.

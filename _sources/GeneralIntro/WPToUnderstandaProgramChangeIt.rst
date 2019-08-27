@@ -16,7 +16,7 @@
 
 Para verificar su comprensión o sus predicciones, va a ejecutar un programa.
 
-Para verificar su comprensión sobre el estado de las variables antes de que se ejecute su fragmento de código, agregue impresión de diagnóstico
+Para verificar su comprensión sobre el estado de las variables antes de que se ejecute su fragmento de código, agregue impresión de diagnóstico,
 declaraciones que imprimen los tipos y valores de variables. Agregue estas declaraciones de impresión justo *antes* del fragmento de código
 que estás tratando de entender.
 

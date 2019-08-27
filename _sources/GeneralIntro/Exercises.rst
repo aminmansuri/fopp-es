@@ -16,7 +16,7 @@
 Evaluación del capítulo
 -----------------------
 
-**Revisa tu conocimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: assess_question1_1_1
    :answer_a: Porque las computadoras son mejores resolviendo problemas.

@@ -28,15 +28,15 @@ Aquí hay una nueva versión de *Hello, World!*.
 
     #---------------------------------------------------------
     # Este programa de prueba muestra cuán elegante es Python!
-    # Written by Joe Soap, December 2010.
-    # Anyone may freely copy or modify this program.
+    # Escrito por Joe Soap, Diciembre 2010.
+    # Cualquiera puede copiar o modificar este programa libremente.
     #---------------------------------------------------------
 
     print("Hello, World!")     # No es facil!
 
 Tenga en cuenta que cuando ejecuta este programa, solo imprime la frase Hello, World! Ninguno de los comentarios aparece.
-También notará que hemos dejado una línea en blanco en el programa. Las líneas en blanco también son ignorados por el intérprete,
-pero los comentarios y las líneas en blanco pueden hacer que sus programas mucho más fáciles de analizar para los humanos. ¡Úsalos generosamente!
+También notará que hemos dejado una línea en blanco en el programa. Las líneas en blanco también son ignoradas por el intérprete,
+pero los comentarios y las líneas en blanco pueden hacer de sus programas mucho más fáciles de analizar para los humanos. ¡Úsalos generosamente!
 
 **Revisa tu entendimiento**
 
@@ -47,7 +47,7 @@ pero los comentarios y las líneas en blanco pueden hacer que sus programas much
    :answer_d: Nada en un programa corto. Solo son necesarios para programas realmente grandes.
    :correct: b
    :feedback_a: La computadora ignora los comentarios.
-   :feedback_b: la computadora ignora los comentarios. Es para los humanos que "consumirán" su programa.
+   :feedback_b: La computadora ignora los comentarios. Es para los humanos que "consumirán" su programa.
    :feedback_c: Los comentarios pueden proporcionar información muy necesaria para cualquiera que lea el programa.
    :feedback_d: Incluso los programas pequeños se benefician de los comentarios.
 

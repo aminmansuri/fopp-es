@@ -23,13 +23,13 @@ Metas de aprendizaje
 ~~~~~~~~~~~~~~~~~~~~
 
 * Introducir terminología utilizada en informática
-* Presenta las características de este libro
-* Describa el propósito de los lenguajes de programación.
+* Presentar las características de este libro
+* Describir el propósito de los lenguajes de programación.
 * Distinguir entre lenguajes formales y naturales.
 
 Objetivos
 ~~~~~~~~~
 
-* Para poder utilizar el componente de código activo y las preguntas de opción múltiple en el libro de texto
-* Para poder usar e interpretar el componente Codelens
+* Poder utilizar el componente deactivecode y las preguntas de opción múltiple en el libro de texto
+* Poder usar e interpretar el componente Codelens
 * Poder describir qué es un comentario

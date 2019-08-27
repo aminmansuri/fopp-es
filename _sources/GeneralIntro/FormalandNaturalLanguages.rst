@@ -14,14 +14,14 @@
 Lenguas formales y naturales
 ----------------------------
 
-**Los idiomas naturales** son los idiomas que las personas hablan, como el inglés,
-Español, coreano y chino mandarín. No fueron diseñados por personas (aunque las personas intentan
+**Los idiomas naturales** son los idiomas que las personas hablan, como el Inglés,
+Español, coreano, chino mandarín, etc. No fueron diseñados por personas (aunque las personas intentan
 imponerles un orden); evolucionaron naturalmente.
 
 **Los idiomas formales** son idiomas diseñados por personas para
-aplicaciones. Por ejemplo, la notación que usan los matemáticos es formal
-lenguaje que es particularmente bueno para denotar relaciones entre números y
-símbolos Los químicos usan un lenguaje formal para representar la estructura química de
+aplicaciones. Por ejemplo, la notación que usan los matemáticos es lenguaje
+formal que es particularmente bueno para denotar relaciones entre números y
+símbolos. Los químicos usan un lenguaje formal para representar la estructura química de
 moléculas. Y más importante:
 
     *Los lenguajes de programación son lenguajes formales diseñados para
@@ -29,7 +29,7 @@ moléculas. Y más importante:
 
 Los lenguajes formales tienden a tener reglas estrictas sobre la sintaxis. Por ejemplo, ``3+3=6``
 es una afirmación matemática sintácticamente correcta, pero ``3=+6$`` no lo es.
-H\ :sub:`2`\ O es un nombre químico sintácticamente correcto, pero :sub:`2`\ Zz es
+H\ :sub:`2`\ O es un nombre químico sintácticamente correcto, pero :sub:`2`\ Zz
 no.
 
 Las reglas de sintaxis vienen en dos sabores, pertenecientes a **tokens** y estructura.
@@ -42,18 +42,18 @@ ficha legal en matemáticas (al menos hasta donde sabemos). Similar,
 El segundo tipo de regla de sintaxis se refiere a la **estructura** de una declaración ---
 es decir, la forma en que se organizan los tokens. La declaración ``3=+6$`` es
 estructuralmente ilegal porque no puede colocar un signo más inmediatamente después de un
-signo igual. Del mismo modo, las fórmulas moleculares deben tener subíndices después de
+signo igual. Del mismo modo, las fórmulas moleculares deben tener subíndices después del
 nombre del elemento, no antes.
 
 Cuando lee una oración en inglés o una declaración en un idioma formal, usted
-tiene que averiguar cuál es la estructura de la oración (aunque de forma natural
-lenguaje que haces esto inconscientemente). Este proceso se llama **análisis**.
+tiene que averiguar cuál es la estructura de la oración (aunque forma en lenguaje
+natural es que haces esto inconscientemente). Este proceso se llama **análisis**.
 
 Por ejemplo, cuando escuchas la oración "Se cayó el otro zapato", entiendes
 que el otro zapato es el sujeto y cayó el verbo. Una vez que hayas analizado
 una oración, puedes descubrir lo que significa, o la **semántica** de la oración.
 Asumiendo que sabes lo que es un zapato y lo que significa caerse, podrás
-Comprender la implicación general de esta oración.
+comprender la implicación general de esta oración.
 
 Aunque los lenguajes formales y naturales tienen muchas características en común: tokens,
 estructura, sintaxis y semántica --- hay muchas diferencias:
@@ -61,42 +61,42 @@ estructura, sintaxis y semántica --- hay muchas diferencias:
 .. glossary::
 
     ambigüedad
-        Los lenguajes naturales están llenos de ambigüedad, que las personas tratan con
+        Los lenguajes naturales están llenos de ambigüedad, que las personas tratan
         utilizando pistas contextuales y otra información. Los idiomas formales son
-        diseñado para ser casi o completamente inequívoco, lo que significa que cualquier
+        diseñados para ser casi o completamente inequívoco, lo que significa que cualquier
         declaración tiene exactamente un significado, independientemente del contexto.
 
     redundancia
-        Para compensar la ambigüedad y reducir los malentendidos, natural
-        los idiomas emplean mucha redundancia. Como resultado, a menudo son
-        verboso. Los lenguajes formales son menos redundantes y más concisos.
+        Para compensar la ambigüedad y reducir los malentendidos,
+        los idiomas naturales emplean mucha redundancia. Como resultado, a menudo son
+        verbosos. Los lenguajes formales son menos redundantes y más concisos.
 
     literalidad
         Los idiomas formales significan exactamente lo que dicen. Por otra parte,
-        Los lenguajes naturales están llenos de modismos y metáforas. Si alguien dice: "El
-        otro zapato cayó ", probablemente no hay zapato y nada cae.
+        los lenguajes naturales están llenos de modismos y metáforas. Si alguien dice: "El
+        otro zapato cayó", probablemente no hay zapato y nada cae.
 
         .. tip::
 
-            Necesitarás encontrar el chiste original para entender lo idiomático.
-            significado del otro zapato cayendo. *Yahoo! Respuestas* lo piensa
+            Necesitará encontrar el chiste original para entender el significado
+            idiomático del otro zapato cayendo. *Yahoo! Respuestas* lo
             sabe!
 
 Las personas que crecen hablando un idioma natural, es decir, todos, a menudo tienen dificultades
-Tiempo de adaptación a los idiomas formales. De alguna manera, la diferencia entre natural y formal
-el lenguaje es como la diferencia entre poesía y prosa, pero más
-asi que:
+en el tiempo de adaptación a los idiomas formales. De alguna manera, la diferencia entre natural y formal
+en el lenguaje es como la diferencia entre poesía y prosa, pero más complicado,
+así que:
 
 .. glossary::
 
     poesía
-        Las palabras se usan para sus sonidos, así como para su significado, y el
-        todo el poema juntos crea un efecto o respuesta emocional. Ambigüedad
-        No solo es común sino a menudo deliberado.
+        Las palabras se usan para sus sonidos, así como para su significado, y
+        todo el poema junto crea un efecto o respuesta emocional. La Ambigüedad
+        no solo es común sino a menudo deliberado.
 
     prosa
         El significado literal de las palabras es más importante, y la estructura
-        Aporta más significado. La prosa es más susceptible de análisis que
+        aporta más significado. La prosa es más susceptible al análisis que la
         poesía pero aún a menudo ambigua.
 
     programa
@@ -104,21 +104,21 @@ asi que:
         entenderse completamente por el análisis de los tokens y la estructura.
 
 Aquí hay algunas sugerencias para leer programas (y otros idiomas formales).
-Primero, recuerde que los idiomas formales son mucho más densos que los naturales.
-idiomas, por lo que lleva más tiempo leerlos. Además, la estructura es muy
+Primero, recuerde que los idiomas formales son mucho más densos que los idiomas
+naturales, por lo que lleva más tiempo leerlos. Además, la estructura es muy
 importante, por lo que generalmente no es una buena idea leer de arriba a abajo, de izquierda a
-derecho. En cambio, aprenda a analizar el programa en su cabeza, identificando los tokens
+derecha. En cambio, aprenda a analizar el programa en su cabeza, identificando los tokens
 e interpretando la estructura. Finalmente, los detalles importan. Cosas Pequeñas
-como errores de ortografía y mala puntuación, que puede salirse con la suya en
-Los lenguajes naturales pueden marcar una gran diferencia en un lenguaje formal.
+como errores de ortografía y mala puntuación pueden salirse con la suya en
+nos lenguajes naturales pero pueden marcar una gran diferencia en un lenguaje formal.
 
-**Chequea tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question1_6_1
-    :answer_a: los lenguajes naturales se pueden analizar mientras que los lenguajes formales no.
-    :answer_b: ambigüedad, redundancia y literalidad.
-    :answer_c: no hay diferencias entre los lenguajes naturales y formales.
-    :answer_d: tokens, estructura, sintaxis y semántica.
+    :answer_a: Los lenguajes naturales se pueden analizar mientras que los lenguajes formales no.
+    :answer_b: Ambigüedad, redundancia y literalidad.
+    :answer_c: No hay diferencias entre los lenguajes naturales y formales.
+    :answer_d: Tokens, estructura, sintaxis y semántica.
     :correct: b
     :feedback_a: En realidad, ambos lenguajes se pueden analizar (determinando la estructura de la oración), pero los lenguajes formales se pueden analizar más fácilmente en el software.
     :feedback_b: Todos estos pueden estar presentes en lenguajes naturales, pero no pueden existir en lenguajes formales.

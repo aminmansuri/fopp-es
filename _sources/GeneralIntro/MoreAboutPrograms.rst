@@ -16,24 +16,24 @@
 Más acerca de los programas
 ---------------------------
 
-Un **programa** es una secuencia de instrucciones que especifica cómo realizar un
+Un **programa** es una secuencia de instrucciones que especifican cómo realizar un
 cálculo. El cálculo puede ser algo tan complejo como representar una página html en un navegador web
 o codificar un video y transmitirlo a través de la red. También puede ser un
 cálculo simbólico, como buscar y reemplazar texto en un documento o
-(curiosamente) compilando un programa.
+(curiosamente) compilar un programa.
 
 Los detalles se ven diferentes en diferentes idiomas, pero algunas instrucciones básicas
-aparecer en casi todos los idiomas.
+aparecen en casi todos los idiomas.
 
 entrada
-    Obtenga datos del teclado, un archivo u otro dispositivo.
+    Obtiene datos del teclado, un archivo u otro dispositivo.
 
 salida
-    Mostrar datos en la pantalla o enviar datos a un archivo u otro dispositivo.
+    Muestra datos en la pantalla o envia datos a un archivo u otro dispositivo.
 
 matemática y lógica
-    Realizar operaciones matemáticas básicas como la suma y la multiplicación.
-    y operaciones lógicas como ``y``, ``o`` y ``no``.
+    Realiza operaciones matemáticas básicas como la suma y la multiplicación,
+    y operaciones lógicas como ``and``, ``or`` y ``not``.
 
 ejecución condicional
     Verifique ciertas condiciones y ejecute la secuencia apropiada de
@@ -42,12 +42,13 @@ ejecución condicional
 repetición
     Realice alguna acción repetidamente, generalmente con alguna variación.
 
-Lo creas o no, eso es todo lo que hay que hacer. Cada programa que tienes
-alguna vez utilizado, no importa cuán complicado, se compone de instrucciones que se ven más
+Lo crea o no, eso es todo lo que hay que hacer. Cada programa que tiene
+alguna vez será utilizado, no importa cuán complicado, se compone de instrucciones que se ven más
 o menos como estos. Por lo tanto, podemos describir la programación como el proceso de
 dividir una tarea grande y compleja en subtareas cada vez más pequeñas hasta que
-Las subtareas son lo suficientemente simples como para realizarse con secuencias de estos elementos básicos.
-instrucciones.
+las subtareas son lo suficientemente simples como para realizarse con secuencias de estas instrucciones de
+elementos básicos.
+
 
 Vista previa de estructuras de control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,11 +58,11 @@ Si esto tiene sentido para usted ahora, ¡eso es genial!
 Sin embargo, no esperamos que entienda esto todavía; la comprensión vendrá más tarde.
 
 Primero tenemos estructuras que nos permiten iterar sobre algo.
-Podemos mirar las cadenas carácter por carácter o las listas elemento por elemento hasta que hayamos llegado al final de ellas utilizando algo llamado bucle `` for ''.
+Podemos mirar las cadenas carácter por carácter o las listas elemento por elemento hasta que hayamos llegado al final de ellas utilizando algo llamado bucle ``for``.
 
 .. activecode:: ac1_5_1
 
-   for character in "Cool string":
+   para el character en "Cool string":
        print(character)
 
 También podemos iterar sin un punto de detención definido con bucles ``while``.
@@ -71,7 +72,7 @@ Puede usar esto si desea recibir información del usuario de su programa, pero n
 
    grocery_item = ""
    while grocery_item != "done":
-       grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
+       grocery_item = input("Escriba un artículo para agregar a su lista de compras. Cuando haya terminado de escribir la lista, simplemente escriba: done")
        print(grocery_item)
 
 Otras estructuras nos permitirán ejecutar solo partes de nuestros programas o solo realizar alguna tarea si se encuentra un cierto conjunto de condiciones.
@@ -83,24 +84,24 @@ Vea cómo agregar condicionales a nuestro código puede cambiar lo que podemos e
    grocery_item = ""
    grocery_list = []
    while grocery_item != "done":
-       grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list then simply type: done")
+       grocery_item = input("Escriba un artículo para agregar a su lista de compras. Cuando haya terminado de escribir la lista, simplemente escriba: done")
        if grocery_item == 'done':
            continue
        else:
-           print("adding the item to the list")
+           print("Agregar el elemento a la lista")
            grocery_list.append(grocery_item)
-   print("Here is our grocery list:")
+   print("Aquí está nuestra lista de compras:")
    print(grocery_list)
 
-**Chequea tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question1_5_1
-   :answer_a: una secuencia de instrucciones que especifica cómo realizar un cálculo.
-   :answer_b: algo que sigues en una obra de teatro o concierto.
-   :answer_c: un cálculo, incluso un cálculo simbólico.
-   :answer_d: lo mismo que un algoritmo.
+   :answer_a: Una secuencia de instrucciones que especifica cómo realizar un cálculo.
+   :answer_b: Algo que sigues en una obra de teatro o concierto.
+   :answer_c: Un cálculo, incluso un cálculo simbólico.
+   :answer_d: Lo mismo que un algoritmo.
    :correct: a
-   :feedback_a: son solo instrucciones paso a paso que la computadora puede entender y ejecutar. Los programas a menudo implementan algoritmos, pero tenga en cuenta que los algoritmos suelen ser menos precisos que los programas y no tienen que estar escritos en un lenguaje de programación.
+   :feedback_a: Son solo instrucciones paso a paso que la computadora puede entender y ejecutar. Los programas a menudo implementan algoritmos, pero tenga en cuenta que los algoritmos suelen ser menos precisos que los programas y no tienen que estar escritos en un lenguaje de programación.
    :feedback_b: Verdadero, pero no en este contexto. Nos referimos a un programa relacionado con una computadora.
    :feedback_c: Un programa puede realizar un cálculo, pero por sí solo no es uno.
    :feedback_d: Los programas a menudo implementan algoritmos, pero no son lo mismo. Un algoritmo es una lista de instrucciones paso a paso, pero esas instrucciones no son necesariamente lo suficientemente precisas para que una computadora las siga. Un programa debe estar escrito en un lenguaje de programación que la computadora sepa interpretar.
