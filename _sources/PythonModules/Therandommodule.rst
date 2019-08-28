@@ -26,9 +26,9 @@ El Módulo ``Random``
 
 A menudo queremos usar **números aleatorios** en los programas. Aquí hay algunos usos típicos:
 
-* Para jugar un juego de azar donde la computadora necesita lanzar algunos dados, elige un
+* Para jugar un juego de azar donde la computadora necesita lanzar algunos dados, elegir un
   número o lanzar una moneda,
-* Para barajar una baraja de cartas al azar,
+* Para barajar una baraja de cartas al azar
 * Para permitir que una nueva nave espacial enemiga aparezca y te dispare al azar,
 * Para simular posibles lluvias cuando hacemos un modelo computarizado para
   estimar el impacto ambiental de construir una presa,
@@ -75,13 +75,13 @@ incluyendo 5.0.
 .. index:: algoritmo determinista, algoritmo; determinista, pruebas unitarias
 
 Es importante tener en cuenta que los generadores de números aleatorios se basan en un algoritmo **determinista** --- repetible y
-previsible. Entonces se llaman generadores **pseudoaleatorios**, no son realmente aleatorios. Comienzan con una *semilla*
-valor. Cada vez que solicite otro número aleatorio, obtendrá uno basado en el atributo semilla actual y el estado
-de la semilla (que es uno de los atributos del generador) se actualizará. La buena noticia es que cada vez que corres
+previsible. Entonces se llaman generadores **pseudoaleatorios** --- no son realmente aleatorios. Comienzan con un valor *semilla*.
+Cada vez que solicite otro número aleatorio, obtendrá uno basado en el atributo semilla actual y el estado
+de la semilla (que es uno de los atributos del generador) se actualizará. La buena noticia es que cada vez que corre
 en su programa, es probable que el valor inicial sea diferente, lo que significa que a pesar de que se están creando los números aleatorios
-algorítmicamente, es probable que obtenga un comportamiento aleatorio cada vez que ejecute.
+algorítmicamente, es probable que obtenga un comportamiento aleatorio cada vez que se ejecute.
 
-**Chequea tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question13_2_1
    :answer_a: prob = random.randrange(1, 101)
@@ -98,10 +98,10 @@ algorítmicamente, es probable que obtenga un comportamiento aleatorio cada vez 
    El código correcto para generar un número aleatorio entre 1 y 100 (inclusive) es:
 
 .. mchoice:: question13_2_2
-   :answer_a: No hay computadora en el escenario para el dibujo.
+   :answer_a: No hay computadora en el escenario para sacar los números.
    :answer_b: Debido a que las computadoras realmente no generan números aleatorios, generan números pseudoaleatorios.
    :answer_c: Simplemente generarían los mismos números una y otra vez.
-   :answer_d: La computadora no puede decir qué valores ya se seleccionaron, por lo que podría generar los 5 números en lugar de 5 números únicos.
+   :answer_d: La computadora no puede decir qué valores ya se seleccionaron, por lo que podría generar cinco números 5 en lugar de 5 números únicos.
    :correct: b
    :feedback_a: Podrían poner fácilmente uno allí.
    :feedback_b: Las computadoras generan números aleatorios usando un algoritmo determinista. Esto significa que si alguien alguna vez descubriera el algoritmo, podría predecir con precisión el siguiente valor a generar y siempre ganaría la lotería.

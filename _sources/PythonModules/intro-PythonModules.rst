@@ -18,7 +18,7 @@ Una de las mejores cosas del lenguaje de programación Python es el ecosistema q
 
 .. image:: https://imgs.xkcd.com/comics/python.png
 
-Como se habrá reunido, Python nos brinda la capacidad de utilizar módulos para hacer todo, desde enviar correos electrónicos hasta el procesamiento de imágenes y el aprendizaje automático complejo. Pero, a pesar de que Python nos brinda una enorme cantidad de energía de estos módulos, aún necesita conocer los conceptos básicos de Python para unir todo. Comenzaremos observando un módulo utilizado para generar números aleatorios para aprender a utilizar otros módulos en sus programas.
+Como se habrá dado cuenta, Python nos brinda la capacidad de utilizar módulos para hacer todo, desde enviar correos electrónicos hasta el procesamiento de imágenes y el aprendizaje automático complejo. Pero, a pesar de que Python nos brinda una enorme cantidad de poder con estos módulos, aún necesita conocer los conceptos básicos de Python para unir todo. Comenzaremos observando un módulo utilizado para generar números aleatorios para aprender a utilizar otros módulos en sus programas.
 
 Metas de aprendizaje
 ====================
@@ -28,6 +28,6 @@ Metas de aprendizaje
 Objetivos
 ==========
 
-* Para importar un módulo completo
-* Para importar una sola función desde un módulo
-* Para importar un módulo dándole un alias
+* Importar un módulo completo
+* Importar una sola función desde un módulo
+* Importar un módulo dándole un alias

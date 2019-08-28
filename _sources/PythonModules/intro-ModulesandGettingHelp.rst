@@ -30,32 +30,31 @@ Python como parte de la **biblioteca estándar**. Proporcionar funcionalidad adi
 
 Las funciones importadas como parte de un módulo viven en su propio **espacio de nombres**. Un espacio de nombres es simplemente un espacio dentro del cual todos los nombres son distintos entre sí. El mismo nombre se puede reutilizar en diferentes espacios de nombres, pero dos objetos no pueden tener el mismo nombre dentro de un solo espacio de nombres. Un ejemplo de un espacio de nombres es el conjunto de nombres de calles dentro de una sola ciudad. Muchas ciudades tienen una calle llamada "Calle principal", ¡pero es muy confuso si dos calles de la misma ciudad tienen ese nombre! Otro ejemplo es la organización de carpetas de los sistemas de archivos. Puede tener un archivo llamado todo en su carpeta de trabajo, así como en su carpeta personal, pero sabe cuál es cuál debido a la carpeta en la que se encuentra; cada carpeta tiene su propio espacio de nombres para archivos. Tenga en cuenta que los nombres humanos no son parte de un espacio de nombres que impone la unicidad; Es por eso que los gobiernos han inventado identificadores únicos para asignar a las personas, como los números de pasaporte.
 
-El  `Python Documentation <https://docs.python.org/3.6/>`_ sitio para la versión de Python
-3.6 es una referencia extremadamente útil para todos los aspectos de Python. El sitio
+El  sitio de  `documentación de Python <https://docs.python.org/3.6/>`_ para la versión de Python
+3.6 es una referencia extremadamente útil de todos los aspectos de Python. El sitio
 contiene una lista de todos los módulos estándar que están disponibles con Python
 (mire `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). También
-verá que hay un
-`Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
-y un
-`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ tanto como
+verá que hay una
+`Referencia de Librería Estándar <https://docs.python.org/3.6/library/index.html>`_
+y un `Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ tanto como
 instrucciones de instalación, instrucciones y preguntas frecuentes. Nosotros
 le recomendamos que se familiarice con este sitio y que lo use con frecuencia.
 
 Si aún no lo ha hecho, eche un vistazo al Índice del módulo global. aquí
 verá una lista alfabética de todos los módulos que están disponibles como
-parte de la biblioteca estándar. Encuentre el módulo de tortuga.
+parte de la biblioteca estándar. Encuentre el módulo de turtle.
 
 Importando Módulos
 ------------------
 
 Para usar los módulos de Python, debe **importarlos** a un programa de Python. Eso pasa con una importación
-declaración: la palabra ``importar`` y luego el *nombre* del módulo. El nombre distingue entre mayúsculas y minúsculas. En palabras más sencillas,
+declaración: la palabra ``import`` y luego el *nombre del módulo*. El nombre distingue entre mayúsculas y minúsculas. En palabras más sencillas,
 una declaración de importación dice "hay algún código en otro archivo; por favor haga sus funciones y variables
 disponible en este archivo ". Más técnicamente, una declaración de importación hace que se ejecute todo el código en otro archivo. Cualquiera
 de las variables que están vinculadas durante esa ejecución (incluidas las funciones que están definidas) pueden referirse de alguna manera
-(para ser discutido) en el archivo actual.
+(para ser tratadas) en el archivo actual.
 
-Por convención, todos los comandos de `` importación '' se colocan en la parte superior de su archivo. Se pueden poner en otro lugar, pero eso puede
+Por convención, todos los comandos de ``import`` se colocan en la parte superior de su archivo. Se pueden poner en otro lugar, pero eso puede
 conducir a algunas confusiones, por lo que es mejor seguir la convención.
 
 ¿De dónde vienen estos otros archivos que puede importar? Podría ser un archivo de código que usted mismo escribió, o podría
@@ -63,15 +62,15 @@ sea el código que alguien más escribió y que copió en su computadora.
 
 Por ejemplo, si tiene un archivo ``myprog.py`` en el directorio ``~/Desktop/mycode/``, y myprog.py contiene una línea de
 código ``import morecode``, entonces el intérprete de Python buscará un archivo llamado ``morecode.py``, ejecutará su código,
-y haga que sus enlaces de objetos estén disponibles para referencia en el resto del código en myprog.py.
+y hará que sus enlaces de objetos estén disponibles para referencia en el resto del código en myprog.py.
 
 Tenga en cuenta que es ``import morecode``, no ``import morecode.py``, pero el otro archivo debe llamarse ``morecode.py``.
 
 Las pruebas que ve en sus conjuntos de problemas también utilizan un módulo Python que se encuentra en la biblioteca estándar, llamado
 ``unittest``. En este momento, no puede ver el código que hace que se ejecuten esas pruebas, porque se lo hemos ocultado,
-pero más adelante en el curso, aprenderá cómo escribir sus propias Pruebas de Unidad para el código, y para hacerlo, necesitará
+pero más adelante en el curso, aprenderá cómo escribir sus propios Unit Tests y para hacerlo, necesitará
 escribir una declaración de importación al comienzo de sus programas. Incluso antes de aprender a escribir sus propios exámenes, usted
-verá el código para las Pruebas unitarias en los archivos de conjunto de problemas.
+verá el código para Unit Test en los archivos de conjunto de problemas.
 
 .. admonition:: ¡No sobrescriba los módulos de biblioteca estándar!
 
@@ -93,19 +92,19 @@ Cuando ve módulos importados en un programa Python, hay algunas variaciones que
 3. Una tercera posibilidad de importación se produce cuando solo desea importar ALGUNAS de las funciones de un módulo y desea que esos objetos formen parte del espacio de nombres del módulo actual. Por ejemplo, podría escribir ``from morecode import f1``. Entonces podría invocar f1 sin hacer referencia a morecode nuevamente: ``f1()``.
 
 
-.. admonition:: Nota: módulos de Python y limitaciones con código activo
+.. admonition:: Nota: módulos de Python y limitaciones con active code
 
-   A lo largo de los capítulos de este libro, las ventanas de código activo le permiten practicar el Python que está aprendiendo.
-   Mencionamos en el primer capítulo que la programación normalmente se realiza utilizando algún tipo de desarrollo.
-   medio ambiente y que el
-   El código activo utilizado aquí fue estrictamente para ayudarnos a aprender. No es la forma en que escribimos programas de producción.
+   A lo largo de los capítulos de este libro, las ventanas de active code le permiten practicar el Python que está aprendiendo.
+   Mencionamos en el primer capítulo que la programación normalmente se realiza utilizando algún tipo de ambiente de desarrollo.
+   (IDE) y que el
+   active code utilizado aquí fue estrictamente creado para ayudarnos a aprender. No es la forma en que escribimos programas de producción.
 
    Para ello, es necesario mencionar que muchos de los módulos disponibles en Python estándar
-   **no** funcionaran en el entorno de código activo. De hecho, solo ``tortuga``, ``matemáticas``, ``aleatorio`` y un par más han sido
-   portado en este punto. Si desea explorar algunos
-   módulos adicionales, deberá ejecutar desde el intérprete de python nativo en su computadora.
+   **no** funcionarán en el entorno de active code. De hecho, solo ``turtle``, ``math``, ``random`` y un par más han sido
+   portados en este punto. Si desea explorar algunos
+   módulos adicionales, deberá ejecutarlos desde el intérprete de python nativo en su computadora.
 
-**Chequea tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question13_1_1
    :answer_a: Un archivo que contiene definiciones y declaraciones de Python destinadas a su uso en otros programas de Python.
@@ -118,7 +117,7 @@ Cuando ve módulos importados en un programa Python, hay algunas variaciones que
    :feedback_c: la llamada a una función dentro de un módulo puede ser una línea de código, pero los módulos suelen ser varias líneas de código separadas del programa.
    :feedback_d: cada módulo tiene su propia documentación, pero el módulo en sí es más que solo documentación.
 
-   In Python a module is:
+   En Python un módulo es:
 
 .. mchoice:: question13_1_2
    :answer_a: Ir al sitio de documentación de Python.
@@ -140,5 +139,5 @@ Cuando ve módulos importados en un programa Python, hay algunas variaciones que
    :feedback_a: Solo algunos módulos se han portado para trabajar en código activo en este momento.
    :feedback_b: Solo algunos módulos se han portado para trabajar en código activo en este momento.
 
-   Verdadero / Falso: Todos los módulos Python estándar funcionarán en código activo.
+   Verdadero/Falso: Todos los módulos estándar en Python funcionarán en active code.
 

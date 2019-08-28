@@ -20,7 +20,7 @@ Glosario
         Un proceso que es repetible y predecible.
 
     documentación
-        Un lugar donde puede ir para obtener información detallada sobre aspectos de su
+        Un lugar donde puede ir para obtener información detallada sobre aspectos de un
         lenguaje de programación.
 
 
