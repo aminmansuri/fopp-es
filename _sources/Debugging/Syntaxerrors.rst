@@ -20,10 +20,10 @@ Python solo puede ejecutar un programa si el programa es sintácticamente correc
 de lo contrario, el proceso falla y devuelve un mensaje de error. **Sintaxis** se refiere
 a la estructura de un programa y las reglas sobre esa estructura. Por ejemplo,
 en inglés, una oración debe comenzar con una letra mayúscula y terminar con un punto.
-Esta oración contiene un **error de sintaxis**. Este también
+esta oración contiene un **error de sintaxis**. Esta también
 
 Para la mayoría de los lectores, algunos errores de sintaxis no son un problema significativo, que es la razón
-por la que podemos leer la poesía de e. e. cummings sin problemas.
+por la que podemos leer la poesía de E. E. Cummings sin problemas.
 Python no es tan indulgente. Si hay un solo error de sintaxis en cualquier lugar de su
 programa, Python mostrará un mensaje de error y se cerrará. No serás capaz
 de completar la ejecución de tu programa. Durante las primeras semanas de su carrera de programación, usted
@@ -40,7 +40,7 @@ experiencia, cometerá menos errores y también podrá encontrar sus errores má
 
 .. mchoice:: question4_4_1
    :answer_a: Intentar dividir por 0.
-   :answer_b: Olvidar los dos puntos al final de una declaración donde se requiere uno.
+   :answer_b: Olvidar los dos puntos al final de una declaración donde se los requiere.
    :answer_c: Olvidar dividir entre 100 al imprimir una cantidad porcentual.
    :correct: b
    :feedback_a: Un error de sintaxis es un error en la estructura del código de Python que se puede detectar antes de ejecutar el programa. Python generalmente no puede decir si está tratando de dividir entre 0 hasta que esté ejecutando su programa (por ejemplo, podría estar pidiéndole un valor al usuario y luego dividirlo por ese valor; no puede saber qué valor ingresará el usuario antes de ejecutar el programa programa).
@@ -57,7 +57,7 @@ experiencia, cometerá menos errores y también podrá encontrar sus errores má
    :answer_d: El profesor / instructor.
    :correct: b
    :feedback_a: Los programadores rara vez encuentran todos los errores de sintaxis, hay un programa de computadora que lo hará por nosotros.
-   :feedback_b: El compilador y / o intérprete es un programa de computadora que determina si su programa está escrito de manera que pueda traducirse al lenguaje de máquina para su ejecución.
+   :feedback_b: El compilador y/o intérprete es un programa de computadora que determina si su programa está escrito de manera que pueda traducirse al lenguaje de máquina para su ejecución.
    :feedback_c: Bueno, más o menos. Pero es una cosa especial en la computadora que lo hace. La computadora independiente sin esta pieza adicional no puede hacerlo.
    :feedback_d: es posible que su maestro e instructor puedan encontrar la mayoría de sus errores de sintaxis, pero solo porque tienen experiencia en mirar código y posiblemente escribir código. Con la experiencia, los errores de sintaxis son más fáciles de encontrar. Pero también tenemos una forma automatizada de encontrar este tipo de errores.
    :practice: T

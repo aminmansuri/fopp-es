@@ -22,7 +22,7 @@ Errores Semánticos
 El tercer tipo de error es el **error semántico**. Si hay un error semántico
 en su programa, se ejecutará con éxito en el sentido de que la computadora
 no generará ningún mensaje de error. Sin embargo, su programa no hará lo correcto. Va a hacer
-algo más. Específicamente, hará lo que usted le dijo que hiciera.
+algo más, específicamente, hará lo que usted le dijo que hiciera.
 
 El problema es que el programa que escribió no es el programa que deseaba
 escribir. El significado del programa (su semántica) es incorrecto. Identificar

@@ -55,7 +55,7 @@ Esa es **realmente** información útil. Ahora mira la línea cinco y verás que
 declaración.
 
 .. note::
-   Las descripciones de error que ve en el código activo pueden ser diferentes (¡y más comprensibles!) que en un código regular
+   Las descripciones de error que ve en el activecode pueden ser diferentes (¡y más comprensibles!) que en un código regular
    con el Intérprete de Python. El intérprete en activecode está limitado de muchas maneras, pero está destinado a principiantes,
    incluyendo la redacción elegida para describir los errores.
 
@@ -106,7 +106,7 @@ ParseError
 
 Los errores de análisis ocurren cuando comete un error en la sintaxis de su programa.
 Los errores son como cometer errores gramaticales por escrito. Si no usas puntos y
-comas en tu escritura, entonces estás dificultando que otros lectores se den cuenta
+comas en tu escritura, entonces estás dificultando que otros lectores entiendan
 lo que intentas decir. Del mismo modo, Python tiene ciertas reglas gramaticales que deben
 ser seguidas o Python no puede entender lo que estás tratando de decir.
 
@@ -157,10 +157,10 @@ Vea si puede descubrir qué los causó.
         varias líneas dentro de paréntesis, python continuará escaneando posteriormente
         líneas que buscan el paréntesis de equilibrio correcto. Sin embargo en este caso
         encuentra el nombre ``current_time_int`` y querrá interpretarlo como
-        otro parámetro para la función de entrada. Pero, no hay una coma para
-        separe la cadena anterior de la variable ,en lo que respecta a Python
-        el error aquí es una coma que falta. Desde tu perspectiva es un
-        falta paréntesis.
+        otro parámetro para la función de entrada. Pero no hay una coma que
+        separe la cadena anterior de la variable, en lo que respecta a Python
+        el error aquí es una coma que falta. Desde tu perspectiva es que falta un
+        paréntesis.
 
 **Encontrar pistas** ¿Cómo puedes ayudarte a encontrar estos problemas? Un truco que puede ser
 muy valioso en esta situación es simplemente comenzar comentando el número de línea
@@ -182,7 +182,7 @@ alguna cosa. En este caso un paréntesis derecho.
 
         .. activecode:: ac4_7_3
 
-           current_time_str = input("¿Cuál es la hora actual (en horas 0-23)?")
+           current_time_str = input("¿Cuál es la" hora actual "(en horas 0-23)?")
            wait_time_str = input("¿Cuántas horas quieres esperar?")
 
            current_time_int = int(current_time_str)
@@ -206,16 +206,16 @@ alguna cosa. En este caso un paréntesis derecho.
 
         El mensaje de error lo señala a la línea 1 y en este caso es exactamente donde
         se produce el error. En este caso, su mayor pista es notar la diferencia
-        en resaltar en la línea. Observe que las palabras "hora actual" son un
-        color diferente a los que los rodean. ¿Por qué es esto? Porque "hora actual"
+        en el resalte de la línea. Observe que las palabras "hora actual" son un
+        color diferente a los que las rodean. ¿Por qué es esto? Porque "hora actual"
         está entre comillas dobles dentro de otro par de comillas dobles. Python piensa que
         estás terminando una cadena, luego tienes otros nombres y finalmente
-        otra cuerda. Pero no ha separado estos nombres o cadenas por comas,
+        otra cadena. Pero no ha separado estos nombres o cadenas por comas,
         y no los ha agregado junto con el operador de concatenación (+). Asi que,
         hay varias correcciones que puede hacer. Primero podrías hacer que el
-        argumento para ingresar sea el siguiente: ``"¿Cuál es la 'hora actual' (en horas 0-23)?
-        "``Tenga en cuenta que aquí hemos utilizado correctamente comillas simples dentro de comillas dobles
-        . Otra opción es simplemente eliminar las comillas dobles adicionales. Porque estabas
+        argumento para ingresar sea el siguiente: ``"¿Cuál es la 'hora actual' (en horas 0-23)?"``
+        Tenga en cuenta que aquí hemos utilizado correctamente comillas simples dentro de comillas dobles.
+        Otra opción es simplemente eliminar las comillas dobles adicionales. Porque estabas
         citando "hora actual" de todos modos? ``"¿Cuál es la hora actual (en horas 0-23)"``
 
 
@@ -247,7 +247,7 @@ TypeError
 
 Los errores de tipo se producen cuando intenta combinar dos objetos que no son compatibles. Por
 ejemplo, intenta sumar un número entero y una cadena. Por lo general, los errores de tipo pueden ser
-aislado a líneas que usan operadores matemáticos, y generalmente el número de línea
+aislados a líneas que usan operadores matemáticos, y generalmente el número de línea
 dado por el mensaje de error es una indicación precisa de la línea.
 
 Aquí hay un ejemplo de un error de tipo creado por un alumno . A ver si puedes encontrar
@@ -288,17 +288,15 @@ y corregir el error.
         En la línea cinco estamos tratando de usar la división de enteros en x y 24. El error
         El mensaje le indica que está tratando de dividir una cadena por un número. En esto
         en caso de que sepa que 24 es un número, entonces x debe ser una cadena. ¿Pero cómo? Usted puede
-        vea la llamada a la función en la línea 3 donde está convirtiendo x en un entero.
-        ``int(x)`` o eso crees. Esta es la lección tres y es una de las más
-        Errores comunes que vemos en la programación introductoria. Cuál es la diferencia
-        entre ``int(x)`` y ``x = int(x)``
+        ver la llamada a la función en la línea 3 donde está convirtiendo x en un entero.
+        ``int(x)`` o eso crees. Esta es la lección tres y es uno de los errores más comunes
+        que vemos en la programación introductoria. Cuál es la diferencia entre ``int(x)`` y ``x = int(x)``
 
         * La expresión ``int(x)`` convierte la cadena referenciada por x en un número entero pero no la almacena en ningún lado. Es muy común suponer que ``int(x)`` de alguna manera cambia a x, ¡ya que eso es lo que pretendes!. Lo que hace que esto sea muy complicado es que ``int(x)`` es una expresión válida, por lo que no causa ningún tipo de error, sino que el error ocurre más adelante en el programa.
 
         * La declaración de asignación ``x = int(x)`` es muy diferente. Nuevamente, la expresión ``int(x)`` convierte la cadena referenciada por x en un número entero, pero esta vez también cambia lo que x hace referencia para que x ahora se refiera al valor entero devuelto por la función ``int``.
 
-        Entonces, la solución a este problema es cambiar las líneas 3 y 4 para que sean
-        declaraciones de asignación.
+        Entonces, la solución a este problema es cambiar las líneas 3 y 4 para que sean declaraciones de asignación.
 
 
 **Encontrar pistas** Una cosa que puede ayudarlo en esta situación es imprimir los
@@ -322,7 +320,7 @@ NameError
 Los errores de nombre casi siempre significan que ha utilizado una variable antes de que tenga un valor.
 A menudo, NameErrors son simplemente causados por errores tipográficos en su código. Pueden ser difíciles de detectar si
 no tienes buen ojo para detectar errores ortográficos. Otras veces puedes simplemente
-recordar mal el nombre de una variable o incluso una función a la que quieres llamar. Tienes
+recordar mal el nombre de una variable o incluso una función a la que quieres llamar. Ha
 visto un ejemplo de un NameError al comienzo de esta sección. Aquí hay otro.
 Vea si puede hacer que este programa se ejecute correctamente:
 
@@ -356,7 +354,7 @@ mensaje de error ocurrirá una de dos cosas:
 que estará en el lado derecho de una declaración de asignación, o como un parámetro para
 una función. Eso debería confirmar que tienes un error tipográfico en alguna parte. Si el nombre en
 la pregunta **es** lo que pensaste que debería ser, entonces probablemente tengas un error tipográfico a la izquierda
-lado de una declaración de asignación en una línea antes de que aparezca su mensaje de error. comienzo
+de una declaración de asignación en una línea antes de que aparezca su mensaje de error. Comience
 mirando hacia atrás en sus declaraciones de asignación. En algunos casos es realmente agradable
 dejar visibles todas las cadenas resaltadas de la función de búsqueda, ya que ayudarán
 a encpntrar muy rápidamente una línea donde podría haber esperado que su variable fuera
@@ -367,7 +365,7 @@ donde esperaba que la búsqueda encontrara la cadena en cuestión, pero no será
 resaltado. Muy a menudo ese será el error tipográfico allí mismo.
 
 
-Here is another one for you to try:
+Aquí hay otro más para que lo intentes:
 
 .. activecode:: ac4_7_6
 
@@ -388,11 +386,11 @@ Here is another one for you to try:
         más bien, el nombre de una función. La estrategia de búsqueda te ayudaría con esto
         fácilmente, pero también hay otra pista para ti. El editor en el
         libro de texto, así como casi todos los editores de Python en el mundo le proporcionan
-        pistas de color. Observe que en la línea 2 la función ``imt`` no está resaltada
+        pistas de color. Observe que en la línea 2 la función ``imt`` no está resaltada en
         azul como la palabra ``int`` en la línea 4.
 
 
-Y un último bit de código para arreglar.
+Y un último pedazo de código para arreglar.
 
 .. activecode:: ac4_7_7
 
@@ -414,15 +412,15 @@ Y un último bit de código para arreglar.
         ``set_alarm``? Si hacemos esa suposición, obtenemos inmediatamente otro error
         ``NameError: el nombre 'alarm_time' no está definido en la línea: 3``. La variable
         ``alarm_time`` se define en la línea 4, pero eso no nos ayuda en la línea 3.
-        Además, ahora tenemos que hacer la pregunta: ¿es esta función llamada
-        ``int(present_time, set_alarm, alarm_time)`` incluso el uso correcto de la
+        Además, ahora tenemos que hacer la pregunta: ¿esta llamada a la función
+        ``int(present_time, set_alarm, alarm_time)`` siquiera está haciendo uso correcto de la
         función ``int``? La respuesta a eso es un rotundo no. Hagamos una lista de todos las
         cosas mal con la línea 3:
 
         1.  ``set_time`` no está definido y nunca se usa, el autor probablemente quiso decir ``set_alarm``.
         2.  ``alarm_time`` no se puede usar como parámetro antes de que se defina, ¡incluso en la siguiente línea!
         3.  ``int`` solo puede convertir una cadena en un entero a la vez.
-        4.  Finalmente, ``int`` debe usarse en una declaración de asignación. Incluso si se llamara `` int`` con el número correcto de parámetros, no tendría ningún efecto real.
+        4.  Finalmente, ``int`` debe usarse en una declaración de asignación. Incluso si se llamara ``int`` con el número correcto de parámetros, no tendría ningún efecto real.
 
 
 .. advanced topic!
@@ -443,7 +441,7 @@ ValueError
 
 Se producen errores de valor cuando pasa un parámetro a una función y la función está
 esperando ciertas limitaciones en los valores, y el valor pasado no es compatible.
-Podemos ilustrar eso con este programa en particular de dos maneras diferentes.
+Podemos ilustrar eso con el programa anterior de dos maneras diferentes.
 
 .. código activo :: ac4_7_8
 
@@ -469,6 +467,6 @@ el número 10. Recibirá un mensaje de error similar.
 Los ValueErrors no siempre son causados por un error de entrada del usuario, pero en este programa ese es el
 caso. Volveremos a ver ValueErrors nuevamente cuando lleguemos a programas más complicados.
 Por ahora vale la pena repetir que debe realizar un seguimiento de las restricciones necesarias
-para sus variables, y entienda qué espera su función. Puede hacer esto
+para sus variables, y entender qué espera su función. Puede hacer esto
 escribindo comentarios en su código, o nombrar sus variables de una manera en que le recuerden
 su forma correcta

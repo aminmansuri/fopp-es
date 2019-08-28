@@ -26,8 +26,8 @@ La depuración de un programa es una forma diferente de pensar qué escribir en 
 
    * Impresión de Declaraciones
 
-Estos son Tres tipos de errores que pueden ocurrir en un programa: `syntax errors
-<http://en.wikipedia.org/wiki/Syntax_error>`__, `runtime errors
-<http://en.wikipedia.org/wiki/Runtime_error>`__, y `semantic errors
+Estos son Tres tipos de errores que pueden ocurrir en un programa: `errores de sintaxis
+<http://en.wikipedia.org/wiki/Syntax_error>`__, `errores en tiempo de ejecución
+<http://en.wikipedia.org/wiki/Runtime_error>`__, y `errores semánticos
 <http://en.wikipedia.org/wiki/Logic_error>`__.  Es útil distinguir
 entre ellos para rastrearlos más rápidamente.

@@ -18,17 +18,17 @@
 
 La programación es un proceso complejo. Como lo hacen los seres humanos, a menudo pueden ocurrir errores.
 Los errores de programación se denominan **bugs** y el proceso
-de rastrearlos y corregirlos se llama **debuggin**. Hubo reclamos de
+de rastrearlos y corregirlos se llama **debugging**. Hubo reclamos de
 que en 1945, una polilla muerta causó un problema en el relé número 70, panel F, de una
 de las primeras computadoras en Harvard, y el término **bug** (insecto) se ha mantenido en uso.
-Para más información sobre este evento histórico, vea `first bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
+Para más información sobre este evento histórico, vea `el primer bug <http://en.wikipedia.org/wiki/File:H96566k.jpg>`__.
 
 Una de las habilidades más importantes que necesitas adquirir para completar este libro con éxito es la
 capacidad de depurar tus programas. La depuración puede ser la menos apreciada y
 poco enseñada habilidad en informática introductoria. Por esa razón estamos introduciendo una
 serie de "interludios de depuración". La depuración es una habilidad que debes dominar con el tiempo, y
 algunos de los consejos y trucos son específicos de diferentes aspectos de la programación de Python. Entonces busca
-interludios adicionales de Way of the Programmer en el resto de este libro.
+interludios adicionales de *Camino del Programador* en el resto de este libro.
 
 
 La programación es algo extraño en cierto sentido. Aquí está el por qué. Como programadores, pasamos el 99% de nuestro tiempo
@@ -40,7 +40,7 @@ sentir bien. Necesitas organizar tu forma de programar para que tenga muchos peq
 resulta en que a tu cerebro no le importe mucho si has escrito con éxito hola mundo,
 o una rápida transformación de Fourier (confía en mí es difícil) todavía obtienes esa pequeña versión que te hace
 feliz. Cuando eres feliz, quieres continuar y resolver el siguiente pequeño problema. Esencialmente,
-te digo lo una vez más, comienza con algo pequeño, haz que algo pequeño funcione y luego agrégalo.
+te lo digo una vez más, comienza con algo pequeño, haz que algo pequeño funcione y luego agrégalo.
 
 Cómo evitar la depuración
 -------------------------
@@ -67,7 +67,7 @@ averiguar dónde está el problema.
 
 Esta noción de **Hacer que algo funcione y mantenerlo funcionando** es un mantra que puedes repetir
 a lo largo de tu carrera como programador. Es una excelente manera de evitar las frustraciones mencionadas
-encima. Piénsalo de esta manera. Cada vez que tienes un poco de éxito, tu cerebro libera
+antes. Piénsalo de esta manera. Cada vez que tienes un poco de éxito, tu cerebro libera
 un poco de químico que te hace feliz. Entonces, puedes mantenerte feliz y hacer la programación
 más agradable creando muchas pequeñas victorias para ti.
 
