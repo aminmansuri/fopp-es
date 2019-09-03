@@ -11,7 +11,7 @@
 .. raw:: html
 
    <div style="text-align:center" class="center-block">
-   <h1>Foundations of Python Programming</h1>
+   <h1>Fundamentos de Programación en Python</h1>
    <style>
    button.reveal_button {
        margin-left: auto;
