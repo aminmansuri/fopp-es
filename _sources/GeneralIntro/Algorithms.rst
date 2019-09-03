@@ -34,4 +34,4 @@ computadora para automatizar la ejecución. Estos programas están escritos en *
     :feedback_c: Los lenguajes de programación se usan para expresar algoritmos, pero un algoritmo no tiene que expresarse en términos de un lenguaje de programación.
     :feedback_d: Los programadores a veces usan una notación especial para ilustrar o documentar un algoritmo, pero esta no es la definición de un algoritmo.
 
-    Un algoritmo es:
+    Un Algoritmo es:
