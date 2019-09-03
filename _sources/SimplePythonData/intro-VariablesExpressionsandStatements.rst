@@ -21,12 +21,11 @@ Introducción
 
 .. _values_n_types:
 
-.. video:: typesnconvert
-    :controls:
-    :thumb: ../_static/valuesNtypes.png
-
-    http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.mov
-    http://media.interactivepython.org/thinkcsVideos/TypesNTypeConversion.webm
+.. youtube:: vNfCfowr-pQ
+    :divid: typesnconvert
+    :height: 315
+    :width: 560
+    :align: left
 
 Este capítulo presenta varios componentes básicos de los programas Python:
 

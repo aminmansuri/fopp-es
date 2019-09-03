@@ -13,6 +13,9 @@
 Introducción: El Camino del Programa
 ====================================
 
+.. youtube:: xuEtNpVzFYA
+    :divid: goog_course_intro
+
 El objetivo de este libro es enseñarte a entender y crear programas de computadora en Python. Al comienzo de cada capítulo, le detallaremos las metas y objetivos de aprendizaje que se deben lograr una vez que haya pasado por el capítulo.
 
 Comprender los programas de computadora requiere un pensamiento algorítmico y mecanicista. Los programas especifican secuencias mecanicistas de acciones a realizar; cuando se ejecutan, transforman los datos de entrada en datos de salida. Se ejecutan de manera muy confiable y muy rápida, pero no de forma creativa. Las computadoras hacen lo que les dices que hagan, no lo que quieres que hagan. Por lo tanto, comprender el código de computadora implica una gran cantidad de simulación mental de lo que realmente sucederá, no de lo que desearía que sucediera.
