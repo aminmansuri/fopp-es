@@ -27,7 +27,7 @@ declaración de impresión de diagnóstico adicional justo después de la línea
 Las declaraciones de impresión de diagnóstico son temporales. Una vez que haya verificado que un programa está haciendo lo que cree que está
 haciendo, eliminará estas declaraciones de impresión adicionales.
 
-Sin embargo, incluso si cree que tiene un buen conocimiento del programa, le recomendamos cambiarlo al menos algunas veces para ver si comprende cómo se comporta en diferentes situaciones. ¡A veces te sorprenderás!
-Si tiene alguna sorpresa, entonces querrá revisar su comprensión o sus predicciones. Si estabas equivocado
+Sin embargo, incluso si cree que tiene un buen conocimiento del programa, le recomendamos cambiarlo al menos algunas veces para ver si comprende cómo se comporta en diferentes situaciones. ¡A veces se sorprenderá!
+Si tiene alguna sorpresa, entonces querrá revisar su comprensión o sus predicciones. Si estaba equivocado
 sobre los valores o tipos de variables antes de que se ejecutara el fragmento de código, es posible que desee revisar su comprensión del
 código anterior. Una vez que comprenda cómo surgió ese resultado, debe hacer algunos cambios en el programa para asegurarse de que su nueva comprensión sea precisa.

@@ -37,7 +37,7 @@ Evaluación del capítulo
     :language: python
     :autograde: unittest
 
-    Escriba el código para imprimir la frase "Hola mundo".
+    Escriba el código para imprimir la frase "Hello World".
     ~~~~
 
     =====

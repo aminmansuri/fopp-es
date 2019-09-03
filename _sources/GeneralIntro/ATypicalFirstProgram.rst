@@ -16,35 +16,35 @@
 Un primer programa típico
 -------------------------
 
-Tradicionalmente, el primer programa escrito en un nuevo idioma se llama *Hola,
-Mundo!* Porque todo lo que hace es mostrar las palabras ¡Hola Mundo! en Python, el código fuente
+Tradicionalmente, el primer programa escrito en un nuevo idioma se llama *Hello
+World!* porque todo lo que hace es mostrar las palabras Hello World! en Python, el código fuente
 se ve como esto.
 
 .. sourcecode:: python
 
-    print("¡Hola, mundo!")
+    print("Hello World!")
 
 Este es un ejemplo del uso de la **función print**, que en realidad no
 imprime cualquier cosa en papel. Muestra un valor en la pantalla. En este caso, el resultado es la frase:
 
 ::
 
-    ¡Hola Mundo!
+    Hello World!
 
 Aquí está el ejemplo en una ventana de activecode, donde puede ejecutarlo y modificarlo.
 
 .. activecode:: ac1_7_1
 
-    print("¡Hola, mundo!")
+    print("Hello World!")
 
 Las comillas en el programa marcan el principio y el final del valor.
 No aparecen en el resultado. Aprenderá más sobre por qué en el próximo capítulo.
 
 Algunas personas juzgan la calidad de un lenguaje de programación por la simplicidad de
-el programa hola mundo!. Según este estándar, Python funciona tan bien como es
+el programa Hello World!. Según este estándar, Python funciona tan bien como es
 posible.
 
-**Chequea tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question1_7_1
    :answer_a: Envía información a la impresora para que se imprima en papel.

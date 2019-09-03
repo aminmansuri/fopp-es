@@ -11,8 +11,8 @@
    :prefix: intro-6-
    :start: 1
 
-Lenguas formales y naturales
-----------------------------
+Lenguajes formales y naturales
+------------------------------
 
 **Los idiomas naturales** son los idiomas que las personas hablan, como el Inglés,
 Español, coreano, chino mandarín, etc. No fueron diseñados por personas (aunque las personas intentan
@@ -49,10 +49,10 @@ Cuando lee una oración en inglés o una declaración en un idioma formal, usted
 tiene que averiguar cuál es la estructura de la oración (aunque forma en lenguaje
 natural es que haces esto inconscientemente). Este proceso se llama **análisis**.
 
-Por ejemplo, cuando escuchas la oración "Se cayó el otro zapato", entiendes
-que el otro zapato es el sujeto y cayó el verbo. Una vez que hayas analizado
-una oración, puedes descubrir lo que significa, o la **semántica** de la oración.
-Asumiendo que sabes lo que es un zapato y lo que significa caerse, podrás
+Por ejemplo, cuando escucha la oración "Se cayó el otro zapato", entiende
+que el otro zapato es el sujeto y cayó el verbo. Una vez que haya analizado
+una oración, puede descubrir lo que significa, o la **semántica** de la oración.
+Asumiendo que sabe lo que es un zapato y lo que significa caerse, podrá
 comprender la implicación general de esta oración.
 
 Aunque los lenguajes formales y naturales tienen muchas características en común: tokens,

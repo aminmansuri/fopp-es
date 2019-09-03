@@ -34,9 +34,9 @@ Aquí hay una nueva versión de *Hello, World!*.
 
     print("Hello, World!")     # No es facil!
 
-Tenga en cuenta que cuando ejecuta este programa, solo imprime la frase Hello, World! Ninguno de los comentarios aparece.
-También notará que hemos dejado una línea en blanco en el programa. Las líneas en blanco también son ignoradas por el intérprete,
-pero los comentarios y las líneas en blanco pueden hacer de sus programas mucho más fáciles de analizar para los humanos. ¡Úsalos generosamente!
+Tenga en cuenta que cuando ejecuta este programa, solo imprime la frase Hello, World!. Ninguno de los comentarios aparece.
+También notará que hemos dejado una línea en blanco en el programa, las líneas en blanco también son ignoradas por el intérprete,
+pero los comentarios y las líneas en blanco pueden hacer de sus programas mucho más fáciles de analizar para los humanos. ¡Úselos generosamente!
 
 **Revisa tu entendimiento**
 

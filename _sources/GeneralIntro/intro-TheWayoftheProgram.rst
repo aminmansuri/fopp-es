@@ -10,8 +10,8 @@
 .. index:: lenguaje de programación, lenguaje portátil de alto nivel,
            lenguaje de bajo nivel, compilar, interpretar
 
-Introducción: El Camino del Programa
-====================================
+Introducción: El Camino del Programador
+=======================================
 
 .. youtube:: xuEtNpVzFYA
     :divid: goog_course_intro

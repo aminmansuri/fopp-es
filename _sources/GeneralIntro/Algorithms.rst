@@ -18,7 +18,7 @@ Un **algoritmo** es una lista paso a paso de instrucciones que, si se siguen exa
 en consideración.
 
 Nuestro objetivo en la programación es tomar un problema y desarrollar un algoritmo que pueda
-servir como una solución general. Una vez que tengamos tal solución, podemos expresar como programa y usamos nuestra
+servir como una solución general. Una vez que tengamos tal solución, podemos expresarlo un como programa y usamos nuestra
 computadora para automatizar la ejecución. Estos programas están escritos en **lenguajes de programación**.
 
 **Revisa tu entendimiento**

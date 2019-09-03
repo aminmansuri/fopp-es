@@ -14,7 +14,7 @@
 👩‍💻 ¡Predice antes de ejecutar!
 =================================
 
-¡Has ejecutado tu primer programa! Lo harás mucho en este libro y los programas serán cada vez más complejos.
+¡Ha ejecutado su primer programa! Lo hará mucho en este libro y los programas serán cada vez más complejos.
 Una forma de ayudar a comprender lo que está sucediendo y aprender a programar es predecir el efecto de ejecutar un
 fragmento de código antes de ejecutar realmente el programa. Más adelante en su desarrollo, puede hacer predicciones sobre grandes
 fragmentos de código, pero por ahora normalmente predecirá el efecto de ejecutar una sola línea de código. Una predicción

@@ -22,8 +22,8 @@ Primero, puede escribir, modificar y ejecutar programas utilizando un exclusivo 
 en el texto mismo (directamente desde el navegador web). Aunque esta no es la forma en que se escriben los programas reales, proporciona un excelente
 entorno para aprender un lenguaje de programación como Python ya que puedes experimentar con el lenguaje mientras lees.
 
-Eche un vistazo al intérprete de activecode en acción. Intente presionar el botón *Guardar y ejecutar* a continuación. (Si no estás conectado
-solo dirá *Ejecutar*.)
+Eche un vistazo al intérprete de activecode en acción. Intente presionar el botón *Save and run* a continuación. (Si no está conectado
+solo dirá *Run*.)
 
 .. activecode:: ac1_4_1
 
@@ -32,17 +32,17 @@ solo dirá *Ejecutar*.)
 
 Ahora intente modificar el programa que se muestra arriba. Primero, modifique la cadena en la
 primera declaración de impresión cambiando la palabra *agrega* a la palabra *multiplica*. Ahora presiona
-*Guardar y ejecutar* nuevamente. Puede ver que el resultado del programa ha cambiado. Sin embargo, todavía imprime
+*Run* nuevamente. Puede ver que el resultado del programa ha cambiado. Sin embargo, todavía imprime
 "5" como respuesta. Modifique la segunda declaración de impresión cambiando el símbolo de suma, el
-``+``, al símbolo de multiplicación, ``*``. Presione *Guardar y ejecutar* nuevamente para ver los nuevos resultados.
+``+``, al símbolo de multiplicación, ``*``. Presione *Run* nuevamente para ver los nuevos resultados.
 
-Como su nombre indica, *Guardar y ejecutar* también *guarda* su última versión del código,
+Como su nombre indica, *Save and Run* también *guarda* su última versión del código,
 y puede recuperarlo incluso en sesiones posteriores cuando *inició sesión*. Si *no* inició sesión,
-*Ejecutar* guarda versiones *solo hasta que su navegador abandone la página web actual*,
+*Run* guarda versiones *solo hasta que su navegador abandone la página web actual*,
 y luego pierde todas las modificaciones.
 
-Si ha iniciado sesión, cuando se carga una página por primera vez, cada ventana de activecode tendrá un botón *Cargar historial*,
-a la derecha del botón *Guardar y ejecutar*.
+Si ha iniciado sesión, cuando se carga una página por primera vez, cada ventana de activecode tendrá un botón *Load History*,
+a la derecha del botón *Save and Run*.
 Si hace clic en él o si ejecuta algún código, ese botón se convierte en un control deslizante.
 Si hace clic en el cuadro de ubicación del control deslizante, puede usar su flecha izquierda y derecha
 para cambiar a otras versiones que ejecutó.
@@ -55,8 +55,8 @@ paso de la ejecución de un programa. También le permite ver los valores de tod
 creadas y modificadas. En activecode, el código fuente se ejecuta de principio a fin y usted
 puede ver el resultado final. En codelens puede ver y controlar el progreso paso a paso.
 Tenga en cuenta que la flecha roja siempre apunta a la siguiente línea de código que se va a ejecutar.
-La flecha verde clara apunta a la línea que se acaba de ejecutar. Haga clic en "Mostrar en
-Codelens" para que aparezca la ventana de codelens, y luego haga clic en el botón Reenviar
+La flecha verde clara apunta a la línea que se acaba de ejecutar. Haga clic en "Show in
+Codelens" para que aparezca la ventana de codelens, y luego haga clic en el botón Resend
 unas pocas veces para pasar por la ejecución.
 
 A veces, presentaremos ejemplos de código explícitamente en una ventana de codelens en el libro de texto, como se muestra a continuación.
@@ -95,7 +95,7 @@ ejecución del programa.
     :answer_d: Ejecuta el código Python que está en codelens.
     :correct: b,d
     :feedback_a: De hecho, los pasos de codelens a través de cada línea uno por uno a medida que haces clic, que es MUCHO más lento que el intérprete de Python.
-    :feedback_b: Al usar codelens, puede controlar la ejecución de un programa paso a paso. ¡Incluso puedes ir hacia atrás!
+    :feedback_b: Al usar codelens, puede controlar la ejecución de un programa paso a paso. ¡Incluso puede ir hacia atrás!
     :feedback_c: Codelens funciona solo para los ejemplos preprogramados.
     :feedback_d: Al avanzar por el código de Python en codelens, está ejecutando el programa Python.
 

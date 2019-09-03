@@ -14,7 +14,7 @@
 El lenguaje de programación Python
 ----------------------------------
 
-El lenguaje de programación que aprenderás es Python. Python es un ejemplo
+El lenguaje de programación que aprenderá es Python. Python es un ejemplo
 de un **lenguaje de alto nivel**; otros idiomas de alto nivel que quizás haya escuchado
 de ellos son C ++, PHP y Java.
 
@@ -77,7 +77,7 @@ línea de comando shell o un entorno de jupyter notebook.
     :answer_c: El entorno/herramienta en la que está programando.
     :answer_d: El número (o "código") que debe ingresar en la parte superior de cada programa para indicarle a la computadora cómo ejecutar su programa.
     :correct: a
-    :feedback_a: Ei las instrucciones se almacenan en un archivo, se llama archivo de código fuente.
+    :feedback_a: Si las instrucciones se almacenan en un archivo, se llama archivo de código fuente.
     :feedback_b: Este lenguaje simplemente se llama lenguaje de programación, o simplemente el lenguaje. Los programas están escritos en este idioma.
     :feedback_c: El entorno puede llamarse IDE o entorno de desarrollo integrado, aunque no siempre.
     :feedback_d: No hay tal número que debe escribir al comienzo de su programa.
@@ -95,7 +95,7 @@ línea de comando shell o un entorno de jupyter notebook.
     :feedback_c: Python es un lenguaje de alto nivel, pero debe interpretarse en código de máquina (binario) antes de que pueda ejecutarse.
     :feedback_d: Si bien es cierto que generalmente es más fácil programar en un hola
 
-¿Cuál es la diferencia entre un lenguaje de programación de alto nivel y un lenguaje de programación de bajo nivel?
+    ¿Cuál es la diferencia entre un lenguaje de programación de alto nivel y un lenguaje de programación de bajo nivel?
 
 .. mchoice:: question1_3_3
     :answer_a: 1 = Un proceso, 2 = una función
@@ -108,4 +108,4 @@ línea de comando shell o un entorno de jupyter notebook.
     :feedback_c: Tanto los compiladores como los intérpretes son software.
     :feedback_d: Los compiladores pueden producir código objeto o código de bytes dependiendo del idioma. Un intérprete no produce ninguno.
 
-    Elija los mejores reemplazos para 1 y 2 en la siguiente oración: Al comparar compiladores e intérpretes, un compilador es como 1 mientras que un intérprete es como 2.
+    Elija los mejores reemplazos para 1 y 2 en la siguiente oración: Al comparar compiladores e intérpretes, un compilador es como 1 mientras que un intérprete es como 2.
