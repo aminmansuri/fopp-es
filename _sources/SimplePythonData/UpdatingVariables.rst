@@ -14,12 +14,11 @@
 Actualización de variables
 --------------------------
 
-.. video:: updatevid
-    :controls:
-    :thumb: ../_static/updatethumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/update.mov
-    http://media.interactivepython.org/thinkcsVideos/update.webm
+.. youtube:: Px1c-3GP-5o
+    :divid: updatevid
+    :height: 315
+    :width: 560
+    :align: left
 
 
 Una de las formas más comunes de reasignación es una **actualización** donde el nuevo
