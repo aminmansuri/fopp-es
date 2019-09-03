@@ -104,7 +104,7 @@ cualquier línea de código y *la analiza* en componentes. Por ejemplo, si ve un
 completa como una sentencia de asignación. Esperará ver un nombre de variable válido a la izquierda de =, y analizará todo
 a la derecha de = como una expresión. Intentará determinar si el lado derecho es un literal, un nombre de variable,
 una expresión de operador o una expresión de llamada de función. Si se trata de una expresión de operador, intentará analizar
- las subexpresiones antes y después del operador. Y así. Debería aprender a analizar líneas de código de la misma manera.
+las subexpresiones antes y después del operador. Y así. Debería aprender a analizar líneas de código de la misma manera.
 
 Para evaluar una expresión de operador, el intérprete de Python primero evalúa completamente la expresión antes del operador,
 luego la siguiente, luego combina los dos valores resultantes usando el operador. Para evaluar una expresión de llamada
