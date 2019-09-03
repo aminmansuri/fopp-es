@@ -119,10 +119,10 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Foundations of Python Programming",
+    'navbar_title': "Fundamentos de la Programación en Python",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Chapters",
+    'navbar_site_name': "Capítulos",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.

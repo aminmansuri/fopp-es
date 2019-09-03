@@ -41,8 +41,8 @@
 
 
 
-Table of Contents
-:::::::::::::::::
+Tabla de Contenido
+::::::::::::::::::
 
 .. raw:: html
 
