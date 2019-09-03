@@ -62,7 +62,7 @@ Podemos mirar las cadenas carácter por carácter o las listas elemento por elem
 
 .. activecode:: ac1_5_1
 
-   para el character en "Cool string":
+   for character in "Cool string":
        print(character)
 
 También podemos iterar sin un punto de detención definido con bucles ``while``.
