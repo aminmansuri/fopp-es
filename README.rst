@@ -1,5 +1,5 @@
-Foundations of Python Programming
-=================================
+Fundamentos de la Programación en Python
+========================================
 
 Programming is not a "spectator sport".  It is something you do,
 something you participate in. It would make sense, then,
