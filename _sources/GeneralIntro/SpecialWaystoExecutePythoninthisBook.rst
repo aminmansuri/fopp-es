@@ -12,7 +12,7 @@
    :start: 1
 
 Formas especiales de ejecutar Python en este libro
----------------------------------------------------
+--------------------------------------------------------
 
 Este libro proporciona dos formas adicionales de ejecutar programas Python. Ambas técnicas están diseñadas para ayudarlo mientras usted
 aprende el lenguaje de programación. Le ayudarán a comprender mejor cómo funcionan los programas Python.
