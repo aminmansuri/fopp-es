@@ -16,12 +16,11 @@
 Variables
 ---------
 
-.. video:: assignvid
-    :controls:
-    :thumb: ../_static/assignment.png
-
-    http://media.interactivepython.org/thinkcsVideos/Variables.mov
-    http://media.interactivepython.org/thinkcsVideos/Variables.webm
+.. youtube:: TrrzfHUtyVw
+    :divid: assignvid
+    :height: 315
+    :width: 560
+    :align: left
 
 Una de las características más poderosas de un lenguaje de programación es la capacidad de
 manipular **variables**. Una variable es un nombre que se refiere a un valor.
