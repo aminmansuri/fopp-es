@@ -94,11 +94,11 @@ Appendices
    Appendices/errorsAndDebug.rst
    Appendices/PrecedenceTable.rst
 
-Acknowledgements
-::::::::::::::::
+Agradecimientos
+:::::::::::::::
 
 .. toctree::
-    :caption: Acknowledgements
+    :caption: Agradecimientos
     :maxdepth: 1
 
     FrontBackMatter/copyright.rst
@@ -106,7 +106,7 @@ Acknowledgements
     FrontBackMatter/contrib.rst
     FrontBackMatter/fdl-1.3.rst
 
-Index and Search
+Indices y Búsqueda
 ::::::::::::::::::
 
 * :ref:`genindex`
