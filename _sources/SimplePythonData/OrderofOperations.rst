@@ -14,20 +14,11 @@
 Orden de las Operaciones
 ----------------------------
 
-.. video:: precedencevid
-    :controls:
-    :thumb: ../_static/precedencethumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/precedence.mov
-    http://media.interactivepython.org/thinkcsVideos/precedence.webm
-
-
-.. video:: associativityvid
-    :controls:
-    :thumb: ../_static/associativitythumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/associativity.mov
-    http://media.interactivepython.org/thinkcsVideos/associativity.webm
+.. youtube:: Ezve3QJv6Aw
+    :divid: precedencevid
+    :height: 315
+    :width: 560
+    :align: center
 
 Cuando aparece más de un operador en una expresión, el orden de evaluación
 depende de las **reglas de precedencia**. Python sigue las mismas reglas de
