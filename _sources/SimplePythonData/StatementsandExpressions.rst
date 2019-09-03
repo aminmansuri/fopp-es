@@ -13,19 +13,18 @@
 
 .. index:: expression
 
-Declaraciones y expresiones
+Sentencias y expresiones
 ---------------------------
 
-.. video:: expression_vid
-    :controls:
-    :thumb: ../_static/expressions.png
+.. youtube:: 3WgmLIsXFkI
+    :divid: expression_vid
+    :height: 315
+    :width: 560
+    :align: left
 
-    http://media.interactivepython.org/thinkcsVideos/Expressions.mov
-    http://media.interactivepython.org/thinkcsVideos/Expressions.webm
-
-Una **declaración** es una instrucción que el intérprete de Python puede ejecutar. Solo has visto la tarea
-declaración hasta ahora. Algunos otros tipos de declaraciones que verá en capítulos futuros son declaraciones ``while``,
-declaraciones ``for``, declaraciones ``if`` y declaraciones ``import``. (¡Hay otros tipos también!)
+Una **sentencia** es una instrucción que el intérprete de Python puede ejecutar. Solo has visto la sentencia
+de asignación hasta ahora. Algunos otros tipos de sentencias que verá en capítulos futuros son sentencias ``while``,
+sentencias ``for``, sentencias ``if`` y sentencias ``import``. (¡Hay otros tipos también!)
 
 Una **expresión** es una combinación de literales, nombres de variables, operadores y llamadas a funciones.
 Las expresiones necesitan ser evaluadas. El resultado de evaluar una expresión es un *valor* u *objeto*.
@@ -44,7 +43,7 @@ Si le pide a Python que ``imprima`` una expresión, el intérprete **evalúa** l
 En este ejemplo, ``len`` es una función de Python incorporada que devuelve el número de caracteres en una cadena.
 
 La *evaluación de una expresión* produce un valor, por lo que las expresiones pueden aparecer en la mano derecha
-lado de las declaraciones de asignación. Un literal en sí mismo es una expresión simple, y también lo es una variable.
+lado de las sentencias de asignación. Un literal en sí mismo es una expresión simple, y también lo es una variable.
 
 .. activecode:: ac2_10_2
     :nocanvas:
@@ -100,11 +99,24 @@ De manera similar, cuando se llama a una función, en lugar de poner un literal 
    
 Con una llamada a función, incluso es posible tener una expresión compleja antes del paréntesis izquierdo, siempre que esa expresión se evalúe como un objeto de función. Por ahora, sin embargo, solo usaremos nombres de variables (como square, sub y len) que estén directamente vinculados a objetos de función.
 
-Es importante comenzar a aprender a leer el código que contiene expresiones complejas. El intérprete de Python examina cualquier línea de código y *la analiza* en componentes. Por ejemplo, si ve un símbolo ``=``, intentará tratar la línea completa como una declaración de asignación. Esperará ver un nombre de variable válido a la izquierda de =, y analizará todo a la derecha de = como una expresión. Intentará determinar si el lado derecho es un literal, un nombre de variable, una expresión de operador o una expresión de llamada de función. Si se trata de una expresión de operador, intentará analizar las subexpresiones antes y después del operador. Y así. Debería aprender a analizar líneas de código de la misma manera.
+Es importante comenzar a aprender a leer el código que contiene expresiones complejas. El intérprete de Python examina
+cualquier línea de código y *la analiza* en componentes. Por ejemplo, si ve un símbolo ``=``, intentará tratar la línea
+completa como una sentencia de asignación. Esperará ver un nombre de variable válido a la izquierda de =, y analizará todo
+a la derecha de = como una expresión. Intentará determinar si el lado derecho es un literal, un nombre de variable,
+una expresión de operador o una expresión de llamada de función. Si se trata de una expresión de operador, intentará analizar
+ las subexpresiones antes y después del operador. Y así. Debería aprender a analizar líneas de código de la misma manera.
 
-Para evaluar una expresión de operador, el intérprete de Python primero evalúa completamente la expresión antes del operador, luego la siguiente, luego combina los dos valores resultantes usando el operador. Para evaluar una expresión de llamada de función, el intérprete evalúa la expresión antes de los paréntesis (es decir, busca el nombre de la función). Luego trata de evaluar cada una de las expresiones dentro de los paréntesis. Puede haber más de uno, separados por comas. Los valores de esas expresiones se pasan como entradas a la función cuando se llama a la función.
+Para evaluar una expresión de operador, el intérprete de Python primero evalúa completamente la expresión antes del operador,
+luego la siguiente, luego combina los dos valores resultantes usando el operador. Para evaluar una expresión de llamada
+de función, el intérprete evalúa la expresión antes de los paréntesis (es decir, busca el nombre de la función). Luego
+trata de evaluar cada una de las expresiones dentro de los paréntesis. Puede haber más de uno, separados por comas.
+Los valores de esas expresiones se pasan como entradas a la función cuando se llama a la función.
 
-Si una expresión de llamada de función es una subexpresión de una expresión más complicada, ya que ``square(x)`` es en ``sub(square(y), square(x))``, entonces el valor de retorno de ``square(x)`` se pasa como una entrada a la función ``sub``. Esta es una de las cosas difíciles a las que tendrá que acostumbrarse a hacer ejercicio cuando lea (o escriba) el código. En este ejemplo, se llama a la función ``square`` (dos veces) antes de que se llame a la función ``sub``, aunque la función ``sub`` viene primero cuando se lee el código de izquierda a derecha.
+Si una expresión de llamada de función es una subexpresión de una expresión más complicada, ya que ``square(x)`` es
+en ``sub(square(y), square(x))``, entonces el valor de retorno de ``square(x)`` se pasa como una entrada a la función
+``sub``. Esta es una de las cosas difíciles a las que tendrá que acostumbrarse a hacer ejercicio cuando lea (o escriba)
+el código. En este ejemplo, se llama a la función ``square`` (dos veces) antes de que se llame a la función ``sub``,
+aunque la función ``sub`` viene primero cuando se lee el código de izquierda a derecha.
 
 .. showeval:: eval2_10_1
     :trace_mode: true
@@ -122,7 +134,8 @@ Si una expresión de llamada de función es una subexpresión de una expresión 
     add(49, {{square(5)}}{{25}})
     {{add(49, 25)}}{{74}}
 
-Para comenzar a darle algo de práctica para leer y comprender expresiones complicadas, intente resolver el problema de Parsons a continuación. Tenga cuidado de no sangrar ninguna de las líneas de código; eso es algo que vendrá más adelante en el curso.
+Para comenzar a darle algo de práctica para leer y comprender expresiones complicadas, intente resolver el problema de
+Parsons a continuación. Tenga cuidado de no poner sangrías en ninguna de las líneas de código; eso es algo que vendrá más adelante en el curso.
 
 
 .. parsonsprob:: pp2_10_1
