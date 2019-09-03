@@ -14,12 +14,11 @@
 Reasignación
 ------------
 
-.. video:: reassignmentvid
-    :controls:
-    :thumb: ../_static/reassignmentthumb.png
-
-    http://media.interactivepython.org/thinkcsVideos/reassignment.mov
-    http://media.interactivepython.org/thinkcsVideos/reassignment.webm
+.. youtube:: G86akhNFHZA
+    :divid: reassignmentvid
+    :height: 315
+    :width: 560
+    :align: left
 
 
 Como hemos mencionado anteriormente, es legal realizar más de una asignación a
