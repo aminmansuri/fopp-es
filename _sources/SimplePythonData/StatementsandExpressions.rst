@@ -14,7 +14,7 @@
 .. index:: expression
 
 Sentencias y expresiones
----------------------------
+------------------------
 
 .. youtube:: 3WgmLIsXFkI
     :divid: expression_vid
