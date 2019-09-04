@@ -64,8 +64,8 @@ de sus nombres de variables y no sabe por qué, vea si está en esta lista.
 **Revisa tu entendimiento**
 
 .. mchoice:: question2_8_1
-   :answer_a: True
-   :answer_b: False
+   :answer_a: Verdadero
+   :answer_b: Falso
    :correct: b
    :feedback_a: - El carácter + no está permitido en nombres de variables.
    :feedback_b: - El carácter + no está permitido en nombres de variables (todo lo demás en este nombre está bien).
