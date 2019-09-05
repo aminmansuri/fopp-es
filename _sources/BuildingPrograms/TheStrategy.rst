@@ -53,7 +53,7 @@ Traducir desde su descripción a código puede ser el paso más difícil para us
                   <code block line 2>
                   ...
 
-* ¿Es la operación algo que solo debería ocurrir en algunas circunstancias y no en otras? Si es así, querrás una declaración de ``if``. Comience por hacer una versión esqueleto de un fragmento de código if/then/else, y luego complete las partes que están entre <>
+* ¿Es la operación algo que solo debería ocurrir en algunas circunstancias y no en otras? Si es así, querrás una sentencia ``if``. Comience por hacer una versión esqueleto de un fragmento de código if/then/else, y luego complete las partes que están entre <>
 
 ::
 
@@ -83,7 +83,7 @@ Finalmente, es posible que se te recuerde un fragmento de código en algún luga
 Limpia
 -------
 
-Cuando haya terminado de delinear y probar su programa, elimine cualquier declaración de impresión de diagnóstico de su programa. Nadie realmente necesita ver las declaraciones de prueba que escribió, y dejar las declaraciones de prueba en el programa podría confundirlo si agrega más al programa.
+Cuando haya terminado de delinear y probar su programa, elimine cualquier sentencia de impresión de diagnóstico de su programa. Nadie realmente necesita ver las declaraciones de prueba que escribió, y dejar las declaraciones de prueba en el programa podría confundirlo si agrega más al programa.
 
 Los comentarios adicionales ayudan a otras personas a leer su código, pero trate de dejar solo los bits que considere útiles. Hay un arte en escribir buenos comentarios informativos, y solo puedes aprender este arte leyendo los programas de otras personas y haciendo que tus compañeros lean tus programas. Como regla general para comentarios, cuando tenga dudas, guárdelo; si le preocupa que no tenga sentido para usted u otra persona más tarde, agregue más detalles.
 
