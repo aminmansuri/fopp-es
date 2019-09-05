@@ -35,7 +35,7 @@ Como recordatorio, este es nuestro aviso:
     # finalmente, debería agregar el par de valores clave al diccionario
 
 Elegimos el nombre de la variable ``user_dictionary`` porque será un diccionario creado por un usuario. Otros nombres podrían ser
-apropiados también! Aunque parezca innecesario, agregaremos una declaración de impresión para recordarnos que ``user_dictionary`` está vacío.
+apropiados también! Aunque parezca innecesario, agregaremos una sentencia de impresión para recordarnos que ``user_dictionary`` está vacío.
 
 ¡Luego construiremos el bucle for!
 
@@ -55,7 +55,7 @@ apropiados también! Aunque parezca innecesario, agregaremos una declaración de
         # finalmente, debería agregar el par de valores clave al diccionario
         print("---------- LOOP HA TERMINADO ----------")
 
-Si queremos asegurarnos de que el ciclo for esté iterando cinco veces, entonces podemos agregar estas declaraciones de impresión para ejecutarlas de modo que podamos
+Si queremos asegurarnos de que el ciclo for esté iterando cinco veces, entonces podemos agregar estas sentencias de impresión para ejecutarlas de modo que podamos
 Puede seguir el progreso del programa.
 
 A continuación, ¡recibiremos la entrada del usuario!
@@ -78,8 +78,8 @@ A continuación, ¡recibiremos la entrada del usuario!
         # finalmente, debería agregar el par de valores clave al diccionario
         print("---------- LOOP HAS ENDED ----------")
 
-Ahora queremos imprimir la respuesta. Esperamos que sea como una cadena, por lo que deberíamos poder agregarlo a la impresión
-declaración con otras cadenas sin ningún problema. Si hay un problema, entonces algo podría estar mal con la forma en que estamos recibiendo aportes
+Ahora queremos imprimir la respuesta. Esperamos que sea como una cadena, por lo que deberíamos poder agregarlo a la sentencia
+print con otras cadenas sin ningún problema. Si hay un problema, entonces algo podría estar mal con la forma en que estamos recibiendo aportes
 del usuario
 
 ¡Ahora, podemos separar las palabras para tener nuestra clave y valor para agregar al diccionario!
