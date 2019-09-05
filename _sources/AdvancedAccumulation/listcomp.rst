@@ -33,9 +33,9 @@ En el ejemplo, transformer expression es ``value * 2``. La variable del elemento
 para realizar una operación de mapeo *mapping*. Al igual que con ``map``, cada elemento de la secuencia se transforma en un elemento en la nueva lista.
 Sin embargo, en lugar de que la iteración ocurra automáticamente, hemos adoptado la sintaxis del bucle for que puede hacerlo más fácil de entender.
 
-Al igual que en un bucle for regular, la parte de la declaración ``for value in things`` dice que se ejecute un código una vez para cada
+Al igual que en un bucle for regular, la parte de la sentencia ``for value in things`` dice que se ejecute un código una vez para cada
 artículo en things. Cada vez que se ejecuta ese código, ``value`` está vinculado a un elemento de ``things``. El código que se ejecuta
-cada vez es la expresión del transformador ``valor * 2``, en lugar de un bloque de código identado debajo de la declaración del for.
+cada vez es la expresión del transformador ``valor * 2``, en lugar de un bloque de código identado debajo de la sentencia for.
 La otra diferencia de un ciclo for regular es que cada vez que se evalúa la expresión, el valor resultante se adjunta a una lista.
 Eso sucede automáticamente, sin que el programador inicialice explícitamente una lista vacía o agregue cada artículo.
 
@@ -79,7 +79,7 @@ También puedes combinar las operaciones ``map`` y ``filter`` encadenándolas, o
    :feedback_c: El resultado debe ser una lista.
    :feedback_d: Sí, 5 es el único número impar en alist. Se duplica antes de ser colocado en blist.
    
-   ¿Qué se imprime en las siguientes declaraciones?
+   ¿Qué se imprime en las siguientes sentencias?
    
    .. code-block:: python
 
