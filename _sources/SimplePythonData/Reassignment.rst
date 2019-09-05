@@ -89,19 +89,19 @@ Puede recorrer el código y ver cómo cambian las asignaciones de variables a co
 .. note::
 
    En algunos lenguajes de programación, un diferente
-   símbolo se utiliza para la asignación, como ``<-`` or ``:=``. La intención es
+   símbolo se utiliza para la asignación, como ``<-`` o ``:=``. La intención es
    que esto ayudará a evitar confusiones. Python
-   eligió usar los tokens ``=`` para la asignación y ``==`` para la igualdad. Este es una popular
+   eligió usar los tokens ``=`` para la asignación y ``==`` para la igualdad. Esta es una popular
    opción que también se encuentra en lenguajes como C, C++, Java y C#.
 
 
 **Revisa tu entendimiento**
 
 .. mchoice:: question2_13_1
-   :answer_a: "x" es 15 y "y" es 15
-   :answer_b: "x" es 22 y "y" is 22
-   :answer_c: "x" es 15 y "y" is 22
-   :answer_d: "x" es 22 y "y" is 15
+   :answer_a: "x" es 15 e "y" es 15
+   :answer_b: "x" es 22 e "y" is 22
+   :answer_c: "x" es 15 e "y" is 22
+   :answer_d: "x" es 22 e "y" is 15
    :correct: d
    :feedback_a: Mira la última declaración de asignación que le da a x un valor diferente.
    :feedback_b: No, x e y son dos variables separadas. Solo porque x cambia en la última declaración de asignación, no cambia el valor que se copió en y en la segunda declaración.

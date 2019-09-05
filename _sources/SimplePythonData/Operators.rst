@@ -87,8 +87,8 @@ operadores
 
 En el ejemplo anterior, 7 dividido por 3 es 2 cuando usamos división entera y hay un resto de 1.
 
-El operador de módulo resulta ser sorprendentemente útil. Por ejemplo, puedes
-compruebe si un número es divisible por otro --- si ``x % y`` es cero, entonces
+El operador de módulo resulta ser sorprendentemente útil. Por ejemplo, puede
+comprobar si un número es divisible por otro --- si ``x % y`` es cero, entonces
 ``x`` es divisible por ``y``.
 Además, puede extraer el dígito o dígitos más a la derecha de un número.
 Por ejemplo, ``x % 10`` produce el dígito más a la derecha de ``x`` (en la base 10).

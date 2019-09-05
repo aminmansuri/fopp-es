@@ -22,7 +22,7 @@ Orden de las Operaciones
 
 Cuando aparece más de un operador en una expresión, el orden de evaluación
 depende de las **reglas de precedencia**. Python sigue las mismas reglas de
-precedencia para sus operadores matemáticos que las matemáticas hacen.
+precedencia para sus operadores matemáticos que las matemáticas.
 
 .. El acrónimo PEMDAS
 .. es una forma útil de recordar el orden de las operaciones:
@@ -70,7 +70,7 @@ precedencia para sus operadores matemáticos que las matemáticas hacen.
 
    La respuesta es que si hay una expresión a la izquierda de los paréntesis que se evalúa como un objeto de función, entonces los paréntesis indican una llamada a la función, y de lo contrario no. Tendrás que acostumbrarte a hacer la misma inferencia cuando veas paréntesis: ¿es esta una llamada a una función, o simplemente especificando la precedencia?
 
-**Check your understanding**
+**Revisa tu entendimiento**
 
 .. mchoice:: question2_11_1
    :answer_a: 14
@@ -79,8 +79,8 @@ precedencia para sus operadores matemáticos que las matemáticas hacen.
    :answer_d: 13.667
    :correct: a
    :feedback_a: Usando paréntesis, la expresión se evalúa como (2*5) primero, luego (10 // 3), luego (16-3), y luego (13+1).
-   :feedback_b: Recuerde que * tiene prioridad sobre -.
-   :feedback_c: Recuerde que // tiene prioridad sobre -.
+   :feedback_b: Recuerda que * tiene prioridad sobre -.
+   :feedback_c: Recuerda que // tiene prioridad sobre -.
    :feedback_d: Recuerda que // hace división entera.
    :practice: T
 

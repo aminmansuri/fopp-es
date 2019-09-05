@@ -29,16 +29,16 @@ manipular **variables**. Una variable es un nombre que se refiere a un valor.
 
 .. sourcecode:: python
 
-    message = "¿Qué hay de nuevo viejo?"
+    message = "What's up, Doc?"
     n = 17
     pi = 3.14159
 
 Este ejemplo hace tres asignaciones. El primero asigna el valor de la cadena
-``"¿Qué hay de nuevo viejo?"`` a una nueva variable llamada ``message``. El segundo asigna el
+``"What's up, Doc?"`` a una nueva variable llamada ``message``. El segundo asigna el
 entero ``17`` a ``n``, y el tercero asigna el número de coma flotante
 ``3.14159``  a una variable llamada ``pi``.
 
-El **símbolo de asignación**, ``=`, no debe confundirse con *igualdad* (veremos más adelante que la igualdad usa el símbolo
+El **símbolo de asignación**, ``=``, no debe confundirse con *igualdad* (veremos más adelante que la igualdad usa el símbolo
 ``==``). La instrucción de asignación enlaza un *nombre*, a la izquierda
 del operador, con un *valor*, en el lado derecho. Es por eso que
 obtendrá un error si ingresa:
@@ -50,7 +50,7 @@ obtendrá un error si ingresa:
 .. tip::
 
    Al leer o escribir código, dígase "n se le asigna 17" o "n obtiene
-   el valor 17"o"n es una referencia al objeto 17"o"n se refiere al objeto 17".  **No digas"n es igual a 17"**.
+   el valor 17" o "n es una referencia al objeto 17" o "n se refiere al objeto 17".  **No digas "n es igual a 17"**.
 
 Una forma común de representar variables en papel es escribir el nombre con una flecha
 apuntando al valor de la variable. Este tipo de figura, conocida como **diagrama de referencia**, a menudo se denomina **estado
@@ -59,7 +59,7 @@ instante particular en el tiempo. (Piense en ello como el estado mental de la va
 Este diagrama muestra el resultado de ejecutar las instrucciones de asignación que se muestran arriba.
 
 .. image:: Figures/refdiagram1.png
-   :alt: Reference Diagram
+   :alt: Diagrama de Referencia
 
 Si su programa incluye una variable en cualquier expresión, cada vez que se ejecute esa expresión producirá el valor
 que está vinculado a la variable en el momento de la ejecución. En otras palabras, evaluar una variable busca su valor.
@@ -67,7 +67,7 @@ que está vinculado a la variable en el momento de la ejecución. En otras palab
 .. activecode:: ac2_7_1
     :nocanvas:
 
-    message = "¿Qué hay de nuevo viejo?"
+    message = "What's up, Doc?"
     n = 17
     pi = 3.14159
 
@@ -82,7 +82,7 @@ Para ver esto con aún más detalle, podemos ejecutar el programa usando codelen
     :python: py3
     :showoutput:
 
-    message = "¿Qué hay de nuevo viejo?"
+    message = "What's up, Doc?"
     n = 17
     pi = 3.14159
 
@@ -106,7 +106,7 @@ a una variable y luego asignar un valor diferente a la misma variable.
     cálculos!
 
 Para ver esto, lea y luego ejecute el siguiente programa.
-Notarás que cambiamos el valor de ``día`` tres veces, y en el tercero
+Notarás que cambiamos el valor de ``day`` tres veces, y en la tercera
 asignación incluso le damos un valor que es de un tipo diferente.
 
 .. codelens:: clens2_7_2
@@ -131,7 +131,7 @@ Por ejemplo, podemos averiguar el tipo de datos del valor actual de una variable
 .. activecode:: ac2_7_2
     :nocanvas:
 
-    message = "¿Qué hay de nuevo viejo?"
+    message = "What's up, Doc?"
     n = 17
     pi = 3.14159
 
