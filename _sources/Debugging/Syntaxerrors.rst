@@ -40,7 +40,7 @@ experiencia, cometerá menos errores y también podrá encontrar sus errores má
 
 .. mchoice:: question4_4_1
    :answer_a: Intentar dividir por 0.
-   :answer_b: Olvidar los dos puntos al final de una declaración donde se los requiere.
+   :answer_b: Olvidar los dos puntos al final de una sentencia donde se los requiere.
    :answer_c: Olvidar dividir entre 100 al imprimir una cantidad porcentual.
    :correct: b
    :feedback_a: Un error de sintaxis es un error en la estructura del código de Python que se puede detectar antes de ejecutar el programa. Python generalmente no puede decir si está tratando de dividir entre 0 hasta que esté ejecutando su programa (por ejemplo, podría estar pidiéndole un valor al usuario y luego dividirlo por ese valor; no puede saber qué valor ingresará el usuario antes de ejecutar el programa programa).
