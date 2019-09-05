@@ -22,7 +22,7 @@ Ejercicios
 
            .. actex:: ac13_5_1
 
-              Use una declaración ``for`` para imprimir 10 números aleatorios.
+              Use una sentencia ``for`` para imprimir 10 números aleatorios.
               ~~~~
 
         .. tab:: Respuesta
