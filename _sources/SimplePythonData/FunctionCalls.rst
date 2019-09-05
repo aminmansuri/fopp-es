@@ -73,7 +73,7 @@ el orden de las entradas importa. El valor antes de la coma se trata como la pri
 como la segunda entrada.
 
 Nuevamente, recuerde que cuando Python realiza cálculos, los resultados solo se muestran en la ventana de salida si hay una
-declaración de impresión que dice hacer eso. En la ventana de activcode arriba, ``square(5)`` produce el valor 25 pero nunca
+declaración de impresión que dice hacer eso. En la ventana de active code arriba, ``square(5)`` produce el valor 25 pero nunca
 se ve eso en la ventana de salida, porque no está impreso.
 
 Llamadas a funciones como parte de expresiones complejas

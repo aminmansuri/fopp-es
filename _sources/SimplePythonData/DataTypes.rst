@@ -50,8 +50,8 @@ comillas (``"``), o tres de cada (``'''`` o ``"""``)
     print(type('''e incluso esto...'''))
 
 
-Las cadenas con comillas dobles pueden contener comillas simples dentro de ellas, como en ``"La barba de
-Bruce"``, y las cadenas entre comillas simples pueden tener comillas dobles dentro de ellas, como en
+Las cadenas con comillas dobles pueden contener comillas simples dentro de ellas, como en ``"Bruce's beard"``,
+y las cadenas entre comillas simples pueden tener comillas dobles dentro de ellas, como en
 ``'Los caballeros que dicen "¡Ni!"'``.
 Las cadenas encerradas con tres ocurrencias de cualquier símbolo de comilla se llaman
 cuerdas triples citadas. Pueden contener comillas simples o dobles:
@@ -59,7 +59,7 @@ cuerdas triples citadas. Pueden contener comillas simples o dobles:
 .. activecode:: ac2_5_4
     :nocanvas:
 
-    print('''"Oh no", exclamó," ¡La bicicleta de Ben está rota!"''')
+    print('''"Oh no", exclamó, "¡La bicicleta de Ben está rota!"''')
 
 
 Las cadenas entre comillas triples pueden incluso abarcar varias líneas:
@@ -72,7 +72,7 @@ Las cadenas entre comillas triples pueden incluso abarcar varias líneas:
     de texto.""")
 
 A Python no le importa si usa comillas simples o dobles o
-citas únicas para rodear tus cuerdas. Una vez que ha analizado el texto de
+citas únicas para rodear tus cadenas. Una vez que ha analizado el texto de
 su programa o comando, la forma en que almacena el valor es idéntica en todos los casos,
 y las comillas circundantes no son parte del valor.
 
