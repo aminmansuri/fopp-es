@@ -108,11 +108,11 @@ Ejercicios
 
    .. actex:: ex_2_6
 
-      Es posible nombrar los días 0 a 6, donde el día 0 es domingo y el día 6 es sábado.
-      Si te vas de maravillosas vacaciones saliendo el día número 3 (un miércoles) y regresas
-      después de 10 noches en casa, regresarías a casa un sábado (día 6). Escriba un versión
-      general del programa que solicita el número del día de inicio y la duración de su
-      estadía y le indicará la cantidad de días de la semana en que volverá.
+       Es posible nombrar los días 0 a 6, donde el día 0 es domingo y el día 6 es sábado.
+       Si te vas de maravillosas vacaciones saliendo el día número 3 (un miércoles) y regresas
+       después de 10 noches en casa, regresarías a casa un sábado (día 6). Escriba un versión
+       general del programa que solicita el número del día de inicio y la duración de su
+       estadía y le indicará la cantidad de días de la semana en que volverá.
        ~~~~
 
 
