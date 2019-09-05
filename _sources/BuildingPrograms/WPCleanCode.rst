@@ -14,7 +14,7 @@
 👩‍💻 Limpiar
 ==============
 
-¡Felicidades! Hemos resuelto el problema ahora, pero nuestro código no es muy agradable de leer. Podemos limpiarlo ahora y eliminar las declaraciones de impresión.
+¡Felicidades! Hemos resuelto el problema ahora, pero nuestro código no es muy agradable de leer. Podemos limpiarlo ahora y eliminar las sentencias de impresión.
 
 .. activecode:: ac500_4_1
    
