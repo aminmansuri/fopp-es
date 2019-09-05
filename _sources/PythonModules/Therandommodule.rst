@@ -15,15 +15,6 @@ El Módulo ``Random``
 --------------------
 
 
-.. video:: randmodvid
-    :controls:
-    :thumb: ../_static/mathrandommodule.png
-
-    http://media.interactivepython.org/thinkcsVideos/mathrandommodule.mov
-    http://media.interactivepython.org/thinkcsVideos/mathrandommodule.webm
-
-
-
 A menudo queremos usar **números aleatorios** en los programas. Aquí hay algunos usos típicos:
 
 * Para jugar un juego de azar donde la computadora necesita lanzar algunos dados, elegir un
