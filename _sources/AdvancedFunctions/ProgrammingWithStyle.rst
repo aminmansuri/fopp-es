@@ -28,5 +28,5 @@ Algunos consejos ya serán útiles:
 * las importaciones deben ir al principio del archivo
 * separar definiciones de funciones con dos líneas en blanco
 * mantener las definiciones de funciones juntas
-* mantener declaraciones de nivel superior, incluidas las llamadas a funciones, juntas en la
+* mantener sentencias de nivel superior, incluidas las llamadas a funciones, juntas en la
   parte inferior del programa
