@@ -33,7 +33,7 @@ mirando la salida del programa e intentando descubrir qué está haciendo.
 
 .. mchoice:: question4_6_1
    :answer_a: Intentar dividir por 0.
-   :answer_b: Olvidar un punto y coma al final de una declaración donde se requiere uno.
+   :answer_b: Olvidar un punto y coma al final de una sentencia donde se requiere uno.
    :answer_c: Olvidar dividir entre 100 al imprimir una cantidad porcentual.
    :correct: c
    :feedback_a: Un error semántico es un error en la lógica. En este caso, el programa no produce la salida correcta porque el problema no se resuelve correctamente. Esto se consideraría un error en tiempo de ejecución.
