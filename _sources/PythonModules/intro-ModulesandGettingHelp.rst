@@ -17,12 +17,11 @@
 Módulos
 =======
 
-.. video:: inputvid
-    :controls:
-    :thumb: ../_static/modules.png
-
-    http://media.interactivepython.org/thinkcsVideos/modules.mov
-    http://media.interactivepython.org/thinkcsVideos/modules.webm
+.. youtube:: GCLHuPBtLdQ
+    :divid: vid_modules
+    :height: 315
+    :width: 560
+    :align: left
 
 Un **módulo** es un archivo que contiene definiciones y sentencias de Python destinadas a
 usar en otros programas de Python. Hay muchos módulos de Python que vienen con
