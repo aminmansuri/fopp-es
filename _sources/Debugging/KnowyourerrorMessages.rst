@@ -51,8 +51,7 @@ Intentemos el programa nuevamente, pero esta vez en un activecode:
 ¡Ajá! Ahora tenemos un mensaje de error que podría ser útil. El error de nombre nos dice
 que ``wait_time_int`` no está definido. También nos dice que el error está en la línea 5.
 Esa es **realmente** información útil. Ahora mira la línea cinco y verás que
-``wait_time_int`` se usa tanto en el lado izquierdo como en el derecho de la tarea
-declaración.
+``wait_time_int`` se usa tanto en el lado izquierdo como en el derecho de la sentencia de asignación.
 
 .. note::
    Las descripciones de error que ve en el activecode pueden ser diferentes (¡y más comprensibles!) que en un código regular
@@ -60,7 +59,7 @@ declaración.
    incluyendo la redacción elegida para describir los errores.
 
 .. mchoice:: question4_7_1
-   :answer_a: No puede usar una variable en los lados izquierdo y derecho de una declaración de asignación.
+   :answer_a: No puede usar una variable en los lados izquierdo y derecho de una sentencia de asignación.
    :answer_b: wait_time_int no tiene un valor, por lo que no se puede usar en el lado derecho.
    :answer_c: Esto no es realmente un error, Python no funciona.
    :correct: b
@@ -153,7 +152,7 @@ Vea si puede descubrir qué los causó.
         sintaxis. Entonces, en este caso, el siguiente paso debería ser retroceder y mirar la
         línea anterior. En este caso, si observa cuidadosamente la línea 2, verá que
         falta un paréntesis derecho al final de la línea. Recuérdalo,
-        los paréntesis deben estar equilibrados. Dado que Python permite que las declaraciones continúen
+        los paréntesis deben estar equilibrados. Dado que Python permite que las sentencias continúen
         varias líneas dentro de paréntesis, python continuará escaneando posteriormente
         líneas que buscan el paréntesis de equilibrio correcto. Sin embargo en este caso
         encuentra el nombre ``current_time_int`` y querrá interpretarlo como
@@ -168,8 +167,8 @@ que está marcado que contiene el error. Si se comenta la línea cuatro, el mens
 ahora cambia a punto a la línea 5. Ahora te preguntas, ¿estoy realmente tan mal que ya
 tiene dos líneas seguidas que tienen errores? Tal vez, podrías llevado al extremo,
 podrías comentar todas las líneas restantes en el programa. Ahora el mensaje de error
-cambia a ``TokenError: EOF en declaración de varias líneas`` Esta es una forma muy técnica
-de decir que Python llegó al final del archivo (EOF) mientras todavía estaba buscando
+cambia a ``TokenError: EOF in multi-line statement`` (TokenError: EOF en sentencia de varias líneas)
+Esta es una forma muy técnica de decir que Python llegó al final del archivo (EOF) mientras todavía estaba buscando
 alguna cosa. En este caso un paréntesis derecho.
 
 
@@ -238,7 +237,7 @@ posible fuente de error. En lugar de comentar toda la línea, podrías
 intentar asignar ``current_time_str`` a un valor constante. Por ejemplo, podrías hacer que
 la línea uno se vea así: ``current_time_str = "10"  #input("¿Cuál es el"hora
 actual "(en horas 0-23)?")``. Ahora ha asignado ``current_time_str`` a la cadena
-10, y comentó la declaración de entrada. ¡Y ahora el programa funciona! Puede llegar a la
+10, y comentó la sentencia input. ¡Y ahora el programa funciona! Puede llegar a la
 conclusión de que el problema debe tener algo que ver con la función de entrada.
 
 
@@ -294,18 +293,18 @@ y corregir el error.
 
         * La expresión ``int(x)`` convierte la cadena referenciada por x en un número entero pero no la almacena en ningún lado. Es muy común suponer que ``int(x)`` de alguna manera cambia a x, ¡ya que eso es lo que pretendes!. Lo que hace que esto sea muy complicado es que ``int(x)`` es una expresión válida, por lo que no causa ningún tipo de error, sino que el error ocurre más adelante en el programa.
 
-        * La declaración de asignación ``x = int(x)`` es muy diferente. Nuevamente, la expresión ``int(x)`` convierte la cadena referenciada por x en un número entero, pero esta vez también cambia lo que x hace referencia para que x ahora se refiera al valor entero devuelto por la función ``int``.
+        * La sentencia de asignación ``x = int(x)`` es muy diferente. Nuevamente, la expresión ``int(x)`` convierte la cadena referenciada por x en un número entero, pero esta vez también cambia lo que x hace referencia para que x ahora se refiera al valor entero devuelto por la función ``int``.
 
-        Entonces, la solución a este problema es cambiar las líneas 3 y 4 para que sean declaraciones de asignación.
+        Entonces, la solución a este problema es cambiar las líneas 3 y 4 para que sean sentencias de asignación.
 
 
 **Encontrar pistas** Una cosa que puede ayudarlo en esta situación es imprimir los
-valores y los tipos de las variables involucradas en la declaración que está causando el
-error. Puede intentar agregar una declaración de impresión después de la línea 4 ``print(x, type(x))``
+valores y los tipos de las variables involucradas en la sentencia que está causando el
+error. Puede intentar agregar una sentencia print después de la línea 4 ``print(x, type(x))``
 veremos que al menos hemos confirmado que x es de tipo cadena. Ahora necesitas
 Comenzarás a trabajar hacia atrás a través del programa. Tienes que preguntarte, ¿dónde se usa x?
 ¿en el programa? x se usa en las líneas 2, 3 y, por supuesto, 5 y 6 (donde estamos obteniendo
-un error). Entonces, tal vez mueva la declaración de impresión para que esté después de la línea 2 y nuevamente después de 3.
+un error). Entonces, tal vez mueva la sentencia print para que esté después de la línea 2 y nuevamente después de 3.
 La línea 3 es donde espera que el valor de x se cambie a un entero. Podría la línea 4
 estar misteriosamente cambiando x de nuevo a una cadena? No es muy probable. Entonces el valor y el tipo
 de x es justo lo que esperarías después de la línea 2, pero no después de la línea 3. Esto
@@ -351,11 +350,11 @@ editor o función de búsqueda del navegador. Muy a menudo si busca la palabra e
 mensaje de error ocurrirá una de dos cosas:
 
 1. La palabra que está buscando aparecerá solo una vez en su código, también es probable
-que estará en el lado derecho de una declaración de asignación, o como un parámetro para
+que estará en el lado derecho de una sentencia de asignación, o como un parámetro para
 una función. Eso debería confirmar que tienes un error tipográfico en alguna parte. Si el nombre en
 la pregunta **es** lo que pensaste que debería ser, entonces probablemente tengas un error tipográfico a la izquierda
-de una declaración de asignación en una línea antes de que aparezca su mensaje de error. Comience
-mirando hacia atrás en sus declaraciones de asignación. En algunos casos es realmente agradable
+de una sentencia de asignación en una línea antes de que aparezca su mensaje de error. Comience
+mirando hacia atrás en sus sentencias de asignación. En algunos casos es realmente agradable
 dejar visibles todas las cadenas resaltadas de la función de búsqueda, ya que ayudarán
 a encpntrar muy rápidamente una línea donde podría haber esperado que su variable fuera
 resaltada.
@@ -406,7 +405,7 @@ Y un último pedazo de código para arreglar.
     .. admonition:: Solución
 
         En este ejemplo, el mensaje de error se trata de ``set_time`` no definido en la línea 3.
-        En este caso, el nombre indefinido no se usa en una declaración de asignación, pero es
+        En este caso, el nombre indefinido no se usa en una sentencia de asignación, pero es
         usado como parámetro (incorrectamente) para una llamada a la función. Una búsqueda en ``set_time``
         revela que, de hecho, solo se usa una vez en el programa. ¿Quiso decir el autor?
         ``set_alarm``? Si hacemos esa suposición, obtenemos inmediatamente otro error
@@ -420,7 +419,7 @@ Y un último pedazo de código para arreglar.
         1.  ``set_time`` no está definido y nunca se usa, el autor probablemente quiso decir ``set_alarm``.
         2.  ``alarm_time`` no se puede usar como parámetro antes de que se defina, ¡incluso en la siguiente línea!
         3.  ``int`` solo puede convertir una cadena en un entero a la vez.
-        4.  Finalmente, ``int`` debe usarse en una declaración de asignación. Incluso si se llamara ``int`` con el número correcto de parámetros, no tendría ningún efecto real.
+        4.  Finalmente, ``int`` debe usarse en una sentencia de asignación. Incluso si se llamara ``int`` con el número correcto de parámetros, no tendría ningún efecto real.
 
 
 .. advanced topic!
