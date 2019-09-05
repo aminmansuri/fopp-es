@@ -82,11 +82,11 @@ el valor. En una función lambda, eso no es necesario: lo que se coloca después
 .. mchoice:: question15_3_1
    :answer_a: Una cadena con un - delante del número.
    :answer_b: Un número del signo opuesto (el número positivo se vuelve negativo, el negativo se vuelve positivo).
-   :answer_c: No se devuelve nada porque no hay una declaración de devolución.
+   :answer_c: No se devuelve nada porque no hay una sentencia return.
    :correct: b
    :feedback_a: El número se asignaría a la variable x y aquí no se utiliza ninguna conversión de tipo, por lo que el número se mantendría como un número.
    :feedback_b: ¡Correcto!
-   :feedback_c: Recuerde, las funciones lambda no usan declaraciones de retorno.
+   :feedback_c: Recuerde, las funciones lambda no usan sentencia return.
    :practice: T
 
    Si la entrada a esta función lambda es un número, ¿qué se devuelve?
