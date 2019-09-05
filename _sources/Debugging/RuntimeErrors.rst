@@ -28,7 +28,7 @@ capítulos, por lo que puede pasar un tiempo antes de que encuentre uno.
 
 .. mchoice:: question4_5_1
    :answer_a: Intentar dividir por 0.
-   :answer_b: Olvidar los dos puntos al final de una declaración donde se requieren.
+   :answer_b: Olvidar los dos puntos al final de una sentencia donde se requieren.
    :answer_c: Olvidarse de dividir entre 100 al imprimir una cantidad porcentual.
    :correct: a
    :feedback_a: Python no puede determinar de manera confiable si está tratando de dividir entre 0 hasta que esté ejecutando su programa (por ejemplo, podría estar pidiéndole un valor al usuario y luego dividirlo por ese valor; no puede saber qué valor ingresará el usuario antes de ejecutar el programa).
