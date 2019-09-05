@@ -25,7 +25,7 @@ Glosario
 
 
     módulo
-        Un archivo que contiene definiciones y declaraciones de Python destinadas a ser utilizadas en
+        Un archivo que contiene definiciones y sentencias de Python destinadas a ser utilizadas en
         otros programas de Python. Los contenidos de un módulo están disponibles para
         el otro programa usando la instrucción *import*  .
 
