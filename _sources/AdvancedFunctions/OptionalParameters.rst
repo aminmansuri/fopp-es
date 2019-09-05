@@ -77,7 +77,7 @@ especifique un valor para z sin especificar un valor para y.
 
 .. note::
 
-   Este es un segundo uso relacionado, pero ligeramente diferente de = del que hemos visto anteriormente. En una declaración de asignación independiente, que no forma parte de una definición de función, ``x=3`` asigna 3 a la variable x. Como parte de la especificación de los parámetros en una definición de función, ``x=3`` dice que 3 es el *valor predeterminado* para x, que se usa *solo cuando* no se proporciona ningún valor durante la invocación de la función.
+   Este es un segundo uso relacionado, pero ligeramente diferente de = del que hemos visto anteriormente. En una sentencia de asignación independiente, que no forma parte de una definición de función, ``x=3`` asigna 3 a la variable x. Como parte de la especificación de los parámetros en una definición de función, ``x=3`` dice que 3 es el *valor predeterminado* para x, que se usa *solo cuando* no se proporciona ningún valor durante la invocación de la función.
 
 Hay dos cosas difíciles que pueden confundirte con los valores predeterminados. El primero es que el valor predeterminado
 se determina en el momento en que se define la función, no en el momento en que se invoca. Asi que
