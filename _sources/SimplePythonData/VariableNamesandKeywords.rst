@@ -71,4 +71,4 @@ de sus nombres de variables y no sabe por qué, vea si está en esta lista.
    :feedback_b: - El carácter + no está permitido en nombres de variables (todo lo demás en este nombre está bien).
    :practice: T
 
-   Verdadero o falso: el siguiente es un nombre de variable legal en Python: A_good_grade_is_A +
+   Verdadero o falso: el siguiente es un nombre de variable legal en Python: A_good_grade_is_A+
