@@ -17,12 +17,11 @@
 El bucle **for**
 ----------------
 
-.. video:: forloopvid
-   :controls:
-   :thumb: ../_static/for_loop.png
-
-   http://media.interactivepython.org/thinkcsVideos/for_loop.mov
-   http://media.interactivepython.org/thinkcsVideos/for_loop.webm
+.. youtube:: X1-UNHUajfk
+    :divid: forloopvid
+    :height: 315
+    :width: 560
+    :align: left
 
 
 Cuando dibujamos las imágenes con tortuga, podría ser bastante tedioso. Si quisiéramos dibujar un cuadrado
