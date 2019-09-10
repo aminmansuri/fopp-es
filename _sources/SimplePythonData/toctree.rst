@@ -23,5 +23,6 @@ Variables, declaraciones y expresiones
    Glossary.rst
    Exercises.rst
    week1a2.rst
+   ejercicios-adicionales.rst
    
    
