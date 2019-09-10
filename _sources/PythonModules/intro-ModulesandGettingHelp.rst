@@ -24,7 +24,7 @@ Módulos
     :align: left
 
 Un **módulo** es un archivo que contiene definiciones y sentencias de Python destinadas a
-usar en otros programas de Python. Hay muchos módulos de Python que vienen con
+usarse en otros programas de Python. Hay muchos módulos de Python que vienen con
 Python como parte de la **biblioteca estándar**. Proporcionar funcionalidad adicional a través de módulos le permite usar solo la funcionalidad que necesita cuando la necesita, y mantiene su código más limpio.
 
 Las funciones importadas como parte de un módulo viven en su propio **espacio de nombres**. Un espacio de nombres es simplemente un espacio dentro del cual todos los nombres son distintos entre sí. El mismo nombre se puede reutilizar en diferentes espacios de nombres, pero dos objetos no pueden tener el mismo nombre dentro de un solo espacio de nombres. Un ejemplo de un espacio de nombres es el conjunto de nombres de calles dentro de una sola ciudad. Muchas ciudades tienen una calle llamada "Calle principal", ¡pero es muy confuso si dos calles de la misma ciudad tienen ese nombre! Otro ejemplo es la organización de carpetas de los sistemas de archivos. Puede tener un archivo llamado todo en su carpeta de trabajo, así como en su carpeta personal, pero sabe cuál es cuál debido a la carpeta en la que se encuentra; cada carpeta tiene su propio espacio de nombres para archivos. Tenga en cuenta que los nombres humanos no son parte de un espacio de nombres que impone la unicidad; Es por eso que los gobiernos han inventado identificadores únicos para asignar a las personas, como los números de pasaporte.
