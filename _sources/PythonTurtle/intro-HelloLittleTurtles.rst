@@ -24,12 +24,11 @@
 ¡Hola pequeñas tortugas!
 ========================
 
-.. video:: turtleintrovid
-    :controls:
-    :thumb: ../_static/turtleintro.png
-
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.mov
-    http://media.interactivepython.org/thinkcsVideos/turtleintro.webm
+.. youtube:: Yxyx6KpKRzY
+    :divid: vid_turtleintro
+    :height: 315
+    :width: 560
+    :align: left
 
 Hay muchos *módulos* en Python que proporcionan características muy potentes que podemos usar en nuestros propios programas.
 Algunos de estos pueden enviar correos electrónicos o buscar páginas web. Otros nos permiten realizar cálculos matemáticos complejos.
