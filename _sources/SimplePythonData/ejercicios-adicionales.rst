@@ -1,12 +1,12 @@
 
 .. qnum::
-   :prefix: data-19-
+   :prefix: data-20-
    :start: 1
 
 .. Deber#1
 
-Ejercicios Adicionales
-----------------------
+Deber#1
+-------
 
 **Revisa tu entendimiento**
 
@@ -37,20 +37,24 @@ Ejercicios Adicionales
                 :click-correct:print('y=5'):endclick:
 
 
-.. sourcecode:: python
-
-    z = "uno"
-    y = ''' dos
-    x = 1
-    z = 2
-    y = 'tres'''
-    print(z)
 
 .. fillintheblank:: fopp-es-d1-3
 
-   Qué imprime el código anterior?
+   ¿Qué imprime el siguiente código?
 
+    .. sourcecode:: none
 
-    - :uno: Correcto!
+        z = "uno"
+        y = ''' dos
+        x = 1
+        z = 2
+        y = 'tres'''
+        print(z)
+
+   Imprime
+
+   -  :uno: Correcto!
       :"uno": Cerca, pero las comillas están de más.
-      :.*: Recuerda cómo funcionan los comentarios y string de varias líneas
+      :.*: Recuerda cómo funcionan los comentarios y string de varias líneas.
+
+.. Help
