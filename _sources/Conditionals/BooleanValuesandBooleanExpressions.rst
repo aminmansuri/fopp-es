@@ -23,12 +23,11 @@
 Valores boolean y expresiones boolean
 --------------------------------------------
 
-.. video:: booleanexpressions
-   :controls:
-   :thumb: ../_static/booleanexpressions.png
-
-   http://media.interactivepython.org/thinkcsVideos/booleanexpressions.mov
-   http://media.interactivepython.org/thinkcsVideos/booleanexpressions.webm
+.. youtube:: Y6CwThhquQs
+    :divid: booleanexpressions
+    :height: 315
+    :width: 560
+    :align: left
 
 El tipo de de variable en Python para almacenar valores verdaderos y falsos se llama ``bool``, llamado así
 en honor al matemático británico, George Boole. George Boole creó el *Álegbra
