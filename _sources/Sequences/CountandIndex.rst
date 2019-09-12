@@ -34,11 +34,11 @@ en una cuerda para las listas, el argumento no se limita a solo cadenas.
 
 .. activecode:: ac5_8_1
    
-   a = "¡He tenido una manzana en mi escritorio antes!"
+   a = "I had an apple on my desk before!"
    print(a.count("e"))
    print(a.count("ha"))
 
-La ventana de código activo anterior muestra el uso de count en una cadena. Al igual que con el módulo de tortuga
+La ventana de active code anterior muestra el uso de count en una cadena. Al igual que con el módulo de tortuga
 cuando tuvimos que especificar qué tortuga estaba cambiando de color o moviéndose, tenemos que especificar de qué cadena somos
 usando count.
 
@@ -50,7 +50,7 @@ usando count.
    print(z.count("a"))
    print(z.count("electron"))
 
-Cuando ejecute la ventana de código activo anterior, verá cómo funciona contar con una lista. Observe cómo "4" tiene un
+Cuando ejecute la ventana de active code anterior, verá cómo funciona contar con una lista. Observe cómo "4" tiene una
 cuenta de cero pero 4 tiene una cuenta de tres? Esto se debe a que la lista ``z`` solo contiene el número entero 4.
 Nunca hay cadenas que sean 4. Además, cuando verificamos el recuento de "a", vemos que el
 programa devuelve cero. Aunque algunas de las palabras en la lista contienen la letra "a", el programa es

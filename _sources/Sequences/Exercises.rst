@@ -26,7 +26,7 @@ Ejercicios
                  "rainy", "storming", "windy", "foggy", 
                  "snowy", "hailing"]
       =====
-      por condición climática:
+      for condición climática:
       =====
           print("La palabra es", len(condition), "characters")
       =====
@@ -46,7 +46,7 @@ Ejercicios
       "Have you mastered cooking yet? A tasty treat could be in your future.", 
       "Have you ever seen the leaves change color?"]
       =====
-      para las oración en frases:
+      for sentences in sentences:
       =====
           print(sentence.count("t"))
 
