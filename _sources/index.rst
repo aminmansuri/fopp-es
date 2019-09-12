@@ -48,7 +48,7 @@ Tabla de Contenido
 
    <ul>
    <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
-   <li><a href="../_static/tesapea-turtle.zip">Tarea Tortuga</a></li>
+   <li><a href="../../_static/tesapea-turtle.zip">Tarea Tortuga</a></li>
    </ul>
 
 .. toctree::
