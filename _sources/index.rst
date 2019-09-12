@@ -1,4 +1,4 @@
-.. How to Think Like a Computer Scientist: Interactive Edition
+.. Integradevs Academy site
 
 .. meta::
    :description: An interactive version of the How to Think Like a Computer Scientist book
@@ -25,7 +25,7 @@
    :modal:
    :modalTitle: About this Project
 
-   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project. 
+   This interactive book is a product of the `Runestone Interactive <http://runestoneinteractive.org>`_ Project.
 
    * This book is based on the `Original work <http://www.openbookproject.net/thinkcs/python/english2e/>`_ by:  Jeffrey Elkner, Allen B. Downey, and Chris Meyers, the Interactive edition of `How to Think Like a Computer Scientist <https://runestone.academy/runstone/static/thinkcspy/index.html>`_ by Brad Miller, David Ranum and many more and `Programs Information and People <https://runestone.academy/runestone/static/pip2/index.html>`_ by Paul Resnick
    * Activecode based on `Skulpt <http://skulpt.org>`_
@@ -48,6 +48,7 @@ Tabla de Contenido
 
    <ul>
    <li><a href="../../assignments/chooseAssignment.html">Assignments</a></li>
+   <li><a href="src="../_static/tesapea-turtle.zip">Tarea Tortuga</a></li>
    </ul>
 
 .. toctree::
