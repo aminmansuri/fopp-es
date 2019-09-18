@@ -74,7 +74,7 @@ La variable iterador (bucle) es la variable que almacena una parte del iterable 
    :feedback_b: Incorrecto, no hay listas presentes en el código.
    :feedback_c: Incorrecto, no hay tuplas presentes en el código.
    :feedback_d: Incorrecto, no hay objetos iterables en el código.
-   :feedback_e: Yes, Python es incapaz de iterar sobre integers y floats.
+   :feedback_e: Sí, Python es incapaz de iterar sobre integers y floats.
    :correct: e
    :practice: T
 
