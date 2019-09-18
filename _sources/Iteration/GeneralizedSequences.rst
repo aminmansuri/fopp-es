@@ -37,11 +37,11 @@ poco más tarde en el curso lo haremos ver tuplas, que son otro tipo de secuenci
 También veremos algunos objetos de Python que actúan como secuencias con el propósito de iterar con un bucle for.
 Éstos incluyen objetos de archivo, vistas e iteradores.
 
-De hecho, ya hemos visto uno de estos sin darnos cuenta, porque casi no importa. Técnicamente, el
-La función ``rango`` en realidad no devuelve una lista. Es decir, ``rango (3)`` en realidad no crea la lista
+De hecho, ya hemos visto uno de estos sin darnos cuenta, porque casi no importa. Técnicamente,
+la función ``range`` en realidad no devuelve una lista. Es decir, ``range(3)`` en realidad no crea la lista
 ``[0, 1, 2]``. Devuelve un objeto que actúa igual que la lista ``[0, 1, 2]``, cuando se usa en un bucle for.
 La diferencia es que los números 0, 1 y 2 se producen cuando se necesitan en lugar de todos creados de antemano.
-Esto apenas importa cuando hay Solo tres artículos. Para ``rango (10000000)``, hace una pequeña diferencia en la velocidad
+Esto apenas importa cuando hay Solo tres artículos. Para ``range(10000000)``, hace una pequeña diferencia en la velocidad
 de ejecución del programa y la cantidad de memoria se utiliza es por eso que los artículos se producen según sea necesario
 en lugar de todos producidos por adelantado.
 
@@ -51,7 +51,7 @@ hace la función de rango en realidad produce una lista. Cuando ejecuta un inté
 no engañará de esa manera. Aún así, cuando ejecutas el código de la forma, ``para x en el rango (y)`` harás bien en pensar
 en el rango (y) que regresa una lista.
 
-No se preocupe por comprender estos detalles ahora mismo. El punto importante es que en la ventana de código activo anterior,
+No se preocupe por comprender estos detalles ahora mismo. El punto importante es que en la ventana de active code anterior,
 en lugar de ``some_seq`` puede tener cualquier expresión de Python que se evalúe como una cadena, una lista u otro objeto de Python
 determinada objetos que actúan como secuencias con el propósito de usar en bucles for. Es algo a tener en cuenta para más
 adelante, cuando vemos algunos de esos otros objetos de Python que actúan como secuencias pero no del todo.
