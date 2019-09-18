@@ -44,7 +44,7 @@ Glosario
         Para iterar a través de los elementos de una colección, realizar una similar
         operación en cada uno.
 
-    accumulator pattern
+    patrón acumulador
         Un patrón donde el programa inicializa una variable acumuladora y luego la cambia
         durante cada iteración, acumulando un resultado final.
 
