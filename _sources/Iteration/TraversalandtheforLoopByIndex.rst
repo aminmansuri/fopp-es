@@ -28,9 +28,9 @@ nos permite recorrer algo y tener un contador automático.
 
 Al usar la función de enumerar, podemos imprimir un contador que nos indica la posición de un elemento en una lista. Podríamos hacer
 esto nosotros mismos, pero esto nos salva de tener que hacer eso. Las posiciones de índice en la lista son 0, 1, 2, 3 y 4. Esto es
-exactamente la misma secuencia de enteros que se almacenan en ``contador`` cada vez que se itera el ciclo. La primera vez a través del
-bucle, ``counter`` será 0 y se imprimirá "apple". Luego, ``contador`` se reasignará a 1 y se mostrará "pera". Esto continuará
-hasta que la lista haya finalizado, de modo que el valor final para ``contador`` sea 4 y el valor final de ``elemento`` sea "durazno".
+exactamente la misma secuencia de enteros que se almacenan en ``counter`` cada vez que se itera el ciclo. La primera vez a través del
+bucle, ``counter`` será 0 y se imprimirá "apple". Luego, ``counter`` se reasignará a 1 y se mostrará "pera". Esto continuará
+hasta que la lista haya finalizado, de modo que el valor final para ``counter`` sea 4 y el valor final de ``elemento`` sea "durazno".
 
 Convenientemente, también podemos usar la función ``range`` para generar automáticamente los índices de los caracteres.
 
