@@ -10,15 +10,15 @@
    :prefix: condition-10-
    :start: 1
 
-Accumulator Pattern con condicionales
--------------------------------------
+Patrón Acumulador con condicionales
+-----------------------------------
 
 A veces, cuando estamos acumulando, no queremos agregar a nuestro acumulador cada vez que iteramos.
 Considere, por ejemplo, el siguiente programa que cuenta el número de letras en una frase.
 
 .. activecode:: ac7_10_1
 
-   phrase = "Qué maravilloso día para programar"
+   phrase = "What a wonderful day to schedule"
    tot = 0
    for char in phrase:
        if char != " ":
