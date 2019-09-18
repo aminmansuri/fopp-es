@@ -69,7 +69,7 @@ Además, podemos pedirle a un píxel que cambie un valor de intensidad usando su
 
 
     =================  ================            =========================================================
-    Nombre del método  Example                     Explanation
+    Nombre del método  Ejemplo                     Explicación
     =================  ================            =========================================================
     Pixel(r,g,b)       Pixel(20,100,50)                 Cree un nuevo píxel con 20 rojos, 100 verdes y 50 azules.
     getRed()           r = p.getRed()                   Devuelve la intensidad del componente rojo.
@@ -114,12 +114,12 @@ lo mismo que la cantidad actual de verde.
 Objetos Image
 ^^^^^^^^^^^^^^
 
-Para acceder a los píxeles en una imagen real, primero debemos crear un objeto ``Imagen``. Los objetos de imagen se pueden crear en dos
+Para acceder a los píxeles en una imagen real, primero debemos crear un objeto ``Image``. Los objetos de imagen se pueden crear en dos
 formas. Primero, se puede hacer un objeto Imagen a partir de los archivos que almacenan imágenes digitales. El objeto de imagen tiene un atributo
 correspondiente al ancho, la altura y la colección de píxeles en la imagen.
 
-También es posible crear un objeto de imagen que esté "vacío". Una ``Imagen vacía`` tiene un ancho y una altura. sin embargo, el
-La colección de píxeles consta solo de píxeles "blancos".
+También es posible crear un objeto de imagen que esté "vacío". Una ``EmptyImage`` tiene un ancho y una altura. Sin embargo,
+colección de píxeles consta solo de píxeles "blancos".
 
 Podemos pedirle a un objeto de imagen que devuelva su tamaño utilizando los métodos ``getWidth`` y ``getHeight``. También podemos obtener un píxel
 desde una ubicación particular en la imagen usando ``getPixel`` y cambie el píxel en una ubicación particular usando ``setPixel``.
@@ -128,19 +128,19 @@ desde una ubicación particular en la imagen usando ``getPixel`` y cambie el pí
 La clase de imagen se muestra a continuación. Tenga en cuenta que las dos primeras entradas muestran cómo crear objetos de imagen. Los parámetros son
 diferente dependiendo de si está utilizando un archivo de imagen o está creando una imagen vacía.
 
-   ===================  ===============================  ==================================================
-   Nombre del método    Example                          Explanation
-   ===================  ===============================  ==================================================
-   Image(filename)      img = image.Image("cy.png")      Create an Image object from the file cy.png.
-   EmptyImage()         img = image.EmptyImage(100,200)  Create an Image object that has all "White" pixels
-   getWidth()           w = img.getWidth()               Return the width of the image in pixels.
-   getHeight()          h = img.getHeight()              Return the height of the image in pixels.
-   getPixel(col,row)    p = img.getPixel(35,86)          Return the pixel at column 35, row 86.
-   setPixel(col,row,p)  img.setPixel(100,50,mp)          Set the pixel at column 100, row 50 to be mp.
+   ===================  ===============================  ===============================================================
+   Nombre del método    Ejemplo                          Explicación
+   ===================  ===============================  ===============================================================
+   Image(filename)      img = image.Image("cy.png")      Crea un objeto de imagen desde el archivo cy.png.
+   EmptyImage()         img = image.EmptyImage(100,200)  Cree aun objeto de imagen que tenga todos los píxeles "blancos"
+   getWidth()           w = img.getWidth()               Devuelve el ancho de la imagen en píxeles.
+   getHeight()          h = img.getHeight()              Devuelve la altura de la imagen en píxeles.
+   getPixel(col,row)    p = img.getPixel(35,86)          Devuelve el píxel en la columna 35, fila 86.
+   setPixel(col,row,p)  img.setPixel(100,50,mp)          Establece el píxel en la columna 100, fila 50 para que sea mp.
    ===================  ===============================  ==================================================
 
 Considere la imagen que se muestra a continuación. Suponga que la imagen se almacena en un archivo llamado "luther.jpg". La línea 2 abre el archivo y
-usa el contenido para crear un objeto de imagen al que se refiere ``img``. Una vez que tenemos un objeto de imagen, podemos usar el
+usa el contenido para crear un objeto de imagen al que se refiere ``img``. Una vez que tenemos un objeto de imagen, podemos usar los
 métodos previamente mencionados para acceder a información sobre la imagen o para obtener un píxel específico y verificar su color básico intensidades
 
 
@@ -167,7 +167,7 @@ métodos previamente mencionados para acceder a información sobre la imagen o p
 Cuando ejecuta el programa, puede ver que la imagen tiene un ancho de 400 píxeles y una altura de 244 píxeles. También el
 píxel en la columna 45, fila 55, tiene valores RGB de 165, 161 y 158. Pruebe algunas otras ubicaciones de píxel cambiando los argumentos ``getPixel`` y ejecutando nuevamente el programa.
 
-**Verifica tu entendimiento**
+**Revisa tu entendimiento**
 
 .. mchoice:: question14_7_2
    :answer_a: 149 132 122
@@ -240,7 +240,7 @@ El código resultante tendrá el siguiente aspecto. Ahora somos libres de hacer 
 
 	for row in range(img.getHeight()):
 	    for col in range(img.getWidth()):
-	        # do something with the pixel at position (col,row)
+	        # hacer algo con el píxel en la posición (col, fila)
 
 Uno de los algoritmos de procesamiento de imágenes más fáciles creará lo que se conoce como una imagen **negativa**. Una imagen negativa simplemente
 significa que cada píxel será el "opuesto" de lo que era originalmente. ¿Pero qué significa lo contrario?
@@ -267,8 +267,8 @@ Hay otras dos imágenes que puede usar (cy.png y goldygopher.png).
 
 
 Cambie el nombre del archivo en la llamada ``image.Image()`` para ver cómo se ven estas imágenes como negativas. Además, tenga en cuenta que
-hay una llamada al método `` exitonclick`` al final que cerrará la ventana cuando haga clic en ella. Esto permitira
-para "borrar la pantalla" antes de dibujar el siguiente negativo.
+hay una llamada al método ``exitonclick`` al final que cerrará la ventana cuando haga clic en ella. Esto permitira
+"borrar la pantalla" antes de dibujar el siguiente negativo.
 
 
 .. activecode::  ac14_7_4
@@ -314,7 +314,7 @@ filas Todavía creamos una imagen negativa, pero puede ver que los píxeles se a
 
 .. admonition:: Otra manipulación de píxeles
 
-	Hay varios algoritmos de procesamiento de imágenes diferentes que siguen el mismo patrón que se muestra arriba. Es decir, tome el píxel original, extraiga las intensidades roja, verde y azul, y luego cree un nuevo píxel a partir de ellas. El nuevo píxel se inserta en una imagen vacía en la misma ubicación que el original.
+    Hay varios algoritmos de procesamiento de imágenes diferentes que siguen el mismo patrón que se muestra arriba. Es decir, tome el píxel original, extraiga las intensidades roja, verde y azul, y luego cree un nuevo píxel a partir de ellas. El nuevo píxel se inserta en una imagen vacía en la misma ubicación que el original.
 
     Por ejemplo, puede crear un píxel **escala de grises** promediando las intensidades roja, verde y azul y luego usando ese valor para todas las intensidades.
 
@@ -331,7 +331,7 @@ filas Todavía creamos una imagen negativa, pero puede ver que los píxeles se a
    :answer_c: Salida c
    :answer_d: Salida d
    :correct: a
-   :feedback_a: Comenzaré con un valor de 0 y luego j iterará de 0 a 1. A continuación, seré 1 y j iterará de 0 a 1. Finalmente, seré 2 y j iterará de 0 a 1.
+   :feedback_a: Comenzará con un valor de 0 y luego j iterará de 0 a 1. A continuación, será 1 y j iterará de 0 a 1. Finalmente, será 2 y j iterará de 0 a 1.
    :feedback_b: El bucle for interno controla el segundo dígito (j). El bucle for interno debe completarse antes de que avance el bucle for externo.
    :feedback_c: El bucle for interno controla el segundo dígito (j). Observe que el bucle for interno está sobre la lista [0, 1].
    :feedback_d: El for-loop externo se ejecuta 3 veces (0, 1, 2) y el for-loop interno se ejecuta dos veces cada vez que se ejecuta el for-loop externo, por lo que este código imprime exactamente 6 líneas.
