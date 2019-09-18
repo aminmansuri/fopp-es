@@ -15,11 +15,11 @@
    single: chained conditional
    single: conditional; chained
 
-Condicionales anidados
-----------------------
+Condicionales encadenados
+-------------------------
 
 Python proporciona una forma alternativa de escribir una sección anidada, como la que se muestra en la sección anterior.
-Esto a veces se conoce como **condicional anidado**.
+Esto a veces se conoce como **condicional encadenado**.
 
 .. sourcecode:: python
 
@@ -65,7 +65,7 @@ versiones de condicionales que Python puede entender (imagine una declaración i
 otras versiones deben seguir el mismo orden que se ve a continuación.
 
 .. image:: Figures/valid_conditionals.png
-   :alt: shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif.
+   :alt: muestra una condición unaria, una condición binaria, un condicional con if, elif, else y un condicional con if, elif y elif.
 
 **Revisa tu entendimiento**
 
