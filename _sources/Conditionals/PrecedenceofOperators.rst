@@ -25,13 +25,13 @@ La siguiente tabla resume la prioridad del operador de mayor a menor. Se puede e
 =======   ==============  ===============
 Nivel     Categoría        Operadores
 =======   ==============  ===============
-7(high)   exponent        \**
-6         multiplication  \*,/,//,%
-5         addition        +,-
-4         relational      ==,!=,<=,>=,>,<
-3         logical         not
-2         logical         and
-1(low)    logical         or
+7(high)   exponente        \**
+6         multiplicación  \*,/,//,%
+5         adición         +,-
+4         relacional      ==,!=,<=,>=,>,<
+3         lógico          not
+2         lógico          and
+1(low)    lógico          or
 =======   ==============  ===============
 
 .. note::
