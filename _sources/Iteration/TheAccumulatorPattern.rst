@@ -13,8 +13,8 @@
 
 .. _accum_pattern:
       
-El Patrón de Accumulator
-==========================
+El Patrón de Acumulador
+=======================
 
 Un "patrón" de programación común es atravesar una secuencia, **acumulando** un valor a medida que avanzamos,
 como la suma hasta el momento o el máximo hasta el momento. De esa manera, al final del recorrido tenemos
@@ -41,7 +41,7 @@ A continuación, la iteración se realiza 10 veces. Dentro del bucle for, se pro
 A ``acumular`` se le reasigna un nuevo valor que es el valor anterior más el valor actual de ``w``.
 
 Este patrón de iterar la actualización de una variable se conoce comúnmente como
-**accumulator pattern**. Nos referimos a la variable como el **accumulator**. Este patrón aparecerá
+**patrón acumulador**. Nos referimos a la variable como el **acumulador**. Este patrón aparecerá
 una y otra vez. Recuerde que la clave para que funcione correctamente es asegurarse de
 inicialice la variable antes de comenzar la iteración. Una vez dentro de la iteración, se requiere
 que actualizas el acumulador.
@@ -79,11 +79,11 @@ no incluye - la entrada. Aquí están los ejemplos:
     for i in range(0, 5):
         print(i)
 
-    # Notice the casting of `range` to the `list`
+    # Observe la conversión de `range` a `list`
     print(list(range(5)))
     print(list(range(0,5)))
 
-    # Note: `range` function is already casted as `list` in the textbook
+    # Nota: la función `range` ya está convertida como `list` en el libro de texto
     print(range(5))
 
 
@@ -101,7 +101,7 @@ lanzarlo como una lista, pero es mejor que intentes acostumbrarte a lanzarlo com
        accum = accum + w
    print(accum)
 
-   # or, if you use two inputs for the range function
+   # o, si usa dos entradas para la función de rango
 
    sec_accum = 0
    for w in range(1,11):
@@ -172,7 +172,7 @@ no será útil pero aún tendremos que contar.
    :autograde: unittest
    :practice: T
 
-   Escriba código para crear una lista de enteros del 0 al 52 y asigne esa lista a la variable ``números``. Debería usar una función especial de Python: no escriba la lista completa usted mismo. SUGERENCIA: ¡Puedes hacer esto en una línea de código!
+   Escriba código para crear una lista de enteros del 0 al 52 y asigne esa lista a la variable ``numbers``. Debería usar una función especial de Python: no escriba la lista completa usted mismo. SUGERENCIA: ¡Puedes hacer esto en una línea de código!
    ~~~~
 
    =====
