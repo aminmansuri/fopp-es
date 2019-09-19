@@ -137,7 +137,7 @@ diferente dependiendo de si está utilizando un archivo de imagen o está creand
    getHeight()          h = img.getHeight()              Devuelve la altura de la imagen en píxeles.
    getPixel(col,row)    p = img.getPixel(35,86)          Devuelve el píxel en la columna 35, fila 86.
    setPixel(col,row,p)  img.setPixel(100,50,mp)          Establece el píxel en la columna 100, fila 50 para que sea mp.
-   ===================  ===============================  ==================================================
+   ===================  ===============================  ===============================================================
 
 Considere la imagen que se muestra a continuación. Suponga que la imagen se almacena en un archivo llamado "luther.jpg". La línea 2 abre el archivo y
 usa el contenido para crear un objeto de imagen al que se refiere ``img``. Una vez que tenemos un objeto de imagen, podemos usar los
